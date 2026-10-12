@@ -67,3 +67,5 @@ One line each: decision — reason.
 - "Pişirmeye başla" switches on a cooking mode where step numbers become checkable; no timers or tracking (nothing to grade the cook).
 - Built-in recipes are read-only; "Kopyasını düzenle" opens a prefilled household copy ("… (bizim usul)"). Deleting a custom recipe that is planned leaves a calm "Silinmiş tarif" in the plan; the list and prep tasks skip it.
 - Recipe form keeps every field as text and validates with zod on submit (Turkish decimal comma accepted); known ingredient names auto-fill pazar/market and aisle from the catalog.
+- Demo seed ("Demo verisini yükle" / login button) is idempotent: if ali@demo.ev exists it just signs in as Ali. It recreates the design's week relative to today (Cmt dışarıda, Paz kuru fasulye + artan, Pzt İzmir köfte sofrası onaylı, Sal karnıyarık eşleşmeden, Çar menemen hafif akşam, Per Zeynep'in tavuk sotesi, Cum boş), the 14-item list with Zeynep's 3 checks, matches, cooking history and activity.
+- Settings: leaving the household asks first and keeps the household's data; reset asks first. Dinner time is editable (prep reminders reschedule).
