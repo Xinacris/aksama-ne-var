@@ -2,6 +2,8 @@
 
 Resume: continue from the first unchecked item. Spec: PROMPT.md. Decisions: DECISIONS.md.
 
+Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 after commit 8b92179). Check status with `gh api repos/Xinacris/aksama-ne-var/commits/main/status`.
+
 ## Phases
 - [x] 1. Scaffold Next.js + TS + lint/format + Vitest + Playwright at the repo root; tokens, fonts, theme switch; first push to `main` (first Vercel deploy).
   - Theme toggle lives in `src/hooks/useTheme.ts`; UI for it lands in Settings (phase 13).
