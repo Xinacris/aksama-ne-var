@@ -60,7 +60,6 @@ export const MARKET_AISLES = [
   "Kasap",
   "Süt ve kahvaltılık",
   "Bakliyat ve kuru gıda",
-  "Yağ, salça ve sos",
   "Baharat",
   "Fırın ve hamur",
   "Dondurulmuş",

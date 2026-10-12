@@ -20,3 +20,11 @@ One line each: decision — reason.
 - Design names kept verbatim; long names get a `shortName` for chips/tags ("Tereyağlı pirinç pilavı" → "Pirinç pilavı", "Ezogelin çorbası" → "Ezogelin").
 - "Ertesi güne artar" tag is derived from `leftoverFriendly` and appended last (matches the design's card tag order) instead of being stored in `tags`.
 - Menemen and other breakfast/one-plate dishes have course `kahvalti` but fill the "Ana yemek" slot and appear under "Ana yemekler" in onboarding, as in the design.
+- Shopping list window = today + next 6 days (not the board's "2 back / 5 ahead"); past evenings never add to the list. Dishes sent back to matches by "dışarıda yedik"/"plan değişti" keep their ingredients on the list until placed again or a week passes ("malzemeler listede kalır").
+- List quantities are shown as purchase amounts: summed in a base unit, then rounded up to packs (250 g kıyma, 1 kavanoz salça, 10 yumurta) or, for pazar produce sold by weight, to 500 g — reproduces the design's sample list ("Kıyma 500 g", "Domates 1,5 kg", "Arpa şehriye 1 paket").
+- "Alışverişi bitir" stores the bought (pack-rounded) amount in the pantry; cooking a dish (rollover of past planned evenings) consumes measured pantry stock; unmeasured "evde var" entries persist until removed.
+- Plan transitions are pure functions returning operation lists (`src/domain/plan.ts`); the store applies them through repos — keeps business rules testable and out of components.
+- Prep tasks alternate household members in time order per day (first-joined member gets the first task) — reproduces the design (kıyma → Ali, köfte harcı → Zeynep). Night-before = 21:00 the previous day, morning = 09:00, offsets relative to the household dinner time (default 19:30).
+- Solo household: a single "Olur" is a match (no partner to wait for); copy switches to singular.
+- "Plan değişti → Yarına taşı" swaps with tomorrow's menu when tomorrow is planned, instead of cascading — reversible and never destroys a plan.
+- Adding a dish counts as the adder's approval; any menu change resets approvals to the person who changed it.
