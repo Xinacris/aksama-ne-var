@@ -19,7 +19,7 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 - [x] 10. Hafta (desktop board + mobile list, drag-and-drop).
 - [x] 11. Liste (pazar/market, aisles, live sync, finish).
 - [x] 12. Tarif detayı + recipe browser + add/edit recipe.
-- [ ] 13. Settings, activity feed, demo seed matching the design's sample data, export/reset.
+- [x] 13. Settings, activity feed, demo seed matching the design's sample data, export/reset.
 - [ ] 14. E2E journeys + axe, both viewports.
 - [ ] 15. Visual review passes with screenshots; fix drift.
 - [ ] 16. Supabase draft schema + migration doc.
