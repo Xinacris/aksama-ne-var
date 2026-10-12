@@ -1,0 +1,192 @@
+/* Sync indicator (Componentler: Canlı / Eşitleniyor / Çevrimdışı) */
+.sync {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.syncLive {
+  background: var(--olive-soft);
+  color: var(--olive);
+}
+.syncSyncing {
+  background: var(--surface2);
+  color: var(--ink2);
+}
+.syncOffline {
+  background: var(--sand-soft);
+  color: var(--sand);
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.syncInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--olive);
+  white-space: nowrap;
+}
+.syncInline.syncingText {
+  color: var(--ink2);
+}
+.syncInline.offlineText {
+  color: var(--sand);
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Activity line */
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.4;
+}
+.activity strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.activity p {
+  margin: 0;
+}
+
+/* Empty state */
+.empty {
+  border: 1.5px dashed var(--line);
+  border-radius: 22px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.emptyIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--surface2);
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyTitle {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+}
+.emptyText {
+  font-size: 14px;
+  color: var(--ink2);
+  max-width: 300px;
+  line-height: 1.45;
+  margin: 0;
+}
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+/* Photo placeholder */
+.photo {
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 14px;
+}
+.photoPill {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink2);
+  background: var(--surface);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+/* Eyebrow / section labels */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tomato);
+}
+.eyebrowMuted {
+  color: var(--ink2);
+}
+
+/* Notice / toast */
+.notice {
+  position: fixed;
+  left: 50%;
+  bottom: calc(96px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(420px, calc(100vw - 32px));
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 16px;
+  padding: 12px 12px 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.4;
+  box-shadow: 0 10px 30px rgba(var(--shadow-ink), 0.22);
+  animation: rise 0.2s ease-out;
+}
+.noticeError {
+  background: var(--tomato-soft);
+  color: var(--ink);
+  border: 1px solid var(--tomato);
+}
+.notice p {
+  margin: 0;
+  flex: 1;
+}
+.noticeClose {
+  min-height: 44px;
+  min-width: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+@media (min-width: 1024px) {
+  .notice {
+    bottom: 32px;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}

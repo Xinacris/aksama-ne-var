@@ -1,0 +1,61 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  transition: border-color 0.15s ease;
+}
+.box:focus-within {
+  border-color: var(--ink2);
+}
+.invalid {
+  border-color: var(--tomato);
+}
+.icon {
+  color: var(--ink2);
+  display: flex;
+}
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+}
+.select {
+  appearance: none;
+  padding-right: 8px;
+  cursor: pointer;
+}
+.hint {
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.45;
+}
+.error {
+  font-size: 13.5px;
+  color: var(--tomato);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.textarea {
+  padding: 14px 16px;
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.5;
+}

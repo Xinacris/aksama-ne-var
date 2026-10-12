@@ -58,6 +58,28 @@ export function buildDeck(args: {
   return candidates.slice(0, args.size ?? DECK_SIZE);
 }
 
+/** Dishes planned around now are left out of decks (no karnıyarık twice in a week). */
+export function recentlyPlannedIds(items: { date: string; recipeId: string }[], todayIso: string, addDays: (d: string, n: number) => string): Set<string> {
+  const from = addDays(todayIso, -3);
+  const to = addDays(todayIso, 7);
+  return new Set(items.filter((i) => i.date >= from && i.date <= to).map((i) => i.recipeId));
+}
+
+/** Default deck target: the first evening from today without a main dish. */
+export function nextOpenEvening(
+  items: { date: string; slot: Slot }[],
+  days: { date: string; status: string }[],
+  todayIso: string,
+  addDays: (d: string, n: number) => string,
+): string {
+  for (let i = 0; i < 14; i++) {
+    const d = addDays(todayIso, i);
+    const ateOut = days.some((x) => x.date === d && x.status === "ate-out");
+    if (!ateOut && !items.some((x) => x.date === d && x.slot === "ana")) return d;
+  }
+  return addDays(todayIso, 1);
+}
+
 export function swipesFor(swipes: Swipe[], date: string, slot: Slot, userId?: string): Swipe[] {
   return swipes.filter((s) => s.date === date && s.slot === slot && (!userId || s.userId === userId));
 }

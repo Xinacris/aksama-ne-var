@@ -16,3 +16,14 @@ export function now(): Date {
 export function nowIso(): string {
   return now().toISOString();
 }
+
+/** Run `fn` with the clock pinned to `at`, then restore the previous setting. */
+export async function withNow<T>(at: Date | string, fn: () => Promise<T>): Promise<T> {
+  const prev = fixed;
+  fixed = new Date(at);
+  try {
+    return await fn();
+  } finally {
+    fixed = prev;
+  }
+}

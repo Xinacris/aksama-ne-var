@@ -8,7 +8,7 @@ Resume: continue from the first unchecked item. Spec: PROMPT.md. Decisions: DECI
 - [x] 2. Data layer: models, repo interfaces, LocalStorageAdapter, migrations, cross-tab sync bus + tests.
 - [x] 3. 100-recipe seed + validation tests.
 - [x] 4. Domain logic (list, prep tasks, matching, rotation, leftovers) + unit tests.
-- [ ] 5. Auth + households + invite/join + protected routes + tests.
+- [x] 5. Auth + households + invite/join + protected routes + tests.
 - [ ] 6. Shared component library ported from `Componentler.dc.html` + component tests.
 - [ ] 7. Onboarding 1 & 2.
 - [ ] 8. Bugün.

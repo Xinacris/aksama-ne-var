@@ -1,0 +1,29 @@
+.avatar {
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  line-height: 1;
+  user-select: none;
+}
+.ring {
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--olive);
+}
+.stack {
+  display: inline-flex;
+}
+.stacked {
+  border: 2px solid var(--bg);
+}
+.dashed {
+  border-radius: 50%;
+  border: 2px dashed var(--ink2);
+  color: var(--ink2);
+  background: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
