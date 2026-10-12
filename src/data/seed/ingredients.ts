@@ -37,7 +37,7 @@ const sut = (name: string, base: CatalogEntry["base"], extra: Partial<CatalogEnt
 const kuru = (name: string, extra: Partial<CatalogEntry> = {}) =>
   e(name, "market", "Bakliyat ve kuru gıda", "g", { perCup: 180, perTbsp: 12, ...extra });
 const sos = (name: string, base: CatalogEntry["base"], extra: Partial<CatalogEntry> = {}) =>
-  e(name, "market", "Yağ, salça ve sos", base, extra);
+  e(name, "market", "Bakliyat ve kuru gıda", base, extra);
 const baharat = (name: string) => e(name, "market", "Baharat", "g", { perTbsp: 6, staple: true });
 const sebze = (name: string, extra: Partial<CatalogEntry> = {}) => e(name, "pazar", "Sebze", "g", extra);
 const sebzeAdet = (name: string, extra: Partial<CatalogEntry> = {}) => e(name, "pazar", "Sebze", "adet", extra);
@@ -140,7 +140,7 @@ export const INGREDIENT_CATALOG: CatalogEntry[] = [
   sebze("Patates", { perPiece: 200 }),
   sebze("Kuru soğan", { perPiece: 120 }),
   sebze("Kırmızı soğan", { perPiece: 120 }),
-  sebzeAdet("Sarımsak", { perPiece: 1 }),
+  sebzeAdet("Sarımsak", { perPiece: 1, pack: { size: 10, unit: "adet", label: "1 baş" } }),
   sebze("Havuç", { perPiece: 100 }),
   sebze("Kabak", { perPiece: 200 }),
   sebzeAdet("Salatalık", { perPiece: 150 }),
