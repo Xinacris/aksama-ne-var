@@ -62,3 +62,8 @@ One line each: decision — reason.
 - The presence banner says "<Ad> de markette" only while the partner's tab is open on /liste; otherwise it says checks will appear live. Hidden for solo households.
 - Manual items get a separate "kaldır" button next to the row (a nested button inside the row button would be invalid HTML).
 - "Alışverişi bitir" with nothing checked does nothing destructive and explains calmly.
+- Tarif detail URL is the dish (`/tarif/<id>`); `?gun=YYYY-MM-DD` (or `today`) adds the menu context: menu title, part chips, the day's whole prep timeline (tap a dot to complete/undo), and "Bu parçayı başka yemekle değiştir". Without context it is a plain recipe page with "Bir akşama koy".
+- Ingredient status pills are actions: "Listede" → mark "evde var"; "Evde var" (user-marked) → unmark; "Eksik · ekle" → add to list for this dish. Staples collapse into one "Kimyon, karabiber, tuz · Evde var" row as in the design. The recipe's freezer item shows "Evde · buzlukta" / "Evde · çözülüyor" once the freezer task is done.
+- "Pişirmeye başla" switches on a cooking mode where step numbers become checkable; no timers or tracking (nothing to grade the cook).
+- Built-in recipes are read-only; "Kopyasını düzenle" opens a prefilled household copy ("… (bizim usul)"). Deleting a custom recipe that is planned leaves a calm "Silinmiş tarif" in the plan; the list and prep tasks skip it.
+- Recipe form keeps every field as text and validates with zod on submit (Turkish decimal comma accepted); known ingredient names auto-fill pazar/market and aisle from the catalog.
