@@ -67,3 +67,16 @@ export function capitalizeTr(s: string): string {
 export function lowerFirstTr(s: string): string {
   return s ? s.charAt(0).toLocaleLowerCase("tr") + s.slice(1) : s;
 }
+
+/** Number + accusative possessive as read aloud: 8 → "8'ini", 3 → "3'ünü", 6 → "6'sını", 10 → "10'unu". */
+export function numberAccusative(n: number): string {
+  const tens = n % 100;
+  const last = n % 10;
+  let suffix: string;
+  if (n === 0) suffix = "'ını";
+  else if (last === 0) {
+    const t = Math.floor(tens / 10);
+    suffix = t === 0 ? (n % 1000 === 0 ? "'ini" : "'ünü") : ["", "'unu", "'sini", "'unu", "'ını", "'sini", "'ını", "'ini", "'ini", "'ını"][t];
+  } else suffix = ["", "'ini", "'sini", "'ünü", "'ünü", "'ini", "'sını", "'sini", "'ini", "'unu"][last];
+  return `${n}${suffix}`;
+}

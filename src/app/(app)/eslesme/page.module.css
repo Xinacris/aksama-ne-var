@@ -1,0 +1,168 @@
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.momentWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.deckCol {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 22px 20px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.headRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.context {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  min-height: 44px;
+  margin: -12px 0 -12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.context:hover {
+  color: var(--ink);
+}
+.chev {
+  transform: rotate(90deg);
+  transition: transform 0.15s ease;
+}
+.chevOpen {
+  transform: rotate(-90deg);
+  transition: transform 0.15s ease;
+}
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.1;
+}
+.counter {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.partner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--ink2);
+}
+.chooser {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chooserRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.opt {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+.opt[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+.done {
+  margin: 18px 16px 0;
+}
+.aside {
+  display: none;
+}
+.asideCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.asideHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.asideTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 20px;
+}
+.asideLink {
+  font-size: 13px;
+  font-weight: 600;
+}
+.asideNote {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.45;
+}
+
+@media (min-width: 1024px) {
+  .page {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 8px 32px 40px;
+  }
+  .deckCol {
+    width: 440px;
+    flex: none;
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 340px;
+    margin-top: 100px;
+  }
+  .momentWrap {
+    max-width: 560px;
+    width: 100%;
+    margin: 24px auto 40px;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+}

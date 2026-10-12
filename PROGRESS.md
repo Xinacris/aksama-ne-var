@@ -15,7 +15,7 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
   - `src/components/ui/*` (Button, Field, Avatar, Chip, Misc: SyncIndicator/ActivityLine/EmptyState/PhotoPlaceholder/Notice), `MenuCard`, `ReminderBanner`, `AppShell` (bottom + top nav).
 - [x] 7. Onboarding 1 & 2.
 - [x] 8. Bugün.
-- [ ] 9. Eşleş + match moment.
+- [x] 9. Eşleş + match moment.
 - [ ] 10. Hafta (desktop board + mobile list, drag-and-drop).
 - [ ] 11. Liste (pazar/market, aisles, live sync, finish).
 - [ ] 12. Tarif detayı + recipe browser + add/edit recipe.

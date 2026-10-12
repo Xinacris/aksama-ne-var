@@ -47,3 +47,9 @@ One line each: decision — reason.
 - Bugün desktop (≥1024): two columns (reminder/partner/tonight | leftover/plan değişti/yarın/"Evde son hareketler"); the page header hides avatars/sync there because the top nav shows them.
 - The partner activity line links to the activity feed (/akis); match activity reads "Ali ve Zeynep karnıyarık için eşleşti" so it is correct from both perspectives.
 - Screenshots pin the clock to 2026-10-12 08:45 (+03) — the design's morning, before the kıyma task is done; the demo marks it done by Ali at 09:12 only once that time has passed.
+- Eşleş defaults to the next evening without a main dish (from today); the "<Gün> akşamı için ana yemek" eyebrow is a toggle that opens a day (7 days) + slot chooser — the design shows the context line but no picker, so the line itself becomes the control.
+- Decks leave out dishes planned between 3 days ago and 7 days ahead (no karnıyarık twice in a week) and dishes already matched for that day/slot; 12 cards max, favorites first, least recently cooked first, then alphabetical (deterministic for both members).
+- Swipe: drag threshold 100 px or a fast flick (>0.6 px/ms over 30 px); a small "Olur" / "Bu sefer değil" stamp fades in while dragging; reduced-motion skips the fly-out. ←/→ work anywhere on the page except inside form fields.
+- When the partner completes a match in another tab while I'm on Eşleş for the same day/slot, the match moment appears live in my tab too.
+- After "<Gün> akşamına koy" the deck moves on to the next open evening and a calm notice confirms ("… kondu. Eksikler listede.").
+- Un and toz şeker are pantry staples (like salt) — a teaspoon of sugar shouldn't put "1 kg şeker" on the list.

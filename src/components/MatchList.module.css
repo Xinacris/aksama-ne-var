@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item {
+  min-height: 52px;
+  border-radius: 14px;
+  background: var(--bg);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.placed {
+  color: var(--ink2);
+}
+.dragging {
+  background: transparent;
+  border: 1.5px dashed var(--line);
+  color: var(--ink2);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.name {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.note {
+  font-size: 12.5px;
+  color: var(--ink2);
+}
+.icon {
+  color: var(--ink2);
+  display: flex;
+  flex: none;
+}
+.empty {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.45;
+}

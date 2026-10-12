@@ -69,6 +69,13 @@ test("screens", async ({ page }, info) => {
     await page.locator("main").first().waitFor({ timeout: 10_000 }).catch(() => {});
     await shot(page, p, name);
   }
+  if (!only || only.includes("eslesme-eslesti")) {
+    await page.goto("/eslesme");
+    await page.getByRole("button", { name: "Olur" }).click();
+    await expect(page.getByRole("heading", { name: /dediniz!/ })).toBeVisible();
+    await page.waitForTimeout(700);
+    await shot(page, p, "eslesme-eslesti");
+  }
   await page.goto("/ev/k7m2-tq");
   await shot(page, p, "davet");
 });

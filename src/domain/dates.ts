@@ -110,3 +110,13 @@ export function agoTime(thenIso: string, now: Date): string {
   if (dayDiff === 1) return "dün";
   return agoDays(dayDiff);
 }
+
+/** "Salı akşamı" (or "Bu akşam" for today). */
+export function eveningLabel(date: string, todayIso: string): string {
+  return date === todayIso ? "Bu akşam" : `${dayName(date)} akşamı`;
+}
+
+/** "Salı akşamına" (or "Bu akşama"). */
+export function eveningDative(date: string, todayIso: string): string {
+  return date === todayIso ? "Bu akşama" : `${dayName(date)} akşamına`;
+}

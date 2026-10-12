@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { createMemoryData, type DataContext } from "@/data";
-import { useApp, useDataContext, selectList } from "@/store/app";
+import { useApp, setDataContext, selectList } from "@/store/app";
 import { setNow } from "@/lib/clock";
 import { builtinRecipes } from "@/data/seed/recipes";
 
@@ -10,7 +10,7 @@ let d: DataContext;
 beforeEach(async () => {
   setNow(new Date(2026, 9, 12, 8, 0));
   d = createMemoryData();
-  useDataContext(d);
+  setDataContext(d);
   useApp.setState({ status: "booting", me: null, household: null });
   await useApp.getState().refresh();
 });
