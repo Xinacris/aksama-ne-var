@@ -35,3 +35,4 @@ One line each: decision — reason.
 - Mobile keeps exactly the 4 designed tabs; Ayarlar is reached by tapping the household avatars (and from Bugün's header), Tarifler from Hafta and Ayarlar. Desktop top nav adds "Tarifler" and a settings icon.
 - Presence: each tab broadcasts a heartbeat (4 s) with its route; a partner counts as "here" for 12 s — powers "Zeynep de burada / de markette" and the olive ring on avatars.
 - Export JSON scrubs password hashes and salts.
+- `vercel.json` pins `framework: nextjs` — the Vercel project was imported while the repo only had a README, so it defaulted to "Other" and every Next.js deploy failed until the preset was pinned in code (no Vercel login needed).
