@@ -28,3 +28,10 @@ One line each: decision — reason.
 - Solo household: a single "Olur" is a match (no partner to wait for); copy switches to singular.
 - "Plan değişti → Yarına taşı" swaps with tomorrow's menu when tomorrow is planned, instead of cascading — reversible and never destroys a plan.
 - Adding a dish counts as the adder's approval; any menu change resets approvals to the person who changed it.
+- Households are capped at 2 members (the design's copy and colors are built around "ikiniz"); a third person gets a calm "Bu ev şu an dolu" state.
+- Joining while already in another household is refused with a pointer to Ayarlar › Ev (leave first) — never silently moves data between households.
+- Route protection is client-side (`Guard`): data lives in localStorage, so the server can't know the session. Anonymous → `/giris?next=…`; signed in without a household → `/onboarding/1`.
+- Login page also offers "Örnek evle dene · Ali ve Zeynep" (same seeder as Ayarlar › Demo verisini yükle) so the morning demo is one click.
+- Mobile keeps exactly the 4 designed tabs; Ayarlar is reached by tapping the household avatars (and from Bugün's header), Tarifler from Hafta and Ayarlar. Desktop top nav adds "Tarifler" and a settings icon.
+- Presence: each tab broadcasts a heartbeat (4 s) with its route; a partner counts as "here" for 12 s — powers "Zeynep de burada / de markette" and the olive ring on avatars.
+- Export JSON scrubs password hashes and salts.

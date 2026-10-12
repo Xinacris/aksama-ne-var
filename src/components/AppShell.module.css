@@ -1,0 +1,164 @@
+.shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ───── mobile bottom nav (Main.dc.html) ───── */
+.bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  margin-top: 24px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 6px 8px calc(14px + env(safe-area-inset-bottom));
+}
+.tab {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--ink2);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+}
+.tab:hover {
+  color: var(--ink);
+}
+.tab[aria-current="page"] {
+  color: var(--tomato);
+  font-weight: 700;
+}
+.badge {
+  position: absolute;
+  top: 4px;
+  left: 54%;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--tomato);
+  color: var(--on-tomato);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ───── desktop top nav (Haftalik-Plan.dc.html header) ───── */
+.top {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .bottom {
+    display: none;
+  }
+  .top {
+    display: block;
+    padding: 0 32px;
+  }
+  .topInner {
+    max-width: 1376px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0 14px;
+    border-bottom: 1px solid var(--line);
+  }
+}
+.topLeft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+.brand {
+  font-family: var(--font-serif);
+  font-size: 23px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand:hover {
+  color: var(--ink);
+}
+.topNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.pill {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink2);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+.pill:hover {
+  color: var(--ink);
+}
+.pill[aria-current="page"] {
+  background: var(--surface2);
+  color: var(--ink);
+  font-weight: 700;
+}
+.pillBadge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--tomato);
+  color: var(--on-tomato);
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avatarLink {
+  display: inline-flex;
+  border-radius: 999px;
+  min-height: 44px;
+  align-items: center;
+}
+.iconLink {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink2);
+}
+.iconLink:hover,
+.iconLink[aria-current="page"] {
+  color: var(--ink);
+  background: var(--surface2);
+}

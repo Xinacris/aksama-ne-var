@@ -190,6 +190,16 @@ export interface ListInput {
   recipesById: Map<string, Recipe>;
 }
 
+/** "İzmir köfte · Karnıyarık", capped at three names: "A · B · C +2". */
+export function forLabel(ids: string[], recipesById: Map<string, Recipe>): string {
+  const names = ids
+    .map((id) => recipesById.get(id))
+    .filter((r): r is Recipe => !!r)
+    .map(recipeLabel);
+  if (names.length <= 3) return names.join(" · ");
+  return `${names.slice(0, 3).join(" · ")} +${names.length - 3}`;
+}
+
 export function recipeLabel(r: Pick<Recipe, "name" | "shortName">): string {
   return r.shortName ?? r.name;
 }
@@ -248,11 +258,7 @@ export function generateList(input: ListInput): ListRow[] {
   const out: ListRow[] = [];
   for (const row of rows.values()) {
     row.quantityText = formatAmounts(row.name, row.amounts);
-    row.forLabel = row.forRecipeIds
-      .map((id) => input.recipesById.get(id))
-      .filter((r): r is Recipe => !!r)
-      .map(recipeLabel)
-      .join(" · ");
+    row.forLabel = forLabel(row.forRecipeIds, input.recipesById);
     out.push(row);
   }
   for (const m of input.manualItems) {

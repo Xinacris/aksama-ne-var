@@ -1,0 +1,90 @@
+.page {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.brand {
+  font-family: var(--font-serif);
+  font-size: 23px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand:hover {
+  color: var(--ink);
+}
+.aside {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.narrow {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(30px, 4.4vw, 46px);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink2);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.alt {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink2);
+  text-align: center;
+}
+.alt a {
+  font-weight: 700;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink2);
+  font-size: 13px;
+  font-weight: 600;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink2);
+  line-height: 1.5;
+  text-align: center;
+}
