@@ -16,7 +16,7 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 - [x] 7. Onboarding 1 & 2.
 - [x] 8. Bugün.
 - [x] 9. Eşleş + match moment.
-- [ ] 10. Hafta (desktop board + mobile list, drag-and-drop).
+- [x] 10. Hafta (desktop board + mobile list, drag-and-drop).
 - [ ] 11. Liste (pazar/market, aisles, live sync, finish).
 - [ ] 12. Tarif detayı + recipe browser + add/edit recipe.
 - [ ] 13. Settings, activity feed, demo seed matching the design's sample data, export/reset.
