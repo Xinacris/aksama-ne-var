@@ -23,5 +23,5 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 - [x] 14. E2E journeys + axe, both viewports.
 - [x] 15. Visual review passes with screenshots; fix drift.
   - Two passes over Bugün, Eşleş (+ match moment), Liste, Tarif, Hafta, Onboarding at 390/1440 × light/dark. Fixes: reminder banner keeps the done state, Yarın line capped at 3 dishes, menu time = longest + 5 min, plan-change button padding, form overflow at 390, AA contrast for sand text.
-- [ ] 16. Supabase draft schema + migration doc.
+- [x] 16. Supabase draft schema + migration doc.
 - [ ] 17. Final: all scripts green, `npm run build` passes, README, `DEMO.md`, final commit and push, deployment status checked.
