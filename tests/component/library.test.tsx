@@ -14,13 +14,6 @@ import { ActivityLine, EmptyState, PhotoPlaceholder, SyncIndicator, SyncInline }
 const ali = { id: "a", name: "Ali", initial: "A", color: "#55612A" };
 const zeynep = { id: "z", name: "Zeynep", initial: "Z", color: "#9A5512" };
 
-vi.mock("next/link", () => ({
-  default: ({ href, children, ...rest }: { href: string; children: React.ReactNode }) => (
-    <a href={href} {...rest}>
-      {children}
-    </a>
-  ),
-}));
 
 describe("DishChip", () => {
   it("toggles aria-pressed and shows a check when selected", async () => {

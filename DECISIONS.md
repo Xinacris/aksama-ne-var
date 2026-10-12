@@ -40,3 +40,10 @@ One line each: decision — reason.
 - An invited partner sees onboarding 1 prefilled with the household's favorites (shared, not per-person) and finishes with "Başlayalım" → Bugün (step 2 is skipped: the house is already full).
 - Onboarding 2's WhatsApp button is a real `<a href="https://wa.me/?text=…" target="_blank">` styled like the design button — it navigates, so a link is the right element. "Kopyalandı" reverts to "Kopyala" after 3 s; clipboard failure selects the field and explains calmly.
 - `screenshots/` is git-ignored (regenerate with `npm run screenshots`; `SHOTS=bugun,liste` limits the set).
+- Bugün reminder = first of today's tasks (due order) that is pending or was completed in the last 2 h — so "Ali tamamladı · 09:12 / Geri al" stays visible after tapping "Çıkardım" (design interaction) and the banner then moves on to the next task. Freezer tasks use "Çıkardım", others "Yaptım".
+- Night-before tasks (e.g. "Fasulyeyi ıslatmaya koy") surface on the previous day's Bugün as "Yarın akşama … var, …mayı unutma."
+- "Plan değişti" opens an inline option group (Yarına taşı / Yarınla yer değiştir, Eşleşmelere geri gönder, Vazgeç) rather than a modal — keeps focus in place and needs no focus trap.
+- "Bugün dışarıda yedik" acts immediately (no confirm, nothing to punish) with a calm notice; the day becomes a neutral "Bu akşam dışarıdasınız" card with "Geri al".
+- Bugün desktop (≥1024): two columns (reminder/partner/tonight | leftover/plan değişti/yarın/"Evde son hareketler"); the page header hides avatars/sync there because the top nav shows them.
+- The partner activity line links to the activity feed (/akis); match activity reads "Ali ve Zeynep karnıyarık için eşleşti" so it is correct from both perspectives.
+- Screenshots pin the clock to 2026-10-12 08:45 (+03) — the design's morning, before the kıyma task is done; the demo marks it done by Ali at 09:12 only once that time has passed.

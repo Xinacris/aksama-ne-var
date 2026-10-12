@@ -1,7 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 
-/** Pinned to the design's day: "Pazartesi, 12 Ekim", mid-afternoon. */
-const DESIGN_NOW = new Date("2026-10-12T15:00:00+03:00");
+/** Pinned to the design's morning: "Pazartesi, 12 Ekim", before the kıyma reminder is done. */
+const DESIGN_NOW = new Date("2026-10-12T08:45:00+03:00");
 const only = process.env.SHOTS?.split(",");
 
 async function shot(page: Page, project: string, name: string) {
@@ -64,8 +64,9 @@ test("screens", async ({ page }, info) => {
 
   await demo(page);
   for (const [name, url] of routes) {
+    if (only && !only.includes(name)) continue;
     await page.goto(url);
-    await page.waitForLoadState("networkidle");
+    await page.locator("main").first().waitFor({ timeout: 10_000 }).catch(() => {});
     await shot(page, p, name);
   }
   await page.goto("/ev/k7m2-tq");

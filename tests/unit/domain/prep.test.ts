@@ -91,10 +91,18 @@ describe("reminders", () => {
   });
 
   it("picks the earliest pending task, else the last completed", () => {
-    expect(topReminder(tasks, "2026-10-12")?.label).toBe("Kıymayı buzluktan çıkar");
+    const at = new Date(2026, 9, 12, 8, 0);
+    expect(topReminder(tasks, "2026-10-12", at)?.label).toBe("Kıymayı buzluktan çıkar");
     const allDone = tasks.map((t) => ({ ...t, status: "done" as const, doneAt: t.dueAt, doneBy: "ali" }));
-    expect(topReminder(allDone, "2026-10-12")?.label).toBe("Fasulyeyi ıslatmaya koy");
-    expect(topReminder([], "2026-10-12")).toBeNull();
+    expect(topReminder(allDone, "2026-10-12", new Date(2026, 9, 13, 1, 0))?.label).toBe("Fasulyeyi ıslatmaya koy");
+    expect(topReminder([], "2026-10-12", at)).toBeNull();
+  });
+
+  it("keeps a just-completed task in the banner so it can be undone", () => {
+    const doneAt = new Date(2026, 9, 12, 9, 12).toISOString();
+    const withDone = tasks.map((t) => (t.label === "Kıymayı buzluktan çıkar" ? { ...t, status: "done" as const, doneAt, doneBy: "ali" } : t));
+    expect(topReminder(withDone, "2026-10-12", new Date(2026, 9, 12, 9, 30))?.label).toBe("Kıymayı buzluktan çıkar");
+    expect(topReminder(withDone, "2026-10-12", new Date(2026, 9, 12, 15, 0))?.label).toBe("Köfte harcını yoğur, buzdolabında dinlendir");
   });
 
   it("writes the design's reminder sentence", () => {

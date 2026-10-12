@@ -790,9 +790,9 @@ export const useApp = create<AppState>()((set, get) => {
     const tasks = await ctx().repos.prep.list(household.id);
     const ali = people[0];
     const kiyma = tasks.find((t) => t.date === today && t.label === "Kıymayı buzluktan çıkar");
-    if (kiyma && ali) {
-      const doneAt = new Date(now());
-      doneAt.setHours(9, 12, 0, 0);
+    const doneAt = new Date(now());
+    doneAt.setHours(9, 12, 0, 0);
+    if (kiyma && ali && now().getTime() >= doneAt.getTime()) {
       await ctx().repos.prep.update(kiyma.id, { status: "done", doneBy: ali.id, doneAt: doneAt.toISOString() });
     }
   }

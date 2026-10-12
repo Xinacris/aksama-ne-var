@@ -54,12 +54,13 @@ export function menuTitle(menu: Menu, recipesById: Map<string, Recipe>): string 
   return r ? `${r.shortName ?? r.name} sofrası` : "Akşam menüsü";
 }
 
-/** "Karnıyarık · cacık · şehriyeli pilav" (main first, as in the Yarın card). */
+/** "Karnıyarık · cacık · şehriyeli pilav": main first, at most three dishes (as in the Yarın card). */
 export function menuLine(menu: Menu, recipesById: Map<string, Recipe>): string {
   const order: Slot[] = ["ana", "salata", "yaninda", "corba"];
   return order
     .map((s) => menu[s])
     .filter((x): x is PlanItem => !!x)
+    .slice(0, 3)
     .map((it, idx) => {
       const r = recipesById.get(it.recipeId);
       const n = r ? r.shortName ?? r.name : "Silinmiş tarif";
