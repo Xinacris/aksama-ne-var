@@ -1,0 +1,144 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.compact {
+  max-width: 360px;
+  border-radius: 22px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tonight {
+  border-radius: 24px;
+}
+.body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tomato);
+}
+.pillWait {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sand);
+  background: var(--sand-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.pillOk {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--olive);
+  background: var(--olive-soft);
+  padding: 5px 10px 5px 6px;
+  border-radius: 999px;
+}
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.15;
+}
+.compact .title {
+  font-size: 22px;
+}
+.tonight .title {
+  font-size: 25px;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+}
+.compact .row {
+  grid-template-columns: 76px 1fr;
+  padding: 8px 0;
+  font-size: 15px;
+}
+.tonight .row {
+  grid-template-columns: 82px 1fr auto;
+  padding: 11px 0;
+  align-items: baseline;
+  font-size: 16px;
+  font-weight: 500;
+}
+.row.main {
+  font-weight: 600;
+}
+.slot {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.time {
+  font-size: 12px;
+  color: var(--ink2);
+}
+.dish {
+  color: inherit;
+  text-decoration: none;
+}
+.dish:hover {
+  color: var(--tomato);
+}
+.missing {
+  color: var(--ink2);
+  font-style: italic;
+}
+.open {
+  min-height: 48px;
+  border-radius: 14px;
+  background: var(--surface2);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.open:hover {
+  color: var(--ink);
+  background: var(--line);
+}
+.approveBtn {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--olive);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
