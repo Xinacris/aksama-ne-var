@@ -37,7 +37,7 @@
 .pillWait {
   font-size: 12px;
   font-weight: 600;
-  color: var(--sand);
+  color: var(--sand-text);
   background: var(--sand-soft);
   padding: 4px 10px;
   border-radius: 999px;

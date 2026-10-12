@@ -53,7 +53,7 @@
   border-radius: 999px;
   border: 0;
   background: var(--sand-soft);
-  color: var(--sand);
+  color: var(--sand-text);
   font-size: 13px;
   font-weight: 600;
   position: relative;
