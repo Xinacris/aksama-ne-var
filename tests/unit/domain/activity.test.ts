@@ -22,7 +22,7 @@ describe("activity copy", () => {
     expect(activityText(act("plan.added", { recipeId: R("İzmir köfte").id, date: "2026-10-13" }), ctx)).toBe("Salı'ya İzmir köfte ekledi");
     expect(activityText(act("plan.added", { recipeId: R("Karnıyarık").id, date: "2026-10-16" }), ctx)).toBe("Cuma'ya karnıyarık ekledi");
     expect(activityText(act("shopping.checked", { itemName: "Kıyma" }), ctx)).toBe("Kıyma aldı");
-    expect(activityText(act("match.made", { recipeId: R("Karnıyarık").id }), { ...ctx, partnerName: "Zeynep" })).toBe("ile karnıyarık için eşleştiniz");
+    expect(activityText(act("match.made", { recipeId: R("Karnıyarık").id }), { ...ctx, partnerName: "Zeynep" })).toBe("ve Zeynep karnıyarık için eşleşti");
   });
 
   it("builds a view with actor name and relative time", () => {

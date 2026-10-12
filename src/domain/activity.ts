@@ -43,7 +43,7 @@ export function activityText(
     case "plan.leftovers":
       return `${day} yemeğinin ertesi güne artacağını işaretledi`;
     case "match.made":
-      return ctx.partnerName ? `ile ${dish} için eşleştiniz` : `${dish} için karar verdi`;
+      return ctx.partnerName ? `ve ${ctx.partnerName} ${dish} için eşleşti` : `${dish} için karar verdi`;
     case "shopping.checked":
       return `${str(a.data.itemName)} aldı`;
     case "shopping.finished":
@@ -63,13 +63,15 @@ export function activityText(
 
 export function viewActivity(
   a: Activity,
-  ctx: { recipesById: Map<string, Recipe>; users: Map<string, User>; todayIso: string; now: Date; partnerName?: string },
+  ctx: { recipesById: Map<string, Recipe>; users: Map<string, User>; todayIso: string; now: Date },
 ): ActivityView {
+  // "partner" here means the other member relative to the actor (for match lines).
+  const other = [...ctx.users.values()].find((u) => u.id !== a.actorId)?.name;
   return {
     id: a.id,
     actorId: a.actorId,
     actorName: ctx.users.get(a.actorId)?.name ?? "Biri",
-    text: activityText(a, ctx),
+    text: activityText(a, { ...ctx, partnerName: other }),
     when: agoTime(a.createdAt, ctx.now),
   };
 }

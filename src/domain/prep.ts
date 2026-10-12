@@ -122,13 +122,18 @@ export function tasksDueOn(tasks: PrepTask[], dayIso: string): PrepTask[] {
 }
 
 /**
- * Today's top reminder: the earliest pending task due today; if all are
- * done, the most recently completed one (so the banner can show "tamamladı").
+ * Today's top reminder, in due order: the first task that is still pending,
+ * or that was completed recently (so the banner can show "tamamladı" with
+ * an undo). If everything is long done, the last completed one is shown.
  */
-export function topReminder(tasks: PrepTask[], todayIso: string): PrepTask | null {
+export const RECENT_DONE_MS = 2 * 60 * 60 * 1000;
+
+export function topReminder(tasks: PrepTask[], todayIso: string, nowDate: Date = new Date()): PrepTask | null {
   const today = tasksDueOn(tasks, todayIso);
-  const pending = today.filter((t) => t.status === "pending");
-  if (pending.length) return pending[0];
+  const current = today.find(
+    (t) => t.status === "pending" || (t.doneAt !== null && nowDate.getTime() - new Date(t.doneAt).getTime() < RECENT_DONE_MS),
+  );
+  if (current) return current;
   const done = today.filter((t) => t.status === "done").sort((a, b) => (b.doneAt ?? "").localeCompare(a.doneAt ?? ""));
   return done[0] ?? null;
 }
