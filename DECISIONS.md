@@ -10,3 +10,8 @@ One line each: decision — reason.
 - `@types/node@24` instead of the scaffold's `^20` — vitest 5 peer requires >=22.
 - `typecheck` runs `next typegen` first so route-aware types (`LayoutProps`, `PageProps`) exist without a build.
 - E2E server = `next build && next start` on port 3100 (production parity, the build is what Vercel runs).
+- Storage layout: one JSON array per table under `anv:t:<table>`, schema version in `anv:meta`; rows are zod-validated on read, invalid rows dropped, unparseable tables quarantined to `anv:corrupt:<table>:<ts>` — the app keeps working with a calm notice instead of crashing.
+- Built-in recipes live in code (`src/data/seed`), not in storage; only household custom recipes are stored — keeps storage small and lets the seed improve without migrations.
+- Session: sessionStorage holds the per-tab user, localStorage remembers the last login so new tabs and restarts stay logged in; logout only clears the shared fallback if it points at the same user.
+- Emails and invite codes compared with plain `toLowerCase()` (Turkish casing turns `I` into `ı`, which breaks ASCII emails); Turkish casing is used for user-facing search/sort.
+- Sync: writes publish a coalesced `change` message per tick over BroadcastChannel; `storage` events are a fallback. Presence heartbeats use the same channel.

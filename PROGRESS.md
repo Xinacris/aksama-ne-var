@@ -5,7 +5,7 @@ Resume: continue from the first unchecked item. Spec: PROMPT.md. Decisions: DECI
 ## Phases
 - [x] 1. Scaffold Next.js + TS + lint/format + Vitest + Playwright at the repo root; tokens, fonts, theme switch; first push to `main` (first Vercel deploy).
   - Theme toggle lives in `src/hooks/useTheme.ts`; UI for it lands in Settings (phase 13).
-- [ ] 2. Data layer: models, repo interfaces, LocalStorageAdapter, migrations, cross-tab sync bus + tests.
+- [x] 2. Data layer: models, repo interfaces, LocalStorageAdapter, migrations, cross-tab sync bus + tests.
 - [ ] 3. 100-recipe seed + validation tests.
 - [ ] 4. Domain logic (list, prep tasks, matching, rotation, leftovers) + unit tests.
 - [ ] 5. Auth + households + invite/join + protected routes + tests.
