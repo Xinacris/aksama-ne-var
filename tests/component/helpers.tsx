@@ -1,12 +1,12 @@
 import { createMemoryData, type DataContext } from "@/data";
 import { setNow } from "@/lib/clock";
-import { useApp, useDataContext } from "@/store/app";
+import { useApp, setDataContext } from "@/store/app";
 
 /** Fresh in-memory data + store, optionally with the demo household loaded. */
 export async function freshStore(opts: { demo?: boolean; at?: Date } = {}): Promise<DataContext> {
   setNow(opts.at ?? new Date(2026, 9, 12, 8, 45));
   const d = createMemoryData();
-  useDataContext(d);
+  setDataContext(d);
   useApp.setState({ status: "booting", me: null, household: null, notice: null, presence: {} });
   if (opts.demo) await useApp.getState().loadDemo();
   else await useApp.getState().refresh();

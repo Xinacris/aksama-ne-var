@@ -178,7 +178,7 @@ function ctx(): DataContext {
   return data;
 }
 /** Tests inject an in-memory context. */
-export function useDataContext(next: DataContext | null) {
+export function setDataContext(next: DataContext | null) {
   data = next;
 }
 
