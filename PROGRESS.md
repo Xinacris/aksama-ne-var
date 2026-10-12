@@ -11,7 +11,8 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 - [x] 3. 100-recipe seed + validation tests.
 - [x] 4. Domain logic (list, prep tasks, matching, rotation, leftovers) + unit tests.
 - [x] 5. Auth + households + invite/join + protected routes + tests.
-- [ ] 6. Shared component library ported from `Componentler.dc.html` + component tests.
+- [x] 6. Shared component library ported from `Componentler.dc.html` + component tests.
+  - `src/components/ui/*` (Button, Field, Avatar, Chip, Misc: SyncIndicator/ActivityLine/EmptyState/PhotoPlaceholder/Notice), `MenuCard`, `ReminderBanner`, `AppShell` (bottom + top nav).
 - [ ] 7. Onboarding 1 & 2.
 - [ ] 8. Bugün.
 - [ ] 9. Eşleş + match moment.
