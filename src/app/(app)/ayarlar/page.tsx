@@ -31,7 +31,6 @@ export default function AyarlarPage() {
   const updateProfile = useApp((x) => x.updateProfile);
   const setDinnerTime = useApp((x) => x.setDinnerTime);
   const leaveHousehold = useApp((x) => x.leaveHousehold);
-  const logOut = useApp((x) => x.logOut);
   const loadDemo = useApp((x) => x.loadDemo);
   const exportJson = useApp((x) => x.exportJson);
   const resetAll = useApp((x) => x.resetAll);
@@ -99,10 +98,7 @@ export default function AyarlarPage() {
             <Button
               variant="secondary"
               size="sm"
-              onClick={() => {
-                logOut();
-                router.replace("/giris");
-              }}
+              onClick={() => router.replace("/giris?cikis=1")}
             >
               Çıkış yap
             </Button>

@@ -14,6 +14,8 @@
   --sand: #8a6630;
   --sand-soft: #f0e1c2;
   --leftover-link: #7a8a3a;
+  /* Sand text on sand-soft needs a touch more contrast than the token gives (WCAG AA). */
+  --sand-text: color-mix(in srgb, var(--sand) 82%, var(--ink));
   --shadow-ink: 42, 33, 25;
   --font-serif: var(--font-young-serif), Georgia, serif;
   --font-sans: var(--font-figtree), "Segoe UI", system-ui, sans-serif;
@@ -34,6 +36,7 @@
   --olive-soft: #2b2f1e;
   --sand: #d8b57c;
   --sand-soft: #362c1e;
+  --sand-text: var(--sand);
   color-scheme: dark;
 }
 
@@ -53,6 +56,7 @@
     --olive-soft: #2b2f1e;
     --sand: #d8b57c;
     --sand-soft: #362c1e;
+    --sand-text: var(--sand);
     color-scheme: dark;
   }
 }

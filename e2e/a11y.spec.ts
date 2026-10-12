@@ -1,0 +1,54 @@
+import AxeBuilder from "@axe-core/playwright";
+import { expect, test, type Page } from "@playwright/test";
+
+const NOW = new Date("2026-10-12T10:00:00+03:00");
+
+async function audit(page: Page, label: string) {
+  await page.locator("main").first().waitFor();
+  await page.waitForTimeout(300);
+  const result = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
+  const summary = result.violations.map((v) => `${v.id} (${v.nodes.length}): ${v.nodes.slice(0, 3).map((n) => n.target.join(" ")).join(" | ")}`);
+  expect(summary, `${label} axe violations`).toEqual([]);
+}
+
+test.describe("accessibility (axe)", () => {
+  test("public screens", async ({ page }) => {
+    await page.goto("/giris");
+    await audit(page, "giris");
+    await page.goto("/kayit");
+    await audit(page, "kayit");
+    await page.goto("/ev/yok-00");
+    await audit(page, "davet-yok");
+  });
+
+  test("onboarding", async ({ page }) => {
+    await page.goto("/kayit");
+    await page.getByLabel("Adın").fill("Ali");
+    await page.getByLabel("E-posta").fill("ali@ornek.com");
+    await page.getByLabel("Şifre").fill("kofte123");
+    await page.getByRole("button", { name: "Hesap oluştur" }).click();
+    await expect(page.getByRole("heading", { name: /en sık yaptığınız/ })).toBeVisible();
+    await audit(page, "onboarding-1");
+    await page.getByRole("button", { name: /Devam et/ }).click();
+    await expect(page.getByLabel("Davet linki")).toBeVisible();
+    await audit(page, "onboarding-2");
+  });
+
+  for (const scheme of ["light", "dark"] as const) {
+    test(`main screens (${scheme})`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme: scheme });
+      await page.clock.setFixedTime(NOW);
+      await page.goto("/giris");
+      await page.getByRole("button", { name: /Örnek evle dene/ }).click();
+      await expect(page).toHaveURL(/\/bugun/);
+      for (const url of ["/bugun", "/eslesme", "/liste", "/hafta", "/tarif/izmir-kofte?gun=today", "/tarifler", "/tarifler/yeni", "/ayarlar", "/akis"]) {
+        await page.goto(url);
+        await audit(page, `${url} ${scheme}`);
+      }
+      await page.goto("/eslesme");
+      await page.getByRole("button", { name: "Olur" }).click();
+      await expect(page.getByRole("heading", { name: /dediniz!/ })).toBeVisible();
+      await audit(page, `eslesme-eslesti ${scheme}`);
+    });
+  }
+});

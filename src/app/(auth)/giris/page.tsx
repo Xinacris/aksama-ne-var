@@ -21,13 +21,24 @@ function GirisInner() {
   const loadDemo = useApp((s) => s.loadDemo);
   const [busy, setBusy] = useState(false);
   const next = safeNext(params.get("next"));
+  const leaving = params.get("cikis") === "1";
+  const logOut = useApp((s) => s.logOut);
+
+  // Logging out goes through /giris?cikis=1 so no guarded page redirects back afterwards.
+  useEffect(() => {
+    if (leaving && status !== "booting") {
+      if (status !== "anon") logOut();
+      router.replace("/giris");
+    }
+  }, [leaving, status, logOut, router]);
 
   useEffect(() => {
+    if (leaving) return;
     if (status === "ready") router.replace(next);
     else if (status === "no-household") router.replace("/onboarding/1");
-  }, [status, router, next]);
+  }, [status, router, next, leaving]);
 
-  if (status === "booting") return <Loading />;
+  if (status === "booting" || leaving) return <Loading />;
 
   return (
     <main className={shell.narrow}>

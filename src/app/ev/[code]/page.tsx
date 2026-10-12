@@ -24,6 +24,11 @@ export default function InvitePage() {
   const household = useApp((st) => st.household);
   const lookupInvite = useApp((st) => st.lookupInvite);
   const joinHousehold = useApp((st) => st.joinHousehold);
+  const logOut = useApp((st) => st.logOut);
+  const switchAccount = () => {
+    logOut();
+    setInfo(null);
+  };
   const [info, setInfo] = useState<InviteInfo | null>(null);
   const [mode, setMode] = useState<"signup" | "login">("signup");
   const [error, setError] = useState<string | null>(null);
@@ -93,10 +98,16 @@ export default function InvitePage() {
       <SimpleShell aside="Davet">
         <main className={shell.narrow}>
           <h1 className={shell.title}>Zaten bu evdesin</h1>
-          <p className={shell.lead}>Menü, liste ve hatırlatmalar seni bekliyor.</p>
+          <p className={shell.lead}>
+            {me ? `${me.name} olarak girişlisin. ` : ""}Menü, liste ve hatırlatmalar seni bekliyor.
+          </p>
           <ButtonLink href="/bugun" size="xl" block>
             Bugüne git
           </ButtonLink>
+          <Button variant="secondary" size="lg" block onClick={switchAccount}>
+            Farklı bir hesapla katıl
+          </Button>
+          <p className={shell.note}>Aynı tarayıcıda ikinci kişi olarak denemek için: bu sekmede çıkış yapılır, diğer sekme açık kalır.</p>
         </main>
       </SimpleShell>
     );
@@ -138,13 +149,18 @@ export default function InvitePage() {
                 <ButtonLink href="/ayarlar" size="lg" variant="outlineInk" block>
                   Ayarlara git
                 </ButtonLink>
+                <Button variant="secondary" size="lg" block onClick={switchAccount}>
+                  Farklı bir hesapla katıl
+                </Button>
               </div>
             ) : (
               <div className={s.stack}>
                 <Button size="xl" block onClick={join} disabled={busy}>
                   {busy ? "Katılıyorsun…" : `${me.name} olarak eve katıl`}
                 </Button>
-                <p className={shell.note}>Başka bir hesapla mı katılacaksın? Önce çıkış yapıp bu linki tekrar aç.</p>
+                <Button variant="secondary" size="lg" block onClick={switchAccount}>
+                  Farklı bir hesapla katıl
+                </Button>
               </div>
             )
           ) : mode === "signup" ? (

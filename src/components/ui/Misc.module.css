@@ -20,7 +20,7 @@
 }
 .syncOffline {
   background: var(--sand-soft);
-  color: var(--sand);
+  color: var(--sand-text);
 }
 .dot {
   width: 7px;
@@ -42,7 +42,7 @@
   color: var(--ink2);
 }
 .syncInline.offlineText {
-  color: var(--sand);
+  color: var(--sand-text);
 }
 .spin {
   animation: spin 1s linear infinite;
