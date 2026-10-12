@@ -15,3 +15,8 @@ One line each: decision — reason.
 - Session: sessionStorage holds the per-tab user, localStorage remembers the last login so new tabs and restarts stay logged in; logout only clears the shared fallback if it points at the same user.
 - Emails and invite codes compared with plain `toLowerCase()` (Turkish casing turns `I` into `ı`, which breaks ASCII emails); Turkish casing is used for user-facing search/sort.
 - Sync: writes publish a coalesced `change` message per tick over BroadcastChannel; `storage` events are a fallback. Presence heartbeats use the same channel.
+- Recipes reference a canonical ingredient catalog (`src/data/seed/ingredients.ts`) with base unit, kitchen-measure conversions and pack sizes; the `i()` builder throws on unknown names — this is what makes list aggregation reliable.
+- Pantry staples (salt, oil, spices, kuru nane, bayat ekmek) are flagged `staple` and never auto-listed; recipe detail shows them as "Evde var" like the design.
+- Design names kept verbatim; long names get a `shortName` for chips/tags ("Tereyağlı pirinç pilavı" → "Pirinç pilavı", "Ezogelin çorbası" → "Ezogelin").
+- "Ertesi güne artar" tag is derived from `leftoverFriendly` and appended last (matches the design's card tag order) instead of being stored in `tags`.
+- Menemen and other breakfast/one-plate dishes have course `kahvalti` but fill the "Ana yemek" slot and appear under "Ana yemekler" in onboarding, as in the design.

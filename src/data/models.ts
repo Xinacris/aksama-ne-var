@@ -105,6 +105,8 @@ export const recipeSchema = z.object({
   /** null = built-in recipe shared by all households. */
   householdId: uuid.nullable(),
   name: z.string().min(1),
+  /** Shorter label for chips and list tags, e.g. "Pirinç pilavı". */
+  shortName: z.string().optional(),
   course: courseSchema,
   prepMinutes: z.number().int().min(0),
   cookMinutes: z.number().int().min(0),
