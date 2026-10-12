@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ortak component'ler</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button{font:inherit;cursor:pointer}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div style="min-height: 1640px; background: #E9DFCE; font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif; color: #2A2119">
+<div style="max-width: 1440px; margin: 0 auto; padding: 40px 32px; display: flex; flex-direction: column; gap: 28px">
+  <div style="display: flex; flex-direction: column; gap: 8px; max-width: 760px">
+    <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 38px">Ortak component'ler</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #685846">Mobil ve web aynı parçaları kullanır. Zemin bulgur, ana aksan domates, ikinci aksan zeytin; kum tonu “listede / bekliyor” durumları için. Başlıklar Young Serif, metin Figtree.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(620px, 100%), 1fr)); gap: 24px">
+    <sc-for list="{{themes}}" as="th" hint-placeholder-count="2">
+      <div class="app {{th.cls}}" style="background: var(--bg); color: var(--ink); border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 30px">
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2)">{{th.label}}</span>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Menü kartı</h2>
+          <article style="max-width: 360px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px">
+            <div style="display: flex; justify-content: space-between; align-items: center">
+              <span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tomato)">Salı akşamı</span>
+              <span style="font-size: 12px; font-weight: 600; color: var(--sand); background: var(--sand-soft); padding: 4px 10px; border-radius: 999px">Zeynep'in onayı bekleniyor</span>
+            </div>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 22px">Karnıyarık sofrası</h3>
+            <ul style="list-style: none; margin: 0; padding: 0">
+              <li style="display: grid; grid-template-columns: 76px 1fr; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Çorba</span>Yayla çorbası</li>
+              <li style="display: grid; grid-template-columns: 76px 1fr; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; font-weight: 600"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Ana yemek</span>Karnıyarık</li>
+              <li style="display: grid; grid-template-columns: 76px 1fr; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Yanında</span>Şehriyeli pilav</li>
+              <li style="display: grid; grid-template-columns: 76px 1fr; gap: 8px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Salata</span>Cacık</li>
+            </ul>
+          </article>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Yemek chip'i</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+            <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font-size: 15px; font-weight: 600">Kuru fasulye</button>
+            <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--tomato); background: var(--tomato); color: var(--on-tomato); font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>İzmir köfte</button>
+            <span style="min-height: 40px; padding: 0 14px 0 10px; border-radius: 999px; background: var(--sand-soft); font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01"></path></svg>Menemen</span>
+            <span style="min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--tomato-soft); color: var(--tomato); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>Karnıyarık</span>
+            <span style="min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--olive-soft); color: var(--olive); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px">Öğlen · kuru fasulye</span>
+          </div>
+          <span style="font-size: 13px; color: var(--ink2)">Varsayılan · seçili · sürüklenebilir · eşleşmeden · artan</span>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Partner avatarı ve aktivite</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+            <span style="width: 44px; height: 44px; border-radius: 50%; background: #55612A; color: #fff; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">A</span>
+            <span style="width: 44px; height: 44px; border-radius: 50%; background: #9A5512; color: #fff; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--olive)">Z</span>
+            <span style="display: flex"><span style="width: 32px; height: 32px; border-radius: 50%; background: #55612A; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg)">A</span><span style="width: 32px; height: 32px; border-radius: 50%; background: #9A5512; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg); margin-left: -8px">Z</span></span>
+            <span style="font-size: 13px; color: var(--ink2)">Zeytin halkası: şu an uygulamada</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink2)"><span style="width: 26px; height: 26px; border-radius: 50%; background: #9A5512; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">Z</span><span><strong style="color: var(--ink); font-weight: 600">Zeynep</strong> bu akşamki menüyü onayladı · 14 dk önce</span></div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink2)"><span style="width: 26px; height: 26px; border-radius: 50%; background: #55612A; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">A</span><span><strong style="color: var(--ink); font-weight: 600">Ali</strong> Perşembe'ye tavuk sote ekledi · dün</span></div>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Senkron göstergesi</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <span role="status" style="min-height: 34px; padding: 0 12px; border-radius: 999px; background: var(--olive-soft); color: var(--olive); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--olive)"></span>Canlı</span>
+            <span role="status" style="min-height: 34px; padding: 0 12px; border-radius: 999px; background: var(--surface2); color: var(--ink2); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7"></path><path d="M20 4v4h-4"></path></svg>Eşitleniyor</span>
+            <span role="status" style="min-height: 34px; padding: 0 12px; border-radius: 999px; background: var(--sand-soft); color: var(--sand); font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"></path><path d="M4 4l16 16"></path></svg>Çevrimdışı · 2 değişiklik sırada</span>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Hatırlatma banner'ı</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px">
+            <div style="background: var(--tomato-soft); border-radius: 20px; padding: 14px; display: flex; gap: 12px; align-items: flex-start">
+              <span style="width: 38px; height: 38px; border-radius: 12px; background: var(--surface); color: var(--tomato); display: flex; align-items: center; justify-content: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18M9 4l3 2 3-2M9 20l3-2 3 2"></path></svg></span>
+              <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.35">Kıymayı buzluktan çıkar</span><span style="font-size: 12.5px; font-weight: 700; color: var(--tomato)">Bekliyor · Ali</span></span>
+            </div>
+            <div style="background: var(--olive-soft); border-radius: 20px; padding: 14px; display: flex; gap: 12px; align-items: flex-start">
+              <span style="width: 38px; height: 38px; border-radius: 12px; background: var(--surface); color: var(--olive); display: flex; align-items: center; justify-content: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+              <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.35">Kıymayı buzluktan çıkar</span><span style="font-size: 12.5px; font-weight: 700; color: var(--olive)">Ali tamamladı · 09:12</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 700">Boş durum</h2>
+          <div style="border: 1.5px dashed var(--line); border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+            <span style="width: 56px; height: 56px; border-radius: 50%; background: var(--surface2); color: var(--ink2); display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.5"></circle></svg></span>
+            <span style="font-family: 'Young Serif', Georgia, serif; font-size: 20px">Cuma akşamı henüz boş</span>
+            <span style="font-size: 14px; color: var(--ink2); max-width: 300px; line-height: 1.45">Eşleşmelerden bir şey seçebilir ya da öyle bırakabilirsiniz.</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 4px">
+              <button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 14px; border: 0; background: var(--tomato); color: var(--on-tomato); font-weight: 700; font-size: 14px">Eşleşmelerden seç</button>
+              <button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 14px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font-weight: 600; font-size: 14px">Boş kalsın</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { themes: [{ cls: '', label: 'Açık tema' }, { cls: 'dark', label: 'Koyu tema' }] };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Alışveriş listesi</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button{font:inherit;cursor:pointer}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+@keyframes ping{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.9);opacity:0}}
+.ping{animation:ping 1.6s ease-out infinite}
+@media (prefers-reduced-motion: reduce){.ping{animation:none}}
+</style>
+</helmet>
+<div class="app {{themeClass}}" style="width: 390px; min-height: 1240px; background: var(--bg); color: var(--ink); font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column">
+
+  <header style="padding: 22px 20px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">Bu haftanın listesi</span>
+        <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.1">Alışveriş</h1>
+      </div>
+      <button type="button" aria-label="Ürün ekle" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--surface2); color: var(--ink); display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+    </div>
+
+    <div role="status" style="display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 10px 12px">
+      <span style="position: relative; width: 28px; height: 28px; flex: none">
+        <span class="ping" aria-hidden="true" style="position: absolute; inset: 0; border-radius: 50%; background: #9A5512"></span>
+        <span style="position: absolute; inset: 0; border-radius: 50%; background: #9A5512; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">Z</span>
+      </span>
+      <span style="font-size: 14px; line-height: 1.35"><strong style="font-weight: 700">Zeynep de markette.</strong> <span style="color: var(--ink2)">İşaretledikleri anında burada.</span></span>
+      <span style="margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: var(--olive)"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--olive)"></span>Canlı</span>
+    </div>
+
+    <div role="tablist" aria-label="Liste bölümü" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: var(--surface2); border-radius: 16px; padding: 4px">
+      <button type="button" role="tab" aria-selected="{{isPazar}}" onClick="{{showPazar}}" style="min-height: 50px; border-radius: 12px; border: 0; background: {{pazarBg}}; color: var(--ink); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px">Pazar <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">{{pazarCount}}</span></button>
+      <button type="button" role="tab" aria-selected="{{isMarket}}" onClick="{{showMarket}}" style="min-height: 50px; border-radius: 12px; border: 0; background: {{marketBg}}; color: var(--ink); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px">Market <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">{{marketCount}}</span></button>
+    </div>
+  </header>
+
+  <div style="padding: 8px 12px 0; display: flex; flex-direction: column; gap: 6px">
+    <sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+      <section style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px">
+        <h2 style="margin: 0; padding: 0 8px; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2)">{{g.title}}<span style="letter-spacing: 0; text-transform: none; font-weight: 600">{{g.note}}</span></h2>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+          <sc-for list="{{g.items}}" as="it" hint-placeholder-count="3">
+            <li>
+              <button type="button" onClick="{{it.toggle}}" aria-pressed="{{it.checked}}" style="width: 100%; min-height: 70px; border: 0; border-radius: 18px; background: {{it.rowBg}}; color: var(--ink); display: flex; align-items: center; gap: 14px; padding: 10px 14px; text-align: left">
+                <span style="width: 34px; height: 34px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; border: {{it.boxBorder}}; background: {{it.boxBg}}; color: #fff; font-size: 13px; font-weight: 700">
+                  <sc-if value="{{it.byA}}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></sc-if>
+                  <sc-if value="{{it.byZ}}" hint-placeholder-val="{{ false }}">Z</sc-if>
+                </span>
+                <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; opacity: {{it.op}}">
+                  <span style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+                    <span style="font-size: 17px; font-weight: 600; text-decoration: {{it.deco}}">{{it.name}}</span>
+                    <span style="font-size: 14px; color: var(--ink2); white-space: nowrap">{{it.qty}}</span>
+                  </span>
+                  <span style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+                    <span style="font-size: 12.5px; font-weight: 600; color: var(--ink2); background: var(--bg); border: 1px solid var(--line); padding: 2px 8px; border-radius: 999px">{{it.forLabel}}</span>
+                    <sc-if value="{{it.fresh}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12.5px; font-weight: 700; color: var(--sand)">Zeynep aldı · az önce</span></sc-if>
+                  </span>
+                </span>
+              </button>
+            </li>
+          </sc-for>
+        </ul>
+      </section>
+    </sc-for>
+  </div>
+
+  <div style="flex: 1"></div>
+
+  <div style="position: sticky; bottom: 0; padding: 14px 16px 22px; background: var(--bg); border-top: 1px solid var(--line); margin-top: 20px; display: flex; flex-direction: column; gap: 8px">
+    <button type="button" style="min-height: 58px; border-radius: 18px; border: 0; background: var(--tomato); color: var(--on-tomato); font-size: 17px; font-weight: 700">Alışverişi bitir</button>
+    <span style="text-align: center; font-size: 13px; color: var(--ink2)">{{remainingNote}}</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":1240}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.items = [
+      { id: 'kiyma', side: 'market', group: 'Kasap', name: 'Kıyma', qty: '500 g', for: 'Karnıyarık' },
+      { id: 'yogurt', side: 'market', group: 'Süt ve kahvaltılık', name: 'Süzme yoğurt', qty: '1 kg', for: 'Cacık' },
+      { id: 'tereyag', side: 'market', group: 'Süt ve kahvaltılık', name: 'Tereyağı', qty: '250 g', for: 'Pirinç pilavı' },
+      { id: 'yumurta', side: 'market', group: 'Süt ve kahvaltılık', name: 'Yumurta', qty: '10 adet', for: 'Menemen' },
+      { id: 'mercimek', side: 'market', group: 'Bakliyat ve kuru gıda', name: 'Kırmızı mercimek', qty: '500 g', for: 'Mercimek çorbası' },
+      { id: 'pirinc', side: 'market', group: 'Bakliyat ve kuru gıda', name: 'Baldo pirinç', qty: '1 kg', for: 'Pirinç pilavı' },
+      { id: 'sehriye', side: 'market', group: 'Bakliyat ve kuru gıda', name: 'Arpa şehriye', qty: '1 paket', for: 'Şehriyeli pilav' },
+      { id: 'salca', side: 'market', group: 'Bakliyat ve kuru gıda', name: 'Biber salçası', qty: '1 kavanoz', for: 'Karnıyarık' },
+      { id: 'patlican', side: 'pazar', group: 'Sebze', name: 'Kemer patlıcan', qty: '6 adet', for: 'Karnıyarık' },
+      { id: 'domates', side: 'pazar', group: 'Sebze', name: 'Domates', qty: '1,5 kg', for: 'İzmir köfte · Karnıyarık' },
+      { id: 'biber', side: 'pazar', group: 'Sebze', name: 'Sivri biber', qty: '10 adet', for: 'İzmir köfte · Karnıyarık' },
+      { id: 'patates', side: 'pazar', group: 'Sebze', name: 'Patates', qty: '1 kg', for: 'İzmir köfte' },
+      { id: 'salatalik', side: 'pazar', group: 'Sebze', name: 'Salatalık', qty: '4 adet', for: 'Cacık · Çoban salata' },
+      { id: 'maydanoz', side: 'pazar', group: 'Yeşillik', name: 'Maydanoz', qty: '1 demet', for: 'Çoban salata' }
+    ];
+    this.state = { tab: 'market', by: { kiyma: 'Z', yogurt: 'Z', pirinc: 'Z' }, fresh: 'kiyma' };
+  }
+  toggle(id) {
+    const by = Object.assign({}, this.state.by);
+    if (by[id]) { delete by[id]; } else { by[id] = 'A'; }
+    this.setState({ by: by, fresh: this.state.fresh === id ? null : this.state.fresh });
+  }
+  renderVals() {
+    const tab = this.state.tab;
+    const by = this.state.by;
+    const groups = [];
+    const index = {};
+    this.items.filter((x) => x.side === tab).forEach((x) => {
+      if (!index[x.group]) { index[x.group] = { title: x.group, items: [], left: 0 }; groups.push(index[x.group]); }
+      const who = by[x.id] || null;
+      const fresh = this.state.fresh === x.id && who === 'Z';
+      if (!who) index[x.group].left += 1;
+      index[x.group].items.push({
+        name: x.name, qty: x.qty, forLabel: x.for,
+        checked: !!who, byA: who === 'A', byZ: who === 'Z', fresh: fresh,
+        rowBg: fresh ? 'var(--sand-soft)' : (who ? 'transparent' : 'var(--surface)'),
+        boxBorder: who ? '0' : '2px solid var(--ink2)',
+        boxBg: who === 'Z' ? '#9A5512' : (who === 'A' ? '#55612A' : 'transparent'),
+        deco: who ? 'line-through' : 'none',
+        op: who && !fresh ? 0.6 : 1,
+        toggle: () => this.toggle(x.id)
+      });
+    });
+    groups.forEach((g) => { g.note = g.left === 0 ? 'tamam' : g.left + ' kaldı'; });
+    const count = (side) => {
+      const all = this.items.filter((x) => x.side === side);
+      const got = all.filter((x) => by[x.id]).length;
+      return got ? got + '/' + all.length : String(all.length);
+    };
+    const remaining = this.items.filter((x) => !by[x.id]).length;
+    return {
+      themeClass: (this.props.dark ?? false) ? 'dark' : '',
+      groups: groups,
+      isPazar: tab === 'pazar', isMarket: tab === 'market',
+      pazarBg: tab === 'pazar' ? 'var(--surface)' : 'transparent',
+      marketBg: tab === 'market' ? 'var(--surface)' : 'transparent',
+      pazarCount: count('pazar'), marketCount: count('market'),
+      showPazar: () => this.setState({ tab: 'pazar' }),
+      showMarket: () => this.setState({ tab: 'market' }),
+      remainingNote: remaining + ' ürün kaldı · alınmayanlar listede bekler'
+    };
+  }
+}
+</script>
+</body>
+</html>

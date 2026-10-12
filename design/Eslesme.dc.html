@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Eşleşme</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button{font:inherit;cursor:pointer}
+.ph{background-color:var(--sand-soft);background-image:repeating-linear-gradient(135deg,transparent 0 11px,rgba(138,102,48,.10) 11px 12px)}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="app {{themeClass}}" style="width: 390px; min-height: 900px; background: var(--bg); color: var(--ink); font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column">
+
+  <sc-if value="{{swiping}}" hint-placeholder-val="{{ true }}">
+    <div style="display: flex; flex-direction: column; flex: 1">
+      <header style="padding: 22px 20px 4px; display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">Salı akşamı için ana yemek</span>
+            <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.1">Ne dersin?</h1>
+          </div>
+          <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">{{counter}}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink2)">
+          <span style="width: 24px; height: 24px; border-radius: 50%; background: #9A5512; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">Z</span>
+          Zeynep 12 kartın 8'ini kaydırdı · seçimleri gizli
+        </div>
+      </header>
+
+      <div style="position: relative; margin: 18px 20px 0; height: 520px">
+        <div aria-hidden="true" style="position: absolute; inset: 22px 18px -14px; border-radius: 28px; background: var(--surface2)"></div>
+        <div aria-hidden="true" style="position: absolute; inset: 11px 9px -7px; border-radius: 28px; background: var(--surface); border: 1px solid var(--line)"></div>
+        <article style="position: absolute; inset: 0; border-radius: 28px; background: var(--surface); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(42,33,25,.10)">
+          <div class="ph" style="height: 300px; display: flex; align-items: flex-end; padding: 14px">
+            <span style="font-size: 12px; font-weight: 600; color: var(--ink2); background: var(--surface); padding: 5px 10px; border-radius: 999px">Fotoğraf · {{card.name}}</span>
+          </div>
+          <div style="padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 12px">
+            <h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.1">{{card.name}}</h2>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+              <span style="display: flex; align-items: center; gap: 8px"><span style="color: var(--ink2); display: flex"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>{{card.time}}</span>
+              <span style="display: flex; align-items: center; gap: 8px"><span style="color: var(--ink2); display: flex"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></span>{{card.last}}</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px">
+              <sc-for list="{{card.tags}}" as="tag" hint-placeholder-count="2">
+                <span style="font-size: 12.5px; font-weight: 600; color: var(--sand); background: var(--sand-soft); padding: 5px 10px; border-radius: 999px">{{tag}}</span>
+              </sc-for>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin: 30px 20px 0; display: flex; justify-content: center; align-items: center; gap: 28px">
+        <button type="button" onClick="{{pass}}" aria-label="Bu sefer değil" style="width: 68px; height: 68px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink2); display: flex; align-items: center; justify-content: center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+        <button type="button" onClick="{{like}}" aria-label="Olur" style="width: 80px; height: 80px; border-radius: 50%; border: 0; background: var(--tomato); color: var(--on-tomato); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(179,58,37,.28)">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>
+        </button>
+      </div>
+      <p style="margin: 12px 0 0; text-align: center; font-size: 13px; color: var(--ink2)">Sola kaydır: bu sefer değil · Sağa kaydır: olur</p>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{matched}}" hint-placeholder-val="{{ false }}">
+    <div style="flex: 1; background: var(--tomato-soft); display: flex; flex-direction: column; align-items: center; padding: 64px 24px 24px; gap: 22px; text-align: center">
+      <div style="position: relative; width: 200px; height: 120px; display: flex; align-items: center; justify-content: center">
+        <span aria-hidden="true" style="position: absolute; left: 12px; top: 14px; width: 10px; height: 5px; border-radius: 3px; background: var(--tomato); transform: rotate(-30deg)"></span>
+        <span aria-hidden="true" style="position: absolute; right: 18px; top: 6px; width: 8px; height: 5px; border-radius: 3px; background: var(--sand); transform: rotate(25deg)"></span>
+        <span aria-hidden="true" style="position: absolute; left: 30px; bottom: 6px; width: 9px; height: 5px; border-radius: 3px; background: var(--olive); transform: rotate(40deg)"></span>
+        <span aria-hidden="true" style="position: absolute; right: 8px; bottom: 22px; width: 10px; height: 5px; border-radius: 3px; background: var(--tomato); transform: rotate(-12deg)"></span>
+        <span aria-hidden="true" style="position: absolute; left: 92px; top: -4px; width: 7px; height: 4px; border-radius: 3px; background: var(--sand); transform: rotate(60deg)"></span>
+        <div style="display: flex; align-items: center">
+          <span style="width: 76px; height: 76px; border-radius: 50%; background: #55612A; color: #fff; font-size: 30px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 4px solid var(--tomato-soft)">A</span>
+          <span style="width: 76px; height: 76px; border-radius: 50%; background: #9A5512; color: #fff; font-size: 30px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 4px solid var(--tomato-soft); margin-left: -16px">Z</span>
+        </div>
+        <span style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; border-radius: 50%; background: var(--surface); color: var(--tomato); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(42,33,25,.15)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>
+        </span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 31px; line-height: 1.15">İkiniz de karnıyarık dediniz!</h1>
+        <p style="margin: 0; font-size: 15.5px; color: var(--ink2)">Salı akşamı için tatlı bir uzlaşma.</p>
+      </div>
+      <div style="width: 100%; background: var(--surface); border-radius: 22px; overflow: hidden; display: flex; text-align: left; border: 1px solid var(--line)">
+        <div class="ph" style="width: 108px; flex: none"></div>
+        <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-weight: 700; font-size: 17px">Karnıyarık</span>
+          <span style="font-size: 13.5px; color: var(--ink2)">1 sa 15 dk · en son 3 hafta önce</span>
+          <span style="font-size: 13.5px; color: var(--ink2); line-height: 1.4">Patlıcan, kıyma, sivri biber ve domates listeye eklenir.</span>
+        </div>
+      </div>
+      <div style="width: 100%; display: flex; flex-direction: column; gap: 10px; margin-top: auto">
+        <button type="button" style="min-height: 56px; border-radius: 18px; border: 0; background: var(--tomato); color: var(--on-tomato); font-size: 16px; font-weight: 700">Salı akşamına koy</button>
+        <button type="button" onClick="{{reset}}" style="min-height: 52px; border-radius: 18px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font-size: 15px; font-weight: 600">Kaydırmaya devam</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <nav aria-label="Ana gezinme" style="background: var(--surface); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px 14px; margin-top: 18px">
+    <a href="Main.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"></path></svg>Bugün</a>
+    <a href="Eslesme.dc.html" aria-current="page" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--tomato); text-decoration: none; font-size: 12px; font-weight: 700">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="12" height="14" rx="2"></rect><path d="M8 4h11a2 2 0 0 1 2 2v12"></path></svg>Eşleş</a>
+    <a href="Alisveris.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18l-2 10a2 2 0 0 1-2 1.6H7A2 2 0 0 1 5 19z"></path><path d="M8 9l3-6M16 9l-3-6"></path></svg>Liste</a>
+    <a href="Haftalik-Plan.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Hafta</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"startMatched":{"editor":"boolean","default":false},"$preview":{"width":390,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { i: 0, matched: null };
+    this.deck = [
+      { name: 'Karnıyarık', time: '1 sa 15 dk', last: 'En son 3 hafta önce yaptınız', tags: ['Fırında', 'Kıymalı', 'Ertesi güne artar'], zeynep: true },
+      { name: 'Fırın makarna', time: '50 dk', last: 'En son 5 hafta önce yaptınız', tags: ['Fırında', 'Kolay'], zeynep: false },
+      { name: 'Etli nohut', time: '1 sa 30 dk · düdüklüde 40 dk', last: 'En son 6 hafta önce yaptınız', tags: ['Akşamdan ıslat', 'Tencere'], zeynep: false },
+      { name: 'Mantı', time: '45 dk (hazır mantıyla)', last: 'En son 2 ay önce yaptınız', tags: ['Yoğurtlu'], zeynep: false },
+      { name: 'Taze fasulye', time: '50 dk', last: 'En son 10 gün önce yaptınız', tags: ['Zeytinyağlı', 'Ertesi güne artar'], zeynep: false }
+    ];
+  }
+  renderVals() {
+    const n = this.deck.length;
+    const i = this.state.i % n;
+    const matched = this.state.matched === null ? (this.props.startMatched ?? false) : this.state.matched;
+    const card = this.deck[i];
+    return {
+      themeClass: (this.props.dark ?? false) ? 'dark' : '',
+      card: card,
+      counter: (i + 4) + ' / 12',
+      matched: matched,
+      swiping: !matched,
+      pass: () => this.setState({ i: this.state.i + 1 }),
+      like: () => card.zeynep ? this.setState({ matched: true }) : this.setState({ i: this.state.i + 1 }),
+      reset: () => this.setState({ matched: false, i: this.state.i + 1 })
+    };
+  }
+}
+</script>
+</body>
+</html>

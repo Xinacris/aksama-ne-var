@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Bugün</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button{font:inherit;cursor:pointer}
+.ph{background-color:var(--sand-soft);background-image:repeating-linear-gradient(135deg,transparent 0 11px,rgba(138,102,48,.10) 11px 12px)}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="app {{themeClass}}" style="width: 390px; min-height: 1200px; background: var(--bg); color: var(--ink); font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column">
+
+  <header style="display: flex; align-items: flex-end; justify-content: space-between; padding: 22px 20px 6px">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 13px; font-weight: 600; color: var(--ink2)">Pazartesi, 12 Ekim</span>
+      <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.1">Akşama ne var?</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px">
+      <div style="display: flex" aria-label="Ev halkı: Ali ve Zeynep">
+        <span style="width: 34px; height: 34px; border-radius: 50%; background: #55612A; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg)">A</span>
+        <span style="width: 34px; height: 34px; border-radius: 50%; background: #9A5512; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg); margin-left: -8px">Z</span>
+      </div>
+      <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--olive)"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--olive)"></span>Senkron</span>
+    </div>
+  </header>
+
+  <section aria-label="Günün hatırlatması" style="margin: 14px 16px 0; background: {{bannerBg}}; border-radius: 22px; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 42px; height: 42px; border-radius: 14px; background: var(--surface); color: {{bannerIcon}}; display: flex; align-items: center; justify-content: center; flex: none">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18M9 4l3 2 3-2M9 20l3-2 3 2"></path></svg>
+      </span>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Akşama köfte var, kıymayı buzluktan çıkarmayı unutma.</p>
+        <span style="font-size: 13px; color: var(--ink2)">Sabah 09:00 · Ali'nin işi</span>
+      </div>
+    </div>
+    <sc-if value="{{notDone}}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-left: 54px">
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--tomato)"><span style="width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--tomato)"></span>Bekliyor</span>
+        <button type="button" onClick="{{markDone}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: var(--tomato); color: var(--on-tomato); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Çıkardım
+        </button>
+      </div>
+    </sc-if>
+    <sc-if value="{{done}}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-left: 54px">
+        <span style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--olive)">
+          <span style="width: 24px; height: 24px; border-radius: 50%; background: #55612A; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">A</span>Ali tamamladı · 09:12
+        </span>
+        <button type="button" onClick="{{undo}}" style="min-height: 44px; padding: 0 12px; border: 0; background: transparent; color: var(--ink2); font-size: 14px; font-weight: 600; text-decoration: underline">Geri al</button>
+      </div>
+    </sc-if>
+  </section>
+
+  <div style="margin: 14px 20px 0; display: flex; align-items: center; gap: 10px">
+    <span style="width: 26px; height: 26px; border-radius: 50%; background: #9A5512; color: #fff; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: none">Z</span>
+    <p style="margin: 0; font-size: 14px; color: var(--ink2); line-height: 1.4"><strong style="color: var(--ink); font-weight: 600">Zeynep</strong> bu akşamki menüyü onayladı · 14 dk önce</p>
+  </div>
+
+  <article style="margin: 14px 16px 0; background: var(--surface); border-radius: 24px; border: 1px solid var(--line); overflow: hidden">
+    <div class="ph" style="height: 136px; display: flex; align-items: flex-end; padding: 12px 14px">
+      <span style="font-size: 12px; font-weight: 600; color: var(--ink2); background: var(--surface); padding: 5px 10px; border-radius: 999px">Fotoğraf · İzmir köfte</span>
+    </div>
+    <div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tomato)">Bu akşam</span>
+        <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--olive); background: var(--olive-soft); padding: 5px 10px 5px 6px; border-radius: 999px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>İkiniz de onayladınız
+        </span>
+      </div>
+      <h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 25px; line-height: 1.15">İzmir köfte sofrası</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+        <li style="display: grid; grid-template-columns: 82px 1fr auto; gap: 8px; padding: 11px 0; border-top: 1px solid var(--line); align-items: baseline"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Çorba</span><span style="font-size: 16px; font-weight: 500">Mercimek çorbası</span><span style="font-size: 12px; color: var(--ink2)">30 dk</span></li>
+        <li style="display: grid; grid-template-columns: 82px 1fr auto; gap: 8px; padding: 11px 0; border-top: 1px solid var(--line); align-items: baseline"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Ana yemek</span><span style="font-size: 16px; font-weight: 600">İzmir köfte</span><span style="font-size: 12px; color: var(--ink2)">1 sa 10 dk</span></li>
+        <li style="display: grid; grid-template-columns: 82px 1fr auto; gap: 8px; padding: 11px 0; border-top: 1px solid var(--line); align-items: baseline"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Yanında</span><span style="font-size: 16px; font-weight: 500">Tereyağlı pirinç pilavı</span><span style="font-size: 12px; color: var(--ink2)">25 dk</span></li>
+        <li style="display: grid; grid-template-columns: 82px 1fr auto; gap: 8px; padding: 11px 0; border-top: 1px solid var(--line); align-items: baseline"><span style="font-size: 12px; font-weight: 600; color: var(--ink2)">Salata</span><span style="font-size: 16px; font-weight: 500">Çoban salata</span><span style="font-size: 12px; color: var(--ink2)">10 dk</span></li>
+      </ul>
+      <a href="Tarif.dc.html" style="min-height: 48px; border-radius: 14px; background: var(--surface2); color: var(--ink); font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none">Menüyü ve ön hazırlığı aç
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </article>
+
+  <section aria-label="Artan yemek" style="margin: 12px 16px 0; background: var(--olive-soft); border-radius: 20px; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+    <span style="width: 40px; height: 40px; border-radius: 12px; background: var(--surface); color: var(--olive); display: flex; align-items: center; justify-content: center; flex: none">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M3 6h18v3H3z"></path><path d="M10 13h4"></path></svg>
+    </span>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <p style="margin: 0; font-size: 15px; font-weight: 600; line-height: 1.35">Dünkü kuru fasulye bugün öğlen için yeterli.</p>
+      <span style="font-size: 13px; color: var(--ink2)">Buzdolabında · yaklaşık 2 porsiyon</span>
+    </div>
+  </section>
+
+  <section aria-label="Plan değişirse" style="margin: 22px 16px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+      <button type="button" style="min-height: 52px; border-radius: 16px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 1.5-3 4-3 7h3v11"></path></svg>Bugün dışarıda yedik
+      </button>
+      <button type="button" style="min-height: 52px; border-radius: 16px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"></path></svg>Plan değişti
+      </button>
+    </div>
+    <p style="margin: 0 4px; font-size: 13px; color: var(--ink2); line-height: 1.45">Olur böyle günler. Menü yarına ya da eşleşmelere geri döner, malzemeler listede kalır.</p>
+  </section>
+
+  <section aria-label="Yarın" style="margin: 18px 16px 0; padding: 14px 16px; border-radius: 18px; border: 1px dashed var(--line); display: flex; justify-content: space-between; align-items: center; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2)">Yarın</span>
+      <span style="font-size: 15px; font-weight: 600">Karnıyarık · cacık · şehriyeli pilav</span>
+      <span style="font-size: 13px; color: var(--ink2)">Patlıcanlar listede · 1 saat önce tuzlanacak</span>
+    </div>
+    <span style="width: 28px; height: 28px; border-radius: 50%; background: #9A5512; color: #fff; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: none">Z</span>
+  </section>
+
+  <div style="flex: 1"></div>
+
+  <nav aria-label="Ana gezinme" style="position: sticky; bottom: 0; margin-top: 24px; background: var(--surface); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px 14px">
+    <a href="Main.dc.html" aria-current="page" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--tomato); text-decoration: none; font-size: 12px; font-weight: 700">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"></path></svg>Bugün</a>
+    <a href="Eslesme.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="12" height="14" rx="2"></rect><path d="M8 4h11a2 2 0 0 1 2 2v12"></path></svg>Eşleş</a>
+    <a href="Alisveris.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600; position: relative">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18l-2 10a2 2 0 0 1-2 1.6H7A2 2 0 0 1 5 19z"></path><path d="M8 9l3-6M16 9l-3-6"></path></svg>Liste
+      <span style="position: absolute; top: 4px; left: 54%; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--tomato); color: var(--on-tomato); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">11</span></a>
+    <a href="Haftalik-Plan.dc.html" style="min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--ink2); text-decoration: none; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Hafta</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"reminderDone":{"editor":"boolean","default":false},"$preview":{"width":390,"height":1200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { done: null };
+  }
+  renderVals() {
+    const dark = this.props.dark ?? false;
+    const done = this.state.done === null ? (this.props.reminderDone ?? false) : this.state.done;
+    return {
+      themeClass: dark ? 'dark' : '',
+      done: done,
+      notDone: !done,
+      bannerBg: done ? 'var(--olive-soft)' : 'var(--tomato-soft)',
+      bannerIcon: done ? 'var(--olive)' : 'var(--tomato)',
+      markDone: () => this.setState({ done: true }),
+      undo: () => this.setState({ done: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
