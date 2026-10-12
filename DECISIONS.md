@@ -58,3 +58,7 @@ One line each: decision — reason.
 - Dropping on a whole day picks the slot from the dish's course; dropping a planned tile on an occupied slot swaps the two; tatlı can't be dropped into a menu (calm notice).
 - Dialogs use the native `<dialog>` (focus trap, Esc, backdrop); bottom sheet on phones.
 - "Sık yaptıklarınız" = most-cooked first (cook log), then favorites, max 8.
+- Liste: Market tab is the default (as designed); desktop shows Pazar and Market side by side. A partner's check is highlighted ("<Ad> aldı · az önce", sand background) for 2 minutes, then fades to the normal checked style. My checks show a check mark in my color; the partner's show their initial.
+- The presence banner says "<Ad> de markette" only while the partner's tab is open on /liste; otherwise it says checks will appear live. Hidden for solo households.
+- Manual items get a separate "kaldır" button next to the row (a nested button inside the row button would be invalid HTML).
+- "Alışverişi bitir" with nothing checked does nothing destructive and explains calmly.
