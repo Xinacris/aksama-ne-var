@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Eşleşme anı</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button{font:inherit;cursor:pointer}
+.ph{background-color:var(--sand-soft);background-image:repeating-linear-gradient(135deg,transparent 0 11px,rgba(138,102,48,.10) 11px 12px)}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 900px; background: #F4ECDF">
+  <dc-import name="Eslesme" start-matched="{{ true }}" hint-size="390px,900px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

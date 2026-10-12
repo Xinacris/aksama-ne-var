@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Onboarding — sık yapılan yemekler</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#F4ECDF;--surface:#FFFAF2;--surface2:#EDE2CF;--ink:#2A2119;--ink2:#685846;--line:#E0D1BA;--tomato:#B33A25;--on-tomato:#FFFFFF;--tomato-soft:#F5DCD2;--olive:#55612A;--olive-soft:#E2E5CB;--sand:#8A6630;--sand-soft:#F0E1C2}
+.app.dark{--bg:#1B1612;--surface:#261F19;--surface2:#30281F;--ink:#F2E8D9;--ink2:#B8A68E;--line:#3A3027;--tomato:#E5735B;--on-tomato:#1B1612;--tomato-soft:#3B241D;--olive:#B3BF78;--olive-soft:#2B2F1E;--sand:#D8B57C;--sand-soft:#362C1E}
+.app *{box-sizing:border-box}
+.app button,.app input{font:inherit}
+.app button{cursor:pointer}
+.app input::placeholder{color:var(--ink2)}
+a{color:var(--tomato)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="app {{themeClass}}" style="min-height: 960px; background: var(--bg); color: var(--ink); font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column">
+  <header style="max-width: 1120px; width: 100%; margin: 0 auto; padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px">
+    <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px">Akşama ne var?</span>
+    <span style="font-size: 14px; font-weight: 600; color: var(--ink2)">Adım 1 / 2</span>
+  </header>
+
+  <main style="max-width: 820px; width: 100%; margin: 0 auto; padding: 32px 24px 0; display: flex; flex-direction: column; gap: 28px; flex: 1">
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <h1 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; text-wrap: balance">Evde en sık yaptığınız yemekler hangileri?</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--ink2); max-width: 600px">Birkaç tane seçmeniz yeter. İlk haftanın planını ve eşleşme kartlarını bunlardan hazırlarız; kiler saymak yok.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="yemek-ara" style="font-size: 14px; font-weight: 600">Yemek ara</label>
+      <div style="display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 16px; border-radius: 16px; background: var(--surface); border: 1.5px solid var(--line)">
+        <span style="color: var(--ink2); display: flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></span>
+        <input id="yemek-ara" type="search" placeholder="ör. imam bayıldı, ezogelin…" onChange="{{onSearch}}" style="flex: 1; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink); font-size: 16px">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 22px">
+      <sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+        <section style="display: flex; flex-direction: column; gap: 10px">
+          <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2)">{{g.title}}</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{g.items}}" as="c" hint-placeholder-count="5">
+              <button type="button" aria-pressed="{{c.on}}" onClick="{{c.toggle}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 6px">
+                <sc-if value="{{c.on}}" hint-placeholder-val="{{ false }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></sc-if>{{c.name}}</button>
+            </sc-for>
+          </div>
+        </section>
+      </sc-for>
+      <sc-if value="{{empty}}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 28px; border-radius: 20px; border: 1.5px dashed var(--line); display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+          <span style="font-size: 16px; font-weight: 600">Bu isimde bir yemek bulamadık.</span>
+          <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: var(--surface2); color: var(--ink); font-weight: 600">“{{query}}” olarak ekle</button>
+        </div>
+      </sc-if>
+    </div>
+  </main>
+
+  <footer style="position: sticky; bottom: 0; margin-top: 36px; background: var(--surface); border-top: 1px solid var(--line)">
+    <div style="max-width: 820px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+      <span style="font-size: 15px; color: var(--ink2)"><strong style="color: var(--ink)">{{count}} yemek</strong> seçildi · sonradan her zaman değişir</span>
+      <a href="Onboarding-2.dc.html" style="min-height: 52px; padding: 0 28px; border-radius: 16px; background: var(--tomato); color: var(--on-tomato); font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; text-decoration: none">Devam et
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.data = [
+      { title: 'Çorbalar', items: ['Mercimek çorbası', 'Ezogelin', 'Tarhana', 'Yayla çorbası', 'Domates çorbası', 'Tavuk suyu çorba'] },
+      { title: 'Ana yemekler', items: ['Kuru fasulye', 'İzmir köfte', 'Karnıyarık', 'İmam bayıldı', 'Etli nohut', 'Taze fasulye', 'Tavuk sote', 'Patates oturtma', 'Mantı', 'Fırın makarna', 'Menemen', 'Türlü'] },
+      { title: 'Yanında', items: ['Pirinç pilavı', 'Bulgur pilavı', 'Şehriyeli pilav', 'Makarna', 'Patates kızartması'] },
+      { title: 'Salata ve meze', items: ['Cacık', 'Çoban salata', 'Piyaz', 'Gavurdağı', 'Haydari', 'Turşu'] }
+    ];
+    const on = {};
+    ['Mercimek çorbası', 'Kuru fasulye', 'İzmir köfte', 'Karnıyarık', 'Menemen', 'Pirinç pilavı', 'Cacık'].forEach((n) => { on[n] = true; });
+    this.state = { on: on, q: '' };
+  }
+  renderVals() {
+    const q = this.state.q.trim().toLocaleLowerCase('tr');
+    const on = this.state.on;
+    const groups = this.data.map((g) => ({
+      title: g.title,
+      items: g.items.filter((n) => !q || n.toLocaleLowerCase('tr').indexOf(q) !== -1).map((n) => {
+        const sel = !!on[n];
+        return {
+          name: n, on: sel,
+          bg: sel ? 'var(--tomato)' : 'var(--surface)',
+          fg: sel ? 'var(--on-tomato)' : 'var(--ink)',
+          border: sel ? '1.5px solid var(--tomato)' : '1.5px solid var(--line)',
+          toggle: () => { const next = Object.assign({}, this.state.on); if (next[n]) { delete next[n]; } else { next[n] = true; } this.setState({ on: next }); }
+        };
+      })
+    })).filter((g) => g.items.length > 0);
+    return {
+      themeClass: (this.props.dark ?? false) ? 'dark' : '',
+      groups: groups,
+      empty: groups.length === 0,
+      query: this.state.q,
+      count: Object.keys(on).length,
+      onSearch: (e) => this.setState({ q: e.target.value })
+    };
+  }
+}
+</script>
+</body>
+</html>

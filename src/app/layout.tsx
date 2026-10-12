@@ -1,0 +1,41 @@
+import type { Metadata, Viewport } from "next";
+import { Figtree, Young_Serif } from "next/font/google";
+import { themeBootScript } from "@/lib/theme";
+import "./globals.css";
+
+const figtree = Figtree({
+  variable: "--font-figtree",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const youngSerif = Young_Serif({
+  variable: "--font-young-serif",
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+});
+
+export const metadata: Metadata = {
+  title: "Akşama ne var?",
+  description: "Akşam yemeğine birlikte karar verin: eşleşme, haftalık plan, ortak alışveriş listesi.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F4ECDF" },
+    { media: "(prefers-color-scheme: dark)", color: "#1B1612" },
+  ],
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="tr" className={`${figtree.variable} ${youngSerif.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
