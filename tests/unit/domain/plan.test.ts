@@ -42,7 +42,7 @@ describe("menus", () => {
       "2026-10-13",
     );
     expect(menuLine(tue, recipesById)).toBe("Karnıyarık · cacık · şehriyeli pilav");
-    expect(totalMinutes(menu, recipesById)).toBe(70 + 15);
+    expect(totalMinutes(menu, recipesById)).toBe(75);
   });
 });
 

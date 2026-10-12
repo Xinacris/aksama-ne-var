@@ -70,13 +70,13 @@ export function menuLine(menu: Menu, recipesById: Map<string, Recipe>): string {
 }
 
 export function totalMinutes(menu: Menu, recipesById: Map<string, Recipe>): number {
-  // Dishes are cooked in parallel; the longest one sets the pace, plus a little for the rest.
+  // Dishes are cooked in parallel; the longest sets the pace, plus five minutes to bring it together (design: köfte menu ≈ 1 sa 15 dk).
   const times = menuItems(menu)
     .map((i) => recipesById.get(i.recipeId))
     .filter((r): r is Recipe => !!r)
     .map((r) => r.prepMinutes + r.cookMinutes);
   if (times.length === 0) return 0;
-  return Math.max(...times) + Math.min(15, (times.length - 1) * 5);
+  return Math.max(...times) + (times.length > 1 ? 5 : 0);
 }
 
 // ───────────────────────── transitions ─────────────────────────
