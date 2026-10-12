@@ -1,0 +1,364 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+.boardSection {
+  flex: 999 1 760px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.scroller {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(136px, 1fr));
+  gap: 14px;
+  min-width: 1040px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.dayHead {
+  height: 34px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 6px 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+}
+.dayHead:hover {
+  background: var(--surface2);
+}
+.dayHeadToday {
+  align-items: center;
+  padding: 0 4px;
+}
+.dayName {
+  font-weight: 700;
+  font-size: 15px;
+}
+.past .dayName {
+  color: var(--ink2);
+}
+.dayNum {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink2);
+}
+.dayDate {
+  font-size: 13px;
+  color: var(--ink2);
+}
+.todayPill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--on-tomato);
+  background: var(--tomato);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.lunch {
+  height: 36px;
+  border-radius: 10px;
+  background: var(--olive-soft);
+  color: var(--olive);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lunch span {
+  color: var(--ink);
+}
+.lunchSpacer {
+  height: 36px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.15s ease;
+}
+.cardToday {
+  border: 2px solid var(--tomato);
+  padding: 7px;
+}
+.cardEmpty {
+  border-style: dashed;
+}
+.cardOver {
+  border-color: var(--tomato);
+}
+.tile {
+  height: 66px;
+  border-radius: 12px;
+  background: var(--bg);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  color: var(--ink);
+  touch-action: none;
+  cursor: grab;
+}
+.tile:hover {
+  box-shadow: inset 0 0 0 1.5px var(--line);
+}
+.tileLeftover {
+  background: var(--olive-soft);
+  outline: 1.5px dashed var(--olive);
+  outline-offset: -1.5px;
+}
+.tileDragging {
+  opacity: 0.35;
+}
+.tileLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink2);
+}
+.tileName {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.25;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.tileMain .tileName {
+  font-weight: 600;
+}
+.tileMissing {
+  color: var(--ink2);
+  font-style: italic;
+}
+.freezer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--sand);
+  display: flex;
+}
+.add {
+  height: 66px;
+  border-radius: 12px;
+  border: 1.5px dashed var(--line);
+  background: transparent;
+  color: var(--ink2);
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+.add:hover {
+  color: var(--ink);
+  border-color: var(--ink2);
+}
+.drop {
+  height: 66px;
+  border-radius: 12px;
+  border: 2px dashed var(--tomato);
+  background: var(--tomato-soft);
+  color: var(--tomato);
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ateOut {
+  height: 302px;
+  background: var(--surface2);
+  border-radius: 18px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  border: 0;
+  color: var(--ink);
+  width: 100%;
+}
+.ateOutOver {
+  outline: 2px dashed var(--tomato);
+}
+.ateIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ateTitle {
+  font-weight: 700;
+  font-size: 15px;
+}
+.ateNote {
+  font-size: 12.5px;
+  color: var(--ink2);
+  line-height: 1.4;
+}
+.foot {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--ink2);
+  padding: 0 4px;
+}
+.footOk {
+  color: var(--olive);
+  font-weight: 600;
+}
+.footMatch {
+  color: var(--tomato);
+  font-weight: 600;
+  gap: 5px;
+}
+.link {
+  position: absolute;
+  left: calc(100% - 9px);
+  top: 60px;
+  overflow: visible;
+  pointer-events: none;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 13px;
+  color: var(--ink2);
+  padding: 0 4px;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legendSnow {
+  color: var(--sand);
+  display: flex;
+}
+
+/* aside */
+.aside {
+  flex: 1 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.panelTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 20px;
+}
+.panelLink {
+  font-size: 13px;
+  font-weight: 600;
+}
+.matchBtn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 36px;
+  cursor: grab;
+  touch-action: none;
+}
+.matchBtn:focus-visible {
+  outline: 2.5px solid var(--tomato);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chipBtn {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 999px;
+  touch-action: none;
+}
+.hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink2);
+}
+.overlay {
+  width: 150px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 28px rgba(var(--shadow-ink), 0.22);
+  transform: rotate(-4deg);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: grabbing;
+}
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    transform: none;
+  }
+}

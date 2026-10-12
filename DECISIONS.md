@@ -53,3 +53,8 @@ One line each: decision — reason.
 - When the partner completes a match in another tab while I'm on Eşleş for the same day/slot, the match moment appears live in my tab too.
 - After "<Gün> akşamına koy" the deck moves on to the next open evening and a calm notice confirms ("… kondu. Eksikler listede.").
 - Un and toz şeker are pantry staples (like salt) — a teaspoon of sugar shouldn't put "1 kg şeker" on the list.
+- Hafta renders the dnd-kit board at ≥1024px and a stacked day list below (JS media query, so only one tree is in the DOM). Every drag has a non-drag path: empty slot "+" → recipe picker dialog; tap a tile → open / replace / remove; tap a match or frequent dish → day picker; day header → approve / leftovers toggle / dışarıda yedik / boşalt.
+- Board keyboard DnD: Space picks up, arrows jump to the nearest slot in that direction, Space/Enter drops, Esc cancels; Enter on a tile (without dragging) opens its actions. Turkish screen-reader announcements.
+- Dropping on a whole day picks the slot from the dish's course; dropping a planned tile on an occupied slot swaps the two; tatlı can't be dropped into a menu (calm notice).
+- Dialogs use the native `<dialog>` (focus trap, Esc, backdrop); bottom sheet on phones.
+- "Sık yaptıklarınız" = most-cooked first (cook log), then favorites, max 8.
