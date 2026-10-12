@@ -337,16 +337,39 @@ begin
   end loop;
 end $$;
 
--- Swipes: members see that a swipe exists (partner progress), but only your own rows are writable.
--- To keep the partner's choices hidden, expose decisions only via the swipe_progress view.
+-- Swipes: you only ever read/write your own rows, so the partner's choices stay hidden.
 create policy swipes_own on public.swipes for all to authenticated
   using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()) and public.is_member(household_id));
 
-create view public.swipe_progress with (security_invoker = true) as
-  select s.household_id, s.user_id, s.date, s.slot, count(*) as swiped
-  from public.swipes s
-  where public.is_member(s.household_id)
-  group by s.household_id, s.user_id, s.date, s.slot;
+-- Partner progress ("Zeynep 12 kartın 8'ini kaydırdı") without exposing decisions.
+create or replace function public.swipe_progress(hid uuid, d date, s menu_slot, recipe_ids text[])
+returns table (user_id uuid, swiped int)
+language sql stable security definer set search_path = '' as $$
+  select sw.user_id, count(*)::int
+  from public.swipes sw
+  where public.is_member(hid) and sw.household_id = hid and sw.date = d and sw.slot = s
+    and sw.recipe_id = any(recipe_ids)
+  group by sw.user_id;
+$$;
+
+-- Matching runs in the database: when every member liked the same card, create the match.
+create or replace function public.detect_match()
+returns trigger language plpgsql security definer set search_path = '' as $$
+declare members int; likes int;
+begin
+  if new.decision <> 'like' then return new; end if;
+  select count(*) into members from public.household_members where household_id = new.household_id;
+  select count(distinct user_id) into likes from public.swipes
+    where household_id = new.household_id and recipe_id = new.recipe_id and date = new.date and slot = new.slot and decision = 'like';
+  if likes >= members then
+    insert into public.matches (household_id, recipe_id, date, slot, created_by)
+    values (new.household_id, new.recipe_id, new.date, new.slot, new.user_id)
+    on conflict (household_id, recipe_id, date, slot) do nothing;
+  end if;
+  return new;
+end $$;
+create trigger swipes_detect_match after insert or update on public.swipes
+  for each row execute function public.detect_match();
 
 -- Invite lookup + join, without exposing households to non-members.
 create or replace function public.lookup_invite(code text)
@@ -379,4 +402,4 @@ end $$;
 -- Realtime: publish household tables so a SupabaseAdapter can feed the SyncBus.
 alter publication supabase_realtime add table
   public.plan_items, public.plan_days, public.shopping_items, public.shopping_checks, public.pantry_items,
-  public.prep_tasks, public.swipes, public.matches, public.activity, public.favorites, public.household_members;
+  public.prep_tasks, public.matches, public.activity, public.favorites, public.household_members;
