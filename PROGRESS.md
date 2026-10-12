@@ -13,7 +13,7 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 - [x] 5. Auth + households + invite/join + protected routes + tests.
 - [x] 6. Shared component library ported from `Componentler.dc.html` + component tests.
   - `src/components/ui/*` (Button, Field, Avatar, Chip, Misc: SyncIndicator/ActivityLine/EmptyState/PhotoPlaceholder/Notice), `MenuCard`, `ReminderBanner`, `AppShell` (bottom + top nav).
-- [ ] 7. Onboarding 1 & 2.
+- [x] 7. Onboarding 1 & 2.
 - [ ] 8. Bugün.
 - [ ] 9. Eşleş + match moment.
 - [ ] 10. Hafta (desktop board + mobile list, drag-and-drop).

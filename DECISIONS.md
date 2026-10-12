@@ -36,3 +36,7 @@ One line each: decision — reason.
 - Presence: each tab broadcasts a heartbeat (4 s) with its route; a partner counts as "here" for 12 s — powers "Zeynep de burada / de markette" and the olive ring on avatars.
 - Export JSON scrubs password hashes and salts.
 - `vercel.json` pins `framework: nextjs` — the Vercel project was imported while the repo only had a README, so it defaulted to "Other" and every Next.js deploy failed until the preset was pinned in code (no Vercel login needed).
+- Onboarding 1 shows the design's curated chips while the search is empty and searches the full recipe DB (all 4 groups) when typing; new users start with nothing selected (the design's preselection is sample state). Unknown names become household stub recipes ("“x” olarak ekle", also on Enter).
+- An invited partner sees onboarding 1 prefilled with the household's favorites (shared, not per-person) and finishes with "Başlayalım" → Bugün (step 2 is skipped: the house is already full).
+- Onboarding 2's WhatsApp button is a real `<a href="https://wa.me/?text=…" target="_blank">` styled like the design button — it navigates, so a link is the right element. "Kopyalandı" reverts to "Kopyala" after 3 s; clipboard failure selects the field and explains calmly.
+- `screenshots/` is git-ignored (regenerate with `npm run screenshots`; `SHOTS=bugun,liste` limits the set).
