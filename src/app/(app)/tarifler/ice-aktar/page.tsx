@@ -10,14 +10,14 @@ import { IconChevronLeft, IconLink } from "@/components/icons";
 import { Button } from "@/components/ui/Button";
 import { TextArea, TextField } from "@/components/ui/Field";
 import { extractUrl } from "@/domain/import/detect";
-import type { ImportPath, ImportResult } from "@/domain/import/types";
+import type { ImportProvider, ImportResult } from "@/domain/import/types";
 import type { SourcePlatform } from "@/data/models";
 import { toRecipeDraft } from "@/services/importDraft";
 import type { RecipeDraft } from "@/services/recipeForm";
 import { useApp } from "@/store/app";
 import s from "./page.module.css";
 
-type ApiResponse = ImportResult & { error?: string; counted?: { platform: SourcePlatform | null; path: ImportPath } | null };
+type ApiResponse = ImportResult & { error?: string; counted?: { platform: SourcePlatform | null; provider: ImportProvider } | null };
 
 function Ice() {
   const router = useRouter();
@@ -65,7 +65,7 @@ function Ice() {
         return;
       }
       setResult(body);
-      if (body.counted) await logImport({ platform: body.counted.platform, path: body.counted.path });
+      if (body.counted) await logImport({ platform: body.counted.platform, provider: body.counted.provider });
       if (body.needsPaste) {
         setPasteOpen(true);
         setDraft(null);

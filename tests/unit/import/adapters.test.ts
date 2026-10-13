@@ -110,15 +110,19 @@ describe("runImport", () => {
     expect(result.draft?.name).toBe("Pratik menemen");
     expect(result.source).toMatchObject({ platform: "tiktok", url: "https://www.tiktok.com/@mutfakdefteri/video/7312345678901234567", author: "@mutfakdefteri", hasText: true });
     expect(result.source).not.toHaveProperty("text");
-    expect(counted).toEqual({ platform: "tiktok", path: "rules" });
+    expect(result.provider).toBe("rules");
+    expect(counted).toEqual({ platform: "tiktok", provider: "rules" });
   });
 
-  it("uses the structurer when it answers, rules when it returns null or throws", async () => {
+  it("uses the structurer and reports its provider; rules when it throws", async () => {
     const fetch = mockFetch({ "https://www.tiktok.com/oembed": () => json({ title: caption("03-satir-ici") }) });
     const url = "https://www.tiktok.com/@a/video/1";
-    expect((await runImport({ url }, { fetch, env: {}, structure: async () => llmDraft })).result.path).toBe("llm");
-    expect((await runImport({ url }, { fetch, env: {}, structure: async () => null })).result.path).toBe("rules");
-    expect((await runImport({ url }, { fetch, env: {}, structure: async () => Promise.reject(new Error("x")) })).result.path).toBe("rules");
+    const viaGemini = await runImport({ url }, { fetch, env: {}, structure: async () => ({ draft: llmDraft, provider: "gemini" }) });
+    expect(viaGemini.result).toMatchObject({ path: "llm", provider: "gemini" });
+    expect(viaGemini.counted).toEqual({ platform: "tiktok", provider: "gemini" });
+    expect((await runImport({ url }, { fetch, env: {}, structure: async () => ({ draft: llmDraft, provider: "claude" }) })).result).toMatchObject({ path: "llm", provider: "claude" });
+    const failed = await runImport({ url }, { fetch, env: {}, structure: async () => Promise.reject(new Error("x")) });
+    expect(failed.result).toMatchObject({ path: "rules", provider: "rules" });
   });
 
   it("Instagram: link card + kind paste message; pasted caption then gives a draft", async () => {
@@ -147,7 +151,7 @@ describe("runImport", () => {
   });
 
   it("schema.org pages skip the structurer", async () => {
-    const structure = vi.fn(async () => llmDraft);
+    const structure = vi.fn(async () => ({ draft: llmDraft, provider: "gemini" as const }));
     const { result } = await runImport({ url: "https://ornek-tarifler.com/kofte" }, { fetch: mockFetch({ "https://ornek-tarifler.com": () => html(RECIPE_PAGE) }), env: {}, structure });
     expect(structure).not.toHaveBeenCalled();
     expect(result).toMatchObject({ path: "rules", needsPaste: false, draft: { name: "Fırında patatesli köfte" } });

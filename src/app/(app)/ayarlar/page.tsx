@@ -16,6 +16,7 @@ import { whatsappShareUrl } from "@/services/household";
 import { useApp } from "@/store/app";
 import type { Household, ImportLog } from "@/data/models";
 import { toIsoDate } from "@/domain/dates";
+import { importUsageText } from "@/domain/import/usage";
 import { now } from "@/lib/clock";
 import type { ThemePreference } from "@/lib/theme";
 import s from "./page.module.css";
@@ -92,16 +93,11 @@ function LunchSetting() {
   );
 }
 
-/** "Bu ay 12 tarif içe aktarıldı" — counts drafts produced this month (no links or captions are kept). */
+/** "Bu ay 12 tarif içe aktarıldı (11 Gemini, 1 kural)". */
 function ImportUsage({ log }: { log: ImportLog[] }) {
-  const month = toIsoDate(now()).slice(0, 7);
-  const thisMonth = log.filter((l) => toIsoDate(new Date(l.createdAt)).slice(0, 7) === month);
-  const smart = thisMonth.filter((l) => l.path === "llm").length;
   return (
     <p className={s.note} role="status">
-      {thisMonth.length === 0
-        ? "Bu ay henüz linkten tarif içe aktarılmadı."
-        : `Bu ay ${thisMonth.length} tarif içe aktarıldı${smart ? ` (${smart} tanesi akıllı okumayla)` : ""}.`}
+      {importUsageText(log, toIsoDate(now()).slice(0, 7))}
     </p>
   );
 }

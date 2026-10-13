@@ -2,10 +2,16 @@ import { PLATFORM_LABEL, type SourcePlatform } from "@/data/models";
 import { ADAPTERS, emptySource, SourceUnavailableError, type AdapterContext } from "./adapters";
 import { detectPlatform, extractUrl, normalizeUrl } from "./detect";
 import { hasIngredientLines, MAX_INPUT_CHARS, parseRecipeText } from "./parseText";
-import type { ImportedRecipe, ImportPath, ImportResult, ImportSource } from "./types";
+import type { ImportedRecipe, ImportPath, ImportProvider, ImportResult, ImportSource } from "./types";
 
-/** Turns caption text into a draft with the LLM; null means "not available or failed", then rules run. */
-export type Structurer = (text: string, hint: { title: string | null; platform: SourcePlatform | null }) => Promise<ImportedRecipe | null>;
+/**
+ * Turns caption text into a draft (the server's provider chain, see
+ * `src/server/llm`). Without one — or if it throws — the rule parser runs.
+ */
+export type Structurer = (
+  text: string,
+  meta: { title: string | null; platform: SourcePlatform | null },
+) => Promise<{ draft: ImportedRecipe; provider: ImportProvider }>;
 
 export interface ImportDeps extends AdapterContext {
   structure?: Structurer;
@@ -16,11 +22,11 @@ export interface ImportInput {
   text?: string;
 }
 
-/** What the server logs/counts: never the caption, only the path and platform. */
+/** What the server logs/counts: never the caption, only the provider and platform. */
 export interface ImportOutcome {
   result: ImportResult;
   /** Set when a draft was produced (for the usage counter). */
-  counted: { platform: SourcePlatform | null; path: ImportPath } | null;
+  counted: { platform: SourcePlatform | null; provider: ImportProvider } | null;
 }
 
 function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" | "no-ingredients" | "no-recipe-data" | "unavailable"): string {
@@ -57,7 +63,7 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
 
   if (rawUrl && !link && !pasted) {
     return {
-      result: { source: null, draft: null, path: null, needsPaste: true, message: "Bu bir bağlantıya benzemiyor. Linki yeniden kopyalayabilir ya da tarifi doğrudan yapıştırabilirsin." },
+      result: { source: null, draft: null, path: null, provider: null, needsPaste: true, message: "Bu bir bağlantıya benzemiyor. Linki yeniden kopyalayabilir ya da tarifi doğrudan yapıştırabilirsin." },
       counted: null,
     };
   }
@@ -80,21 +86,16 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
   const structured = !pasted && source?.recipe && source.recipe.ingredients.length ? source.recipe : null;
 
   let draft: ImportedRecipe | null = null;
-  let path: ImportPath | null = null;
+  let provider: ImportProvider | null = null;
   if (structured) {
     draft = structured;
-    path = "rules";
+    provider = "rules";
   } else if (text) {
-    const hint = { title: pasted ? null : source?.title ?? null, platform: source?.platform ?? null };
-    const viaLlm = deps.structure ? await deps.structure(text, hint).catch(() => null) : null;
-    if (viaLlm) {
-      draft = viaLlm;
-      path = "llm";
-    } else {
-      draft = parseRecipeText(text, hint.title);
-      path = "rules";
-    }
+    const meta = { title: pasted ? null : source?.title ?? null, platform: source?.platform ?? null };
+    const out = deps.structure ? await deps.structure(text, meta).catch(() => null) : null;
+    ({ draft, provider } = out ?? { draft: parseRecipeText(text, meta.title), provider: "rules" as const });
   }
+  const path: ImportPath | null = provider ? (provider === "rules" ? "rules" : "llm") : null;
 
   const needsPaste = !pasted && !structured && !hasIngredientLines(fetched);
   if (needsPaste && source && !message) {
@@ -115,9 +116,10 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
       source: source ? publicSource(source, !!fetched) : null,
       draft,
       path,
+      provider,
       needsPaste,
       message,
     },
-    counted: draft && path ? { platform: source?.platform ?? null, path } : null,
+    counted: draft && provider ? { platform: source?.platform ?? null, provider } : null,
   };
 }

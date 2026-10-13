@@ -34,9 +34,10 @@ describe("Linkten ekle", () => {
       source: { platform: "tiktok", url: TIKTOK, author: "@mutfakdefteri", title: "Pratik menemen tarifi", thumbnailUrl: null, needsPaste: false, hasText: true },
       draft: parseRecipeText(caption),
       path: "rules",
+      provider: "rules",
       needsPaste: false,
       message: null,
-      counted: { platform: "tiktok", path: "rules" },
+      counted: { platform: "tiktok", provider: "rules" },
     });
     render(<IceAktarPage />);
     await userEvent.type(screen.getByLabelText("Link"), TIKTOK);
@@ -83,7 +84,7 @@ describe("Linkten ekle", () => {
 
   it("shared link (Web Share Target) runs on its own", async () => {
     await freshStore({ demo: true });
-    const api = mockApi({ source: null, draft: parseRecipeText(caption), path: "rules", needsPaste: false, message: null, counted: { platform: null, path: "rules" } });
+    const api = mockApi({ source: null, draft: parseRecipeText(caption), path: "rules", provider: "rules", needsPaste: false, message: null, counted: { platform: null, provider: "rules" } });
     nav.search = new URLSearchParams({ text: `Bu tarife bak ${TIKTOK}` });
     render(<IceAktarPage />);
     await screen.findByRole("heading", { level: 1, name: "Taslağı kontrol et" });
@@ -101,11 +102,12 @@ describe("Linkten ekle", () => {
     expect(screen.getByLabelText("Açıklamayı buraya yapıştır")).toBeInTheDocument();
   });
 
-  it("Ayarlar shows this month's imports", async () => {
+  it("Ayarlar shows this month's imports split by provider", async () => {
     await freshStore({ demo: true });
-    await useApp.getState().logImport({ platform: "tiktok", path: "llm" });
-    await useApp.getState().logImport({ platform: "instagram", path: "rules" });
+    await useApp.getState().logImport({ platform: "tiktok", provider: "gemini" });
+    await useApp.getState().logImport({ platform: "youtube", provider: "gemini" });
+    await useApp.getState().logImport({ platform: "instagram", provider: "rules" });
     render(<AyarlarPage />);
-    expect(screen.getByText("Bu ay 2 tarif içe aktarıldı (1 tanesi akıllı okumayla).")).toBeInTheDocument();
+    expect(screen.getByText("Bu ay 3 tarif içe aktarıldı (2 Gemini, 1 kural).")).toBeInTheDocument();
   });
 });

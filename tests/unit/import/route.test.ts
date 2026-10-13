@@ -5,7 +5,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { handleImport, type HandlerDeps } from "@/server/import/handler";
 import { DailyLimiter } from "@/server/import/rateLimit";
 import { assertPublicUrl, guardedFetch, isPrivateAddress } from "@/server/import/guardedFetch";
-import { IMPORT_MAX_TOKENS, IMPORT_MODEL } from "@/server/import/llm";
+import { CLAUDE_MAX_TOKENS, CLAUDE_MODEL } from "@/server/llm/claude";
 
 const caption = readFileSync("tests/fixtures/captions/03-satir-ici.txt", "utf8");
 const TIKTOK = "https://www.tiktok.com/@mutfakdefteri/video/7312345678901234567";
@@ -34,7 +34,7 @@ function toolMessage(input: unknown): Anthropic.Message {
     id: "msg_1",
     type: "message",
     role: "assistant",
-    model: IMPORT_MODEL,
+    model: CLAUDE_MODEL,
     content: [{ type: "tool_use", id: "tu_1", name: "tarif_taslagi", input } as Anthropic.ToolUseBlock],
     stop_reason: "tool_use",
     stop_sequence: null,
@@ -60,29 +60,29 @@ function deps(over: Partial<HandlerDeps> & { create?: ReturnType<typeof vi.fn> }
 const post = (body: unknown) => new Request("http://localhost/api/import", { method: "POST", body: JSON.stringify(body), headers: { "content-type": "application/json" } });
 
 describe("POST /api/import", () => {
-  it("without ANTHROPIC_API_KEY: rule parser, never calls Claude", async () => {
+  it("without any key: rule parser, never calls an LLM", async () => {
     const d = deps();
     const res = await handleImport(post({ url: TIKTOK, householdId: "h1" }), d);
     const body = await res.json();
     expect(res.status).toBe(200);
-    expect(body).toMatchObject({ path: "rules", llmAvailable: false, needsPaste: false, source: { platform: "tiktok", author: "@mutfakdefteri" } });
+    expect(body).toMatchObject({ path: "rules", provider: "rules", llmAvailable: false, needsPaste: false, source: { platform: "tiktok", author: "@mutfakdefteri" } });
     expect(body.draft.name).toBe("Pratik menemen");
     expect(d.create).not.toHaveBeenCalled();
   });
 
-  it("with the key: Claude Haiku via forced tool use, validated and normalised", async () => {
+  it("only ANTHROPIC_API_KEY: Claude Haiku via forced tool use, validated and normalised", async () => {
     const d = deps({ env: { ANTHROPIC_API_KEY: "sk-test" } });
     const body = await (await handleImport(post({ url: TIKTOK, householdId: "h1" }), d)).json();
-    expect(body.path).toBe("llm");
-    expect(body.llmAvailable).toBe(true);
-    expect(body.counted).toEqual({ platform: "tiktok", path: "llm" });
+    expect(body).toMatchObject({ path: "llm", provider: "claude", llmAvailable: true });
+    expect(body.counted).toEqual({ platform: "tiktok", provider: "claude" });
     expect(body.draft.ingredients[1]).toEqual({ amount: 2, unit: "yemek kaşığı", item: "tereyağı", side: "market", note: null });
     // duration from the tool output is written into the step text when missing
     expect(body.draft.steps[0].text).toBe("Biberleri tereyağında soteleyin. (3 dk)");
     expect(body.draft.steps[1].text).toBe("Yumurtaları ekleyip 2 dakika pişirin.");
     const [params, opts] = d.create.mock.calls[0];
-    expect(params).toMatchObject({ model: "claude-haiku-5-5", max_tokens: IMPORT_MAX_TOKENS, tool_choice: { type: "tool", name: "tarif_taslagi" } });
+    expect(params).toMatchObject({ model: "claude-haiku-5-5", max_tokens: CLAUDE_MAX_TOKENS, tool_choice: { type: "tool", name: "tarif_taslagi" } });
     expect(params.messages[0].content).toContain("Biberleri tereyağında");
+    expect(params.messages[0].content).toContain("Kaynak: tiktok");
     expect(opts.signal).toBeInstanceOf(AbortSignal);
   });
 
@@ -91,7 +91,7 @@ describe("POST /api/import", () => {
     const body = await (await handleImport(post({ url: TIKTOK }), deps({ env: { ANTHROPIC_API_KEY: "k" }, create }))).json();
     expect(create).toHaveBeenCalledTimes(2);
     expect(create.mock.calls[1][0].messages[0].content).toMatch(/şemaya uymadı/);
-    expect(body.path).toBe("llm");
+    expect(body.provider).toBe("claude");
   });
 
   it("invalid twice → falls back to the rule parser", async () => {
@@ -99,7 +99,7 @@ describe("POST /api/import", () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
     const body = await (await handleImport(post({ url: TIKTOK }), deps({ env: { ANTHROPIC_API_KEY: "k" }, create }))).json();
     expect(create).toHaveBeenCalledTimes(2);
-    expect(body.path).toBe("rules");
+    expect(body.provider).toBe("rules");
     expect(body.draft.ingredients.length).toBeGreaterThan(3);
     // never log the caption
     expect(JSON.stringify(warn.mock.calls)).not.toContain("Biberleri");
@@ -112,7 +112,7 @@ describe("POST /api/import", () => {
     });
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
     const body = await (await handleImport(post({ url: TIKTOK }), deps({ env: { ANTHROPIC_API_KEY: "k" }, create }))).json();
-    expect(body.path).toBe("rules");
+    expect(body.provider).toBe("rules");
     expect(JSON.stringify(warn.mock.calls)).not.toContain("tereyağı");
     warn.mockRestore();
   });
@@ -125,11 +125,11 @@ describe("POST /api/import", () => {
 
   it("rate limit per household: over the quota uses rules and says so", async () => {
     const d = deps({ env: { ANTHROPIC_API_KEY: "k" }, limiter: new DailyLimiter(1) });
-    expect((await (await handleImport(post({ url: TIKTOK, householdId: "h1" }), d)).json()).path).toBe("llm");
+    expect((await (await handleImport(post({ url: TIKTOK, householdId: "h1" }), d)).json()).provider).toBe("claude");
     const second = await (await handleImport(post({ url: TIKTOK, householdId: "h1" }), d)).json();
-    expect(second.path).toBe("rules");
+    expect(second.provider).toBe("rules");
     expect(second.message).toMatch(/sınırına ulaşıldı/);
-    expect((await (await handleImport(post({ url: TIKTOK, householdId: "h2" }), d)).json()).path).toBe("llm");
+    expect((await (await handleImport(post({ url: TIKTOK, householdId: "h2" }), d)).json()).provider).toBe("claude");
     expect(d.create).toHaveBeenCalledTimes(2);
   });
 

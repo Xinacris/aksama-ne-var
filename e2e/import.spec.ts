@@ -24,9 +24,10 @@ const DRAFT = {
     prep: [],
   },
   path: "rules",
+  provider: "rules",
   needsPaste: false,
   message: null,
-  counted: { platform: "tiktok", path: "rules" },
+  counted: { platform: "tiktok", provider: "rules" },
   llmAvailable: false,
 };
 

@@ -391,7 +391,8 @@ export const importLogSchema = z.object({
   ...base,
   householdId: uuid,
   platform: sourcePlatformSchema.nullable(),
-  path: z.enum(["llm", "rules"]),
+  /** Which provider made the draft; schema.org pages and the rule parser count as "rules". */
+  provider: z.enum(["gemini", "claude", "rules"]),
   createdBy: uuid,
 });
 export type ImportLog = z.infer<typeof importLogSchema>;
