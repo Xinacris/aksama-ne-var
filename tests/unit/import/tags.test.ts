@@ -103,6 +103,20 @@ describe("times: Pişirme is heat only", () => {
   });
 });
 
+describe("site times", () => {
+  it("a placeholder prep (1 min) with many ingredients is ignored; a total without the marinade isn't cut by it", () => {
+    const ingredients = Array.from({ length: 12 }, (_, i) => ({ amount: 1, unit: "adet" as const, item: `x${i}`, side: null, note: null }));
+    const steps = [
+      { text: "Tavuğu salamuraya koyup buzdolabında en az iki saat dinlendirin.", minutes: 120 },
+      { text: "200 derece fırında 45 dakika pişirin.", minutes: 45 },
+    ];
+    const t = draftTimes({ name: "Peri peri", servings: 4, role: "ana", totalMinutes: 46, prepMinutes: 1, cookMinutes: 45, ingredients, steps, prep: [] });
+    expect(t).toEqual({ prep: 15, cook: 45, wait: 120 });
+    // a real short prep for a small dish stays
+    expect(draftTimes({ name: "Menemen", servings: 2, role: "ana", totalMinutes: 15, prepMinutes: 3, cookMinutes: 12, ingredients: ingredients.slice(0, 4), steps: [], prep: [] }).prep).toBe(3);
+  });
+});
+
 describe("fixtures", () => {
   it("fish and chips: Kızartma + Balık, Pişirme 15 not 120, waiting 90", () => {
     const r = parseRecipeText(fixture("13-fish-and-chips"));
