@@ -26,7 +26,7 @@ export function prepDueAt(dateIso: string, offset: PrepOffset, dinnerTime: strin
   return new Date(at(dateIso, dinnerTime).getTime() - mins * 60000);
 }
 
-/** Timeline label from the design: "Sabah", "1 sa önce", "45 dk önce", "Akşamdan". */
+/** Timeline label: "Sabah", "Pişirmeden 1 sa önce", "Pişirmeden 45 dk önce", "Akşamdan". */
 export function offsetLabel(offset: PrepOffset): string {
   if (offset === "morning") return "Sabah";
   if (offset === "night-before") return "Akşamdan";

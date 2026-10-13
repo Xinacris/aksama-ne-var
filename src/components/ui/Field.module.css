@@ -41,6 +41,7 @@
 }
 .select {
   appearance: none;
+  background-color: var(--surface);
   padding-right: 8px;
   cursor: pointer;
 }

@@ -69,6 +69,21 @@ test("screens", async ({ page }, info) => {
     await page.locator("main").first().waitFor({ timeout: 10_000 }).catch(() => {});
     await shot(page, p, name);
   }
+  if (!only || only.includes("tarif-yeni-select")) {
+    // Recipe form with a select opened. The native popup is drawn outside the page, so the
+    // select is expanded in place (size=N): the same option colours, captured in the shot.
+    await page.goto("/tarifler/yeni");
+    await page.getByRole("radio", { name: "Saklanır" }).click();
+    const sel = page.getByLabel("Öğün");
+    await sel.evaluate((el: HTMLSelectElement) => {
+      el.size = el.options.length;
+      el.style.height = "auto";
+      el.focus();
+    });
+    await sel.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(200);
+    if (!only || only.includes("tarif-yeni-select")) await page.screenshot({ path: `screenshots/${p}/tarif-yeni-select.png`, animations: "disabled" });
+  }
   if (!only || only.includes("eslesme-eslesti")) {
     await page.goto("/eslesme");
     await page.getByRole("button", { name: "Olur" }).click();
