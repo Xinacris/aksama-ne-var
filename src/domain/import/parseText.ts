@@ -3,6 +3,8 @@ import type { ImportedIngredient, ImportedPrep, ImportedRecipe, ImportedStep } f
 import { normalizeUnit, parseAmount, UNIT_WORDS } from "./units";
 import { matchCatalog } from "./catalogMatch";
 import { catalogEntry } from "@/data/seed/ingredients";
+import { keywordTags } from "./tags";
+import { stepMinutes } from "./timing";
 
 /**
  * Rule-based Turkish caption parser. No key, no network: good enough to
@@ -137,6 +139,12 @@ function servingsOf(input: string): number | null {
   const m = text.match(/(\d{1,2})\s*(?:-\s*\d{1,2}\s*)?(?:kişilik|kişi için|porsiyon)/iu) ?? text.match(/porsiyon\s*(?:sayısı)?\s*[:：]\s*(\d{1,2})/iu);
   const n = m ? Number(m[1]) : NaN;
   return n >= 1 && n <= 20 ? n : null;
+}
+
+/** "Hazırlık: 20 dk" / "Pişirme süresi: 1 saat" / "Bekleme: 30 dk" meta lines. */
+function metaMinutes(text: string, word: string): number | null {
+  const m = text.match(new RegExp(`${word}(?:\\s+süresi)?\\s*[:：]\\s*([^\\n]+)`, "iu"));
+  return m ? parseDurationMinutes(m[1]) : null;
 }
 
 function totalOf(text: string): number | null {
@@ -286,14 +294,21 @@ export function parseRecipeText(input: string, titleHint?: string | null): Impor
   const name = cleanTitle(titleSource) || "İçe aktarılan tarif";
   void sawIngredientHead;
 
+  const finalSteps = steps.slice(0, 40);
+  const finalIngredients = dedupe(ingredients).slice(0, 60);
+  const fromSteps = stepMinutes(finalSteps);
   return {
     name,
     servings: servingsOf(text),
     role: guessRole(name),
     totalMinutes: totalOf(text),
-    ingredients: dedupe(ingredients).slice(0, 60),
-    steps: steps.slice(0, 40),
+    prepMinutes: metaMinutes(text, "hazırlık"),
+    cookMinutes: metaMinutes(text, "pişirme"),
+    waitMinutes: metaMinutes(text, "bekleme") ?? (fromSteps.wait || null),
+    ingredients: finalIngredients,
+    steps: finalSteps,
     prep: findPrep(text),
+    tags: keywordTags(text, finalIngredients),
   };
 }
 

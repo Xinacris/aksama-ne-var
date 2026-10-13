@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 7;
+export const CURRENT_SCHEMA_VERSION = 8;
 
 export interface Migration {
   version: number;
@@ -55,7 +55,8 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
  * version 4 makes leftovers a choice (recipe policy, household lunch setting, per-evening choice);
  * version 5 adds the cooking sessions table (new table: nothing to convert);
  * version 6 records which provider made an import draft (`path` → `provider`);
- * version 7 resets built-in recipes to "Artmaz" (leftovers are never guessed).
+ * version 7 resets built-in recipes to "Artmaz" (leftovers are never guessed);
+ * version 8 lets recipes carry `waitMinutes` and `sourceThumbnailUrl` (optional: nothing to convert).
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -130,6 +131,11 @@ export const MIGRATIONS: Migration[] = [
       // stored built-in row still holds the old R5 guess. Household recipes are the user's own.
       mapRows(store, "recipes", (r) => (r.householdId === null && r.leftoverPolicy !== "none" ? { ...r, leftoverPolicy: "none" } : r));
     },
+  },
+  {
+    version: 8,
+    description: "Recipes: optional waitMinutes and sourceThumbnailUrl (old rows read as no waiting, no thumbnail)",
+    up: () => {},
   },
 ];
 

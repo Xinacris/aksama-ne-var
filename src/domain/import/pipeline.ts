@@ -48,7 +48,16 @@ function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" |
 }
 
 function publicSource(src: ImportSource, hasText: boolean): NonNullable<ImportResult["source"]> {
-  return { platform: src.platform, url: src.url, title: src.title, author: src.author, thumbnailUrl: src.thumbnailUrl, needsPaste: src.needsPaste, hasText };
+  return {
+    platform: src.platform,
+    url: src.url,
+    title: src.title,
+    author: src.author,
+    thumbnailUrl: src.thumbnailUrl,
+    needsPaste: src.needsPaste,
+    ...(src.siteName ? { siteName: src.siteName } : {}),
+    hasText,
+  };
 }
 
 /**

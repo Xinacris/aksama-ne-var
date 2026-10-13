@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { CURRENT_SCHEMA_VERSION, MIGRATIONS, mapRows, readSchemaVersion, runMigrations } from "@/data/migrations";
+import { recipeSchema } from "@/data/models";
+import { builtinRecipes } from "@/data/seed/recipes";
 import { memoryStore } from "@/data/storage";
 
 describe("migrations", () => {
@@ -63,7 +65,7 @@ describe("migrations", () => {
         { id: "d2", leftovers: false },
       ]),
     });
-    expect(runMigrations(store).applied).toEqual([4, 5, 6, 7]);
+    expect(runMigrations(store).applied).toEqual([4, 5, 6, 7, 8]);
     expect(JSON.parse(store.getItem("anv:t:recipes")!)).toEqual([
       { id: "a", leftoverPolicy: "lunch", leftoverDays: 2 },
       { id: "b", leftoverPolicy: "none", leftoverDays: 2 },
@@ -97,7 +99,7 @@ describe("migrations", () => {
 
   it("v5: adds cooking sessions without touching existing tables", () => {
     const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 4 }), "anv:t:planDays": "[]" });
-    expect(runMigrations(store).applied).toEqual([5, 6, 7]);
+    expect(runMigrations(store).applied).toEqual([5, 6, 7, 8]);
     expect(store.getItem("anv:t:planDays")).toBe("[]");
     expect(store.getItem("anv:t:cookingSessions")).toBeNull();
   });
@@ -108,7 +110,7 @@ describe("migrations", () => {
       { id: "b", householdId: "h", platform: null, path: "rules", createdBy: "u", createdAt: "2026-10-02T10:00:00.000Z", updatedAt: "2026-10-02T10:00:00.000Z" },
     ];
     const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 5 }), "anv:t:importLog": JSON.stringify(old) });
-    expect(runMigrations(store).applied).toEqual([6, 7]);
+    expect(runMigrations(store).applied).toEqual([6, 7, 8]);
     const rows = JSON.parse(store.getItem("anv:t:importLog")!);
     expect(rows).toEqual([
       { id: "a", householdId: "h", platform: "tiktok", provider: "claude", createdBy: "u", createdAt: "2026-10-01T10:00:00.000Z", updatedAt: "2026-10-01T10:00:00.000Z" },
@@ -124,13 +126,24 @@ describe("migrations", () => {
       { id: "u2", householdId: "h", leftoverPolicy: "lunch", leftoverDays: 2 },
     ];
     const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 6 }), "anv:t:recipes": JSON.stringify(old) });
-    expect(runMigrations(store).applied).toEqual([7]);
+    expect(runMigrations(store).applied).toEqual([7, 8]);
     expect(JSON.parse(store.getItem("anv:t:recipes")!)).toEqual([
       { id: "kuru-fasulye", householdId: null, leftoverPolicy: "none", leftoverDays: 3 },
       { id: "tavuk-sote", householdId: null, leftoverPolicy: "none", leftoverDays: 2 },
       { id: "u1", householdId: "h", leftoverPolicy: "store", leftoverDays: 4 },
       { id: "u2", householdId: "h", leftoverPolicy: "lunch", leftoverDays: 2 },
     ]);
+  });
+
+  it("v8: a v7 recipe reads back unchanged (no waiting, no thumbnail) and validates", () => {
+    const row = { ...builtinRecipes[0], id: "u1", householdId: "00000000-0000-4000-8000-000000000001", createdBy: "00000000-0000-4000-8000-000000000002" };
+    const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 7 }), "anv:t:recipes": JSON.stringify([row]) });
+    expect(runMigrations(store).applied).toEqual([8]);
+    const [back] = JSON.parse(store.getItem("anv:t:recipes")!);
+    expect(back).toEqual(row);
+    expect(recipeSchema.safeParse(back).success).toBe(true);
+    expect(back.waitMinutes).toBeUndefined();
+    expect(recipeSchema.safeParse({ ...row, waitMinutes: 30, sourceThumbnailUrl: "https://i.ytimg.com/vi/x/hqdefault.jpg" }).success).toBe(true);
   });
 
   it("mapRows leaves missing and unreadable tables alone", () => {

@@ -22,6 +22,8 @@ export interface RecipeDraft {
   course: string;
   prepMinutes: string;
   cookMinutes: string;
+  /** "Bekleme (dk)": marinating, resting, soaking — "" when none. */
+  waitMinutes: string;
   servings: string;
   tags: string;
   ingredients: IngredientDraft[];
@@ -36,6 +38,7 @@ export interface RecipeDraft {
   sourceUrl?: string;
   sourceAuthor?: string;
   sourcePlatform?: Recipe["sourcePlatform"];
+  sourceThumbnailUrl?: string;
 }
 
 export const emptyIngredient = (): IngredientDraft => ({ name: "", quantity: "", unit: "adet", side: "market", aisle: "Diğer" });
@@ -46,6 +49,7 @@ export function emptyDraft(name = ""): RecipeDraft {
     course: "ana",
     prepMinutes: "15",
     cookMinutes: "30",
+    waitMinutes: "",
     servings: "4",
     tags: "",
     ingredients: [emptyIngredient()],
@@ -64,6 +68,7 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     course: r.course,
     prepMinutes: String(r.prepMinutes),
     cookMinutes: String(r.cookMinutes),
+    waitMinutes: r.waitMinutes ? String(r.waitMinutes) : "",
     servings: String(r.servings),
     tags: r.tags.join(", "),
     ingredients: r.ingredients.length
@@ -85,6 +90,7 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     ...(r.sourceUrl ? { sourceUrl: r.sourceUrl } : {}),
     ...(r.sourceAuthor ? { sourceAuthor: r.sourceAuthor } : {}),
     ...(r.sourcePlatform ? { sourcePlatform: r.sourcePlatform } : {}),
+    ...(r.sourceThumbnailUrl ? { sourceThumbnailUrl: r.sourceThumbnailUrl } : {}),
   };
 }
 
@@ -101,6 +107,7 @@ const inputSchema = z.object({
   prepMinutes: num("Hazırlık süresi", 0, 1440).pipe(z.number().int("Hazırlık süresi tam dakika olsun.")),
   cookMinutes: num("Pişirme süresi", 0, 1440).pipe(z.number().int("Pişirme süresi tam dakika olsun.")),
   servings: num("Kişi sayısı", 1, 20).pipe(z.number().int("Kişi sayısı tam sayı olsun.")),
+  waitMinutes: z.preprocess((v) => (typeof v === "string" && !v.trim() ? "0" : v), num("Bekleme süresi", 0, 1440).pipe(z.number().int("Bekleme süresi tam dakika olsun."))),
 });
 
 /** Validate a draft and turn it into store input; returns the first calm error message. */
@@ -143,10 +150,12 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
   if (freezer && !ingredients.some((i) => i.name === freezer)) {
     return { ok: false, error: "Buzluktan çıkacak malzeme, malzemeler arasında olmalı." };
   }
+  const { waitMinutes, ...headRest } = head.data;
   return {
     ok: true,
     value: {
-      ...head.data,
+      ...headRest,
+      waitMinutes: waitMinutes > 0 ? waitMinutes : undefined,
       tags: d.tags
         .split(",")
         .map((t) => t.trim())
@@ -162,6 +171,7 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       ...(d.sourceUrl ? { sourceUrl: d.sourceUrl } : {}),
       ...(d.sourceAuthor ? { sourceAuthor: d.sourceAuthor } : {}),
       ...(d.sourcePlatform ? { sourcePlatform: d.sourcePlatform } : {}),
+      ...(d.sourceThumbnailUrl ? { sourceThumbnailUrl: d.sourceThumbnailUrl } : {}),
     },
   };
 }

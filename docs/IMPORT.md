@@ -71,7 +71,8 @@ and the response says which one (`provider: "gemini" | "claude" | "rules"`).
 - Invalid JSON or output that fails the schema → one retry with a short correction, then next.
 - Other errors (5xx, network) → next.
 
-Both LLMs get the **same** system prompt and user message (`prompt.ts`), the same output
+Both LLMs get the **same** system prompt and user message (`prompt.ts`) — including the timing
+and tag rules above — the same output
 schema (`RECIPE_JSON_SCHEMA`, converted to Gemini's OpenAPI subset by `toGeminiSchema`), and
 their output goes through the **same** validator (`validateDraft`: tidy → zod
 `importedRecipeSchema` → durations written into step text). A draft looks the same whichever
@@ -125,10 +126,20 @@ headers. Captions are public posts; still, if that is not acceptable for a deplo
 - Usage is counted per household in `importLog` (platform + provider, no link or caption) and
   shown in Ayarlar: "Bu ay 12 tarif içe aktarıldı (11 Gemini, 1 kural)".
 
+## What the draft pre-fills
+
+| Field | Where it comes from |
+|---|---|
+| **Kaynak** (never empty) | `sourceLabel` in `src/services/importDraft.ts`: "YouTube · Yemek.com", "TikTok · @mutfakdefteri", just "Instagram" when the author is unknown, the site name for web pages (og:site_name, else the host), "Yapıştırılan tarif metni" for text pasted without any link. Same on every path: fetched text, pasted text, rules, LLM, schema.org. The paste-fallback call fetches the link again; if the platform answers less the second time, `keepSource` keeps the first answer's author/title/thumbnail for the same link. Editable. |
+| Credit fields | `sourceUrl`, `sourcePlatform`, `sourceAuthor`, `sourceThumbnailUrl` (the platform's own thumbnail URL; never downloaded or re-hosted). The recipe page shows "Kaynak: <the Kaynak text>" with "Videoyu aç"; recipes imported before this had no text and keep the derived "Kaynak: @author · Platform". |
+| **Etiketler** | Only the vocabulary in `src/domain/import/tags.ts`, in the app's existing spelling: cooking method (Kızartma, Fırında, Tencere, Tavada, Izgara, Haşlama, Buharda, Pişirmeden), main ingredient (Kıymalı, Etli, Tavuklu, Balık, Vejetaryen, Bakliyat), prep (Akşamdan ıslat, Marine, Dinlendirme). Synonyms map onto them (Tencerede → Tencere, Balıklı → Balık, Baklagil → Bakliyat, Etsiz → Vejetaryen); anything else is dropped. LLMs fill `cookingMethods` / `mainIngredients` / `prepTags`; the rule parser uses keywords (kızart/kızgın yağ → Kızartma, fırın → Fırında, balık/morina → Balık, …). Merged with tags already in the form, deduplicated; the user can remove any. |
+| **Hazırlık / Pişirme / Bekleme** | Pişirme is time on heat or in the oven only. Marinating, resting, soaking, chilling and rising go to **Bekleme (dk)** (`waitMinutes`), overnight soaks to the prep-ahead notes. LLMs return `prepMinutes`, `cookMinutes`, `waitMinutes` separately and are told this explicitly; the rule parser reads "Hazırlık/Pişirme/Bekleme:" lines and otherwise counts heat steps as cooking and waiting steps (`isWaitingStep`) as Bekleme (`src/domain/import/timing.ts`). Pişirme over 90 min with no step that simmers or roasts that long shows "Süre uzun görünüyor, kontrol et" under the field — a hint, never a block. |
+| **Artarsa ne olur?** | Always "Artmaz / hepsi biter". Nothing about leftovers is guessed — not by the LLM, not by the rules. |
+
 ## Credit
 
-The saved recipe keeps `sourceUrl`, `sourceAuthor` and `sourcePlatform`; the recipe page shows
-"Kaynak: @author · Instagram" with "Videoyu aç".
+The saved recipe keeps `sourceUrl`, `sourceAuthor`, `sourcePlatform` and `sourceThumbnailUrl`, and
+the Kaynak text; the recipe page shows "Kaynak: YouTube · Yemek.com" with "Videoyu aç".
 
 ## Share target
 

@@ -103,7 +103,12 @@ function TarifInner() {
         `yaklaşık ${formatDuration(totalMinutes(menu, byId))}`,
         `${recipe.servings} kişilik${evening?.outcome.kind === "lunch" ? ", yarına da artar" : evening?.outcome.kind === "fridge" ? ", artanı dolaba" : ""}`,
       ]
-    : [recipe.timeNote ?? formatDuration(recipeMinutes), `${recipe.servings} kişilik`, policyMeta(recipe)];
+    : [
+        recipe.timeNote ?? formatDuration(recipeMinutes),
+        recipe.waitMinutes ? `+ ${formatDuration(recipe.waitMinutes)} bekleme` : null,
+        `${recipe.servings} kişilik`,
+        policyMeta(recipe),
+      ];
   const rotation = rotationLabel(daysSinceCooked(recipe.id, last, today), solo);
 
   // Prep timeline: the day's tasks for the whole menu (design shows kıyma, köfte harcı and pilav together).
@@ -183,7 +188,14 @@ function TarifInner() {
             <IconImport size={18} />
           </span>
           <span className={s.sourceText}>
-            <strong>{recipe.sourceUrl ? sourceCredit({ platform: recipe.sourcePlatform, author: recipe.sourceAuthor, url: recipe.sourceUrl }) : recipe.source}</strong>
+            <strong>
+              {/* The Kaynak text as the user left it in the form; older imports without one get the derived credit. */}
+              {recipe.sourceUrl
+                ? recipe.source
+                  ? `Kaynak: ${recipe.source}`
+                  : sourceCredit({ platform: recipe.sourcePlatform, author: recipe.sourceAuthor, url: recipe.sourceUrl })
+                : recipe.source}
+            </strong>
             {creator && (
               <span>
                 {" "}

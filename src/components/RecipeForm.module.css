@@ -40,10 +40,11 @@
   font-weight: 400;
   font-size: 21px;
 }
-.grid3 {
+.grid4 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+  align-items: start;
 }
 .ingRow {
   display: grid;
@@ -149,11 +150,8 @@
   .ingTop > :nth-child(4) {
     grid-area: del;
   }
-  .grid3 {
+  .grid4 {
     grid-template-columns: 1fr 1fr;
-  }
-  .grid3 > :last-child {
-    grid-column: span 2;
   }
 }
 .leftover {

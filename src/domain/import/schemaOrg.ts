@@ -1,3 +1,4 @@
+import { keywordTags } from "./tags";
 import { parseDurationMinutes } from "@/domain/durations";
 import { cleanTitle, findPrep, guessRole, parseIngredientLine } from "./parseText";
 import type { ImportedIngredient, ImportedRecipe, ImportedStep } from "./types";
@@ -153,9 +154,12 @@ export function readSchemaOrgRecipe(html: string): SchemaOrgRecipe | null {
       servings: yieldOf(node.recipeYield),
       role: roleOf(node.recipeCategory, name),
       totalMinutes: total && total <= 1440 ? total : null,
+      prepMinutes: isoMinutes(node.prepTime),
+      cookMinutes: isoMinutes(node.cookTime),
       ingredients: ingredients.slice(0, 60),
       steps,
       prep: findPrep(stepTexts.join("\n")),
+      tags: keywordTags(`${name}\n${stepTexts.join("\n")}`, ingredients),
     },
     author: nameOf(node.author),
     image: imageOf(node.image),

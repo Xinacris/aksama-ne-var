@@ -124,6 +124,8 @@ export const recipeSchema = z.object({
   course: courseSchema,
   prepMinutes: z.number().int().min(0),
   cookMinutes: z.number().int().min(0),
+  /** Waiting that isn't cooking: marinating, resting, soaking, chilling. Not part of the menu's time. */
+  waitMinutes: z.number().int().min(0).max(1440).optional(),
   /** Optional human override for time, e.g. "45 dk (hazır mantıyla)". */
   timeNote: z.string().optional(),
   servings: z.number().int().min(1),
@@ -143,6 +145,8 @@ export const recipeSchema = z.object({
   /** Creator handle or name as the platform reports it ("@mutfaktaali"). */
   sourceAuthor: z.string().optional(),
   sourcePlatform: sourcePlatformSchema.optional(),
+  /** The post's thumbnail as the platform gave it (link card); never downloaded or re-hosted. */
+  sourceThumbnailUrl: z.string().url().optional(),
   /** Created from an unknown name during onboarding; details not filled yet. */
   stub: z.boolean().optional(),
   createdBy: uuid.nullable(),

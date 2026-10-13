@@ -5,6 +5,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { AISLES, COURSES, COURSE_LABEL, UNITS } from "@/data/models";
 import { catalogEntry, INGREDIENT_CATALOG, normalizeIngredientName } from "@/data/seed/ingredients";
 import { emptyIngredient, parseDraft, type RecipeDraft } from "@/services/recipeForm";
+import { cookTimeLooksLong } from "@/domain/import/timing";
 import { POLICY_OPTION } from "@/domain/leftovers";
 import type { RecipeInput } from "@/store/app";
 import { IconChevronLeft, IconPlus, IconTrash } from "./icons";
@@ -81,6 +82,7 @@ export function RecipeForm({
     });
   }
 
+  const longCook = cookTimeLooksLong(Number(d.cookMinutes.replace(",", ".")) || 0, d.steps);
   const ingredientNames = d.ingredients.map((i) => normalizeIngredientName(i.name)).filter(Boolean);
 
   return (
@@ -104,15 +106,30 @@ export function RecipeForm({
               </option>
             ))}
           </SelectField>
-          <div className={s.grid3}>
+          <div className={s.grid4}>
             <TextField label="Hazırlık (dk)" inputMode="numeric" value={d.prepMinutes} onChange={(e) => set("prepMinutes", e.target.value)} />
-            <TextField label="Pişirme (dk)" inputMode="numeric" value={d.cookMinutes} onChange={(e) => set("cookMinutes", e.target.value)} />
+            <TextField
+              label="Pişirme (dk)"
+              inputMode="numeric"
+              value={d.cookMinutes}
+              onChange={(e) => set("cookMinutes", e.target.value)}
+              // Gentle only: never blocks saving.
+              hint={longCook ? "Süre uzun görünüyor, kontrol et" : undefined}
+            />
+            <TextField
+              label="Bekleme (dk)"
+              inputMode="numeric"
+              placeholder="0"
+              value={d.waitMinutes}
+              onChange={(e) => set("waitMinutes", e.target.value)}
+            />
             <TextField label="Kaç kişilik" inputMode="numeric" value={d.servings} onChange={(e) => set("servings", e.target.value)} />
           </div>
+          <p className={s.formNote}>Pişirme yalnızca ocakta ya da fırında geçen süre. Marine, dinlendirme, ıslatma Bekleme&apos;ye yazılır.</p>
           <TextField label="Etiketler" hint="Virgülle ayır: Fırında, Kıymalı, Akşamdan ıslat" value={d.tags} onChange={(e) => set("tags", e.target.value)} />
           <TextField
             label="Kaynak"
-            hint="Serbest metin: “Instagram'dan içe aktarıldı”, “Annemin defteri” ya da bir link."
+            hint="Serbest metin: “YouTube · Yemek.com”, “Annemin defteri” ya da bir link."
             value={d.source}
             onChange={(e) => set("source", e.target.value)}
           />

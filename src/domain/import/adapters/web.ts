@@ -32,6 +32,7 @@ export const webAdapter: SourceAdapter = {
       author: found?.author ?? meta.siteName ?? host,
       thumbnailUrl: found?.image ?? meta.image,
       needsPaste: !found || found.recipe.ingredients.length === 0,
+      siteName: meta.siteName ?? host,
       recipe: found?.recipe ?? null,
     };
   },
