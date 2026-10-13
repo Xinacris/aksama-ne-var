@@ -48,12 +48,14 @@ export function draftTimes(r: ImportedRecipe): { prep: number; cook: number; wai
   const wait = r.waitMinutes ?? fromSteps.wait;
   const total = r.totalMinutes ?? 0;
   // A known total is split around the waiting: about a third preparation (5–15 min), the rest cooking.
-  const avail = total ? Math.max(total - wait, 1) : 0;
+  // Sites often state a total without the waiting (Yemek.com: 46 min total, a 2-hour marinade in the steps).
+  const avail = total ? (wait < total ? total - wait : total) : 0;
   const prepGuess = avail ? Math.min(15, Math.max(5, Math.round(avail / 3))) : 15;
   let cook = r.cookMinutes ?? null;
-  let prep = r.prepMinutes ?? null;
+  // A placeholder like "PT1M" for a dish with many ingredients isn't real data.
+  let prep = r.prepMinutes != null && (r.prepMinutes >= 5 || r.ingredients.length < 6) ? r.prepMinutes : null;
   if (cook === null) cook = avail ? Math.max(Math.min(fromSteps.heat, avail), avail - (prep ?? prepGuess)) : fromSteps.heat || 30;
-  if (prep === null) prep = avail && r.cookMinutes != null ? Math.min(30, Math.max(5, avail - cook)) : prepGuess;
+  if (prep === null) prep = avail && r.cookMinutes != null && avail - cook >= 5 ? Math.min(30, avail - cook) : prepGuess;
   return { prep: clampMinutes(prep), cook: clampMinutes(cook), wait: Math.max(0, Math.min(Math.round(wait), 1440)) };
 }
 
