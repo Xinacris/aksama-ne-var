@@ -15,6 +15,7 @@ Kurallar:
 - Birimleri şu listeden seç: ${UNITS.join(", ")}. "yk" yemek kaşığı, "tk" tatlı kaşığı, "çk" çay kaşığı, "sb" su bardağı, "gr" g demektir. Miktarsız malzemelerde amount ve unit null.
 - Malzeme adı yalın olsun ("kuru soğan"), "rendelenmiş" gibi ayrıntılar note alanına. Su ekleme.
 - side: sebze, meyve, yeşillik "pazar"; et, süt ürünü, bakliyat, baharat, paketli ürün "market".
+- Adımlar yalnızca pişirme/hazırlama eylemleridir. Linkleri, abone ol/takip et çağrılarını, sosyal medya hesaplarını, sponsor ve ürün tanıtımlarını, kanal ya da şef tanıtımlarını ASLA adım olarak yazma. Metinde adım yoksa steps boş liste olsun; adım uydurma.
 - Adımları sırayla yaz; adımda süre geçiyorsa minutes alanına dakika olarak yaz ("10-15 dk" → 15).
 - Süreler: cookMinutes yalnızca ocakta, fırında ya da yağda geçen süredir. prepMinutes doğrama, karıştırma gibi elle yapılan hazırlıktır. Marine etme, dinlendirme, ıslatma, buzdolabında bekletme, soğutma ve mayalanma pişirme DEĞİLDİR: bunları waitMinutes'a yaz; bir geceden uzunsa waitMinutes'a yazma, prep listesine ekle. Metinde süre yoksa ilgili alanı null bırak; tahmin etme. totalMinutes yalnızca metinde toplam süre yazıyorsa doldurulur.
 - Etiketler: cookingMethods (${COOKING_METHOD_TAGS.join(", ")}), mainIngredients (${MAIN_INGREDIENT_TAGS.join(", ")}; Vejetaryen = et, tavuk ve balık yok), prepTags (${PREP_TAGS.join(", ")}). Yalnızca bu listelerdeki değerleri, yalnızca metin açıkça destekliyorsa kullan; emin değilsen boş bırak.

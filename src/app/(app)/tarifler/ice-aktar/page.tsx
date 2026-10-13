@@ -74,7 +74,7 @@ function Ice() {
         setDraft(null);
         setFocusPaste((n) => n + 1);
       } else if (body.draft) {
-        setDraft(toRecipeDraft(body.draft, source, lastTags.current));
+        setDraft(toRecipeDraft(body.draft, source, lastTags.current, body.writtenRecipeUrl ?? null));
         lastTags.current = "";
         setAttempt((n) => n + 1);
         window.scrollTo({ top: 0 });
@@ -113,10 +113,19 @@ function Ice() {
             {result.source?.url && <ImportSourceCard source={result.source} />}
             <p className={s.check} role="status">
               <strong>Kontrol edip kaydet.</strong>{" "}
-              {result.path === "llm"
-                ? "Açıklamadan biz çıkardık; miktarlara ve adımlara bir göz at."
-                : "Açıklamayı basitçe okuduk; eksik kalan malzeme ya da adım varsa buradan tamamlayabilirsin."}
+              {result.provider === "web"
+                ? result.writtenRecipeUrl
+                  ? "Malzemeleri ve adımları videonun yazılı tarifinden aldık; bir göz at."
+                  : "Malzemeleri ve adımları sayfanın tarif bilgisinden aldık; bir göz at."
+                : result.path === "llm"
+                  ? "Açıklamadan biz çıkardık; miktarlara ve adımlara bir göz at."
+                  : "Açıklamayı basitçe okuduk; eksik kalan malzeme ya da adım varsa buradan tamamlayabilirsin."}
             </p>
+            {result.draft && result.draft.steps.length === 0 && (
+              <p className={s.noSteps} role="note">
+                Bu açıklamada adımlar yok. Yazılı tarifin linki varsa yapıştır ya da adımları kendin ekle.
+              </p>
+            )}
             <button
               type="button"
               className={s.toggle}

@@ -208,6 +208,11 @@ function TarifInner() {
               {recipe.sourcePlatform === "web" || !recipe.sourcePlatform ? "Sayfayı aç" : "Videoyu aç"}
             </a>
           )}
+          {recipe.writtenRecipeUrl && (
+            <a href={recipe.writtenRecipeUrl} target="_blank" rel="noopener noreferrer" className={s.sourceLink}>
+              Yazılı tarif
+            </a>
+          )}
         </div>
       )}
 

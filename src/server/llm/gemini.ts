@@ -68,7 +68,7 @@ export function geminiRequestBody(input: Parameters<LlmProvider["call"]>[0], ret
  * (`GEMINI_API_KEY` from Google AI Studio); 429 / RESOURCE_EXHAUSTED is a
  * quota failure so the chain moves on to Claude or the rules.
  */
-export function geminiProvider(opts: { apiKey: string; model?: string; fetch: GeminiFetch }): LlmProvider {
+export function geminiProvider(opts: { apiKey: string; model?: string; fetch: GeminiFetch; retryDelayMs?: number }): LlmProvider {
   const model = opts.model?.trim() || GEMINI_DEFAULT_MODEL;
   return {
     name: "gemini",
@@ -100,6 +100,12 @@ export function geminiProvider(opts: { apiKey: string; model?: string; fetch: Ge
         refusedMinimal.add(model);
         console.warn(`[import] gemini ${model}: thinking level minimal refused; using low`);
         res = await send("low");
+        status = res.ok ? undefined : await errorStatus(res);
+      }
+      // 500/503 ("model is overloaded") come back in under a second and usually pass on a retry.
+      if (!res.ok && (res.status === 503 || res.status === 500) && !signal.aborted) {
+        await new Promise((r) => setTimeout(r, opts.retryDelayMs ?? 800));
+        res = await send(refusedMinimal.has(model) ? "low" : "minimal");
         status = res.ok ? undefined : await errorStatus(res);
       }
       if (!res.ok) {

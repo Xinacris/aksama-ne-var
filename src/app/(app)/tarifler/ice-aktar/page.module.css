@@ -94,3 +94,12 @@
 .check strong {
   color: var(--ink);
 }
+.noSteps {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--sand-soft);
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.45;
+}

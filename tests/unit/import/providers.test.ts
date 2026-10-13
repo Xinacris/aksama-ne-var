@@ -211,6 +211,20 @@ describe("fall-through", () => {
     expect(body.fallbacks).toEqual([{ provider: "gemini", kind: "error", status: 404, reason: "NOT_FOUND" }]);
   });
 
+  it("503 UNAVAILABLE is retried once after a short pause; a second 503 falls through", async () => {
+    const ok = vi.fn().mockResolvedValueOnce(json({ error: { code: 503, status: "UNAVAILABLE" } }, 503)).mockResolvedValueOnce(geminiOk());
+    const claude: LlmProvider = { name: "claude", call: async () => VALID };
+    const first = await structureRecipe(caption, { platform: null, title: null }, { providers: [geminiProvider({ apiKey: "g", fetch: ok, retryDelayMs: 1 }), claude] });
+    expect(first.provider).toBe("gemini");
+    expect(ok).toHaveBeenCalledTimes(2);
+    const down = vi.fn(async () => json({ error: { code: 503, status: "UNAVAILABLE" } }, 503));
+    const fallbacks: unknown[] = [];
+    const second = await structureRecipe(caption, { platform: null, title: null }, { providers: [geminiProvider({ apiKey: "g", fetch: down, retryDelayMs: 1 }), claude], onFailure: (f) => fallbacks.push(f) });
+    expect(second.provider).toBe("claude");
+    expect(down).toHaveBeenCalledTimes(2);
+    expect(fallbacks).toEqual([{ provider: "gemini", kind: "error", status: 503, reason: "UNAVAILABLE" }]);
+  });
+
   it("RESOURCE_EXHAUSTED with another status code is quota too", async () => {
     const gemini = vi.fn(async () => json({ error: { code: 400, status: "RESOURCE_EXHAUSTED" } }, 400));
     expect((await run(deps({ GEMINI_API_KEY: "g", ANTHROPIC_API_KEY: "a" }, gemini))).provider).toBe("claude");

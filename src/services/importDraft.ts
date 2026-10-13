@@ -61,7 +61,7 @@ export function draftTimes(r: ImportedRecipe): { prep: number; cook: number; wai
  * Import draft → the existing recipe form's draft. Nothing is saved until the user submits the form.
  * `existingTags` (what the form already had) are kept first; new tags are merged without duplicates.
  */
-export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"], existingTags = ""): RecipeDraft {
+export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"], existingTags = "", writtenRecipeUrl: string | null = null): RecipeDraft {
   const ingredients = r.ingredients
     .filter((i) => !isWater(i.item))
     .map((i) => {
@@ -111,6 +111,8 @@ export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"],
     ...(source?.author ? { sourceAuthor: source.author } : {}),
     ...(source ? { sourcePlatform: source.platform as Recipe["sourcePlatform"] } : {}),
     ...(source?.thumbnailUrl ? { sourceThumbnailUrl: source.thumbnailUrl } : {}),
+    // The video stays the Kaynak; the page the steps came from is the second link.
+    ...(writtenRecipeUrl && writtenRecipeUrl !== source?.url ? { writtenRecipeUrl } : {}),
   };
 }
 

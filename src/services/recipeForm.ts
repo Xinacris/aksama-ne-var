@@ -39,6 +39,8 @@ export interface RecipeDraft {
   sourceAuthor?: string;
   sourcePlatform?: Recipe["sourcePlatform"];
   sourceThumbnailUrl?: string;
+  /** "Yazılı tarif": the written recipe a video linked to. */
+  writtenRecipeUrl?: string;
 }
 
 export const emptyIngredient = (): IngredientDraft => ({ name: "", quantity: "", unit: "adet", side: "market", aisle: "Diğer" });
@@ -91,6 +93,7 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     ...(r.sourceAuthor ? { sourceAuthor: r.sourceAuthor } : {}),
     ...(r.sourcePlatform ? { sourcePlatform: r.sourcePlatform } : {}),
     ...(r.sourceThumbnailUrl ? { sourceThumbnailUrl: r.sourceThumbnailUrl } : {}),
+    ...(r.writtenRecipeUrl ? { writtenRecipeUrl: r.writtenRecipeUrl } : {}),
   };
 }
 
@@ -172,6 +175,7 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       ...(d.sourceAuthor ? { sourceAuthor: d.sourceAuthor } : {}),
       ...(d.sourcePlatform ? { sourcePlatform: d.sourcePlatform } : {}),
       ...(d.sourceThumbnailUrl ? { sourceThumbnailUrl: d.sourceThumbnailUrl } : {}),
+      ...(d.writtenRecipeUrl ? { writtenRecipeUrl: d.writtenRecipeUrl } : {}),
     },
   };
 }

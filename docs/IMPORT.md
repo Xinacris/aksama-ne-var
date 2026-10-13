@@ -13,12 +13,16 @@ Android share sheet ──────┤→ /tarifler/ice-aktar?url=…&text=�
                 │ detect platform + normalise URL (detect.ts)  │
                 │ source adapter → public text (adapters/*)    │
                 │ pasted text wins over fetched text           │
-                │ schema.org recipe? use it as is              │
+                │ schema.org recipe? use it as is ("web")      │
+                │ "yazılı tarif" link in the text? follow it → │
+                │   its schema.org recipe ("web")              │
+                │ strip channel boilerplate (boilerplate.ts)   │
                 │ else provider chain (src/server/llm):        │
                 │   Gemini → Claude → rule parser              │
+                │ junk steps dropped (links, promos)           │
                 └──────────────────────────────────────────────┘
-                          ▼  { source, draft, provider: "gemini" | "claude" | "rules",
-                               path: "llm" | "rules", needsPaste, message }
+                          ▼  { source, draft, provider: "gemini" | "claude" | "web" | "rules",
+                               path, writtenRecipeUrl, needsPaste, message, fallbacks }
        draft → existing RecipeForm (source card + "Kontrol edip kaydet") → save
 ```
 
@@ -53,6 +57,37 @@ No HTML scraping of Instagram/TikTok, no video or audio download, no unofficial 
 service). The paste box ("Açıklamayı buraya yapıştır") is always available and opens itself when
 the fetched text has no ingredient-like lines.
 
+## Written recipes linked from a video
+
+Recipe channels (Yemek.com and others) often keep only ingredients — or nothing — in the video
+description and link the written recipe: "Yazılı tarif için: https://…/tarif/…". Before any
+structuring, `src/domain/import/links.ts` scans the description/caption for links:
+
+- Social (Instagram, Facebook, X, TikTok, Pinterest, …), video (YouTube, Vimeo, …) and link-in-bio
+  hosts are never recipe pages. Chef/profile pages are skipped; a site's home page ranks low.
+- Preferred: a link on a line with "yazılı tarif"/"recipe" (then "tarif"), and paths like
+  `/tarif/…`, `/recipe/…`. Lines with abone/takip/sponsor/ürünler/sosyal medya don't count.
+- At most **2** links are tried, through the existing web adapter (guarded fetch: public hosts only,
+  ≤ 3 redirects, 1.5 MB HTML cap; 8 s per page inside the request deadline).
+- Shorteners (bit.ly, …) are expanded only when no direct link worked and only from a line that
+  points to the recipe: one `HEAD` through the guarded fetch, 5 s, ≤ 3 redirects.
+- If the page has a schema.org/Recipe with ingredients **and** steps, it is the draft
+  (`provider: "web"`) — no LLM call for structure; tags and times are still suggested from it.
+  The video stays the Kaynak ("YouTube · Yemek.com") and the page is stored as
+  `writtenRecipeUrl`, shown on the recipe page as **Yazılı tarif**.
+
+## Boilerplate never becomes a step
+
+`src/domain/import/boilerplate.ts` removes, before the LLM or the rule parser sees the text: lines
+that are mostly a link, social handles/links, subscribe/follow calls (abone ol, takip et,
+bildirimleri aç, subscribe), "SOSYAL MEDYA HESAPLARIMIZ", hashtag-only lines, sponsor/affiliate
+lines (sponsor, işbirliği, indirim kodu, "ürünlerine ulaşmak için"), and chef/site promos ("tüm
+tariflerine ulaşmak için", "sitemizi ziyaret edin"). Matching lower-cases with the Turkish locale
+first ("İndirim", "İnstagram"). The LLM prompt says steps are cooking actions only — never links,
+promotions or channel info — and an empty list when there are none; the shared validator and the
+pipeline drop any step that still matches. When no steps remain, the review screen says: "Bu
+açıklamada adımlar yok. Yazılı tarifin linki varsa yapıştır ya da adımları kendin ekle."
+
 ## Providers — free first
 
 The caption goes through an ordered chain; the first provider that returns a valid draft wins,
@@ -60,14 +95,16 @@ and the response says which one (`provider: "gemini" | "claude" | "rules"`).
 
 | # | Provider | Enabled when | Model | How it returns structure |
 |---|---|---|---|---|
-| 1 | Gemini | `GEMINI_API_KEY` set | `gemini-3.1-flash-lite` (or `GEMINI_MODEL`) | `responseMimeType: application/json` + `responseSchema` |
+| 1 | Gemini | `GEMINI_API_KEY` set | `gemini-3.1-flash-lite` (or `GEMINI_MODEL`) | `responseMimeType: application/json` + `responseSchema`; `thinkingConfig.thinkingLevel: "minimal"` (falls back to `"low"` if a model refuses it) |
 | 2 | Claude | `ANTHROPIC_API_KEY` set | `claude-haiku-5-5`, `max_tokens` 1500 | forced tool use (`tarif_taslagi`) |
 | 3 | Rules | always | — | `parseRecipeText` (rule-based Turkish parser) |
 
 - Not configured → skipped.
 - 429 / `RESOURCE_EXHAUSTED` (quota) → next provider immediately, no retry.
-- Timeout → next provider. Each attempt has its own 7 s budget inside the request's 15 s
-  deadline; once the overall deadline passes the chain stops and the rule parser answers.
+- Timeout → next provider. A provider with another one after it gets 8 s per attempt; the last
+  one may use what is left of the request's 25 s deadline. Once the deadline passes the chain
+  stops and the rule parser answers.
+- 500/503 (Gemini "model is overloaded") → one retry after 0.8 s, then next.
 - Invalid JSON or output that fails the schema → one retry with a short correction, then next.
 - Other errors (5xx, network) → next.
 
@@ -118,7 +155,10 @@ headers. Captions are public posts; still, if that is not acceptable for a deplo
 - 30 smart imports per household per day across the whole chain, in server memory (moves to a DB
   count on `import_log` with Supabase). Over the limit the draft still comes from the rule
   parser, with a calm note.
-- 15 s timeout for the whole request (platform fetch + LLM share one AbortSignal).
+- 25 s deadline for the whole request (platform fetch, written-recipe page, LLM share one
+  AbortSignal; the route's `maxDuration` is 30 s).
+- Why a provider gave up is logged and returned as `fallbacks: [{ provider, kind, status, reason }]`
+  (HTTP status and the provider's error code only — never caption text).
 - Input text is capped at 8 000 characters; request bodies over 20 000 are refused.
 - Logs never contain captions or LLM input/output — only provider names and failure kinds
   (`[import] gemini gave up (quota); trying next`).

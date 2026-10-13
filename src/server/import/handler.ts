@@ -5,7 +5,11 @@ import { geminiProvider, type GeminiFetch } from "@/server/llm/gemini";
 import { structureRecipe, type LlmProvider, type ProviderFallback } from "@/server/llm";
 import { DailyLimiter } from "./rateLimit";
 
-export const IMPORT_TIMEOUT_MS = 15_000;
+/**
+ * Whole request: platform fetch, an optional written-recipe page, the LLM chain. Gemini 3.1
+ * Flash-Lite took 5–10 s for a short caption in production, so 15 s was too tight.
+ */
+export const IMPORT_TIMEOUT_MS = 25_000;
 
 export interface ImportEnv {
   GEMINI_API_KEY?: string;

@@ -1,6 +1,7 @@
 import { UNITS } from "@/data/models";
 import { findDurations } from "@/domain/durations";
 import { importedRecipeSchema, type ImportedRecipe } from "@/domain/import/types";
+import { isBoilerplateLine } from "@/domain/import/boilerplate";
 import { filterTags } from "@/domain/import/tags";
 import { normalizeUnit } from "@/domain/import/units";
 
@@ -16,7 +17,10 @@ function tidy(input: unknown): unknown {
       })
     : r.ingredients;
   const steps = Array.isArray(r.steps)
-    ? (r.steps as Record<string, unknown>[]).map((s) => ({ text: s.text, minutes: typeof s.minutes === "number" && s.minutes > 0 ? s.minutes : null }))
+    ? (r.steps as Record<string, unknown>[])
+        .map((s) => ({ text: s.text, minutes: typeof s.minutes === "number" && s.minutes > 0 ? s.minutes : null }))
+        // links, promos, channel info are never steps, whatever the model says
+        .filter((s) => typeof s.text !== "string" || !isBoilerplateLine(s.text))
     : r.steps;
   // Tag fields: only vocabulary values survive (anything else the model invents is dropped).
   const { cookingMethods, mainIngredients, prepTags, ...rest } = r;
