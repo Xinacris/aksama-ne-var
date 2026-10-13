@@ -96,6 +96,8 @@ describe("timers", () => {
     expect(remainingSeconds(reloaded, new Date("2026-10-12T19:34:59.200Z"))).toBe(1);
     expect(isFinished(reloaded, new Date("2026-10-12T19:35:00Z"))).toBe(true);
     expect(remainingSeconds(reloaded, new Date("2026-10-12T20:00:00Z"))).toBe(0);
+    // a render clock that is a second behind never shows more than the timer's length
+    expect(remainingSeconds(reloaded, new Date("2026-10-12T18:59:59Z"))).toBe(35 * 60);
   });
 
   it("several timers at once: running first by end time, finished ones ring until dismissed", () => {

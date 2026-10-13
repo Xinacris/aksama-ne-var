@@ -42,4 +42,11 @@ Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
 - [x] R6. Leftover UI: Bugün card overrides, "dolapta" items, drag into Hafta, shopping list skip; e2e.
 - [x] R7. Cooking mode core: route, prep checklist, steps, dish tabs, resume; tests.
 - [x] R8. Cooking mode extras: multiple timers with persistence, wake lock, sync/activity, finish screen → leftover question; e2e.
-- [ ] R9. Final: Supabase schema + migration doc updated, docs/IMPORT.md, BACKLOG.md, DEMO.md, screenshots checked, all scripts green, push, check Vercel status.
+- [x] R9. Final: Supabase schema + migration doc updated, docs/IMPORT.md, BACKLOG.md, DEMO.md, screenshots checked, all scripts green, push, check Vercel status.
+  - Schema parsed with libpg-query (86 statements OK); migrations v3–v5 tested old shape → new shape, plus v1 → current read-back through the adapter.
+  - Green before the final push: lint 0, typecheck 0, 381 unit/component tests (35 files), 32 e2e passed (4 desktop-only skipped on mobile): journey ×2, board DnD, import ×2, leftovers, cooking with fake-clock timers + reload, axe light/dark incl. import and cooking screens; build OK.
+  - Production checks (no env vars set): `/api/import` paste → rules draft; YouTube oEmbed title-only → paste note; TikTok oEmbed live (author read); Instagram → paste path; private host refused. Browser: leftover choice + undo, Dolapta, cooking mode tabs/steps, timer survives reload, Wake Lock API present, Instagram paste → draft → save → credit.
+
+ROUND 2 DONE — live: https://aksama-ne-var.vercel.app
+ANTHROPIC_API_KEY — required only for smart import (Claude Haiku turns captions into clean drafts); without it the rule-based Turkish parser pre-fills the draft. The app works fully without it.
+YOUTUBE_API_KEY — optional: full YouTube descriptions; without it only the video title arrives and the paste box opens. The app works fully without it.
