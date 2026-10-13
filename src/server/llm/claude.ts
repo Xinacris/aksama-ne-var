@@ -17,10 +17,11 @@ const TOOL = {
 
 function failure(e: unknown, signal: AbortSignal): ProviderError {
   if (signal.aborted) return new ProviderError("timeout");
-  const err = e as { status?: number; name?: string };
-  if (err?.status === 429 || err?.status === 529) return new ProviderError("quota");
-  if (err?.name === "APIConnectionTimeoutError" || err?.name === "AbortError" || err?.name === "TimeoutError") return new ProviderError("timeout");
-  return new ProviderError("error");
+  const err = e as { status?: number; name?: string; error?: { error?: { type?: string } } };
+  const reason = err?.error?.error?.type ?? err?.name;
+  if (err?.status === 429 || err?.status === 529) return new ProviderError("quota", err.status, reason);
+  if (err?.name === "APIConnectionTimeoutError" || err?.name === "AbortError" || err?.name === "TimeoutError") return new ProviderError("timeout", err.status, reason);
+  return new ProviderError("error", err?.status, reason);
 }
 
 /** Claude Haiku with forced tool use; returns the tool input (validated by the caller). */
@@ -45,7 +46,7 @@ export function claudeProvider(client: MessagesClient): LlmProvider {
         throw failure(e, signal);
       }
       const block = msg.content.find((b) => b.type === "tool_use" && b.name === CLAUDE_TOOL);
-      if (!block || block.type !== "tool_use") throw new ProviderError("invalid");
+      if (!block || block.type !== "tool_use") throw new ProviderError("invalid", 200, msg.stop_reason ?? "NO_TOOL_USE");
       return block.input;
     },
   };

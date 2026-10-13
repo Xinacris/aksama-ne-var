@@ -72,21 +72,23 @@ export function geminiProvider(opts: { apiKey: string; model?: string; fetch: Ge
           .json()
           .then((b: { error?: { status?: string } }) => b?.error?.status)
           .catch(() => undefined);
-        if (res.status === 429 || status === "RESOURCE_EXHAUSTED") throw new ProviderError("quota");
-        if (res.status === 408 || res.status === 504 || status === "DEADLINE_EXCEEDED") throw new ProviderError("timeout");
-        throw new ProviderError("error");
+        if (res.status === 429 || status === "RESOURCE_EXHAUSTED") throw new ProviderError("quota", res.status, status);
+        if (res.status === 408 || res.status === 504 || status === "DEADLINE_EXCEEDED") throw new ProviderError("timeout", res.status, status);
+        throw new ProviderError("error", res.status, status);
       }
-      let data: { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+      let data: { candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] }; finishReason?: string }[]; promptFeedback?: { blockReason?: string } };
       try {
         data = await res.json();
       } catch {
-        throw new ProviderError(signal.aborted ? "timeout" : "invalid");
+        throw new ProviderError(signal.aborted ? "timeout" : "invalid", res.status, "BODY");
       }
-      const text = data.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
+      const cand = data.candidates?.[0];
+      // Thinking models may return thought parts first; only the answer parts are JSON.
+      const text = cand?.content?.parts?.filter((p) => !p.thought).map((p) => p.text ?? "").join("") ?? "";
       try {
         return JSON.parse(text);
       } catch {
-        throw new ProviderError("invalid");
+        throw new ProviderError("invalid", res.status, cand?.finishReason ?? data.promptFeedback?.blockReason ?? "NOT_JSON");
       }
     },
   };
