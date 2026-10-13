@@ -65,7 +65,7 @@ test("import: TikTok link → draft → save → appears in Tarifler with credit
   await expect(page.getByRole("link", { name: "Biberli tava menemen" })).toBeVisible();
 
   await page.goto("/ayarlar");
-  await expect(page.getByText("Bu ay 1 tarif içe aktarıldı.")).toBeVisible();
+  await expect(page.getByText("Bu ay 1 tarif içe aktarıldı (1 kural).")).toBeVisible();
 });
 
 test("import: Instagram goes to the paste path, pasted caption gives a draft", async ({ page }) => {
