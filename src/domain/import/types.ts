@@ -61,7 +61,8 @@ export type ImportPath = "llm" | "rules";
 
 /** Response of POST /api/import. */
 export interface ImportResult {
-  source: Omit<ImportSource, "recipe" | "text"> & { hasText: boolean };
+  /** Null when only text was pasted (no link). */
+  source: (Omit<ImportSource, "recipe" | "text"> & { hasText: boolean }) | null;
   draft: ImportedRecipe | null;
   path: ImportPath | null;
   /** Calm Turkish note for the UI ("Instagram açıklamayı paylaşmıyor…"). */
