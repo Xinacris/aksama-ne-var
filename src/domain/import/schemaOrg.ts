@@ -136,7 +136,9 @@ export function readSchemaOrgRecipe(html: string): SchemaOrgRecipe | null {
   }
   if (!node) return null;
   const name = cleanTitle(str(node.name) ?? "") || "İçe aktarılan tarif";
-  const lines = Array.isArray(node.recipeIngredient) ? node.recipeIngredient : Array.isArray(node.ingredients) ? node.ingredients : [];
+  // Some sites group ingredients per sub-recipe as nested arrays (Yemek.com: [["1 adet tavuk", …], ["4 adet biber", …]]).
+  const raw = Array.isArray(node.recipeIngredient) ? node.recipeIngredient : Array.isArray(node.ingredients) ? node.ingredients : [];
+  const lines = (raw as Json[]).flat(3);
   const ingredients: ImportedIngredient[] = [];
   for (const l of lines) {
     const s = str(l);
