@@ -1,4 +1,4 @@
-import { useId, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type TextareaHTMLAttributes } from "react";
+import { useId, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type ComponentPropsWithRef } from "react";
 import s from "./Field.module.css";
 
 interface FieldShell {
@@ -89,7 +89,7 @@ export function TextArea({
   className,
   id,
   ...ta
-}: Omit<FieldShell, "icon" | "trailing" | "error"> & TextareaHTMLAttributes<HTMLTextAreaElement>) {
+}: Omit<FieldShell, "icon" | "trailing" | "error"> & ComponentPropsWithRef<"textarea">) {
   const auto = useId();
   const fid = id ?? auto;
   return (

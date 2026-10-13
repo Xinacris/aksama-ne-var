@@ -76,6 +76,38 @@ test("screens", async ({ page }, info) => {
     await page.waitForTimeout(700);
     await shot(page, p, "eslesme-eslesti");
   }
+  if (!only || only.includes("ice-aktar") || only.includes("ice-aktar-taslak")) {
+    await page.goto("/tarifler/ice-aktar");
+    await shot(page, p, "ice-aktar");
+    await page.route("**/api/import", (route) =>
+      route.fulfill({
+        json: {
+          source: { platform: "tiktok", url: "https://www.tiktok.com/@mutfakdefteri/video/1", author: "@mutfakdefteri", title: "Pratik menemen tarifi", thumbnailUrl: null, needsPaste: false, hasText: true },
+          draft: {
+            name: "Pratik menemen",
+            servings: 2,
+            role: "ana",
+            totalMinutes: 20,
+            ingredients: [
+              { amount: 4, unit: "adet", item: "Domates", side: "pazar", note: null },
+              { amount: 3, unit: "adet", item: "Sivri biber", side: "pazar", note: null },
+              { amount: 3, unit: "adet", item: "Yumurta", side: "market", note: null },
+            ],
+            steps: [{ text: "Biberleri tereyağında 3 dakika soteleyin.", minutes: 3 }],
+            prep: [],
+          },
+          path: "llm",
+          needsPaste: false,
+          message: null,
+          counted: null,
+        },
+      }),
+    );
+    await page.getByLabel("Link").fill("https://www.tiktok.com/@mutfakdefteri/video/1");
+    await page.getByRole("button", { name: "Taslağı çıkar" }).click();
+    await expect(page.getByRole("heading", { name: "Taslağı kontrol et" })).toBeVisible();
+    await shot(page, p, "ice-aktar-taslak");
+  }
   await page.goto("/ev/k7m2-tq");
   await shot(page, p, "davet");
 });

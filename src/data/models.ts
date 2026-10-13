@@ -354,6 +354,10 @@ export const ACTIVITY_TYPES = [
   "prep.done",
   "recipe.created",
   "recipe.updated",
+  "recipe.imported",
+  "leftover.set",
+  "cooking.started",
+  "cooking.finished",
 ] as const;
 export const activitySchema = z.object({
   ...base,

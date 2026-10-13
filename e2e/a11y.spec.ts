@@ -41,7 +41,7 @@ test.describe("accessibility (axe)", () => {
       await page.goto("/giris");
       await page.getByRole("button", { name: /Örnek evle dene/ }).click();
       await expect(page).toHaveURL(/\/bugun/);
-      for (const url of ["/bugun", "/eslesme", "/liste", "/hafta", "/tarif/izmir-kofte?gun=today", "/tarifler", "/tarifler/yeni", "/ayarlar", "/akis"]) {
+      for (const url of ["/bugun", "/eslesme", "/liste", "/hafta", "/tarif/izmir-kofte?gun=today", "/tarifler", "/tarifler/yeni", "/tarifler/ice-aktar", "/ayarlar", "/akis"]) {
         await page.goto(url);
         await audit(page, `${url} ${scheme}`);
       }

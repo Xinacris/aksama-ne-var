@@ -9,10 +9,16 @@
 }
 .head {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   gap: 12px;
   padding: 0 4px;
+}
+.headActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .titles {
   display: flex;
