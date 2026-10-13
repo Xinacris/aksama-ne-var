@@ -61,4 +61,9 @@ Spec: PROMPT-v2.1.md. Continue from the first unchecked P-item.
   - `src/server/llm/gemini.ts` (REST `generateContent`, `responseSchema` from the shared JSON Schema). `tests/unit/import/providers.test.ts`: selection ×4, Gemini request shape + model override, shared prompt/validator, fall-through on 429 / RESOURCE_EXHAUSTED / invalid JSON (one retry) / timeout / 503, overall deadline, no caption in logs, privacy body check. 404 tests green.
 - [x] P3. Ayarlar usage line with provider split; docs/IMPORT.md and .env.example updated.
   - "Bu ay N tarif içe aktarıldı (x Gemini, y Claude, z kural)." (`src/domain/import/usage.ts`, component test). IMPORT.md: provider order, fall-through, env vars, AI Studio key, free-tier data note, adding a provider. `.env.example` (un-ignored), README env table, DEMO note.
-- [ ] P4. Final: all scripts and e2e green, push, check Vercel status.
+- [x] P4. Final: all scripts and e2e green, push, check Vercel status.
+  - Green before the final push: lint 0, typecheck 0, 404 unit/component tests (36 files), 32 e2e passed (4 desktop-only skipped on mobile), build OK. Vercel status `success` at eff73bc.
+  - Production checks (no env vars set): `/api/import` paste → `provider: "rules"`, `llmAvailable: false`; Instagram → paste path. Browser: an old v5 `importLog` row with `path: "llm"` migrates to v6 and Ayarlar reads "Bu ay 2 tarif içe aktarıldı (1 Claude, 1 kural)." after a new paste import.
+
+ROUND 2.1 DONE — live: https://aksama-ne-var.vercel.app
+Add GEMINI_API_KEY in Vercel to make import free; ANTHROPIC_API_KEY is now an optional fallback.
