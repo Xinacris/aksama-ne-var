@@ -45,11 +45,15 @@ test.describe("accessibility (axe)", () => {
         await page.goto(url);
         await audit(page, `${url} ${scheme}`);
       }
-      // Cooking mode: Hazırlık, a step with a running timer, the finish screen
+      // Cooking mode: "Başlamadan önce", the Malzemeler sheet, a step with a running timer, the finish screen
       await page.goto("/pisir/2026-10-12");
-      await expect(page.getByRole("heading", { name: "Hazırlık" })).toBeVisible();
+      await expect(page.getByRole("heading", { name: "Başlamadan önce" })).toBeVisible();
       await audit(page, `pisir-hazirlik ${scheme}`);
-      await page.getByRole("button", { name: "Pişirmeye başla" }).click();
+      await page.getByRole("button", { name: "Yine de başla" }).click();
+      await page.getByRole("button", { name: "Malzemeler" }).click();
+      await expect(page.getByRole("dialog", { name: "Malzemeler" })).toBeVisible();
+      await audit(page, `pisir-malzemeler ${scheme}`);
+      await page.keyboard.press("Escape");
       await page.getByRole("tab", { name: /İzmir köfte/ }).click();
       await page.getByRole("button", { name: /^Zamanlayıcı başlat/ }).click();
       await expect(page.getByRole("region", { name: "Zamanlayıcılar" })).toBeVisible();
@@ -57,7 +61,7 @@ test.describe("accessibility (axe)", () => {
       await page.goto("/bugun");
       await audit(page, `bugun-pisiyor ${scheme}`);
       await page.goto("/pisir/menemen");
-      await page.getByRole("button", { name: "Pişirmeye başla" }).click();
+      await page.getByRole("button", { name: "Yine de başla" }).click();
       while (await page.getByRole("button", { name: "Sonraki" }).isVisible()) await page.getByRole("button", { name: "Sonraki" }).click();
       await page.getByRole("button", { name: "Bitti" }).click();
       await expect(page.getByRole("heading", { name: "Afiyet olsun" })).toBeVisible();

@@ -187,8 +187,11 @@ export interface AppState extends AppData {
   updateRecipe(id: string, input: RecipeInput): Promise<Recipe>;
   deleteRecipe(id: string): Promise<void>;
 
-  /** Open cooking mode: resume the household's session for this menu/recipe or start one. */
-  startCooking(key: string, recipeIds: string[]): Promise<CookingSession | null>;
+  /**
+   * Open cooking mode: resume the household's session for this menu/recipe or start one.
+   * `skipPrep` (nothing missing): a new session — or one still on "Başlamadan önce" — opens on step 1.
+   */
+  startCooking(key: string, recipeIds: string[], opts?: { skipPrep?: boolean }): Promise<CookingSession | null>;
   updateCooking(id: string, patch: Partial<Pick<CookingSession, "phase" | "dishIndex" | "positions" | "checked" | "timers">>): Promise<void>;
   /** "Afiyet olsun": session done; a menu's evening becomes cooked (cook log, pantry). */
   finishCooking(id: string): Promise<void>;
@@ -799,7 +802,7 @@ export const useApp = create<AppState>()((set, get) => {
     },
 
     // ───────── cooking ─────────
-    async startCooking(key, recipeIds) {
+    async startCooking(key, recipeIds, opts = {}) {
       const { me, household } = requireCtx();
       return run(async () => {
         const repos = ctx().repos;
@@ -807,8 +810,10 @@ export const useApp = create<AppState>()((set, get) => {
         const open = sessions.find((c) => c.finishedAt === null);
         if (open) {
           // The menu may have changed since: keep positions, refresh the dish list.
-          if (open.recipeIds.join() !== recipeIds.join()) return repos.cooking.update(open.id, { recipeIds, dishIndex: Math.min(open.dishIndex, Math.max(0, recipeIds.length - 1)) });
-          return open;
+          const patch: Partial<CookingSession> = {};
+          if (open.recipeIds.join() !== recipeIds.join()) Object.assign(patch, { recipeIds, dishIndex: Math.min(open.dishIndex, Math.max(0, recipeIds.length - 1)) });
+          if (opts.skipPrep && open.phase === "prep") patch.phase = "steps";
+          return Object.keys(patch).length ? repos.cooking.update(open.id, patch) : open;
         }
         const recent = sessions.find((c) => c.finishedAt && now().getTime() - Date.parse(c.finishedAt) < 6 * 3600_000);
         if (recent) return recent;
@@ -818,7 +823,7 @@ export const useApp = create<AppState>()((set, get) => {
           key,
           userId: me.id,
           recipeIds,
-          phase: "prep",
+          phase: opts.skipPrep ? "steps" : "prep",
           dishIndex: 0,
           positions: {},
           checked: [],

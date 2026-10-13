@@ -20,7 +20,7 @@ beforeAll(() => {
 async function stepsOfMenu() {
   await freshStore({ demo: true, at: at(18, 0) });
   const view = render(<CookingMode id={MON} extras={cookingExtras} />);
-  await userEvent.click(await screen.findByRole("button", { name: "Pişirmeye başla" }));
+  await userEvent.click(await screen.findByRole("button", { name: "Yine de başla" }));
   return view;
 }
 

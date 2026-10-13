@@ -111,9 +111,14 @@ test("screens", async ({ page }, info) => {
   }
   if (!only || only.some((n) => n.startsWith("pisir"))) {
     await page.goto("/pisir/2026-10-12");
-    await expect(page.getByRole("heading", { name: "Hazırlık" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Başlamadan önce" })).toBeVisible();
     await shot(page, p, "pisir-hazirlik");
-    await page.getByRole("button", { name: "Pişirmeye başla" }).click();
+    await page.getByRole("button", { name: "Yine de başla" }).click();
+    await page.getByRole("button", { name: "Malzemeler" }).click();
+    await expect(page.getByRole("dialog", { name: "Malzemeler" })).toBeVisible();
+    await page.waitForTimeout(200);
+    await shot(page, p, "pisir-malzemeler");
+    await page.keyboard.press("Escape");
     await page.getByRole("button", { name: "Sonraki" }).click();
     await page.getByRole("tab", { name: /İzmir köfte/ }).click();
     await page.getByRole("button", { name: "Sonraki" }).click();

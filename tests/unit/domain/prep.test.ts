@@ -31,9 +31,9 @@ describe("prep scheduling", () => {
 
   it("labels offsets like the design timeline", () => {
     expect(offsetLabel("morning")).toBe("Sabah");
-    expect(offsetLabel("-60min")).toBe("1 sa önce");
-    expect(offsetLabel("-45min")).toBe("45 dk önce");
-    expect(offsetLabel("-90min")).toBe("1 sa 30 dk önce");
+    expect(offsetLabel("-60min")).toBe("Pişirmeden 1 sa önce");
+    expect(offsetLabel("-45min")).toBe("Pişirmeden 45 dk önce");
+    expect(offsetLabel("-90min")).toBe("Pişirmeden 1 sa 30 dk önce");
     expect(offsetLabel("night-before")).toBe("Akşamdan");
   });
 

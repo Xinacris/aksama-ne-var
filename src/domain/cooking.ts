@@ -1,6 +1,6 @@
-import type { CookingSession, CookingTimer, Ingredient, PlanItem, PrepTask, Recipe, Slot } from "@/data/models";
+import type { CookingSession, CookingTimer, Ingredient, PantryItem, PlanItem, PrepTask, Recipe, Slot } from "@/data/models";
 import { findDurations, formatTimerLength, type FoundDuration } from "./durations";
-import { formatIngredientQuantity, recipeLabel } from "./shopping";
+import { formatIngredientQuantity, ingredientStatus, recipeLabel, type ListRow } from "./shopping";
 
 /**
  * Cooking mode, pure parts: what to cook, the merged "Hazırlık" list, step
@@ -74,6 +74,48 @@ function mergeAmounts(parts: Ingredient[]): string {
 export function pendingPrep(tasks: PrepTask[], target: CookTarget, recipeIds: string[], todayIso: string): PrepTask[] {
   const date = target.kind === "menu" ? target.date : todayIso;
   return tasks.filter((t) => t.date === date && recipeIds.includes(t.recipeId) && t.status === "pending").sort((a, b) => a.dueAt.localeCompare(b.dueAt));
+}
+
+export interface MissingIngredient extends PrepListRow {
+  /** Already on the shopping list (not bought yet): "Listeye ekle" would add nothing. */
+  onList: boolean;
+  /** First use in the menu, for "Listeye ekle" (unit, aisle, recipe). */
+  ingredient: Ingredient;
+  recipeId: string;
+}
+
+export interface MissingForCooking {
+  /** Prep-ahead tasks for this evening not marked done. */
+  prep: PrepTask[];
+  /** Ingredients neither bought (ticked in Liste) nor "evde var"; staples count as at hand. */
+  ingredients: MissingIngredient[];
+  count: number;
+}
+
+/**
+ * What is actually missing before cooking ("Başlamadan önce · 3 eksik").
+ * Nothing missing → cooking mode opens on step 1.
+ */
+export function missingForCooking(args: {
+  recipes: Recipe[];
+  rows: ListRow[];
+  pantry: PantryItem[];
+  tasks: PrepTask[];
+  target: CookTarget;
+  today: string;
+}): MissingForCooking {
+  const prep = pendingPrep(args.tasks, args.target, args.recipes.map((r) => r.id), args.today);
+  const firstUse = new Map<string, { ing: Ingredient; recipeId: string }>();
+  for (const r of args.recipes) for (const ing of r.ingredients) if (!firstUse.has(ing.name)) firstUse.set(ing.name, { ing, recipeId: r.id });
+  const ingredients: MissingIngredient[] = [];
+  for (const row of mergedIngredients(args.recipes)) {
+    if (row.staple) continue;
+    const use = firstUse.get(row.name)!;
+    const status = ingredientStatus(use.ing, args.rows, args.pantry);
+    if (status === "evde") continue;
+    ingredients.push({ ...row, onList: status === "listede", ingredient: use.ing, recipeId: use.recipeId });
+  }
+  return { prep, ingredients, count: prep.length + ingredients.length };
 }
 
 // ───────────────────────── steps ─────────────────────────

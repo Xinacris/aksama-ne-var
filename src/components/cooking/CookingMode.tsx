@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { CookingSession, Recipe } from "@/data/models";
-import { dishesToCook, mergedIngredients, moveStep, overallProgress, parseCookTarget, pendingPrep, stepOf, type CookTarget } from "@/domain/cooking";
+import { dishesToCook, mergedIngredients, missingForCooking, moveStep, overallProgress, parseCookTarget, stepOf, type CookTarget } from "@/domain/cooking";
 import { menuFor, menuTitle } from "@/domain/plan";
 import { offsetLabel } from "@/domain/prep";
 import { recipeLabel } from "@/domain/shopping";
-import { recipesMap, useApp } from "@/store/app";
+import { recipesMap, selectList, useApp, type AppState } from "@/store/app";
 import { IconCheck, IconChevronLeft, IconChevronRight, IconClose } from "../icons";
 import { Button, ButtonLink } from "../ui/Button";
+import { Dialog } from "../ui/Dialog";
 import { EmptyState } from "../ui/Misc";
 import s from "./CookingMode.module.css";
 
@@ -40,7 +41,10 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
   useEffect(() => {
     if (!ids || started.current === `${key}|${ids}`) return;
     started.current = `${key}|${ids}`;
-    void startCooking(key, ids.split(",")).then((sess) => sess && setSessionId(sess.id));
+    // Decided once, on opening: nothing missing → straight to step 1, no "Başlamadan önce".
+    const nothingMissing = missingNow(useApp.getState(), dishes, target).count === 0;
+    void startCooking(key, ids.split(","), { skipPrep: nothingMissing }).then((sess) => sess && setSessionId(sess.id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `dishes` is keyed by `ids`
   }, [key, ids, startCooking]);
 
   const session = sessions.find((c) => c.id === sessionId) ?? null;
@@ -98,6 +102,10 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
   );
 }
 
+function missingNow(st: AppState, recipes: Recipe[], target: CookTarget) {
+  return missingForCooking({ recipes, rows: selectList(st), pantry: st.pantry, tasks: st.prepTasks, target, today: st.today });
+}
+
 function TopBar({ exitHref, title, progress }: { exitHref: string; title: string; progress?: string }) {
   return (
     <header className={s.top}>
@@ -111,41 +119,39 @@ function TopBar({ exitHref, title, progress }: { exitHref: string; title: string
   );
 }
 
-/** "Hazırlık": pending prep reminders on top, then every ingredient of the menu, tap to check. */
+/**
+ * "Başlamadan önce": a heads-up, only when something is missing — prep-ahead
+ * tasks not done, then ingredients neither bought nor "evde var". Nothing blocks
+ * cooking: "Yine de başla" always works.
+ */
 function PrepScreen({ session, recipes, target }: { session: CookingSession; recipes: Recipe[]; target: CookTarget }) {
-  const prepTasks = useApp((x) => x.prepTasks);
-  const today = useApp((x) => x.today);
+  const state = useApp();
   const updateCooking = useApp((x) => x.updateCooking);
   const completeTask = useApp((x) => x.completeTask);
-  const rows = useMemo(() => mergedIngredients(recipes), [recipes]);
-  const pending = pendingPrep(prepTasks, target, recipes.map((r) => r.id), today);
-  const checked = new Set(session.checked);
+  const markHave = useApp((x) => x.markHave);
+  const addManualItem = useApp((x) => x.addManualItem);
+  const missing = missingNow(state, recipes, target);
   const headRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => headRef.current?.focus(), []);
-
-  function toggle(key: string) {
-    const next = checked.has(key) ? session.checked.filter((k) => k !== key) : [...session.checked, key];
-    void updateCooking(session.id, { checked: next });
-  }
 
   return (
     <div className={s.body}>
       <div className={s.prepHead}>
         <h1 className={s.screenTitle} ref={headRef} tabIndex={-1}>
-          Hazırlık
+          Başlamadan önce
         </h1>
-        <span className={s.muted}>
-          {checked.size}/{rows.length} hazır
+        <span className={s.muted} role="status">
+          {missing.count ? `${missing.count} eksik` : "Hepsi tamam"}
         </span>
       </div>
 
-      {pending.length > 0 && (
+      {missing.prep.length > 0 && (
         <section className={s.reminders} aria-labelledby="pisir-hatirlat">
           <h2 id="pisir-hatirlat" className={s.smallTitle}>
             Önceden yapılacaklar
           </h2>
           <ul className={s.reminderList}>
-            {pending.map((t) => (
+            {missing.prep.map((t) => (
               <li key={t.id} className={s.reminder}>
                 <span>
                   <strong>{t.label}</strong>
@@ -160,34 +166,78 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
         </section>
       )}
 
-      <ul className={s.checklist} aria-label="Malzemeler">
-        {rows.map((r) => {
-          const on = checked.has(r.key);
-          return (
-            <li key={r.key}>
-              <button type="button" className={s.checkRow} aria-pressed={on} onClick={() => toggle(r.key)}>
-                <span className={s.box} aria-hidden="true">
-                  {on && <IconCheck size={18} strokeWidth={3} />}
-                </span>
+      {missing.ingredients.length > 0 && (
+        <section aria-labelledby="pisir-eksik">
+          <h2 id="pisir-eksik" className={s.smallTitle}>
+            Eksik malzemeler
+          </h2>
+          <ul className={s.missingList} aria-label="Eksik malzemeler">
+            {missing.ingredients.map((r) => (
+              <li key={r.key} className={s.missingRow}>
                 <span className={s.checkText}>
                   <span className={s.checkName}>
                     {r.amount && <strong>{r.amount} </strong>}
                     {r.name}
                   </span>
-                  {recipes.length > 1 && <span className={s.muted}>{r.forDishes.join(", ")}</span>}
+                  <span className={s.muted}>{[recipes.length > 1 ? r.forDishes.join(", ") : null, r.onList ? "listede" : null].filter(Boolean).join(" · ")}</span>
                 </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+                <span className={s.missingActions}>
+                  <Button variant="soft" size="sm" aria-label={`${r.name} evde var`} onClick={() => markHave(r.name)}>
+                    Evde var
+                  </Button>
+                  {!r.onList && (
+                    <Button
+                      variant="secondary"
+                      size="sm"
+                      aria-label={`${r.name} listeye ekle`}
+                      onClick={() =>
+                        addManualItem({ name: r.name, quantity: r.ingredient.quantity, unit: r.ingredient.unit, side: r.ingredient.side, aisle: r.ingredient.aisle, forRecipeId: r.recipeId })
+                      }
+                    >
+                      Listeye ekle
+                    </Button>
+                  )}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {missing.count === 0 && <p className={s.muted}>Eksik kalmadı. Afiyet şimdiden.</p>}
 
       <div className={s.nav}>
         <Button size="xl" block onClick={() => updateCooking(session.id, { phase: "steps" })}>
-          Pişirmeye başla
+          Yine de başla
         </Button>
       </div>
     </div>
+  );
+}
+
+/** "Malzemeler" bottom sheet in the step view: the full merged list, amounts and dishes. */
+function IngredientsSheet({ recipes }: { recipes: Recipe[] }) {
+  const [open, setOpen] = useState(false);
+  const rows = useMemo(() => mergedIngredients(recipes), [recipes]);
+  return (
+    <>
+      <button type="button" className={s.ingBtn} onClick={() => setOpen(true)} aria-haspopup="dialog">
+        Malzemeler
+      </button>
+      <Dialog open={open} onClose={() => setOpen(false)} readOnly eyebrow={recipes.length > 1 ? "Menünün tamamı" : recipeLabel(recipes[0])} title="Malzemeler">
+        <ul className={s.sheetList}>
+          {rows.map((r) => (
+            <li key={r.key} className={s.sheetRow}>
+              <span className={s.checkName}>
+                {r.amount && <strong>{r.amount} </strong>}
+                {r.name}
+              </span>
+              {recipes.length > 1 && <span className={s.muted}>{r.forDishes.join(", ")}</span>}
+            </li>
+          ))}
+        </ul>
+      </Dialog>
+    </>
   );
 }
 
@@ -225,6 +275,7 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
     function onKey(e: KeyboardEvent) {
       const t = e.target as HTMLElement | null;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable || t.getAttribute("role") === "tab")) return;
+      if (document.querySelector("dialog[open]")) return; // the Malzemeler sheet is on top
       if (e.key === "ArrowRight") {
         e.preventDefault();
         go(1);
@@ -276,6 +327,7 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
         aria-labelledby={recipes.length > 1 ? `tab-${recipe.id}` : undefined}
         className={s.stepArea}
         onPointerDown={(e) => {
+          if ((e.target as HTMLElement).closest("button")) return;
           touch.current = { x: e.clientX, y: e.clientY };
         }}
         onPointerUp={(e) => {
@@ -287,6 +339,9 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
           if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(dx < 0 ? 1 : -1);
         }}
       >
+        <div className={s.stepTools}>
+          <IngredientsSheet recipes={recipes} />
+        </div>
         <div key={`${recipe.id}-${step}`} className={[s.step, dir === "next" && s.fromRight, dir === "prev" && s.fromLeft].filter(Boolean).join(" ")}>
           <h1 className={s.stepEyebrow} ref={headRef} tabIndex={-1}>
             {recipes.length > 1 ? `${recipeLabel(recipe)} · ` : ""}Adım {step + 1} / {recipe.steps.length}
