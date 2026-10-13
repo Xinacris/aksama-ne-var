@@ -50,3 +50,14 @@ Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
 ROUND 2 DONE — live: https://aksama-ne-var.vercel.app
 ANTHROPIC_API_KEY — required only for smart import (Claude Haiku turns captions into clean drafts); without it the rule-based Turkish parser pre-fills the draft. The app works fully without it.
 YOUTUBE_API_KEY — optional: full YouTube descriptions; without it only the video title arrives and the paste box opens. The app works fully without it.
+
+## Round 2.1
+
+Spec: PROMPT-v2.1.md. Continue from the first unchecked P-item.
+
+- [x] P1. Provider interface; move the Claude implementation behind it; shared prompt + validator; existing tests green.
+  - `src/server/llm/{types,prompt,validate,claude,index}.ts`; `src/server/import/llm.ts` removed. Response gains `provider`; `importLog.path` → `provider` (migration v6 + test, schema.sql + SUPABASE_MIGRATION.md).
+- [x] P2. Gemini implementation with structured output; selection order and fall-through; unit + privacy tests.
+  - `src/server/llm/gemini.ts` (REST `generateContent`, `responseSchema` from the shared JSON Schema). `tests/unit/import/providers.test.ts`: selection ×4, Gemini request shape + model override, shared prompt/validator, fall-through on 429 / RESOURCE_EXHAUSTED / invalid JSON (one retry) / timeout / 503, overall deadline, no caption in logs, privacy body check. 404 tests green.
+- [ ] P3. Ayarlar usage line with provider split; docs/IMPORT.md and .env.example updated.
+- [ ] P4. Final: all scripts and e2e green, push, check Vercel status.

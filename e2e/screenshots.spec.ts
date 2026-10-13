@@ -97,6 +97,7 @@ test("screens", async ({ page }, info) => {
             prep: [],
           },
           path: "llm",
+          provider: "gemini",
           needsPaste: false,
           message: null,
           counted: null,

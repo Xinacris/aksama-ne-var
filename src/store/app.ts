@@ -183,7 +183,7 @@ export interface AppState extends AppData {
 
   createRecipe(input: RecipeInput, opts?: { imported?: boolean }): Promise<Recipe>;
   /** Count a produced import draft (usage shown in Ayarlar). Stores no link or caption. */
-  logImport(entry: { platform: ImportLog["platform"]; path: ImportLog["path"] }): Promise<void>;
+  logImport(entry: { platform: ImportLog["platform"]; provider: ImportLog["provider"] }): Promise<void>;
   updateRecipe(id: string, input: RecipeInput): Promise<Recipe>;
   deleteRecipe(id: string): Promise<void>;
 
@@ -781,7 +781,7 @@ export const useApp = create<AppState>()((set, get) => {
     },
     async logImport(entry) {
       const { me, household } = requireCtx();
-      await run(() => ctx().repos.imports.add({ householdId: household.id, platform: entry.platform, path: entry.path, createdBy: me.id }));
+      await run(() => ctx().repos.imports.add({ householdId: household.id, platform: entry.platform, provider: entry.provider, createdBy: me.id }));
     },
     async updateRecipe(id, input) {
       return run(async () => {

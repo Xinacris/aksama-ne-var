@@ -63,7 +63,7 @@ describe("migrations", () => {
         { id: "d2", leftovers: false },
       ]),
     });
-    expect(runMigrations(store).applied).toEqual([4, 5]);
+    expect(runMigrations(store).applied).toEqual([4, 5, 6]);
     expect(JSON.parse(store.getItem("anv:t:recipes")!)).toEqual([
       { id: "a", leftoverPolicy: "lunch", leftoverDays: 2 },
       { id: "b", leftoverPolicy: "none", leftoverDays: 2 },
@@ -97,9 +97,23 @@ describe("migrations", () => {
 
   it("v5: adds cooking sessions without touching existing tables", () => {
     const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 4 }), "anv:t:planDays": "[]" });
-    expect(runMigrations(store).applied).toEqual([5]);
+    expect(runMigrations(store).applied).toEqual([5, 6]);
     expect(store.getItem("anv:t:planDays")).toBe("[]");
     expect(store.getItem("anv:t:cookingSessions")).toBeNull();
+  });
+
+  it("v6: import log path → provider (llm was always Claude)", () => {
+    const old = [
+      { id: "a", householdId: "h", platform: "tiktok", path: "llm", createdBy: "u", createdAt: "2026-10-01T10:00:00.000Z", updatedAt: "2026-10-01T10:00:00.000Z" },
+      { id: "b", householdId: "h", platform: null, path: "rules", createdBy: "u", createdAt: "2026-10-02T10:00:00.000Z", updatedAt: "2026-10-02T10:00:00.000Z" },
+    ];
+    const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 5 }), "anv:t:importLog": JSON.stringify(old) });
+    expect(runMigrations(store).applied).toEqual([6]);
+    const rows = JSON.parse(store.getItem("anv:t:importLog")!);
+    expect(rows).toEqual([
+      { id: "a", householdId: "h", platform: "tiktok", provider: "claude", createdBy: "u", createdAt: "2026-10-01T10:00:00.000Z", updatedAt: "2026-10-01T10:00:00.000Z" },
+      { id: "b", householdId: "h", platform: null, provider: "rules", createdBy: "u", createdAt: "2026-10-02T10:00:00.000Z", updatedAt: "2026-10-02T10:00:00.000Z" },
+    ]);
   });
 
   it("mapRows leaves missing and unreadable tables alone", () => {

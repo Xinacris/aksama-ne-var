@@ -21,7 +21,8 @@ create type leftover_policy as enum ('none', 'lunch', 'store');          -- "Art
 create type leftover_choice as enum ('none', 'lunch', 'fridge', 'discard', 'eaten');
 create type lunch_mode as enum ('yes', 'no', 'some');                    -- "Öğlenleri evde yiyen var mı?"
 create type cooking_phase as enum ('prep', 'steps', 'done');
-create type import_path as enum ('llm', 'rules');
+-- Which provider made an import draft (Round 2.1; was import_path 'llm'|'rules').
+create type import_provider as enum ('gemini', 'claude', 'rules');
 
 -- ───────────────────────── people ─────────────────────────
 -- Auth lives in auth.users; profiles hold the app fields (name, avatar initial, onboarded).
@@ -285,7 +286,7 @@ create table public.import_log (
   id uuid primary key default gen_random_uuid(),
   household_id uuid not null references public.households (id) on delete cascade,
   platform source_platform,
-  path import_path not null,
+  provider import_provider not null,
   created_by uuid not null references public.profiles (id),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()

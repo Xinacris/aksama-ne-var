@@ -131,11 +131,11 @@ describe("LocalStorageAdapter", () => {
 
   it("keeps an import log per household without links or captions", async () => {
     const { repos } = setup();
-    await repos.imports.add({ householdId: "h1", platform: "tiktok", path: "llm", createdBy: "u1" });
-    await repos.imports.add({ householdId: "h2", platform: null, path: "rules", createdBy: "u2" });
+    await repos.imports.add({ householdId: "h1", platform: "tiktok", provider: "gemini", createdBy: "u1" });
+    await repos.imports.add({ householdId: "h2", platform: null, provider: "rules", createdBy: "u2" });
     const rows = await repos.imports.list("h1");
     expect(rows).toHaveLength(1);
-    expect(Object.keys(rows[0]).sort()).toEqual(["createdAt", "createdBy", "householdId", "id", "path", "platform", "updatedAt"]);
+    expect(Object.keys(rows[0]).sort()).toEqual(["createdAt", "createdBy", "householdId", "id", "platform", "provider", "updatedAt"]);
   });
 
   it("publishes one coalesced change message per tick", async () => {

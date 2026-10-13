@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 5;
+export const CURRENT_SCHEMA_VERSION = 6;
 
 export interface Migration {
   version: number;
@@ -53,7 +53,8 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
  * version 2 adds `dinnerTime` to households (default 19:30, as in the design);
  * version 3 moves link-shaped recipe `source` text into `sourceUrl` + `sourcePlatform`;
  * version 4 makes leftovers a choice (recipe policy, household lunch setting, per-evening choice);
- * version 5 adds the cooking sessions table (new table: nothing to convert).
+ * version 5 adds the cooking sessions table (new table: nothing to convert);
+ * version 6 records which provider made an import draft (`path` → `provider`).
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -107,6 +108,18 @@ export const MIGRATIONS: Migration[] = [
     version: 5,
     description: "Cooking sessions (new table, starts empty)",
     up: () => {},
+  },
+  {
+    version: 6,
+    description: "Import log: path (llm/rules) → provider (gemini/claude/rules)",
+    up: (store) => {
+      // Before Round 2.1 Claude was the only LLM, so every "llm" row was Claude.
+      mapRows(store, "importLog", (r) => {
+        if ("provider" in r) return r;
+        const { path, ...rest } = r;
+        return { ...rest, provider: path === "llm" ? "claude" : "rules" };
+      });
+    },
   },
 ];
 

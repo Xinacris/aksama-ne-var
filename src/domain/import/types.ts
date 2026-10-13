@@ -58,13 +58,18 @@ export const importedRecipeSchema = z.object({
 export type ImportedRecipe = z.infer<typeof importedRecipeSchema>;
 
 export type ImportPath = "llm" | "rules";
+/** Which provider produced the draft (see `src/server/llm`). */
+export const IMPORT_PROVIDERS = ["gemini", "claude", "rules"] as const;
+export type ImportProvider = (typeof IMPORT_PROVIDERS)[number];
 
 /** Response of POST /api/import. */
 export interface ImportResult {
   /** Null when only text was pasted (no link). */
   source: (Omit<ImportSource, "recipe" | "text"> & { hasText: boolean }) | null;
   draft: ImportedRecipe | null;
+  /** "llm" when an LLM provider answered, else "rules" (the UI's wording depends on it). */
   path: ImportPath | null;
+  provider: ImportProvider | null;
   /** Calm Turkish note for the UI ("Instagram açıklamayı paylaşmıyor…"). */
   message: string | null;
   /** Fetched text had no ingredient-like lines: open the paste box. */

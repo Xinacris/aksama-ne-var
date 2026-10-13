@@ -90,7 +90,7 @@ Run the existing unit tests against both adapters by parameterising `tests/unit/
 
 Everything below is already in `supabase/schema.sql` (the draft was never deployed, so the
 `create` statements were updated in place). Local data reaches the same shape through the
-localStorage migrations v3–v5 in `src/data/migrations.ts`.
+localStorage migrations v3–v6 in `src/data/migrations.ts`.
 
 | Change | localStorage (migration) | Postgres |
 |---|---|---|
@@ -101,6 +101,7 @@ localStorage migrations v3–v5 in `src/data/migrations.ts`.
 | Per-evening choice | v4: `planDays.leftovers` → `leftoverChoice` (true → `lunch`, false → `none`) + `leftoverChoiceBy` | `plan_days.leftover_choice` (enum, null = defaults), `leftover_choice_by` |
 | Dolapta dish on an evening | v4: `planItems.source` gains `leftover`, optional `leftoverFrom` | `plan_source` enum gains `leftover`; `plan_items.leftover_from` + check |
 | Cooking mode | v5: `cookingSessions` table (new, empty) | `cooking_sessions` + member RLS + realtime |
+| Import provider (Round 2.1) | v6: `importLog.path` → `provider`; `llm` → `claude` (the only LLM before 2.1), `rules` → `rules` | `import_log.provider` (enum `import_provider`: `gemini`/`claude`/`rules`) replaces `path`/`import_path` |
 
 Adapter notes:
 
@@ -116,6 +117,7 @@ Adapter notes:
   `leftovers` table to keep in sync — only the per-evening choice is a column.
 - The import route's per-household daily LLM limit lives in server memory today
   (`src/server/import/rateLimit.ts`). With Supabase, count today's `import_log` rows with
-  `path = 'llm'` in the route (service role) and drop the in-memory limiter.
-- `ANTHROPIC_API_KEY` / `YOUTUBE_API_KEY` stay server-side env vars on Vercel; nothing about
+  `provider <> 'rules'` in the route (service role) and drop the in-memory limiter. (Rows are
+  written client-side after a successful draft; a server-side insert is the stricter option.)
+- `GEMINI_API_KEY` / `GEMINI_MODEL` / `ANTHROPIC_API_KEY` / `YOUTUBE_API_KEY` stay server-side env vars on Vercel; nothing about
   import changes with the database move (see `docs/IMPORT.md`).
