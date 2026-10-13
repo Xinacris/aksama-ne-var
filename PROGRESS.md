@@ -41,5 +41,5 @@ Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
 - [x] R5. Leftover model: recipe defaults (data for the 100 recipes), household lunch setting, migration, rule tests.
 - [x] R6. Leftover UI: Bugün card overrides, "dolapta" items, drag into Hafta, shopping list skip; e2e.
 - [x] R7. Cooking mode core: route, prep checklist, steps, dish tabs, resume; tests.
-- [ ] R8. Cooking mode extras: multiple timers with persistence, wake lock, sync/activity, finish screen → leftover question; e2e.
+- [x] R8. Cooking mode extras: multiple timers with persistence, wake lock, sync/activity, finish screen → leftover question; e2e.
 - [ ] R9. Final: Supabase schema + migration doc updated, docs/IMPORT.md, BACKLOG.md, DEMO.md, screenshots checked, all scripts green, push, check Vercel status.

@@ -360,3 +360,59 @@ a.tomorrow:hover {
     padding: 18px;
   }
 }
+.cooking {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--olive-soft);
+}
+.cookingTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.cookingText {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.cookingDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--olive);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cookingDot {
+    animation: breathe 1.6s ease-in-out infinite;
+  }
+}
+@keyframes breathe {
+  50% {
+    opacity: 0.35;
+  }
+}
+.cookingLink {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14.5px;
+}
+.cookingTrack {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.cookingFill {
+  display: block;
+  height: 100%;
+  background: var(--olive);
+  border-radius: 999px;
+}

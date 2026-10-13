@@ -118,6 +118,31 @@ test("screens", async ({ page }, info) => {
     await page.getByRole("button", { name: "Sonraki" }).click();
     await page.waitForTimeout(300);
     await shot(page, p, "pisir-adim");
+    if (!only || only.includes("pisir-zamanlayici")) {
+      await page.getByRole("button", { name: "Önceki" }).click();
+      await page.getByRole("button", { name: /^Zamanlayıcı başlat/ }).click();
+      await page.getByRole("tab", { name: /Mercimek/ }).click();
+      await page.getByRole("button", { name: "Sonraki" }).click();
+      await page.getByRole("button", { name: "Sonraki" }).click();
+      await page.getByRole("button", { name: /^Zamanlayıcı başlat/ }).click();
+      await page.waitForTimeout(300);
+      await shot(page, p, "pisir-zamanlayici");
+    }
+    if (!only || only.includes("bugun-pisiyor")) {
+      await page.goto("/bugun");
+      await shot(page, p, "bugun-pisiyor");
+    }
+    if (!only || only.includes("pisir-bitti")) {
+      await page.goto("/pisir/2026-10-12");
+      for (const tab of [/Mercimek/, /İzmir köfte/, /Pirinç pilavı/, /Çoban salata/]) {
+        await page.getByRole("tab", { name: tab }).click();
+        while (await page.getByRole("button", { name: "Sonraki" }).isVisible()) await page.getByRole("button", { name: "Sonraki" }).click();
+      }
+      await page.getByRole("button", { name: "Bitti" }).click();
+      await expect(page.getByRole("heading", { name: "Afiyet olsun" })).toBeVisible();
+      await page.waitForTimeout(300);
+      await shot(page, p, "pisir-bitti");
+    }
   }
   await page.goto("/ev/k7m2-tq");
   await shot(page, p, "davet");
