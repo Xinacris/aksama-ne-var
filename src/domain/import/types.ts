@@ -15,6 +15,8 @@ export interface ImportSource {
   thumbnailUrl: string | null;
   /** The platform gives no caption (Instagram): the user pastes it. */
   needsPaste: boolean;
+  /** Web pages: og:site_name or the host ("Yemek.com"), for the Kaynak field. */
+  siteName?: string | null;
   recipe?: ImportedRecipe | null;
 }
 
@@ -51,9 +53,17 @@ export const importedRecipeSchema = z.object({
   servings: z.number().int().min(1).max(20).nullable(),
   role: z.enum(IMPORT_ROLES).nullable(),
   totalMinutes: z.number().int().min(1).max(24 * 60).nullable(),
+  /** Hands-on preparation (chopping, mixing). */
+  prepMinutes: z.number().int().min(0).max(24 * 60).nullable().optional(),
+  /** On heat or in the oven only. */
+  cookMinutes: z.number().int().min(0).max(24 * 60).nullable().optional(),
+  /** Marinating, resting, soaking, chilling, rising — not cooking. */
+  waitMinutes: z.number().int().min(0).max(24 * 60).nullable().optional(),
   ingredients: z.array(importedIngredientSchema).max(60),
   steps: z.array(importedStepSchema).max(40),
   prep: z.array(importedPrepSchema).max(10),
+  /** Vocabulary tags only (`src/domain/import/tags.ts`). */
+  tags: z.array(z.string()).max(12).optional(),
 });
 export type ImportedRecipe = z.infer<typeof importedRecipeSchema>;
 

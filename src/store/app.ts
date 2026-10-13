@@ -103,6 +103,8 @@ export interface RecipeInput {
   course: Recipe["course"];
   prepMinutes: number;
   cookMinutes: number;
+  /** Undefined clears it on update. */
+  waitMinutes?: number;
   servings: number;
   tags: string[];
   ingredients: Recipe["ingredients"];
@@ -115,6 +117,7 @@ export interface RecipeInput {
   sourceUrl?: string;
   sourceAuthor?: string;
   sourcePlatform?: Recipe["sourcePlatform"];
+  sourceThumbnailUrl?: string;
 }
 
 export type InviteInfo =

@@ -12,7 +12,7 @@ import { TextArea, TextField } from "@/components/ui/Field";
 import { extractUrl } from "@/domain/import/detect";
 import type { ImportProvider, ImportResult } from "@/domain/import/types";
 import type { SourcePlatform } from "@/data/models";
-import { toRecipeDraft } from "@/services/importDraft";
+import { keepSource, toRecipeDraft } from "@/services/importDraft";
 import type { RecipeDraft } from "@/services/recipeForm";
 import { useApp } from "@/store/app";
 import s from "./page.module.css";
@@ -39,6 +39,8 @@ function Ice() {
   const pasteRef = useRef<HTMLTextAreaElement>(null);
   const auto = useRef(false);
   const [focusPaste, setFocusPaste] = useState(0);
+  // Tags of the draft being replaced ("Açıklamayı yeniden yapıştır"): kept, new ones merged in.
+  const lastTags = useRef("");
 
   // Move focus into the paste box once it is rendered (after a "needs paste" answer).
   useEffect(() => {
@@ -64,14 +66,16 @@ function Ice() {
         setPasteOpen(true);
         return;
       }
-      setResult(body);
+      const source = keepSource(result?.source ?? null, body.source);
+      setResult({ ...body, source });
       if (body.counted) await logImport({ platform: body.counted.platform, provider: body.counted.provider });
       if (body.needsPaste) {
         setPasteOpen(true);
         setDraft(null);
         setFocusPaste((n) => n + 1);
       } else if (body.draft) {
-        setDraft(toRecipeDraft(body.draft, body.source));
+        setDraft(toRecipeDraft(body.draft, source, lastTags.current));
+        lastTags.current = "";
         setAttempt((n) => n + 1);
         window.scrollTo({ top: 0 });
       }
@@ -117,6 +121,7 @@ function Ice() {
               type="button"
               className={s.toggle}
               onClick={() => {
+                lastTags.current = draft.tags;
                 setDraft(null);
                 setPasteOpen(true);
                 setFocusPaste((n) => n + 1);

@@ -1,6 +1,7 @@
 import { UNITS } from "@/data/models";
 import { findDurations } from "@/domain/durations";
 import { importedRecipeSchema, type ImportedRecipe } from "@/domain/import/types";
+import { filterTags } from "@/domain/import/tags";
 import { normalizeUnit } from "@/domain/import/units";
 
 /** Light cleanup before validation: spoken units, zero amounts, stray fields. */
@@ -17,7 +18,21 @@ function tidy(input: unknown): unknown {
   const steps = Array.isArray(r.steps)
     ? (r.steps as Record<string, unknown>[]).map((s) => ({ text: s.text, minutes: typeof s.minutes === "number" && s.minutes > 0 ? s.minutes : null }))
     : r.steps;
-  return { ...r, ingredients, steps, prep: r.prep ?? [] };
+  // Tag fields: only vocabulary values survive (anything else the model invents is dropped).
+  const { cookingMethods, mainIngredients, prepTags, ...rest } = r;
+  const tags = filterTags([cookingMethods, mainIngredients, prepTags].flatMap((x) => (Array.isArray(x) ? x : [])));
+  const minutes = (v: unknown) => (typeof v === "number" && v > 0 ? Math.min(Math.round(v), 24 * 60) : null);
+  return {
+    ...rest,
+    totalMinutes: minutes(r.totalMinutes),
+    prepMinutes: minutes(r.prepMinutes),
+    cookMinutes: minutes(r.cookMinutes),
+    waitMinutes: minutes(r.waitMinutes),
+    ingredients,
+    steps,
+    prep: r.prep ?? [],
+    tags,
+  };
 }
 
 /** Steps whose text lacks the duration the model found get "(20 dk)", so cooking-mode timers see it. */

@@ -54,10 +54,15 @@ test("import: TikTok link → draft → save → appears in Tarifler with credit
   await expect(page.getByRole("heading", { level: 1, name: "Taslağı kontrol et" })).toBeVisible();
   await expect(page.getByRole("region", { name: "Kaynak" })).toContainText("@mutfakdefteri");
   await expect(page.getByLabel("Tarifin adı")).toHaveValue("Biberli tava menemen");
+  // Pre-filled: Kaynak, at least one tag from the vocabulary, leftovers default to Artmaz
+  await expect(page.getByRole("textbox", { name: "Kaynak" })).toHaveValue("TikTok · @mutfakdefteri");
+  await expect(page.getByLabel("Etiketler")).toHaveValue(/Tavada/);
+  await expect(page.getByRole("radiogroup", { name: "Artarsa ne olur?" }).getByRole("radio", { name: "Artmaz / hepsi biter" })).toBeChecked();
+  await expect(page.getByLabel("Kaç gün içinde")).toHaveCount(0);
   await page.getByRole("button", { name: "Tarifi kaydet" }).click();
 
   await expect(page.getByRole("heading", { level: 1, name: "Biberli tava menemen" })).toBeVisible();
-  await expect(page.getByText("Kaynak: @mutfakdefteri · TikTok")).toBeVisible();
+  await expect(page.getByText("Kaynak: TikTok · @mutfakdefteri")).toBeVisible();
   await expect(page.getByRole("link", { name: "Videoyu aç" })).toHaveAttribute("href", DRAFT.source.url);
 
   await page.goto("/tarifler");
@@ -98,5 +103,8 @@ test("import: Instagram goes to the paste path, pasted caption gives a draft", a
   await paste.fill("Menemen\n4 adet domates\n3 adet sivri biber\n3 adet yumurta");
   await page.getByRole("button", { name: "Taslağı çıkar" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Taslağı kontrol et" })).toBeVisible();
+  // paste-fallback path: Kaynak is still filled (no author on Instagram → just the platform)
+  await expect(page.getByRole("textbox", { name: "Kaynak" })).toHaveValue("Instagram");
+  await expect(page.getByLabel("Etiketler")).not.toHaveValue("");
   expect(calls).toBe(2);
 });

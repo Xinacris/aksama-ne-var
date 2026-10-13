@@ -98,6 +98,7 @@ create table public.recipes (
   course course not null,
   prep_minutes int not null check (prep_minutes >= 0),
   cook_minutes int not null check (cook_minutes >= 0),
+  wait_minutes int check (wait_minutes between 0 and 1440),     -- marinating/resting/soaking, not cooking
   time_note text,
   servings int not null check (servings >= 1),
   tags text[] not null default '{}',
@@ -111,6 +112,7 @@ create table public.recipes (
   source_url text check (source_url ~ '^https?://'),
   source_author text,                          -- "@mutfakdefteri", credited on the recipe page
   source_platform source_platform,
+  source_thumbnail_url text,                   -- the platform's thumbnail URL, never re-hosted
   stub boolean not null default false,
   created_by uuid references public.profiles (id),
   created_at timestamptz not null default now(),
