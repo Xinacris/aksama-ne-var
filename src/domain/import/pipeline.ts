@@ -33,7 +33,9 @@ function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" |
     case "no-recipe-data":
       return "Bu sayfada tarif bilgisi bulamadık. Malzemeleri ve yapılışı kopyalayıp yapıştırabilirsin.";
     case "unavailable":
-      return `${name} şu an yanıt vermedi. Açıklamayı yapıştırırsan oradan devam ederiz.`;
+      return source.platform === "web"
+        ? "Bu sayfaya şu an ulaşamadık. Tarifi kopyalayıp yapıştırırsan oradan devam ederiz."
+        : `${name} şu an yanıt vermedi. Açıklamayı yapıştırırsan oradan devam ederiz.`;
     default:
       return "Açıklamada malzeme listesi bulamadık. Tarif yorumlarda ya da videonun içindeyse buraya yapıştırabilir veya yazabilirsin.";
   }
