@@ -76,3 +76,25 @@ Add GEMINI_API_KEY in Vercel to make import free; ANTHROPIC_API_KEY is now an op
 - [x] Import draft quality: Kaynak always filled ("YouTube · Yemek.com") on every path incl. paste fallback, thumbnail stored; vocabulary tags (LLM fields + rule keywords, unknown values dropped); Pişirme = heat only, new Bekleme (`waitMinutes`, migration v8), gentle "Süre uzun görünüyor, kontrol et" hint; fixtures 13–15.
   - Green before push: lint 0, typecheck 0, 429 unit/component tests, 44 e2e passed (4 desktop-only skipped on mobile), build OK.
 - [x] Import quality (Yemek.com video with junk steps): cause was Gemini timing out (default thinking, 7 s budget) → rules parser took the description's link list as steps. Now: provider failures logged/returned with status codes; Gemini thinking minimal, 503 retried, 25 s deadline; "yazılı tarif" links followed (schema.org → provider `web`, `writtenRecipeUrl`, migration v9); nested JSON-LD ingredient lists read; boilerplate stripped before structuring and never a step; no-steps hint. 452 unit/component tests, 48 e2e, build OK.
+
+## In progress
+
+**Task:** import quality bug — the Yemek.com YouTube video (https://www.youtube.com/watch?v=p_mK7_Zi_rk, Peri peri soslu tavuk) produced a draft whose steps were channel boilerplate.
+
+**Finding (which provider and why):** the junk draft came from the **rules** parser, not an LLM. Production has only `GEMINI_API_KEY` set (no Claude key). Gemini gave up and the chain fell through to rules: (1) **timeout** — `gemini-3.1-flash-lite` with default thinking took 6–10 s against the old 7 s per-provider budget; (2) intermittent fast **503 UNAVAILABLE** from Google. The description itself has no steps (Yemek.com keeps them on its site), so the rules parser read the link list / "abone olun" / sponsor lines after the ingredients as steps. A second cause surfaced live: Yemek.com's JSON-LD groups `recipeIngredient` as nested arrays, which read as 0 ingredients, so the written-recipe page was skipped. Full write-up in DECISIONS.md ("Import: the Yemek.com video with junk steps").
+
+**Done (all committed and pushed through 73714d7, Vercel `success`):**
+- [x] Provider failures logged and returned as `fallbacks: [{provider, kind, status?, reason?}]` (no caption text).
+- [x] Gemini: thinking "minimal" (falls back to "low" once if refused, remembered per instance), 4096 output tokens, one retry on 500/503, last provider uses the remaining request time; request deadline 15 → 25 s (logged departure).
+- [x] Recipe-link following (`src/domain/import/links.ts`, `followRecipeLinks` in `pipeline.ts`): ≤2 links, shorteners expanded only from recipe lines (HEAD, 5 s, ≤3 redirects via guarded fetch), schema.org Recipe with ingredients + steps → provider `web`, video stays Kaynak, `writtenRecipeUrl` shown as "Yazılı tarif" (migration v9, schema.sql, SUPABASE_MIGRATION.md).
+- [x] Nested JSON-LD ingredient arrays flattened; placeholder prep (<5 min with 6+ ingredients) treated as unknown; total not reduced by waiting it excludes.
+- [x] Boilerplate stripper (`src/domain/import/boilerplate.ts`) before LLM and rules; junk steps dropped in `validateDraft` and the pipeline; prompt rule; "Bu açıklamada adımlar yok…" hint on the review screen.
+- [x] Tests: links + boilerplate unit tests with self-written fixtures 16/17, 6 route tests (`tests/unit/import/written-recipe.test.ts`), provider tests (status, 503 retry, thinking, budget), 2 e2e. Last green run: lint 0, typecheck 0, 452 unit/component, 48 e2e (4 desktop-only skipped on mobile), build OK.
+- [x] docs/IMPORT.md updated.
+- [x] Verified live: the video imports in ~1 s as provider `web` (34 ingredients, 26 real steps, Kaynak "YouTube · Yemek.com", times 15/45/120, "Videoyu aç" + "Yazılı tarif" links after saving).
+
+**Left:**
+- [ ] Final report to the owner was given in chat; nothing functional is pending for this task.
+- [ ] Optional: Gemini latency is still high (5–10 s, ~17 s seen on one long description) and 503s are on Google's side. Options: try another `GEMINI_MODEL`, or set `ANTHROPIC_API_KEY` as a fallback. Not changed without the owner.
+- [ ] Optional: two component tests (cooking-extras timer, "Başlamadan önce") were each flaky once under full-suite load and passed on rerun; worth hardening if they flake again.
+- [ ] This PROGRESS.md note is committed but not pushed (docs-only; push together with the next green change).
