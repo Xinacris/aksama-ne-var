@@ -74,13 +74,16 @@ describe("Tarif detail", () => {
     expect(screen.getByRole("heading", { name: "Bu tarifi bulamadık" })).toBeInTheDocument();
   });
 
-  it("cooking mode turns step numbers into checkable buttons", async () => {
+  it("'Pişirmeye başla' opens cooking mode: the recipe alone, or tonight's whole menu", async () => {
     await freshStore({ demo: true });
     nav.params = { id: "menemen" };
+    const { unmount } = render(<TarifPage />);
+    expect(screen.getByRole("link", { name: "Pişirmeye başla" })).toHaveAttribute("href", "/pisir/menemen");
+    unmount();
+    nav.params = { id: "izmir-kofte" };
+    nav.search = new URLSearchParams("gun=today");
     render(<TarifPage />);
-    await userEvent.click(screen.getByRole("button", { name: "Pişirmeye başla" }));
-    await userEvent.click(screen.getByRole("button", { name: "1. adım tamam olarak işaretle" }));
-    expect(screen.getByRole("button", { name: "1. adım tamam, geri al" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("link", { name: "Menüyü pişirmeye başla" })).toHaveAttribute("href", "/pisir/2026-10-12");
   });
 });
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { Loading } from "@/components/Guard";
 import { sourceCredit } from "@/components/ImportSourceCard";
 import { IconCheck, IconChevronLeft, IconImport, IconMinus, IconMore, IconPlus } from "@/components/icons";
@@ -48,13 +48,10 @@ function TarifInner() {
   const toggleFavorite = useApp((x) => x.toggleFavorite);
   const deleteRecipe = useApp((x) => x.deleteRecipe);
   const [servings, setServings] = useState<number | null>(null);
-  const [cooking, setCooking] = useState(false);
-  const [doneSteps, setDoneSteps] = useState<Set<number>>(new Set());
   const [menuOpen, setMenuOpen] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [replace, setReplace] = useState<{ date: string; slot: Slot } | null>(null);
   const [place, setPlace] = useState<{ recipe: Recipe } | null>(null);
-  const stepsRef = useRef<HTMLElement>(null);
   const week = useWeek(0);
 
   if (!recipe) {
@@ -321,55 +318,28 @@ function TarifInner() {
       )}
 
       {recipe.steps.length > 0 && (
-        <section aria-labelledby="adimlar" className={[s.steps, cooking && s.cooking].filter(Boolean).join(" ")} ref={stepsRef}>
+        <section aria-labelledby="adimlar" className={s.steps}>
           <h2 id="adimlar" className={s.secTitle}>
             Hazırlanışı
           </h2>
           <ol className={s.stepList}>
-            {recipe.steps.map((text, i) => {
-              const done = doneSteps.has(i);
-              return (
-                <li key={i} className={[s.step, done && s.stepDone].filter(Boolean).join(" ")}>
-                  {cooking ? (
-                    <button
-                      type="button"
-                      className={s.stepNum}
-                      aria-pressed={done}
-                      aria-label={`${i + 1}. adım ${done ? "tamam, geri al" : "tamam olarak işaretle"}`}
-                      onClick={() => {
-                        const next = new Set(doneSteps);
-                        if (done) next.delete(i);
-                        else next.add(i);
-                        setDoneSteps(next);
-                      }}
-                    >
-                      {done ? <IconCheck size={14} strokeWidth={3} /> : i + 1}
-                    </button>
-                  ) : (
-                    <span className={s.stepNum} aria-hidden="true">
-                      {i + 1}
-                    </span>
-                  )}
-                  <p className={s.stepText}>{text}</p>
-                </li>
-              );
-            })}
+            {recipe.steps.map((text, i) => (
+              <li key={i} className={s.step}>
+                <span className={s.stepNum} aria-hidden="true">
+                  {i + 1}
+                </span>
+                <p className={s.stepText}>{text}</p>
+              </li>
+            ))}
           </ol>
         </section>
       )}
 
       <div className={s.actions}>
         {recipe.steps.length > 0 && (
-          <Button
-            size="lg"
-            onClick={() => {
-              setCooking((c) => !c);
-              if (!cooking) stepsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-            aria-pressed={cooking}
-          >
-            {cooking ? "Pişirme modunu kapat" : "Pişirmeye başla"}
-          </Button>
+          <ButtonLink size="lg" href={`/pisir/${ctx ?? recipe.id}`}>
+            {ctx && items.length > 1 ? "Menüyü pişirmeye başla" : "Pişirmeye başla"}
+          </ButtonLink>
         )}
         {ctx && mySlot ? (
           <Button variant="secondary" size="md" onClick={() => setReplace({ date: ctx, slot: mySlot })}>

@@ -108,6 +108,17 @@ test("screens", async ({ page }, info) => {
     await expect(page.getByRole("heading", { name: "Taslağı kontrol et" })).toBeVisible();
     await shot(page, p, "ice-aktar-taslak");
   }
+  if (!only || only.some((n) => n.startsWith("pisir"))) {
+    await page.goto("/pisir/2026-10-12");
+    await expect(page.getByRole("heading", { name: "Hazırlık" })).toBeVisible();
+    await shot(page, p, "pisir-hazirlik");
+    await page.getByRole("button", { name: "Pişirmeye başla" }).click();
+    await page.getByRole("button", { name: "Sonraki" }).click();
+    await page.getByRole("tab", { name: /İzmir köfte/ }).click();
+    await page.getByRole("button", { name: "Sonraki" }).click();
+    await page.waitForTimeout(300);
+    await shot(page, p, "pisir-adim");
+  }
   await page.goto("/ev/k7m2-tq");
   await shot(page, p, "davet");
 });

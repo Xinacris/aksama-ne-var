@@ -63,6 +63,10 @@ export function activityText(
       return `${dish} tarifini ekledi`;
     case "recipe.updated":
       return `${dish} tarifini güncelledi`;
+    case "cooking.started":
+      return date ? (isToday ? "bu akşamın menüsünü pişirmeye başladı" : `${day} menüsünü pişirmeye başladı`) : `${dish} pişirmeye başladı`;
+    case "cooking.finished":
+      return date ? (isToday ? "bu akşamın yemeğini pişirdi · afiyet olsun" : `${day} yemeğini pişirdi`) : `${dish} pişirdi`;
     case "recipe.imported":
       return `${dish} tarifini bir bağlantıdan ekledi`;
     default:

@@ -95,6 +95,13 @@ export default function BugunPage() {
                 rows={model.tonight.rows}
                 approval={model.tonight.cooked ? { tone: "ok", label: "Pişti · afiyet olsun" } : approvalPill(model.tonight.approval)}
                 href={`/tarif/${model.tonight.mainId}?gun=${model.today}`}
+                cook={
+                  model.tonight.cooked ? undefined : (
+                    <ButtonLink href={`/pisir/${model.today}`} size="lg" block>
+                      Pişirmeye başla
+                    </ButtonLink>
+                  )
+                }
                 action={
                   model.tonight.leftover ? (
                     <LeftoverChoices ev={model.tonight.leftover} when="tonight" />

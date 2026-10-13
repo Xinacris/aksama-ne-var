@@ -2,6 +2,7 @@ import type {
   Activity,
   CookLog,
   Favorite,
+  CookingSession,
   Household,
   ImportLog,
   Match,
@@ -110,6 +111,13 @@ export interface ImportLogRepo {
   add(row: NewRow<ImportLog>): Promise<ImportLog>;
 }
 
+export interface CookingRepo {
+  list(householdId: string): Promise<CookingSession[]>;
+  create(row: NewRow<CookingSession>): Promise<CookingSession>;
+  update(id: string, patch: Patch<CookingSession>): Promise<CookingSession>;
+  remove(id: string): Promise<void>;
+}
+
 export interface Repos {
   auth: AuthRepo;
   households: HouseholdRepo;
@@ -120,6 +128,7 @@ export interface Repos {
   swipes: SwipeRepo;
   activity: ActivityRepo;
   imports: ImportLogRepo;
+  cooking: CookingRepo;
   /** Remove every stored row (Ayarlar › Tüm verileri sıfırla). */
   resetAll(): Promise<void>;
   /** Dump all tables for export. */
