@@ -17,7 +17,8 @@ const builtin: Recipe = {
   ingredients: [],
   prepItems: [],
   steps: ["Pişir."],
-  leftoverFriendly: true,
+  leftoverPolicy: "store",
+  leftoverDays: 3,
   freezerItem: null,
   createdBy: null,
   createdAt: "2026-01-01T00:00:00.000Z",
@@ -61,7 +62,7 @@ describe("LocalStorageAdapter", () => {
   it("scopes households, members and favorites", async () => {
     const { repos } = setup();
     const u = await repos.auth.createUser(user);
-    const h = await repos.households.create({ name: "Ev", inviteCode: "k7m2-tq", createdBy: u.id, dinnerTime: "19:30" });
+    const h = await repos.households.create({ name: "Ev", inviteCode: "k7m2-tq", createdBy: u.id, dinnerTime: "19:30", lunchAtHome: "yes", lunchDays: [] });
     await repos.households.addMember({ householdId: h.id, userId: u.id, role: "owner", color: "#55612A", createdBy: u.id });
     expect(await repos.households.findByInviteCode("K7M2-TQ")).toEqual(h);
     expect(await repos.households.findByInviteCode("nope")).toBeNull();

@@ -9,7 +9,6 @@ export const anaYemekler1 = [
     timeNote: "1 sa 30 dk · düdüklüde 35 dk",
     servings: 4,
     tags: ["Akşamdan ıslat", "Tencere", "Bakliyat"],
-    leftover: true,
     ingredients: [
       i("Kuru fasulye", 2, "su bardağı"),
       i("Dana kuşbaşı", 200, "g"),
@@ -37,7 +36,6 @@ export const anaYemekler1 = [
     cook: 45,
     servings: 4,
     tags: ["Fırında", "Kıymalı"],
-    leftover: true,
     freezer: "Kıyma",
     ingredients: [
       i("Kıyma", 500, "g"),
@@ -70,7 +68,6 @@ export const anaYemekler1 = [
     cook: 45,
     servings: 4,
     tags: ["Fırında", "Kıymalı"],
-    leftover: true,
     ingredients: [
       i("Kemer patlıcan", 6, "adet"),
       i("Kıyma", 300, "g"),
@@ -101,7 +98,6 @@ export const anaYemekler1 = [
     cook: 50,
     servings: 4,
     tags: ["Zeytinyağlı", "Fırında"],
-    leftover: true,
     ingredients: [
       i("Kemer patlıcan", 6, "adet"),
       i("Kuru soğan", 3, "adet"),
@@ -131,7 +127,6 @@ export const anaYemekler1 = [
     timeNote: "1 sa 30 dk · düdüklüde 40 dk",
     servings: 4,
     tags: ["Akşamdan ıslat", "Tencere"],
-    leftover: true,
     ingredients: [
       i("Nohut", 2, "su bardağı"),
       i("Dana kuşbaşı", 300, "g"),
@@ -159,7 +154,6 @@ export const anaYemekler1 = [
     cook: 35,
     servings: 4,
     tags: ["Zeytinyağlı"],
-    leftover: true,
     ingredients: [
       i("Taze fasulye", 750, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -184,7 +178,6 @@ export const anaYemekler1 = [
     cook: 25,
     servings: 4,
     tags: ["Tavuklu", "Tavada", "Kolay"],
-    leftover: false,
     freezer: "Tavuk but",
     ingredients: [
       i("Tavuk but", 700, "g", "kemiksiz"),
@@ -215,7 +208,6 @@ export const anaYemekler1 = [
     cook: 40,
     servings: 4,
     tags: ["Fırında", "Kıymalı"],
-    leftover: true,
     ingredients: [
       i("Patates", 5, "adet"),
       i("Kıyma", 300, "g"),
@@ -244,7 +236,6 @@ export const anaYemekler1 = [
     timeNote: "45 dk (hazır mantıyla)",
     servings: 4,
     tags: ["Yoğurtlu"],
-    leftover: false,
     ingredients: [
       i("Hazır mantı", 500, "g"),
       i("Süzme yoğurt", 400, "g"),
@@ -270,7 +261,6 @@ export const anaYemekler1 = [
     cook: 35,
     servings: 4,
     tags: ["Fırında", "Kolay"],
-    leftover: true,
     ingredients: [
       i("Kalem makarna", 500, "g"),
       i("Süt", 2, "su bardağı"),
@@ -295,7 +285,6 @@ export const anaYemekler1 = [
     cook: 50,
     servings: 4,
     tags: ["Tencere", "Etli", "Sebzeli"],
-    leftover: true,
     ingredients: [
       i("Dana kuşbaşı", 250, "g"),
       i("Patlıcan", 1, "adet"),
@@ -324,7 +313,6 @@ export const anaYemekler1 = [
     cook: 70,
     servings: 4,
     tags: ["Etli", "Tencere", "Misafir"],
-    leftover: false,
     ingredients: [
       i("Kuzu kuşbaşı", 500, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -354,7 +342,6 @@ export const anaYemekler1 = [
     cook: 50,
     servings: 4,
     tags: ["Fırında", "Tavuklu", "Kolay"],
-    leftover: true,
     freezer: "Tavuk baget",
     ingredients: [
       i("Tavuk baget", 1, "kg"),
@@ -383,7 +370,6 @@ export const anaYemekler1 = [
     cook: 30,
     servings: 4,
     tags: ["Kıymalı", "Tavada"],
-    leftover: true,
     freezer: "Kıyma",
     ingredients: [
       i("Kıyma", 500, "g"),
@@ -412,7 +398,6 @@ export const anaYemekler1 = [
     cook: 30,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Ekşili"],
-    leftover: true,
     ingredients: [
       i("Kıyma", 400, "g"),
       i("Baldo pirinç", 3, "yemek kaşığı"),
@@ -441,7 +426,6 @@ export const anaYemekler1 = [
     cook: 45,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Dolma"],
-    leftover: true,
     ingredients: [
       i("Dolmalık biber", 10, "adet"),
       i("Kıyma", 300, "g"),
@@ -470,7 +454,6 @@ export const anaYemekler1 = [
     cook: 50,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Sarma"],
-    leftover: true,
     ingredients: [
       i("Beyaz lahana", 1, "adet"),
       i("Kıyma", 300, "g"),
@@ -497,7 +480,6 @@ export const anaYemekler1 = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Hafif"],
-    leftover: false,
     ingredients: [
       i("Ispanak", 1, "kg"),
       i("Kıyma", 200, "g"),
@@ -523,7 +505,6 @@ export const anaYemekler1 = [
     cook: 35,
     servings: 4,
     tags: ["Zeytinyağlı", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Pırasa", 1, "kg"),
       i("Havuç", 2, "adet"),
@@ -548,7 +529,6 @@ export const anaYemekler1 = [
     cook: 40,
     servings: 4,
     tags: ["Tencere", "Etli"],
-    leftover: true,
     ingredients: [
       i("Bezelye", 500, "g"),
       i("Dana kuşbaşı", 250, "g"),

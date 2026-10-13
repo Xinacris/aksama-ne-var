@@ -14,7 +14,7 @@ import { useTheme } from "@/hooks/useTheme";
 import { initialOf } from "@/services/auth";
 import { whatsappShareUrl } from "@/services/household";
 import { useApp } from "@/store/app";
-import type { ImportLog } from "@/data/models";
+import type { Household, ImportLog } from "@/data/models";
 import { toIsoDate } from "@/domain/dates";
 import { now } from "@/lib/clock";
 import type { ThemePreference } from "@/lib/theme";
@@ -25,6 +25,72 @@ const THEMES: [ThemePreference, string][] = [
   ["dark", "Koyu"],
   ["system", "Sistem"],
 ];
+
+const LUNCH: [Household["lunchAtHome"], string][] = [
+  ["yes", "Evet"],
+  ["no", "Hayır"],
+  ["some", "Bazı günler"],
+];
+// Monday first, as Turkish calendars are.
+const WEEKDAYS: [number, string][] = [
+  [1, "Pzt"],
+  [2, "Sal"],
+  [3, "Çar"],
+  [4, "Per"],
+  [5, "Cum"],
+  [6, "Cmt"],
+  [0, "Paz"],
+];
+const WEEKDAY_LONG = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+
+/** "Öğlenleri evde yiyen var mı?" — decides whether leftovers become a lunch or go in the fridge. */
+function LunchSetting() {
+  const household = useApp((x) => x.household);
+  const setLunchAtHome = useApp((x) => x.setLunchAtHome);
+  if (!household) return null;
+  const { lunchAtHome, lunchDays } = household;
+  const note =
+    lunchAtHome === "yes"
+      ? "Artan yemek, tarif öyle diyorsa ertesi gün öğlene yazılır."
+      : lunchAtHome === "no"
+        ? "Artanlar öğlene yazılmaz; dolaba kalır ve Bugün'de ne zamana kadar yenebileceği görünür."
+        : lunchDays.length
+          ? `Öğlene yalnızca ${lunchDays
+              .slice()
+              .sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7))
+              .map((d) => WEEKDAY_LONG[d])
+              .join(", ")} yazılır; diğer günler artan dolaba kalır.`
+          : "Günleri seçin; seçilmeyen günlerde artan dolaba kalır.";
+  return (
+    <div className={s.lunch}>
+      <span className={s.label} id="ogle-soru">
+        Öğlenleri evde yiyen var mı?
+      </span>
+      <div className={s.chips} role="group" aria-labelledby="ogle-soru">
+        {LUNCH.map(([v, l]) => (
+          <DishChip key={v} selected={lunchAtHome === v} onClick={() => setLunchAtHome({ lunchAtHome: v, lunchDays: v === "some" && !lunchDays.length ? [6, 0] : lunchDays })}>
+            {l}
+          </DishChip>
+        ))}
+      </div>
+      {lunchAtHome === "some" && (
+        <div className={s.chips} role="group" aria-label="Öğlen evde olunan günler">
+          {WEEKDAYS.map(([d, l]) => (
+            <DishChip
+              key={d}
+              selected={lunchDays.includes(d)}
+              onClick={() => setLunchAtHome({ lunchAtHome: "some", lunchDays: lunchDays.includes(d) ? lunchDays.filter((x) => x !== d) : [...lunchDays, d] })}
+            >
+              <span aria-hidden="true">{l}</span>
+              <span className="visually-hidden">{WEEKDAY_LONG[d]}</span>
+            </DishChip>
+          ))}
+        </div>
+      )}
+      <p className={s.note}>{note}</p>
+    </div>
+  );
+}
 
 /** "Bu ay 12 tarif içe aktarıldı" — counts drafts produced this month (no links or captions are kept). */
 function ImportUsage({ log }: { log: ImportLog[] }) {
@@ -180,6 +246,7 @@ export default function AyarlarPage() {
             Saati kaydet
           </Button>
         </form>
+        <LunchSetting />
         {confirm === "leave" ? (
           <div className={s.confirm} role="alert">
             <p>Evden ayrılırsan plan, liste ve eşleşmeler bu evde kalır; sen yeni bir ev kurabilir ya da başka bir eve katılabilirsin.</p>

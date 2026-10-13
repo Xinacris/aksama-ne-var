@@ -16,7 +16,8 @@ import { useWeek } from "@/components/week/useWeek";
 import { COURSE_LABEL, SLOTS, SLOT_SHORT, type Ingredient, type Recipe, type Slot } from "@/data/models";
 import { clockTime, dayMonth, dayName, formatDuration, toIsoDate } from "@/domain/dates";
 import { courseToSlot } from "@/domain/matching";
-import { dayFor, menuFor, menuItems, menuTitle, totalMinutes } from "@/domain/plan";
+import { menuFor, menuItems, menuTitle, totalMinutes } from "@/domain/plan";
+import { eveningLeftover, policyMeta } from "@/domain/leftovers";
 import { dishInSentence, offsetLabel } from "@/domain/prep";
 import { daysSinceCooked, lastCookedMap, rotationLabel } from "@/domain/rotation";
 import { formatIngredientQuantity, ingredientStatus, recipeLabel } from "@/domain/shopping";
@@ -85,7 +86,7 @@ function TarifInner() {
   const inMenu = items.some((i) => i.recipeId === recipe.id);
   const ctx = gun && inMenu ? gun : null;
   const mySlot = ctx ? SLOTS.find((sl) => menu[sl]?.recipeId === recipe.id) ?? null : null;
-  const day = ctx ? dayFor(planDays, ctx) : undefined;
+  const evening = ctx && household ? eveningLeftover({ items: planItems, days: planDays, matches: [], recipesById: byId }, household, ctx, people.length, today) : null;
   const factorBase = recipe.servings;
   const shownServings = servings ?? recipe.servings;
   const factor = shownServings / factorBase;
@@ -103,9 +104,9 @@ function TarifInner() {
     ? [
         `${items.length} parça`,
         `yaklaşık ${formatDuration(totalMinutes(menu, byId))}`,
-        `${recipe.servings} kişilik${day?.leftovers ? ", yarına da artar" : ""}`,
+        `${recipe.servings} kişilik${evening?.outcome.kind === "lunch" ? ", yarına da artar" : evening?.outcome.kind === "fridge" ? ", artanı dolaba" : ""}`,
       ]
-    : [recipe.timeNote ?? formatDuration(recipeMinutes), `${recipe.servings} kişilik`, recipe.leftoverFriendly ? "ertesi güne artar" : null];
+    : [recipe.timeNote ?? formatDuration(recipeMinutes), `${recipe.servings} kişilik`, policyMeta(recipe)];
   const rotation = rotationLabel(daysSinceCooked(recipe.id, last, today), solo);
 
   // Prep timeline: the day's tasks for the whole menu (design shows kıyma, köfte harcı and pilav together).

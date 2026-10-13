@@ -22,6 +22,21 @@ describe("Ayarlar", () => {
     expect(useApp.getState().me?.name).toBe("Ali Can");
   });
 
+  it("lunch at home: Hayır, then Bazı günler with weekdays", async () => {
+    await freshStore({ demo: true });
+    render(<AyarlarPage />);
+    const group = screen.getByRole("group", { name: "Öğlenleri evde yiyen var mı?" });
+    expect(group.querySelector('[aria-pressed="true"]')).toHaveTextContent("Evet");
+    await userEvent.click(screen.getByRole("button", { name: "Hayır" }));
+    expect(useApp.getState().household).toMatchObject({ lunchAtHome: "no" });
+    expect(screen.getByText(/Artanlar öğlene yazılmaz/)).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Bazı günler" }));
+    expect(useApp.getState().household).toMatchObject({ lunchAtHome: "some", lunchDays: [0, 6] });
+    await userEvent.click(screen.getByRole("button", { name: "Çarşamba" }));
+    expect(useApp.getState().household?.lunchDays).toEqual([0, 3, 6]);
+    expect(screen.getByText("Öğlene yalnızca Çarşamba, Cumartesi, Pazar yazılır; diğer günler artan dolaba kalır.")).toBeInTheDocument();
+  });
+
   it("switches theme and persists the preference", async () => {
     await freshStore({ demo: true });
     render(<AyarlarPage />);

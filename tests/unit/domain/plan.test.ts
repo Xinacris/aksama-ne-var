@@ -5,7 +5,6 @@ import {
   approve,
   dayNote,
   freezerLines,
-  leftoverFor,
   markAteOut,
   menuFor,
   menuLine,
@@ -47,12 +46,12 @@ describe("menus", () => {
 });
 
 describe("transitions", () => {
-  it("adding replaces the slot, resets approvals to the adder and sets leftovers from the dish", () => {
+  it("adding replaces the slot, resets approvals to the adder and the leftover choice to the defaults", () => {
     const s = state(monday);
     const ops = addToPlan(s, { date: "2026-10-12", slot: "ana", recipeId: R("Kuru fasulye").id, source: "manual", by: "zeynep" });
     expect(ops[0]).toEqual({ op: "removeItem", id: monday[1].id });
     expect(ops[1]).toMatchObject({ op: "addItem", row: { slot: "ana", recipeId: R("Kuru fasulye").id } });
-    expect(ops[2]).toEqual({ op: "upsertDay", date: "2026-10-12", patch: { approvals: ["zeynep"], leftovers: true } });
+    expect(ops[2]).toEqual({ op: "upsertDay", date: "2026-10-12", patch: { approvals: ["zeynep"], leftoverChoice: null, leftoverChoiceBy: null } });
   });
 
   it("placing a matched dish marks the match as placed", () => {
@@ -98,7 +97,7 @@ describe("transitions", () => {
     expect(ops).toContainEqual({
       op: "upsertDay",
       date: "2026-10-12",
-      patch: { status: "ate-out", approvals: [], leftovers: false, returnedRecipeIds: [R("İzmir köfte").id] },
+      patch: { status: "ate-out", approvals: [], leftoverChoice: null, leftoverChoiceBy: null, returnedRecipeIds: [R("İzmir köfte").id] },
     });
   });
 
@@ -116,10 +115,10 @@ describe("transitions", () => {
 
   it("'plan değişti → yarına' moves today's menu and swaps with a planned tomorrow", () => {
     const tue = item("2026-10-13", "ana", "Karnıyarık");
-    const ops = moveDayToTomorrow(state([...monday, tue], { days: [day("2026-10-12", { leftovers: true })] }), "2026-10-12", "ali");
+    const ops = moveDayToTomorrow(state([...monday, tue], { days: [day("2026-10-12", { leftoverChoice: "lunch" })] }), "2026-10-12", "ali");
     for (const m of monday) expect(ops).toContainEqual({ op: "updateItem", id: m.id, patch: { date: "2026-10-13", source: "moved" } });
     expect(ops).toContainEqual({ op: "updateItem", id: tue.id, patch: { date: "2026-10-12", source: "moved" } });
-    expect(ops).toContainEqual(expect.objectContaining({ op: "upsertDay", date: "2026-10-13", patch: expect.objectContaining({ leftovers: true }) }));
+    expect(ops).toContainEqual(expect.objectContaining({ op: "upsertDay", date: "2026-10-13", patch: expect.objectContaining({ leftoverChoice: "lunch" }) }));
   });
 
   it("approvals accumulate without duplicates", () => {
@@ -137,23 +136,6 @@ describe("transitions", () => {
     expect(ops).toContainEqual({ op: "upsertDay", date: "2026-10-11", patch: { status: "cooked", cookedAt: "2026-10-12T06:00:00Z" } });
     const again = rollover({ ...s, days: [...s.days, day("2026-10-11", { status: "cooked" })] }, [], "2026-10-12", "ali", "x");
     expect(again.ops).toEqual([]);
-  });
-});
-
-describe("leftovers", () => {
-  it("carries yesterday's leftover-friendly main dish to today", () => {
-    const sun = item("2026-10-11", "ana", "Kuru fasulye");
-    const s = state([sun], { days: [day("2026-10-11", { leftovers: true, status: "cooked" })] });
-    const l = leftoverFor(s, "2026-10-12", 2);
-    expect(l?.recipe.name).toBe("Kuru fasulye");
-    expect(l?.portions).toBe(2);
-  });
-
-  it("no leftover when not marked, eaten out, or no main dish", () => {
-    const sun = item("2026-10-11", "ana", "Kuru fasulye");
-    expect(leftoverFor(state([sun], { days: [day("2026-10-11")] }), "2026-10-12", 2)).toBeNull();
-    expect(leftoverFor(state([sun], { days: [day("2026-10-11", { leftovers: true, status: "ate-out" })] }), "2026-10-12", 2)).toBeNull();
-    expect(leftoverFor(state([], { days: [day("2026-10-11", { leftovers: true })] }), "2026-10-12", 2)).toBeNull();
   });
 });
 

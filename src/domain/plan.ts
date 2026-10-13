@@ -1,4 +1,4 @@
-import type { CookLog, Match, PlanDay, PlanItem, PrepTask, Recipe, Slot, User } from "@/data/models";
+import type { CookLog, LeftoverChoice, Match, PlanDay, PlanItem, PrepTask, Recipe, Slot, User } from "@/data/models";
 import { SLOTS } from "@/data/models";
 import { addDays, dayName, dayShort, fromIsoDate } from "./dates";
 import { formatIngredientQuantity } from "./shopping";
@@ -11,7 +11,7 @@ export type PlanOp =
   | { op: "addItem"; row: Omit<PlanItem, "id" | "createdAt" | "updatedAt" | "householdId"> }
   | { op: "updateItem"; id: string; patch: Partial<Pick<PlanItem, "date" | "slot" | "recipeId" | "source">> }
   | { op: "removeItem"; id: string }
-  | { op: "upsertDay"; date: string; patch: Partial<Pick<PlanDay, "status" | "approvals" | "leftovers" | "returnedRecipeIds" | "cookedAt">> }
+  | { op: "upsertDay"; date: string; patch: Partial<Pick<PlanDay, "status" | "approvals" | "leftoverChoice" | "leftoverChoiceBy" | "returnedRecipeIds" | "cookedAt">> }
   | { op: "addMatch"; row: Omit<Match, "id" | "createdAt" | "updatedAt" | "householdId"> }
   | { op: "updateMatch"; id: string; patch: Partial<Pick<Match, "status" | "placedDate" | "returnedFrom">> }
   | { op: "addCookLog"; row: Omit<CookLog, "id" | "createdAt" | "updatedAt" | "householdId"> };
@@ -90,7 +90,7 @@ function matchFor(state: PlanState, recipeId: string): Match | undefined {
 /** Put a dish into a day's slot (replacing whatever was there). */
 export function addToPlan(
   state: PlanState,
-  args: { date: string; slot: Slot; recipeId: string; source: PlanItem["source"]; by: string; matchId?: string },
+  args: { date: string; slot: Slot; recipeId: string; source: PlanItem["source"]; by: string; matchId?: string; leftoverFrom?: string },
 ): PlanOp[] {
   const ops: PlanOp[] = [];
   const menu = menuFor(state.items, args.date);
@@ -98,13 +98,22 @@ export function addToPlan(
   if (existing) ops.push({ op: "removeItem", id: existing.id });
   ops.push({
     op: "addItem",
-    row: { date: args.date, slot: args.slot, recipeId: args.recipeId, source: args.source, createdBy: args.by },
+    row: {
+      date: args.date,
+      slot: args.slot,
+      recipeId: args.recipeId,
+      source: args.source,
+      ...(args.leftoverFrom ? { leftoverFrom: args.leftoverFrom } : {}),
+      createdBy: args.by,
+    },
   });
   const day = dayFor(state.days, args.date);
   const patch: Extract<PlanOp, { op: "upsertDay" }>["patch"] = { approvals: [args.by] };
   if (day?.status === "ate-out") patch.status = "open";
-  if (args.slot === "ana") patch.leftovers = state.recipesById.get(args.recipeId)?.leftoverFriendly ?? false;
+  // A new main dish: its leftovers follow the defaults again.
+  if (args.slot === "ana") Object.assign(patch, { leftoverChoice: null, leftoverChoiceBy: null });
   ops.push({ op: "upsertDay", date: args.date, patch });
+  if (args.source === "leftover") return ops;
   const match = args.matchId ? state.matches.find((m) => m.id === args.matchId) : matchFor(state, args.recipeId);
   if (match) ops.push({ op: "updateMatch", id: match.id, patch: { status: "placed", placedDate: args.date } });
   return ops;
@@ -115,7 +124,7 @@ export function removeFromPlan(state: PlanState, itemId: string, by: string): Pl
   if (!item) return [];
   const ops: PlanOp[] = [{ op: "removeItem", id: itemId }];
   const patch: Extract<PlanOp, { op: "upsertDay" }>["patch"] = { approvals: [by] };
-  if (item.slot === "ana") patch.leftovers = false;
+  if (item.slot === "ana") Object.assign(patch, { leftoverChoice: null, leftoverChoiceBy: null });
   ops.push({ op: "upsertDay", date: item.date, patch });
   const placed = state.matches.find((m) => m.recipeId === item.recipeId && m.status === "placed" && m.placedDate === item.date);
   if (placed) ops.push({ op: "updateMatch", id: placed.id, patch: { status: "open", placedDate: null } });
@@ -170,7 +179,7 @@ export function markAteOut(state: PlanState, date: string, by: string): PlanOp[]
   ops.push({
     op: "upsertDay",
     date,
-    patch: { status: "ate-out", approvals: [], leftovers: false, returnedRecipeIds: menu.ana ? [menu.ana.recipeId] : [] },
+    patch: { status: "ate-out", approvals: [], leftoverChoice: null, leftoverChoiceBy: null, returnedRecipeIds: menu.ana ? [menu.ana.recipeId] : [] },
   });
   return ops;
 }
@@ -188,7 +197,7 @@ export function sendBackToMatches(state: PlanState, date: string, by: string): P
   ops.push({
     op: "upsertDay",
     date,
-    patch: { status: "open", approvals: [], leftovers: false, returnedRecipeIds: menu.ana ? [menu.ana.recipeId] : [] },
+    patch: { status: "open", approvals: [], leftoverChoice: null, leftoverChoiceBy: null, returnedRecipeIds: menu.ana ? [menu.ana.recipeId] : [] },
   });
   return ops;
 }
@@ -206,12 +215,18 @@ export function moveDayToTomorrow(state: PlanState, date: string, by: string): P
   ops.push({
     op: "upsertDay",
     date: tomorrow,
-    patch: { status: "open", approvals: [by], leftovers: dToday?.leftovers ?? false, returnedRecipeIds: [] },
+    patch: { status: "open", approvals: [by], leftoverChoice: dToday?.leftoverChoice ?? null, leftoverChoiceBy: dToday?.leftoverChoiceBy ?? null, returnedRecipeIds: [] },
   });
   ops.push({
     op: "upsertDay",
     date,
-    patch: { status: "open", approvals: next.length ? [by] : [], leftovers: dNext?.leftovers ?? false, returnedRecipeIds: [] },
+    patch: {
+      status: "open",
+      approvals: next.length ? [by] : [],
+      leftoverChoice: dNext?.leftoverChoice ?? null,
+      leftoverChoiceBy: dNext?.leftoverChoiceBy ?? null,
+      returnedRecipeIds: [],
+    },
   });
   for (const m of state.matches) {
     if (m.status !== "placed") continue;
@@ -228,8 +243,32 @@ export function approve(state: PlanState, date: string, userId: string): PlanOp[
   return [{ op: "upsertDay", date, patch: { approvals: [...approvals] } }];
 }
 
-export function setLeftovers(date: string, leftovers: boolean): PlanOp[] {
-  return [{ op: "upsertDay", date, patch: { leftovers } }];
+/** Per-evening leftover choice; null returns to the defaults. */
+export function setLeftoverChoice(date: string, choice: LeftoverChoice | null, by: string): PlanOp[] {
+  return [{ op: "upsertDay", date, patch: { leftoverChoice: choice, leftoverChoiceBy: choice === null ? null : by } }];
+}
+
+/**
+ * Put a dolapta dish on an evening: a normal plan item marked `leftover`,
+ * so the list, prep tasks and cook log skip it.
+ */
+export function placeLeftover(state: PlanState, args: { fromDate: string; recipeId: string; toDate: string; slot: Slot; by: string }): PlanOp[] {
+  return addToPlan(state, { date: args.toDate, slot: args.slot, recipeId: args.recipeId, source: "leftover", by: args.by, leftoverFrom: args.fromDate });
+}
+
+/** "Afiyet olsun": tonight is cooked now (cook log + status), instead of waiting for tomorrow's rollover. */
+export function markCooked(state: PlanState, cookLog: CookLog[], date: string, by: string, nowIso: string): { ops: PlanOp[]; cooked: { date: string; recipeId: string }[] } {
+  const ops: PlanOp[] = [];
+  const cooked: { date: string; recipeId: string }[] = [];
+  for (const it of menuItems(menuFor(state.items, date))) {
+    if (it.source === "leftover") continue;
+    if (!cookLog.some((c) => c.recipeId === it.recipeId && c.date === date)) {
+      ops.push({ op: "addCookLog", row: { recipeId: it.recipeId, date, createdBy: by } });
+      cooked.push({ date, recipeId: it.recipeId });
+    }
+  }
+  ops.push({ op: "upsertDay", date, patch: { status: "cooked", cookedAt: nowIso } });
+  return { ops, cooked };
 }
 
 /**
@@ -250,6 +289,7 @@ export function rollover(
     const day = dayFor(state.days, date);
     if (day?.status === "ate-out" || day?.status === "cooked") continue;
     for (const it of menuItems(menuFor(state.items, date))) {
+      if (it.source === "leftover") continue; // eaten again, not cooked
       if (!cookLog.some((c) => c.recipeId === it.recipeId && c.date === date)) {
         ops.push({ op: "addCookLog", row: { recipeId: it.recipeId, date, createdBy: by } });
         cooked.push({ date, recipeId: it.recipeId });
@@ -258,25 +298,6 @@ export function rollover(
     ops.push({ op: "upsertDay", date, patch: { status: "cooked", cookedAt: nowIso } });
   }
   return { ops, cooked };
-}
-
-// ───────────────────────── leftovers ─────────────────────────
-
-export interface Leftover {
-  recipe: Recipe;
-  fromDate: string;
-  portions: number;
-}
-
-/** Yesterday's main dish carried over to today's lunch, if marked as leftover-friendly. */
-export function leftoverFor(state: PlanState, date: string, memberCount: number): Leftover | null {
-  const prev = addDays(date, -1);
-  const day = dayFor(state.days, prev);
-  if (!day || !day.leftovers || day.status === "ate-out") return null;
-  const main = menuFor(state.items, prev).ana;
-  const recipe = main ? state.recipesById.get(main.recipeId) : undefined;
-  if (!recipe) return null;
-  return { recipe, fromDate: prev, portions: Math.max(1, recipe.servings - Math.max(1, memberCount)) };
 }
 
 // ───────────────────────── summaries ─────────────────────────

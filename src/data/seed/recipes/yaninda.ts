@@ -9,7 +9,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Pilav"],
-    leftover: true,
     ingredients: [
       i("Baldo pirinç", 2, "su bardağı"),
       i("Tereyağı", 2, "yemek kaşığı"),
@@ -31,7 +30,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Pilav"],
-    leftover: true,
     ingredients: [
       i("Pilavlık bulgur", 2, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -55,7 +53,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Pilav"],
-    leftover: true,
     ingredients: [
       i("Baldo pirinç", 1.5, "su bardağı"),
       i("Arpa şehriye", 0.5, "su bardağı"),
@@ -77,7 +74,6 @@ export const yanindalar = [
     cook: 12,
     servings: 4,
     tags: ["Hızlı", "Kolay"],
-    leftover: false,
     ingredients: [
       i("Spagetti", 500, "g"),
       i("Tereyağı", 2, "yemek kaşığı"),
@@ -98,7 +94,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tavada"],
-    leftover: false,
     ingredients: [i("Patates", 5, "adet"), st("Sıvı yağ", 3, "su bardağı"), st("Tuz")],
     steps: [
       "Patatesleri parmak doğra, soğuk suda 15 dakika bekletip kurula.",
@@ -114,7 +109,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Pilav"],
-    leftover: true,
     ingredients: [
       i("Baldo pirinç", 2, "su bardağı"),
       i("Haşlanmış nohut", 1, "su bardağı"),
@@ -136,7 +130,6 @@ export const yanindalar = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Pilav", "Misafir"],
-    leftover: true,
     ingredients: [
       i("Baldo pirinç", 2, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -163,7 +156,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Pilav", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Pilavlık bulgur", 2, "su bardağı"),
       i("Havuç", 1, "adet"),
@@ -187,7 +179,6 @@ export const yanindalar = [
     cook: 40,
     servings: 6,
     tags: ["Fırında", "Hamur işi", "Misafir"],
-    leftover: true,
     ingredients: [
       i("Yufka", 4, "adet"),
       i("Beyaz peynir", 300, "g"),
@@ -211,7 +202,6 @@ export const yanindalar = [
     cook: 15,
     servings: 4,
     tags: ["Tavada", "Hamur işi"],
-    leftover: false,
     ingredients: [
       i("Yufka", 2, "adet"),
       i("Beyaz peynir", 200, "g"),
@@ -233,7 +223,6 @@ export const yanindalar = [
     cook: 35,
     servings: 6,
     tags: ["Fırında", "Hamur işi"],
-    leftover: true,
     ingredients: [
       i("Yufka", 3, "adet"),
       i("Patates", 4, "adet"),
@@ -259,7 +248,6 @@ export const yanindalar = [
     cook: 40,
     servings: 6,
     tags: ["Fırında", "Hamur işi"],
-    leftover: true,
     ingredients: [
       i("Yufka", 3, "adet"),
       i("Ispanak", 500, "g"),
@@ -285,7 +273,6 @@ export const yanindalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Kolay"],
-    leftover: false,
     ingredients: [
       i("Patates", 5, "adet"),
       i("Süt", 0.5, "su bardağı"),
@@ -307,7 +294,6 @@ export const yanindalar = [
     cook: 15,
     servings: 4,
     tags: ["Tencere", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Erişte", 300, "g"),
       i("Tereyağı", 2, "yemek kaşığı"),
@@ -328,7 +314,6 @@ export const yanindalar = [
     cook: 35,
     servings: 4,
     tags: ["Fırında", "Kolay"],
-    leftover: false,
     ingredients: [
       i("Patates", 5, "adet"),
       i("Sarımsak", 2, "diş"),

@@ -73,6 +73,7 @@ export function generatePrepTasks(args: {
   const existingByKey = new Map(existing.map((t) => [taskKey(t), t]));
   const byDate = new Map<string, { recipe: Recipe; offset: PrepOffset; label: string; freezer: boolean }[]>();
   for (const item of items) {
+    if (item.source === "leftover") continue; // already cooked: nothing to prepare
     const recipe = recipesById.get(item.recipeId);
     if (!recipe) continue;
     for (const p of recipe.prepItems) {

@@ -8,7 +8,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Yoğurtlu", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Süzme yoğurt", 500, "g"),
       i("Salatalık", 2, "adet"),
@@ -31,7 +30,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Hızlı", "Vejetaryen"],
-    leftover: false,
     ingredients: [
       i("Domates", 3, "adet"),
       i("Salatalık", 2, "adet"),
@@ -56,7 +54,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Bakliyat", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Kuru fasulye", 1, "su bardağı"),
       i("Kırmızı soğan", 1, "adet"),
@@ -85,7 +82,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Vejetaryen"],
-    leftover: false,
     ingredients: [
       i("Domates", 3, "adet"),
       i("Sivri biber", 3, "adet"),
@@ -112,7 +108,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Yoğurtlu", "Meze"],
-    leftover: true,
     ingredients: [
       i("Süzme yoğurt", 400, "g"),
       i("Beyaz peynir", 100, "g"),
@@ -136,7 +131,6 @@ export const salatalar = [
     timeNote: "20 dk · 10 gün bekler",
     servings: 8,
     tags: ["Meze", "Önceden hazırla"],
-    leftover: true,
     ingredients: [
       i("Salatalık", 6, "adet"),
       i("Havuç", 2, "adet"),
@@ -161,7 +155,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Hızlı", "Vejetaryen"],
-    leftover: false,
     ingredients: [
       i("Marul", 1, "adet"),
       i("Roka", 1, "demet"),
@@ -186,7 +179,6 @@ export const salatalar = [
     cook: 0,
     servings: 6,
     tags: ["Vejetaryen", "Meze"],
-    leftover: true,
     ingredients: [
       i("Köftelik bulgur", 1.5, "su bardağı"),
       i("Domates salçası", 1, "yemek kaşığı"),
@@ -216,7 +208,6 @@ export const salatalar = [
     cook: 20,
     servings: 4,
     tags: ["Közleme", "Meze"],
-    leftover: false,
     ingredients: [
       i("Patlıcan", 3, "adet"),
       i("Sarımsak", 1, "diş"),
@@ -239,7 +230,6 @@ export const salatalar = [
     cook: 20,
     servings: 6,
     tags: ["Meze", "Misafir"],
-    leftover: true,
     ingredients: [
       i("Patates", 2, "adet"),
       i("Havuç", 2, "adet"),
@@ -263,7 +253,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Meze", "Acılı"],
-    leftover: false,
     ingredients: [
       i("Domates", 2, "adet"),
       i("Sivri biber", 2, "adet"),
@@ -290,7 +279,6 @@ export const salatalar = [
     cook: 0,
     servings: 4,
     tags: ["Yoğurtlu", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Semizotu", 300, "g"),
       i("Süzme yoğurt", 300, "g"),
@@ -312,7 +300,6 @@ export const salatalar = [
     cook: 5,
     servings: 4,
     tags: ["Yoğurtlu", "Meze"],
-    leftover: true,
     ingredients: [
       i("Havuç", 4, "adet"),
       i("Süzme yoğurt", 300, "g"),
@@ -335,7 +322,6 @@ export const salatalar = [
     cook: 25,
     servings: 4,
     tags: ["Zeytinyağlı", "Meze"],
-    leftover: true,
     ingredients: [
       i("Patlıcan", 2, "adet"),
       i("Kabak", 1, "adet"),
@@ -360,7 +346,6 @@ export const salatalar = [
     cook: 20,
     servings: 6,
     tags: ["Vejetaryen", "Bakliyat", "Meze"],
-    leftover: true,
     ingredients: [
       i("Kırmızı mercimek", 1, "su bardağı"),
       i("Köftelik bulgur", 1, "su bardağı"),

@@ -8,7 +8,6 @@ export const corbalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Bakliyat", "Kolay"],
-    leftover: true,
     ingredients: [
       i("Kırmızı mercimek", 1.5, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -38,7 +37,6 @@ export const corbalar = [
     cook: 30,
     servings: 4,
     tags: ["Tencere", "Bakliyat"],
-    leftover: true,
     ingredients: [
       i("Kırmızı mercimek", 1, "su bardağı"),
       i("Köftelik bulgur", 2, "yemek kaşığı"),
@@ -69,7 +67,6 @@ export const corbalar = [
     cook: 15,
     servings: 4,
     tags: ["Tencere", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Tarhana", 4, "yemek kaşığı"),
       i("Domates salçası", 1, "yemek kaşığı"),
@@ -93,7 +90,6 @@ export const corbalar = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Yoğurtlu"],
-    leftover: false,
     ingredients: [
       i("Yoğurt", 1.5, "su bardağı"),
       i("Baldo pirinç", 0.5, "su bardağı"),
@@ -118,7 +114,6 @@ export const corbalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Domates", 5, "adet"),
       i("Un", 2, "yemek kaşığı"),
@@ -144,7 +139,6 @@ export const corbalar = [
     cook: 40,
     servings: 4,
     tags: ["Tencere", "Tavuklu"],
-    leftover: true,
     ingredients: [
       i("Tavuk göğsü", 300, "g"),
       i("Arpa şehriye", 0.5, "su bardağı"),
@@ -170,7 +164,6 @@ export const corbalar = [
     cook: 15,
     servings: 4,
     tags: ["Tencere", "Hızlı", "Kolay"],
-    leftover: false,
     ingredients: [
       i("Tel şehriye", 0.5, "su bardağı"),
       i("Domates", 1, "adet"),
@@ -194,7 +187,6 @@ export const corbalar = [
     cook: 60,
     servings: 4,
     tags: ["Tencere", "Etli"],
-    leftover: true,
     ingredients: [
       i("Kuzu kuşbaşı", 250, "g"),
       i("Yoğurt", 1, "su bardağı"),
@@ -220,7 +212,6 @@ export const corbalar = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Patates", 2, "adet"),
       i("Havuç", 2, "adet"),
@@ -247,7 +238,6 @@ export const corbalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Vejetaryen"],
-    leftover: false,
     ingredients: [
       i("Mantar", 250, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -273,7 +263,6 @@ export const corbalar = [
     cook: 40,
     servings: 4,
     tags: ["Tencere", "Bakliyat"],
-    leftover: true,
     ingredients: [
       i("Yeşil mercimek", 1, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -299,7 +288,6 @@ export const corbalar = [
     cook: 35,
     servings: 4,
     tags: ["Tencere", "Yoğurtlu"],
-    leftover: false,
     ingredients: [
       i("Haşlanmış nohut", 0.5, "su bardağı"),
       i("Pilavlık bulgur", 0.5, "su bardağı"),
@@ -324,7 +312,6 @@ export const corbalar = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Vejetaryen", "Kolay"],
-    leftover: true,
     ingredients: [
       i("Patates", 4, "adet"),
       i("Kuru soğan", 1, "adet"),
@@ -349,7 +336,6 @@ export const corbalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Vejetaryen"],
-    leftover: false,
     ingredients: [
       i("Brokoli", 1, "adet"),
       i("Patates", 1, "adet"),
@@ -373,7 +359,6 @@ export const corbalar = [
     cook: 20,
     servings: 4,
     tags: ["Tencere", "Vejetaryen", "Hafif"],
-    leftover: false,
     ingredients: [
       i("Kabak", 3, "adet"),
       i("Patates", 1, "adet"),

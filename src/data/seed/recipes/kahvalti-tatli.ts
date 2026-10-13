@@ -8,7 +8,6 @@ export const kahvaltilar = [
     cook: 15,
     servings: 2,
     tags: ["Tavada", "Hızlı", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Yumurta", 4, "adet"),
       i("Domates", 3, "adet"),
@@ -31,7 +30,6 @@ export const kahvaltilar = [
     cook: 10,
     servings: 2,
     tags: ["Tavada", "Hızlı", "Tek tabak"],
-    leftover: false,
     ingredients: [i("Sucuk", 150, "g"), i("Yumurta", 4, "adet"), st("Pul biber")],
     steps: [
       "Sucuğu ince dilimle, yağsız tavada iki yüzünü çevir.",
@@ -47,7 +45,6 @@ export const kahvaltilar = [
     cook: 10,
     servings: 2,
     tags: ["Yoğurtlu", "Hızlı", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Yumurta", 4, "adet"),
       i("Süzme yoğurt", 300, "g"),
@@ -71,7 +68,6 @@ export const kahvaltilar = [
     cook: 20,
     servings: 4,
     tags: ["Tavada", "Hamur işi", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Yufka", 3, "adet"),
       i("Beyaz peynir", 200, "g"),
@@ -92,7 +88,6 @@ export const kahvaltilar = [
     cook: 20,
     servings: 2,
     tags: ["Tavada", "Tek tabak", "Ekonomik"],
-    leftover: false,
     ingredients: [
       i("Patates", 2, "adet"),
       i("Yumurta", 4, "adet"),
@@ -115,7 +110,6 @@ export const kahvaltilar = [
     cook: 15,
     servings: 2,
     tags: ["Tavada", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Mısır unu", 3, "yemek kaşığı"),
       i("Tereyağı", 2, "yemek kaşığı"),
@@ -136,7 +130,6 @@ export const kahvaltilar = [
     cook: 15,
     servings: 2,
     tags: ["Tavada", "Kıymalı", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Kıyma", 200, "g"),
       i("Yumurta", 4, "adet"),
@@ -159,7 +152,6 @@ export const kahvaltilar = [
     cook: 15,
     servings: 2,
     tags: ["Tavada", "Vejetaryen", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Ispanak", 500, "g"),
       i("Yumurta", 4, "adet"),
@@ -182,7 +174,6 @@ export const kahvaltilar = [
     cook: 5,
     servings: 1,
     tags: ["Tavada", "Hızlı", "Tek tabak"],
-    leftover: false,
     ingredients: [
       i("Yumurta", 3, "adet"),
       i("Beyaz peynir", 50, "g"),
@@ -204,7 +195,6 @@ export const kahvaltilar = [
     cook: 20,
     servings: 4,
     tags: ["Hamur işi", "Hafta sonu"],
-    leftover: false,
     ingredients: [
       i("Un", 3, "su bardağı"),
       i("Kuru maya", 1, "paket"),
@@ -232,7 +222,6 @@ export const tatlilar = [
     cook: 40,
     servings: 6,
     tags: ["Sütlü", "Tencere"],
-    leftover: true,
     ingredients: [
       i("Süt", 1, "l"),
       i("Baldo pirinç", 0.5, "su bardağı"),
@@ -256,7 +245,6 @@ export const tatlilar = [
     cook: 25,
     servings: 6,
     tags: ["Tencere", "Kolay"],
-    leftover: true,
     ingredients: [
       i("İrmik", 2, "su bardağı"),
       i("Tereyağı", 125, "g"),
@@ -278,7 +266,6 @@ export const tatlilar = [
     cook: 35,
     servings: 8,
     tags: ["Fırında", "Şerbetli"],
-    leftover: true,
     ingredients: [
       i("Yumurta", 3, "adet"),
       i("Toz şeker", 3, "su bardağı"),
@@ -305,7 +292,6 @@ export const tatlilar = [
     cook: 60,
     servings: 6,
     tags: ["Tencere", "Mevsiminde"],
-    leftover: true,
     ingredients: [
       i("Bal kabağı", 1, "kg"),
       i("Toz şeker", 1.5, "su bardağı"),
@@ -326,7 +312,6 @@ export const tatlilar = [
     cook: 20,
     servings: 6,
     tags: ["Sütlü", "Tencere", "Kolay"],
-    leftover: true,
     ingredients: [
       i("Süt", 1, "l"),
       i("Toz şeker", 1, "su bardağı"),

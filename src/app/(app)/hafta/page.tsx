@@ -120,7 +120,7 @@ export default function HaftaPage() {
             ? {
                 date: day.date,
                 hasMain: !!day.menu.ana,
-                leftovers: day.leftoverOut,
+                leftover: day.leftover && !day.isPast ? { choice: day.leftover.choice, kind: day.leftover.outcome.kind } : null,
                 ateOut: day.ateOut,
                 approved: !!me && day.approvals.includes(me.id),
                 filled: day.filled,

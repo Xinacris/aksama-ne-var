@@ -5,7 +5,8 @@ import type { Activity, PrepTask, Recipe, Slot } from "@/data/models";
 import { SLOTS } from "@/data/models";
 import { approvalLabel, approvalState, viewActivity, type ApprovalState } from "@/domain/activity";
 import { addDays, clockTime, formatDuration, longDate } from "@/domain/dates";
-import { dayFor, leftoverFor, menuFor, menuItems, menuLine, menuTitle, type Leftover } from "@/domain/plan";
+import { dayFor, menuFor, menuItems, menuLine, menuTitle } from "@/domain/plan";
+import { lunchOn, type EveningLeftover } from "@/domain/leftovers";
 import { offsetLabel, reminderMeta, reminderSentence, topReminder } from "@/domain/prep";
 import { recipeLabel } from "@/domain/shopping";
 import { lowerFirstTr } from "@/lib/text";
@@ -51,7 +52,8 @@ export interface TodayModel {
   } | null;
   ateOut: boolean;
   returnedNames: string[];
-  leftover: Leftover | null;
+  /** Yesterday's dinner, eaten for lunch today. */
+  leftover: EveningLeftover | null;
   tomorrow: { line: string; sub: string; avatarId: string | null; date: string } | null;
 }
 
@@ -148,7 +150,7 @@ export function useToday(): TodayModel {
       tonight,
       ateOut,
       returnedNames: (day?.returnedRecipeIds ?? []).map((id) => byId.get(id)?.name).filter((x): x is string => !!x),
-      leftover: leftoverFor(st, today, people.length),
+      leftover: state.household ? lunchOn(st, state.household, today, people.length, today) : null,
       tomorrow,
     };
   }, [state]);

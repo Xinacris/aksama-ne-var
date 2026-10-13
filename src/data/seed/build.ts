@@ -1,6 +1,7 @@
 import { slugify } from "@/lib/text";
 import type { Course, Ingredient, PrepItem, PrepOffset, Recipe, Unit } from "../models";
 import { catalogEntry } from "./ingredients";
+import { LEFTOVER_DEFAULTS } from "./leftovers";
 
 export const SEED_TIMESTAMP = "2026-01-01T00:00:00.000Z";
 
@@ -37,7 +38,6 @@ export interface RecipeSpec {
   timeNote?: string;
   servings: number;
   tags: string[];
-  leftover: boolean;
   freezer?: string;
   source?: string;
   ingredients: Ingredient[];
@@ -46,8 +46,11 @@ export interface RecipeSpec {
 }
 
 export function recipe(s: RecipeSpec): Recipe {
+  const id = slugify(s.name);
+  const leftover = LEFTOVER_DEFAULTS[id];
+  if (!leftover) throw new Error(`No leftover default for "${id}" — add it to seed/leftovers.ts`);
   return {
-    id: slugify(s.name),
+    id,
     householdId: null,
     name: s.name,
     ...(s.shortName ? { shortName: s.shortName } : {}),
@@ -60,7 +63,8 @@ export function recipe(s: RecipeSpec): Recipe {
     ingredients: s.ingredients,
     prepItems: s.prepItems ?? [],
     steps: s.steps,
-    leftoverFriendly: s.leftover,
+    leftoverPolicy: leftover.policy,
+    leftoverDays: leftover.days ?? 2,
     freezerItem: s.freezer ?? null,
     ...(s.source ? { source: s.source } : {}),
     createdBy: null,
