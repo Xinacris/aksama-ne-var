@@ -29,3 +29,17 @@ Deploy: https://aksama-ne-var.vercel.app (Vercel production alias; verified 200 
 
 DONE — live: https://aksama-ne-var.vercel.app · local: npm install && npm run dev
 Demo accounts: ali@demo.ev / zeynep@demo.ev · password demo1234 (or "Örnek evle dene · Ali ve Zeynep" on the login page)
+
+## Round 2
+
+Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
+
+- [ ] R1. Read the codebase; plan data-model changes in DECISIONS.md; storage migration scaffold + tests.
+- [ ] R2. Import domain: URL detection, adapters (TikTok, YouTube, Instagram, schema.org web), rule-based parser + fixtures.
+- [ ] R3. Import server route: Claude Haiku path with validation/retry, graceful no-key mode, rate limit, tests.
+- [ ] R4. Import UI: "Linkten ekle", paste fallback, draft review in existing form, source credit, share target manifest; e2e.
+- [ ] R5. Leftover model: recipe defaults (data for the 100 recipes), household lunch setting, migration, rule tests.
+- [ ] R6. Leftover UI: Bugün card overrides, "dolapta" items, drag into Hafta, shopping list skip; e2e.
+- [ ] R7. Cooking mode core: route, prep checklist, steps, dish tabs, resume; tests.
+- [ ] R8. Cooking mode extras: multiple timers with persistence, wake lock, sync/activity, finish screen → leftover question; e2e.
+- [ ] R9. Final: Supabase schema + migration doc updated, docs/IMPORT.md, BACKLOG.md, DEMO.md, screenshots checked, all scripts green, push, check Vercel status.

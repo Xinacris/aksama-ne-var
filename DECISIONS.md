@@ -73,3 +73,17 @@ One line each: decision — reason.
 - A new tab inherits the last login; the invite page offers "Farklı bir hesapla katıl" (logs out only this tab) so the two-tab demo works from one browser.
 - Logout goes through `/giris?cikis=1`, so no guarded page can redirect back to itself with `?next=`.
 - E2E: journey (both viewports, two pages in one context, clock pinned to Mon 12 Oct 10:00 Istanbul), board DnD with mouse + keyboard (desktop), axe on every main screen in light and dark (wcag2a/aa, 21a/aa) — all green.
+
+## Round 2
+
+Data-model plan (each change ships with a versioned migration in `src/data/migrations.ts` + a unit test, and is mirrored in `supabase/schema.sql`):
+
+- v3 — Recipe gets `sourceUrl`, `sourceAuthor`, `sourcePlatform` (instagram/youtube/tiktok/web); old link-shaped `source` text moves to `sourceUrl` — credit needs the link and the creator separately; `source` stays a free-text note ("Annemin defteri").
+- v3 — New `importLog` table (household, platform, path `llm`|`rules`, by, time) for "Bu ay N tarif içe aktarıldı" in Ayarlar; it stores no link or caption — usage counting needs neither, and captions are someone else's text.
+- v4 — Recipe `leftoverFriendly: boolean` becomes `leftoverPolicy` (`none` | `lunch` | `store`) + `leftoverDays` (1–4, default 2); old custom recipes: true → `lunch`, false → `none` (exactly the old behaviour). Built-in defaults are a data table (`src/data/seed/leftovers.ts`), not code.
+- v4 — Household gets `lunchAtHome` (`yes` | `no` | `some`) + `lunchDays` (weekday numbers, 0 = Pazar); default `yes` keeps today's "Öğlen · …" behaviour.
+- v4 — PlanDay `leftovers: boolean` becomes `leftoverChoice` (null = follow defaults, or `none` | `lunch` | `fridge` | `discard` | `eaten`); old true → `lunch`, false → `none`, so stored weeks look exactly as before. The effective leftover is derived (pure rule in `src/domain/leftovers.ts`), never stored twice.
+- v4 — PlanItem `source` gains `leftover`, plus optional `leftoverFrom` (the evening it was cooked): a dolapta dish dropped onto a day is a normal plan item, so menus/board/Bugün need no special casing; list, prep tasks, cook log and pantry use skip it.
+- v5 — New `cookingSessions` table (household, key = menu date or recipe id, user, phase, per-dish step positions, checked ingredients, timers with absolute `endsAt`, started/finished) — syncs to the other tab through the normal change bus and survives reloads.
+- Activity gains `leftover.set`, `cooking.started`, `cooking.finished`, `recipe.imported`; old rows stay valid (the enum only grows).
+- Import step durations: when the LLM returns a duration the step text lacks, it is appended as "(20 dk)" instead of adding a parallel `stepMinutes` array — the cooking mode parses durations from text anyway, and the form stays one textarea per step.
