@@ -59,5 +59,6 @@ Spec: PROMPT-v2.1.md. Continue from the first unchecked P-item.
   - `src/server/llm/{types,prompt,validate,claude,index}.ts`; `src/server/import/llm.ts` removed. Response gains `provider`; `importLog.path` → `provider` (migration v6 + test, schema.sql + SUPABASE_MIGRATION.md).
 - [x] P2. Gemini implementation with structured output; selection order and fall-through; unit + privacy tests.
   - `src/server/llm/gemini.ts` (REST `generateContent`, `responseSchema` from the shared JSON Schema). `tests/unit/import/providers.test.ts`: selection ×4, Gemini request shape + model override, shared prompt/validator, fall-through on 429 / RESOURCE_EXHAUSTED / invalid JSON (one retry) / timeout / 503, overall deadline, no caption in logs, privacy body check. 404 tests green.
-- [ ] P3. Ayarlar usage line with provider split; docs/IMPORT.md and .env.example updated.
+- [x] P3. Ayarlar usage line with provider split; docs/IMPORT.md and .env.example updated.
+  - "Bu ay N tarif içe aktarıldı (x Gemini, y Claude, z kural)." (`src/domain/import/usage.ts`, component test). IMPORT.md: provider order, fall-through, env vars, AI Studio key, free-tier data note, adding a provider. `.env.example` (un-ignored), README env table, DEMO note.
 - [ ] P4. Final: all scripts and e2e green, push, check Vercel status.
