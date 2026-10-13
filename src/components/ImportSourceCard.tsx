@@ -20,8 +20,9 @@ function hostOf(url: string): string {
 
 /** "Kaynak: @mutfakdefteri · TikTok" — credit line for imported recipes. */
 export function sourceCredit(src: { platform?: SourcePlatform; author?: string | null; url: string }): string {
-  const who = src.author || hostOf(src.url);
-  return src.platform && src.platform !== "web" ? `Kaynak: ${who} · ${PLATFORM_LABEL[src.platform]}` : `Kaynak: ${who}`;
+  const platform = src.platform && src.platform !== "web" ? PLATFORM_LABEL[src.platform] : null;
+  if (!src.author) return `Kaynak: ${platform ?? hostOf(src.url)}`;
+  return platform ? `Kaynak: ${src.author} · ${platform}` : `Kaynak: ${src.author}`;
 }
 
 /** Link card on the import screen: platform, creator, link and the platform's thumbnail when it gives one. */

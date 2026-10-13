@@ -58,3 +58,13 @@ describe("toRecipeDraft timing", () => {
     expect(toRecipeDraft({ ...base, totalMinutes: null, steps: [] }, null).cookMinutes).toBe("30");
   });
 });
+
+describe("source credit", () => {
+  it("names the creator and platform, without repeating the host", async () => {
+    const { sourceCredit } = await import("@/components/ImportSourceCard");
+    expect(sourceCredit({ platform: "tiktok", author: "@mutfakdefteri", url: "https://www.tiktok.com/@mutfakdefteri/video/1" })).toBe("Kaynak: @mutfakdefteri · TikTok");
+    expect(sourceCredit({ platform: "instagram", author: null, url: "https://www.instagram.com/reel/C7x/" })).toBe("Kaynak: Instagram");
+    expect(sourceCredit({ platform: "web", author: "Ayşe Mutfakta", url: "https://ornek.com/x" })).toBe("Kaynak: Ayşe Mutfakta");
+    expect(sourceCredit({ platform: "web", author: null, url: "https://www.ornek.com/x" })).toBe("Kaynak: ornek.com");
+  });
+});

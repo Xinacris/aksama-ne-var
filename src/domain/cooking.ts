@@ -118,8 +118,10 @@ export function newTimer(args: { id: string; recipe: Recipe; step: number; secon
 }
 
 /** Seconds left; computed from the end time, so a reload or another tab shows the same thing. */
-export function remainingSeconds(t: Pick<CookingTimer, "endsAt">, now: Date): number {
-  return Math.max(0, Math.ceil((Date.parse(t.endsAt) - now.getTime()) / 1000));
+export function remainingSeconds(t: Pick<CookingTimer, "endsAt"> & { seconds?: number }, now: Date): number {
+  const left = Math.max(0, Math.ceil((Date.parse(t.endsAt) - now.getTime()) / 1000));
+  // A render clock up to a second old must not show "20:01" for a 20-minute timer.
+  return t.seconds ? Math.min(t.seconds, left) : left;
 }
 
 export function isFinished(t: Pick<CookingTimer, "endsAt">, now: Date): boolean {
