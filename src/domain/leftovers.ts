@@ -127,8 +127,8 @@ export function fridgeItems(state: PlanState, household: LunchSetting, todayIso:
 }
 
 /** "Perşembe'ye kadar" / "Bugüne kadar" / "Yarına kadar". */
-export function useByLabel(useBy: string, todayIso: string): string {
-  if (useBy === todayIso) return "Bugün bitirilmeli";
+export function keepUntilLabel(useBy: string, todayIso: string): string {
+  if (useBy === todayIso) return "Bugüne kadar";
   if (useBy === addDays(todayIso, 1)) return "Yarına kadar";
   return `${dative(dayName(useBy))} kadar`;
 }

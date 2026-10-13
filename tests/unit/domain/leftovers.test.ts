@@ -10,7 +10,7 @@ import {
   lunchOn,
   policyMeta,
   resolveLeftover,
-  useByLabel,
+  keepUntilLabel,
   type LunchSetting,
 } from "@/domain/leftovers";
 import { addToPlan, markCooked, placeLeftover, rollover, type PlanState } from "@/domain/plan";
@@ -165,9 +165,9 @@ describe("built-in defaults are data", () => {
     expect(policyMeta(R("Kuru fasulye"))).toBe("artarsa 3 gün saklanır");
     expect(policyMeta(R("Tavuk sote"))).toBe("ertesi gün öğlen yenir");
     expect(policyMeta(R("Cacık"))).toBeNull();
-    expect(useByLabel(MON, MON)).toBe("Bugün bitirilmeli");
-    expect(useByLabel(TUE, MON)).toBe("Yarına kadar");
-    expect(useByLabel("2026-10-15", MON)).toBe("Perşembe'ye kadar");
-    expect(useByLabel("2026-10-16", MON)).toBe("Cuma'ya kadar");
+    expect(keepUntilLabel(MON, MON)).toBe("Bugüne kadar");
+    expect(keepUntilLabel(TUE, MON)).toBe("Yarına kadar");
+    expect(keepUntilLabel("2026-10-15", MON)).toBe("Perşembe'ye kadar");
+    expect(keepUntilLabel("2026-10-16", MON)).toBe("Cuma'ya kadar");
   });
 });

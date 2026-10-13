@@ -6,7 +6,7 @@ import { SLOTS } from "@/data/models";
 import { approvalLabel, approvalState, viewActivity, type ApprovalState } from "@/domain/activity";
 import { addDays, clockTime, formatDuration, longDate } from "@/domain/dates";
 import { dayFor, menuFor, menuItems, menuLine, menuTitle } from "@/domain/plan";
-import { lunchOn, type EveningLeftover } from "@/domain/leftovers";
+import { eveningLeftover, fridgeItems, type EveningLeftover } from "@/domain/leftovers";
 import { offsetLabel, reminderMeta, reminderSentence, topReminder } from "@/domain/prep";
 import { recipeLabel } from "@/domain/shopping";
 import { lowerFirstTr } from "@/lib/text";
@@ -49,11 +49,16 @@ export interface TodayModel {
     rows: MenuRow[];
     mainId: string | null;
     approval: ApprovalState;
+    cooked: boolean;
+    /** Tonight was cooked: the leftover question. */
+    leftover: EveningLeftover | null;
   } | null;
   ateOut: boolean;
   returnedNames: string[];
-  /** Yesterday's dinner, eaten for lunch today. */
+  /** Yesterday's dinner: lunch today, dolapta, or a choice someone made. */
   leftover: EveningLeftover | null;
+  /** Older dolapta dishes still good today (yesterday's is `leftover`). */
+  fridge: EveningLeftover[];
   tomorrow: { line: string; sub: string; avatarId: string | null; date: string } | null;
 }
 
@@ -88,6 +93,8 @@ export function useToday(): TodayModel {
         })()
       : null;
 
+    const lunchSetting = state.household;
+
     // Tonight
     const day = dayFor(planDays, today);
     const ateOut = day?.status === "ate-out";
@@ -113,8 +120,16 @@ export function useToday(): TodayModel {
             }),
             mainId: (menu.ana ?? items[0]).recipeId,
             approval: approvalState(day, me?.id ?? "", people),
+            cooked: day?.status === "cooked",
+            leftover: day?.status === "cooked" && lunchSetting ? eveningLeftover(st, lunchSetting, today, people.length, today) : null,
           }
         : null;
+
+    // Yesterday's leftovers: shown when they matter (lunch, dolapta) or someone chose something.
+    const yesterday = addDays(today, -1);
+    const yEv = lunchSetting ? eveningLeftover(st, lunchSetting, yesterday, people.length, today) : null;
+    const yesterdayLeftover =
+      yEv && yEv.cooked && !yEv.plannedDate && (yEv.outcome.kind === "lunch" || yEv.outcome.kind === "fridge" || yEv.choice !== null) ? yEv : null;
 
     // Tomorrow
     const tDate = addDays(today, 1);
@@ -150,7 +165,8 @@ export function useToday(): TodayModel {
       tonight,
       ateOut,
       returnedNames: (day?.returnedRecipeIds ?? []).map((id) => byId.get(id)?.name).filter((x): x is string => !!x),
-      leftover: state.household ? lunchOn(st, state.household, today, people.length, today) : null,
+      leftover: yesterdayLeftover,
+      fridge: lunchSetting ? fridgeItems(st, lunchSetting, today, people.length).filter((f) => f.fromDate !== yesterday) : [],
       tomorrow,
     };
   }, [state]);

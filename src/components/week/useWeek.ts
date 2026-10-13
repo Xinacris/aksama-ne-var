@@ -9,7 +9,7 @@ import { dayFor, dayNote, freezerLines, menuFor, summarizeWeek, type DayNote, ty
 import { daysSinceCooked, lastCookedMap } from "@/domain/rotation";
 import { matchNote } from "@/components/MatchList";
 import { recipesMap, selectList, useApp, usersMap } from "@/store/app";
-import { eveningLeftover, lunchOn, type EveningLeftover } from "@/domain/leftovers";
+import { eveningLeftover, fridgeItems, lunchOn, type EveningLeftover } from "@/domain/leftovers";
 
 export interface SlotCell {
   item: PlanItem;
@@ -51,6 +51,8 @@ export interface WeekModel {
   freezer: FreezerLine[];
   matches: AsideMatch[];
   frequent: Recipe[];
+  /** Dolapta dishes not yet put on an evening. */
+  fridge: EveningLeftover[];
 }
 
 export function useWeek(offsetWeeks: number): WeekModel {
@@ -126,6 +128,7 @@ export function useWeek(offsetWeeks: number): WeekModel {
       freezer: freezerLines(prepTasks, dates, byId, usersMap(people)),
       matches: asideMatches,
       frequent,
+      fridge: household ? fridgeItems(state, household, today, people.length).filter((f) => !f.plannedDate) : [],
     };
   }, [st, offsetWeeks]);
 }

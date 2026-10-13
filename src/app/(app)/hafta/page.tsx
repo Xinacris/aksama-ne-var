@@ -22,7 +22,7 @@ export default function HaftaPage() {
   const me = useApp((x) => x.me);
   const { partner } = usePeople();
   const [pick, setPick] = useState<{ date: string; slot: Slot } | null>(null);
-  const [place, setPlace] = useState<{ recipe: Recipe; match?: Match } | null>(null);
+  const [place, setPlace] = useState<{ recipe: Recipe; match?: Match; leftover?: { fromDate: string; useBy: string } } | null>(null);
   const [tile, setTile] = useState<{ itemId: string; date: string; slot: Slot; recipe: Recipe | null } | null>(null);
   const [day, setDay] = useState<DayModel | null>(null);
 
@@ -98,9 +98,12 @@ export default function HaftaPage() {
 
       <div className={s.boardWrap}>
         {desktop ? (
-          <Board days={week.days} matches={week.matches} frequent={week.frequent} handlers={handlers} />
+          <Board days={week.days} matches={week.matches} frequent={week.frequent} fridge={week.fridge} handlers={handlers} />
         ) : (
-          <DayList days={week.days} matches={week.matches} frequent={week.frequent} handlers={handlers} onPlace={(recipe, match) => setPlace({ recipe, match })} />
+          <DayList days={week.days} matches={week.matches} frequent={week.frequent} handlers={handlers} fridge={week.fridge}
+            onPlace={(recipe, match) => setPlace({ recipe, match })}
+            onPlaceLeftover={(f) => f.outcome.kind === "fridge" && setPlace({ recipe: f.recipe, leftover: { fromDate: f.fromDate, useBy: f.outcome.useBy } })}
+          />
         )}
       </div>
 
