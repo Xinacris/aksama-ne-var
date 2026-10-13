@@ -99,6 +99,16 @@ export const prepItemSchema = z.object({
 });
 export type PrepItem = z.infer<typeof prepItemSchema>;
 
+export const SOURCE_PLATFORMS = ["instagram", "youtube", "tiktok", "web"] as const;
+export const sourcePlatformSchema = z.enum(SOURCE_PLATFORMS);
+export type SourcePlatform = z.infer<typeof sourcePlatformSchema>;
+export const PLATFORM_LABEL: Record<SourcePlatform, string> = {
+  instagram: "Instagram",
+  youtube: "YouTube",
+  tiktok: "TikTok",
+  web: "Web",
+};
+
 export const recipeSchema = z.object({
   id: z.string().min(1),
   /** null = built-in recipe shared by all households. */
@@ -119,7 +129,13 @@ export const recipeSchema = z.object({
   leftoverFriendly: z.boolean(),
   /** Canonical ingredient name that comes out of the freezer, if any. */
   freezerItem: z.string().nullable(),
+  /** Free-text origin: "Annemin defteri". Links live in `sourceUrl`. */
   source: z.string().optional(),
+  /** Imported or linked recipe: the original post, credited on the recipe page. */
+  sourceUrl: z.string().url().optional(),
+  /** Creator handle or name as the platform reports it ("@mutfaktaali"). */
+  sourceAuthor: z.string().optional(),
+  sourcePlatform: sourcePlatformSchema.optional(),
   /** Created from an unknown name during onboarding; details not filled yet. */
   stub: z.boolean().optional(),
   createdBy: uuid.nullable(),

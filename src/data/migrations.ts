@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 2;
+export const CURRENT_SCHEMA_VERSION = 3;
 
 export interface Migration {
   version: number;
@@ -21,9 +21,37 @@ function readJsonArray(store: KeyValueStore, key: string): Record<string, unknow
   }
 }
 
+type Row = Record<string, unknown>;
+
+/**
+ * Rewrite every row of a stored table. Missing or unreadable tables are left
+ * alone (the table layer quarantines corrupt data on read).
+ */
+export function mapRows(store: KeyValueStore, table: string, fn: (row: Row) => Row): void {
+  const key = `${STORAGE_PREFIX}t:${table}`;
+  const rows = readJsonArray(store, key);
+  if (!rows) return;
+  store.setItem(key, JSON.stringify(rows.map((r) => (r && typeof r === "object" ? fn(r) : r))));
+}
+
+/** Platform of a recipe link, frozen here so later detector changes never rewrite history. */
+function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
+  let host = "";
+  try {
+    host = new URL(url).hostname.replace(/^www\./, "").replace(/^m\./, "");
+  } catch {
+    return "web";
+  }
+  if (host === "instagram.com" || host === "instagr.am") return "instagram";
+  if (host === "youtube.com" || host === "youtu.be" || host === "music.youtube.com") return "youtube";
+  if (host.endsWith("tiktok.com")) return "tiktok";
+  return "web";
+}
+
 /**
  * Ordered list of schema migrations. Version 1 is the initial layout;
- * version 2 adds `dinnerTime` to households (default 19:30, as in the design).
+ * version 2 adds `dinnerTime` to households (default 19:30, as in the design);
+ * version 3 moves link-shaped recipe `source` text into `sourceUrl` + `sourcePlatform`.
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -40,6 +68,18 @@ export const MIGRATIONS: Migration[] = [
       if (!rows) return;
       store.setItem(key, JSON.stringify(rows.map((r) => ({ dinnerTime: "19:30", ...r }))));
     },
+  },
+  {
+    version: 3,
+    description: "Recipes keep their link, author and platform separately (recipe import)",
+    up: (store) =>
+      mapRows(store, "recipes", (r) => {
+        const src = typeof r.source === "string" ? r.source.trim() : "";
+        if (r.sourceUrl || !/^https?:\/\/\S+$/i.test(src)) return r;
+        const { source: _old, ...rest } = r;
+        void _old;
+        return { ...rest, sourceUrl: src, sourcePlatform: platformOf(src) };
+      }),
   },
 ];
 
