@@ -67,3 +67,11 @@ Spec: PROMPT-v2.1.md. Continue from the first unchecked P-item.
 
 ROUND 2.1 DONE — live: https://aksama-ne-var.vercel.app
 Add GEMINI_API_KEY in Vercel to make import free; ANTHROPIC_API_KEY is now an optional fallback.
+
+## Follow-ups after Round 2.1 (2026-10-13)
+
+- [x] Cooking mode: "Başlamadan önce · N eksik" only when something is missing (prep-ahead not done, ingredients neither bought nor evde var), Evde var / Listeye ekle, "Yine de başla"; otherwise straight to step 1. "Malzemeler" sheet in the step view. Timing label "Pişirmeden 1 sa önce" everywhere. Button reads "Başla" once nothing is missing (screen stays).
+- [x] Leftovers never guessed: new, imported and the 100 built-in recipes default to "Artmaz / hepsi biter" (built-ins keep their shelf life as `KEEP_DAYS`), migration v7; Afiyet olsun starts on "Hiç kalmadı"; "Artarsa ne olur?" is a chip radio group, "Kaç gün içinde" only for Saklanır.
+- [x] Dark mode selects: token colours on select/option (chosen option olive-soft), `color-scheme` per theme; `e2e/selects.spec.ts` checks every select in four theme modes; `tarif-yeni-select` screenshot; axe on the form's Saklanır state.
+- [x] Import draft quality: Kaynak always filled ("YouTube · Yemek.com") on every path incl. paste fallback, thumbnail stored; vocabulary tags (LLM fields + rule keywords, unknown values dropped); Pişirme = heat only, new Bekleme (`waitMinutes`, migration v8), gentle "Süre uzun görünüyor, kontrol et" hint; fixtures 13–15.
+  - Green before push: lint 0, typecheck 0, 429 unit/component tests, 44 e2e passed (4 desktop-only skipped on mobile), build OK.

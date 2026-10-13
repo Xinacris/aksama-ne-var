@@ -87,7 +87,7 @@ Ayarlar then counts imports by provider ("Bu ay 3 tarif içe aktarıldı (2 Gemi
   done ("Köfte harcını yoğur · Pişirmeden 1 sa önce · Yaptım"), then ingredients neither bought
   in Liste nor "evde var" — each with **Evde var** (and **Listeye ekle** when it isn't on the list
   yet). Tap **Evde var** on one: it disappears, Liste updates on Zeynep's side too. Nothing
-  blocks cooking: **Yine de başla**.
+  blocks cooking: **Yine de başla** (it becomes **Başla** once nothing is missing; the screen stays).
 - If nothing is missing, Pişirmeye başla opens step 1 directly. To see it: Tarif › Kuru fasulye ›
   "kuru fasulye · Eksik · ekle", tick Kuru fasulye, Biber salçası and Tereyağı in Liste, then
   **Pişirmeye başla** on the recipe.
