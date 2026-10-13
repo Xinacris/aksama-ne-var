@@ -19,12 +19,17 @@ npm run dev        # http://localhost:3000
 ```
 
 Node 24 LTS (`.nvmrc`). No backend: everything is stored in the browser. **No environment variables
-are required.** Two optional server-side keys improve recipe import (details in [docs/IMPORT.md](docs/IMPORT.md)):
+are required.** Optional server-side keys improve recipe import (details in [docs/IMPORT.md](docs/IMPORT.md),
+template in [.env.example](.env.example)):
 
 | Variable | Optional? | Effect |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | optional | Claude (Haiku) turns a caption into a clean recipe draft; without it a rule-based Turkish parser pre-fills the form |
+| `GEMINI_API_KEY` | optional (recommended) | Gemini (free tier, `gemini-3.1-flash-lite`) turns a caption into a clean recipe draft; tried first |
+| `GEMINI_MODEL` | optional | overrides the Gemini model |
+| `ANTHROPIC_API_KEY` | optional | Claude (Haiku) as the fallback when Gemini is unset, over quota or fails |
 | `YOUTUBE_API_KEY` | optional | reads full YouTube descriptions; without it only the title arrives and the paste box opens |
+
+Without any LLM key a rule-based Turkish parser pre-fills the form.
 
 | Script | What it does |
 |---|---|

@@ -44,8 +44,9 @@ To start fresh: Ayarlar › **Tüm verileri sıfırla**, then **Hesap oluştur**
 
 # Round 2 (about 4 minutes)
 
-No setup needed: the import works without keys (rule-based reading). With `ANTHROPIC_API_KEY`
-set in Vercel the same flow uses Claude and the review note says so.
+No setup needed: the import works without keys (rule-based reading). With `GEMINI_API_KEY` (free)
+or `ANTHROPIC_API_KEY` set in Vercel the same flow uses the LLM and the review note says so;
+Ayarlar then counts imports by provider ("Bu ay 3 tarif içe aktarıldı (2 Gemini, 1 kural)").
 
 **A. Import with the paste fallback (1.5 min)** — **Tarifler › Linkten ekle**
 - Paste an Instagram Reel link (any `instagram.com/reel/…`) → **Taslağı çıkar**. A link card
