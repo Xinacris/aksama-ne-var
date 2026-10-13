@@ -1,7 +1,7 @@
 import { parseRecipeText } from "@/domain/import/parseText";
 import type { ImportedRecipe } from "@/domain/import/types";
 import type { SourcePlatform } from "@/data/models";
-import { ProviderError, type LlmProvider, type ProviderInput, type ProviderName } from "./types";
+import { ProviderError, type LlmProvider, type ProviderFallback, type ProviderInput, type ProviderName } from "./types";
 import { validateDraft } from "./validate";
 
 export * from "./types";
@@ -22,7 +22,7 @@ export interface StructureOptions {
   signal?: AbortSignal;
   timeoutMs?: number;
   /** Called once per provider that gave up (for counting/logging; never with the caption). */
-  onFailure?: (provider: LlmProvider["name"], kind: ProviderError["kind"]) => void;
+  onFailure?: (fallback: ProviderFallback) => void;
 }
 
 /** What LLM providers receive: caption text (title as its first line when not already in it) + platform. */
@@ -32,6 +32,7 @@ export function providerInput(text: string, meta: StructureMeta): ProviderInput 
 }
 
 async function attempt(p: LlmProvider, input: ProviderInput, opts: StructureOptions): Promise<ImportedRecipe> {
+  let last: ProviderError | null = null;
   for (let retry = 0; retry < 2; retry++) {
     const signals = [AbortSignal.timeout(opts.timeoutMs ?? PROVIDER_TIMEOUT_MS), ...(opts.signal ? [opts.signal] : [])];
     const signal = AbortSignal.any(signals);
@@ -42,12 +43,14 @@ async function attempt(p: LlmProvider, input: ProviderInput, opts: StructureOpti
       if (e instanceof ProviderError && e.kind !== "invalid") throw e;
       if (signal.aborted) throw new ProviderError("timeout");
       if (!(e instanceof ProviderError)) throw new ProviderError("error");
+      last = e;
       continue; // invalid → one retry
     }
     const draft = validateDraft(raw);
     if (draft) return draft;
+    last = new ProviderError("invalid", undefined, "SCHEMA");
   }
-  throw new ProviderError("invalid");
+  throw last ?? new ProviderError("invalid");
 }
 
 /**
@@ -63,9 +66,10 @@ export async function structureRecipe(text: string, meta: StructureMeta, opts: S
     try {
       return { draft: await attempt(p, input, opts), provider: p.name };
     } catch (e) {
-      const kind = e instanceof ProviderError ? e.kind : "error";
-      console.warn(`[import] ${p.name} gave up (${kind}); trying next`);
-      opts.onFailure?.(p.name, kind);
+      const err = e instanceof ProviderError ? e : new ProviderError("error");
+      const fb: ProviderFallback = { provider: p.name, kind: err.kind, ...(err.status ? { status: err.status } : {}), ...(err.reason ? { reason: err.reason } : {}) };
+      console.warn(`[import] ${p.name} gave up (${fb.kind}${fb.status ? ` ${fb.status}` : ""}${fb.reason ? ` ${fb.reason}` : ""}); trying next`);
+      opts.onFailure?.(fb);
     }
   }
   return { draft: parseRecipeText(text, meta.title), provider: "rules" };

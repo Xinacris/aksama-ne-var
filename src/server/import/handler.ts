@@ -2,7 +2,7 @@ import { runImport, type Structurer } from "@/domain/import/pipeline";
 import { importRequestSchema } from "@/domain/import/types";
 import { claudeProvider, type MessagesClient } from "@/server/llm/claude";
 import { geminiProvider, type GeminiFetch } from "@/server/llm/gemini";
-import { structureRecipe, type LlmProvider } from "@/server/llm";
+import { structureRecipe, type LlmProvider, type ProviderFallback } from "@/server/llm";
 import { DailyLimiter } from "./rateLimit";
 
 export const IMPORT_TIMEOUT_MS = 15_000;
@@ -56,11 +56,12 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   // The household id is only the quota key; it never reaches a provider.
   const quotaKey = householdId || req.headers.get("x-forwarded-for")?.split(",")[0].trim() || "anon";
   let limited = false;
+  const fallbacks: ProviderFallback[] = [];
   const structure: Structurer | undefined = providers.length
     ? async (t, meta) => {
         const allowed = deps.limiter.take(quotaKey);
         if (!allowed) limited = true;
-        return structureRecipe(t, meta, { providers: allowed ? providers : [], signal });
+        return structureRecipe(t, meta, { providers: allowed ? providers : [], signal, onFailure: (f) => fallbacks.push(f) });
       }
     : undefined;
 
@@ -74,7 +75,8 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   try {
     const { result, counted } = await runImport({ url, text }, { fetch: routedFetch, env: { YOUTUBE_API_KEY: deps.env.YOUTUBE_API_KEY }, signal, structure });
     const message = limited && !result.message ? "Bugünlük akıllı içe aktarma sınırına ulaşıldı; taslağı basit okumayla hazırladık." : result.message;
-    return jsonResponse({ ...result, message, counted, llmAvailable: providers.length > 0 });
+    // `fallbacks`: which providers gave up and why (status codes only) — the same facts as the log line.
+    return jsonResponse({ ...result, message, counted, llmAvailable: providers.length > 0, fallbacks });
   } catch (e) {
     console.warn("[import] failed:", e instanceof Error ? e.name : "unknown");
     const timedOut = signal.aborted;

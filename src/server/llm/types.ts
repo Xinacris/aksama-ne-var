@@ -13,10 +13,26 @@ export interface ProviderInput {
 export type ProviderFailure = "quota" | "timeout" | "invalid" | "error";
 
 export class ProviderError extends Error {
-  constructor(readonly kind: ProviderFailure) {
+  /**
+   * `status`: the provider's HTTP status; `reason`: its error code ("NOT_FOUND",
+   * "INVALID_ARGUMENT", "RESOURCE_EXHAUSTED", "MAX_TOKENS"…). Never caption text.
+   */
+  constructor(
+    readonly kind: ProviderFailure,
+    readonly status?: number,
+    readonly reason?: string,
+  ) {
     super(`provider-${kind}`);
     this.name = "ProviderError";
   }
+}
+
+/** Why a provider was skipped, safe to log and to return: no caption, no prompt, no output. */
+export interface ProviderFallback {
+  provider: LlmProviderName;
+  kind: ProviderFailure;
+  status?: number;
+  reason?: string;
 }
 
 /**

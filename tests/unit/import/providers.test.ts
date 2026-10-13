@@ -156,12 +156,21 @@ describe("Gemini", () => {
 });
 
 describe("fall-through", () => {
-  it("Gemini 429 → Claude", async () => {
+  it("Gemini 429 → Claude; the response and log say why (status only)", async () => {
     const d = deps({ GEMINI_API_KEY: "g", ANTHROPIC_API_KEY: "a" }, vi.fn(async () => geminiQuota()));
     const body = await run(d);
     expect(body).toMatchObject({ provider: "claude", counted: { provider: "claude" } });
+    expect(body.fallbacks).toEqual([{ provider: "gemini", kind: "quota", status: 429, reason: "RESOURCE_EXHAUSTED" }]);
+    expect(String(warn.mock.calls.at(-1)?.[0])).toBe("[import] gemini gave up (quota 429 RESOURCE_EXHAUSTED); trying next");
     expect(d.gemini).toHaveBeenCalledTimes(1); // no retry on quota
     expect(d.create).toHaveBeenCalledTimes(1);
+  });
+
+  it("an unknown model (404 NOT_FOUND) is reported with its status and falls through", async () => {
+    const gemini = vi.fn(async () => json({ error: { code: 404, message: "models/x is not found", status: "NOT_FOUND" } }, 404));
+    const body = await run(deps({ GEMINI_API_KEY: "g" }, gemini));
+    expect(body.provider).toBe("rules");
+    expect(body.fallbacks).toEqual([{ provider: "gemini", kind: "error", status: 404, reason: "NOT_FOUND" }]);
   });
 
   it("RESOURCE_EXHAUSTED with another status code is quota too", async () => {
@@ -212,7 +221,7 @@ describe("fall-through", () => {
     const out = await structureRecipe(
       caption,
       { platform: "tiktok", title: null },
-      { providers: [geminiProvider({ apiKey: "g", fetch: gemini }), claude], timeoutMs: 20, onFailure: (p, kind) => failures.push(`${p}:${kind}`) },
+      { providers: [geminiProvider({ apiKey: "g", fetch: gemini }), claude], timeoutMs: 20, onFailure: (f) => failures.push(`${f.provider}:${f.kind}`) },
     );
     expect(out.provider).toBe("claude");
     expect(failures).toEqual(["gemini:timeout"]);
