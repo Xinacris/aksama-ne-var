@@ -22,8 +22,9 @@ vi.mock("next/link", () => ({
 
 afterEach(() => {
   cleanup();
-  localStorage.clear();
-  sessionStorage.clear();
+  // Server-side tests run in the node environment, without web storage.
+  globalThis.localStorage?.clear();
+  globalThis.sessionStorage?.clear();
   router.push.mockClear();
   router.replace.mockClear();
 });

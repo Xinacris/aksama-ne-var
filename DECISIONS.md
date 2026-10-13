@@ -94,3 +94,8 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - Ingredient amounts: ranges use the upper bound ("2-3 diş" → 3) so the list does not come up short; "1.000" is read as a thousand (Turkish thousands separator).
 - Catalog matching: exact catalog names first (short names like "Un" must be whole words, so "unutmayın" is not flour), then everyday aliases ("soğan" → Kuru soğan, "salça" → Domates salçası). Unknown items stay free text. Water is dropped from imported ingredients (never bought).
 - Caption reminders ("…çıkarmayı unutmayın") become prep-ahead items, not steps.
+- Claude import: `claude-haiku-5-5`, forced tool use (`tarif_taslagi`) with a JSON schema mirroring `importedRecipeSchema`, `max_tokens` 1500, SDK retries off and one explicit retry on invalid output, then the rule parser. Timeout 15 s for the whole request (platform fetch + LLM share one AbortSignal).
+- Rate limit: 30 LLM imports per household per day, in memory per server instance (keyed by household id, IP as fallback); over the limit the draft still comes from the rule parser with a calm note. Moves to a DB counter with Supabase.
+- The web adapter fetches arbitrary user links, so it goes through `guardedFetch`: http(s) only, DNS-resolved private/loopback/link-local addresses refused, redirects re-checked (max 3). Platform endpoints (TikTok/YouTube oEmbed, YouTube API) use plain fetch.
+- Logs never include caption text or the LLM's input/output — only error class names.
+- `src/server/import/*` holds the handler, kept out of `route.ts` because Next route files may only export route fields; the handler takes fetch/env/client as deps for tests.
