@@ -30,6 +30,10 @@ export interface RecipeDraft {
   leftoverFriendly: boolean;
   freezerItem: string;
   source: string;
+  /** Imported/linked recipe credit; not editable in the form, carried through. */
+  sourceUrl?: string;
+  sourceAuthor?: string;
+  sourcePlatform?: Recipe["sourcePlatform"];
 }
 
 export const emptyIngredient = (): IngredientDraft => ({ name: "", quantity: "", unit: "adet", side: "market", aisle: "Diğer" });
@@ -74,6 +78,9 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     leftoverFriendly: r.leftoverFriendly,
     freezerItem: r.freezerItem ?? "",
     source: r.source ?? "",
+    ...(r.sourceUrl ? { sourceUrl: r.sourceUrl } : {}),
+    ...(r.sourceAuthor ? { sourceAuthor: r.sourceAuthor } : {}),
+    ...(r.sourcePlatform ? { sourcePlatform: r.sourcePlatform } : {}),
   };
 }
 
@@ -147,6 +154,9 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       leftoverFriendly: d.leftoverFriendly,
       freezerItem: freezer,
       ...(d.source.trim() ? { source: d.source.trim() } : {}),
+      ...(d.sourceUrl ? { sourceUrl: d.sourceUrl } : {}),
+      ...(d.sourceAuthor ? { sourceAuthor: d.sourceAuthor } : {}),
+      ...(d.sourcePlatform ? { sourcePlatform: d.sourcePlatform } : {}),
     },
   };
 }

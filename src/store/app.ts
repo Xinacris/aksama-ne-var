@@ -9,6 +9,7 @@ import type {
   CookLog,
   Favorite,
   Household,
+  ImportLog,
   Match,
   Member,
   PantryItem,
@@ -63,6 +64,7 @@ export interface AppData {
   swipes: Swipe[];
   matches: Match[];
   activity: Activity[];
+  importLog: ImportLog[];
 }
 
 const EMPTY: AppData = {
@@ -81,6 +83,7 @@ const EMPTY: AppData = {
   swipes: [],
   matches: [],
   activity: [],
+  importLog: [],
 };
 
 export interface Notice {
@@ -101,6 +104,9 @@ export interface RecipeInput {
   leftoverFriendly: boolean;
   freezerItem: string | null;
   source?: string;
+  sourceUrl?: string;
+  sourceAuthor?: string;
+  sourcePlatform?: Recipe["sourcePlatform"];
 }
 
 export type InviteInfo =
@@ -163,7 +169,9 @@ export interface AppState extends AppData {
   completeTask(id: string): Promise<void>;
   undoTask(id: string): Promise<void>;
 
-  createRecipe(input: RecipeInput): Promise<Recipe>;
+  createRecipe(input: RecipeInput, opts?: { imported?: boolean }): Promise<Recipe>;
+  /** Count a produced import draft (usage shown in Ayarlar). Stores no link or caption. */
+  logImport(entry: { platform: ImportLog["platform"]; path: ImportLog["path"] }): Promise<void>;
   updateRecipe(id: string, input: RecipeInput): Promise<Recipe>;
   deleteRecipe(id: string): Promise<void>;
 
@@ -399,7 +407,7 @@ export const useApp = create<AppState>()((set, get) => {
           return;
         }
         const hid = household.id;
-        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, prepTasks, swipes, matches, activity] =
+        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, prepTasks, swipes, matches, activity, importLog] =
           await Promise.all([
             households.householdPeople(repos, hid),
             repos.recipes.list(hid),
@@ -414,6 +422,7 @@ export const useApp = create<AppState>()((set, get) => {
             repos.swipes.listSwipes(hid),
             repos.swipes.listMatches(hid),
             repos.activity.list(hid, 200),
+            repos.imports.list(hid),
           ]);
         set({
           me,
@@ -432,6 +441,7 @@ export const useApp = create<AppState>()((set, get) => {
           swipes,
           matches,
           activity,
+          importLog,
           status: "ready",
           today,
         });
@@ -723,13 +733,17 @@ export const useApp = create<AppState>()((set, get) => {
     },
 
     // ───────── recipes ─────────
-    async createRecipe(input) {
+    async createRecipe(input, opts) {
       const { me, household } = requireCtx();
       return run(async () => {
         const r = await ctx().repos.recipes.create({ ...input, householdId: household.id, createdBy: me.id, stub: false });
-        await log("recipe.created", { recipeId: r.id });
+        await log(opts?.imported ? "recipe.imported" : "recipe.created", { recipeId: r.id, platform: input.sourcePlatform ?? null });
         return r;
       });
+    },
+    async logImport(entry) {
+      const { me, household } = requireCtx();
+      await run(() => ctx().repos.imports.add({ householdId: household.id, platform: entry.platform, path: entry.path, createdBy: me.id }));
     },
     async updateRecipe(id, input) {
       return run(async () => {

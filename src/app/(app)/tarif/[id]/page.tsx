@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useRef, useState } from "react";
 import { Loading } from "@/components/Guard";
+import { sourceCredit } from "@/components/ImportSourceCard";
 import { IconCheck, IconChevronLeft, IconImport, IconMinus, IconMore, IconPlus } from "@/components/icons";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { StatusPill } from "@/components/ui/Chip";
@@ -139,7 +140,6 @@ function TarifInner() {
     };
   }
 
-  const sourceUrl = recipe.source && /^https?:\/\//.test(recipe.source) ? recipe.source : null;
   const creator = recipe.createdBy ? personById.get(recipe.createdBy) : undefined;
 
   return (
@@ -179,23 +179,23 @@ function TarifInner() {
 
       <PhotoPlaceholder dish={recipe.name} height={190} radius={24} className={s.photo} />
 
-      {recipe.source && (
+      {(recipe.sourceUrl || recipe.source) && (
         <div className={s.source}>
           <span className={s.sourceIcon}>
             <IconImport size={18} />
           </span>
           <span className={s.sourceText}>
-            <strong>{sourceUrl ? "Bağlantıdan eklendi" : recipe.source}</strong>
+            <strong>{recipe.sourceUrl ? sourceCredit({ platform: recipe.sourcePlatform, author: recipe.sourceAuthor, url: recipe.sourceUrl }) : recipe.source}</strong>
             {creator && (
               <span>
                 {" "}
-                · {creator.name}, {dayMonth(toIsoDate(new Date(recipe.createdAt)))}
+                · {creator.name} ekledi, {dayMonth(toIsoDate(new Date(recipe.createdAt)))}
               </span>
             )}
           </span>
-          {sourceUrl && (
-            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className={s.sourceLink}>
-              Kaynak
+          {recipe.sourceUrl && (
+            <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className={s.sourceLink}>
+              {recipe.sourcePlatform === "web" || !recipe.sourcePlatform ? "Sayfayı aç" : "Videoyu aç"}
             </a>
           )}
         </div>

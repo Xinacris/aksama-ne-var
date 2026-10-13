@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { IconHeart, IconHeartOutline, IconPlus, IconSearch } from "@/components/icons";
+import { IconHeart, IconHeartOutline, IconLink, IconPlus, IconSearch } from "@/components/icons";
 import { ButtonLink } from "@/components/ui/Button";
 import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
@@ -66,10 +66,16 @@ export default function TariflerPage() {
           <span className={s.eyebrow}>{recipes.length} tarif · evin defteri</span>
           <h1 className={s.title}>Tarifler</h1>
         </div>
-        <ButtonLink href="/tarifler/yeni" size="sm" pill>
-          <IconPlus size={16} />
-          Yeni tarif
-        </ButtonLink>
+        <div className={s.headActions}>
+          <ButtonLink href="/tarifler/ice-aktar" size="sm" pill variant="secondary">
+            <IconLink size={16} />
+            Linkten ekle
+          </ButtonLink>
+          <ButtonLink href="/tarifler/yeni" size="sm" pill>
+            <IconPlus size={16} />
+            Yeni tarif
+          </ButtonLink>
+        </div>
       </div>
 
       <TextField

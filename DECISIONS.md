@@ -99,3 +99,11 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - The web adapter fetches arbitrary user links, so it goes through `guardedFetch`: http(s) only, DNS-resolved private/loopback/link-local addresses refused, redirects re-checked (max 3). Platform endpoints (TikTok/YouTube oEmbed, YouTube API) use plain fetch.
 - Logs never include caption text or the LLM's input/output — only error class names.
 - `src/server/import/*` holds the handler, kept out of `route.ts` because Next route files may only export route fields; the handler takes fetch/env/client as deps for tests.
+- Import screen is `/tarifler/ice-aktar` (inside the guarded app; the login keeps the shared query through `?next=`). The draft opens in the existing `RecipeForm` (new optional `header` slot for the source card + "Kontrol edip kaydet"), so imported recipes are edited with exactly the same fields and validation as hand-written ones.
+- The paste box is a disclosure ("Açıklamayı yapıştırmak istiyorum"), always available, opened and focused automatically when the source gives no ingredient lines.
+- Recipe credit line: "Kaynak: @author · Platform" with "Videoyu aç"/"Sayfayı aç"; the creator's oEmbed thumbnail is shown on the import card only (the recipe page keeps the `.ph` placeholder like every other recipe).
+- Import usage in Ayarlar counts drafts produced this month (both paths, with the "akıllı okuma" share); counting happens when a draft is produced, not on save, because the LLM cost is spent then.
+- Web Share Target: manifest `share_target` GET → `/tarifler/ice-aktar?title&text&url`; Android often puts the link inside `text`, so the page extracts it. iOS Safari has no share targets: iOS users paste the link.
+- App icon: a plate with fork and knife on the tomato token (`public/icon.svg`, rasterized to 192/512 PNG); no maskable variant because the icon has rounded transparent corners.
+- Imported time split: with a known total, prep is a third of it (5–15 min) and the rest cooking; otherwise cooking is the sum of step durations and prep 15 min.
+- Platform names in the source card keep their own casing: Turkish uppercase would print "TİKTOK".

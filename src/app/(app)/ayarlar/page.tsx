@@ -14,6 +14,9 @@ import { useTheme } from "@/hooks/useTheme";
 import { initialOf } from "@/services/auth";
 import { whatsappShareUrl } from "@/services/household";
 import { useApp } from "@/store/app";
+import type { ImportLog } from "@/data/models";
+import { toIsoDate } from "@/domain/dates";
+import { now } from "@/lib/clock";
 import type { ThemePreference } from "@/lib/theme";
 import s from "./page.module.css";
 
@@ -22,6 +25,20 @@ const THEMES: [ThemePreference, string][] = [
   ["dark", "Koyu"],
   ["system", "Sistem"],
 ];
+
+/** "Bu ay 12 tarif içe aktarıldı" — counts drafts produced this month (no links or captions are kept). */
+function ImportUsage({ log }: { log: ImportLog[] }) {
+  const month = toIsoDate(now()).slice(0, 7);
+  const thisMonth = log.filter((l) => toIsoDate(new Date(l.createdAt)).slice(0, 7) === month);
+  const smart = thisMonth.filter((l) => l.path === "llm").length;
+  return (
+    <p className={s.note} role="status">
+      {thisMonth.length === 0
+        ? "Bu ay henüz linkten tarif içe aktarılmadı."
+        : `Bu ay ${thisMonth.length} tarif içe aktarıldı${smart ? ` (${smart} tanesi akıllı okumayla)` : ""}.`}
+    </p>
+  );
+}
 
 export default function AyarlarPage() {
   const router = useRouter();
@@ -34,6 +51,7 @@ export default function AyarlarPage() {
   const loadDemo = useApp((x) => x.loadDemo);
   const exportJson = useApp((x) => x.exportJson);
   const resetAll = useApp((x) => x.resetAll);
+  const importLog = useApp((x) => x.importLog);
   const setNotice = useApp((x) => x.setNotice);
   const { people } = usePeople();
   const { theme, setTheme } = useTheme();
@@ -199,6 +217,16 @@ export default function AyarlarPage() {
           ))}
         </div>
         <p className={s.note}>Sistem seçiliyse telefonun ya da bilgisayarın açık/koyu ayarını izler.</p>
+      </section>
+
+      <section className={s.card} aria-labelledby="a-ice">
+        <h2 id="a-ice" className={s.cardTitle}>
+          Linkten tarif
+        </h2>
+        <ImportUsage log={importLog} />
+        <Link href="/tarifler/ice-aktar" className={buttonClass({ size: "sm", variant: "soft" })} style={{ alignSelf: "flex-start" }}>
+          Linkten ekle
+        </Link>
       </section>
 
       <section className={s.card} aria-labelledby="a-veri">

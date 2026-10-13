@@ -19,6 +19,7 @@ const youngSerif = Young_Serif({
 export const metadata: Metadata = {
   title: "Akşama ne var?",
   description: "Akşam yemeğine birlikte karar verin: eşleşme, haftalık plan, ortak alışveriş listesi.",
+  icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }], apple: "/icon-192.png" },
 };
 
 export const viewport: Viewport = {

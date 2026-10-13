@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { AISLES, COURSES, COURSE_LABEL, UNITS } from "@/data/models";
 import { catalogEntry, INGREDIENT_CATALOG, normalizeIngredientName } from "@/data/seed/ingredients";
 import { emptyIngredient, parseDraft, type RecipeDraft } from "@/services/recipeForm";
@@ -28,12 +28,17 @@ export function RecipeForm({
   backHref,
   submitLabel,
   onSubmit,
+  header,
+  backLabel = "Geri",
 }: {
   title: string;
   initial: RecipeDraft;
   backHref: string;
   submitLabel: string;
   onSubmit: (value: RecipeInput) => Promise<void>;
+  /** Shown under the title (the import screen's source card). */
+  header?: ReactNode;
+  backLabel?: string;
 }) {
   const [d, setD] = useState<RecipeDraft>(initial);
   const [error, setError] = useState<string | null>(null);
@@ -78,9 +83,10 @@ export function RecipeForm({
     <main className={s.page}>
       <Link href={backHref} className={s.back}>
         <IconChevronLeft size={20} />
-        Geri
+        {backLabel}
       </Link>
       <h1 className={s.title}>{title}</h1>
+      {header}
       <form onSubmit={submit} noValidate style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <section className={s.card} aria-labelledby="f-genel">
           <h2 id="f-genel" className={s.cardTitle}>

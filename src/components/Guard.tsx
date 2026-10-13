@@ -24,7 +24,8 @@ export function Guard({ need, children }: { need: "auth" | "household"; children
   const pathname = usePathname();
 
   useEffect(() => {
-    if (status === "anon") router.replace(`/giris?next=${encodeURIComponent(pathname ?? "/bugun")}`);
+    // Keep the query (a shared link arrives as /tarifler/ice-aktar?url=…) through the login.
+    if (status === "anon") router.replace(`/giris?next=${encodeURIComponent(`${pathname ?? "/bugun"}${window.location.search}`)}`);
     else if (need === "household" && status === "no-household") router.replace("/onboarding/1");
   }, [status, need, router, pathname]);
 

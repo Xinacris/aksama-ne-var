@@ -25,6 +25,7 @@ const PARTNER_TYPES = new Set<Activity["type"]>([
   "shopping.finished",
   "household.joined",
   "recipe.created",
+  "recipe.imported",
 ]);
 
 export function recipeTime(r: Recipe): string {

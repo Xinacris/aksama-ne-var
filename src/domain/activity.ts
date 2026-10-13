@@ -56,6 +56,8 @@ export function activityText(
       return `${dish} tarifini ekledi`;
     case "recipe.updated":
       return `${dish} tarifini güncelledi`;
+    case "recipe.imported":
+      return `${dish} tarifini bir bağlantıdan ekledi`;
     default:
       return "bir şey güncelledi";
   }
