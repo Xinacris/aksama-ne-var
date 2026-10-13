@@ -56,7 +56,9 @@ export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"])
     ingredients: ingredients.length ? ingredients : [emptyIngredient()],
     prepItems,
     steps: r.steps.length ? r.steps.map((s) => s.text) : [""],
-    leftoverFriendly: false,
+    // Imported dishes start with the same default a matching built-in would have.
+    leftoverPolicy: r.role === "salata" ? "none" : "store",
+    leftoverDays: "2",
     freezerItem,
     source: "",
     ...(source?.url ? { sourceUrl: source.url } : {}),

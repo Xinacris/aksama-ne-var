@@ -1,5 +1,7 @@
 "use client";
 
+import type { LeftoverChoice } from "@/data/models";
+import type { LeftoverOutcome } from "@/domain/leftovers";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { SLOT_LABEL, type Match, type Recipe, type Slot } from "@/data/models";
@@ -218,17 +220,39 @@ export function SlotDialog({
   );
 }
 
+const DAY_CHOICES: [LeftoverChoice | null, string][] = [
+  [null, "Tarifteki gibi"],
+  ["lunch", "Ertesi gün öğlen"],
+  ["fridge", "Dolaba kalır"],
+  ["none", "Artmaz"],
+];
+
+const OUTCOME_SHORT: Record<LeftoverOutcome["kind"], string> = {
+  none: "artmaz",
+  lunch: "ertesi gün öğlen",
+  fridge: "dolaba kalır",
+  discard: "kimse yemeyecek",
+  eaten: "bitti",
+};
+
 /** Day-level actions: approve, leftovers, eaten out, clear. */
 export function DayDialog({
   target,
   onClose,
 }: {
-  target: { date: string; hasMain: boolean; leftovers: boolean; ateOut: boolean; approved: boolean; filled: number } | null;
+  target: {
+    date: string;
+    hasMain: boolean;
+    leftover: { choice: LeftoverChoice | null; kind: LeftoverOutcome["kind"] } | null;
+    ateOut: boolean;
+    approved: boolean;
+    filled: number;
+  } | null;
   onClose: () => void;
 }) {
   const today = useApp((x) => x.today);
   const approve = useApp((x) => x.approve);
-  const setLeftovers = useApp((x) => x.setLeftovers);
+  const setLeftoverChoice = useApp((x) => x.setLeftoverChoice);
   const ateOut = useApp((x) => x.ateOut);
   const clearAteOut = useApp((x) => x.clearAteOut);
   const sendBack = useApp((x) => x.sendBackToMatches);
@@ -255,16 +279,24 @@ export function DayDialog({
                   </button>
                 </li>
               )}
-              {target.hasMain && (
+              {target.leftover && (
                 <li>
-                  <button type="button" className={s.option} onClick={run(() => setLeftovers(target.date, !target.leftovers))} aria-pressed={target.leftovers}>
-                    <span className={s.optionText}>
-                      {target.leftovers ? "Ertesi güne artmayacak" : "Ertesi güne artar"}
-                      <span className={s.optionSub}>
-                        {target.leftovers ? "Öğlen için artan gösterilmez." : "Ana yemek ertesi gün öğlene uzanır."}
-                      </span>
-                    </span>
-                  </button>
+                  <div className={s.leftoverGroup} role="group" aria-label="Artarsa">
+                    <span className={s.optionSub}>Artarsa · şu an: {OUTCOME_SHORT[target.leftover.kind]}</span>
+                    <div className={s.leftoverChoices}>
+                      {DAY_CHOICES.map(([choice, label]) => (
+                        <button
+                          key={label}
+                          type="button"
+                          className={s.choice}
+                          aria-pressed={target.leftover!.choice === choice}
+                          onClick={run(() => setLeftoverChoice(target.date, choice))}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </li>
               )}
               <li>

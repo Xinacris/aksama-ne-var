@@ -5,6 +5,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { AISLES, COURSES, COURSE_LABEL, UNITS } from "@/data/models";
 import { catalogEntry, INGREDIENT_CATALOG, normalizeIngredientName } from "@/data/seed/ingredients";
 import { emptyIngredient, parseDraft, type RecipeDraft } from "@/services/recipeForm";
+import { POLICY_OPTION } from "@/domain/leftovers";
 import type { RecipeInput } from "@/store/app";
 import { IconChevronLeft, IconPlus, IconTrash } from "./icons";
 import { Button } from "./ui/Button";
@@ -112,10 +113,29 @@ export function RecipeForm({
             value={d.source}
             onChange={(e) => set("source", e.target.value)}
           />
-          <label className={s.check}>
-            <input type="checkbox" checked={d.leftoverFriendly} onChange={(e) => set("leftoverFriendly", e.target.checked)} />
-            Ertesi güne artar
-          </label>
+          <div className={s.leftover}>
+            <SelectField
+              label="Artarsa ne olur?"
+              value={d.leftoverPolicy}
+              onChange={(e) => set("leftoverPolicy", e.target.value as RecipeDraft["leftoverPolicy"])}
+            >
+              {(Object.keys(POLICY_OPTION) as (keyof typeof POLICY_OPTION)[]).map((p) => (
+                <option key={p} value={p}>
+                  {POLICY_OPTION[p]}
+                </option>
+              ))}
+            </SelectField>
+            {d.leftoverPolicy === "store" && (
+              <SelectField label="Kaç gün içinde" value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
+                {["1", "2", "3", "4"].map((n) => (
+                  <option key={n} value={n}>
+                    {n} gün
+                  </option>
+                ))}
+              </SelectField>
+            )}
+          </div>
+          <p className={s.formNote}>Evde öğlen yiyen yoksa “öğlen yenir” de dolaba kalır. Her akşam ayrıca seçebilirsiniz.</p>
         </section>
 
         <section className={s.card} aria-labelledby="f-malzeme">

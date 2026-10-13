@@ -8,7 +8,6 @@ export const anaYemekler2 = [
     cook: 60,
     servings: 4,
     tags: ["Zeytinyağlı", "Akşamdan ıslat", "Bakliyat"],
-    leftover: true,
     ingredients: [
       i("Kuru barbunya", 2, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -37,7 +36,6 @@ export const anaYemekler2 = [
     cook: 40,
     servings: 4,
     tags: ["Tencere", "Bakliyat", "Vejetaryen"],
-    leftover: true,
     ingredients: [
       i("Yeşil mercimek", 1.5, "su bardağı"),
       i("Kuru soğan", 1, "adet"),
@@ -64,7 +62,6 @@ export const anaYemekler2 = [
     cook: 40,
     servings: 4,
     tags: ["Fırında", "Kıymalı"],
-    leftover: true,
     ingredients: [
       i("Patlıcan", 3, "adet"),
       i("Kıyma", 300, "g"),
@@ -92,7 +89,6 @@ export const anaYemekler2 = [
     cook: 80,
     servings: 4,
     tags: ["Tencere", "Etli"],
-    leftover: true,
     ingredients: [
       i("Dana kuşbaşı", 500, "g"),
       i("Kuru soğan", 2, "adet"),
@@ -118,7 +114,6 @@ export const anaYemekler2 = [
     cook: 40,
     servings: 4,
     tags: ["Tavada", "Etli"],
-    leftover: false,
     ingredients: [
       i("Dana kuşbaşı", 500, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -143,7 +138,6 @@ export const anaYemekler2 = [
     cook: 30,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Kolay"],
-    leftover: true,
     ingredients: [
       i("Patates", 5, "adet"),
       i("Kıyma", 250, "g"),
@@ -167,7 +161,6 @@ export const anaYemekler2 = [
     cook: 50,
     servings: 4,
     tags: ["Tencere", "Etli"],
-    leftover: true,
     ingredients: [
       i("Bamya", 500, "g"),
       i("Dana kuşbaşı", 250, "g"),
@@ -192,7 +185,6 @@ export const anaYemekler2 = [
     cook: 35,
     servings: 4,
     tags: ["Zeytinyağlı", "Vejetaryen", "Hafif"],
-    leftover: true,
     ingredients: [
       i("Enginar", 4, "adet"),
       i("Havuç", 1, "adet"),
@@ -220,7 +212,6 @@ export const anaYemekler2 = [
     cook: 15,
     servings: 4,
     tags: ["Balık", "Tavada", "Mevsiminde"],
-    leftover: false,
     ingredients: [
       i("Hamsi", 1, "kg"),
       i("Mısır unu", 1, "su bardağı"),
@@ -244,7 +235,6 @@ export const anaYemekler2 = [
     cook: 25,
     servings: 2,
     tags: ["Balık", "Fırında", "Hafif"],
-    leftover: false,
     ingredients: [
       i("Levrek", 2, "adet"),
       i("Domates", 2, "adet"),
@@ -269,7 +259,6 @@ export const anaYemekler2 = [
     cook: 15,
     servings: 4,
     tags: ["Kıymalı", "Tavada", "Hızlı"],
-    leftover: false,
     freezer: "Kıyma",
     ingredients: [
       i("Kıyma", 500, "g"),
@@ -301,7 +290,6 @@ export const anaYemekler2 = [
     cook: 25,
     servings: 4,
     tags: ["Tavuklu", "Fırında"],
-    leftover: false,
     freezer: "Tavuk göğsü",
     ingredients: [
       i("Tavuk göğsü", 700, "g"),
@@ -333,7 +321,6 @@ export const anaYemekler2 = [
     cook: 25,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Hafif"],
-    leftover: false,
     ingredients: [
       i("Kabak", 5, "adet"),
       i("Kıyma", 200, "g"),
@@ -358,7 +345,6 @@ export const anaYemekler2 = [
     cook: 15,
     servings: 2,
     tags: ["Tavada", "Vejetaryen", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Mantar", 500, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -383,7 +369,6 @@ export const anaYemekler2 = [
     cook: 45,
     servings: 4,
     tags: ["Tavuklu", "Tencere"],
-    leftover: true,
     ingredients: [
       i("Tavuk göğsü", 400, "g"),
       i("Baldo pirinç", 2, "su bardağı"),
@@ -408,7 +393,6 @@ export const anaYemekler2 = [
     cook: 20,
     servings: 4,
     tags: ["Tavuklu", "Tavada", "Hızlı"],
-    leftover: false,
     ingredients: [
       i("Tavuk göğsü", 600, "g"),
       i("Kuru soğan", 1, "adet"),
@@ -434,7 +418,6 @@ export const anaYemekler2 = [
     cook: 70,
     servings: 4,
     tags: ["Tencere", "Etli"],
-    leftover: true,
     ingredients: [
       i("Kuzu kuşbaşı", 500, "g"),
       i("Patates", 2, "adet"),
@@ -460,7 +443,6 @@ export const anaYemekler2 = [
     cook: 45,
     servings: 4,
     tags: ["Fırında", "Kıymalı"],
-    leftover: true,
     freezer: "Kıyma",
     ingredients: [
       i("Kemer patlıcan", 4, "adet"),
@@ -488,7 +470,6 @@ export const anaYemekler2 = [
     cook: 35,
     servings: 4,
     tags: ["Tencere", "Kıymalı", "Ekonomik"],
-    leftover: true,
     ingredients: [
       i("Beyaz lahana", 0.5, "adet"),
       i("Kıyma", 200, "g"),
@@ -514,7 +495,6 @@ export const anaYemekler2 = [
     cook: 50,
     servings: 4,
     tags: ["Fırında", "Tavuklu"],
-    leftover: true,
     freezer: "Tavuk but",
     ingredients: [
       i("Tavuk but", 600, "g"),

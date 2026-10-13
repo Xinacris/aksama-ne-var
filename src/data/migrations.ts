@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 3;
+export const CURRENT_SCHEMA_VERSION = 4;
 
 export interface Migration {
   version: number;
@@ -51,7 +51,8 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
 /**
  * Ordered list of schema migrations. Version 1 is the initial layout;
  * version 2 adds `dinnerTime` to households (default 19:30, as in the design);
- * version 3 moves link-shaped recipe `source` text into `sourceUrl` + `sourcePlatform`.
+ * version 3 moves link-shaped recipe `source` text into `sourceUrl` + `sourcePlatform`;
+ * version 4 makes leftovers a choice (recipe policy, household lunch setting, per-evening choice).
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -80,6 +81,26 @@ export const MIGRATIONS: Migration[] = [
         void _old;
         return { ...rest, sourceUrl: src, sourcePlatform: platformOf(src) };
       }),
+  },
+  {
+    version: 4,
+    description: "Leftovers become a choice: recipe policy + days, household lunch setting, per-evening choice",
+    up: (store) => {
+      // Custom recipes: "ertesi güne artar" meant next-day lunch, exactly what `lunch` does now.
+      mapRows(store, "recipes", (r) => {
+        if (r.leftoverPolicy) return r;
+        const { leftoverFriendly, ...rest } = r;
+        return { ...rest, leftoverPolicy: leftoverFriendly === true ? "lunch" : "none", leftoverDays: 2 };
+      });
+      // Households: someone eats lunch at home every day (the old assumption).
+      mapRows(store, "households", (h) => ({ lunchAtHome: "yes", lunchDays: [], ...h }));
+      // Evenings keep exactly what they showed: true → next-day lunch, false → no leftover.
+      mapRows(store, "planDays", (d) => {
+        if ("leftoverChoice" in d) return d;
+        const { leftovers, ...rest } = d;
+        return { ...rest, leftoverChoice: leftovers === true ? "lunch" : "none", leftoverChoiceBy: null };
+      });
+    },
   },
 ];
 

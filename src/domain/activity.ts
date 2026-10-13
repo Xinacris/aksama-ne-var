@@ -1,4 +1,5 @@
-import type { Activity, PlanDay, Recipe, User } from "@/data/models";
+import type { Activity, LeftoverChoice, PlanDay, Recipe, User } from "@/data/models";
+import { CHOICE_LABEL } from "./leftovers";
 import { agoTime, dayName } from "./dates";
 import { dishInSentence } from "./prep";
 import { dative, genitive } from "@/lib/text";
@@ -42,6 +43,12 @@ export function activityText(
       return isToday ? "bu akşamın planını değiştirdi" : `${day} planını değiştirdi`;
     case "plan.leftovers":
       return `${day} yemeğinin ertesi güne artacağını işaretledi`;
+    case "leftover.set": {
+      const choice = str(a.data.choice) as LeftoverChoice | "";
+      if (!choice) return `artan ${dish} için tarifteki seçeneğe döndü`;
+      if (choice === "lunch") return `artan ${dish} için “${a.data.date === ctx.todayIso ? "Yarın öğlen" : "Öğlen"}” dedi`;
+      return `artan ${dish} için “${CHOICE_LABEL[choice]}” dedi`;
+    }
     case "match.made":
       return ctx.partnerName ? `ve ${ctx.partnerName} ${dish} için eşleşti` : `${dish} için karar verdi`;
     case "shopping.checked":

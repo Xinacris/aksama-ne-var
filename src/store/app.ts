@@ -10,6 +10,7 @@ import type {
   Favorite,
   Household,
   ImportLog,
+  LeftoverChoice,
   Match,
   Member,
   PantryItem,
@@ -29,6 +30,9 @@ import { STORAGE_ERROR_MESSAGE, StorageError } from "@/data/storage";
 import { addDays, listWindow, toIsoDate } from "@/domain/dates";
 import { isMatch } from "@/domain/matching";
 import * as plan from "@/domain/plan";
+import { menuFor } from "@/domain/plan";
+import { leftoverSource } from "@/domain/leftovers";
+import { courseToSlot } from "@/domain/matching";
 import { generatePrepTasks } from "@/domain/prep";
 import { consumePantry, generateList, planFinish, type ListRow } from "@/domain/shopping";
 import { now, nowIso } from "@/lib/clock";
@@ -101,7 +105,8 @@ export interface RecipeInput {
   ingredients: Recipe["ingredients"];
   prepItems: Recipe["prepItems"];
   steps: string[];
-  leftoverFriendly: boolean;
+  leftoverPolicy: Recipe["leftoverPolicy"];
+  leftoverDays: number;
   freezerItem: string | null;
   source?: string;
   sourceUrl?: string;
@@ -155,7 +160,11 @@ export interface AppState extends AppData {
   sendBackToMatches(date: string): Promise<void>;
   moveToTomorrow(date: string): Promise<void>;
   approve(date: string): Promise<void>;
-  setLeftovers(date: string, value: boolean): Promise<void>;
+  /** Per-evening leftover choice (null = back to the defaults). */
+  setLeftoverChoice(date: string, choice: LeftoverChoice | null): Promise<void>;
+  /** Put a dolapta dish on an evening (shopping list skips it). */
+  placeLeftover(args: { fromDate: string; recipeId: string; toDate: string; slot?: Slot }): Promise<void>;
+  setLunchAtHome(setting: Pick<Household, "lunchAtHome" | "lunchDays">): Promise<void>;
 
   swipe(recipeId: string, date: string, slot: Slot, decision: Swipe["decision"]): Promise<Match | null>;
 
@@ -574,7 +583,8 @@ export const useApp = create<AppState>()((set, get) => {
           ingredients: [],
           prepItems: [],
           steps: [],
-          leftoverFriendly: false,
+          leftoverPolicy: "none",
+          leftoverDays: 2,
           freezerItem: null,
           stub: true,
           createdBy: me.id,
@@ -625,11 +635,28 @@ export const useApp = create<AppState>()((set, get) => {
         await log("plan.approved", { date });
       });
     },
-    async setLeftovers(date, value) {
+    async setLeftoverChoice(date, choice) {
+      const { me } = requireCtx();
+      const recipeId = leftoverSource(menuFor(get().planItems, date))?.recipeId ?? null;
       await run(async () => {
-        await applyOps(plan.setLeftovers(date, value));
-        if (value) await log("plan.leftovers", { date });
+        await applyOps(plan.setLeftoverChoice(date, choice, me.id));
+        await log("leftover.set", { date, recipeId, choice });
       });
+    },
+    async placeLeftover({ fromDate, recipeId, toDate, slot }) {
+      const { me } = requireCtx();
+      const r = get().recipes.find((x) => x.id === recipeId);
+      const target = slot ?? (r ? courseToSlot(r.course) : null) ?? "ana";
+      await run(() =>
+        planChange(plan.placeLeftover(planState(), { fromDate, recipeId, toDate, slot: target, by: me.id }), [
+          "plan.added",
+          { recipeId, date: toDate, leftover: 1 },
+        ]),
+      );
+    },
+    async setLunchAtHome(setting) {
+      const { household } = requireCtx();
+      await run(() => ctx().repos.households.update(household.id, { lunchAtHome: setting.lunchAtHome, lunchDays: [...setting.lunchDays].sort() }));
     },
 
     // ───────── swipes ─────────
@@ -833,8 +860,9 @@ export function listSourceRecipes(s: Pick<AppState, "planItems" | "planDays" | "
   const byId = recipesMap(s.recipes);
   const window = new Set(listWindow(s.today));
   const out: Recipe[] = [];
+  // Leftover items are already cooked: nothing to buy for them.
   const items = s.planItems
-    .filter((i) => window.has(i.date) && s.planDays.find((d) => d.date === i.date)?.status !== "ate-out")
+    .filter((i) => i.source !== "leftover" && window.has(i.date) && s.planDays.find((d) => d.date === i.date)?.status !== "ate-out")
     .sort((a, b) => a.date.localeCompare(b.date) || slotOrder(a.slot) - slotOrder(b.slot));
   for (const i of items) {
     const r = byId.get(i.recipeId);

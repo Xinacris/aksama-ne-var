@@ -36,6 +36,8 @@ export async function createHousehold(repos: Repos, user: User): Promise<Househo
     inviteCode: code,
     createdBy: user.id,
     dinnerTime: "19:30",
+    lunchAtHome: "yes",
+    lunchDays: [],
   });
   await repos.households.addMember({
     householdId: household.id,

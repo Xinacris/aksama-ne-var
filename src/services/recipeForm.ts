@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { aisleSchema, courseSchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe } from "@/data/models";
+import { aisleSchema, courseSchema, leftoverPolicySchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe } from "@/data/models";
 import { catalogEntry, normalizeIngredientName } from "@/data/seed/ingredients";
 import type { RecipeInput } from "@/store/app";
 
@@ -27,7 +27,9 @@ export interface RecipeDraft {
   ingredients: IngredientDraft[];
   prepItems: PrepDraft[];
   steps: string[];
-  leftoverFriendly: boolean;
+  leftoverPolicy: "none" | "lunch" | "store";
+  /** "1"–"4"; used when the policy is `store`. */
+  leftoverDays: string;
   freezerItem: string;
   source: string;
   /** Imported/linked recipe credit; not editable in the form, carried through. */
@@ -49,7 +51,8 @@ export function emptyDraft(name = ""): RecipeDraft {
     ingredients: [emptyIngredient()],
     prepItems: [],
     steps: [""],
-    leftoverFriendly: false,
+    leftoverPolicy: "none",
+    leftoverDays: "2",
     freezerItem: "",
     source: "",
   };
@@ -75,7 +78,8 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
       : [emptyIngredient()],
     prepItems: r.prepItems.map((p) => ({ label: p.label, offset: p.offset, freezer: !!p.freezer })),
     steps: r.steps.length ? [...r.steps] : [""],
-    leftoverFriendly: r.leftoverFriendly,
+    leftoverPolicy: r.leftoverPolicy,
+    leftoverDays: String(r.leftoverDays),
     freezerItem: r.freezerItem ?? "",
     source: r.source ?? "",
     ...(r.sourceUrl ? { sourceUrl: r.sourceUrl } : {}),
@@ -151,7 +155,8 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       ingredients,
       prepItems,
       steps,
-      leftoverFriendly: d.leftoverFriendly,
+      leftoverPolicy: leftoverPolicySchema.catch("none").parse(d.leftoverPolicy),
+      leftoverDays: Math.min(4, Math.max(1, Math.round(Number(d.leftoverDays)) || 2)),
       freezerItem: freezer,
       ...(d.source.trim() ? { source: d.source.trim() } : {}),
       ...(d.sourceUrl ? { sourceUrl: d.sourceUrl } : {}),

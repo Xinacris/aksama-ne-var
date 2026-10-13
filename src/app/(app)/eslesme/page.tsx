@@ -247,7 +247,7 @@ function EslesmeInner() {
   function toDeckCard(id: string): DeckCard {
     const r = byId.get(id)!;
     const tags = [...r.tags.slice(0, 3)];
-    if (r.leftoverFriendly) tags.push("Ertesi güne artar");
+    if (r.leftoverPolicy !== "none") tags.push("Ertesi güne artar");
     return {
       recipe: r,
       time: r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes),

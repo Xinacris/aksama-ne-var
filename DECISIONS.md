@@ -107,3 +107,11 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - App icon: a plate with fork and knife on the tomato token (`public/icon.svg`, rasterized to 192/512 PNG); no maskable variant because the icon has rounded transparent corners.
 - Imported time split: with a known total, prep is a third of it (5–15 min) and the rest cooking; otherwise cooking is the sum of step durations and prep 15 min.
 - Platform names in the source card keep their own casing: Turkish uppercase would print "TİKTOK".
+- Leftover outcome order: per-evening choice → recipe default → household lunch setting. "Nobody home for lunch" always turns a lunch into a dolapta item (even an explicit "Yarın öğlen"), because the setting describes the household; the choice buttons hide "Yarın öğlen" on such days (R6).
+- Only the evening's main dish (else its first dish) leaves leftovers; a dish that is itself a leftover never does. Soups/pilav served beside a main follow the main — one leftover decision per evening keeps the card calm.
+- A dolapta dish can be kept up to four days; "Bugün bitirilmeli" on its last day. Past use-by it simply disappears (no "çöpe gitti" wording anywhere).
+- Built-in defaults: legumes, stews, köfte and soups → stored 2–3 days; tavuk sote, et sote, fırın makarna, tavuklu pilav, köri, makarna, mantar sote → next-day lunch; salads, cacık, egg/breakfast dishes, fried dishes, fish, mantı, ızgara → none. Imported recipes default to "saklanır 2 gün" (salads: none).
+- The match card tag "Ertesi güne artar" (design) stays for any recipe that leaves leftovers (lunch or store).
+- Demo week: Sunday's kuru fasulye and Tuesday's karnıyarık carry an explicit "lunch" choice by Ali (the design's "Öğlen · …" rows); Thursday's tavuk sote has "none" so Friday stays empty like the design.
+- Hafta day dialog: the old "Ertesi güne artar" toggle became a small choice group (Tarifteki gibi · Ertesi gün öğlen · Dolaba kalır · Artmaz) showing the current outcome.
+- Ayarlar › Ev: "Öğlenleri evde yiyen var mı?" Evet / Hayır / Bazı günler; choosing "Bazı günler" first time preselects the weekend.

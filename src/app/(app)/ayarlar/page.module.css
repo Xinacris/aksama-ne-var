@@ -132,3 +132,8 @@
     font-size: 36px;
   }
 }
+.lunch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

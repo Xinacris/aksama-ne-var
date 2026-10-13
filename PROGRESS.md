@@ -38,7 +38,7 @@ Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
 - [x] R2. Import domain: URL detection, adapters (TikTok, YouTube, Instagram, schema.org web), rule-based parser + fixtures.
 - [x] R3. Import server route: Claude Haiku path with validation/retry, graceful no-key mode, rate limit, tests.
 - [x] R4. Import UI: "Linkten ekle", paste fallback, draft review in existing form, source credit, share target manifest; e2e.
-- [ ] R5. Leftover model: recipe defaults (data for the 100 recipes), household lunch setting, migration, rule tests.
+- [x] R5. Leftover model: recipe defaults (data for the 100 recipes), household lunch setting, migration, rule tests.
 - [ ] R6. Leftover UI: Bugün card overrides, "dolapta" items, drag into Hafta, shopping list skip; e2e.
 - [ ] R7. Cooking mode core: route, prep checklist, steps, dish tabs, resume; tests.
 - [ ] R8. Cooking mode extras: multiple timers with persistence, wake lock, sync/activity, finish screen → leftover question; e2e.

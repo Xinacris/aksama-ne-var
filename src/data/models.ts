@@ -109,6 +109,11 @@ export const PLATFORM_LABEL: Record<SourcePlatform, string> = {
   web: "Web",
 };
 
+/** "Artarsa ne olur?": artmaz / ertesi gün öğlen yenir / saklanır, X gün içinde. */
+export const LEFTOVER_POLICIES = ["none", "lunch", "store"] as const;
+export const leftoverPolicySchema = z.enum(LEFTOVER_POLICIES);
+export type LeftoverPolicy = z.infer<typeof leftoverPolicySchema>;
+
 export const recipeSchema = z.object({
   id: z.string().min(1),
   /** null = built-in recipe shared by all households. */
@@ -126,7 +131,9 @@ export const recipeSchema = z.object({
   ingredients: z.array(ingredientSchema),
   prepItems: z.array(prepItemSchema),
   steps: z.array(z.string().min(1)),
-  leftoverFriendly: z.boolean(),
+  leftoverPolicy: leftoverPolicySchema,
+  /** Days a stored leftover keeps (1–4); used when the policy is `store` or lunch falls back to the fridge. */
+  leftoverDays: z.number().int().min(1).max(4),
   /** Canonical ingredient name that comes out of the freezer, if any. */
   freezerItem: z.string().nullable(),
   /** Free-text origin: "Annemin defteri". Links live in `sourceUrl`. */
@@ -164,6 +171,10 @@ export const householdSchema = z.object({
   createdBy: uuid,
   /** Dinner time, used by prep scheduling ("Sofra 19:30"). */
   dinnerTime: z.string().regex(/^\d{2}:\d{2}$/),
+  /** "Öğlenleri evde yiyen var mı?" — yes / no / some days (`lunchDays`). */
+  lunchAtHome: z.enum(["yes", "no", "some"]),
+  /** Weekdays someone eats lunch at home when `lunchAtHome` is `some` (0 = Pazar … 6 = Cumartesi). */
+  lunchDays: z.array(z.number().int().min(0).max(6)),
 });
 export type Household = z.infer<typeof householdSchema>;
 
@@ -210,10 +221,16 @@ export const planItemSchema = z.object({
   date: isoDate,
   slot: slotSchema,
   recipeId: z.string(),
-  source: z.enum(["match", "favorite", "manual", "moved"]),
+  source: z.enum(["match", "favorite", "manual", "moved", "leftover"]),
+  /** For `leftover` items: the evening the dish was cooked (a dolapta dish eaten again). */
+  leftoverFrom: isoDate.optional(),
   createdBy: uuid,
 });
 export type PlanItem = z.infer<typeof planItemSchema>;
+
+/** Per-evening leftover choice: Hiç kalmadı · Yarın öğlen · Dolaba kaldır · Kimse yemeyecek · (dolaptaki) bitti. */
+export const LEFTOVER_CHOICES = ["none", "lunch", "fridge", "discard", "eaten"] as const;
+export type LeftoverChoice = (typeof LEFTOVER_CHOICES)[number];
 
 export const planDaySchema = z.object({
   ...base,
@@ -222,8 +239,13 @@ export const planDaySchema = z.object({
   status: z.enum(["open", "ate-out", "cooked"]),
   /** Members who approved this evening's menu. */
   approvals: z.array(uuid),
-  /** Marked "yarına da artar": leftover extends to the next day's lunch. */
-  leftovers: z.boolean(),
+  /**
+   * What happens to this evening's leftovers. null = follow the recipe default
+   * and the household lunch setting; otherwise the household's choice.
+   */
+  leftoverChoice: z.enum(LEFTOVER_CHOICES).nullable(),
+  /** Who made the choice (null when automatic). */
+  leftoverChoiceBy: uuid.nullable(),
   /** Recipe names returned to matches when the day changed (for neutral copy). */
   returnedRecipeIds: z.array(z.string()),
   cookedAt: isoDateTime.nullable(),

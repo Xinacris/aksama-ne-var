@@ -9,6 +9,7 @@ import { dayFor, dayNote, freezerLines, menuFor, summarizeWeek, type DayNote, ty
 import { daysSinceCooked, lastCookedMap } from "@/domain/rotation";
 import { matchNote } from "@/components/MatchList";
 import { recipesMap, selectList, useApp, usersMap } from "@/store/app";
+import { eveningLeftover, lunchOn, type EveningLeftover } from "@/domain/leftovers";
 
 export interface SlotCell {
   item: PlanItem;
@@ -27,7 +28,9 @@ export interface DayModel {
   menu: Record<Slot, SlotCell | null>;
   filled: number;
   lunch: Recipe | null;
+  /** Tonight's leftovers extend to tomorrow's lunch (the board's olive link). */
   leftoverOut: boolean;
+  leftover: EveningLeftover | null;
   note: DayNote;
   returnedNames: string[];
   approvals: string[];
@@ -53,7 +56,7 @@ export interface WeekModel {
 export function useWeek(offsetWeeks: number): WeekModel {
   const st = useApp();
   return useMemo(() => {
-    const { today, planItems, planDays, matches, recipes, prepTasks, people, me, cookLog, favorites } = st;
+    const { today, planItems, planDays, matches, recipes, prepTasks, people, me, cookLog, favorites, household } = st;
     const anchor = addDays(today, offsetWeeks * 7);
     const dates = boardWindow(anchor);
     const byId = recipesMap(recipes);
@@ -66,9 +69,9 @@ export function useWeek(offsetWeeks: number): WeekModel {
       const cells = Object.fromEntries(
         SLOTS.map((sl) => [sl, menu[sl] ? { item: menu[sl]!, recipe: byId.get(menu[sl]!.recipeId) ?? null } : null]),
       ) as Record<Slot, SlotCell | null>;
-      const prev = dayFor(planDays, addDays(date, -1));
-      const prevMain = menuFor(planItems, addDays(date, -1)).ana;
-      const lunch = prev?.leftovers && prev.status !== "ate-out" && prevMain ? byId.get(prevMain.recipeId) ?? null : null;
+      const lunchSetting = household ?? { lunchAtHome: "yes" as const, lunchDays: [] };
+      const lunch = lunchOn(state, lunchSetting, date, people.length, today)?.recipe ?? null;
+      const leftover = eveningLeftover(state, lunchSetting, date, people.length, today);
       return {
         date,
         short: dayShort(date),
@@ -81,7 +84,8 @@ export function useWeek(offsetWeeks: number): WeekModel {
         menu: cells,
         filled: SLOTS.filter((sl) => cells[sl]).length,
         lunch,
-        leftoverOut: !!(d?.leftovers && menu.ana && d.status !== "ate-out"),
+        leftoverOut: leftover?.outcome.kind === "lunch",
+        leftover,
         note: dayNote(state, date, memberIds, today),
         returnedNames: (d?.returnedRecipeIds ?? []).map((id) => byId.get(id)?.name ?? "").filter(Boolean),
         approvals: d?.approvals ?? [],

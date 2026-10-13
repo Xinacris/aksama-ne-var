@@ -86,6 +86,8 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
       inviteCode: clash ? `${DEMO_INVITE.slice(0, 4)}-${Math.random().toString(36).slice(2, 4)}` : DEMO_INVITE,
       createdBy: ali.id,
       dinnerTime: "19:30",
+      lunchAtHome: "yes",
+      lunchDays: [],
     }),
   );
   const hid = household.id;
@@ -142,7 +144,7 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
   await add(sun, "ana", "Kuru fasulye", ali.id);
   await add(sun, "yaninda", "Tereyağlı pirinç pilavı", ali.id);
   await add(sun, "salata", "Turşu", ali.id);
-  await repos.plan.upsertDay(hid, sun, { status: "cooked", leftovers: true, approvals: [ali.id, zeynep.id], cookedAt: at(sun, 20) }, ali.id);
+  await repos.plan.upsertDay(hid, sun, { status: "cooked", leftoverChoice: "lunch", leftoverChoiceBy: ali.id, approvals: [ali.id, zeynep.id], cookedAt: at(sun, 20) }, ali.id);
 
   await repos.plan.upsertDay(hid, T(-2), { status: "ate-out", returnedRecipeIds: [id("Etli nohut")] }, zeynep.id);
 
@@ -151,19 +153,19 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
   await add(mon, "ana", "İzmir köfte", ali.id);
   await add(mon, "yaninda", "Tereyağlı pirinç pilavı", ali.id);
   await add(mon, "salata", "Çoban salata", ali.id);
-  await repos.plan.upsertDay(hid, mon, { approvals: [ali.id, zeynep.id], leftovers: false }, ali.id);
+  await repos.plan.upsertDay(hid, mon, { approvals: [ali.id, zeynep.id] }, ali.id);
 
   const tue = T(1);
   await add(tue, "corba", "Yayla çorbası", zeynep.id);
   await add(tue, "ana", "Karnıyarık", ali.id, "match");
   await add(tue, "yaninda", "Şehriyeli pilav", zeynep.id);
   await add(tue, "salata", "Cacık", zeynep.id);
-  await repos.plan.upsertDay(hid, tue, { approvals: [ali.id], leftovers: true }, ali.id);
+  await repos.plan.upsertDay(hid, tue, { approvals: [ali.id], leftoverChoice: "lunch", leftoverChoiceBy: ali.id }, ali.id);
 
   const wed = T(2);
   await add(wed, "ana", "Menemen", ali.id);
   await add(wed, "salata", "Çoban salata", ali.id);
-  await repos.plan.upsertDay(hid, wed, { approvals: [ali.id], leftovers: false }, ali.id);
+  await repos.plan.upsertDay(hid, wed, { approvals: [ali.id] }, ali.id);
 
   const thu = T(3);
   const thuTs = at(T(-1), 13);
@@ -171,7 +173,7 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
   await add(thu, "ana", "Tavuk sote", zeynep.id, "manual", thuTs);
   await add(thu, "yaninda", "Bulgur pilavı", zeynep.id, "manual", thuTs);
   await add(thu, "salata", "Cacık", zeynep.id, "manual", thuTs);
-  await repos.plan.upsertDay(hid, thu, { approvals: [zeynep.id], leftovers: false }, zeynep.id);
+  await repos.plan.upsertDay(hid, thu, { approvals: [zeynep.id], leftoverChoice: "none" }, zeynep.id);
 
   // Matches: karnıyarık placed on Tuesday; etli nohut back from Saturday; two open.
   const match = (name: string, status: "open" | "placed" | "returned", extra: { placedDate?: string; returnedFrom?: string; ts: string }) =>
