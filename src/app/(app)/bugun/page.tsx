@@ -13,6 +13,7 @@ import { usePartnerPresence } from "@/hooks/usePresence";
 import { approvalPill, useToday } from "@/hooks/useToday";
 import { viewActivity } from "@/domain/activity";
 import { menuFor, menuItems } from "@/domain/plan";
+import { dishInSentence } from "@/domain/prep";
 import { addDays, dayName, eveningLabel } from "@/domain/dates";
 import { keepUntilLabel, type EveningLeftover } from "@/domain/leftovers";
 import { LeftoverChoices } from "@/components/LeftoverChoices";
@@ -96,7 +97,9 @@ export default function BugunPage() {
                 approval={model.tonight.cooked ? { tone: "ok", label: "Pişti · afiyet olsun" } : approvalPill(model.tonight.approval)}
                 href={`/tarif/${model.tonight.mainId}?gun=${model.today}`}
                 cook={
-                  model.tonight.cooked ? undefined : (
+                  model.tonight.cooked ? undefined : model.tonight.cooking ? (
+                    <CookingRow cooking={model.tonight.cooking} href={`/pisir/${model.today}`} />
+                  ) : (
                     <ButtonLink href={`/pisir/${model.today}`} size="lg" block>
                       Pişirmeye başla
                     </ButtonLink>
@@ -256,9 +259,34 @@ export default function BugunPage() {
   );
 }
 
+/** "Ali pişiriyor · adım 3/20" with a small progress bar; the cook sees "Pişiyor" and "Devam et". */
+function CookingRow({ cooking, href }: { cooking: { userId: string; step: number; total: number }; href: string }) {
+  const me = useApp((st) => st.me);
+  const { byId } = usePeople();
+  const who = byId.get(cooking.userId);
+  const mine = cooking.userId === me?.id;
+  const label = cooking.step === 0 ? "hazırlık" : `adım ${cooking.step}/${cooking.total}`;
+  return (
+    <div className={s.cooking}>
+      <div className={s.cookingTop}>
+        <span className={s.cookingText} role="status">
+          <span className={s.cookingDot} aria-hidden="true" />
+          {mine || !who ? "Pişiyor" : `${who.name} pişiriyor`} · {label}
+        </span>
+        <Link href={href} className={s.cookingLink}>
+          {mine ? "Devam et" : "Mutfağa bak"}
+        </Link>
+      </div>
+      <span className={s.cookingTrack} aria-hidden="true">
+        <span className={s.cookingFill} style={{ width: `${cooking.total ? Math.round((cooking.step / cooking.total) * 100) : 0}%` }} />
+      </span>
+    </div>
+  );
+}
+
 /** "Dünkü kuru fasulye bugün öğlen için yeterli." + the one-tap leftover choices. */
 function YesterdayCard({ ev, today, onPlace }: { ev: EveningLeftover; today: string; onPlace: (ev: EveningLeftover) => void }) {
-  const name = ev.recipe.name.toLocaleLowerCase("tr");
+  const name = dishInSentence(ev.recipe.name);
   const k = ev.outcome.kind;
   const title =
     k === "lunch" ? `Dünkü ${name} bugün öğlen için yeterli.` : k === "fridge" ? `Dünkü ${name} dolapta.` : k === "discard" ? `Dünkü ${name}: kimse yemeyecek.` : `Dünkü ${name}: artan yok.`;

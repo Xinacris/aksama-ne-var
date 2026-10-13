@@ -1,0 +1,158 @@
+.stepTimers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.startBtn {
+  min-height: 56px;
+}
+.running {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-radius: 16px;
+  background: var(--olive-soft);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+.alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--tomato-soft);
+  color: var(--ink);
+  font-size: 17px;
+  border: 2px solid var(--tomato);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .alert {
+    animation: pulse 1.2s ease-in-out 3;
+  }
+}
+@keyframes pulse {
+  50% {
+    transform: scale(1.015);
+  }
+}
+.bar {
+  position: sticky;
+  bottom: 88px;
+  z-index: 4;
+}
+.timers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 6px 0 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: 0 6px 18px rgba(var(--shadow-ink), 0.18);
+}
+.timer.done {
+  background: var(--tomato);
+  color: var(--on-tomato);
+}
+.timerLabel {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.timerLeft {
+  font-weight: 700;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+.cancel {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finish {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 16px 24px;
+}
+.finishIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--olive-soft);
+  color: var(--olive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finishTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.05;
+}
+.finishTitle:focus {
+  outline: none;
+}
+.finishLead {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+.finishCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.finishCardTitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.addRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.addRow > :first-child {
+  flex: 1 1 180px;
+}
+.added {
+  margin: 0;
+  font-size: 14px;
+  color: var(--olive);
+  font-weight: 600;
+}

@@ -9,6 +9,7 @@ import { dayFor, menuFor, menuItems, menuLine, menuTitle } from "@/domain/plan";
 import { eveningLeftover, fridgeItems, type EveningLeftover } from "@/domain/leftovers";
 import { offsetLabel, reminderMeta, reminderSentence, topReminder } from "@/domain/prep";
 import { recipeLabel } from "@/domain/shopping";
+import { overallProgress } from "@/domain/cooking";
 import { lowerFirstTr } from "@/lib/text";
 import { now } from "@/lib/clock";
 import { recipesMap, selectList, useApp, usersMap } from "@/store/app";
@@ -53,6 +54,8 @@ export interface TodayModel {
     mainId: string | null;
     approval: ApprovalState;
     cooked: boolean;
+    /** Someone is cooking tonight's menu right now. */
+    cooking: { userId: string; step: number; total: number } | null;
     /** Tonight was cooked: the leftover question. */
     leftover: EveningLeftover | null;
   } | null;
@@ -124,6 +127,13 @@ export function useToday(): TodayModel {
             mainId: (menu.ana ?? items[0]).recipeId,
             approval: approvalState(day, me?.id ?? "", people),
             cooked: day?.status === "cooked",
+            cooking: (() => {
+              const sess = state.cookingSessions.find((c) => c.key === today && c.finishedAt === null);
+              if (!sess || day?.status === "cooked") return null;
+              const dishes = sess.recipeIds.map((rid) => byId.get(rid)).filter((r): r is Recipe => !!r && r.steps.length > 0);
+              const p = overallProgress(sess, dishes);
+              return { userId: sess.userId, step: p.step, total: p.total };
+            })(),
             leftover: day?.status === "cooked" && lunchSetting ? eveningLeftover(st, lunchSetting, today, people.length, today) : null,
           }
         : null;
