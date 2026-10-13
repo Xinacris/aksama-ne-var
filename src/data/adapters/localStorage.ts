@@ -3,6 +3,7 @@ import { newId } from "@/lib/id";
 import {
   activitySchema,
   cookLogSchema,
+  cookingSessionSchema,
   favoriteSchema,
   householdSchema,
   importLogSchema,
@@ -76,6 +77,7 @@ export class LocalStorageAdapter implements Repos {
       matches: t("matches", matchSchema),
       activity: t("activity", activitySchema),
       importLog: t("importLog", importLogSchema),
+      cookingSessions: t("cookingSessions", cookingSessionSchema),
     };
   }
 
@@ -243,6 +245,13 @@ export class LocalStorageAdapter implements Repos {
   imports: Repos["imports"] = {
     list: async (hid) => this.tables.importLog.find((r) => r.householdId === hid),
     add: async (row) => this.tables.importLog.insert(stamp(row)),
+  };
+
+  cooking: Repos["cooking"] = {
+    list: async (hid) => this.tables.cookingSessions.find((c) => c.householdId === hid),
+    create: async (row) => this.tables.cookingSessions.insert(stamp(row)),
+    update: async (id, patch) => this.tables.cookingSessions.update(id, touch(patch)),
+    remove: async (id) => void this.tables.cookingSessions.remove((c) => c.id === id),
   };
 
   async resetAll(): Promise<void> {

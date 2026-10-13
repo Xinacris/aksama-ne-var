@@ -63,7 +63,7 @@ describe("migrations", () => {
         { id: "d2", leftovers: false },
       ]),
     });
-    expect(runMigrations(store).applied).toEqual([4]);
+    expect(runMigrations(store).applied).toEqual([4, 5]);
     expect(JSON.parse(store.getItem("anv:t:recipes")!)).toEqual([
       { id: "a", leftoverPolicy: "lunch", leftoverDays: 2 },
       { id: "b", leftoverPolicy: "none", leftoverDays: 2 },
@@ -93,6 +93,13 @@ describe("migrations", () => {
     expect((await repos.households.get("h"))?.lunchAtHome).toBe("yes");
     expect((await repos.plan.listDays("h"))[0].leftoverChoice).toBe("lunch");
     expect(await repos.recipes.get("r")).toMatchObject({ leftoverPolicy: "lunch", sourceUrl: "https://www.instagram.com/reel/Cx1/", sourcePlatform: "instagram" });
+  });
+
+  it("v5: adds cooking sessions without touching existing tables", () => {
+    const store = memoryStore({ "anv:meta": JSON.stringify({ schemaVersion: 4 }), "anv:t:planDays": "[]" });
+    expect(runMigrations(store).applied).toEqual([5]);
+    expect(store.getItem("anv:t:planDays")).toBe("[]");
+    expect(store.getItem("anv:t:cookingSessions")).toBeNull();
   });
 
   it("mapRows leaves missing and unreadable tables alone", () => {

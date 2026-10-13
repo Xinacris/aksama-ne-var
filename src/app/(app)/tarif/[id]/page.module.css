@@ -328,26 +328,10 @@
   color: var(--ink);
   padding: 0;
 }
-.stepDone .stepNum {
-  background: var(--olive);
-  color: var(--bg);
-}
 .stepText {
   margin: 0;
   font-size: 15.5px;
   line-height: 1.5;
-}
-.stepDone .stepText {
-  color: var(--ink2);
-}
-.cooking .stepNum {
-  cursor: pointer;
-  position: relative;
-}
-.cooking .stepNum::after {
-  content: "";
-  position: absolute;
-  inset: -7px;
 }
 .actions {
   margin: 28px 16px 0;

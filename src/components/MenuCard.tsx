@@ -86,6 +86,7 @@ export function TonightCard({
   approval,
   href,
   action,
+  cook,
 }: {
   photoDish: string;
   title: string;
@@ -93,6 +94,8 @@ export function TonightCard({
   approval: Approval;
   href: string;
   action?: ReactNode;
+  /** "Pişirmeye başla" / "Pişiyor · adım 3/7" row. */
+  cook?: ReactNode;
 }) {
   return (
     <article className={`${s.card} ${s.tonight}`}>
@@ -105,6 +108,7 @@ export function TonightCard({
         <h2 className={s.title}>{title}</h2>
         <Rows rows={rows} withTime />
         {action}
+        {cook}
         <Link href={href} className={s.open}>
           Menüyü ve ön hazırlığı aç
           <IconArrowRight size={18} />

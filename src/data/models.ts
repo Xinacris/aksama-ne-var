@@ -346,6 +346,44 @@ export const matchSchema = z.object({
 });
 export type Match = z.infer<typeof matchSchema>;
 
+// ───────────────────────── cooking mode ─────────────────────────
+
+export const cookingTimerSchema = z.object({
+  id: z.string().min(1),
+  recipeId: z.string(),
+  /** Step index the timer was started from. */
+  step: z.number().int().min(0),
+  /** "Mercimek · 25 dk" — what the sticky bar shows. */
+  label: z.string(),
+  seconds: z.number().int().positive(),
+  /** Absolute end time, so timers survive reloads and other tabs see the same countdown. */
+  endsAt: isoDateTime,
+  /** The cook dismissed the finished banner. */
+  dismissed: z.boolean(),
+});
+export type CookingTimer = z.infer<typeof cookingTimerSchema>;
+
+/** One cooking session per household and menu date (or single recipe). Shared: whoever opens it continues it. */
+export const cookingSessionSchema = z.object({
+  ...base,
+  householdId: uuid,
+  /** "2026-10-12" (that evening's menu) or a recipe id. */
+  key: z.string().min(1),
+  /** Who started cooking (for "Ali pişiriyor"). */
+  userId: uuid,
+  recipeIds: z.array(z.string()),
+  phase: z.enum(["prep", "steps", "done"]),
+  dishIndex: z.number().int().min(0),
+  /** Current step per recipe id. */
+  positions: z.record(z.string(), z.number().int().min(0)),
+  /** Checked ingredient keys on the "Hazırlık" list. */
+  checked: z.array(z.string()),
+  timers: z.array(cookingTimerSchema),
+  finishedAt: isoDateTime.nullable(),
+  createdBy: uuid,
+});
+export type CookingSession = z.infer<typeof cookingSessionSchema>;
+
 // ───────────────────────── recipe import ─────────────────────────
 
 /** One successful link/caption import. No link or caption is stored: this only counts usage. */

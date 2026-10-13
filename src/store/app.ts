@@ -7,6 +7,7 @@ import type {
   ActivityType,
   Aisle,
   CookLog,
+  CookingSession,
   Favorite,
   Household,
   ImportLog,
@@ -69,6 +70,7 @@ export interface AppData {
   matches: Match[];
   activity: Activity[];
   importLog: ImportLog[];
+  cookingSessions: CookingSession[];
 }
 
 const EMPTY: AppData = {
@@ -88,6 +90,7 @@ const EMPTY: AppData = {
   matches: [],
   activity: [],
   importLog: [],
+  cookingSessions: [],
 };
 
 export interface Notice {
@@ -183,6 +186,12 @@ export interface AppState extends AppData {
   logImport(entry: { platform: ImportLog["platform"]; path: ImportLog["path"] }): Promise<void>;
   updateRecipe(id: string, input: RecipeInput): Promise<Recipe>;
   deleteRecipe(id: string): Promise<void>;
+
+  /** Open cooking mode: resume the household's session for this menu/recipe or start one. */
+  startCooking(key: string, recipeIds: string[]): Promise<CookingSession | null>;
+  updateCooking(id: string, patch: Partial<Pick<CookingSession, "phase" | "dishIndex" | "positions" | "checked" | "timers">>): Promise<void>;
+  /** "Afiyet olsun": session done; a menu's evening becomes cooked (cook log, pantry). */
+  finishCooking(id: string): Promise<void>;
 
   loadDemo(): Promise<void>;
   exportJson(): Promise<string>;
@@ -416,7 +425,7 @@ export const useApp = create<AppState>()((set, get) => {
           return;
         }
         const hid = household.id;
-        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, prepTasks, swipes, matches, activity, importLog] =
+        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, prepTasks, swipes, matches, activity, importLog, cookingSessions] =
           await Promise.all([
             households.householdPeople(repos, hid),
             repos.recipes.list(hid),
@@ -432,6 +441,7 @@ export const useApp = create<AppState>()((set, get) => {
             repos.swipes.listMatches(hid),
             repos.activity.list(hid, 200),
             repos.imports.list(hid),
+            repos.cooking.list(hid),
           ]);
         set({
           me,
@@ -451,6 +461,7 @@ export const useApp = create<AppState>()((set, get) => {
           matches,
           activity,
           importLog,
+          cookingSessions,
           status: "ready",
           today,
         });
@@ -784,6 +795,70 @@ export const useApp = create<AppState>()((set, get) => {
       await run(async () => {
         await ctx().repos.recipes.remove(id);
         await syncPrepTasks();
+      });
+    },
+
+    // ───────── cooking ─────────
+    async startCooking(key, recipeIds) {
+      const { me, household } = requireCtx();
+      return run(async () => {
+        const repos = ctx().repos;
+        const sessions = (await repos.cooking.list(household.id)).filter((c) => c.key === key);
+        const open = sessions.find((c) => c.finishedAt === null);
+        if (open) {
+          // The menu may have changed since: keep positions, refresh the dish list.
+          if (open.recipeIds.join() !== recipeIds.join()) return repos.cooking.update(open.id, { recipeIds, dishIndex: Math.min(open.dishIndex, Math.max(0, recipeIds.length - 1)) });
+          return open;
+        }
+        const recent = sessions.find((c) => c.finishedAt && now().getTime() - Date.parse(c.finishedAt) < 6 * 3600_000);
+        if (recent) return recent;
+        for (const old of sessions) await repos.cooking.remove(old.id);
+        const created = await repos.cooking.create({
+          householdId: household.id,
+          key,
+          userId: me.id,
+          recipeIds,
+          phase: "prep",
+          dishIndex: 0,
+          positions: {},
+          checked: [],
+          timers: [],
+          finishedAt: null,
+          createdBy: me.id,
+        });
+        const isMenu = /^\d{4}-\d{2}-\d{2}$/.test(key);
+        await log("cooking.started", { key, date: isMenu ? key : null, recipeId: isMenu ? null : (recipeIds[0] ?? null) });
+        return created;
+      });
+    },
+    async updateCooking(id, patch) {
+      await run(() => ctx().repos.cooking.update(id, patch));
+    },
+    async finishCooking(id) {
+      const { me, household } = requireCtx();
+      await run(async () => {
+        const session = get().cookingSessions.find((c) => c.id === id);
+        if (!session) return;
+        await ctx().repos.cooking.update(id, { phase: "done", finishedAt: nowIso(), timers: session.timers.map((t) => ({ ...t, dismissed: true })) });
+        if (/^\d{4}-\d{2}-\d{2}$/.test(session.key)) {
+          const { ops, cooked } = plan.markCooked(planState(), get().cookLog, session.key, me.id, nowIso());
+          await applyOps(ops);
+          let pantry = get().pantry;
+          for (const c of cooked) {
+            const r = recipesMap(get().recipes).get(c.recipeId);
+            if (!r) continue;
+            const { update, remove } = consumePantry(pantry, r);
+            for (const pid of remove) await ctx().repos.shopping.removePantry(pid);
+            pantry = pantry.filter((p) => !remove.includes(p.id)).map((p) => update.find((u) => u.id === p.id) ?? p);
+          }
+          if (pantry !== get().pantry) {
+            await ctx().repos.shopping.replacePantry(
+              household.id,
+              pantry.map((p) => ({ householdId: p.householdId, name: p.name, quantity: p.quantity, unit: p.unit, createdBy: p.createdBy })),
+            );
+          }
+        }
+        await log("cooking.finished", { key: session.key, date: /^\d{4}-\d{2}-\d{2}$/.test(session.key) ? session.key : null, recipeId: session.recipeIds.length === 1 ? session.recipeIds[0] : null });
       });
     },
 
