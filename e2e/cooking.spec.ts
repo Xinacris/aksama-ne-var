@@ -60,23 +60,23 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
   await ali.getByRole("button", { name: "Bitti" }).click();
   await expect(ali.getByRole("heading", { level: 1, name: "Afiyet olsun" })).toBeVisible();
 
-  // Leftover question pre-selected from the recipe default (İzmir köfte: saklanır 2 gün)
+  // Leftover question defaults to Artmaz ("Hiç kalmadı"); keeping it is an explicit tap
   const card = ali.getByRole("region", { name: "Artan yemek" });
-  await expect(card.getByRole("button", { name: "Dolaba kaldır" })).toHaveAttribute("aria-pressed", "true");
-  await card.getByRole("button", { name: "Hiç kalmadı" }).click();
   await expect(card.getByRole("button", { name: "Hiç kalmadı" })).toHaveAttribute("aria-pressed", "true");
+  await card.getByRole("button", { name: "Dolaba kaldır" }).click();
+  await expect(card.getByRole("button", { name: "Dolaba kaldır" })).toHaveAttribute("aria-pressed", "true");
 
   // Back on Bugün: cooked, the choice is applied — and Zeynep sees the same
   await ali.getByRole("link", { name: "Bugün'e dön" }).click();
   await expect(ali.getByText("Pişti · afiyet olsun")).toBeVisible();
-  await expect(ali.getByRole("group", { name: "Artan oldu mu?" }).getByRole("button", { name: "Hiç kalmadı" })).toHaveAttribute("aria-pressed", "true");
+  await expect(ali.getByRole("group", { name: "Artan oldu mu?" }).getByRole("button", { name: "Dolaba kaldır" })).toHaveAttribute("aria-pressed", "true");
   await expect(zeynep.getByText("Pişti · afiyet olsun")).toBeVisible();
   await expect(zeynep.getByText(/Ali pişiriyor/)).toHaveCount(0);
 
-  // Tomorrow: no lunch, nothing dolapta from tonight
+  // Tomorrow: the köfte Ali kept is dolapta (İzmir köfte keeps two days)
   await ali.clock.setFixedTime(new Date("2026-10-13T10:00:00+03:00"));
   await ali.goto("/bugun");
-  await expect(ali.getByRole("region", { name: "Artan yemek" })).toContainText("Dünkü İzmir köfte: artan yok.");
+  await expect(ali.getByRole("region", { name: "Artan yemek" })).toContainText("Dünkü İzmir köfte dolapta.");
 });
 
 // ───────── "Başlamadan önce" only when something is missing ─────────

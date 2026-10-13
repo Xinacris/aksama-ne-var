@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { parseRecipeText } from "@/domain/import/parseText";
 import { toRecipeDraft } from "@/services/importDraft";
-import { parseDraft } from "@/services/recipeForm";
+import { emptyDraft, parseDraft } from "@/services/recipeForm";
 
 const src = { platform: "tiktok" as const, url: "https://www.tiktok.com/@mutfakdefteri/video/1", author: "@mutfakdefteri", title: null, thumbnailUrl: null, needsPaste: false, hasText: true };
 
@@ -23,6 +23,15 @@ describe("toRecipeDraft", () => {
     expect(soup.ingredients[0]).toMatchObject({ name: "Kırmızı mercimek", quantity: "1,5", unit: "su bardağı" });
     expect(soup.ingredients.some((i) => /su$/i.test(i.name))).toBe(false);
     expect(soup.sourceUrl).toBeUndefined();
+  });
+
+  it("leftovers are never guessed: imports (rules or LLM shape) and new recipes start as Artmaz", () => {
+    for (const f of ["01-mercimek-basliklar", "02-kofte-emoji", "04-kuru-fasulye-gece"]) {
+      expect(toRecipeDraft(parseRecipeText(readFileSync(`tests/fixtures/captions/${f}.txt`, "utf8")), src).leftoverPolicy).toBe("none");
+    }
+    const llmShaped = { name: "Kuru fasulye", servings: 4, role: "ana" as const, totalMinutes: 90, ingredients: [], steps: [], prep: [] };
+    expect(toRecipeDraft(llmShaped, src).leftoverPolicy).toBe("none");
+    expect(emptyDraft().leftoverPolicy).toBe("none");
   });
 
   it("produces a draft the existing form validation accepts, keeping the credit", () => {

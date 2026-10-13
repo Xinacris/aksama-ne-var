@@ -9,8 +9,11 @@ import { POLICY_OPTION } from "@/domain/leftovers";
 import type { RecipeInput } from "@/store/app";
 import { IconChevronLeft, IconPlus, IconTrash } from "./icons";
 import { Button } from "./ui/Button";
+import { ChoiceChips } from "./ui/ChoiceChips";
 import { SelectField, TextArea, TextField } from "./ui/Field";
 import s from "./RecipeForm.module.css";
+
+const POLICY_CHOICES = (["none", "lunch", "store"] as const).map((value) => ({ value, label: POLICY_OPTION[value] }));
 
 const OFFSETS: [string, string][] = [
   ["night-before", "Akşamdan"],
@@ -114,19 +117,14 @@ export function RecipeForm({
             onChange={(e) => set("source", e.target.value)}
           />
           <div className={s.leftover}>
-            <SelectField
+            <ChoiceChips
               label="Artarsa ne olur?"
+              options={POLICY_CHOICES}
               value={d.leftoverPolicy}
-              onChange={(e) => set("leftoverPolicy", e.target.value as RecipeDraft["leftoverPolicy"])}
-            >
-              {(Object.keys(POLICY_OPTION) as (keyof typeof POLICY_OPTION)[]).map((p) => (
-                <option key={p} value={p}>
-                  {POLICY_OPTION[p]}
-                </option>
-              ))}
-            </SelectField>
+              onChange={(v) => set("leftoverPolicy", v)}
+            />
             {d.leftoverPolicy === "store" && (
-              <SelectField label="Kaç gün içinde" value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
+              <SelectField label="Kaç gün içinde" className={s.days} value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
                 {["1", "2", "3", "4"].map((n) => (
                   <option key={n} value={n}>
                     {n} gün

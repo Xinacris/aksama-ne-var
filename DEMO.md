@@ -78,8 +78,9 @@ Ayarlar then counts imports by provider ("Bu ay 3 tarif içe aktarıldı (2 Gemi
 - **Dolapta**: Friday's etli biber dolması "Bugüne kadar" → **Akşama koy** (or on Hafta, drag it
   from the "Dolapta" panel onto an evening). It shows as "Dolaptan" and adds nothing to the list.
 - **Ayarlar › Öğlenleri evde yiyen var mı?** → **Hayır**: yesterday's lunch becomes a dolapta
-  item and "öğlen" is no longer offered. Recipe form: **Artarsa ne olur?** (Artmaz / Ertesi gün
-  öğlen yenir / Saklanır, X gün).
+  item and "öğlen" is no longer offered. Recipe form: **Artarsa ne olur?** — three chips
+  (Artmaz / hepsi biter · Ertesi gün öğlen yenir · Saklanır); every recipe starts as Artmaz, and
+  "Kaç gün içinde" appears only for Saklanır.
 
 **C. Cooking mode with two timers (1.5 min)** — Bugün › tonight's card › **Pişirmeye başla**
 - **Başlamadan önce · N eksik** appears only because something is missing: prep-ahead tasks not
@@ -99,5 +100,5 @@ Ayarlar then counts imports by provider ("Bu ay 3 tarif içe aktarıldı (2 Gemi
   reload the page — they keep counting. When one ends: banner + sound + vibration (phones).
 - Zeynep's tab shows "Ali pişiriyor · adım 4/20" on Bugün.
 - Finish the steps → **Bitti** → **Afiyet olsun**: tonight is marked cooked; the leftover question
-  is pre-selected from the recipe ("Dolaba kaldır" for köfte) — pick one; add "salça" under
+  starts on "Hiç kalmadı" (nothing is guessed) — tap "Dolaba kaldır" to keep the köfte; add "salça" under
   "Eksik çıkan bir şey oldu mu?" and it lands on the list.

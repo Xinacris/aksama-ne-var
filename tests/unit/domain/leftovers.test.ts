@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { LeftoverChoice, LeftoverPolicy, PlanItem } from "@/data/models";
 import { builtinRecipes } from "@/data/seed/recipes";
-import { LEFTOVER_DEFAULTS } from "@/data/seed/leftovers";
+import { KEEP_DAYS } from "@/data/seed/leftovers";
 import {
   defaultOutcome,
   eatsLunchAtHome,
@@ -71,14 +71,21 @@ describe("recipe default × household lunch setting × per-evening choice", () =
 });
 
 describe("evenings", () => {
-  const fasulye = item(SUN, "ana", "Kuru fasulye"); // store, 3 days
+  const fasulye = item(SUN, "ana", "Kuru fasulye"); // Artmaz by default, keeps 3 days
+  const kept = day(SUN, { status: "cooked", leftoverChoice: "fridge", leftoverChoiceBy: "ali" });
 
-  it("default: kuru fasulye goes in the fridge for three days", () => {
+  it("default: nothing is guessed — even kuru fasulye 'artmaz' until someone keeps it", () => {
     const ev = eveningLeftover(state([fasulye]), yes, SUN, 2, MON)!;
+    expect(ev.outcome).toEqual({ kind: "none" });
+    expect(fridgeItems(state([fasulye]), yes, MON, 2)).toEqual([]);
+    expect(lunchOn(state([fasulye]), yes, MON, 2, MON)).toBeNull();
+  });
+
+  it("'Dolaba kaldır': kuru fasulye keeps three days (its shelf life)", () => {
+    const ev = eveningLeftover(state([fasulye], [kept]), yes, SUN, 2, MON)!;
     expect(ev.outcome).toEqual({ kind: "fridge", useBy: "2026-10-14" });
     expect(ev.portions).toBe(2);
-    expect(lunchOn(state([fasulye]), yes, MON, 2, MON)).toBeNull();
-    expect(fridgeItems(state([fasulye]), yes, MON, 2).map((f) => f.recipe.name)).toEqual(["Kuru fasulye"]);
+    expect(fridgeItems(state([fasulye], [kept]), yes, MON, 2).map((f) => f.recipe.name)).toEqual(["Kuru fasulye"]);
   });
 
   it("choice 'lunch' makes it Monday's lunch (Bugün card and board row)", () => {
@@ -99,13 +106,13 @@ describe("evenings", () => {
     const today = item(MON, "ana", "Kuru fasulye");
     expect(fridgeItems(state([today], [day(MON)]), yes, MON, 2)).toEqual([]);
     expect(fridgeItems(state([fasulye], [day(SUN, { status: "ate-out" })]), yes, MON, 2)).toEqual([]);
-    expect(fridgeItems(state([fasulye]), yes, "2026-10-15", 2)).toEqual([]);
+    expect(fridgeItems(state([fasulye], [kept]), yes, "2026-10-15", 2)).toEqual([]);
     expect(fridgeItems(state([fasulye], [day(SUN, { status: "cooked", leftoverChoice: "discard" })]), yes, MON, 2)).toEqual([]);
   });
 
   it("a dolapta dish placed on an evening: shown as planned, then gone once eaten", () => {
     const placed = item(TUE, "ana", "Kuru fasulye", { source: "leftover", leftoverFrom: SUN });
-    const s = state([fasulye, placed]);
+    const s = state([fasulye, placed], [kept]);
     expect(fridgeItems(s, yes, MON, 2)[0].plannedDate).toBe(TUE);
     expect(fridgeItems(s, yes, "2026-10-14", 2)).toEqual([]);
     // the leftover evening itself leaves no new leftovers
@@ -149,21 +156,22 @@ describe("plan + list + prep with leftover items", () => {
   });
 });
 
-describe("built-in defaults are data", () => {
-  it("every built-in recipe has an entry, and the table has no strays", () => {
+describe("built-in recipes: Artmaz by default, shelf life as data", () => {
+  it("every built-in recipe has keep days (1–4), and the table has no strays", () => {
     const ids = builtinRecipes.map((r) => r.id).sort();
-    expect(Object.keys(LEFTOVER_DEFAULTS).sort()).toEqual(ids);
+    expect(Object.keys(KEEP_DAYS).sort()).toEqual(ids);
+    expect(Object.values(KEEP_DAYS).every((d) => d >= 1 && d <= 4)).toBe(true);
   });
 
-  it("follows the household intuition: legumes/soups stored, salads and egg dishes do not leave leftovers", () => {
-    for (const n of ["Kuru fasulye", "Mercimek çorbası", "Etli nohut"]) expect(R(n).leftoverPolicy).toBe("store");
+  it("all 100 start as 'Artmaz'; how long a dish keeps stays per recipe", () => {
+    expect(builtinRecipes.every((r) => r.leftoverPolicy === "none")).toBe(true);
     expect(R("Kuru fasulye").leftoverDays).toBe(3);
-    for (const n of ["Cacık", "Çoban salata", "Menemen", "Patates kızartması", "Hamsi tava"]) expect(R(n).leftoverPolicy).toBe("none");
+    expect(R("Hünkar beğendi").leftoverDays).toBe(1);
   });
 
   it("labels", () => {
-    expect(policyMeta(R("Kuru fasulye"))).toBe("artarsa 3 gün saklanır");
-    expect(policyMeta(R("Tavuk sote"))).toBe("ertesi gün öğlen yenir");
+    expect(policyMeta({ leftoverPolicy: "store", leftoverDays: 3 })).toBe("artarsa 3 gün saklanır");
+    expect(policyMeta({ leftoverPolicy: "lunch", leftoverDays: 2 })).toBe("ertesi gün öğlen yenir");
     expect(policyMeta(R("Cacık"))).toBeNull();
     expect(keepUntilLabel(MON, MON)).toBe("Bugüne kadar");
     expect(keepUntilLabel(TUE, MON)).toBe("Yarına kadar");

@@ -15,7 +15,17 @@ test("'Artmaz' on a recipe → cooking it creates no lunch; 'öğlen yenir' does
   // A custom recipe that leaves nothing over
   await page.goto("/tarifler/yeni");
   await page.getByLabel("Tarifin adı").fill("Sahanda yumurta");
-  await page.getByLabel("Artarsa ne olur?").selectOption("none");
+  // New recipes start as "Artmaz"; "Kaç gün içinde" only shows for "Saklanır"
+  const policy = page.getByRole("radiogroup", { name: "Artarsa ne olur?" });
+  await expect(policy.getByRole("radio", { name: "Artmaz / hepsi biter" })).toBeChecked();
+  await expect(page.getByLabel("Kaç gün içinde")).toHaveCount(0);
+  await policy.getByRole("radio", { name: "Saklanır" }).click();
+  await expect(page.getByLabel("Kaç gün içinde")).toBeVisible();
+  // keyboard: one tab stop, arrows move the choice
+  await policy.getByRole("radio", { name: "Saklanır" }).press("ArrowRight");
+  await expect(policy.getByRole("radio", { name: "Artmaz / hepsi biter" })).toBeChecked();
+  await expect(policy.getByRole("radio", { name: "Artmaz / hepsi biter" })).toBeFocused();
+  await expect(page.getByLabel("Kaç gün içinde")).toHaveCount(0);
   await page.getByLabel("Malzeme", { exact: true }).fill("Yumurta");
   await page.getByLabel("Miktar", { exact: true }).fill("4");
   await page.getByLabel("1. adım", { exact: true }).fill("Yumurtaları tereyağında 5 dakika pişir.");
@@ -39,7 +49,7 @@ test("'Artmaz' on a recipe → cooking it creates no lunch; 'öğlen yenir' does
 
   // Change the recipe default to "ertesi gün öğlen yenir": the lunch appears
   await page.goto(recipeUrl.replace("/tarif/", "/tarifler/") + "/duzenle");
-  await page.getByLabel("Artarsa ne olur?").selectOption("lunch");
+  await page.getByRole("radiogroup", { name: "Artarsa ne olur?" }).getByRole("radio", { name: "Ertesi gün öğlen yenir" }).click();
   await page.getByRole("button", { name: "Değişiklikleri kaydet" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Sahanda yumurta" })).toBeVisible();
   await page.goto("/bugun");

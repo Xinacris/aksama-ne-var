@@ -1,0 +1,34 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+/* Same chip language as the leftover choices on Bugün. */
+.chip {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.chip:hover {
+  border-color: var(--ink2);
+}
+.chip[aria-checked="true"] {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--surface);
+}

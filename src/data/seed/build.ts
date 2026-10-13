@@ -1,7 +1,7 @@
 import { slugify } from "@/lib/text";
 import type { Course, Ingredient, PrepItem, PrepOffset, Recipe, Unit } from "../models";
 import { catalogEntry } from "./ingredients";
-import { LEFTOVER_DEFAULTS } from "./leftovers";
+import { KEEP_DAYS } from "./leftovers";
 
 export const SEED_TIMESTAMP = "2026-01-01T00:00:00.000Z";
 
@@ -47,8 +47,8 @@ export interface RecipeSpec {
 
 export function recipe(s: RecipeSpec): Recipe {
   const id = slugify(s.name);
-  const leftover = LEFTOVER_DEFAULTS[id];
-  if (!leftover) throw new Error(`No leftover default for "${id}" — add it to seed/leftovers.ts`);
+  const keepDays = KEEP_DAYS[id];
+  if (!keepDays) throw new Error(`No keep days for "${id}" — add it to seed/leftovers.ts`);
   return {
     id,
     householdId: null,
@@ -63,8 +63,9 @@ export function recipe(s: RecipeSpec): Recipe {
     ingredients: s.ingredients,
     prepItems: s.prepItems ?? [],
     steps: s.steps,
-    leftoverPolicy: leftover.policy,
-    leftoverDays: leftover.days ?? 2,
+    // Nothing is guessed: "Artmaz" until the household chooses otherwise.
+    leftoverPolicy: "none",
+    leftoverDays: keepDays,
     freezerItem: s.freezer ?? null,
     ...(s.source ? { source: s.source } : {}),
     createdBy: null,
