@@ -5,6 +5,7 @@ import {
   cookLogSchema,
   favoriteSchema,
   householdSchema,
+  importLogSchema,
   matchSchema,
   memberSchema,
   pantryItemSchema,
@@ -74,6 +75,7 @@ export class LocalStorageAdapter implements Repos {
       swipes: t("swipes", swipeSchema),
       matches: t("matches", matchSchema),
       activity: t("activity", activitySchema),
+      importLog: t("importLog", importLogSchema),
     };
   }
 
@@ -235,6 +237,11 @@ export class LocalStorageAdapter implements Repos {
       return limit ? rows.slice(0, limit) : rows;
     },
     add: async (row) => this.tables.activity.insert(stamp(row)),
+  };
+
+  imports: Repos["imports"] = {
+    list: async (hid) => this.tables.importLog.find((r) => r.householdId === hid),
+    add: async (row) => this.tables.importLog.insert(stamp(row)),
   };
 
   async resetAll(): Promise<void> {

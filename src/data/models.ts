@@ -324,6 +324,18 @@ export const matchSchema = z.object({
 });
 export type Match = z.infer<typeof matchSchema>;
 
+// ───────────────────────── recipe import ─────────────────────────
+
+/** One successful link/caption import. No link or caption is stored: this only counts usage. */
+export const importLogSchema = z.object({
+  ...base,
+  householdId: uuid,
+  platform: sourcePlatformSchema.nullable(),
+  path: z.enum(["llm", "rules"]),
+  createdBy: uuid,
+});
+export type ImportLog = z.infer<typeof importLogSchema>;
+
 // ───────────────────────── activity ─────────────────────────
 
 export const ACTIVITY_TYPES = [

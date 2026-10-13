@@ -34,7 +34,7 @@ Demo accounts: ali@demo.ev / zeynep@demo.ev · password demo1234 (or "Örnek evl
 
 Spec: PROMPT-v2.md. Continue from the first unchecked R-item.
 
-- [ ] R1. Read the codebase; plan data-model changes in DECISIONS.md; storage migration scaffold + tests.
+- [x] R1. Read the codebase; plan data-model changes in DECISIONS.md; storage migration scaffold + tests.
 - [ ] R2. Import domain: URL detection, adapters (TikTok, YouTube, Instagram, schema.org web), rule-based parser + fixtures.
 - [ ] R3. Import server route: Claude Haiku path with validation/retry, graceful no-key mode, rate limit, tests.
 - [ ] R4. Import UI: "Linkten ekle", paste fallback, draft review in existing form, source credit, share target manifest; e2e.
