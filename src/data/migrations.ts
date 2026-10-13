@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 6;
+export const CURRENT_SCHEMA_VERSION = 7;
 
 export interface Migration {
   version: number;
@@ -54,7 +54,8 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
  * version 3 moves link-shaped recipe `source` text into `sourceUrl` + `sourcePlatform`;
  * version 4 makes leftovers a choice (recipe policy, household lunch setting, per-evening choice);
  * version 5 adds the cooking sessions table (new table: nothing to convert);
- * version 6 records which provider made an import draft (`path` → `provider`).
+ * version 6 records which provider made an import draft (`path` → `provider`);
+ * version 7 resets built-in recipes to "Artmaz" (leftovers are never guessed).
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -119,6 +120,15 @@ export const MIGRATIONS: Migration[] = [
         const { path, ...rest } = r;
         return { ...rest, provider: path === "llm" ? "claude" : "rules" };
       });
+    },
+  },
+  {
+    version: 7,
+    description: "Built-in recipes default to Artmaz; household recipes keep their choice",
+    up: (store) => {
+      // Built-ins (householdId null) can't be edited — a household edits its own copy — so any
+      // stored built-in row still holds the old R5 guess. Household recipes are the user's own.
+      mapRows(store, "recipes", (r) => (r.householdId === null && r.leftoverPolicy !== "none" ? { ...r, leftoverPolicy: "none" } : r));
     },
   },
 ];

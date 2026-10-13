@@ -56,8 +56,8 @@ export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"])
     ingredients: ingredients.length ? ingredients : [emptyIngredient()],
     prepItems,
     steps: r.steps.length ? r.steps.map((s) => s.text) : [""],
-    // Imported dishes start with the same default a matching built-in would have.
-    leftoverPolicy: r.role === "salata" ? "none" : "store",
+    // Never guessed: the user chooses when a dish is kept.
+    leftoverPolicy: "none",
     leftoverDays: "2",
     freezerItem,
     source: "",

@@ -72,7 +72,7 @@ describe("cooking timers", () => {
 });
 
 describe("finish → leftover question", () => {
-  it("'Afiyet olsun' marks tonight cooked, pre-selects the recipe default, applies the choice, quick-adds to the list", async () => {
+  it("'Afiyet olsun' marks tonight cooked, pre-selects Artmaz, applies the choice, quick-adds to the list", async () => {
     await stepsOfMenu();
     // jump to the last dish's last step
     const salata = R("Çoban salata");
@@ -92,8 +92,9 @@ describe("finish → leftover question", () => {
     expect(st.activity.some((a) => a.type === "cooking.finished" && a.data.date === MON)).toBe(true);
 
     const card = screen.getByRole("region", { name: "Artan yemek" });
-    // İzmir köfte's default is "saklanır 2 gün": Dolaba kaldır is pre-selected
-    expect(within(card).getByRole("button", { name: "Dolaba kaldır" })).toHaveAttribute("aria-pressed", "true");
+    // Nothing is guessed: "Hiç kalmadı" (Artmaz) is pre-selected until someone keeps it
+    expect(within(card).getByRole("button", { name: "Hiç kalmadı" })).toHaveAttribute("aria-pressed", "true");
+    expect(within(card).getByRole("button", { name: "Dolaba kaldır" })).toHaveAttribute("aria-pressed", "false");
     await userEvent.click(within(card).getByRole("button", { name: "Yarın öğlen" }));
     expect(useApp.getState().planDays.find((d) => d.date === MON)?.leftoverChoice).toBe("lunch");
 

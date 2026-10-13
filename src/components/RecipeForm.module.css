@@ -157,12 +157,12 @@
   }
 }
 .leftover {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.leftover > :only-child {
-  grid-column: 1 / -1;
+.days {
+  max-width: 220px;
 }
 .formNote {
   margin: -4px 0 0;
