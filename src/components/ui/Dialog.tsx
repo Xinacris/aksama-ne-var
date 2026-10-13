@@ -14,12 +14,15 @@ export function Dialog({
   title,
   eyebrow,
   children,
+  readOnly = false,
 }: {
   open: boolean;
   onClose: () => void;
   title: string;
   eyebrow?: string;
   children: ReactNode;
+  /** Content with nothing to tap (a list to read): the scrolling body takes focus so keyboards can scroll it. */
+  readOnly?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -60,7 +63,9 @@ export function Dialog({
               <IconClose size={18} />
             </button>
           </div>
-          <div className={s.body}>{children}</div>
+          <div className={s.body} tabIndex={readOnly ? 0 : undefined}>
+            {children}
+          </div>
         </div>
       )}
     </dialog>

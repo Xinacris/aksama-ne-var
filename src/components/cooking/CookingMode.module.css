@@ -116,48 +116,65 @@
   font-size: 15px;
   flex: none;
 }
-.checklist {
+.missingList {
   list-style: none;
-  margin: 0;
+  margin: 8px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.checkRow {
-  width: 100%;
-  min-height: 60px;
+.missingRow {
   display: flex;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
+  gap: 12px;
   padding: 10px 14px;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: var(--surface);
-  color: var(--ink);
-  text-align: left;
 }
-.checkRow[aria-pressed="true"] {
-  background: var(--olive-soft);
-  border-color: var(--olive-soft);
+.missingRow .checkText {
+  flex: 1;
 }
-.checkRow[aria-pressed="true"] .checkName {
-  color: var(--ink2);
-}
-.box {
-  width: 30px;
-  height: 30px;
-  flex: none;
-  border-radius: 9px;
-  border: 2px solid var(--line);
+.missingActions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--surface);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: none;
 }
-.checkRow[aria-pressed="true"] .box {
-  background: var(--olive);
-  border-color: var(--olive);
+/* "Malzemeler" sits beside the step label, outside the animated step. */
+.stepTools {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  z-index: 1;
+}
+.ingBtn {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14.5px;
+}
+.sheetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sheetRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.sheetRow:last-child {
+  border-bottom: 0;
 }
 .checkText {
   display: flex;
@@ -203,6 +220,7 @@
   opacity: 0.85;
 }
 .stepArea {
+  position: relative;
   flex: 1;
   display: flex;
   touch-action: pan-y;
@@ -241,6 +259,10 @@
 }
 .stepEyebrow {
   margin: 0;
+  padding-right: 128px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;

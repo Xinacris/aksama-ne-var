@@ -21,9 +21,10 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
   // Ali starts cooking from tonight's card
   await ali.getByRole("link", { name: "Pişirmeye başla" }).click();
   await expect(ali).toHaveURL(/\/pisir\/2026-10-12/);
-  await expect(ali.getByRole("heading", { level: 1, name: "Hazırlık" })).toBeVisible();
-  await ali.getByRole("list", { name: "Malzemeler" }).getByRole("button", { name: /Kıyma/ }).click();
-  await ali.getByRole("button", { name: "Pişirmeye başla" }).click();
+  // Prep-ahead tasks are still open tonight, so the heads-up shows first
+  await expect(ali.getByRole("heading", { level: 1, name: "Başlamadan önce" })).toBeVisible();
+  await expect(ali.getByRole("region", { name: "Önceden yapılacaklar" })).toContainText("Köfte harcını yoğur");
+  await ali.getByRole("button", { name: "Yine de başla" }).click();
   await expect(ali.getByRole("tablist", { name: "Yemekler" })).toBeVisible();
 
   // Zeynep sees it live, with the activity line
@@ -76,4 +77,57 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
   await ali.clock.setFixedTime(new Date("2026-10-13T10:00:00+03:00"));
   await ali.goto("/bugun");
   await expect(ali.getByRole("region", { name: "Artan yemek" })).toContainText("Dünkü İzmir köfte: artan yok.");
+});
+
+// ───────── "Başlamadan önce" only when something is missing ─────────
+
+const FASULYE = "/tarif/kuru-fasulye";
+// Kuru fasulye in the demo: dana kuşbaşı, soğan and salça are at home; these three are not.
+const NEEDED = ["Kuru fasulye", "Biber salçası", "Tereyağı"];
+
+async function demoAt(page: import("@playwright/test").Page) {
+  await page.clock.install({ time: EVENING });
+  await page.goto("/giris");
+  await page.getByRole("button", { name: /Örnek evle dene/ }).click();
+  await expect(page).toHaveURL(/\/bugun/);
+}
+
+/** Put what's missing on the list from the recipe page, then tick `buy` in Liste (as if bought). */
+async function buy(page: import("@playwright/test").Page, names: string[]) {
+  await page.goto(FASULYE);
+  await page.getByRole("region", { name: "Malzemeler" }).getByRole("button", { name: "kuru fasulye listeye ekle" }).click();
+  await page.goto("/liste");
+  for (const n of names) {
+    const row = page.getByRole("button", { name: new RegExp(`^${n},`) }).first();
+    await row.click();
+    await expect(row).toHaveAttribute("aria-pressed", "true");
+  }
+}
+
+test("all ingredients bought → Pişirmeye başla opens step 1 directly", async ({ page }) => {
+  await demoAt(page);
+  await buy(page, NEEDED);
+  await page.goto(FASULYE);
+  await page.getByRole("link", { name: "Pişirmeye başla" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Adım 1 /");
+  await expect(page.getByRole("heading", { name: "Başlamadan önce" })).toHaveCount(0);
+  // the full list is still one tap away
+  await page.getByRole("button", { name: "Malzemeler" }).click();
+  await expect(page.getByRole("dialog", { name: "Malzemeler" })).toContainText("Kuru fasulye");
+});
+
+test("one item missing → heads-up → Evde var → it disappears → Yine de başla → step 1", async ({ page }) => {
+  await demoAt(page);
+  await buy(page, NEEDED.filter((n) => n !== "Biber salçası"));
+  await page.goto(FASULYE);
+  await page.getByRole("link", { name: "Pişirmeye başla" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Başlamadan önce" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "eksik" })).toHaveText("1 eksik");
+  const missing = page.getByRole("list", { name: "Eksik malzemeler" });
+  await expect(missing.getByRole("listitem")).toHaveCount(1);
+  await missing.getByRole("button", { name: "Biber salçası evde var" }).click();
+  await expect(page.getByRole("list", { name: "Eksik malzemeler" })).toHaveCount(0);
+  await expect(page.getByText("Hepsi tamam")).toBeVisible();
+  await page.getByRole("button", { name: "Yine de başla" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Adım 1 /");
 });

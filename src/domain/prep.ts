@@ -31,9 +31,10 @@ export function offsetLabel(offset: PrepOffset): string {
   if (offset === "morning") return "Sabah";
   if (offset === "night-before") return "Akşamdan";
   const mins = offsetMinutes(offset) ?? 0;
-  if (mins >= 60 && mins % 60 === 0) return `${mins / 60} sa önce`;
-  if (mins > 60) return `${Math.floor(mins / 60)} sa ${mins % 60} dk önce`;
-  return `${mins} dk önce`;
+  // "Pişirmeden": a bare "1 sa önce" reads like "1 hour ago".
+  if (mins >= 60 && mins % 60 === 0) return `Pişirmeden ${mins / 60} sa önce`;
+  if (mins > 60) return `Pişirmeden ${Math.floor(mins / 60)} sa ${mins % 60} dk önce`;
+  return `Pişirmeden ${mins} dk önce`;
 }
 
 /** "Sabah 09:00", "Öğleden sonra 15:30", "Akşam 21:00" */

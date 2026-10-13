@@ -3,6 +3,7 @@ import {
   dishesToCook,
   isFinished,
   mergedIngredients,
+  missingForCooking,
   moveStep,
   newTimer,
   overallProgress,
@@ -14,7 +15,9 @@ import {
   stepTimers,
   visibleTimers,
 } from "@/domain/cooking";
-import { item, R, recipesById } from "./helpers";
+import type { PantryItem, PrepTask, Recipe, ShoppingCheck } from "@/data/models";
+import { generateList, ingredientKey } from "@/domain/shopping";
+import { check, item, pantry, R, recipesById } from "./helpers";
 
 const MON = "2026-10-12";
 const menu = [
@@ -108,5 +111,55 @@ describe("timers", () => {
     expect(visibleTimers([lentils, rest, short], later).map((t) => t.id)).toEqual(["b", "a", "c"]);
     expect(ringingTimers([lentils, rest, short], later).map((t) => t.id)).toEqual(["c"]);
     expect(ringingTimers([lentils, rest, { ...short, dismissed: true }], later)).toEqual([]);
+  });
+});
+
+describe("missing before cooking", () => {
+  const kofte = R("İzmir köfte");
+  const pilav = R("Tereyağlı pirinç pilavı");
+  const recipes = [kofte, pilav];
+  const target = { kind: "menu", date: MON } as const;
+  const nonStaple = (rs: Recipe[]) => [...new Set(rs.flatMap((r) => r.ingredients.filter((i) => !i.staple).map((i) => i.name)))];
+  const list = (opts: { pantry?: PantryItem[]; checks?: ShoppingCheck[]; planned?: Recipe[] } = {}) =>
+    generateList({ planned: opts.planned ?? recipes, pantry: opts.pantry ?? [], manualItems: [], checks: opts.checks ?? [], recipesById });
+  const task = (status: "pending" | "done") =>
+    ({ id: `t-${status}`, date: MON, recipeId: kofte.id, status, dueAt: `${MON}T06:00:00Z`, label: "Kıymayı buzluktan çıkar", offset: "morning" }) as PrepTask;
+  const run = (args: { pantry?: PantryItem[]; checks?: ShoppingCheck[]; tasks?: PrepTask[]; planned?: Recipe[] }) =>
+    missingForCooking({ recipes, rows: list(args), pantry: args.pantry ?? [], tasks: args.tasks ?? [], target, today: MON });
+
+  it("nothing bought, nothing at home: every non-staple ingredient, on the list, plus pending prep first", () => {
+    const out = run({ tasks: [task("pending"), task("done")] });
+    expect(out.prep.map((t) => t.id)).toEqual(["t-pending"]);
+    expect(out.ingredients.map((i) => i.name).sort()).toEqual(nonStaple(recipes).sort());
+    expect(out.ingredients.every((i) => i.onList)).toBe(true);
+    expect(out.ingredients.find((i) => i.name === "Tereyağı")?.forDishes.length).toBeGreaterThanOrEqual(1);
+    expect(out.count).toBe(out.ingredients.length + 1);
+  });
+
+  it("all bought (ticked in Liste) and no prep tasks: nothing missing", () => {
+    const checks = list().map((r) => check(r.key, "ali"));
+    expect(run({ checks })).toMatchObject({ prep: [], ingredients: [], count: 0 });
+  });
+
+  it("evde var covers an ingredient; staples never count", () => {
+    const names = nonStaple(recipes);
+    const out = run({ pantry: names.slice(1).map((n) => pantry(n, null, null)) });
+    expect(out.ingredients.map((i) => i.name)).toEqual([names[0]]);
+    expect(out.ingredients.some((i) => recipes.flatMap((r) => r.ingredients).find((x) => x.name === i.name)?.staple)).toBe(false);
+  });
+
+  it("partially covered menu: some bought, some at home, the rest is missing", () => {
+    const names = nonStaple(recipes);
+    const [bought, atHome, ...rest] = names;
+    const checks = [check(ingredientKey(bought), "zeynep")];
+    const out = run({ checks, pantry: [pantry(atHome, null, null)] });
+    expect(out.ingredients.map((i) => i.name).sort()).toEqual(rest.sort());
+  });
+
+  it("a recipe outside the plan: missing ingredients are not on the list yet", () => {
+    const menemen = R("Menemen");
+    const out = missingForCooking({ recipes: [menemen], rows: list({ planned: [] }), pantry: [], tasks: [], target: { kind: "recipe", recipeId: menemen.id }, today: MON });
+    expect(out.count).toBe(nonStaple([menemen]).length);
+    expect(out.ingredients.every((i) => !i.onList && i.recipeId === menemen.id)).toBe(true);
   });
 });

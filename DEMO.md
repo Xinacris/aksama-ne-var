@@ -82,8 +82,16 @@ Ayarlar then counts imports by provider ("Bu ay 3 tarif içe aktarıldı (2 Gemi
   öğlen yenir / Saklanır, X gün).
 
 **C. Cooking mode with two timers (1.5 min)** — Bugün › tonight's card › **Pişirmeye başla**
-- **Hazırlık**: pending prep on top ("Kıymayı buzluktan çıkar · Çıkardım"), all ingredients of
-  the menu merged — tap to tick. **Pişirmeye başla**.
+- **Başlamadan önce · N eksik** appears only because something is missing: prep-ahead tasks not
+  done ("Köfte harcını yoğur · Pişirmeden 1 sa önce · Yaptım"), then ingredients neither bought
+  in Liste nor "evde var" — each with **Evde var** (and **Listeye ekle** when it isn't on the list
+  yet). Tap **Evde var** on one: it disappears, Liste updates on Zeynep's side too. Nothing
+  blocks cooking: **Yine de başla**.
+- If nothing is missing, Pişirmeye başla opens step 1 directly. To see it: Tarif › Kuru fasulye ›
+  "kuru fasulye · Eksik · ekle", tick Kuru fasulye, Biber salçası and Tereyağı in Liste, then
+  **Pişirmeye başla** on the recipe.
+- **Malzemeler** (top right of every step) opens a sheet with the whole merged list: amounts and
+  which dish each is for.
 - One step per screen, big text; **Sonraki/Önceki**, swipe, or ←/→. Tabs: Mercimek · İzmir köfte ·
   Pirinç pilavı · Çoban salata — each keeps its own step.
 - Mercimek step 4 → **Zamanlayıcı başlat · 20 dk**; switch to İzmir köfte step 1 →
