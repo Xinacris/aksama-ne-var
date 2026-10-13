@@ -6,7 +6,7 @@ import { handleImport, providersFromEnv, type HandlerDeps } from "@/server/impor
 import { DailyLimiter } from "@/server/import/rateLimit";
 import { providerInput, structureRecipe, type LlmProvider } from "@/server/llm";
 import { CLAUDE_TOOL } from "@/server/llm/claude";
-import { GEMINI_DEFAULT_MODEL, geminiProvider, toGeminiSchema } from "@/server/llm/gemini";
+import { GEMINI_DEFAULT_MODEL, geminiProvider, thinkingFor, toGeminiSchema } from "@/server/llm/gemini";
 import { RECIPE_JSON_SCHEMA, SYSTEM_PROMPT, userPrompt } from "@/server/llm/prompt";
 
 const caption = readFileSync("tests/fixtures/captions/03-satir-ici.txt", "utf8");
@@ -122,6 +122,44 @@ describe("Gemini", () => {
     const body = JSON.parse(String(init.body));
     expect(body.generationConfig).toMatchObject({ responseMimeType: "application/json", responseSchema: toGeminiSchema(RECIPE_JSON_SCHEMA) });
     expect(body.systemInstruction.parts[0].text).toBe(SYSTEM_PROMPT);
+  });
+
+  it("thinking is kept low: minimal for Gemini 3, budget 0 for 2.5 Flash, nothing for unknown families", () => {
+    expect(thinkingFor("gemini-3.1-flash-lite", "minimal")).toEqual({ thinkingLevel: "minimal" });
+    expect(thinkingFor("gemini-2.5-flash-lite", "minimal")).toEqual({ thinkingBudget: 0 });
+    expect(thinkingFor("gemma-4", "minimal")).toBeNull();
+  });
+
+  it("a model that refuses 'minimal' (400 INVALID_ARGUMENT) is retried once with 'low', and remembered", async () => {
+    const levels: string[] = [];
+    const gemini = vi.fn(async (_url: string, init: RequestInit) => {
+      const level = JSON.parse(String(init.body)).generationConfig.thinkingConfig.thinkingLevel;
+      levels.push(level);
+      return level === "minimal" ? json({ error: { code: 400, status: "INVALID_ARGUMENT", message: "thinking level" } }, 400) : geminiOk();
+    });
+    const model = "gemini-3.1-flash-lite-test-refuses-minimal";
+    expect((await run(deps({ GEMINI_API_KEY: "g", GEMINI_MODEL: model }, gemini))).provider).toBe("gemini");
+    expect((await run(deps({ GEMINI_API_KEY: "g", GEMINI_MODEL: model }, gemini))).provider).toBe("gemini");
+    expect(levels).toEqual(["minimal", "low", "low"]);
+  });
+
+  it("the last provider may use the rest of the request; one with a fallback after it is capped", async () => {
+    let seen = 0;
+    const slow: LlmProvider = {
+      name: "gemini",
+      call: (_i, { signal }) =>
+        new Promise((resolve, reject) => {
+          const t = setTimeout(() => resolve(VALID), 60);
+          signal.addEventListener("abort", () => {
+            clearTimeout(t);
+            seen++;
+            reject(Object.assign(new Error("aborted"), { name: "AbortError" }));
+          });
+        }),
+    };
+    // alone and last: 60 ms of work fits a 2 s deadline even though the cap would be shorter
+    expect((await structureRecipe(caption, { platform: null, title: null }, { providers: [slow], deadline: Date.now() + 2_000 })).provider).toBe("gemini");
+    expect(seen).toBe(0);
   });
 
   it("GEMINI_MODEL overrides the model", async () => {
@@ -274,7 +312,8 @@ describe("privacy", () => {
     expect(Object.keys(body).sort()).toEqual(["contents", "generationConfig", "systemInstruction"]);
     expect(body.systemInstruction).toEqual({ parts: [{ text: SYSTEM_PROMPT }] });
     expect(body.contents).toEqual([{ role: "user", parts: [{ text: userPrompt({ text: caption.trim(), platform: "tiktok" }, false) }] }]);
-    expect(Object.keys(body.generationConfig).sort()).toEqual(["maxOutputTokens", "responseMimeType", "responseSchema", "temperature"]);
+    expect(Object.keys(body.generationConfig).sort()).toEqual(["maxOutputTokens", "responseMimeType", "responseSchema", "temperature", "thinkingConfig"]);
+    expect(body.generationConfig.thinkingConfig).toEqual({ thinkingLevel: "minimal" });
 
     const raw = String(init.body);
     for (const secret of ["ev-ali-zeynep-42", "ali@demo.ev", "203.0.113.9", "mutfakdefteri", "Mutfak Defteri", TIKTOK]) expect(raw).not.toContain(secret);

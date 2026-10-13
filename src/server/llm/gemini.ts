@@ -2,7 +2,8 @@ import { RECIPE_JSON_SCHEMA, SYSTEM_PROMPT, userPrompt } from "./prompt";
 import { ProviderError, type LlmProvider } from "./types";
 
 export const GEMINI_DEFAULT_MODEL = "gemini-3.1-flash-lite";
-export const GEMINI_MAX_TOKENS = 2048;
+/** Thinking tokens count toward the output limit; a 24-ingredient draft is ~1.5k tokens of JSON. */
+export const GEMINI_MAX_TOKENS = 4096;
 const ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models";
 
 export type GeminiFetch = (input: string, init: RequestInit) => Promise<Response>;
@@ -31,8 +32,24 @@ export function toGeminiSchema(s: Schema): Schema {
 
 const RESPONSE_SCHEMA = toGeminiSchema(RECIPE_JSON_SCHEMA);
 
+/**
+ * Gemini 3 models think before answering by default, which took 6–7 s even for a short
+ * caption — past the per-attempt budget. Structuring a caption needs no deliberation.
+ * Levels by family; `null` sends no thinking config (unknown families keep their default).
+ */
+export function thinkingFor(model: string, level: ThinkingLevel): Record<string, unknown> | null {
+  if (/^gemini-3/.test(model)) return { thinkingLevel: level };
+  if (/^gemini-2\.5-flash/.test(model)) return { thinkingBudget: 0 };
+  return null;
+}
+export type ThinkingLevel = "minimal" | "low";
+
+/** Levels a model refused (400 INVALID_ARGUMENT), per server instance: minimal → low. */
+const refusedMinimal = new Set<string>();
+
 /** The full request body. Only the static prompt, the caption and the platform are in it. */
-export function geminiRequestBody(input: Parameters<LlmProvider["call"]>[0], retry: boolean) {
+export function geminiRequestBody(input: Parameters<LlmProvider["call"]>[0], retry: boolean, model = GEMINI_DEFAULT_MODEL, level: ThinkingLevel = "minimal") {
+  const thinking = thinkingFor(model, level);
   return {
     systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
     contents: [{ role: "user", parts: [{ text: userPrompt(input, retry) }] }],
@@ -41,6 +58,7 @@ export function geminiRequestBody(input: Parameters<LlmProvider["call"]>[0], ret
       responseSchema: RESPONSE_SCHEMA,
       temperature: 0.2,
       maxOutputTokens: GEMINI_MAX_TOKENS,
+      ...(thinking ? { thinkingConfig: thinking } : {}),
     },
   };
 }
@@ -55,23 +73,36 @@ export function geminiProvider(opts: { apiKey: string; model?: string; fetch: Ge
   return {
     name: "gemini",
     async call(input, { signal, retry }) {
-      let res: Response;
-      try {
-        res = await opts.fetch(`${ENDPOINT}/${encodeURIComponent(model)}:generateContent`, {
-          method: "POST",
-          headers: { "content-type": "application/json", "x-goog-api-key": opts.apiKey },
-          body: JSON.stringify(geminiRequestBody(input, retry)),
-          signal,
-        });
-      } catch (e) {
-        const name = (e as { name?: string })?.name;
-        throw new ProviderError(signal.aborted || name === "AbortError" || name === "TimeoutError" ? "timeout" : "error");
-      }
-      if (!res.ok) {
-        const status = await res
+      const send = async (level: ThinkingLevel) => {
+        try {
+          return await opts.fetch(`${ENDPOINT}/${encodeURIComponent(model)}:generateContent`, {
+            method: "POST",
+            headers: { "content-type": "application/json", "x-goog-api-key": opts.apiKey },
+            body: JSON.stringify(geminiRequestBody(input, retry, model, level)),
+            signal,
+          });
+        } catch (e) {
+          const name = (e as { name?: string })?.name;
+          throw new ProviderError(signal.aborted || name === "AbortError" || name === "TimeoutError" ? "timeout" : "error");
+        }
+      };
+      const errorStatus = (r: Response) =>
+        r
           .json()
           .then((b: { error?: { status?: string } }) => b?.error?.status)
           .catch(() => undefined);
+
+      let res = await send(refusedMinimal.has(model) ? "low" : "minimal");
+      let status: string | undefined;
+      if (!res.ok) status = await errorStatus(res);
+      // "minimal" isn't offered by every Gemini 3 model: fall back to "low" once and remember.
+      if (res.status === 400 && status === "INVALID_ARGUMENT" && thinkingFor(model, "minimal") && !refusedMinimal.has(model)) {
+        refusedMinimal.add(model);
+        console.warn(`[import] gemini ${model}: thinking level minimal refused; using low`);
+        res = await send("low");
+        status = res.ok ? undefined : await errorStatus(res);
+      }
+      if (!res.ok) {
         if (res.status === 429 || status === "RESOURCE_EXHAUSTED") throw new ProviderError("quota", res.status, status);
         if (res.status === 408 || res.status === 504 || status === "DEADLINE_EXCEEDED") throw new ProviderError("timeout", res.status, status);
         throw new ProviderError("error", res.status, status);
