@@ -40,6 +40,11 @@
   color-scheme: dark;
 }
 
+/* Explicit light choice on a dark system: native controls (select popups, scrollbars) follow. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
 /* No-JS fallback: follow the system when no explicit theme is set */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
@@ -91,6 +96,28 @@ textarea {
 
 button {
   cursor: pointer;
+}
+
+/*
+ * Native selects: the open list is drawn by the OS/browser. With an inherited light text
+ * colour and a transparent background it could open white with light text in dark mode;
+ * give both the control and its options the theme's surface and ink.
+ */
+select {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+option,
+optgroup {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+/* The chosen option: the system highlight (pale blue in dark mode) under light ink is unreadable.
+   Chromium only lets a gradient override it, hence the image. */
+option:checked {
+  background: var(--olive-soft) linear-gradient(var(--olive-soft), var(--olive-soft));
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
 }
 
 input::placeholder,

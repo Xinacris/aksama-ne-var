@@ -18,12 +18,12 @@ const POLICY_CHOICES = (["none", "lunch", "store"] as const).map((value) => ({ v
 const OFFSETS: [string, string][] = [
   ["night-before", "Akşamdan"],
   ["morning", "Sabah"],
-  ["-120min", "2 sa önce"],
-  ["-90min", "1,5 sa önce"],
-  ["-60min", "1 sa önce"],
-  ["-45min", "45 dk önce"],
-  ["-30min", "30 dk önce"],
-  ["-15min", "15 dk önce"],
+  ["-120min", "Pişirmeden 2 sa önce"],
+  ["-90min", "Pişirmeden 1,5 sa önce"],
+  ["-60min", "Pişirmeden 1 sa önce"],
+  ["-45min", "Pişirmeden 45 dk önce"],
+  ["-30min", "Pişirmeden 30 dk önce"],
+  ["-15min", "Pişirmeden 15 dk önce"],
 ];
 
 export function RecipeForm({

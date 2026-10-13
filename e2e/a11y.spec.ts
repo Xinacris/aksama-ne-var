@@ -45,6 +45,11 @@ test.describe("accessibility (axe)", () => {
         await page.goto(url);
         await audit(page, `${url} ${scheme}`);
       }
+      // Recipe form with the leftover chips on "Saklanır" (shows "Kaç gün içinde")
+      await page.goto("/tarifler/yeni");
+      await page.getByRole("radio", { name: "Saklanır" }).click();
+      await expect(page.getByLabel("Kaç gün içinde")).toBeVisible();
+      await audit(page, `tarif-yeni saklanır ${scheme}`);
       // Cooking mode: "Başlamadan önce", the Malzemeler sheet, a step with a running timer, the finish screen
       await page.goto("/pisir/2026-10-12");
       await expect(page.getByRole("heading", { name: "Başlamadan önce" })).toBeVisible();
