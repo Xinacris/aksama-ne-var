@@ -208,7 +208,7 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
 
       <div className={s.nav}>
         <Button size="xl" block onClick={() => updateCooking(session.id, { phase: "steps" })}>
-          Yine de başla
+          {missing.count ? "Yine de başla" : "Başla"}
         </Button>
       </div>
     </div>

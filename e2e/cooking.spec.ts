@@ -116,7 +116,7 @@ test("all ingredients bought → Pişirmeye başla opens step 1 directly", async
   await expect(page.getByRole("dialog", { name: "Malzemeler" })).toContainText("Kuru fasulye");
 });
 
-test("one item missing → heads-up → Evde var → it disappears → Yine de başla → step 1", async ({ page }) => {
+test("one item missing → heads-up → Evde var → it disappears → Başla → step 1", async ({ page }) => {
   await demoAt(page);
   await buy(page, NEEDED.filter((n) => n !== "Biber salçası"));
   await page.goto(FASULYE);
@@ -128,6 +128,8 @@ test("one item missing → heads-up → Evde var → it disappears → Yine de b
   await missing.getByRole("button", { name: "Biber salçası evde var" }).click();
   await expect(page.getByRole("list", { name: "Eksik malzemeler" })).toHaveCount(0);
   await expect(page.getByText("Hepsi tamam")).toBeVisible();
-  await page.getByRole("button", { name: "Yine de başla" }).click();
+  // the screen stays open; with nothing missing the button just says "Başla"
+  await expect(page.getByRole("button", { name: "Yine de başla" })).toHaveCount(0);
+  await page.getByRole("button", { name: "Başla", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Adım 1 /");
 });
