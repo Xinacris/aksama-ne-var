@@ -13,7 +13,10 @@ import { usePartnerPresence } from "@/hooks/usePresence";
 import { approvalPill, useToday } from "@/hooks/useToday";
 import { viewActivity } from "@/domain/activity";
 import { menuFor, menuItems } from "@/domain/plan";
-import { addDays } from "@/domain/dates";
+import { addDays, dayName, eveningLabel } from "@/domain/dates";
+import { keepUntilLabel, type EveningLeftover } from "@/domain/leftovers";
+import { LeftoverChoices } from "@/components/LeftoverChoices";
+import { DayPicker } from "@/components/week/Dialogs";
 import { now } from "@/lib/clock";
 import { recipesMap, useApp, usersMap } from "@/store/app";
 import s from "./page.module.css";
@@ -34,6 +37,7 @@ export default function BugunPage() {
   const present = usePartnerPresence();
   const [changeOpen, setChangeOpen] = useState(false);
   const [leaveEmpty, setLeaveEmpty] = useState(false);
+  const [place, setPlace] = useState<EveningLeftover | null>(null);
 
   const tomorrowPlanned = menuItems(menuFor(planItems, addDays(model.today, 1))).length > 0;
   const names = people.map((p) => p.name).join(" ve ");
@@ -89,10 +93,12 @@ export default function BugunPage() {
                 photoDish={model.tonight.photoDish}
                 title={model.tonight.title}
                 rows={model.tonight.rows}
-                approval={approvalPill(model.tonight.approval)}
+                approval={model.tonight.cooked ? { tone: "ok", label: "Pişti · afiyet olsun" } : approvalPill(model.tonight.approval)}
                 href={`/tarif/${model.tonight.mainId}?gun=${model.today}`}
                 action={
-                  canApprove ? (
+                  model.tonight.leftover ? (
+                    <LeftoverChoices ev={model.tonight.leftover} when="tonight" />
+                  ) : canApprove ? (
                     <div>
                       <button type="button" className={menuCardStyles.approveBtn} onClick={() => approve(model.today)}>
                         <IconCheck size={16} strokeWidth={2.4} />
@@ -145,17 +151,18 @@ export default function BugunPage() {
         </div>
 
         <div className={s.col}>
-          {model.leftover && (
-            <section aria-label="Artan yemek" className={s.leftover}>
-              <span className={s.leftIcon}>
-                <IconLeftover size={22} />
-              </span>
-              <div className={s.leftTexts}>
-                <p className={s.leftTitle}>
-                  Dünkü {model.leftover.recipe.name.toLocaleLowerCase("tr")} bugün öğlen için yeterli.
-                </p>
-                <span className={s.muted}>Buzdolabında · yaklaşık {model.leftover.portions} porsiyon</span>
-              </div>
+          {model.leftover && <YesterdayCard ev={model.leftover} today={model.today} onPlace={setPlace} />}
+
+          {model.fridge.length > 0 && (
+            <section aria-labelledby="dolapta" className={s.fridge}>
+              <h2 id="dolapta" className={s.fridgeTitle}>
+                Dolapta
+              </h2>
+              <ul className={s.fridgeList}>
+                {model.fridge.map((f) => (
+                  <FridgeRow key={f.fromDate} ev={f} today={model.today} onPlace={setPlace} />
+                ))}
+              </ul>
             </section>
           )}
 
@@ -234,7 +241,68 @@ export default function BugunPage() {
           <RecentFeed />
         </div>
       </div>
+      <DayPicker
+        target={place && place.outcome.kind === "fridge" ? { recipe: place.recipe, leftover: { fromDate: place.fromDate, useBy: place.outcome.useBy } } : null}
+        onClose={() => setPlace(null)}
+      />
     </main>
+  );
+}
+
+/** "Dünkü kuru fasulye bugün öğlen için yeterli." + the one-tap leftover choices. */
+function YesterdayCard({ ev, today, onPlace }: { ev: EveningLeftover; today: string; onPlace: (ev: EveningLeftover) => void }) {
+  const name = ev.recipe.name.toLocaleLowerCase("tr");
+  const k = ev.outcome.kind;
+  const title =
+    k === "lunch" ? `Dünkü ${name} bugün öğlen için yeterli.` : k === "fridge" ? `Dünkü ${name} dolapta.` : k === "discard" ? `Dünkü ${name}: kimse yemeyecek.` : `Dünkü ${name}: artan yok.`;
+  const sub =
+    k === "lunch"
+      ? `Buzdolabında · yaklaşık ${ev.portions} porsiyon`
+      : k === "fridge"
+        ? `${keepUntilLabel(ev.outcome.useBy, today)} · yaklaşık ${ev.portions} porsiyon`
+        : null;
+  return (
+    <section aria-label="Artan yemek" className={s.leftover}>
+      <span className={s.leftIcon}>
+        <IconLeftover size={22} />
+      </span>
+      <div className={s.leftTexts}>
+        <p className={s.leftTitle}>{title}</p>
+        {sub && <span className={s.muted}>{sub}</span>}
+        <LeftoverChoices ev={ev} when="yesterday" title="Dünden kalan" />
+        {k === "fridge" && (
+          <button type="button" className={s.linkBtn} onClick={() => onPlace(ev)}>
+            Bir akşama koy
+          </button>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/** A dolapta dish: until when it is good, put it on an evening, or mark it finished. */
+function FridgeRow({ ev, today, onPlace }: { ev: EveningLeftover; today: string; onPlace: (ev: EveningLeftover) => void }) {
+  const setLeftoverChoice = useApp((st) => st.setLeftoverChoice);
+  if (ev.outcome.kind !== "fridge") return null;
+  return (
+    <li className={s.fridgeRow}>
+      <span className={s.fridgeTexts}>
+        <strong>{ev.recipe.name}</strong>
+        <span className={s.muted}>
+          {ev.plannedDate ? `${eveningLabel(ev.plannedDate, today)} yenecek` : `${keepUntilLabel(ev.outcome.useBy, today)} · ${dayName(ev.fromDate)} pişti`}
+        </span>
+      </span>
+      <span className={s.fridgeActions}>
+        {!ev.plannedDate && (
+          <button type="button" className={s.linkBtn} onClick={() => onPlace(ev)} aria-label={`${ev.recipe.name}: bir akşama koy`}>
+            Akşama koy
+          </button>
+        )}
+        <button type="button" className={s.linkBtn} onClick={() => setLeftoverChoice(ev.fromDate, "eaten")} aria-label={`${ev.recipe.name}: bitti`}>
+          Bitti
+        </button>
+      </span>
+    </li>
   );
 }
 

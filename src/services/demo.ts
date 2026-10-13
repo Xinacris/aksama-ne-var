@@ -139,6 +139,14 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
     withNow(ts ?? at(T(-3), 21), () =>
       repos.plan.addItem({ householdId: hid, date, slot, recipeId: id(name), source, createdBy: by }),
     );
+  // Friday: etli biber dolması, cooked; what is left sits in the fridge (Bugün's "Dolapta").
+  const fri = T(-3);
+  await add(fri, "ana", "Etli biber dolması", zeynep.id, "manual", at(T(-5), 20));
+  await add(fri, "salata", "Cacık", zeynep.id, "manual", at(T(-5), 20));
+  await repos.plan.addCookLog({ householdId: hid, recipeId: id("Etli biber dolması"), date: fri, createdBy: zeynep.id });
+  await repos.plan.addCookLog({ householdId: hid, recipeId: id("Cacık"), date: fri, createdBy: zeynep.id });
+  await repos.plan.upsertDay(hid, fri, { status: "cooked", leftoverChoice: "fridge", leftoverChoiceBy: zeynep.id, approvals: [ali.id, zeynep.id], cookedAt: at(fri, 20) }, zeynep.id);
+
   const sun = T(-1);
   await add(sun, "corba", "Tarhana çorbası", ali.id);
   await add(sun, "ana", "Kuru fasulye", ali.id);

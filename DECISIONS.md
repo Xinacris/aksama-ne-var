@@ -109,9 +109,15 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - Platform names in the source card keep their own casing: Turkish uppercase would print "TİKTOK".
 - Leftover outcome order: per-evening choice → recipe default → household lunch setting. "Nobody home for lunch" always turns a lunch into a dolapta item (even an explicit "Yarın öğlen"), because the setting describes the household; the choice buttons hide "Yarın öğlen" on such days (R6).
 - Only the evening's main dish (else its first dish) leaves leftovers; a dish that is itself a leftover never does. Soups/pilav served beside a main follow the main — one leftover decision per evening keeps the card calm.
-- A dolapta dish can be kept up to four days; "Bugün bitirilmeli" on its last day. Past use-by it simply disappears (no "çöpe gitti" wording anywhere).
+- A dolapta dish can be kept up to four days; "Bugüne kadar" on its last day. Past use-by it simply disappears (no "çöpe gitti" wording anywhere).
 - Built-in defaults: legumes, stews, köfte and soups → stored 2–3 days; tavuk sote, et sote, fırın makarna, tavuklu pilav, köri, makarna, mantar sote → next-day lunch; salads, cacık, egg/breakfast dishes, fried dishes, fish, mantı, ızgara → none. Imported recipes default to "saklanır 2 gün" (salads: none).
 - The match card tag "Ertesi güne artar" (design) stays for any recipe that leaves leftovers (lunch or store).
 - Demo week: Sunday's kuru fasulye and Tuesday's karnıyarık carry an explicit "lunch" choice by Ali (the design's "Öğlen · …" rows); Thursday's tavuk sote has "none" so Friday stays empty like the design.
 - Hafta day dialog: the old "Ertesi güne artar" toggle became a small choice group (Tarifteki gibi · Ertesi gün öğlen · Dolaba kalır · Artmaz) showing the current outcome.
 - Ayarlar › Ev: "Öğlenleri evde yiyen var mı?" Evet / Hayır / Bazı günler; choosing "Bazı günler" first time preselects the weekend.
+- Bugün shows yesterday's evening as one "Dünden kalan" card when it matters (lunch today, dolapta, or someone made a choice), with the one-tap choices and undo; older dolapta dishes are a separate "Dolapta" list with "Bugüne/…'ya kadar", "Akşama koy" and "Bitti". If yesterday's default was "artmaz" and nobody chose anything, nothing is shown (no noise).
+- Tonight's card asks "Artan oldu mu?" only after the evening is marked cooked (cooking mode's finish, R8) and its pill reads "Pişti · afiyet olsun"; before that the card keeps the approval flow.
+- `LeftoverChoices` is one component for every place the question is asked; the "lunch" button reads "Bugün öğlen" for yesterday's dish, "Yarın öğlen" for tonight's, and is hidden when nobody eats lunch at home that day. Selected chips are solid olive (the olive-soft card background would hide an olive-soft selection).
+- Undo restores the previous choice (kept in the component); the status line always says the current outcome and who chose it ("Dolapta · Çarşamba'ya kadar · Ali seçti"), which is also what the partner's tab shows.
+- Putting a dolapta dish on an evening only offers evenings up to its use-by day (dialog) or explains calmly when dropped beyond it (board). On the board and day list it shows as "Dolaptan" with the olive leftover style.
+- Demo: Friday's etli biber dolması (Zeynep, put in the fridge) shows the Dolapta list on the design's Monday.

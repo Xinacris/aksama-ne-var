@@ -129,25 +129,28 @@ export function DayPicker({
   target,
   onClose,
 }: {
-  target: { recipe: Recipe; match?: Match } | null;
+  /** `leftover`: a dolapta dish — only evenings until its use-by day; the list skips its ingredients. */
+  target: { recipe: Recipe; match?: Match; leftover?: { fromDate: string; useBy: string } } | null;
   onClose: () => void;
 }) {
   const today = useApp((x) => x.today);
   const planItems = useApp((x) => x.planItems);
   const recipes = useApp((x) => x.recipes);
   const addToPlan = useApp((x) => x.addToPlan);
+  const placeLeftover = useApp((x) => x.placeLeftover);
   const byId = recipesMap(recipes);
-  const slot = target ? courseToSlot(target.recipe.course) : null;
-  const dates = Array.from({ length: 7 }, (_, i) => addDays(today, i));
+  const slot = target ? (courseToSlot(target.recipe.course) ?? (target.leftover ? "ana" : null)) : null;
+  const dates = Array.from({ length: 7 }, (_, i) => addDays(today, i)).filter((d) => !target?.leftover || d <= target.leftover.useBy);
 
   async function pick(date: string) {
     if (!target || !slot) return;
-    await addToPlan({ date, slot, recipeId: target.recipe.id, source: target.match ? "match" : "manual", matchId: target.match?.id });
+    if (target.leftover) await placeLeftover({ fromDate: target.leftover.fromDate, recipeId: target.recipe.id, toDate: date, slot });
+    else await addToPlan({ date, slot, recipeId: target.recipe.id, source: target.match ? "match" : "manual", matchId: target.match?.id });
     onClose();
   }
 
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow="Hangi akşama?" title={target ? target.recipe.name : ""}>
+    <Dialog open={!!target} onClose={onClose} eyebrow={target?.leftover ? "Dolaptan · hangi akşam?" : "Hangi akşama?"} title={target ? target.recipe.name : ""}>
       {slot ? (
         <ul className={s.options}>
           {dates.map((d) => {

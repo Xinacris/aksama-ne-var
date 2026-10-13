@@ -22,6 +22,7 @@ import { courseToSlot } from "@/domain/matching";
 import { recipeLabel } from "@/domain/shopping";
 import { usePeople } from "@/hooks/usePeople";
 import { useApp } from "@/store/app";
+import { keepUntilLabel, type EveningLeftover } from "@/domain/leftovers";
 import { IconCheck, IconCutlery, IconGrip, IconHeart, IconPlus, IconSnowflakeSmall } from "../icons";
 import { matchListStyles } from "../MatchList";
 import { Avatar, AvatarStack } from "../ui/Avatar";
@@ -32,7 +33,8 @@ import s from "./Board.module.css";
 type DragData =
   | { kind: "item"; itemId: string; recipe: Recipe; from: { date: string; slot: Slot } }
   | { kind: "match"; match: Match; recipe: Recipe }
-  | { kind: "fav"; recipe: Recipe };
+  | { kind: "fav"; recipe: Recipe }
+  | { kind: "leftover"; recipe: Recipe; fromDate: string; useBy: string };
 type DropData = { kind: "slot"; date: string; slot: Slot } | { kind: "day"; date: string };
 
 const LEFTOVER_STROKE = "#7A8A3A";
@@ -91,8 +93,22 @@ const announcements: Announcements = {
   onDragCancel: () => "Taşıma iptal edildi.",
 };
 
-export function Board({ days, matches, frequent, handlers }: { days: DayModel[]; matches: AsideMatch[]; frequent: Recipe[]; handlers: BoardHandlers }) {
+export function Board({
+  days,
+  matches,
+  frequent,
+  fridge,
+  handlers,
+}: {
+  days: DayModel[];
+  matches: AsideMatch[];
+  frequent: Recipe[];
+  fridge: EveningLeftover[];
+  handlers: BoardHandlers;
+}) {
   const addToPlan = useApp((x) => x.addToPlan);
+  const placeLeftover = useApp((x) => x.placeLeftover);
+  const today = useApp((x) => x.today);
   const moveItem = useApp((x) => x.moveItem);
   const setNotice = useApp((x) => x.setNotice);
   const [dragging, setDragging] = useState<DragData | null>(null);
@@ -113,7 +129,15 @@ export function Board({ days, matches, frequent, handlers }: { days: DayModel[];
     const a = e.active.data.current as DragData | undefined;
     const o = e.over?.data.current as DropData | undefined;
     if (!a || !o) return;
-    const slot = o.kind === "slot" ? o.slot : courseToSlot(a.recipe.course);
+    const slot = o.kind === "slot" ? o.slot : (courseToSlot(a.recipe.course) ?? (a.kind === "leftover" ? "ana" : null));
+    if (a.kind === "leftover") {
+      if (o.date > a.useBy || o.date < today) {
+        setNotice({ kind: "info", text: `${a.recipe.name} ${keepUntilLabel(a.useBy, today).toLocaleLowerCase("tr")} yenebilir; o günlerden birine koyabilirsin.` });
+        return;
+      }
+      await placeLeftover({ fromDate: a.fromDate, recipeId: a.recipe.id, toDate: o.date, slot: slot ?? "ana" });
+      return;
+    }
     if (!slot) {
       setNotice({ kind: "info", text: "Tatlılar akşam menüsünün bir parçası olarak eklenmiyor." });
       return;
@@ -186,6 +210,17 @@ export function Board({ days, matches, frequent, handlers }: { days: DayModel[];
               <p className={s.hint}>Henüz eşleşme yok. Birlikte kaydırınca burada birikir.</p>
             )}
           </div>
+          {fridge.length > 0 && (
+            <div className={s.panel}>
+              <h2 className={s.panelTitle}>Dolapta</h2>
+              <div className={s.chips}>
+                {fridge.map((f) => (
+                  <LeftoverChip key={f.fromDate} ev={f} today={today} />
+                ))}
+              </div>
+              <p className={s.hint}>Bir akşama sürükleyin; malzemeleri listeye eklenmez.</p>
+            </div>
+          )}
           <div className={s.panel}>
             <h2 className={s.panelTitle}>Sık yaptıklarınız</h2>
             <div className={s.chips}>
@@ -301,7 +336,8 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
       </div>
     );
   }
-  const leftoverSource = slot === "ana" && day.leftoverOut;
+  const isLeftover = cell.item.source === "leftover";
+  const leftoverSource = (slot === "ana" && day.leftoverOut) || isLeftover;
   return (
     <div ref={setDropRef}>
       <button
@@ -311,10 +347,10 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
         {...attributes}
         className={[s.tile, slot === "ana" && s.tileMain, leftoverSource && s.tileLeftover, isDragging && s.tileDragging].filter(Boolean).join(" ")}
         onClick={() => handlers.onTile(cell.item.id, day.date, slot, cell.recipe)}
-        aria-label={`${dayName(day.date)} · ${SLOT_LABEL[slot]}: ${cell.recipe?.name ?? "silinmiş tarif"}`}
+        aria-label={`${dayName(day.date)} · ${SLOT_LABEL[slot]}: ${isLeftover ? "dolaptan " : ""}${cell.recipe?.name ?? "silinmiş tarif"}`}
         aria-roledescription="taşınabilir yemek"
       >
-        <span className={s.tileLabel}>{SLOT_SHORT[slot]}</span>
+        <span className={s.tileLabel}>{isLeftover ? "Dolaptan" : SLOT_SHORT[slot]}</span>
         <span className={[s.tileName, !cell.recipe && s.tileMissing].filter(Boolean).join(" ")}>{cell.recipe?.name ?? "Silinmiş tarif"}</span>
         {slot === "ana" && cell.recipe?.freezerItem && (
           <span role="img" aria-label={`Buzluktan çıkacak: ${cell.recipe.freezerItem.toLocaleLowerCase("tr")}`} className={s.freezer}>
@@ -432,6 +468,31 @@ function MatchRow({ m, dragging }: { m: AsideMatch; dragging: DragData | null })
         </button>
       )}
     </li>
+  );
+}
+
+function LeftoverChip({ ev, today }: { ev: EveningLeftover; today: string }) {
+  const useBy = ev.outcome.kind === "fridge" ? ev.outcome.useBy : today;
+  const { setNodeRef, listeners, attributes, isDragging } = useDraggable({
+    id: `leftover:${ev.fromDate}`,
+    data: { kind: "leftover", recipe: ev.recipe, fromDate: ev.fromDate, useBy } satisfies DragData,
+  });
+  const hint = keepUntilLabel(useBy, today);
+  return (
+    <button
+      ref={setNodeRef}
+      type="button"
+      className={s.chipBtn}
+      {...listeners}
+      {...attributes}
+      aria-label={`Dolapta: ${ev.recipe.name}, ${hint.toLocaleLowerCase("tr")}. Bir akşama sürükle`}
+      aria-roledescription="taşınabilir yemek"
+      style={{ opacity: isDragging ? 0.4 : 1 }}
+    >
+      <DishTag variant="leftover">
+        {recipeLabel(ev.recipe)} · {hint.toLocaleLowerCase("tr")}
+      </DishTag>
+    </button>
   );
 }
 

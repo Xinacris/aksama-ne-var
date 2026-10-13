@@ -10,6 +10,8 @@ import { Avatar, AvatarStack } from "../ui/Avatar";
 import { DishTag } from "../ui/Chip";
 import type { BoardHandlers } from "./Board";
 import type { AsideMatch, DayModel } from "./useWeek";
+import { keepUntilLabel, type EveningLeftover } from "@/domain/leftovers";
+import { useApp } from "@/store/app";
 import s from "./DayList.module.css";
 
 /** Mobile equivalent of the board: one stacked card per evening, tap to add or change. */
@@ -17,15 +19,20 @@ export function DayList({
   days,
   matches,
   frequent,
+  fridge,
   handlers,
   onPlace,
+  onPlaceLeftover,
 }: {
   days: DayModel[];
   matches: AsideMatch[];
   frequent: Recipe[];
+  fridge: EveningLeftover[];
   handlers: BoardHandlers;
   onPlace: (recipe: Recipe, match?: Match) => void;
+  onPlaceLeftover: (ev: EveningLeftover) => void;
 }) {
+  const today = useApp((x) => x.today);
   return (
     <>
       <div className={s.list}>
@@ -69,6 +76,30 @@ export function DayList({
           <p className={s.hint}>Henüz eşleşme yok. Birlikte kaydırınca burada birikir.</p>
         )}
       </section>
+      {fridge.length > 0 && (
+        <section className={s.panel} aria-labelledby="m-dolap">
+          <h2 id="m-dolap" className={s.panelTitle}>
+            Dolapta
+          </h2>
+          <div className={s.chips}>
+            {fridge.map((f) => (
+              <button
+                key={f.fromDate}
+                type="button"
+                className={s.chipBtn}
+                onClick={() => onPlaceLeftover(f)}
+                aria-label={`Dolapta: ${f.recipe.name}. Bir akşama koy`}
+              >
+                <DishTag variant="leftover">
+                  {recipeLabel(f.recipe)}
+                  {f.outcome.kind === "fridge" ? ` · ${keepUntilLabel(f.outcome.useBy, today).toLocaleLowerCase("tr")}` : ""}
+                </DishTag>
+              </button>
+            ))}
+          </div>
+          <p className={s.hint}>Dokun, hangi akşam yeneceğini seç; malzemeleri listeye eklenmez.</p>
+        </section>
+      )}
       <section className={s.panel} aria-labelledby="m-sik">
         <h2 id="m-sik" className={s.panelTitle}>
           Sık yaptıklarınız
@@ -130,7 +161,8 @@ function DayCard({ day, handlers }: { day: DayModel; handlers: BoardHandlers }) 
                     className={[s.dish, slot === "ana" && s.main].filter(Boolean).join(" ")}
                     onClick={() => handlers.onTile(cell.item.id, day.date, slot, cell.recipe)}
                   >
-                    <span className={[!cell.recipe && s.missing, slot === "ana" && day.leftoverOut && s.leftoverTag].filter(Boolean).join(" ")}>
+                    <span className={[!cell.recipe && s.missing, ((slot === "ana" && day.leftoverOut) || cell.item.source === "leftover") && s.leftoverTag].filter(Boolean).join(" ")}>
+                      {cell.item.source === "leftover" ? "Dolaptan · " : ""}
                       {cell.recipe?.name ?? "Silinmiş tarif"}
                     </span>
                     {slot === "ana" && cell.recipe?.freezerItem && (
