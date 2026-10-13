@@ -5,6 +5,10 @@ swiping, plan the week as menus (çorba + ana yemek + yanında + salata), get a 
 generated from the plan, and get prep reminders at the right moment
 ("Akşama İzmir köfte var, kıymayı buzluktan çıkarmayı unutma."). No calories, streaks or guilt.
 
+Round 2 added: **recipe import from a link** (Instagram Reels, YouTube Shorts, TikTok, recipe sites
+— with a paste fallback), **leftovers as a choice** (per recipe, per household lunch habit, per
+evening) and a real **cooking mode** (one step per screen, several timers at once, screen stays on).
+
 **Live:** https://aksama-ne-var.vercel.app · **Morning demo script:** [DEMO.md](DEMO.md)
 
 ## Run
@@ -14,14 +18,20 @@ npm install
 npm run dev        # http://localhost:3000
 ```
 
-Node 24 LTS (`.nvmrc`). No environment variables, no backend: everything is stored in the browser.
+Node 24 LTS (`.nvmrc`). No backend: everything is stored in the browser. **No environment variables
+are required.** Two optional server-side keys improve recipe import (details in [docs/IMPORT.md](docs/IMPORT.md)):
+
+| Variable | Optional? | Effect |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | optional | Claude (Haiku) turns a caption into a clean recipe draft; without it a rule-based Turkish parser pre-fills the form |
+| `YOUTUBE_API_KEY` | optional | reads full YouTube descriptions; without it only the title arrives and the paste box opens |
 
 | Script | What it does |
 |---|---|
 | `npm run dev` / `build` / `start` | Next.js |
 | `npm run lint` / `typecheck` | ESLint, `next typegen && tsc` |
-| `npm test` | Vitest: domain, data layer, store, seed, component tests (~200) |
-| `npm run test:e2e` | Playwright at 390×844 and 1440×900: two-member journey, board drag-and-drop, axe on every screen (builds and starts the app on port 3100) |
+| `npm test` | Vitest: domain, data layer, store, seed, import (12 caption fixtures), route, component tests (~380) |
+| `npm run test:e2e` | Playwright at 390×844 and 1440×900: two-member journey, board drag-and-drop, import, leftovers, cooking mode with timers, axe on every screen (builds and starts the app on port 3100) |
 | `npm run screenshots` | Every screen at 390/1440 × light/dark into `screenshots/` (`SHOTS=bugun,liste` to limit) |
 
 ## Try it with two people in one browser
@@ -51,6 +61,10 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
   memory, leftovers, plan transitions (ate out, plan changed, swaps), summaries, Turkish copy.
 - **Store** (`src/store/app.ts`): Zustand over the repositories; components never touch storage.
 - **Seed** (`src/data/seed`): 100 Turkish home recipes over a canonical ingredient catalog.
+- **Import** (`src/domain/import`, `src/server/import`, `/api/import`): source adapters over public
+  endpoints only, schema.org reader, rule parser, optional Claude structuring with validation.
+- **Cooking mode** (`/pisir/<date|recipe>`, `src/components/cooking`): shared resumable session,
+  timers stored as end timestamps, Screen Wake Lock.
 - **Supabase path**: `supabase/schema.sql` (draft, with RLS) and `docs/SUPABASE_MIGRATION.md`.
 - Decisions and reasons: [DECISIONS.md](DECISIONS.md). Build log: [PROGRESS.md](PROGRESS.md).
 
@@ -61,8 +75,10 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
   or change the data.
 - "Multiplayer" works between tabs/windows of the **same browser profile**; different devices
   don't sync until a backend adapter exists.
-- No photos by design (striped placeholders); recipe import from Instagram/links is a free-text
-  source field, nothing is fetched.
+- No photos by design (striped placeholders); the import card shows the platform's own thumbnail only.
+- Instagram does not share captions with third parties, so Instagram imports always use the paste
+  box. iOS Safari has no Web Share Target: on iPhone, paste the link.
+- The daily limit on smart imports (30 per household) lives in server memory until the Supabase move.
 - Reminders show inside the app; there are no push notifications.
 - Households are capped at two people (the product's copy is built around "ikiniz").
 - Clearing site data, private windows, or a full storage quota lose or block data; the app says so
