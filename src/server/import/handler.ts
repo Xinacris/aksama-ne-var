@@ -51,6 +51,7 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   const { url, text, householdId } = parsed.data;
   if (!url.trim() && !text.trim()) return jsonResponse({ error: "Bir link ya da tarif metni gerekiyor." }, 400);
 
+  const deadline = Date.now() + IMPORT_TIMEOUT_MS;
   const signal = AbortSignal.timeout(IMPORT_TIMEOUT_MS);
   const providers = providersFromEnv(deps.env, deps);
   // The household id is only the quota key; it never reaches a provider.
@@ -61,7 +62,7 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
     ? async (t, meta) => {
         const allowed = deps.limiter.take(quotaKey);
         if (!allowed) limited = true;
-        return structureRecipe(t, meta, { providers: allowed ? providers : [], signal, onFailure: (f) => fallbacks.push(f) });
+        return structureRecipe(t, meta, { providers: allowed ? providers : [], signal, deadline, onFailure: (f) => fallbacks.push(f) });
       }
     : undefined;
 
