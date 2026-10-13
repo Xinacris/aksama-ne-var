@@ -113,8 +113,9 @@
   border-radius: 16px;
   background: var(--sand-soft);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 4px 12px;
 }
 .sourceIcon {
   color: var(--sand);

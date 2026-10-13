@@ -108,3 +108,96 @@ test("import: Instagram goes to the paste path, pasted caption gives a draft", a
   await expect(page.getByLabel("Etiketler")).not.toHaveValue("");
   expect(calls).toBe(2);
 });
+
+const VIDEO = "https://www.youtube.com/watch?v=abcDEF12345";
+const WRITTEN = "https://ornek-mutfak.com/tarif/limonlu-kekikli-tavuk/";
+const ytSource = { platform: "youtube", url: VIDEO, author: "Örnek Mutfak", title: "HAFTA SONU MENÜSÜ: Limonlu Kekikli Tavuk", thumbnailUrl: null, needsPaste: false, hasText: true };
+
+test("import: a video that links its written recipe → steps from the page, video stays Kaynak, 'Yazılı tarif' link", async ({ page }) => {
+  await page.route("**/api/import", (route) =>
+    route.fulfill({
+      json: {
+        source: ytSource,
+        draft: {
+          name: "Limonlu kekikli tavuk",
+          servings: 4,
+          role: "ana",
+          totalMinutes: null,
+          prepMinutes: 15,
+          cookMinutes: 40,
+          ingredients: [
+            { amount: 6, unit: "adet", item: "Tavuk but", side: "market", note: null },
+            { amount: 1, unit: "adet", item: "Limon", side: "pazar", note: null },
+            { amount: 3, unit: "diş", item: "Sarımsak", side: "pazar", note: null },
+          ],
+          steps: [
+            { text: "Tavukları sosla marine edip buzdolabında 30 dakika bekletin.", minutes: 30 },
+            { text: "200 derece fırında 40 dakika pişirin.", minutes: 40 },
+          ],
+          prep: [],
+          tags: ["Fırında", "Tavuklu", "Marine"],
+        },
+        path: "rules",
+        provider: "web",
+        writtenRecipeUrl: WRITTEN,
+        needsPaste: false,
+        message: null,
+        counted: { platform: "youtube", provider: "web" },
+        llmAvailable: true,
+        fallbacks: [],
+      },
+    }),
+  );
+  await demo(page);
+  await page.goto("/tarifler/ice-aktar");
+  await page.getByLabel("Link").fill(VIDEO);
+  await page.getByRole("button", { name: "Taslağı çıkar" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Taslağı kontrol et" })).toBeVisible();
+  await expect(page.getByText("Malzemeleri ve adımları videonun yazılı tarifinden aldık")).toBeVisible();
+  await expect(page.getByRole("textbox", { name: "Kaynak" })).toHaveValue("YouTube · Örnek Mutfak");
+  await expect(page.getByLabel("1. adım", { exact: true })).toHaveValue("Tavukları sosla marine edip buzdolabında 30 dakika bekletin.");
+  await expect(page.getByText("Bu açıklamada adımlar yok")).toHaveCount(0);
+  await page.getByRole("button", { name: "Tarifi kaydet" }).click();
+
+  await expect(page.getByRole("heading", { level: 1, name: "Limonlu kekikli tavuk" })).toBeVisible();
+  await expect(page.getByText("Kaynak: YouTube · Örnek Mutfak")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Videoyu aç" })).toHaveAttribute("href", VIDEO);
+  await expect(page.getByRole("link", { name: "Yazılı tarif" })).toHaveAttribute("href", WRITTEN);
+  await page.goto("/ayarlar");
+  await expect(page.getByText("Bu ay 1 tarif içe aktarıldı (1 tarif sitesi).")).toBeVisible();
+});
+
+test("import: a description with no steps → empty Hazırlanış and a calm hint, no junk", async ({ page }) => {
+  await page.route("**/api/import", (route) =>
+    route.fulfill({
+      json: {
+        source: ytSource,
+        draft: {
+          name: "Limonlu kekikli tavuk",
+          servings: null,
+          role: "ana",
+          totalMinutes: null,
+          ingredients: [{ amount: 6, unit: "adet", item: "Tavuk but", side: "market", note: null }],
+          steps: [],
+          prep: [],
+          tags: ["Tavuklu"],
+        },
+        path: "llm",
+        provider: "gemini",
+        writtenRecipeUrl: null,
+        needsPaste: false,
+        message: null,
+        counted: { platform: "youtube", provider: "gemini" },
+        llmAvailable: true,
+        fallbacks: [],
+      },
+    }),
+  );
+  await demo(page);
+  await page.goto("/tarifler/ice-aktar");
+  await page.getByLabel("Link").fill(VIDEO);
+  await page.getByRole("button", { name: "Taslağı çıkar" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Taslağı kontrol et" })).toBeVisible();
+  await expect(page.getByText("Bu açıklamada adımlar yok. Yazılı tarifin linki varsa yapıştır ya da adımları kendin ekle.")).toBeVisible();
+  await expect(page.getByLabel("1. adım", { exact: true })).toHaveValue("");
+});

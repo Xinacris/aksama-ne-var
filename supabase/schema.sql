@@ -22,7 +22,7 @@ create type leftover_choice as enum ('none', 'lunch', 'fridge', 'discard', 'eate
 create type lunch_mode as enum ('yes', 'no', 'some');                    -- "Öğlenleri evde yiyen var mı?"
 create type cooking_phase as enum ('prep', 'steps', 'done');
 -- Which provider made an import draft (Round 2.1; was import_path 'llm'|'rules').
-create type import_provider as enum ('gemini', 'claude', 'rules');
+create type import_provider as enum ('gemini', 'claude', 'web', 'rules');
 
 -- ───────────────────────── people ─────────────────────────
 -- Auth lives in auth.users; profiles hold the app fields (name, avatar initial, onboarded).
@@ -113,6 +113,7 @@ create table public.recipes (
   source_author text,                          -- "@mutfakdefteri", credited on the recipe page
   source_platform source_platform,
   source_thumbnail_url text,                   -- the platform's thumbnail URL, never re-hosted
+  written_recipe_url text check (written_recipe_url ~ '^https?://'),  -- "Yazılı tarif" a video linked to
   stub boolean not null default false,
   created_by uuid references public.profiles (id),
   created_at timestamptz not null default now(),

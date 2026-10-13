@@ -118,6 +118,7 @@ export interface RecipeInput {
   sourceAuthor?: string;
   sourcePlatform?: Recipe["sourcePlatform"];
   sourceThumbnailUrl?: string;
+  writtenRecipeUrl?: string;
 }
 
 export type InviteInfo =

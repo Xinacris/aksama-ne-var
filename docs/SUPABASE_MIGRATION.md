@@ -90,7 +90,7 @@ Run the existing unit tests against both adapters by parameterising `tests/unit/
 
 Everything below is already in `supabase/schema.sql` (the draft was never deployed, so the
 `create` statements were updated in place). Local data reaches the same shape through the
-localStorage migrations v3–v8 in `src/data/migrations.ts`.
+localStorage migrations v3–v9 in `src/data/migrations.ts`.
 
 | Change | localStorage (migration) | Postgres |
 |---|---|---|
@@ -103,6 +103,7 @@ localStorage migrations v3–v8 in `src/data/migrations.ts`.
 | Cooking mode | v5: `cookingSessions` table (new, empty) | `cooking_sessions` + member RLS + realtime |
 | Leftovers never guessed | v7: stored built-in rows (`householdId` null) → `leftoverPolicy: "none"`; household recipes untouched. Built-ins come from code, so the 100 seeds are Artmaz with their shelf life as `leftoverDays` | seed script inserts `leftover_policy = 'none'`; an already-seeded DB: `update public.recipes set leftover_policy = 'none' where household_id is null;` |
 | Import quality: waiting time, thumbnail | v8: optional `waitMinutes`, `sourceThumbnailUrl` on recipes (nothing to convert) | `recipes.wait_minutes` (0–1440, null = none), `recipes.source_thumbnail_url` |
+| Written recipe link | v9: import provider `web` (schema.org page), optional `writtenRecipeUrl` on recipes; old rows valid | `import_provider` enum gains `web`; `recipes.written_recipe_url` |
 | Import provider (Round 2.1) | v6: `importLog.path` → `provider`; `llm` → `claude` (the only LLM before 2.1), `rules` → `rules` | `import_log.provider` (enum `import_provider`: `gemini`/`claude`/`rules`) replaces `path`/`import_path` |
 
 Adapter notes:

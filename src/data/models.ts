@@ -147,6 +147,8 @@ export const recipeSchema = z.object({
   sourcePlatform: sourcePlatformSchema.optional(),
   /** The post's thumbnail as the platform gave it (link card); never downloaded or re-hosted. */
   sourceThumbnailUrl: z.string().url().optional(),
+  /** The written recipe a video linked to ("Yazılı tarif"); the video stays the Kaynak. */
+  writtenRecipeUrl: z.string().url().optional(),
   /** Created from an unknown name during onboarding; details not filled yet. */
   stub: z.boolean().optional(),
   createdBy: uuid.nullable(),
@@ -395,8 +397,8 @@ export const importLogSchema = z.object({
   ...base,
   householdId: uuid,
   platform: sourcePlatformSchema.nullable(),
-  /** Which provider made the draft; schema.org pages and the rule parser count as "rules". */
-  provider: z.enum(["gemini", "claude", "rules"]),
+  /** Which provider made the draft; "web" = a page's schema.org/Recipe (the link itself or a "yazılı tarif" link). */
+  provider: z.enum(["gemini", "claude", "web", "rules"]),
   createdBy: uuid,
 });
 export type ImportLog = z.infer<typeof importLogSchema>;

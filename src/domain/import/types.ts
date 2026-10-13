@@ -69,7 +69,7 @@ export type ImportedRecipe = z.infer<typeof importedRecipeSchema>;
 
 export type ImportPath = "llm" | "rules";
 /** Which provider produced the draft (see `src/server/llm`). */
-export const IMPORT_PROVIDERS = ["gemini", "claude", "rules"] as const;
+export const IMPORT_PROVIDERS = ["gemini", "claude", "web", "rules"] as const;
 export type ImportProvider = (typeof IMPORT_PROVIDERS)[number];
 
 /** Response of POST /api/import. */
@@ -80,6 +80,8 @@ export interface ImportResult {
   /** "llm" when an LLM provider answered, else "rules" (the UI's wording depends on it). */
   path: ImportPath | null;
   provider: ImportProvider | null;
+  /** A written recipe page linked from the post ("Yazılı tarif"), when the draft came from it. */
+  writtenRecipeUrl?: string | null;
   /** Calm Turkish note for the UI ("Instagram açıklamayı paylaşmıyor…"). */
   message: string | null;
   /** Fetched text had no ingredient-like lines: open the paste box. */
