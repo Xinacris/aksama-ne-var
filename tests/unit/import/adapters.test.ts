@@ -39,6 +39,13 @@ describe("schema.org reader", () => {
     ]);
   });
 
+  it("reads ingredients grouped as nested arrays (one list per sub-recipe)", () => {
+    const page = `<script type="application/ld+json">{"@type":"Recipe","name":"Peri peri tavuk","recipeIngredient":[["1 adet bütün tavuk","2 yemek kaşığı tuz"],["4 adet kapya biber",["5 diş sarımsak"]]],"recipeInstructions":["Tavuğu salamuraya yatırın.","Fırında 45 dakika pişirin."]}</script>`;
+    const r = readSchemaOrgRecipe(page)!;
+    expect(r.recipe.ingredients.map((i) => i.item.toLocaleLowerCase("tr"))).toEqual(["bütün tavuk", "tuz", "kapya biber", "sarımsak"]);
+    expect(r.recipe.steps).toHaveLength(2);
+  });
+
   it("returns null without recipe data and reads page meta", () => {
     expect(readSchemaOrgRecipe("<html><title>Blog</title></html>")).toBeNull();
     expect(pageMeta(`<meta property="og:title" content="Kek &amp; çay"><meta content="https://x.com/i.jpg" property="og:image">`)).toEqual({ title: "Kek & çay", image: "https://x.com/i.jpg", siteName: null });
