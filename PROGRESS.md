@@ -123,4 +123,35 @@ Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the f
   - Liste (aisles, ticks with haptics, Evde var, add/remove, finish), Hafta (evening cards, move-to-evening/swap/remove sheets, recipe picker, day options, matches/fridge/regulars → day picker), Eşleş (Gesture Handler + Reanimated swipe card, buttons, day/course chooser, match moment with haptic, matches list). Mobile jest 22 (Liste tr + en), tsc 0, lint 0, export iOS/Android OK, expo-doctor 21/21; web 196, core 354.
 - [x] V8. Mobile screens: Pişirme modu, Ayarlar; `docs/MOBILE.md`.
   - Pişirme modu (heads-up, dish tabs, steps, timers with vibration, ingredients sheet, finish with leftovers, keep-awake), started from Bugün and the recipe page; Ayarlar (from V4) tested; `docs/MOBILE.md` (run with Expo Go, what works / doesn't, checks, bundle-ID decision, share-sheet plan, store checklist). Mobile jest 25, tsc 0, lint 0, export iOS/Android OK, expo-doctor 21/21; dev server boots and bundles (one React).
-- [ ] V9. Final: all checks green (web incl. e2e and axe, core, mobile tsc/expo-doctor/export/jest), screenshots for web in both languages, push `round-3`, and write the morning note.
+- [x] V9. Final: all checks green (web incl. e2e and axe, core, mobile tsc/expo-doctor/export/jest), screenshots for web in both languages, push `round-3`, and write the morning note.
+  - Final run: lint 0 (core + web + mobile), typecheck 0, core 354, web 196, mobile 25 (5 suites), web build OK, e2e 61 passed / 11 skipped (desktop-only on mobile, phone-only on desktop) incl. axe light + dark in Turkish and English, screenshots 8 passed (Turkish + `en-*` at 390/1440 × light/dark), mobile tsc 0, expo lint 0, expo-doctor 21/21, `expo export` iOS + Android OK. Vercel preview of `round-3`: failure as expected (Root Directory not yet `apps/web`); production `main` (62282f9) still `success`.
+
+## Sabah notu
+
+**Ne bitti:** Round 3'ün hepsi (V0–V9) bitti ve `round-3` dalına push edildi. `main`'e dokunmadım; canlı site aynı.
+- Repo artık monorepo: `apps/web` (Next.js), `apps/mobile` (Expo SDK 57), `packages/core` (paylaşılan, React'siz kod).
+- Telefon uygulamasında tüm ekranlar var: giriş/kayıt, örnek ev, onboarding, Bugün, Tarifler (hızlı ekleme, tam form, toplu yapıştır, linkten içe aktarma), Liste, Hafta, Eşleş (kaydırmalı), Pişirme modu, Ayarlar.
+- Web ve telefon Türkçe + İngilizce. 100 hazır tarifin İngilizcesi yazıldı. Ev tariflerinde "Çevir / Translate" düğmesi var.
+- Bütün kontroller yeşil (sayılar yukarıda V9'da).
+
+**Telefonda denemek için:**
+```bash
+git checkout round-3
+npm install
+npm run mobile            # QR kodu çıkar
+# farklı ağdaysan:  npm run mobile -- --tunnel
+```
+Telefona App Store / Google Play'den **Expo Go** kur, QR'ı okut (iPhone'da Kamera ile). Sonra "Örnek evle dene · Ali ve Zeynep".
+
+**Elle yapman gerekenler:**
+1. **Vercel:** Settings → Build and Deployment → **Root Directory = `apps/web`**, "Include files outside the root directory" açık kalsın. Önce bu ayarı değiştir, sonra merge et (ayrıntı: `docs/MONOREPO.md`). O arada başarısız olan bir deploy canlı siteyi bozmaz.
+2. **Bundle ID:** `apps/mobile/app.json` içinde şimdilik `com.PLACEHOLDER.mealplanner` var. İlk mağaza sürümünden sonra değişmez; senin seçmen gerek (`docs/MOBILE.md`).
+3. **`round-3`'ü gözden geçirip `main`'e merge etmek.** Ben merge etmedim.
+
+**Dikkat / karar bekleyenler:**
+- Bütün repo **React 19.2.3**'e sabitlendi (web 19.3'teydi). Expo'nun sürümü bu; iki React aynı telefona girmesin diye.
+- Telefonda şifre özeti 10 000 tur PBKDF2 (web'de 100 000). JIT'siz telefonda 100 000 tur ~9 saniye sürüyordu. Demo düzeyinde; Supabase gelince zaten değişecek.
+- **Eşitleme yok:** iki telefon birbirini görmez, Ayarlar'da "Eşitleme yakında" yazıyor.
+- Telefondaki içe aktarma ve çeviri canlı web API'sini çağırıyor. Merge'den önce canlıda `/api/translate` yok, bu yüzden düğme gizli. İçe aktarma çalışır ama taslak Türkçe gelir.
+- İngilizcede küçük pürüz: "1 onions" gibi tekil/çoğul hataları var (malzeme kataloğu çoğul). İstersen sonraki turda düzeltirim.
+- Tanınmış yemeklerin İngilizce adlarını "Karnıyarık (stuffed aubergine)" biçiminde bıraktım. Dar yerlerde (hafta panosu) kısa ad görünüyor ("Lentil soup").

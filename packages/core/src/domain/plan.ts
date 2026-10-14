@@ -323,7 +323,8 @@ export function summarizeWeek(state: PlanState, dates: string[], todayIso: strin
   const parts: string[] = [];
   if (ateOut.length) parts.push(tx("plan.weekAteOut", { days: ateOut.join(", ") }));
   if (empty.length) parts.push(tx("plan.weekEmpty", { days: empty.join(", ") }));
-  return { planned, note: parts.join(" · ") || tx("plan.weekAllSet") };
+  const note = parts.join(" · ");
+  return { planned, note: note ? note.charAt(0).toLocaleUpperCase(intlTag()) + note.slice(1) : tx("plan.weekAllSet") };
 }
 
 export interface FreezerLine {

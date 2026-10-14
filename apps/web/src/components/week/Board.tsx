@@ -1,6 +1,7 @@
 "use client";
 
 import { intlTag, t as tr } from "@anv/core/i18n";
+import { tileName } from "@anv/core/domain/shopping";
 import {
   DndContext,
   DragOverlay,
@@ -272,7 +273,7 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
       </button>
       {day.lunch ? (
         <div className={s.lunch}>
-          <span>{tr("board.lunch")}</span>· {day.lunch.name.toLocaleLowerCase(intlTag())}
+          <span>{tr("board.lunch")}</span>· {tileName(day.lunch).toLocaleLowerCase(intlTag())}
         </div>
       ) : (
         <div className={s.lunchSpacer} />
@@ -352,7 +353,7 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
         aria-roledescription={tr("board.movable")}
       >
         <span className={s.tileLabel}>{isLeftover ? tr("board.fromFridge") : SLOT_SHORT[slot]}</span>
-        <span className={[s.tileName, !cell.recipe && s.tileMissing].filter(Boolean).join(" ")}>{cell.recipe?.name ?? tr("plan.deletedRecipe")}</span>
+        <span className={[s.tileName, !cell.recipe && s.tileMissing].filter(Boolean).join(" ")}>{cell.recipe ? tileName(cell.recipe) : tr("plan.deletedRecipe")}</span>
         {slot === "ana" && cell.recipe?.freezerItem && (
           <span role="img" aria-label={tr("week.freezerItem", { item: cell.recipe.freezerItem.toLocaleLowerCase(intlTag()) })} className={s.freezer}>
             <IconSnowflakeSmall size={14} />
