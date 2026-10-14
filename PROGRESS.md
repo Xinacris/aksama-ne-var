@@ -95,3 +95,7 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
   - `src/services/bulkPaste.ts` (`ingredientsFromLines`, `stepsFromLines`), `ingredientRow` shared with import. `tests/unit/bulkPaste.test.ts`, 5 component tests in `tests/component/tarif.test.tsx`, mobile e2e "Toplu yapıştır fills 5 ingredients".
 - [x] M5. Final: e2e (mobile + desktop), axe light/dark, screenshots checked, all scripts green, push, check Vercel status.
   - Green before the final push: lint 0, typecheck 0, 510 unit/component tests (43 files), build OK, e2e 55 passed / 11 skipped (4 desktop-only on mobile, 7 phone-only on desktop). Axe (light + dark, both projects) adds the quick-add sheet, a name-only recipe and the bulk-paste/split-offer state. `npm run screenshots` adds `tarifler-hizli-ekle`, `tarifler-hizli-ekle-link` (viewport shots of the sheet), `tarifler-hizli-kaydedildi`, `tarif-yeni-toplu`; every phone shot shows the five-tab nav. Checked by eye at 390 light/dark and 1440 light/dark.
+
+Vercel status `success` at d7712e7 (and at every M-phase push: ccb31bb, a2e5cbe, a48bbf0, c2bdb8f).
+
+ROUND 2.2 DONE — live: https://aksama-ne-var.vercel.app
