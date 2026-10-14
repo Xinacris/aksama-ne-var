@@ -45,3 +45,41 @@ jest.mock("react-native-worklets", () => require("react-native-worklets/lib/modu
 jest.mock("react-native-reanimated", () => require("react-native-reanimated/mock"));
 
 jest.mock("expo-keep-awake", () => ({ useKeepAwake: jest.fn(), activateKeepAwakeAsync: jest.fn(), deactivateKeepAwake: jest.fn() }));
+
+// expo-audio: a recorded fake player (no native audio in Jest).
+jest.mock("expo-audio", () => {
+  const player = { loop: false, play: jest.fn(), pause: jest.fn(), seekTo: jest.fn(() => Promise.resolve()) };
+  return { __player: player, createAudioPlayer: jest.fn(() => player), setAudioModeAsync: jest.fn(() => Promise.resolve()) };
+});
+
+// expo-notifications: an in-memory schedule; permission is granted unless a test changes `__state`.
+jest.mock("expo-notifications", () => {
+  const state = { granted: true, canAskAgain: true, scheduled: [] as { identifier: string; content: unknown; trigger: unknown }[], last: null as unknown };
+  const perm = () => ({ granted: state.granted, canAskAgain: state.canAskAgain, status: state.granted ? "granted" : "denied" });
+  return {
+    __state: state,
+    AndroidImportance: { HIGH: 4, MAX: 5 },
+    AndroidNotificationVisibility: { PUBLIC: 1 },
+    AndroidAudioUsage: { ALARM: 4 },
+    AndroidAudioContentType: { SONIFICATION: 4 },
+    AndroidNotificationPriority: { MAX: "max" },
+    SchedulableTriggerInputTypes: { DATE: "date" },
+    getPermissionsAsync: jest.fn(async () => perm()),
+    requestPermissionsAsync: jest.fn(async () => perm()),
+    setNotificationChannelAsync: jest.fn(async () => null),
+    setNotificationHandler: jest.fn(),
+    getAllScheduledNotificationsAsync: jest.fn(async () => state.scheduled.map((s) => ({ ...s }))),
+    scheduleNotificationAsync: jest.fn(async (req: { identifier: string; content: unknown; trigger: unknown }) => {
+      state.scheduled.push(req);
+      return req.identifier;
+    }),
+    cancelScheduledNotificationAsync: jest.fn(async (id: string) => {
+      state.scheduled = state.scheduled.filter((s) => s.identifier !== id);
+    }),
+    getPresentedNotificationsAsync: jest.fn(async () => []),
+    dismissNotificationAsync: jest.fn(async () => {}),
+    getLastNotificationResponseAsync: jest.fn(async () => state.last),
+    clearLastNotificationResponseAsync: jest.fn(async () => {}),
+    addNotificationResponseReceivedListener: jest.fn(() => ({ remove: jest.fn() })),
+  };
+});

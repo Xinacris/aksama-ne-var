@@ -717,7 +717,9 @@
     "restartTimer": "Restart {{label}}",
     "plusMinute": "+1 min",
     "paused": "paused",
-    "pausedLeft": "Paused, {{time}} left"
+    "pausedLeft": "Paused, {{time}} left",
+    "pause": "Pause",
+    "resume": "Resume"
   },
   "week": {
     "fromMatches": "From matches",

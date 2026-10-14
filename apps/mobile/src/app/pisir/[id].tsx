@@ -2,19 +2,22 @@ import * as Haptics from "expo-haptics";
 import { useKeepAwake } from "expo-keep-awake";
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Pressable, ScrollView, Vibration, View } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import { useTranslation } from "react-i18next";
-import type { CookingSession, Recipe } from "@anv/core/data/models";
+import type { CookingSession, CookingTimer, Recipe } from "@anv/core/data/models";
 import {
+  addTimerTime,
   dishesToCook,
+  isPaused,
   mergedIngredients,
   missingForCooking,
   moveStep,
   newTimer,
   overallProgress,
   parseCookTarget,
+  pauseTimer,
   remainingSeconds,
-  ringingTimers,
+  resumeTimer,
   stepOf,
   stepTimers,
   visibleTimers,
@@ -29,6 +32,8 @@ import { listJoin } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import { newId } from "@anv/core/lib/id";
 import { touchTarget } from "@anv/core/design/tokens";
+import { ensureNotificationPermission } from "@/alarm/notifications";
+import { useTakeAlarmHint } from "@/alarm/prefs";
 import { LeftoverChoices } from "@/components/LeftoverChoices";
 import { recipesMap, selectList, useApp, type AppState } from "@/store";
 import { useTheme } from "@/theme";
@@ -192,32 +197,21 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
   const running = session.timers.filter((x) => x.recipeId === recipe.id && x.step === step && !x.dismissed);
   const anyActive = session.timers.some((x) => !x.dismissed);
   const tick = useTick(anyActive);
-  const rung = useRef<Set<string>>(new Set());
-  const ringing = ringingTimers(session.timers, tick);
+  const setNotice = useApp((x) => x.setNotice);
+  const takeAlarmHint = useTakeAlarmHint();
 
-  useEffect(() => {
-    for (const r of ringing) {
-      if (rung.current.has(r.id)) continue;
-      rung.current.add(r.id);
-      if (tick.getTime() - Date.parse(r.endsAt) < 60_000) {
-        Vibration.vibrate([0, 300, 150, 300, 150, 300]);
-        void Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
-      }
-    }
-  }, [ringing, tick]);
-
-  const dismiss = (tid: string) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === tid ? { ...x, dismissed: true } : x)) });
+  const change = (tid: string, fn: (x: CookingTimer) => CookingTimer) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === tid ? fn(x) : x)) });
+  const dismiss = (tid: string) => change(tid, (x) => ({ ...x, dismissed: true }));
+  // Finished timers ring from the AlarmHost above every screen ("Süre doldu" + Durdur).
+  async function start(seconds: number) {
+    await updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds, now: now() })] });
+    // Asked on the first timer, never on launch; without it the alarm rings only while the app is open.
+    const { denied } = await ensureNotificationPermission();
+    if (denied && takeAlarmHint()) setNotice({ kind: "info", text: t("alarm.deniedPhone") });
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
-      {ringing.map((r) => (
-        <View key={r.id} accessibilityLiveRegion="assertive" accessibilityRole="alert" style={{ backgroundColor: colors.tomatoSoft, padding: 12, flexDirection: "row", alignItems: "center", gap: 10 }}>
-          <Text style={{ flex: 1 }}>
-            <Text weight="bold">{t("cook.timeUpFor")}</Text> {r.label}
-          </Text>
-          <Button title={t("cook.ok")} size="sm" onPress={() => dismiss(r.id)} />
-        </View>
-      ))}
       {recipes.length > 1 && (
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, padding: 12 }} accessibilityRole="tablist" accessibilityLabel={t("cook.dishes")} style={{ flexGrow: 0 }}>
           {recipes.map((r, i) => (
@@ -254,7 +248,7 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
               <Row key={d.index}>
                 <Icon name="clock" size={20} color={colors.olive} />
                 <Text weight="bold" color={colors.olive}>
-                  {left > 0 ? t("cook.left", { time: formatCountdown(left) }) : t("cook.timeUp")}
+                  {isPaused(r) ? t("cook.pausedLeft", { time: formatCountdown(left) }) : left > 0 ? t("cook.left", { time: formatCountdown(left) }) : t("cook.timeUp")}
                 </Text>
               </Row>
             );
@@ -265,7 +259,7 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
               title={t("cook.startTimer", { length: formatTimerLength(d.seconds) })}
               icon="clock"
               variant="soft"
-              onPress={() => updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds: d.seconds, now: now() })] })}
+              onPress={() => void start(d.seconds)}
             />
           );
         })}
@@ -274,10 +268,23 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
             <Text variant="label">{t("cook.timers")}</Text>
             {visibleTimers(session.timers, tick).map((x) => {
               const left = remainingSeconds(x, tick);
+              const paused = isPaused(x);
               return (
                 <Row key={x.id} style={{ justifyContent: "space-between", flexWrap: "nowrap" }}>
                   <Text style={{ flex: 1 }}>{x.label.split(" · ")[0]}</Text>
-                  <Text weight="bold">{left ? formatCountdown(left) : t("cook.done")}</Text>
+                  <Text weight="bold" accessibilityLabel={paused ? t("cook.pausedLeft", { time: formatCountdown(left) }) : undefined}>
+                    {left || paused ? formatCountdown(left) : t("cook.done")}
+                  </Text>
+                  {left > 0 && (
+                    <Button
+                      title={paused ? t("cook.resume") : t("cook.pause")}
+                      size="sm"
+                      variant="ghost"
+                      accessibilityLabel={t(paused ? "cook.resumeTimer" : "cook.pauseTimer", { label: x.label })}
+                      onPress={() => change(x.id, (y) => (paused ? resumeTimer(y, now()) : pauseTimer(y, now())))}
+                    />
+                  )}
+                  <Button title={t("cook.plusMinute")} size="sm" variant="ghost" accessibilityLabel={t("cook.addMinute", { label: x.label })} onPress={() => change(x.id, (y) => addTimerTime(y, 60, now()))} />
                   <Button title={t("common.close")} size="sm" variant="ghost" accessibilityLabel={t("cook.closeTimer", { label: x.label })} onPress={() => dismiss(x.id)} />
                 </Row>
               );
