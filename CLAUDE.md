@@ -1,3 +1,5 @@
+Round 2.2 spec is in PROMPT-v2.2.md; continue from the first unchecked M-item in PROGRESS.md.
+
 Round 2.1 spec is in PROMPT-v2.1.md; continue from the first unchecked P-item in PROGRESS.md.
 
 Round 2 spec is in PROMPT-v2.md; continue from the first unchecked R-item in PROGRESS.md.
