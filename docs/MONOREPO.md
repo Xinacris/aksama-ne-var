@@ -45,10 +45,10 @@ each folder too).
 No Turborepo: four scripts across three packages run fine with `npm run --workspaces`, and caching
 would not save much because tests dominate and change with every edit. Revisit if CI gets slow.
 
-## Vercel — what the owner must set (by hand)
+## Vercel settings
 
-Until this is done, deploys of the `round-3` branch fail: Vercel still builds the repo root, where
-there is no Next.js app any more. That is expected.
+Set by the owner when Round 3 was merged (2026-10-14). Without them a deploy fails: Vercel would
+build the repo root, where there is no Next.js app.
 
 Project → **Settings → Build and Deployment**:
 
@@ -63,10 +63,8 @@ Project → **Settings → Build and Deployment**:
 
 Environment variables are unchanged (`GEMINI_API_KEY`, `ANTHROPIC_API_KEY`, `YOUTUBE_API_KEY`, all optional).
 
-**Order:** change Root Directory, then merge `round-3` into `main`. A deploy that runs between the
-two (or a branch that still has the old layout) fails to build; a failed build never replaces the
-live site, which keeps serving the last good deployment. After the merge, check
-`gh api repos/{owner}/{repo}/commits/main/status` → `success`.
+A failed build never replaces the live site, which keeps serving the last good deployment. After
+each push, check `gh api repos/{owner}/{repo}/commits/main/status` → `success`.
 
 Verified locally (2026-10-14): a copy of the repo without `node_modules`, then
 `cd apps/web && npm ci && npm run build` → install at the workspace root, build OK.
