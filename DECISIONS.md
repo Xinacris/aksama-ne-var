@@ -190,3 +190,10 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Boilerplate stripped before structuring** (both paths) and **never allowed as a step** (prompt rule + validator + pipeline filter). An empty Hazırlanış gets the calm hint on the review screen. Matching lower-cases with the Turkish locale first: plain `/i` doesn't fold "İ", which would have let "İndirim kodu" and "İnstagram" through.
 - **Live check found one more cause:** Yemek.com's JSON-LD groups `recipeIngredient` as nested arrays per sub-recipe, which our reader saw as zero ingredients, so "ingredients and steps" failed and the page was skipped. The reader now flattens nested lists. The page also states `prepTime: PT1M` (placeholder) and a 46-min total that excludes the 2-hour marinade: a prep under 5 min with 6+ ingredients counts as unknown, and a total shorter than the waiting isn't reduced by it.
 - The real description isn't copied into the repo: fixtures 16/17 are written in the same shape (written-recipe link, ingredients, no steps, chef profiles, socials, sponsor shorteners).
+
+## Round 2.2 — Tarifler on phones
+
+- **Icon:** `IconBook` (open book, already in `icons.tsx` in the same 1.8 stroke) instead of drawing a new one; it was unused so far.
+- **Active state:** a tab may list other route roots (`also`); Tarifler lights for `/tarifler/*` and `/tarif/*`. The desktop top nav is untouched (its Tarifler pill still lights only for `/tarifler/*`), as the spec keeps the desktop nav out of scope.
+- **Fitting five tabs at 360 px:** side padding 8 → 4 px (≈70 px per tab), `white-space: nowrap` on labels, the Liste badge anchored to the tab's centre (`calc(50% + 4px)`) instead of 54 % so it stays over the icon on narrower tabs. Tabs keep 56 px height.
+- **Where layout is tested:** jsdom has no layout, so the component test (`tests/component/nav.test.tsx`, run at 360 and 390 px widths) checks order, hrefs, icons, classes and active states; the real measurements (one-line labels, no overlap, badge inside its tab, ≥ 44 px targets, no horizontal scroll) are in `e2e/recipes-mobile.spec.ts` at 360 and 390 px.

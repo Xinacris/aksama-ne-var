@@ -85,7 +85,8 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
 **Where I found it (2026-10-14):** working tree clean, no stash. `main` was one commit ahead of `origin/main` (759469d, a docs-only `## In progress` handoff for the import quality task). That note listed everything done and pushed through 73714d7; what was "left" was only the chat report and two optional owner decisions, so nothing was reverted or re-done — the note is folded into "Follow-ups after Round 2.1" above and the section removed. Production deploy of 73714d7: Vercel `success`.
 
 - [x] M0. Checked where the last session stopped; unfinished work finished or reverted; "Where I found it" note written.
-- [ ] M1. Tarifler tab in the bottom nav; active states; 360/390 px checks; component test.
+- [x] M1. Tarifler tab in the bottom nav; active states; 360/390 px checks; component test.
+  - Fifth tab between Liste and Hafta (`IconBook`), lit for `/tarifler/*` and `/tarif/*`. `tests/component/nav.test.tsx` (16 tests at 360/390); `e2e/recipes-mobile.spec.ts` measures the tabs at 360/390 in a real browser.
 - [ ] M2. Quick-add sheet (URL → import, name → one-tap save → detail with "Ayrıntıları ekle"); search empty state uses it; tests.
 - [ ] M3. Collapsible "Ayrıntılar" in the full form (new + edit); existing form tests green.
 - [ ] M4. Toplu yapıştır for ingredients and steps; multi-line paste offer; unit + component tests.

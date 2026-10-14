@@ -6,17 +6,19 @@ import { useMemo, type ReactNode } from "react";
 import { usePeople } from "@/hooks/usePeople";
 import { usePartnerPresence } from "@/hooks/usePresence";
 import { selectList, useApp } from "@/store/app";
-import { IconBasket, IconCalendar, IconCards, IconHome, IconSettings } from "./icons";
+import { IconBasket, IconBook, IconCalendar, IconCards, IconHome, IconSettings } from "./icons";
 import { AvatarStack } from "./ui/Avatar";
 import { SyncInline } from "./ui/Misc";
 import s from "./AppShell.module.css";
 
-const TABS = [
+/** Phone tabs. `also`: other route roots that light the same tab (a recipe page belongs to Tarifler). */
+const TABS: { href: string; label: string; Icon: typeof IconHome; also?: string[] }[] = [
   { href: "/bugun", label: "Bugün", Icon: IconHome },
   { href: "/eslesme", label: "Eşleş", Icon: IconCards },
   { href: "/liste", label: "Liste", Icon: IconBasket },
+  { href: "/tarifler", label: "Tarifler", Icon: IconBook, also: ["/tarif"] },
   { href: "/hafta", label: "Hafta", Icon: IconCalendar },
-] as const;
+];
 
 /** Desktop order follows the weekly board header: Bugün, Hafta, Eşleş, Liste (+ Tarifler). */
 const TOP = [
@@ -74,8 +76,8 @@ export function AppShell({ children }: { children: ReactNode }) {
       </header>
       <div className={s.content}>{children}</div>
       <nav aria-label="Ana gezinme" className={s.bottom}>
-        {TABS.map(({ href, label, Icon }) => {
-          const active = isActive(pathname, href);
+        {TABS.map(({ href, label, Icon, also }) => {
+          const active = [href, ...(also ?? [])].some((h) => isActive(pathname, h));
           return (
             <Link key={href} href={href} className={s.tab} aria-current={active ? "page" : undefined}>
               <Icon size={22} strokeWidth={active ? 1.9 : 1.8} />
