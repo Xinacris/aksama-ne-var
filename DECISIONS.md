@@ -296,3 +296,9 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Liste:** Pazar/Market as a segmented tab, aisle cards, rows are checkboxes with a light haptic; unticked catalog rows have **"Evde var"** (takes the item off the list into the pantry, same as the recipe page); manual items can be removed; "Alışverişi bitir" with a success haptic.
 - **Eşleş:** `react-native-gesture-handler` Pan + Reanimated 4 (`useSharedValue`, `withSpring`/`withTiming`, `scheduleOnRN` from react-native-worklets, Reanimated 4's replacement for `runOnJS`) — both ship in Expo Go. Reduced motion skips the fly-out. The two round buttons do the same as the swipe and are what screen readers use; the card has a spoken summary and the swipe hint. A match shows the match moment as a full-screen modal with a success haptic.
 - **Jest:** Reanimated 4 and Worklets have no native runtime in Jest; their official mocks are used, plus gesture-handler's `jestSetup`.
+
+## Round 3 — Mobile cooking mode, Ayarlar, MOBILE.md
+
+- **Cooking mode** reuses core's session logic (`startCooking`, `moveStep`, timers stored as end times), so a session started in a browser resumes on the phone of the same account and vice versa (on one device until sync exists). `useKeepAwake()` keeps the screen on while the screen is open. A finished timer vibrates (`Vibration` pattern) with a warning haptic and shows an alert row; there is no sound (no extra audio module) and no background alarm (needs notifications → development build).
+- **Ayarlar** (built in V4) shows "Eşitleme yakında" with a plain explanation instead of the web's live/syncing pill; the language switch saves on the user and on the device.
+- **`npm run mobile`** is `npm exec -w @anv/mobile -- expo start`, so `npm run mobile -- --tunnel` really passes `--tunnel` to Expo (with `npm run start -w …` npm would swallow it). Checked: Metro starts and serves an iOS dev bundle (1 263 modules, one copy of React).

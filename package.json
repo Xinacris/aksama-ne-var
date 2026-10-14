@@ -14,7 +14,7 @@
     "dev": "npm run dev -w @anv/web",
     "test:e2e": "npm run test:e2e -w @anv/web",
     "screenshots": "npm run screenshots -w @anv/web",
-    "mobile": "npm run start -w @anv/mobile",
+    "mobile": "npm exec -w @anv/mobile -- expo start",
     "format": "prettier --write ."
   },
   "devDependencies": {

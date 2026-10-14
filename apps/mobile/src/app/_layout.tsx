@@ -85,6 +85,7 @@ function Navigation() {
           <Stack.Screen name="tarifler/[id]/duzenle" />
           <Stack.Screen name="tarifler/ice-aktar" />
           <Stack.Screen name="ayarlar" />
+          <Stack.Screen name="pisir/[id]" options={{ title: "", gestureEnabled: true }} />
         </Stack.Protected>
       </Stack>
       <NoticeHost />

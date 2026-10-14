@@ -126,9 +126,12 @@ export default function Today() {
               onPress={() => approve(model.today)}
             />
           ) : null}
+          {!model.tonight.cooked && !model.tonight.cooking && (
+            <Button title={t("bugun.startCooking")} size="lg" onPress={() => router.push(`/pisir/${model.today}`)} />
+          )}
           {!model.tonight.cooked &&
             (model.tonight.cooking ? (
-              <Text variant="bodySmall" weight="semibold" color={colors.olive}>
+              <Text variant="bodySmall" weight="semibold" color={colors.olive} onPress={() => router.push(`/pisir/${model.today}`)} accessibilityRole="link">
                 {model.tonight.cooking.userId === state.me?.id || !personById.get(model.tonight.cooking.userId)
                   ? t("bugun.cooking")
                   : t("bugun.whoCooking", { name: personById.get(model.tonight.cooking.userId)!.name })}{" "}
