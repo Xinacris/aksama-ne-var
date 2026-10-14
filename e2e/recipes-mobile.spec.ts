@@ -100,3 +100,20 @@ test("search with no results adds the name with one tap", async ({ page }) => {
   await page.getByRole("button", { name: "“Babaannemin keşkeği” ekle" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Babaannemin keşkeği" })).toBeVisible();
 });
+
+test("Toplu yapıştır fills 5 ingredients, and the recipe saves with them", async ({ page }) => {
+  await demo(page);
+  await page.goto("/tarifler/yeni");
+  await page.getByLabel("Tarifin adı").fill("Pankek");
+  await page.getByRole("region", { name: "Malzemeler" }).getByRole("button", { name: "Toplu yapıştır" }).click();
+  await page.getByLabel("Her satıra bir malzeme").fill("2 su bardağı un\n1 tatlı kaşığı tuz\n\n3 yumurta\n1,5 su bardağı süt\n1 paket kabartma tozu");
+  await page.getByRole("button", { name: "Satırları ekle" }).click();
+  const names = page.getByLabel("Malzeme", { exact: true });
+  await expect(names).toHaveCount(5);
+  await expect(names.first()).toHaveValue("Un");
+  await expect(page.getByLabel("Miktar", { exact: true }).nth(3)).toHaveValue("1,5");
+  await expect(page.getByLabel("Birim").first()).toHaveValue("su bardağı");
+  await page.getByRole("button", { name: "Tarifi kaydet" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Pankek" })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Malzemeler" })).toContainText(/kabartma tozu/i);
+});
