@@ -8,10 +8,12 @@
 export const PBKDF2_ITERATIONS = 100_000;
 
 export interface PasswordCrypto {
+  /** Iterations this platform uses for new hashes (web: 100 000). */
+  readonly iterations: number;
   /** 16 random bytes as hex. */
   randomSalt(): string;
   /** PBKDF2-SHA-256 (256 bits) of `password` with the hex salt, as hex. */
-  hashPassword(password: string, saltHex: string): Promise<string>;
+  pbkdf2(password: string, saltHex: string, iterations: number): Promise<string>;
 }
 
 export function toHex(buf: ArrayBuffer | Uint8Array): string {
@@ -26,15 +28,16 @@ export function fromHex(hex: string): Uint8Array<ArrayBuffer> {
 
 /** Web Crypto (browsers, Node ≥ 20). */
 export const webPasswordCrypto: PasswordCrypto = {
+  iterations: PBKDF2_ITERATIONS,
   randomSalt() {
     const bytes = new Uint8Array(16);
     crypto.getRandomValues(bytes);
     return toHex(bytes);
   },
-  async hashPassword(password, saltHex) {
+  async pbkdf2(password, saltHex, iterations) {
     const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveBits"]);
     const bits = await crypto.subtle.deriveBits(
-      { name: "PBKDF2", hash: "SHA-256", salt: fromHex(saltHex), iterations: PBKDF2_ITERATIONS },
+      { name: "PBKDF2", hash: "SHA-256", salt: fromHex(saltHex), iterations },
       key,
       256,
     );
@@ -53,13 +56,25 @@ export function randomSalt(): string {
   return impl.randomSalt();
 }
 
-export function hashPassword(password: string, saltHex: string): Promise<string> {
-  return impl.hashPassword(password, saltHex);
+/**
+ * Stored form: plain hex for the default 100 000 iterations (every hash made so
+ * far), `pbkdf2$<iterations>$<hex>` otherwise. A phone without a JIT needs
+ * seconds for 100 000 rounds of JS PBKDF2, so it uses fewer and says so.
+ */
+export async function hashPassword(password: string, saltHex: string): Promise<string> {
+  const hex = await impl.pbkdf2(password, saltHex, impl.iterations);
+  return impl.iterations === PBKDF2_ITERATIONS ? hex : `pbkdf2$${impl.iterations}$${hex}`;
 }
 
-/** Constant-time-ish comparison (length + xor). */
-export async function verifyPassword(password: string, saltHex: string, expectedHex: string): Promise<boolean> {
-  const actual = await hashPassword(password, saltHex);
+function parseStored(stored: string): { iterations: number; hex: string } {
+  const m = /^pbkdf2\$(\d+)\$([0-9a-f]+)$/.exec(stored);
+  return m ? { iterations: Number(m[1]), hex: m[2] } : { iterations: PBKDF2_ITERATIONS, hex: stored };
+}
+
+/** Constant-time-ish comparison (length + xor), with the iteration count the hash was made with. */
+export async function verifyPassword(password: string, saltHex: string, stored: string): Promise<boolean> {
+  const { iterations, hex: expectedHex } = parseStored(stored);
+  const actual = await impl.pbkdf2(password, saltHex, iterations);
   if (actual.length !== expectedHex.length) return false;
   let diff = 0;
   for (let i = 0; i < actual.length; i++) diff |= actual.charCodeAt(i) ^ expectedHex.charCodeAt(i);

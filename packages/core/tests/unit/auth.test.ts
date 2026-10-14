@@ -121,3 +121,23 @@ describe("households and invites", () => {
     expect((await d.repos.households.membershipOf(z.id))?.householdId).toBe(h.id);
   });
 });
+
+describe("password hashes with another iteration count (phones)", () => {
+  it("stores the count in the hash and still verifies old plain-hex hashes", async () => {
+    const { setPasswordCrypto, webPasswordCrypto } = await import("@/lib/crypto");
+    const salt = randomSalt();
+    const web = await hashPassword("kofte123", salt);
+    expect(web).toMatch(/^[0-9a-f]{64}$/);
+    setPasswordCrypto({ ...webPasswordCrypto, iterations: 1000 });
+    try {
+      const phone = await hashPassword("kofte123", salt);
+      expect(phone).toMatch(/^pbkdf2\$1000\$[0-9a-f]{64}$/);
+      expect(await verifyPassword("kofte123", salt, phone)).toBe(true);
+      expect(await verifyPassword("yanlis", salt, phone)).toBe(false);
+      // A hash made on the web (100 000) still verifies on a phone set to 1 000.
+      expect(await verifyPassword("kofte123", salt, web)).toBe(true);
+    } finally {
+      setPasswordCrypto(webPasswordCrypto);
+    }
+  });
+});
