@@ -1073,7 +1073,13 @@
       "note": "This is a demo: everything stays on this phone only. Passwords are stored hashed, but that isn’t real security.",
       "resetText": "Every account, household, plan and list on this phone is deleted. This can’t be undone."
     },
-    "inviteCode": "Invite code: {{code}}"
+    "inviteCode": "Invite code: {{code}}",
+    "week": {
+      "moveToDay": "Move to another evening",
+      "moveTo": "To which evening?",
+      "swapWith": "Swaps with {{dish}}",
+      "dayOptions": "Day options"
+    }
   },
   "unitCount": {
     "g_one": "{{n}} g",

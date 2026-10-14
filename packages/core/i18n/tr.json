@@ -1073,7 +1073,13 @@
       "note": "Bu bir demo: her şey yalnızca bu telefonda durur. Şifreler karıştırılarak saklanır ama bu gerçek bir güvenlik sağlamaz.",
       "resetText": "Bu telefondaki bütün hesaplar, evler, planlar ve listeler silinir. Geri alınamaz."
     },
-    "inviteCode": "Davet kodu: {{code}}"
+    "inviteCode": "Davet kodu: {{code}}",
+    "week": {
+      "moveToDay": "Başka akşama taşı",
+      "moveTo": "Hangi akşama?",
+      "swapWith": "{{dish}} ile yer değiştirir",
+      "dayOptions": "Gün seçenekleri"
+    }
   },
   "unitCount": {
     "g_one": "{{n}} g",
