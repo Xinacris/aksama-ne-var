@@ -167,15 +167,13 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 - [x] R0. Where things stand (note above; spec saved).
 - [x] R1. Consolidate on `main` and close `round-3`.
   - `5d26bbe` merged with `--no-ff` (merge `8fcff18`; the rest was in PR #1). Checks green (lint, typecheck, core 354 / mobile 25 / web 196, build, expo-doctor 21/21, Android export) → pushed `68e36ae` → production `success`, `https://aksama-ne-var.vercel.app` 200, `/api/translate` `{"available":true}`. `git log main..origin/round-3` empty → `round-3` deleted locally (`-d`) and on GitHub. `CLAUDE.md`, `docs/MOBILE.md`, `docs/MONOREPO.md` updated.
-- [ ] R2. APK that installs (diagnose, all four ABIs, stable release key, 1.0.1 / versionCode 2).
+- [x] R2. APK that installs (diagnose, all four ABIs, stable release key, 1.0.1 / versionCode 2).
+  - Diagnosis in DECISIONS.md: the 1.0.0 file is well-formed (v2 debug signature, minSdk 24, arm64 + armeabi-v7a only, aligned, intact), so the refusal was on the phone's side; the most likely causes are an earlier copy signed differently, an x86 device or Android < 7, or Play Protect / a vendor installer refusing a debug-signed app. Fixed on the APK's side: release key (`~/.config/aksama-ne-var/release.keystore`, plugin `withReleaseSigning`), all four ABIs, 1.0.1 / versionCode 2. Gradle memory limits in `~/.gradle/gradle.properties`.
+  - `aksama-ne-var-1.0.1-9b4f405.apk` (102 MB) verified: v2+v3, release cert, 4 ABIs, minSdk 24 (Android 7.0+), aligned. Build peak 12.6 GB system-wide (~4.8 GB for Gradle). docs/MOBILE.md updated.
 - [ ] R3. Timer alarm (core fire-once from `endsAt`, synthesized tone, mobile sound + notification, web Web Audio + notification, settings toggle, tests).
 - [ ] R4. Final APK from `main`, verified, in `~/Downloads`.
 
+
 ## In progress
 
-R2 — APK that installs.
-- [x] Diagnosis → DECISIONS.md
-- [x] Gradle memory limits in ~/.gradle/gradle.properties (-Xmx2g, 2 workers, no daemon/parallel)
-- [x] Signing plugin (kept from crashed session; heap override removed), 1.0.1 / versionCode 2
-- [x] docs/MOBILE.md (signing, updates, adb errors, low-RAM Gradle)
-- [ ] NOW RUNNING: `npm run apk` (heavy; nothing else running) → verify (v2+ release cert, 4 ABIs, aligned)
+R2 done locally → running the full root checks before pushing (one at a time).
