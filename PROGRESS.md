@@ -107,7 +107,8 @@ Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the f
 **Where I found it (2026-10-14):** `main` clean and in sync with `origin/main` (62282f9, "PROGRESS: Round 2.2 done"), no stash, no `## In progress` section, no unchecked items. Production deploy of 62282f9: Vercel `success`. Nothing to finish on `main`; branch `round-3` created from 62282f9.
 
 - [x] V0. Where I found it; branch `round-3` created.
-- [ ] V1. Monorepo: `apps/web` moved, `packages/core` extracted (framework-free), all existing web checks green from the new layout (lint, typecheck, unit, e2e, build); `docs/MONOREPO.md` with the Vercel setting.
+- [x] V1. Monorepo: `apps/web` moved, `packages/core` extracted (framework-free), all existing web checks green from the new layout (lint, typecheck, unit, e2e, build); `docs/MONOREPO.md` with the Vercel setting.
+  - Green: lint 0 (core + web), typecheck 0, core 326 + web 184 = 510 tests (same as before the move), build OK, e2e 55 passed / 11 skipped. Clean-copy `cd apps/web && npm ci && npm run build` OK.
 - [ ] V2. Mobile skeleton: Expo app runs in Expo Go config, tabs + stacks, theme tokens, AsyncStorage key-value adapter, crypto interface, demo household loads; `expo export` for iOS and Android green.
 - [ ] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
 - [ ] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
