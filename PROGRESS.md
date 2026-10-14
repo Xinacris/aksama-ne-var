@@ -177,5 +177,5 @@ R2 — APK that installs.
 - [x] Diagnosis → DECISIONS.md
 - [x] Gradle memory limits in ~/.gradle/gradle.properties (-Xmx2g, 2 workers, no daemon/parallel)
 - [x] Signing plugin (kept from crashed session; heap override removed), 1.0.1 / versionCode 2
-- [ ] docs/MOBILE.md (signing, updates, adb errors, low-RAM Gradle)
-- [ ] `npm run apk` → verify (v2+ release cert, 4 ABIs, aligned)
+- [x] docs/MOBILE.md (signing, updates, adb errors, low-RAM Gradle)
+- [ ] NOW RUNNING: `npm run apk` (heavy; nothing else running) → verify (v2+ release cert, 4 ABIs, aligned)
