@@ -2,19 +2,22 @@
 
 import { listJoin, t as tr } from "@anv/core/i18n";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import type { CookingSession, Recipe } from "@anv/core/data/models";
-import { newTimer, remainingSeconds, ringingTimers, stepTimers, visibleTimers, type CookTarget } from "@anv/core/domain/cooking";
+import type { CookingSession, CookingTimer, Recipe } from "@anv/core/data/models";
+import { addTimerTime, isPaused, newTimer, pauseTimer, remainingSeconds, restartTimer, resumeTimer, stepTimers, visibleTimers, type CookTarget } from "@anv/core/domain/cooking";
+import { dismissDue, dueTimers, initialAlarm, silenceAlarm, stepAlarm, type AlarmState } from "@anv/core/domain/timerAlarm";
 import { formatCountdown, formatTimerLength } from "@anv/core/domain/durations";
 import { eveningLeftover } from "@anv/core/domain/leftovers";
 import { now } from "@anv/core/lib/clock";
 import { newId } from "@anv/core/lib/id";
 import { dishInSentence } from "@anv/core/domain/prep";
+import { preferences } from "@/data/preferences";
 import { useApp } from "@/store/app";
 import { LeftoverChoices } from "../LeftoverChoices";
-import { IconCheck, IconClock, IconClose, IconPlus } from "../icons";
+import { IconBell, IconCheck, IconClock, IconClose, IconPause, IconPlay, IconPlus, IconRestart } from "../icons";
 import { Button, ButtonLink } from "../ui/Button";
 import { TextField } from "../ui/Field";
 import type { CookingExtras } from "./CookingMode";
+import { askNotificationPermission, blinkTitle, notifyHidden, startAlarm, stopAlarm, unlockAlarmAudio } from "./alarm";
 import s from "./extras.module.css";
 
 /** Re-render every second while something is counting down. */
@@ -65,44 +68,23 @@ export function useWakeLock() {
   }, []);
 }
 
-/** Three soft beeps (Web Audio) + vibration where supported. */
-function ring() {
-  try {
-    const Ctx = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-    if (Ctx) {
-      const ctx = new Ctx();
-      for (let i = 0; i < 3; i++) {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = "sine";
-        osc.frequency.value = 880;
-        const at = ctx.currentTime + i * 0.45;
-        gain.gain.setValueAtTime(0.0001, at);
-        gain.gain.exponentialRampToValueAtTime(0.25, at + 0.03);
-        gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.35);
-        osc.connect(gain).connect(ctx.destination);
-        osc.start(at);
-        osc.stop(at + 0.4);
-      }
-      setTimeout(() => void ctx.close().catch(() => {}), 2000);
-    }
-  } catch {
-    // no audio: the banner and vibration still tell the cook
-  }
-  try {
-    navigator.vibrate?.([300, 150, 300, 150, 300]);
-  } catch {
-    // unsupported
-  }
-}
-
 /** Timer buttons under a step ("Zamanlayıcı başlat · 20 dk"); a running one shows its countdown. */
 function StepTimerButtons({ session, recipe, step }: { session: CookingSession; recipe: Recipe; step: number }) {
   const updateCooking = useApp((x) => x.updateCooking);
+  const setNotice = useApp((x) => x.setNotice);
   const found = stepTimers(recipe.steps[step]);
   const running = session.timers.filter((t) => t.recipeId === recipe.id && t.step === step && !t.dismissed);
   const t = useTick(running.length > 0);
   if (!found.length) return null;
+
+  async function start(seconds: number) {
+    // This tap is what lets the page make sound later.
+    unlockAlarmAudio();
+    await updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds, now: now() })] });
+    const permission = await askNotificationPermission();
+    if (permission === "denied" && preferences.takeAlarmHint()) setNotice({ kind: "info", text: tr("alarm.deniedWeb") });
+  }
+
   return (
     <div className={s.stepTimers}>
       {found.map((d) => {
@@ -112,18 +94,12 @@ function StepTimerButtons({ session, recipe, step }: { session: CookingSession; 
           return (
             <span key={d.index} className={s.running}>
               <IconClock size={20} />
-              {left > 0 ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUp")}
+              {isPaused(r) ? tr("cook.pausedLeft", { time: formatCountdown(left) }) : left > 0 ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUp")}
             </span>
           );
         }
         return (
-          <Button
-            key={d.index}
-            variant="soft"
-            size="lg"
-            className={s.startBtn}
-            onClick={() => updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds: d.seconds, now: now() })] })}
-          >
+          <Button key={d.index} variant="soft" size="lg" className={s.startBtn} onClick={() => void start(d.seconds)}>
             <IconClock size={20} />
             {tr("cook.startTimer", { length: formatTimerLength(d.seconds) })}
           </Button>
@@ -133,51 +109,99 @@ function StepTimerButtons({ session, recipe, step }: { session: CookingSession; 
   );
 }
 
-/** Sticky list of timers (dish + time left), running across steps and dishes; finished ones ring and wait for "Tamam". */
+/**
+ * Rings when timers reach zero: the state comes from `endsAt` (core `stepAlarm`), so a timer that ended
+ * while the tab was hidden rings on return, each finish once; old ones (>10 min) only show as finished.
+ */
+function useTimerAlarm(session: CookingSession, t: Date) {
+  const [alarm, setAlarm] = useState<AlarmState>(initialAlarm);
+  // Adjusting state while rendering (React's pattern for derived state): stepAlarm returns the same
+  // object when nothing changed, so this settles in one extra render.
+  const next = stepAlarm(alarm, session.timers, t);
+  if (next !== alarm) setAlarm(next);
+  const ringing = next.ringing.length > 0;
+  const since = next.since;
+
+  useEffect(() => {
+    if (!ringing) return;
+    startAlarm(preferences.getTimerSound());
+    const names = listJoin(dueTimers(session.timers, now()).map((x) => x.label));
+    notifyHidden(tr("alarm.notifTitle", { label: names }), tr("alarm.notifBody"), `anv-timer-${session.id}`);
+    const restoreTitle = blinkTitle(tr("alarm.blink"));
+    return () => {
+      stopAlarm();
+      restoreTitle();
+    };
+    // `since` changes when another timer joins the ringing: restart the sound and the notification.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ringing, since]);
+
+  return { silence: () => setAlarm((a) => silenceAlarm(a)) };
+}
+
+/** Sticky list of timers (dish + time left, pause / +1 dk / restart / close) and the "Süre doldu" banner with Durdur. */
 function TimerBar({ session }: { session: CookingSession }) {
   const updateCooking = useApp((x) => x.updateCooking);
   const active = session.timers.some((x) => !x.dismissed);
   const t = useTick(active);
-  const rung = useRef<Set<string>>(new Set());
-  const ringing = ringingTimers(session.timers, t);
-
-  useEffect(() => {
-    for (const r of ringing) {
-      if (rung.current.has(r.id)) continue;
-      rung.current.add(r.id);
-      // Ring only for timers that just ended, not for old ones found after a reload.
-      if (t.getTime() - Date.parse(r.endsAt) < 60_000) ring();
-    }
-  }, [ringing, t]);
+  const { silence } = useTimerAlarm(session, t);
+  const due = dueTimers(session.timers, t);
 
   const list = visibleTimers(session.timers, t);
-  const dismiss = (id: string) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === id ? { ...x, dismissed: true } : x)) });
+  const change = (id: string, fn: (x: CookingTimer) => CookingTimer) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === id ? fn(x) : x)) });
+  const dismiss = (id: string) => change(id, (x) => ({ ...x, dismissed: true }));
+  // Stop: silence here and mark the finished timers dismissed, which every tab/device sync reaches sees.
+  const stop = () => {
+    silence();
+    void updateCooking(session.id, { timers: dismissDue(session.timers, now()) });
+  };
 
   return (
     <>
-      <div className={s.alerts} aria-live="assertive" role="alert" aria-label={tr("cook.timerAlerts")}>
-        {ringing.map((r) => (
-          <div key={r.id} className={s.alert}>
-            <span>
-              <strong>{tr("cook.timeUpFor")}</strong> {r.label}
+      <div className={s.alerts} aria-live="assertive" aria-label={tr("cook.timerAlerts")}>
+        {due.length > 0 && (
+          <div className={s.alert} role="alert">
+            <span className={s.alertText}>
+              <IconBell size={22} />
+              <strong>{tr("alarm.timeUp", { names: listJoin(due.map((x) => x.label)) })}</strong>
             </span>
-            <Button size="sm" onClick={() => dismiss(r.id)}>
-              {tr("cook.ok")}
+            <Button size="lg" onClick={stop} aria-label={tr("alarm.stopLabel")} className={s.stopBtn}>
+              {tr("alarm.stop")}
             </Button>
           </div>
-        ))}
+        )}
       </div>
       {list.length > 0 && (
         <section className={s.bar} aria-label={tr("cook.timers")}>
           <ul className={s.timers}>
             {list.map((x) => {
               const left = remainingSeconds(x, t);
+              const paused = isPaused(x);
               return (
-                <li key={x.id} className={[s.timer, left === 0 && s.done].filter(Boolean).join(" ")}>
+                <li key={x.id} className={[s.timer, left === 0 && !paused && s.done, paused && s.paused].filter(Boolean).join(" ")}>
                   <span className={s.timerLabel}>{x.label.split(" · ")[0]}</span>
-                  <span className={s.timerLeft} aria-label={left ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUpLower")}>
-                    {left ? formatCountdown(left) : tr("cook.done")}
+                  <span
+                    className={s.timerLeft}
+                    aria-label={paused ? tr("cook.pausedLeft", { time: formatCountdown(left) }) : left ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUpLower")}
+                  >
+                    {left || paused ? formatCountdown(left) : tr("cook.done")}
                   </span>
+                  {left > 0 && (
+                    <button
+                      type="button"
+                      className={s.cancel}
+                      onClick={() => change(x.id, (y) => (paused ? resumeTimer(y, now()) : pauseTimer(y, now())))}
+                      aria-label={tr(paused ? "cook.resumeTimer" : "cook.pauseTimer", { label: x.label })}
+                    >
+                      {paused ? <IconPlay size={16} /> : <IconPause size={16} />}
+                    </button>
+                  )}
+                  <button type="button" className={s.plus} onClick={() => change(x.id, (y) => addTimerTime(y, 60, now()))} aria-label={tr("cook.addMinute", { label: x.label })}>
+                    {tr("cook.plusMinute")}
+                  </button>
+                  <button type="button" className={s.cancel} onClick={() => change(x.id, (y) => restartTimer(y, now()))} aria-label={tr("cook.restartTimer", { label: x.label })}>
+                    <IconRestart size={16} />
+                  </button>
                   <button type="button" className={s.cancel} onClick={() => dismiss(x.id)} aria-label={tr("cook.closeTimer", { label: x.label })}>
                     <IconClose size={16} />
                   </button>

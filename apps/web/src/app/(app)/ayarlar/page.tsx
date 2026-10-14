@@ -3,6 +3,7 @@
 import { listJoin, t } from "@anv/core/i18n";
 import { weekdayName } from "@anv/core/domain/dates";
 import { LanguageSetting } from "@/components/LanguageSetting";
+import { TimerSoundSetting } from "@/components/TimerSoundSetting";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
@@ -272,6 +273,8 @@ export default function AyarlarPage() {
       </section>
 
       <LanguageSetting />
+
+      <TimerSoundSetting />
 
       <section className={s.card} aria-labelledby="a-ice">
         <h2 id="a-ice" className={s.cardTitle}>

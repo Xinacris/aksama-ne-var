@@ -710,7 +710,14 @@
     "dishes": "Dishes",
     "step": "Step {{n}} / {{total}}",
     "prev": "Back",
-    "next": "Next"
+    "next": "Next",
+    "pauseTimer": "Pause {{label}}",
+    "resumeTimer": "Resume {{label}}",
+    "addMinute": "Add 1 minute to {{label}}",
+    "restartTimer": "Restart {{label}}",
+    "plusMinute": "+1 min",
+    "paused": "paused",
+    "pausedLeft": "Paused, {{time}} left"
   },
   "week": {
     "fromMatches": "From matches",
@@ -1040,7 +1047,12 @@
     "demoNote": "The demo loads Ali and Zeynep’s household and signs you in as Ali (ali@demo.ev / zeynep@demo.ev · password demo1234).",
     "resetText": "Every account, household, plan and list in this browser is deleted. This can’t be undone.",
     "resetYes": "Yes, delete everything",
-    "reset": "Reset all data"
+    "reset": "Reset all data",
+    "cooking": "Cooking",
+    "timerSound": "Timer sound",
+    "timerSoundNote": "When a timer ends an alarm rings until you tap Stop, for up to 2 minutes. When off, the banner and vibration stay.",
+    "on": "On",
+    "off": "Off"
   },
   "language": {
     "tr": "Türkçe",
@@ -1280,5 +1292,17 @@
     "note": "This recipe is written in {{lang}}.",
     "done": "Translation saved; you can edit it however you like.",
     "machine": "Machine translation"
+  },
+  "alarm": {
+    "timeUp": "Time’s up: {{names}}",
+    "stop": "Stop",
+    "stopLabel": "Stop the alarm",
+    "blink": "⏰ Time’s up",
+    "notifTitle": "Time’s up: {{label}}",
+    "notifBody": "Tap to go back to cooking mode.",
+    "channel": "Timers",
+    "channelSilent": "Timers (silent)",
+    "deniedPhone": "Notifications are off: the alarm won’t sound while the phone is locked; it rings while the app is open.",
+    "deniedWeb": "Notifications are off: while the tab is in the background only its title blinks."
   }
 }

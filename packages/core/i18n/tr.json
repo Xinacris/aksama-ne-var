@@ -710,7 +710,14 @@
     "dishes": "Yemekler",
     "step": "Adım {{n}} / {{total}}",
     "prev": "Önceki",
-    "next": "Sonraki"
+    "next": "Sonraki",
+    "pauseTimer": "{{label}}: duraklat",
+    "resumeTimer": "{{label}}: devam et",
+    "addMinute": "{{label}}: 1 dakika ekle",
+    "restartTimer": "{{label}}: baştan başlat",
+    "plusMinute": "+1 dk",
+    "paused": "duraklatıldı",
+    "pausedLeft": "Duraklatıldı, {{time}} kaldı"
   },
   "week": {
     "fromMatches": "Eşleşmelerden",
@@ -1040,7 +1047,12 @@
     "demoNote": "Demo, Ali ve Zeynep'in evini yükler ve seni Ali olarak açar (ali@demo.ev / zeynep@demo.ev · şifre demo1234).",
     "resetText": "Bu tarayıcıdaki bütün hesaplar, evler, planlar ve listeler silinir. Geri alınamaz.",
     "resetYes": "Evet, hepsini sil",
-    "reset": "Tüm verileri sıfırla"
+    "reset": "Tüm verileri sıfırla",
+    "cooking": "Pişirme",
+    "timerSound": "Zamanlayıcı sesi",
+    "timerSoundNote": "Süre dolunca alarm çalar: Durdur’a basana kadar, en çok 2 dakika. Kapalıyken uyarı ve titreşim kalır.",
+    "on": "Açık",
+    "off": "Kapalı"
   },
   "language": {
     "tr": "Türkçe",
@@ -1280,5 +1292,17 @@
     "note": "Bu tarif {{lang}} yazılmış.",
     "done": "Çeviri kaydedildi; istediğin gibi düzenleyebilirsin.",
     "machine": "Otomatik çeviri"
+  },
+  "alarm": {
+    "timeUp": "Süre doldu: {{names}}",
+    "stop": "Durdur",
+    "stopLabel": "Alarmı durdur",
+    "blink": "⏰ Süre doldu",
+    "notifTitle": "Süre doldu: {{label}}",
+    "notifBody": "Pişirme moduna dönmek için dokun.",
+    "channel": "Zamanlayıcılar",
+    "channelSilent": "Zamanlayıcılar (sessiz)",
+    "deniedPhone": "Bildirim izni kapalı: telefon kilitliyken alarm çalmaz, uygulama açıkken çalar.",
+    "deniedWeb": "Bildirim izni kapalı: sekme arkadayken yalnızca sekme başlığı yanıp söner."
   }
 }
