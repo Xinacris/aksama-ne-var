@@ -42,9 +42,9 @@ To use a local web server instead: `EXPO_PUBLIC_API_URL=http://<computer-ip>:300
   "Ayrıntılar" and Toplu yapıştır, **import** from a link or pasted text, **Liste** (aisles, ticks,
   "evde var", finish shopping, add/remove items), **Hafta** (evening cards, move a dish to another
   evening, swap, remove, day options), **Eşleş** (swipe deck, match moment), **Pişirme modu**
-  (heads-up, steps per dish, timers that vibrate, ingredients sheet, screen stays on, finish with
-  leftovers), **Ayarlar** (profile, household, dinner time, lunch days, language, theme, import
-  usage, demo data, reset).
+  (heads-up, steps per dish, timers with pause / +1 dk and an **alarm** — see below, ingredients
+  sheet, screen stays on, finish with leftovers), **Ayarlar** (profile, household, dinner time, lunch days, language, theme, import
+  usage, timer sound, demo data, reset).
 - Turkish and English (phone language on first run, then Ayarlar › Dil / Language), light and dark
   (system, or Açık / Koyu in Ayarlar), VoiceOver/TalkBack labels, 44 pt targets, haptics on ticks,
   matches and finishing.
@@ -57,7 +57,26 @@ To use a local web server instead: `EXPO_PUBLIC_API_URL=http://<computer-ip>:300
   development build — see the plan below.
 - **Push notifications** for prep reminders (reminders show inside the app).
 - **Store builds** (EAS) and real icons/splash artwork.
-- Timer alarms only fire while the app is open (no background notifications).
+
+## Timer alarm
+
+- **App open (any screen):** when a timer reaches zero, a banner "Süre doldu: <timer>" / "Time's up:
+  <timer>" with a big **Durdur / Stop** covers the top of the screen. The original tone
+  (`assets/sounds/timer_alarm.wav`, made by `node scripts/make-alarm-tone.mjs` from the pattern in
+  `packages/core/src/domain/alarmTone.ts`; the web plays the same beeps) loops with vibration until
+  Stop, for at most 2 minutes. Two timers ending together share one banner and one sound. On iOS it
+  rings even with the silent switch on.
+- **App in the background / phone locked:** a local notification with the same sound at the
+  timer's end time, on the Android channel "Zamanlayıcılar / Timers" (high importance; "Timers
+  (silent)" when Ayarlar › Zamanlayıcı sesi is off). Pause, +1 dk, restart, close, finish and Stop
+  cancel or move it. Tapping it opens the cooking session and counts as Stop. There is no
+  exact-alarm permission, so some phones (battery savers) deliver it a few seconds late.
+- **Permission** is asked the first time a timer starts. If it's refused, the in-app alarm still
+  works and a one-line hint appears once.
+- A timer that ended more than 10 minutes before the app was opened is only shown as finished,
+  without sound.
+- Expo Go plays notifications with the default sound. The custom tone in notifications needs the
+  APK (`npm run apk`), because the sound file is bundled into the native build.
 
 ## Checks (no device needed)
 

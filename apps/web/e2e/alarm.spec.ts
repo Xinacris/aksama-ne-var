@@ -68,8 +68,8 @@ test("timer alarm: rings in a hidden tab (notification + blinking title), banner
 
   await page.goto("/tarif/kuru-fasulye");
   await page.getByRole("link", { name: "Pişirmeye başla" }).click();
-  const anyway = page.getByRole("button", { name: "Yine de başla" });
-  if (await anyway.isVisible()) await anyway.click();
+  // three ingredients are missing in the demo, so the heads-up comes first
+  await page.getByRole("button", { name: "Yine de başla" }).click();
   await page.getByRole("button", { name: /^Zamanlayıcı başlat · 10 dk/ }).click();
   const title = await page.title();
   const beforeRing = await osc(page);
@@ -112,8 +112,8 @@ test("timer sound off: the banner still appears, without beeps", async ({ page }
   await expect(page).toHaveURL(/\/bugun/);
   await page.goto("/tarif/kuru-fasulye");
   await page.getByRole("link", { name: "Pişirmeye başla" }).click();
-  const anyway = page.getByRole("button", { name: "Yine de başla" });
-  if (await anyway.isVisible()) await anyway.click();
+  // three ingredients are missing in the demo, so the heads-up comes first
+  await page.getByRole("button", { name: "Yine de başla" }).click();
   await page.getByRole("button", { name: /^Zamanlayıcı başlat · 10 dk/ }).click();
   const before = await osc(page);
   await page.clock.fastForward("10:01");
