@@ -99,3 +99,20 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
 Vercel status `success` at d7712e7 (and at every M-phase push: ccb31bb, a2e5cbe, a48bbf0, c2bdb8f).
 
 ROUND 2.2 DONE — live: https://aksama-ne-var.vercel.app
+
+## Round 3
+
+Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the first unchecked V-item.
+
+**Where I found it (2026-10-14):** `main` clean and in sync with `origin/main` (62282f9, "PROGRESS: Round 2.2 done"), no stash, no `## In progress` section, no unchecked items. Production deploy of 62282f9: Vercel `success`. Nothing to finish on `main`; branch `round-3` created from 62282f9.
+
+- [x] V0. Where I found it; branch `round-3` created.
+- [ ] V1. Monorepo: `apps/web` moved, `packages/core` extracted (framework-free), all existing web checks green from the new layout (lint, typecheck, unit, e2e, build); `docs/MONOREPO.md` with the Vercel setting.
+- [ ] V2. Mobile skeleton: Expo app runs in Expo Go config, tabs + stacks, theme tokens, AsyncStorage key-value adapter, crypto interface, demo household loads; `expo export` for iOS and Android green.
+- [ ] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
+- [ ] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
+- [ ] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
+- [ ] V6. `/api/translate` + Translate action (web and mobile); multi-language import; tests.
+- [ ] V7. Mobile screens: Liste, Hafta, Eşleş.
+- [ ] V8. Mobile screens: Pişirme modu, Ayarlar; `docs/MOBILE.md`.
+- [ ] V9. Final: all checks green (web incl. e2e and axe, core, mobile tsc/expo-doctor/export/jest), screenshots for web in both languages, push `round-3`, and write the morning note.
