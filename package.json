@@ -15,6 +15,7 @@
     "test:e2e": "npm run test:e2e -w @anv/web",
     "screenshots": "npm run screenshots -w @anv/web",
     "mobile": "npm exec -w @anv/mobile -- expo start",
+    "apk": "npm run apk -w @anv/mobile --",
     "format": "prettier --write ."
   },
   "devDependencies": {

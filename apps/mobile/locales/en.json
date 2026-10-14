@@ -1,1 +1,4 @@
-{ "CFBundleDisplayName": "What’s for dinner?", "CFBundleName": "What’s for dinner?" }
+{
+  "ios": { "CFBundleDisplayName": "What’s for dinner?", "CFBundleName": "What’s for dinner?" },
+  "android": { "app_name": "What’s for dinner?" }
+}

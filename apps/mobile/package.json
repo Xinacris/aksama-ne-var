@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "doctor": "expo-doctor",
-    "export:check": "expo export --platform ios --output-dir dist/ios && expo export --platform android --output-dir dist/android"
+    "export:check": "expo export --platform ios --output-dir dist/ios && expo export --platform android --output-dir dist/android",
+    "apk": "node scripts/build-apk.mjs"
   },
   "dependencies": {
     "@anv/core": "*",

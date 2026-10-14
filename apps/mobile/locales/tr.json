@@ -1,1 +1,4 @@
-{ "CFBundleDisplayName": "Akşama ne var?", "CFBundleName": "Akşama ne var?" }
+{
+  "ios": { "CFBundleDisplayName": "Akşama ne var?", "CFBundleName": "Akşama ne var?" },
+  "android": { "app_name": "Akşama ne var?" }
+}
