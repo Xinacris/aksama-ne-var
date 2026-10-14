@@ -1,5 +1,8 @@
 "use client";
 
+import { listJoin, t } from "@anv/core/i18n";
+import { weekdayName } from "@anv/core/domain/dates";
+import { LanguageSetting } from "@/components/LanguageSetting";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
@@ -21,28 +24,11 @@ import { now } from "@anv/core/lib/clock";
 import type { ThemePreference } from "@anv/core/lib/theme";
 import s from "./page.module.css";
 
-const THEMES: [ThemePreference, string][] = [
-  ["light", "Açık"],
-  ["dark", "Koyu"],
-  ["system", "Sistem"],
-];
+const THEMES: ThemePreference[] = ["light", "dark", "system"];
 
-const LUNCH: [Household["lunchAtHome"], string][] = [
-  ["yes", "Evet"],
-  ["no", "Hayır"],
-  ["some", "Bazı günler"],
-];
-// Monday first, as Turkish calendars are.
-const WEEKDAYS: [number, string][] = [
-  [1, "Pzt"],
-  [2, "Sal"],
-  [3, "Çar"],
-  [4, "Per"],
-  [5, "Cum"],
-  [6, "Cmt"],
-  [0, "Paz"],
-];
-const WEEKDAY_LONG = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+const LUNCH: Household["lunchAtHome"][] = ["yes", "no", "some"];
+// Monday first, in both languages.
+const WEEKDAYS = [1, 2, 3, 4, 5, 6, 0];
 
 /** "Öğlenleri evde yiyen var mı?" — decides whether leftovers become a lunch or go in the fridge. */
 function LunchSetting() {
@@ -52,38 +38,41 @@ function LunchSetting() {
   const { lunchAtHome, lunchDays } = household;
   const note =
     lunchAtHome === "yes"
-      ? "Artan yemek, tarif öyle diyorsa ertesi gün öğlene yazılır."
+      ? t("ayarlar.lunchYes")
       : lunchAtHome === "no"
-        ? "Artanlar öğlene yazılmaz; dolaba kalır ve Bugün'de ne zamana kadar yenebileceği görünür."
+        ? t("ayarlar.lunchNo")
         : lunchDays.length
-          ? `Öğlene yalnızca ${lunchDays
-              .slice()
-              .sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7))
-              .map((d) => WEEKDAY_LONG[d])
-              .join(", ")} yazılır; diğer günler artan dolaba kalır.`
-          : "Günleri seçin; seçilmeyen günlerde artan dolaba kalır.";
+          ? t("ayarlar.lunchSome", {
+              days: listJoin(
+                lunchDays
+                  .slice()
+                  .sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7))
+                  .map((d) => weekdayName(d)),
+              ),
+            })
+          : t("ayarlar.lunchPick");
   return (
     <div className={s.lunch}>
       <span className={s.label} id="ogle-soru">
-        Öğlenleri evde yiyen var mı?
+        {t("ayarlar.lunchQ")}
       </span>
       <div className={s.chips} role="group" aria-labelledby="ogle-soru">
-        {LUNCH.map(([v, l]) => (
+        {LUNCH.map((v) => (
           <DishChip key={v} selected={lunchAtHome === v} onClick={() => setLunchAtHome({ lunchAtHome: v, lunchDays: v === "some" && !lunchDays.length ? [6, 0] : lunchDays })}>
-            {l}
+            {t(`lunch.${v}`)}
           </DishChip>
         ))}
       </div>
       {lunchAtHome === "some" && (
-        <div className={s.chips} role="group" aria-label="Öğlen evde olunan günler">
-          {WEEKDAYS.map(([d, l]) => (
+        <div className={s.chips} role="group" aria-label={t("ayarlar.lunchDays")}>
+          {WEEKDAYS.map((d) => (
             <DishChip
               key={d}
               selected={lunchDays.includes(d)}
               onClick={() => setLunchAtHome({ lunchAtHome: "some", lunchDays: lunchDays.includes(d) ? lunchDays.filter((x) => x !== d) : [...lunchDays, d] })}
             >
-              <span aria-hidden="true">{l}</span>
-              <span className="visually-hidden">{WEEKDAY_LONG[d]}</span>
+              <span aria-hidden="true">{weekdayName(d, "short")}</span>
+              <span className="visually-hidden">{weekdayName(d)}</span>
             </DishChip>
           ))}
         </div>
@@ -128,11 +117,11 @@ export default function AyarlarPage() {
     e.preventDefault();
     const n = name.trim();
     if (!n) {
-      setNotice({ kind: "error", text: "Adın boş kalmasın." });
+      setNotice({ kind: "error", text: t("ayarlar.nameEmpty") });
       return;
     }
     await updateProfile({ name: n, avatarInitial: (initial.trim() || initialOf(n)).slice(0, 2).toLocaleUpperCase("tr") });
-    setNotice({ kind: "info", text: "Profilin güncellendi." });
+    setNotice({ kind: "info", text: t("ayarlar.profileSaved") });
   }
 
   async function copy() {
@@ -141,7 +130,7 @@ export default function AyarlarPage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch {
-      setNotice({ kind: "info", text: "Kopyalayamadık; linki seçip elle kopyalayabilirsin." });
+      setNotice({ kind: "info", text: t("ayarlar.copyFailed") });
     }
   }
 
@@ -160,27 +149,27 @@ export default function AyarlarPage() {
 
   return (
     <main className={s.page}>
-      <h1 className={s.title}>Ayarlar</h1>
+      <h1 className={s.title}>{t("ayarlar.title")}</h1>
 
       <section className={s.card} aria-labelledby="a-profil">
         <h2 id="a-profil" className={s.cardTitle}>
-          Profil
+          {t("ayarlar.profile")}
         </h2>
         <form onSubmit={saveProfile} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
           <div className={s.row}>
-            <TextField label="Adın" value={name} onChange={(e) => setName(e.target.value)} autoComplete="given-name" />
-            <TextField label="Baş harf" value={initial} maxLength={2} onChange={(e) => setInitial(e.target.value)} />
+            <TextField label={t("auth.yourName")} value={name} onChange={(e) => setName(e.target.value)} autoComplete="given-name" />
+            <TextField label={t("ayarlar.initial")} value={initial} maxLength={2} onChange={(e) => setInitial(e.target.value)} />
           </div>
           <div className={s.buttons}>
             <Button type="submit" size="sm">
-              Kaydet
+              {t("ayarlar.save")}
             </Button>
             <Button
               variant="secondary"
               size="sm"
               onClick={() => router.replace("/giris?cikis=1")}
             >
-              Çıkış yap
+              {t("ayarlar.logOut")}
             </Button>
           </div>
         </form>
@@ -189,7 +178,7 @@ export default function AyarlarPage() {
 
       <section className={s.card} aria-labelledby="a-ev">
         <h2 id="a-ev" className={s.cardTitle}>
-          Ev
+          {t("ayarlar.household")}
         </h2>
         <ul className={s.members}>
           {people.map((p) => {
@@ -200,9 +189,9 @@ export default function AyarlarPage() {
                 <span className={s.memberTexts}>
                   <strong>
                     {p.name}
-                    {p.id === me?.id ? " (sen)" : ""}
+                    {p.id === me?.id ? t("ayarlar.you") : ""}
                   </strong>
-                  <span>{m?.role === "owner" ? "Evi kuran" : "Davetle katıldı"}</span>
+                  <span>{m?.role === "owner" ? t("ayarlar.owner") : t("ayarlar.joined")}</span>
                 </span>
               </li>
             );
@@ -211,41 +200,41 @@ export default function AyarlarPage() {
         {people.length < 2 ? (
           <>
             <label htmlFor="ayar-davet" className={s.label}>
-              Davet linki
+              {t("onb2.inviteLink")}
             </label>
             <div className={s.linkBox}>
               <IconLink size={18} />
               <input id="ayar-davet" readOnly value={link.display} className={s.linkInput} onFocus={(e) => e.target.select()} />
               <button type="button" className={s.copy} onClick={copy}>
-                {copied ? "Kopyalandı" : "Kopyala"}
+                {copied ? t("onb2.copied") : t("onb2.copy")}
               </button>
             </div>
             <a className={buttonClass({ size: "md" })} href={whatsappShareUrl(link.full)} target="_blank" rel="noopener noreferrer">
               <IconMessage size={18} />
-              WhatsApp ile gönder
+              {t("onb2.whatsapp")}
             </a>
           </>
         ) : (
-          <p className={s.note}>Ev tamam: kararları ikiniz birlikte veriyorsunuz.</p>
+          <p className={s.note}>{t("ayarlar.complete")}</p>
         )}
         <form
           onSubmit={async (e) => {
             e.preventDefault();
             if (!/^\d{2}:\d{2}$/.test(dinner)) return;
             await setDinnerTime(dinner);
-            setNotice({ kind: "info", text: `Sofra saati ${dinner}. Hatırlatmalar buna göre ayarlandı.` });
+            setNotice({ kind: "info", text: t("ayarlar.dinnerSaved", { time: dinner }) });
           }}
           style={{ display: "flex", alignItems: "flex-end", gap: 10, flexWrap: "wrap" }}
         >
-          <TextField label="Akşam sofrası saati" type="time" value={dinner} onChange={(e) => setDinner(e.target.value)} style={{ width: 140 }} />
+          <TextField label={t("ayarlar.dinnerTime")} type="time" value={dinner} onChange={(e) => setDinner(e.target.value)} style={{ width: 140 }} />
           <Button type="submit" size="sm" variant="soft">
-            Saati kaydet
+            {t("ayarlar.saveTime")}
           </Button>
         </form>
         <LunchSetting />
         {confirm === "leave" ? (
           <div className={s.confirm} role="alert">
-            <p>Evden ayrılırsan plan, liste ve eşleşmeler bu evde kalır; sen yeni bir ev kurabilir ya da başka bir eve katılabilirsin.</p>
+            <p>{t("ayarlar.leaveText")}</p>
             <div className={s.buttons}>
               <Button
                 size="sm"
@@ -254,50 +243,52 @@ export default function AyarlarPage() {
                   router.replace("/onboarding/1");
                 }}
               >
-                Evet, ayrıl
+                {t("ayarlar.leaveYes")}
               </Button>
               <Button size="sm" variant="secondary" onClick={() => setConfirm(null)}>
-                Vazgeç
+                {t("form.bulk.cancel")}
               </Button>
             </div>
           </div>
         ) : (
           <Button variant="link" size="sm" className={s.danger} onClick={() => setConfirm("leave")} style={{ alignSelf: "flex-start" }}>
-            Evden ayrıl
+            {t("ayarlar.leave")}
           </Button>
         )}
       </section>
 
       <section className={s.card} aria-labelledby="a-tema">
         <h2 id="a-tema" className={s.cardTitle}>
-          Görünüm
+          {t("ayarlar.appearance")}
         </h2>
-        <div className={s.chips} role="group" aria-label="Tema">
-          {THEMES.map(([v, l]) => (
+        <div className={s.chips} role="group" aria-label={t("ayarlar.theme")}>
+          {THEMES.map((v) => (
             <DishChip key={v} selected={theme === v} onClick={() => setTheme(v)}>
-              {l}
+              {t(`theme.${v}`)}
             </DishChip>
           ))}
         </div>
-        <p className={s.note}>Sistem seçiliyse telefonun ya da bilgisayarın açık/koyu ayarını izler.</p>
+        <p className={s.note}>{t("ayarlar.themeNote")}</p>
       </section>
+
+      <LanguageSetting />
 
       <section className={s.card} aria-labelledby="a-ice">
         <h2 id="a-ice" className={s.cardTitle}>
-          Linkten tarif
+          {t("ayarlar.import")}
         </h2>
         <ImportUsage log={importLog} />
         <Link href="/tarifler/ice-aktar" className={buttonClass({ size: "sm", variant: "soft" })} style={{ alignSelf: "flex-start" }}>
-          Linkten ekle
+          {t("tarifler.fromLink")}
         </Link>
       </section>
 
       <section className={s.card} aria-labelledby="a-veri">
         <h2 id="a-veri" className={s.cardTitle}>
-          Veri
+          {t("ayarlar.data")}
         </h2>
         <p className={s.note}>
-          Bu bir demo: her şey yalnızca bu tarayıcıda durur. Şifreler karıştırılarak saklanır ama bu gerçek bir güvenlik sağlamaz.
+          {t("ayarlar.dataNote")}
         </p>
         <div className={s.buttons}>
           <Button
@@ -308,19 +299,19 @@ export default function AyarlarPage() {
               router.replace("/bugun");
             }}
           >
-            Demo verisini yükle
+            {t("ayarlar.loadDemo")}
           </Button>
           <Button size="sm" variant="soft" onClick={download}>
-            JSON olarak dışa aktar
+            {t("ayarlar.export")}
           </Button>
           <Link href="/akis" className={buttonClass({ size: "sm", variant: "soft" })}>
-            Ev hareketleri
+            {t("ayarlar.activity")}
           </Link>
         </div>
-        <p className={s.note}>{"Demo, Ali ve Zeynep'in evini yükler ve seni Ali olarak açar (ali@demo.ev / zeynep@demo.ev · şifre demo1234)."}</p>
+        <p className={s.note}>{t("ayarlar.demoNote")}</p>
         {confirm === "reset" ? (
           <div className={s.confirm} role="alert">
-            <p>Bu tarayıcıdaki bütün hesaplar, evler, planlar ve listeler silinir. Geri alınamaz.</p>
+            <p>{t("ayarlar.resetText")}</p>
             <div className={s.buttons}>
               <Button
                 size="sm"
@@ -329,16 +320,16 @@ export default function AyarlarPage() {
                   router.replace("/giris");
                 }}
               >
-                Evet, hepsini sil
+                {t("ayarlar.resetYes")}
               </Button>
               <Button size="sm" variant="secondary" onClick={() => setConfirm(null)}>
-                Vazgeç
+                {t("form.bulk.cancel")}
               </Button>
             </div>
           </div>
         ) : (
           <Button variant="link" size="sm" className={s.danger} onClick={() => setConfirm("reset")} style={{ alignSelf: "flex-start" }}>
-            Tüm verileri sıfırla
+            {t("ayarlar.reset")}
           </Button>
         )}
       </section>

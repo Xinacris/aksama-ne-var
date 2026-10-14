@@ -10,6 +10,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { fonts } from "@anv/core/design/tokens";
 import { bootMobile, type MobileData } from "@/boot";
 import { useApp } from "@/store";
+import { LocaleProvider } from "@/i18n";
 import { ThemeProvider, useTheme } from "@/theme";
 
 void SplashScreen.preventAutoHideAsync().catch(() => {});
@@ -35,7 +36,9 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <ThemeProvider store={data.store}>
-          <Navigation />
+          <LocaleProvider store={data.store}>
+            <Navigation />
+          </LocaleProvider>
         </ThemeProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

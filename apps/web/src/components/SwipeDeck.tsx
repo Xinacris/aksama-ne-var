@@ -1,5 +1,6 @@
 "use client";
 
+import { t as tr } from "@anv/core/i18n";
 import { useEffect, useRef, useState } from "react";
 import type { Recipe } from "@anv/core/data/models";
 import { IconClock, IconClose, IconHeart, IconHistory } from "./icons";
@@ -106,7 +107,7 @@ export function SwipeDeck({
           key={card.recipe.id}
           className={[s.card, !drag.active && s.animate, !leaving && !drag.active && drag.x === 0 && s.enter].filter(Boolean).join(" ")}
           style={{ transform, opacity: leaving ? 0 : 1 }}
-          aria-roledescription="kart"
+          aria-roledescription={tr("swipe.card")}
           aria-label={card.recipe.name}
           aria-describedby="kaydir-ipucu"
           onPointerDown={onPointerDown}
@@ -145,27 +146,27 @@ export function SwipeDeck({
           {intent === "like" && (
             <span className={`${s.stamp} ${s.stampYes}`} style={{ opacity: stampOpacity }} aria-hidden="true">
               <IconHeart size={14} />
-              Olur
+              {tr("swipe.like")}
             </span>
           )}
           {intent === "pass" && (
             <span className={`${s.stamp} ${s.stampNo}`} style={{ opacity: stampOpacity }} aria-hidden="true">
-              Bu sefer değil
+              {tr("swipe.pass")}
             </span>
           )}
         </article>
       </div>
 
       <div className={s.buttons}>
-        <button type="button" className={s.pass} aria-label="Bu sefer değil" onClick={() => decide("pass")} disabled={disabled}>
+        <button type="button" className={s.pass} aria-label={tr("swipe.pass")} onClick={() => decide("pass")} disabled={disabled}>
           <IconClose size={26} />
         </button>
-        <button type="button" className={s.like} aria-label="Olur" onClick={() => decide("like")} disabled={disabled}>
+        <button type="button" className={s.like} aria-label={tr("swipe.like")} onClick={() => decide("like")} disabled={disabled}>
           <IconHeart size={32} />
         </button>
       </div>
       <p id="kaydir-ipucu" className={s.hint}>
-        Sola kaydır: bu sefer değil · Sağa kaydır: olur
+        {tr("swipe.hint")}
       </p>
     </>
   );

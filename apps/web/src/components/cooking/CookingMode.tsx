@@ -1,5 +1,6 @@
 "use client";
 
+import { t as tr } from "@anv/core/i18n";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { CookingSession, Recipe } from "@anv/core/data/models";
@@ -50,7 +51,7 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
   const session = sessions.find((c) => c.id === sessionId) ?? null;
   const exitHref = target.kind === "menu" ? (target.date === today ? "/bugun" : "/hafta") : `/tarif/${target.recipeId}`;
   const title =
-    target.kind === "menu" ? menuTitle(menuFor(planItems, target.date), byId) : (byId.get(target.recipeId)?.name ?? "Tarif");
+    target.kind === "menu" ? menuTitle(menuFor(planItems, target.date), byId) : (byId.get(target.recipeId)?.name ?? tr("cook.recipe"));
 
   if (!dishes.length) {
     return (
@@ -58,11 +59,11 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
         <TopBar exitHref={exitHref} title={title} />
         <div className={s.empty}>
           <EmptyState
-            title="Pişirilecek adım yok"
-            text={target.kind === "menu" ? "Bu akşamın menüsünde adımları olan bir tarif bulunmuyor." : "Bu tarifin henüz adımları yok. Ekledikten sonra pişirme modu açılır."}
+            title={tr("cook.noSteps")}
+            text={target.kind === "menu" ? tr("cook.noStepsMenu") : tr("cook.noStepsRecipe")}
             actions={
               <ButtonLink href={exitHref} size="sm">
-                Geri dön
+                {tr("cook.back")}
               </ButtonLink>
             }
           />
@@ -76,7 +77,7 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
       <main className={s.page}>
         <TopBar exitHref={exitHref} title={title} />
         <p className={s.loading} role="status">
-          Mutfak hazırlanıyor…
+          {tr("cook.preparing")}
         </p>
       </main>
     );
@@ -87,7 +88,7 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
 
   return (
     <main className={s.page}>
-      <TopBar exitHref={exitHref} title={title} progress={session.phase === "steps" ? `adım ${progress.step}/${progress.total}` : undefined} />
+      <TopBar exitHref={exitHref} title={title} progress={session.phase === "steps" ? tr("cook.progress", { step: progress.step, total: progress.total }) : undefined} />
       {session.phase === "prep" && <PrepScreen session={session} recipes={cooked} target={target} />}
       {session.phase === "steps" && <StepsScreen session={session} recipes={cooked} extras={extras} />}
       {session.phase === "done" &&
@@ -95,7 +96,7 @@ export function CookingMode({ id, extras = {} }: { id: string; extras?: CookingE
           extras.finish(session, cooked, target)
         ) : (
           <div className={s.empty}>
-            <EmptyState title="Afiyet olsun" text="Pişirme bitti." actions={<ButtonLink href={exitHref} size="sm">Geri dön</ButtonLink>} />
+            <EmptyState title={tr("cook.enjoy")} text={tr("cook.finished")} actions={<ButtonLink href={exitHref} size="sm">{tr("cook.back")}</ButtonLink>} />
           </div>
         ))}
     </main>
@@ -109,9 +110,9 @@ function missingNow(st: AppState, recipes: Recipe[], target: CookTarget) {
 function TopBar({ exitHref, title, progress }: { exitHref: string; title: string; progress?: string }) {
   return (
     <header className={s.top}>
-      <Link href={exitHref} className={s.exit} aria-label="Pişirme modundan çık">
+      <Link href={exitHref} className={s.exit} aria-label={tr("cook.exit")}>
         <IconClose size={20} />
-        <span>Çık</span>
+        <span>{tr("cook.exitShort")}</span>
       </Link>
       <span className={s.topTitle}>{title}</span>
       <span className={s.progress}>{progress ?? ""}</span>
@@ -138,17 +139,17 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
     <div className={s.body}>
       <div className={s.prepHead}>
         <h1 className={s.screenTitle} ref={headRef} tabIndex={-1}>
-          Başlamadan önce
+          {tr("cook.before")}
         </h1>
         <span className={s.muted} role="status">
-          {missing.count ? `${missing.count} eksik` : "Hepsi tamam"}
+          {missing.count ? tr("cook.missingCount", { count: missing.count }) : tr("cook.allSet")}
         </span>
       </div>
 
       {missing.prep.length > 0 && (
         <section className={s.reminders} aria-labelledby="pisir-hatirlat">
           <h2 id="pisir-hatirlat" className={s.smallTitle}>
-            Önceden yapılacaklar
+            {tr("cook.prepAhead")}
           </h2>
           <ul className={s.reminderList}>
             {missing.prep.map((t) => (
@@ -158,7 +159,7 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
                   <span className={s.muted}> · {offsetLabel(t.offset)}</span>
                 </span>
                 <button type="button" className={s.linkBtn} onClick={() => completeTask(t.id)}>
-                  {t.freezer ? "Çıkardım" : "Yaptım"}
+                  {tr(t.freezer ? "reminder.tookOut" : "reminder.done")}
                 </button>
               </li>
             ))}
@@ -169,9 +170,9 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
       {missing.ingredients.length > 0 && (
         <section aria-labelledby="pisir-eksik">
           <h2 id="pisir-eksik" className={s.smallTitle}>
-            Eksik malzemeler
+            {tr("cook.missingIngredients")}
           </h2>
-          <ul className={s.missingList} aria-label="Eksik malzemeler">
+          <ul className={s.missingList} aria-label={tr("cook.missingIngredients")}>
             {missing.ingredients.map((r) => (
               <li key={r.key} className={s.missingRow}>
                 <span className={s.checkText}>
@@ -179,22 +180,22 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
                     {r.amount && <strong>{r.amount} </strong>}
                     {r.name}
                   </span>
-                  <span className={s.muted}>{[recipes.length > 1 ? r.forDishes.join(", ") : null, r.onList ? "listede" : null].filter(Boolean).join(" · ")}</span>
+                  <span className={s.muted}>{[recipes.length > 1 ? r.forDishes.join(", ") : null, r.onList ? tr("cook.onList") : null].filter(Boolean).join(" · ")}</span>
                 </span>
                 <span className={s.missingActions}>
-                  <Button variant="soft" size="sm" aria-label={`${r.name} evde var`} onClick={() => markHave(r.name)}>
-                    Evde var
+                  <Button variant="soft" size="sm" aria-label={tr("cook.haveIt", { name: r.name })} onClick={() => markHave(r.name)}>
+                    {tr("cook.have")}
                   </Button>
                   {!r.onList && (
                     <Button
                       variant="secondary"
                       size="sm"
-                      aria-label={`${r.name} listeye ekle`}
+                      aria-label={tr("cook.addNamed", { name: r.name })}
                       onClick={() =>
                         addManualItem({ name: r.name, quantity: r.ingredient.quantity, unit: r.ingredient.unit, side: r.ingredient.side, aisle: r.ingredient.aisle, forRecipeId: r.recipeId })
                       }
                     >
-                      Listeye ekle
+                      {tr("cook.addToList")}
                     </Button>
                   )}
                 </span>
@@ -204,11 +205,11 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
         </section>
       )}
 
-      {missing.count === 0 && <p className={s.muted}>Eksik kalmadı. Afiyet şimdiden.</p>}
+      {missing.count === 0 && <p className={s.muted}>{tr("cook.nothingMissing")}</p>}
 
       <div className={s.nav}>
         <Button size="xl" block onClick={() => updateCooking(session.id, { phase: "steps" })}>
-          {missing.count ? "Yine de başla" : "Başla"}
+          {missing.count ? tr("cook.startAnyway") : tr("cook.start")}
         </Button>
       </div>
     </div>
@@ -222,9 +223,9 @@ function IngredientsSheet({ recipes }: { recipes: Recipe[] }) {
   return (
     <>
       <button type="button" className={s.ingBtn} onClick={() => setOpen(true)} aria-haspopup="dialog">
-        Malzemeler
+        {tr("cook.ingredients")}
       </button>
-      <Dialog open={open} onClose={() => setOpen(false)} readOnly eyebrow={recipes.length > 1 ? "Menünün tamamı" : recipeLabel(recipes[0])} title="Malzemeler">
+      <Dialog open={open} onClose={() => setOpen(false)} readOnly eyebrow={recipes.length > 1 ? tr("cook.wholeMenu") : recipeLabel(recipes[0])} title={tr("cook.ingredients")}>
         <ul className={s.sheetList}>
           {rows.map((r) => (
             <li key={r.key} className={s.sheetRow}>
@@ -291,7 +292,7 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
   return (
     <div className={s.body}>
       {recipes.length > 1 && (
-        <div className={s.tabs} role="tablist" aria-label="Yemekler">
+        <div className={s.tabs} role="tablist" aria-label={tr("cook.dishes")}>
           {recipes.map((r, i) => (
             <button
               key={r.id}
@@ -344,7 +345,8 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
         </div>
         <div key={`${recipe.id}-${step}`} className={[s.step, dir === "next" && s.fromRight, dir === "prev" && s.fromLeft].filter(Boolean).join(" ")}>
           <h1 className={s.stepEyebrow} ref={headRef} tabIndex={-1}>
-            {recipes.length > 1 ? `${recipeLabel(recipe)} · ` : ""}Adım {step + 1} / {recipe.steps.length}
+            {recipes.length > 1 ? `${recipeLabel(recipe)} · ` : ""}
+            {tr("cook.step", { n: step + 1, total: recipe.steps.length })}
           </h1>
           <p className={s.stepText}>{recipe.steps[step]}</p>
           {extras.stepActions?.({ session, recipe, step })}
@@ -356,11 +358,11 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
       <div className={s.nav}>
         <Button variant="secondary" size="xl" className={s.navBtn} onClick={() => go(-1)} disabled={step === 0}>
           <IconChevronLeft size={22} />
-          Önceki
+          {tr("cook.prev")}
         </Button>
         {!last ? (
           <Button size="xl" className={s.navBtn} onClick={() => go(1)}>
-            Sonraki
+            {tr("cook.next")}
             <IconChevronRight size={22} />
           </Button>
         ) : nextDish >= 0 ? (
@@ -370,7 +372,7 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
           </Button>
         ) : (
           <Button size="xl" className={s.navBtn} onClick={() => finishCooking(session.id)}>
-            Bitti
+            {tr("cook.done")}
             <IconCheck size={22} strokeWidth={2.4} />
           </Button>
         )}

@@ -1,3 +1,4 @@
+import { t as tx } from "../i18n";
 import { createStore } from "zustand/vanilla";
 import type { DataContext } from "../data/context";
 import type {
@@ -144,7 +145,7 @@ export interface AppState extends AppData {
   signUp(input: auth.SignUpInput): Promise<User>;
   logIn(input: { email: string; password: string }): Promise<User>;
   logOut(): void;
-  updateProfile(patch: { name?: string; avatarInitial?: string }): Promise<void>;
+  updateProfile(patch: { name?: string; avatarInitial?: string; locale?: "tr" | "en" }): Promise<void>;
 
   lookupInvite(code: string): Promise<InviteInfo>;
   createHousehold(): Promise<Household>;
@@ -255,7 +256,7 @@ export const appStore = createStore<AppState>()((set, get) => {
 
   function requireCtx() {
     const { me, household } = get();
-    if (!me || !household) throw new AppError("no-household", "Önce bir eve katılman gerekiyor.");
+    if (!me || !household) throw new AppError("no-household", tx("errors.noHousehold"));
     return { me, household };
   }
 
@@ -551,12 +552,12 @@ export const appStore = createStore<AppState>()((set, get) => {
     },
     async createHousehold() {
       const me = get().me;
-      if (!me) throw new AppError("anon", "Önce giriş yapalım.");
+      if (!me) throw new AppError("anon", tx("errors.signInFirst"));
       return run(() => households.createHousehold(ctx().repos, me), { rethrow: true });
     },
     async joinHousehold(code) {
       const me = get().me;
-      if (!me) throw new AppError("anon", "Önce giriş yapalım.");
+      if (!me) throw new AppError("anon", tx("errors.signInFirst"));
       const h = await run(() => households.joinHousehold(ctx().repos, me, code), { rethrow: true });
       await syncPrepTasks().catch(() => {});
       await get().refresh();
@@ -737,7 +738,7 @@ export const appStore = createStore<AppState>()((set, get) => {
     async addManualItem(input) {
       const { me, household } = requireCtx();
       const name = normalizeIngredientName(input.name);
-      if (!name) throw new AppError("invalid", "Ürünün adını yazar mısın?");
+      if (!name) throw new AppError("invalid", tx("errors.itemName"));
       const entry = catalogEntry(name);
       await run(async () => {
         await ctx().repos.shopping.addItem({

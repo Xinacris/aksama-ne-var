@@ -1,5 +1,6 @@
 "use client";
 
+import { labelRecord, t, tagLabel } from "@anv/core/i18n";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { IconHeart, IconHeartOutline, IconLink, IconPlus, IconSearch } from "@/components/icons";
@@ -16,14 +17,7 @@ import { searchKey } from "@anv/core/lib/text";
 import { useApp } from "@/store/app";
 import s from "./page.module.css";
 
-const COURSE_SHORT: Record<Course, string> = {
-  corba: "Çorba",
-  ana: "Ana yemek",
-  yaninda: "Yanında",
-  salata: "Salata / meze",
-  kahvalti: "Kahvaltı",
-  tatli: "Tatlı",
-};
+const COURSE_SHORT = labelRecord<Course>("courseShort", COURSES);
 
 export default function TariflerPage() {
   const recipes = useApp((x) => x.recipes);
@@ -67,37 +61,37 @@ export default function TariflerPage() {
     <main className={s.page}>
       <div className={s.head}>
         <div className={s.titles}>
-          <span className={s.eyebrow}>{recipes.length} tarif · evin defteri</span>
-          <h1 className={s.title}>Tarifler</h1>
+          <span className={s.eyebrow}>{t("tarifler.eyebrow", { count: recipes.length })}</span>
+          <h1 className={s.title}>{t("tarifler.title")}</h1>
         </div>
         <div className={s.headActions}>
           <ButtonLink href="/tarifler/ice-aktar" size="sm" pill variant="secondary">
             <IconLink size={16} />
-            Linkten ekle
+            {t("tarifler.fromLink")}
           </ButtonLink>
           <Button size="sm" pill onClick={() => setAdding(true)} aria-haspopup="dialog">
             <IconPlus size={16} />
-            Yeni tarif
+            {t("tarifler.new")}
           </Button>
         </div>
       </div>
 
       <TextField
-        label="Tarif ya da malzeme ara"
+        label={t("tarifler.search")}
         hideLabel
         type="search"
-        placeholder="ör. karnıyarık, patlıcan…"
+        placeholder={t("tarifler.searchPlaceholder")}
         icon={<IconSearch size={20} />}
         value={q}
         onChange={(e) => setQ(e.target.value)}
       />
 
-      <div className={s.filters} role="group" aria-label="Öğüne göre süz">
+      <div className={s.filters} role="group" aria-label={t("tarifler.byCourse")}>
         <DishChip selected={course === "all"} onClick={() => setCourse("all")}>
-          Tümü
+          {t("tarifler.all")}
         </DishChip>
         <DishChip selected={course === "fav"} onClick={() => setCourse("fav")}>
-          Sık yaptıklarımız
+          {t("tarifler.favorites")}
         </DishChip>
         {COURSES.map((c) => (
           <DishChip key={c} selected={course === c} onClick={() => setCourse(c)}>
@@ -106,16 +100,16 @@ export default function TariflerPage() {
         ))}
       </div>
 
-      <div className={s.tagRow} role="group" aria-label="Etikete göre süz">
-        {tags.map((t) => (
-          <button key={t} type="button" className={s.tagBtn} aria-pressed={tag === t} onClick={() => setTag(tag === t ? null : t)}>
-            {t}
+      <div className={s.tagRow} role="group" aria-label={t("tarifler.byTag")}>
+        {tags.map((tg) => (
+          <button key={tg} type="button" className={s.tagBtn} aria-pressed={tag === tg} onClick={() => setTag(tag === tg ? null : tg)}>
+            {tagLabel(tg)}
           </button>
         ))}
       </div>
 
       <span className={s.count} role="status">
-        {list.length} tarif
+        {t("tarifler.count", { count: list.length })}
       </span>
 
       {list.length ? (
@@ -128,16 +122,16 @@ export default function TariflerPage() {
                   {r.name}
                 </Link>
                 <span className={s.meta}>
-                  {COURSE_LABEL[r.course]} · {r.stub ? "ayrıntı bekliyor" : r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)} ·{" "}
+                  {COURSE_LABEL[r.course]} · {r.stub ? t("tarifler.pendingDetails") : r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)} ·{" "}
                   {rotationShort(daysSinceCooked(r.id, last, today))}
                 </span>
-                {r.householdId && <span className={s.badge}>Evin tarifi</span>}
+                {r.householdId && <span className={s.badge}>{t("tarifler.ours")}</span>}
               </div>
               <button
                 type="button"
                 className={s.fav}
                 aria-pressed={fav.has(r.id)}
-                aria-label={fav.has(r.id) ? `${r.name}: sık yaptıklarımızdan çıkar` : `${r.name}: sık yaptıklarımıza ekle`}
+                aria-label={t(fav.has(r.id) ? "tarifler.unfav" : "tarifler.fav", { name: r.name })}
                 onClick={() => toggleFavorite(r.id)}
               >
                 {fav.has(r.id) ? <IconHeart size={20} /> : <IconHeartOutline size={20} />}
@@ -147,17 +141,17 @@ export default function TariflerPage() {
         </ul>
       ) : (
         <EmptyState
-          title="Bu aramayla tarif çıkmadı"
-          text={q.trim() ? "Farklı bir kelime deneyebilir ya da bu adla hemen ekleyebilirsin; ayrıntıları sonra yazarsın." : "Farklı bir süzgeç deneyebilir ya da kendi tarifini ekleyebilirsin."}
+          title={t("tarifler.noResults")}
+          text={t(q.trim() ? "tarifler.noResultsName" : "tarifler.noResultsFilter")}
           actions={
             quickAddIntent(q).kind === "empty" ? (
               <Button size="sm" onClick={() => setAdding(true)} aria-haspopup="dialog">
-                Tarif ekle
+                {t("tarifler.add")}
               </Button>
             ) : (
               // One tap: a name is saved, a link goes to import.
               <Button size="sm" disabled={quick.busy} onClick={() => void quick.go(quickAddIntent(q))}>
-                {quickAddIntent(q).kind === "name" ? `“${q.trim()}” ekle` : "Linkten içe aktar"}
+                {quickAddIntent(q).kind === "name" ? t("tarifler.addNamed", { name: q.trim() }) : t("quickAdd.importLink")}
               </Button>
             )
           }

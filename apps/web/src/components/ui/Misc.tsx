@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import type { ReactNode } from "react";
 import { IconClose, IconEmptyPlate, IconOffline, IconSync } from "../icons";
 import { Avatar, type AvatarPerson } from "./Avatar";
@@ -8,25 +9,27 @@ import s from "./Misc.module.css";
 export type SyncState = "live" | "syncing" | "offline";
 
 /** Pill variant from Componentler (Canlı / Eşitleniyor / Çevrimdışı · n değişiklik sırada). */
-export function SyncIndicator({ state, pending = 0, liveLabel = "Canlı" }: { state: SyncState; pending?: number; liveLabel?: string }) {
+export function SyncIndicator({ state, pending = 0, liveLabel }: { state: SyncState; pending?: number; liveLabel?: string }) {
+  const { t } = useTranslation();
   if (state === "syncing")
     return (
       <span role="status" className={`${s.sync} ${s.syncSyncing}`}>
         <IconSync size={14} className={s.spin} />
-        Eşitleniyor
+        {t("sync.syncing")}
       </span>
     );
   if (state === "offline")
     return (
       <span role="status" className={`${s.sync} ${s.syncOffline}`}>
         <IconOffline size={14} />
-        Çevrimdışı{pending ? ` · ${pending} değişiklik sırada` : ""}
+        {t("sync.offline")}
+        {pending ? ` · ${t("sync.pending", { count: pending })}` : ""}
       </span>
     );
   return (
     <span role="status" className={`${s.sync} ${s.syncLive}`}>
       <span className={s.dot} />
-      {liveLabel}
+      {liveLabel ?? t("sync.live")}
     </span>
   );
 }
@@ -34,7 +37,8 @@ export function SyncIndicator({ state, pending = 0, liveLabel = "Canlı" }: { st
 /** Compact header variant ("● Senkron", "● Senkron · Zeynep de burada"). */
 export function SyncInline({ state, suffix }: { state: SyncState; suffix?: string }) {
   const cls = state === "syncing" ? s.syncingText : state === "offline" ? s.offlineText : "";
-  const label = state === "syncing" ? "Eşitleniyor" : state === "offline" ? "Çevrimdışı" : "Senkron";
+  const { t } = useTranslation();
+  const label = t(state === "syncing" ? "sync.syncing" : state === "offline" ? "sync.offline" : "sync.inSync");
   return (
     <span role="status" className={`${s.syncInline} ${cls}`}>
       {state === "syncing" ? <IconSync size={12} className={s.spin} /> : <span className={s.dot} />}
@@ -110,14 +114,15 @@ export function PhotoPlaceholder({
   style?: React.CSSProperties;
   pill?: boolean;
 }) {
+  const { t } = useTranslation();
   return (
     <div
       className={["ph", s.photo, className].filter(Boolean).join(" ")}
       style={{ height, borderRadius: radius, ...style }}
       role={dish ? "img" : undefined}
-      aria-label={dish ? `Fotoğraf yeri: ${dish}` : undefined}
+      aria-label={dish ? t("photo.placeholder", { dish }) : undefined}
     >
-      {pill && dish && <span className={s.photoPill}>Fotoğraf · {dish}</span>}
+      {pill && dish && <span className={s.photoPill}>{t("photo.pill", { dish })}</span>}
     </div>
   );
 }
@@ -127,10 +132,11 @@ export function Eyebrow({ children, muted, as: As = "span", className }: { child
 }
 
 export function Notice({ kind, text, onClose }: { kind: "error" | "info"; text: string; onClose: () => void }) {
+  const { t } = useTranslation();
   return (
     <div role={kind === "error" ? "alert" : "status"} className={[s.notice, kind === "error" && s.noticeError].filter(Boolean).join(" ")}>
       <p>{text}</p>
-      <button type="button" className={s.noticeClose} onClick={onClose} aria-label="Kapat">
+      <button type="button" className={s.noticeClose} onClick={onClose} aria-label={t("common.close")}>
         <IconClose size={18} />
       </button>
     </div>

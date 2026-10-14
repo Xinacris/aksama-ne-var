@@ -1,3 +1,4 @@
+import { t } from "@anv/core/i18n";
 import { PLATFORM_LABEL, type SourcePlatform } from "@anv/core/data/models";
 import { IconImport } from "./icons";
 import s from "./ImportSourceCard.module.css";
@@ -23,7 +24,7 @@ function hostOf(url: string): string {
 /** Link card on the import screen: platform, creator, link and the platform's thumbnail when it gives one. */
 export function ImportSourceCard({ source }: { source: SourceInfo }) {
   return (
-    <section className={s.card} aria-label="Kaynak">
+    <section className={s.card} aria-label={t("import.source")}>
       {source.thumbnailUrl ? (
         // The creator's own thumbnail from the platform's oEmbed; not a stock photo.
         // eslint-disable-next-line @next/next/no-img-element
@@ -39,8 +40,8 @@ export function ImportSourceCard({ source }: { source: SourceInfo }) {
         {source.title && <span className={s.title}>{source.title}</span>}
       </span>
       <a href={source.url} target="_blank" rel="noopener noreferrer" className={s.link}>
-        Aç
-        <span className="visually-hidden"> (kaynağı yeni sekmede aç)</span>
+        {t("import.open")}
+        <span className="visually-hidden">{t("import.openNewTab")}</span>
       </a>
     </section>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, t } from "@anv/core/i18n";
 import { SLOTS, SLOT_LABEL, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { dayName } from "@anv/core/domain/dates";
 import { recipeLabel } from "@anv/core/domain/shopping";
@@ -42,7 +43,7 @@ export function DayList({
       </div>
       <section className={s.panel} aria-labelledby="m-eslesmeler">
         <h2 id="m-eslesmeler" className={s.panelTitle}>
-          Eşleşmelerden
+          {t("week.fromMatches")}
         </h2>
         {matches.length ? (
           <ul className={matchListStyles.list}>
@@ -59,7 +60,7 @@ export function DayList({
                     </span>
                   </>
                 ) : (
-                  <button type="button" className={s.matchBtn} onClick={() => onPlace(m.recipe, m.match)} aria-label={`${m.recipe.name}, ${m.note}. Bir akşama koy`}>
+                  <button type="button" className={s.matchBtn} onClick={() => onPlace(m.recipe, m.match)} aria-label={t("week.putOnEvening", { name: m.recipe.name, note: m.note })}>
                     <span className={matchListStyles.icon}>
                       <IconGrip size={16} strokeWidth={3} />
                     </span>
@@ -73,13 +74,13 @@ export function DayList({
             ))}
           </ul>
         ) : (
-          <p className={s.hint}>Henüz eşleşme yok. Birlikte kaydırınca burada birikir.</p>
+          <p className={s.hint}>{t("match.empty")}</p>
         )}
       </section>
       {fridge.length > 0 && (
         <section className={s.panel} aria-labelledby="m-dolap">
           <h2 id="m-dolap" className={s.panelTitle}>
-            Dolapta
+            {t("week.inFridge")}
           </h2>
           <div className={s.chips}>
             {fridge.map((f) => (
@@ -88,30 +89,30 @@ export function DayList({
                 type="button"
                 className={s.chipBtn}
                 onClick={() => onPlaceLeftover(f)}
-                aria-label={`Dolapta: ${f.recipe.name}. Bir akşama koy`}
+                aria-label={t("week.fridgePut", { name: f.recipe.name })}
               >
                 <DishTag variant="leftover">
                   {recipeLabel(f.recipe)}
-                  {f.outcome.kind === "fridge" ? ` · ${keepUntilLabel(f.outcome.useBy, today).toLocaleLowerCase("tr")}` : ""}
+                  {f.outcome.kind === "fridge" ? ` · ${keepUntilLabel(f.outcome.useBy, today).toLocaleLowerCase(intlTag())}` : ""}
                 </DishTag>
               </button>
             ))}
           </div>
-          <p className={s.hint}>Dokun, hangi akşam yeneceğini seç; malzemeleri listeye eklenmez.</p>
+          <p className={s.hint}>{t("week.fridgeHint")}</p>
         </section>
       )}
       <section className={s.panel} aria-labelledby="m-sik">
         <h2 id="m-sik" className={s.panelTitle}>
-          Sık yaptıklarınız
+          {t("week.frequent")}
         </h2>
         <div className={s.chips}>
           {frequent.map((r) => (
-            <button key={r.id} type="button" className={s.chipBtn} onClick={() => onPlace(r)} aria-label={`${r.name}. Bir akşama koy`}>
+            <button key={r.id} type="button" className={s.chipBtn} onClick={() => onPlace(r)} aria-label={t("week.putRecipe", { name: r.name })}>
               <DishTag variant="draggable">{recipeLabel(r)}</DishTag>
             </button>
           ))}
         </div>
-        <p className={s.hint}>Dokun, hangi akşama koyacağını seç.</p>
+        <p className={s.hint}>{t("week.tapToPlace")}</p>
       </section>
     </>
   );
@@ -131,21 +132,21 @@ function DayCard({ day, handlers }: { day: DayModel; handlers: BoardHandlers }) 
             {full}
           </h2>
           <span className={s.date}>{day.dayMonth}</span>
-          {day.isToday && <span className={s.pill}>Bugün</span>}
+          {day.isToday && <span className={s.pill}>{t("week.today")}</span>}
         </div>
-        <button type="button" className={s.more} onClick={() => handlers.onDay(day)} aria-label={`${full} günü seçenekleri`}>
+        <button type="button" className={s.more} onClick={() => handlers.onDay(day)} aria-label={t("week.dayOptions", { day: full })}>
           <IconMore size={18} />
         </button>
       </div>
-      {day.lunch && <span className={s.lunch}>Öğlen · {day.lunch.name.toLocaleLowerCase("tr")}</span>}
+      {day.lunch && <span className={s.lunch}>{t("week.lunch", { dish: day.lunch.name.toLocaleLowerCase(intlTag()) })}</span>}
       {day.ateOut ? (
         <div className={s.ateBody}>
           <span className={s.ateIcon}>
             <IconCutlery size={20} />
           </span>
           <span className={s.ateTexts}>
-            <strong>Dışarıda yendi</strong>
-            {day.returnedNames.length ? `Planlanan ${day.returnedNames.join(", ").toLocaleLowerCase("tr")} eşleşmelere geri döndü.` : null}
+            <strong>{t("week.ateOut")}</strong>
+            {day.returnedNames.length ? t("week.returned", { dishes: day.returnedNames.join(", ").toLocaleLowerCase(intlTag()) }) : null}
           </span>
         </div>
       ) : (
@@ -162,19 +163,19 @@ function DayCard({ day, handlers }: { day: DayModel; handlers: BoardHandlers }) 
                     onClick={() => handlers.onTile(cell.item.id, day.date, slot, cell.recipe)}
                   >
                     <span className={[!cell.recipe && s.missing, ((slot === "ana" && day.leftoverOut) || cell.item.source === "leftover") && s.leftoverTag].filter(Boolean).join(" ")}>
-                      {cell.item.source === "leftover" ? "Dolaptan · " : ""}
-                      {cell.recipe?.name ?? "Silinmiş tarif"}
+                      {cell.item.source === "leftover" ? t("week.fromFridge") : ""}
+                      {cell.recipe?.name ?? t("plan.deletedRecipe")}
                     </span>
                     {slot === "ana" && cell.recipe?.freezerItem && (
-                      <span className={s.snow} role="img" aria-label={`Buzluktan çıkacak: ${cell.recipe.freezerItem.toLocaleLowerCase("tr")}`}>
+                      <span className={s.snow} role="img" aria-label={t("week.freezerItem", { item: cell.recipe.freezerItem.toLocaleLowerCase(intlTag()) })}>
                         <IconSnowflakeSmall size={14} />
                       </span>
                     )}
                   </button>
                 ) : (
-                  <button type="button" className={s.add} onClick={() => handlers.onAdd(day.date, slot)} aria-label={`${full} · ${SLOT_LABEL[slot]} ekle`}>
+                  <button type="button" className={s.add} onClick={() => handlers.onAdd(day.date, slot)} aria-label={t("week.addTo", { day: full, slot: SLOT_LABEL[slot] })}>
                     <IconPlus size={14} />
-                    Ekle
+                    {t("week.add")}
                   </button>
                 )}
               </li>
@@ -188,37 +189,40 @@ function DayCard({ day, handlers }: { day: DayModel; handlers: BoardHandlers }) 
 }
 
 function Foot({ day, people, byId }: { day: DayModel; people: ReturnType<typeof usePeople>["people"]; byId: ReturnType<typeof usePeople>["byId"] }) {
-  const leftover = day.leftoverOut ? " · ertesi güne artar" : "";
+  const leftover = day.leftoverOut ? t("week.lastsNextDay") : "";
   switch (day.note.kind) {
     case "cooked":
-      return <div className={s.foot}>Pişti{leftover}</div>;
+      return <div className={s.foot}>{t("week.cooked")}{leftover}</div>;
     case "approved":
       return (
         <div className={`${s.foot} ${s.footOk}`}>
           <AvatarStack people={people} size={18} overlap={5} borderColor="transparent" />
-          Onaylandı{leftover}
+          {t("week.approved")}
+          {leftover}
         </div>
       );
     case "match":
       return (
         <div className={`${s.foot} ${s.footMatch}`}>
           <IconHeart size={14} />
-          Eşleşmeden{leftover}
+          {t("week.fromMatch")}
+          {leftover}
         </div>
       );
     case "light":
-      return <div className={s.foot}>Hafif akşam{leftover}</div>;
+      return <div className={s.foot}>{t("week.light")}{leftover}</div>;
     case "addedBy": {
       const p = byId.get(day.note.userId);
       return p ? (
         <div className={s.foot}>
           <Avatar person={p} size={18} />
-          {p.name} ekledi{leftover}
+          {t("week.addedBy", { name: p.name })}
+          {leftover}
         </div>
       ) : null;
     }
     case "empty":
-      return <div className={s.foot}>Boş bırakmak da olur</div>;
+      return <div className={s.foot}>{t("week.emptyOk")}</div>;
     default:
       return null;
   }

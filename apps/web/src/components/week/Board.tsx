@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, t as tr } from "@anv/core/i18n";
 import {
   DndContext,
   DragOverlay,
@@ -77,20 +78,20 @@ const coordinateGetter: KeyboardCoordinateGetter = (event, { context, currentCoo
 
 function dropLabel(data: DropData | undefined): string {
   if (!data) return "";
-  if (data.kind === "day") return `${dayName(data.date)} günü`;
+  if (data.kind === "day") return tr("board.dayTarget", { day: dayName(data.date) });
   return `${dayName(data.date)} · ${SLOT_LABEL[data.slot]}`;
 }
 function dragName(data: DragData | undefined): string {
-  return data ? data.recipe.name : "Yemek";
+  return data ? data.recipe.name : tr("board.dish");
 }
 
 const announcements: Announcements = {
-  onDragStart: ({ active }) => `${dragName(active.data.current as DragData)} tutuldu. Ok tuşlarıyla bir slota götür, boşlukla bırak, Esc ile vazgeç.`,
+  onDragStart: ({ active }) => tr("board.dragStart", { name: dragName(active.data.current as DragData) }),
   onDragOver: ({ active, over }) =>
-    over ? `${dragName(active.data.current as DragData)}: ${dropLabel(over.data.current as DropData)} üzerinde.` : "Bırakılacak bir yer üzerinde değil.",
+    over ? tr("board.over", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData) }) : tr("board.notOver"),
   onDragEnd: ({ active, over }) =>
-    over ? `${dragName(active.data.current as DragData)} ${dropLabel(over.data.current as DropData)} için bırakıldı.` : "Bırakıldı; plan değişmedi.",
-  onDragCancel: () => "Taşıma iptal edildi.",
+    over ? tr("board.dropped", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData) }) : tr("board.droppedNothing"),
+  onDragCancel: () => tr("board.cancelled"),
 };
 
 export function Board({
@@ -132,14 +133,14 @@ export function Board({
     const slot = o.kind === "slot" ? o.slot : (courseToSlot(a.recipe.course) ?? (a.kind === "leftover" ? "ana" : null));
     if (a.kind === "leftover") {
       if (o.date > a.useBy || o.date < today) {
-        setNotice({ kind: "info", text: `${a.recipe.name} ${keepUntilLabel(a.useBy, today).toLocaleLowerCase("tr")} yenebilir; o günlerden birine koyabilirsin.` });
+        setNotice({ kind: "info", text: tr("board.leftoverWindow", { name: a.recipe.name, until: keepUntilLabel(a.useBy, today).toLocaleLowerCase(intlTag()) }) });
         return;
       }
       await placeLeftover({ fromDate: a.fromDate, recipeId: a.recipe.id, toDate: o.date, slot: slot ?? "ana" });
       return;
     }
     if (!slot) {
-      setNotice({ kind: "info", text: "Tatlılar akşam menüsünün bir parçası olarak eklenmiyor." });
+      setNotice({ kind: "info", text: tr("board.noDesserts") });
       return;
     }
     if (a.kind === "item") await moveItem(a.itemId, o.date, slot);
@@ -163,12 +164,12 @@ export function Board({
         announcements,
         screenReaderInstructions: {
           draggable:
-            "Taşımak için boşluk tuşuna bas. Ok tuşlarıyla günler ve slotlar arasında gez, bırakmak için yeniden boşluk; vazgeçmek için Esc. Seçenekler için Enter.",
+            tr("board.instructions"),
         },
       }}
     >
       <div className={s.wrap}>
-        <section aria-label="Haftalık plan" className={s.boardSection}>
+        <section aria-label={tr("board.region")} className={s.boardSection}>
           <div className={s.scroller}>
             <div className={s.grid}>
               {days.map((d, i) => (
@@ -181,23 +182,23 @@ export function Board({
               <svg width="28" height="8" viewBox="0 0 28 8" fill="none" aria-hidden="true">
                 <path d="M1 4 H27" stroke={LEFTOVER_STROKE} strokeWidth="2" strokeDasharray="4 4" strokeLinecap="round" />
               </svg>
-              Artan yemek ertesi güne uzanır
+              {tr("board.legendLeftover")}
             </span>
             <span className={s.legendItem}>
               <span className={s.legendSnow}>
                 <IconSnowflakeSmall size={14} />
               </span>
-              Buzluktan çıkacak malzeme var
+              {tr("board.legendFreezer")}
             </span>
           </div>
         </section>
 
-        <aside aria-label="Plana eklenebilecekler" className={s.aside}>
+        <aside aria-label={tr("board.aside")} className={s.aside}>
           <div className={s.panel}>
             <div className={s.panelHead}>
-              <h2 className={s.panelTitle}>Eşleşmelerden</h2>
+              <h2 className={s.panelTitle}>{tr("week.fromMatches")}</h2>
               <Link href="/eslesme" className={s.panelLink}>
-                Kaydır
+                {tr("board.swipe")}
               </Link>
             </div>
             {matches.length ? (
@@ -207,28 +208,28 @@ export function Board({
                 ))}
               </ul>
             ) : (
-              <p className={s.hint}>Henüz eşleşme yok. Birlikte kaydırınca burada birikir.</p>
+              <p className={s.hint}>{tr("match.empty")}</p>
             )}
           </div>
           {fridge.length > 0 && (
             <div className={s.panel}>
-              <h2 className={s.panelTitle}>Dolapta</h2>
+              <h2 className={s.panelTitle}>{tr("week.inFridge")}</h2>
               <div className={s.chips}>
                 {fridge.map((f) => (
                   <LeftoverChip key={f.fromDate} ev={f} today={today} />
                 ))}
               </div>
-              <p className={s.hint}>Bir akşama sürükleyin; malzemeleri listeye eklenmez.</p>
+              <p className={s.hint}>{tr("board.dragFridge")}</p>
             </div>
           )}
           <div className={s.panel}>
-            <h2 className={s.panelTitle}>Sık yaptıklarınız</h2>
+            <h2 className={s.panelTitle}>{tr("week.frequent")}</h2>
             <div className={s.chips}>
               {frequent.map((r) => (
                 <FavChip key={r.id} recipe={r} />
               ))}
             </div>
-            <p className={s.hint}>Bir güne ya da tek bir slota sürükleyin.</p>
+            <p className={s.hint}>{tr("board.dragFav")}</p>
           </div>
         </aside>
       </div>
@@ -253,14 +254,14 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
         type="button"
         className={[s.dayHead, day.isToday && s.dayHeadToday].filter(Boolean).join(" ")}
         onClick={() => handlers.onDay(day)}
-        aria-label={`${full}, ${day.dayMonth}${day.isToday ? ", bugün" : ""} · gün seçenekleri`}
+        aria-label={tr("board.dayHead", { day: full, date: day.dayMonth, today: day.isToday ? tr("board.todaySuffix") : "" })}
       >
         {day.isToday ? (
           <>
             <span className={s.dayName}>
               {day.short} <span className={s.dayNum}>{day.dayNum}</span>
             </span>
-            <span className={s.todayPill}>Bugün</span>
+            <span className={s.todayPill}>{tr("week.today")}</span>
           </>
         ) : (
           <>
@@ -271,7 +272,7 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
       </button>
       {day.lunch ? (
         <div className={s.lunch}>
-          <span>Öğlen</span>· {day.lunch.name.toLocaleLowerCase("tr")}
+          <span>{tr("board.lunch")}</span>· {day.lunch.name.toLocaleLowerCase(intlTag())}
         </div>
       ) : (
         <div className={s.lunchSpacer} />
@@ -282,11 +283,11 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
           <span className={s.ateIcon}>
             <IconCutlery size={22} />
           </span>
-          <span className={s.ateTitle}>Dışarıda yendi</span>
+          <span className={s.ateTitle}>{tr("week.ateOut")}</span>
           <span className={s.ateNote}>
             {day.returnedNames.length
-              ? `Planlanan ${day.returnedNames.join(", ").toLocaleLowerCase("tr")} eşleşmelere geri döndü.`
-              : "Bu akşam mutfak tatildeydi."}
+              ? tr("week.returned", { dishes: day.returnedNames.join(", ").toLocaleLowerCase(intlTag()) })
+              : tr("board.kitchenOff")}
           </span>
         </button>
       ) : (
@@ -322,7 +323,7 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
   if (over) {
     return (
       <div ref={setDropRef} className={s.drop}>
-        Buraya bırak
+        {tr("board.dropHere")}
       </div>
     );
   }
@@ -347,13 +348,13 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
         {...attributes}
         className={[s.tile, slot === "ana" && s.tileMain, leftoverSource && s.tileLeftover, isDragging && s.tileDragging].filter(Boolean).join(" ")}
         onClick={() => handlers.onTile(cell.item.id, day.date, slot, cell.recipe)}
-        aria-label={`${dayName(day.date)} · ${SLOT_LABEL[slot]}: ${isLeftover ? "dolaptan " : ""}${cell.recipe?.name ?? "silinmiş tarif"}`}
-        aria-roledescription="taşınabilir yemek"
+        aria-label={tr("board.tile", { day: dayName(day.date), slot: SLOT_LABEL[slot], fromFridge: isLeftover ? tr("board.fromFridgeLower") : "", name: cell.recipe?.name ?? tr("board.deletedLower") })}
+        aria-roledescription={tr("board.movable")}
       >
-        <span className={s.tileLabel}>{isLeftover ? "Dolaptan" : SLOT_SHORT[slot]}</span>
-        <span className={[s.tileName, !cell.recipe && s.tileMissing].filter(Boolean).join(" ")}>{cell.recipe?.name ?? "Silinmiş tarif"}</span>
+        <span className={s.tileLabel}>{isLeftover ? tr("board.fromFridge") : SLOT_SHORT[slot]}</span>
+        <span className={[s.tileName, !cell.recipe && s.tileMissing].filter(Boolean).join(" ")}>{cell.recipe?.name ?? tr("plan.deletedRecipe")}</span>
         {slot === "ana" && cell.recipe?.freezerItem && (
-          <span role="img" aria-label={`Buzluktan çıkacak: ${cell.recipe.freezerItem.toLocaleLowerCase("tr")}`} className={s.freezer}>
+          <span role="img" aria-label={tr("week.freezerItem", { item: cell.recipe.freezerItem.toLocaleLowerCase(intlTag()) })} className={s.freezer}>
             <IconSnowflakeSmall size={14} />
           </span>
         )}
@@ -366,7 +367,7 @@ function fallbackRecipe(id: string): Recipe {
   return {
     id,
     householdId: null,
-    name: "Silinmiş tarif",
+    name: tr("plan.deletedRecipe"),
     course: "ana",
     prepMinutes: 0,
     cookMinutes: 0,
@@ -390,14 +391,14 @@ function DayFoot({ day }: { day: DayModel }) {
   let cls = s.foot;
   switch (day.note.kind) {
     case "cooked":
-      content = "Pişti";
+      content = tr("week.cooked");
       break;
     case "approved":
       cls = `${s.foot} ${s.footOk}`;
       content = (
         <>
           <AvatarStack people={people} size={18} overlap={5} borderColor="transparent" />
-          Onaylandı
+          {tr("week.approved")}
         </>
       );
       break;
@@ -406,25 +407,25 @@ function DayFoot({ day }: { day: DayModel }) {
       content = (
         <>
           <IconHeart size={14} />
-          Eşleşmeden
+          {tr("week.fromMatch")}
         </>
       );
       break;
     case "light":
-      content = "Hafif akşam";
+      content = tr("week.light");
       break;
     case "addedBy": {
       const p = byId.get(day.note.userId);
       content = p ? (
         <>
           <Avatar person={p} size={18} />
-          {p.name} ekledi
+          {tr("week.addedBy", { name: p.name })}
         </>
       ) : null;
       break;
     }
     case "empty":
-      content = "Boş bırakmak da olur";
+      content = tr("week.emptyOk");
       break;
   }
   return <div className={cls}>{content}</div>;
@@ -455,15 +456,15 @@ function MatchRow({ m, dragging }: { m: AsideMatch; dragging: DragData | null })
           className={s.matchBtn}
           {...listeners}
           {...attributes}
-          aria-label={`${m.recipe.name}, ${m.note}. Plana sürükle`}
-          aria-roledescription="taşınabilir yemek"
+          aria-label={tr("board.dragMatch", { name: m.recipe.name, note: m.note })}
+          aria-roledescription={tr("board.movable")}
         >
           <span className={matchListStyles.icon}>
             <IconGrip size={16} strokeWidth={3} />
           </span>
           <span className={matchListStyles.texts}>
             <span className={matchListStyles.name}>{m.recipe.name}</span>
-            <span className={matchListStyles.note}>{isDragging ? "Sürükleniyor…" : m.note}</span>
+            <span className={matchListStyles.note}>{isDragging ? tr("board.dragging") : m.note}</span>
           </span>
         </button>
       )}
@@ -485,12 +486,12 @@ function LeftoverChip({ ev, today }: { ev: EveningLeftover; today: string }) {
       className={s.chipBtn}
       {...listeners}
       {...attributes}
-      aria-label={`Dolapta: ${ev.recipe.name}, ${hint.toLocaleLowerCase("tr")}. Bir akşama sürükle`}
-      aria-roledescription="taşınabilir yemek"
+      aria-label={tr("board.dragLeftover", { name: ev.recipe.name, hint: hint.toLocaleLowerCase(intlTag()) })}
+      aria-roledescription={tr("board.movable")}
       style={{ opacity: isDragging ? 0.4 : 1 }}
     >
       <DishTag variant="leftover">
-        {recipeLabel(ev.recipe)} · {hint.toLocaleLowerCase("tr")}
+        {recipeLabel(ev.recipe)} · {hint.toLocaleLowerCase(intlTag())}
       </DishTag>
     </button>
   );
@@ -505,8 +506,8 @@ function FavChip({ recipe }: { recipe: Recipe }) {
       className={s.chipBtn}
       {...listeners}
       {...attributes}
-      aria-label={`${recipe.name}. Plana sürükle`}
-      aria-roledescription="taşınabilir yemek"
+      aria-label={tr("board.dragRecipe", { name: recipe.name })}
+      aria-roledescription={tr("board.movable")}
       style={{ opacity: isDragging ? 0.4 : 1 }}
     >
       <DishTag variant="draggable">{recipeLabel(recipe)}</DishTag>

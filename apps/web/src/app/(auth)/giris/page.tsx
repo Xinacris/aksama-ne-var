@@ -1,5 +1,6 @@
 "use client";
 
+import { listJoin, t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
@@ -43,14 +44,14 @@ function GirisInner() {
   return (
     <main className={shell.narrow}>
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        <h1 className={shell.title}>Tekrar hoş geldin</h1>
-        <p className={shell.lead}>Bu akşamın menüsü, listesi ve hatırlatmaları kaldığın yerde.</p>
+        <h1 className={shell.title}>{t("giris.title")}</h1>
+        <p className={shell.lead}>{t("giris.lead")}</p>
       </div>
       <LogInForm onDone={() => {}} />
       <p className={shell.alt}>
-        Hesabın yok mu? <Link href="/kayit">Hesap oluştur</Link>
+        {t("giris.noAccount")} <Link href="/kayit">{t("auth.createAccount")}</Link>
       </p>
-      <div className={shell.divider}>ya da</div>
+      <div className={shell.divider}>{t("giris.or")}</div>
       <Button
         variant="secondary"
         size="lg"
@@ -62,10 +63,10 @@ function GirisInner() {
           router.replace("/bugun");
         }}
       >
-        Örnek evle dene · Ali ve Zeynep
+        {t("giris.demo")}
       </Button>
       <p className={shell.note}>
-        Örnek ev için iki hesap: {DEMO_ACCOUNTS.map((a) => a.email).join(" ve ")} · şifre {DEMO_PASSWORD}
+        {t("giris.demoNote", { emails: listJoin(DEMO_ACCOUNTS.map((a) => a.email)), password: DEMO_PASSWORD })}
       </p>
     </main>
   );
@@ -73,7 +74,7 @@ function GirisInner() {
 
 export default function GirisPage() {
   return (
-    <SimpleShell aside="Giriş">
+    <SimpleShell aside={t("giris.aside")}>
       <Suspense fallback={<Loading />}>
         <GirisInner />
       </Suspense>

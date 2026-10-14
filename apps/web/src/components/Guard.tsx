@@ -1,11 +1,12 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, type ReactNode } from "react";
 import { useApp } from "@/store/app";
 import s from "./Guard.module.css";
 
-export function Loading({ label = "Mutfağa bakıyoruz…" }: { label?: string }) {
+export function Loading({ label = t("common.loading") }: { label?: string }) {
   return (
     <div className={s.loading} role="status">
       <span className={s.dot} aria-hidden="true" />

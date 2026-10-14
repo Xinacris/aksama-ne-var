@@ -1,5 +1,6 @@
 "use client";
 
+import { labelRecord, t } from "@anv/core/i18n";
 import type { LeftoverChoice } from "@anv/core/data/models";
 import type { LeftoverOutcome } from "@anv/core/domain/leftovers";
 import Link from "next/link";
@@ -59,11 +60,11 @@ export function RecipePicker({
   const f = frequent.filter(fits);
 
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow="Plana ekle" title={target ? slotTitle(target.date, target.slot, today) : ""}>
+    <Dialog open={!!target} onClose={onClose} eyebrow={t("dlg.addToPlan")} title={target ? slotTitle(target.date, target.slot, today) : ""}>
       {m.length > 0 && (
         <section className={s.section} aria-labelledby="pk-m">
           <h3 id="pk-m" className={s.sectionTitle}>
-            Eşleşmelerden
+            {t("week.fromMatches")}
           </h3>
           <ul className={s.options}>
             {m.map((x) => (
@@ -82,7 +83,7 @@ export function RecipePicker({
       {f.length > 0 && (
         <section className={s.section} aria-labelledby="pk-f">
           <h3 id="pk-f" className={s.sectionTitle}>
-            Sık yaptıklarınız
+            {t("week.frequent")}
           </h3>
           <ul className={s.options}>
             {f.map((r) => (
@@ -100,9 +101,9 @@ export function RecipePicker({
       )}
       <section className={s.section} aria-labelledby="pk-a">
         <h3 id="pk-a" className={s.sectionTitle}>
-          Tüm tarifler
+          {t("dlg.allRecipes")}
         </h3>
-        <TextField label="Tarif ara" hideLabel type="search" placeholder="Tarif ara…" icon={<IconSearch size={18} />} value={q} onChange={(e) => setQ(e.target.value)} />
+        <TextField label={t("dlg.searchRecipe")} hideLabel type="search" placeholder={t("dlg.searchRecipeDots")} icon={<IconSearch size={18} />} value={q} onChange={(e) => setQ(e.target.value)} />
         {results.length ? (
           <ul className={s.options}>
             {results.map((r) => (
@@ -117,7 +118,7 @@ export function RecipePicker({
             ))}
           </ul>
         ) : (
-          <p className={s.empty}>Bu isimde bir tarif yok. Tarifler sayfasından ekleyebilirsin.</p>
+          <p className={s.empty}>{t("dlg.noSuchRecipe")}</p>
         )}
       </section>
     </Dialog>
@@ -150,7 +151,7 @@ export function DayPicker({
   }
 
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow={target?.leftover ? "Dolaptan · hangi akşam?" : "Hangi akşama?"} title={target ? target.recipe.name : ""}>
+    <Dialog open={!!target} onClose={onClose} eyebrow={target?.leftover ? t("dlg.fromFridgeWhen") : t("dlg.whichEvening")} title={target ? target.recipe.name : ""}>
       {slot ? (
         <ul className={s.options}>
           {dates.map((d) => {
@@ -160,9 +161,9 @@ export function DayPicker({
               <li key={d}>
                 <button type="button" className={s.option} onClick={() => pick(d)}>
                   <span className={s.optionText}>
-                    {d === today ? "Bu akşam" : dayName(d)}
+                    {d === today ? t("dlg.tonight") : dayName(d)}
                     <span className={s.optionSub}>
-                      {cur ? `${SLOT_LABEL[slot]}: ${recipeLabel(cur)} yerine` : `${SLOT_LABEL[slot]} boş`}
+                      {cur ? t("dlg.instead", { slot: SLOT_LABEL[slot], dish: recipeLabel(cur) }) : t("dlg.empty", { slot: SLOT_LABEL[slot] })}
                     </span>
                   </span>
                 </button>
@@ -171,7 +172,7 @@ export function DayPicker({
           })}
         </ul>
       ) : (
-        <p className={s.empty}>Tatlılar akşam menüsüne slot olarak girmiyor; tarifini her zaman açabilirsin.</p>
+        <p className={s.empty}>{t("dlg.noDessertSlot")}</p>
       )}
     </Dialog>
   );
@@ -190,19 +191,19 @@ export function SlotDialog({
   const today = useApp((x) => x.today);
   const removeFromPlan = useApp((x) => x.removeFromPlan);
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow={target ? slotTitle(target.date, target.slot, today) : ""} title={target?.recipe?.name ?? "Silinmiş tarif"}>
+    <Dialog open={!!target} onClose={onClose} eyebrow={target ? slotTitle(target.date, target.slot, today) : ""} title={target?.recipe?.name ?? t("plan.deletedRecipe")}>
       {target && (
         <ul className={s.options}>
           {target.recipe && (
             <li>
               <Link className={s.option} href={`/tarif/${target.recipe.id}?gun=${target.date}`} onClick={onClose}>
-                Tarifi ve ön hazırlığı aç
+                {t("dlg.openRecipe")}
               </Link>
             </li>
           )}
           <li>
             <button type="button" className={s.option} onClick={() => onReplace(target.date, target.slot)}>
-              Başka yemekle değiştir
+              {t("dlg.replace")}
             </button>
           </li>
           <li>
@@ -214,7 +215,7 @@ export function SlotDialog({
                 onClose();
               }}
             >
-              Plandan çıkar
+              {t("dlg.remove")}
             </button>
           </li>
         </ul>
@@ -224,19 +225,13 @@ export function SlotDialog({
 }
 
 const DAY_CHOICES: [LeftoverChoice | null, string][] = [
-  [null, "Tarifteki gibi"],
-  ["lunch", "Ertesi gün öğlen"],
-  ["fridge", "Dolaba kalır"],
-  ["none", "Artmaz"],
+  [null, "dlg.asRecipe"],
+  ["lunch", "dlg.lunchNext"],
+  ["fridge", "dlg.toFridge"],
+  ["none", "dlg.noLeftovers"],
 ];
 
-const OUTCOME_SHORT: Record<LeftoverOutcome["kind"], string> = {
-  none: "artmaz",
-  lunch: "ertesi gün öğlen",
-  fridge: "dolaba kalır",
-  discard: "kimse yemeyecek",
-  eaten: "bitti",
-};
+const OUTCOME_SHORT = labelRecord<LeftoverOutcome["kind"]>("dlg.out", ["none", "lunch", "fridge", "discard", "eaten"]);
 
 /** Day-level actions: approve, leftovers, eaten out, clear. */
 export function DayDialog({
@@ -264,13 +259,13 @@ export function DayDialog({
     onClose();
   };
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow="Gün" title={target ? eveningLabel(target.date, today) : ""}>
+    <Dialog open={!!target} onClose={onClose} eyebrow={t("dlg.day")} title={target ? eveningLabel(target.date, today) : ""}>
       {target && (
         <ul className={s.options}>
           {target.ateOut ? (
             <li>
               <button type="button" className={s.option} onClick={run(() => clearAteOut(target.date))}>
-                Dışarıda yemedik, geri al
+                {t("dlg.undoAteOut")}
               </button>
             </li>
           ) : (
@@ -278,14 +273,14 @@ export function DayDialog({
               {target.filled > 0 && !target.approved && (
                 <li>
                   <button type="button" className={s.option} onClick={run(() => approve(target.date))}>
-                    Menüyü onayla
+                    {t("dlg.approve")}
                   </button>
                 </li>
               )}
               {target.leftover && (
                 <li>
-                  <div className={s.leftoverGroup} role="group" aria-label="Artarsa">
-                    <span className={s.optionSub}>Artarsa · şu an: {OUTCOME_SHORT[target.leftover.kind]}</span>
+                  <div className={s.leftoverGroup} role="group" aria-label={t("dlg.ifLeftover")}>
+                    <span className={s.optionSub}>{t("dlg.ifLeftoverNow", { now: OUTCOME_SHORT[target.leftover.kind] })}</span>
                     <div className={s.leftoverChoices}>
                       {DAY_CHOICES.map(([choice, label]) => (
                         <button
@@ -295,7 +290,7 @@ export function DayDialog({
                           aria-pressed={target.leftover!.choice === choice}
                           onClick={run(() => setLeftoverChoice(target.date, choice))}
                         >
-                          {label}
+                          {t(label)}
                         </button>
                       ))}
                     </div>
@@ -305,15 +300,15 @@ export function DayDialog({
               <li>
                 <button type="button" className={s.option} onClick={run(() => ateOut(target.date))}>
                   <span className={s.optionText}>
-                    Dışarıda yedik
-                    <span className={s.optionSub}>Ana yemek eşleşmelere döner, malzemeler listede kalır.</span>
+                    {t("dlg.ateOut")}
+                    <span className={s.optionSub}>{t("dlg.ateOutSub")}</span>
                   </span>
                 </button>
               </li>
               {target.filled > 0 && (
                 <li>
                   <button type="button" className={`${s.option} ${s.danger}`} onClick={run(() => sendBack(target.date))}>
-                    Bu akşamı boşalt
+                    {t("dlg.clear")}
                   </button>
                 </li>
               )}

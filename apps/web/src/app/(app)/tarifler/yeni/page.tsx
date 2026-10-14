@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo } from "react";
 import { Loading } from "@/components/Guard";
@@ -18,10 +19,10 @@ function Yeni() {
   return (
     <RecipeForm
       key={source?.id ?? "new"}
-      title={source ? `${source.name} · bizim usul` : "Yeni tarif"}
+      title={source ? t("form.copyTitle", { name: source.name }) : t("quickAdd.title")}
       initial={initial}
       backHref={source ? `/tarif/${source.id}` : "/tarifler"}
-      submitLabel="Tarifi kaydet"
+      submitLabel={t("form.saveRecipe")}
       openFilled={!!source}
       onSubmit={async (value) => {
         const r = await createRecipe(value);

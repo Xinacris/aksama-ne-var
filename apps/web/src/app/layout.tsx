@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Young_Serif } from "next/font/google";
 import { AppProvider } from "@/components/AppProvider";
+import { LocaleProvider } from "@/i18n";
 import { themeBootScript } from "@/lib/themeBoot";
 import "./globals.css";
 
@@ -38,7 +39,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
       </head>
       <body>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <LocaleProvider>{children}</LocaleProvider>
+        </AppProvider>
       </body>
     </html>
   );

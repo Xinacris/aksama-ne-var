@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
@@ -49,7 +50,7 @@ function Ice() {
 
   async function run() {
     if (!url.trim() && !text.trim()) {
-      setError("Bir link yapıştır ya da tarifin metnini aşağıya bırak.");
+      setError(t("import.needLink"));
       return;
     }
     setBusy(true);
@@ -62,7 +63,7 @@ function Ice() {
       });
       const body = (await res.json()) as ApiResponse;
       if (!res.ok || body.error) {
-        setError(body.error ?? "Şu an taslak çıkaramadık. Biraz sonra yeniden dener misin?");
+        setError(body.error ?? t("import.failed"));
         setPasteOpen(true);
         return;
       }
@@ -80,7 +81,7 @@ function Ice() {
         window.scrollTo({ top: 0 });
       }
     } catch {
-      setError("Bağlantı kurulamadı. İnternetin geri gelince yeniden deneyebilir ya da metni yapıştırabilirsin.");
+      setError(t("import.offline"));
       setPasteOpen(true);
     } finally {
       setBusy(false);
@@ -103,27 +104,27 @@ function Ice() {
     return (
       <RecipeForm
         key={attempt}
-        title="Taslağı kontrol et"
+        title={t("import.checkTitle")}
         initial={draft}
         backHref="/tarifler/ice-aktar"
-        backLabel="Başka link"
-        submitLabel="Tarifi kaydet"
+        backLabel={t("import.anotherLink")}
+        submitLabel={t("form.saveRecipe")}
         header={
           <div className={s.review}>
             {result.source?.url && <ImportSourceCard source={result.source} />}
             <p className={s.check} role="status">
-              <strong>Kontrol edip kaydet.</strong>{" "}
+              <strong>{t("import.checkSave")}</strong>{" "}
               {result.provider === "web"
                 ? result.writtenRecipeUrl
-                  ? "Malzemeleri ve adımları videonun yazılı tarifinden aldık; bir göz at."
-                  : "Malzemeleri ve adımları sayfanın tarif bilgisinden aldık; bir göz at."
+                  ? t("import.fromWritten")
+                  : t("import.fromPage")
                 : result.path === "llm"
-                  ? "Açıklamadan biz çıkardık; miktarlara ve adımlara bir göz at."
-                  : "Açıklamayı basitçe okuduk; eksik kalan malzeme ya da adım varsa buradan tamamlayabilirsin."}
+                  ? t("import.fromLlm")
+                  : t("import.fromRules")}
             </p>
             {result.draft && result.draft.steps.length === 0 && (
               <p className={s.noSteps} role="note">
-                Bu açıklamada adımlar yok. Yazılı tarifin linki varsa yapıştır ya da adımları kendin ekle.
+                {t("import.noSteps")}
               </p>
             )}
             <button
@@ -136,7 +137,7 @@ function Ice() {
                 setFocusPaste((n) => n + 1);
               }}
             >
-              Açıklamayı yeniden yapıştır
+              {t("import.repaste")}
             </button>
           </div>
         }
@@ -152,16 +153,16 @@ function Ice() {
     <main className={s.page}>
       <Link href="/tarifler" className={s.back}>
         <IconChevronLeft size={20} />
-        Tarifler
+        {t("import.back")}
       </Link>
       <div className={s.titles}>
-        <h1 className={s.title}>Linkten ekle</h1>
-        <p className={s.lead}>Instagram, YouTube ya da TikTok&apos;taki bir tarifin linkini yapıştır. Açıklamadan bir taslak çıkarırız; sen kontrol edip kaydedersin.</p>
+        <h1 className={s.title}>{t("import.title")}</h1>
+        <p className={s.lead}>{t("import.lead")}</p>
       </div>
 
       <form onSubmit={submit} className={s.card} noValidate>
         <TextField
-          label="Link"
+          label={t("import.link")}
           type="url"
           inputMode="url"
           autoComplete="off"
@@ -180,14 +181,14 @@ function Ice() {
 
         <div className={s.paste}>
           <button type="button" className={s.toggle} aria-expanded={pasteOpen} aria-controls="aciklama" onClick={() => setPasteOpen((v) => !v)}>
-            {pasteOpen ? "Açıklama kutusunu gizle" : "Açıklamayı yapıştırmak istiyorum"}
+            {pasteOpen ? t("import.hidePaste") : t("import.showPaste")}
           </button>
           {pasteOpen && (
             <div id="aciklama">
               <TextArea
                 ref={pasteRef}
-                label="Açıklamayı buraya yapıştır"
-                hint="Videonun altındaki açıklamayı ya da tarif metnini kopyalayıp buraya bırak. Link olmadan da olur."
+                label={t("import.pasteLabel")}
+                hint={t("import.pasteHint")}
                 rows={8}
                 maxLength={8000}
                 value={text}
@@ -203,15 +204,15 @@ function Ice() {
           </p>
         )}
         <Button type="submit" size="lg" disabled={busy}>
-          {busy ? "Taslak hazırlanıyor…" : "Taslağı çıkar"}
+          {busy ? t("import.working") : t("import.go")}
         </Button>
         {busy && (
           <span className="visually-hidden" role="status">
-            Taslak hazırlanıyor
+            {t("import.workingSr")}
           </span>
         )}
       </form>
-      <p className={s.note}>Kaydetmeden önce her şeyi değiştirebilirsin. Tarifin kaynağı ve hazırlayanı tarif sayfasında görünür.</p>
+      <p className={s.note}>{t("import.note")}</p>
     </main>
   );
 }

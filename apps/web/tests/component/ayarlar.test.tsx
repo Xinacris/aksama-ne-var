@@ -34,7 +34,7 @@ describe("Ayarlar", () => {
     expect(useApp.getState().household).toMatchObject({ lunchAtHome: "some", lunchDays: [0, 6] });
     await userEvent.click(screen.getByRole("button", { name: "Çarşamba" }));
     expect(useApp.getState().household?.lunchDays).toEqual([0, 3, 6]);
-    expect(screen.getByText("Öğlene yalnızca Çarşamba, Cumartesi, Pazar yazılır; diğer günler artan dolaba kalır.")).toBeInTheDocument();
+    expect(screen.getByText("Öğlene yalnızca Çarşamba, Cumartesi ve Pazar yazılır; diğer günler artan dolaba kalır.")).toBeInTheDocument();
   });
 
   it("switches theme and persists the preference", async () => {

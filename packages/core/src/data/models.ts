@@ -1,4 +1,6 @@
 import { z } from "zod";
+import { labelRecord, t } from "../i18n";
+import { slugify } from "../lib/text";
 
 /**
  * Entity models. Each table-like entity mirrors a future Postgres table:
@@ -22,14 +24,7 @@ export const COURSES = ["corba", "ana", "yaninda", "salata", "kahvalti", "tatli"
 export const courseSchema = z.enum(COURSES);
 export type Course = z.infer<typeof courseSchema>;
 
-export const COURSE_LABEL: Record<Course, string> = {
-  corba: "Çorba",
-  ana: "Ana yemek",
-  yaninda: "Yanında",
-  salata: "Salata ve meze",
-  kahvalti: "Kahvaltı ve tek tabak",
-  tatli: "Tatlı",
-};
+export const COURSE_LABEL = labelRecord<Course>("course", COURSES);
 
 export const UNITS = [
   "g",
@@ -52,6 +47,8 @@ export const UNITS = [
 ] as const;
 export const unitSchema = z.enum(UNITS);
 export type Unit = z.infer<typeof unitSchema>;
+/** Unit names as shown (`unit.<slug>`); stored values stay Turkish. */
+export const UNIT_LABEL = labelRecord<Unit>("unit", UNITS, slugify);
 
 export const sideSchema = z.enum(["pazar", "market"]);
 export type Side = z.infer<typeof sideSchema>;
@@ -69,6 +66,11 @@ export const PAZAR_AISLES = ["Sebze", "Meyve", "Yeşillik"] as const;
 export const AISLES = [...MARKET_AISLES, ...PAZAR_AISLES] as const;
 export const aisleSchema = z.enum(AISLES);
 export type Aisle = z.infer<typeof aisleSchema>;
+/** Aisle names are stored in Turkish (data); shown through the catalog (`aisle.<slug>`). */
+export const AISLE_LABEL = labelRecord<Aisle>("aisle", AISLES, slugify);
+export const SIDE_LABEL = labelRecord<Side>("side", ["pazar", "market"]);
+/** Where an unknown ingredient goes on the list, per side. */
+export const FALLBACK_AISLE: Record<Side, Aisle> = { pazar: "Sebze", market: "Diğer" };
 
 export const ingredientSchema = z.object({
   name: z.string().min(1),
@@ -106,7 +108,9 @@ export const PLATFORM_LABEL: Record<SourcePlatform, string> = {
   instagram: "Instagram",
   youtube: "YouTube",
   tiktok: "TikTok",
-  web: "Web",
+  get web() {
+    return t("platform.web");
+  },
 };
 
 /** "Artarsa ne olur?": artmaz / ertesi gün öğlen yenir / saklanır, X gün içinde. */
@@ -167,6 +171,8 @@ export const userSchema = z.object({
   passwordHash: z.string(),
   passwordSalt: z.string(),
   onboarded: z.boolean(),
+  /** "tr" | "en": the language this person chose (Ayarlar › Dil). Absent = device default. */
+  locale: z.enum(["tr", "en"]).optional(),
 });
 export type User = z.infer<typeof userSchema>;
 
@@ -208,18 +214,8 @@ export const SLOTS = ["corba", "ana", "yaninda", "salata"] as const;
 export const slotSchema = z.enum(SLOTS);
 export type Slot = z.infer<typeof slotSchema>;
 
-export const SLOT_LABEL: Record<Slot, string> = {
-  corba: "Çorba",
-  ana: "Ana yemek",
-  yaninda: "Yanında",
-  salata: "Salata",
-};
-export const SLOT_SHORT: Record<Slot, string> = {
-  corba: "Çorba",
-  ana: "Ana",
-  yaninda: "Yanında",
-  salata: "Salata",
-};
+export const SLOT_LABEL = labelRecord<Slot>("slot", SLOTS);
+export const SLOT_SHORT = labelRecord<Slot>("slotShort", SLOTS);
 
 export const planItemSchema = z.object({
   ...base,

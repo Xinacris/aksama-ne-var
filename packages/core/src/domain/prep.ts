@@ -1,6 +1,7 @@
 import type { Member, PlanItem, PrepOffset, PrepTask, Recipe, User } from "../data/models";
 import { addDays, clockTime, fromIsoDate } from "./dates";
 import { genitive, lowerFirstTr } from "../lib/text";
+import { getLocale, intlTag, t } from "../i18n";
 
 export const MORNING_TIME = "09:00";
 export const NIGHT_BEFORE_TIME = "21:00";
@@ -28,20 +29,19 @@ export function prepDueAt(dateIso: string, offset: PrepOffset, dinnerTime: strin
 
 /** Timeline label: "Sabah", "Pişirmeden 1 sa önce", "Pişirmeden 45 dk önce", "Akşamdan". */
 export function offsetLabel(offset: PrepOffset): string {
-  if (offset === "morning") return "Sabah";
-  if (offset === "night-before") return "Akşamdan";
+  if (offset === "morning") return t("prep.offset.morning");
+  if (offset === "night-before") return t("prep.offset.nightBefore");
   const mins = offsetMinutes(offset) ?? 0;
   // "Pişirmeden": a bare "1 sa önce" reads like "1 hour ago".
-  if (mins >= 60 && mins % 60 === 0) return `Pişirmeden ${mins / 60} sa önce`;
-  if (mins > 60) return `Pişirmeden ${Math.floor(mins / 60)} sa ${mins % 60} dk önce`;
-  return `Pişirmeden ${mins} dk önce`;
+  if (mins >= 60 && mins % 60 === 0) return t("prep.offset.hours", { h: mins / 60 });
+  if (mins > 60) return t("prep.offset.hoursMins", { h: Math.floor(mins / 60), m: mins % 60 });
+  return t("prep.offset.mins", { m: mins });
 }
 
 /** "Sabah 09:00", "Öğleden sonra 15:30", "Akşam 21:00" */
 export function dayPartTime(d: Date): string {
   const h = d.getHours();
-  const part = h < 12 ? "Sabah" : h < 17 ? "Öğleden sonra" : "Akşam";
-  return `${part} ${clockTime(d)}`;
+  return t(h < 12 ? "prep.part.morning" : h < 17 ? "prep.part.afternoon" : "prep.part.evening", { time: clockTime(d) });
 }
 
 const ORDER: Record<string, number> = { "night-before": 0, morning: 1 };
@@ -144,7 +144,8 @@ const PROPER_START = ["İzmir", "Hünkar", "Rus"];
 
 /** Dish name inside a sentence: "tavuk sote", but "İzmir köfte". */
 export function dishInSentence(name: string): string {
-  return PROPER_START.some((p) => name.startsWith(p)) ? name : lowerFirstTr(name);
+  if (PROPER_START.some((p) => name.startsWith(p))) return name;
+  return getLocale() === "tr" ? lowerFirstTr(name) : name.charAt(0).toLocaleLowerCase("en") + name.slice(1);
 }
 
 const BACK_VOWELS = "aıou";
@@ -166,14 +167,20 @@ export function dontForget(label: string): string {
 
 /** "Akşama İzmir köfte var, kıymayı buzluktan çıkarmayı unutma." */
 export function reminderSentence(task: Pick<PrepTask, "label" | "date" | "dueAt">, dish: Recipe | undefined, todayIso: string): string {
-  const name = dish ? dishInSentence(dish.shortName ?? dish.name) : "yemek";
-  const when = task.date === todayIso ? "Akşama" : task.date === addDays(todayIso, 1) ? "Yarın akşama" : "Yakında";
-  return `${when} ${name} var, ${dontForget(task.label)}.`;
+  const name = dish ? dishInSentence(dish.shortName ?? dish.name) : t("prep.dinner");
+  const key = task.date === todayIso ? "prep.reminder.tonight" : task.date === addDays(todayIso, 1) ? "prep.reminder.tomorrow" : "prep.reminder.soon";
+  const label = task.label.trim();
+  return t(key, {
+    dish: name,
+    Dish: name.charAt(0).toLocaleUpperCase(intlTag()) + name.slice(1),
+    todoTr: dontForget(label),
+    todo: label.charAt(0).toLocaleLowerCase(intlTag()) + label.slice(1),
+  });
 }
 
 /** "Sabah 09:00 · Ali'nin işi" */
 export function reminderMeta(task: Pick<PrepTask, "dueAt" | "assigneeId">, users: Map<string, User>): string {
   const due = dayPartTime(new Date(task.dueAt));
   const who = task.assigneeId ? users.get(task.assigneeId) : undefined;
-  return who ? `${due} · ${genitive(who.name)} işi` : due;
+  return who ? t("prep.meta", { due, who: who.name, whoGen: genitive(who.name) }) : due;
 }

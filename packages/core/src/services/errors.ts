@@ -1,4 +1,6 @@
-/** Expected, user-facing failures with calm Turkish copy. */
+import { t } from "../i18n";
+
+/** Expected, user-facing failures with calm copy (from the catalog, in the current language). */
 export class AppError extends Error {
   constructor(
     public readonly code: string,
@@ -11,5 +13,5 @@ export class AppError extends Error {
 
 export function messageOf(e: unknown): string {
   if (e instanceof Error && e.message) return e.message;
-  return "Bir şeyler ters gitti. Bir daha deneyelim mi?";
+  return t("errors.generic");
 }

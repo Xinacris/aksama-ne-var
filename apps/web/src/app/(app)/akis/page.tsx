@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useMemo } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import { ActivityLine, EmptyState } from "@/components/ui/Misc";
@@ -22,7 +23,7 @@ export default function AkisPage() {
     const out: { label: string; items: ReturnType<typeof viewActivity>[] }[] = [];
     for (const a of activity) {
       const day = toIsoDate(new Date(a.createdAt));
-      const label = day === today ? "Bugün" : day === addDays(today, -1) ? "Dün" : longDate(day);
+      const label = day === today ? t("akis.today") : day === addDays(today, -1) ? t("akis.yesterday") : longDate(day);
       const v = viewActivity(a, { recipesById: recipesMap(recipes), users, todayIso: today, now: now() });
       const g = out.find((x) => x.label === label);
       if (g) g.items.push(v);
@@ -33,14 +34,14 @@ export default function AkisPage() {
 
   return (
     <main className={s.page}>
-      <h1 className={s.title}>Evde neler oldu</h1>
+      <h1 className={s.title}>{t("akis.title")}</h1>
       {groups.length === 0 ? (
         <EmptyState
-          title="Henüz sessiz"
-          text="Plana yemek eklendikçe, eşleştikçe ve alışveriş yapıldıkça burada birikir."
+          title={t("akis.emptyTitle")}
+          text={t("akis.emptyText")}
           actions={
             <ButtonLink href="/eslesme" size="sm">
-              Kaydırmaya başla
+              {t("akis.startSwiping")}
             </ButtonLink>
           }
         />

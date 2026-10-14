@@ -1,3 +1,5 @@
+import { formatDuration } from "../domain/dates";
+import { intlTag, t } from "../i18n";
 import { z } from "zod";
 import { aisleSchema, courseSchema, leftoverPolicySchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe } from "../data/models";
 import { catalogEntry, normalizeIngredientName } from "../data/seed/ingredients";
@@ -102,15 +104,15 @@ const num = (label: string, min: number, max: number) =>
     .string()
     .trim()
     .transform((v) => Number(v.replace(",", ".")))
-    .refine((v) => Number.isFinite(v) && v >= min && v <= max, `${label} ${min}–${max} arasında bir sayı olsun.`);
+    .refine((v) => Number.isFinite(v) && v >= min && v <= max, { error: () => t("form.err.range", { label: t(label), min, max }) });
 
 const inputSchema = z.object({
-  name: z.string().trim().min(1, "Tarifin adını yazar mısın?").max(80, "Ad biraz uzun oldu."),
+  name: z.string().trim().min(1, { error: () => t("form.err.name") }).max(80, { error: () => t("form.err.nameLong") }),
   course: courseSchema,
-  prepMinutes: num("Hazırlık süresi", 0, 1440).pipe(z.number().int("Hazırlık süresi tam dakika olsun.")),
-  cookMinutes: num("Pişirme süresi", 0, 1440).pipe(z.number().int("Pişirme süresi tam dakika olsun.")),
-  servings: num("Kişi sayısı", 1, 20).pipe(z.number().int("Kişi sayısı tam sayı olsun.")),
-  waitMinutes: z.preprocess((v) => (typeof v === "string" && !v.trim() ? "0" : v), num("Bekleme süresi", 0, 1440).pipe(z.number().int("Bekleme süresi tam dakika olsun."))),
+  prepMinutes: num("form.label.prep", 0, 1440).pipe(z.number().int({ error: () => t("form.err.prepInt") })),
+  cookMinutes: num("form.label.cook", 0, 1440).pipe(z.number().int({ error: () => t("form.err.cookInt") })),
+  servings: num("form.label.servings", 1, 20).pipe(z.number().int({ error: () => t("form.err.servingsInt") })),
+  waitMinutes: z.preprocess((v) => (typeof v === "string" && !v.trim() ? "0" : v), num("form.label.wait", 0, 1440).pipe(z.number().int({ error: () => t("form.err.waitInt") }))),
 });
 
 /** Validate a draft and turn it into store input; returns the first calm error message. */
@@ -120,14 +122,14 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
   const ingredients = [];
   for (const [idx, i] of d.ingredients.entries()) {
     if (!i.name.trim()) {
-      if (i.quantity.trim()) return { ok: false, error: `${idx + 1}. malzemenin adı eksik.` };
+      if (i.quantity.trim()) return { ok: false, error: t("form.err.ingredientName", { n: idx + 1 }) };
       continue;
     }
     const name = normalizeIngredientName(i.name);
     const q = i.quantity.trim() ? Number(i.quantity.replace(",", ".")) : null;
-    if (q !== null && (!Number.isFinite(q) || q <= 0)) return { ok: false, error: `“${name}” için miktar bir sayı olsun.` };
+    if (q !== null && (!Number.isFinite(q) || q <= 0)) return { ok: false, error: t("form.err.quantity", { name }) };
     const unit = i.unit ? unitSchema.safeParse(i.unit) : null;
-    if (unit && !unit.success) return { ok: false, error: `“${name}” için birim tanınmadı.` };
+    if (unit && !unit.success) return { ok: false, error: t("form.err.unit", { name }) };
     const entry = catalogEntry(name);
     const side = sideSchema.parse(i.side);
     const aisle = aisleSchema.safeParse(i.aisle).success ? aisleSchema.parse(i.aisle) : side === "pazar" ? "Sebze" : "Diğer";
@@ -145,13 +147,13 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
   for (const p of d.prepItems) {
     if (!p.label.trim()) continue;
     const off = prepOffsetSchema.safeParse(p.offset);
-    if (!off.success) return { ok: false, error: `“${p.label}” için zaman seçilmedi.` };
+    if (!off.success) return { ok: false, error: t("form.err.prepWhen", { label: p.label }) };
     prepItems.push({ label: p.label.trim(), offset: off.data, ...(p.freezer ? { freezer: true } : {}) });
   }
   const steps = d.steps.map((x) => x.trim()).filter(Boolean);
   const freezer = d.freezerItem.trim() ? normalizeIngredientName(d.freezerItem) : null;
   if (freezer && !ingredients.some((i) => i.name === freezer)) {
-    return { ok: false, error: "Buzluktan çıkacak malzeme, malzemeler arasında olmalı." };
+    return { ok: false, error: t("form.err.freezer") };
   }
   const { waitMinutes, ...headRest } = head.data;
   return {
@@ -207,15 +209,14 @@ export function initialOpen(d: RecipeDraft, openFilled: boolean): Record<DetailS
 
 const dk = (v: string) => {
   const n = minutes(v);
-  if (n < 60) return `${n} dk`;
-  return n % 60 ? `${Math.floor(n / 60)} sa ${n % 60} dk` : `${n / 60} sa`;
+  return formatDuration(n);
 };
 
 /** One line under a closed section's title, so its defaults are visible without opening it. */
 export function genelSummary(d: RecipeDraft): string {
-  const parts = [`${dk(d.prepMinutes)} hazırlık`, `${dk(d.cookMinutes)} pişirme`];
-  if (minutes(d.waitMinutes) > 0) parts.push(`${dk(d.waitMinutes)} bekleme`);
-  parts.push(`${d.servings.trim() || "?"} kişilik`);
+  const parts = [t("form.summary.prep", { t: dk(d.prepMinutes) }), t("form.summary.cook", { t: dk(d.cookMinutes) })];
+  if (minutes(d.waitMinutes) > 0) parts.push(t("form.summary.wait", { t: dk(d.waitMinutes) }));
+  parts.push(t("form.summary.servings", { n: d.servings.trim() || "?" }));
   const tags = d.tags
     .split(",")
     .map((x) => x.trim())
@@ -226,15 +227,14 @@ export function genelSummary(d: RecipeDraft): string {
 
 export function prepSummary(d: RecipeDraft): string {
   const n = d.prepItems.filter((p) => p.label.trim()).length;
-  const parts = [n ? `${n} hatırlatma` : "Yok"];
-  if (d.freezerItem.trim()) parts.push(`buzluktan: ${d.freezerItem.trim().toLocaleLowerCase("tr")}`);
+  const parts = [n ? t("form.summary.reminders", { count: n }) : t("form.summary.none")];
+  if (d.freezerItem.trim()) parts.push(t("form.summary.freezer", { item: d.freezerItem.trim().toLocaleLowerCase(intlTag()) }));
   return parts.join(" · ");
 }
 
-const POLICY_SHORT = { none: "Artmaz", lunch: "Ertesi gün öğlen yenir", store: "Saklanır" } as const;
 
 export function sourceSummary(d: RecipeDraft): string {
   const policy =
-    d.leftoverPolicy === "store" ? `${d.leftoverDays} gün saklanır` : POLICY_SHORT[d.leftoverPolicy];
+    d.leftoverPolicy === "store" ? t("form.summary.policy.store", { count: Number(d.leftoverDays) || 2 }) : t(`form.summary.policy.${d.leftoverPolicy}`);
   return [d.source.trim(), policy].filter(Boolean).join(" · ");
 }

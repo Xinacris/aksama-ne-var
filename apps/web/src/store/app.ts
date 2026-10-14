@@ -1,10 +1,15 @@
 "use client";
 
+import { setI18n } from "react-i18next";
 import { useStore } from "zustand";
+import { i18n } from "@anv/core/i18n";
 import { appStore, configureApp, type AppState } from "@anv/core/store/app";
 import { getData } from "@/data";
 
 export * from "@anv/core/store/app";
+
+// react-i18next hooks read core's i18next instance (every component imports this module, tests too).
+setI18n(i18n);
 
 configureApp({
   getData,

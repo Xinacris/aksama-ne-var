@@ -1,5 +1,7 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
+import { FALLBACK_AISLE, SIDE_LABEL, UNIT_LABEL } from "@anv/core/data/models";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { IconCheck, IconClose, IconPlus } from "@/components/icons";
 import { Avatar, type AvatarPerson } from "@/components/ui/Avatar";
@@ -45,11 +47,11 @@ export default function ListePage() {
 
   async function finish() {
     if (!rows.some((r) => r.checkedBy)) {
-      setNotice({ kind: "info", text: "Önce aldıklarını işaretle; alınmayanlar listede bekler." });
+      setNotice({ kind: "info", text: t("liste.checkFirst") });
       return;
     }
     const n = await finishShopping();
-    setNotice({ kind: "info", text: `${n} ürün “evde var”a geçti. Alınmayanlar listede bekliyor.` });
+    setNotice({ kind: "info", text: t("liste.finished", { count: n }) });
   }
 
   const sides: Side[] = desktop ? ["pazar", "market"] : [tab];
@@ -59,10 +61,10 @@ export default function ListePage() {
       <header className={s.header}>
         <div className={s.headRow}>
           <div className={s.titles}>
-            <span className={s.eyebrow}>Bu haftanın listesi</span>
-            <h1 className={s.title}>Alışveriş</h1>
+            <span className={s.eyebrow}>{t("liste.eyebrow")}</span>
+            <h1 className={s.title}>{t("liste.title")}</h1>
           </div>
-          <button type="button" className={s.addBtn} aria-label="Ürün ekle" onClick={() => setAdding(true)}>
+          <button type="button" className={s.addBtn} aria-label={t("liste.addItem")} onClick={() => setAdding(true)}>
             <IconPlus size={22} />
           </button>
         </div>
@@ -76,21 +78,21 @@ export default function ListePage() {
             <span className={s.presenceText}>
               {atMarket ? (
                 <>
-                  <strong>{partner.name} de markette.</strong> <span>İşaretledikleri anında burada.</span>
+                  <strong>{t("liste.partnerAtMarket", { name: partner.name })}</strong> <span>{t("liste.instantly")}</span>
                 </>
               ) : (
-                <span>{partner.name} bir şey işaretleyince anında burada görürsün.</span>
+                <span>{t("liste.partnerHint", { name: partner.name })}</span>
               )}
             </span>
             <span className={[s.live, sync === "syncing" && s.liveSync, sync === "offline" && s.liveOff].filter(Boolean).join(" ")}>
               <span className={s.dot} />
-              {sync === "offline" ? "Çevrimdışı" : sync === "syncing" ? "Eşitleniyor" : "Canlı"}
+              {t(sync === "offline" ? "sync.offline" : sync === "syncing" ? "sync.syncing" : "sync.live")}
             </span>
           </div>
         )}
 
         {!desktop && rows.length > 0 && (
-          <div role="tablist" aria-label="Liste bölümü" className={s.tabs}>
+          <div role="tablist" aria-label={t("liste.section")} className={s.tabs}>
             {(["pazar", "market"] as Side[]).map((side) => (
               <button
                 key={side}
@@ -102,7 +104,7 @@ export default function ListePage() {
                 className={s.tab}
                 onClick={() => setTab(side)}
               >
-                {side === "pazar" ? "Pazar" : "Market"} <span className={s.count}>{sideCount(rows, side)}</span>
+                {SIDE_LABEL[side]} <span className={s.count}>{sideCount(rows, side)}</span>
               </button>
             ))}
           </div>
@@ -112,15 +114,15 @@ export default function ListePage() {
       {rows.length === 0 ? (
         <div className={s.empty}>
           <EmptyState
-            title="Liste şimdilik boş"
-            text="Plana yemek ekledikçe eksik malzemeler buraya kendiliğinden gelir."
+            title={t("liste.emptyTitle")}
+            text={t("liste.emptyText")}
             actions={
               <>
                 <ButtonLink href="/hafta" size="sm">
-                  Haftaya git
+                  {t("eslesme.toWeek")}
                 </ButtonLink>
                 <Button variant="secondary" size="sm" onClick={() => setAdding(true)}>
-                  Ürün ekle
+                  {t("liste.addItem")}
                 </Button>
               </>
             }
@@ -138,7 +140,7 @@ export default function ListePage() {
             >
               {desktop && (
                 <h2 id={`col-${side}`} className={s.colTitle}>
-                  {side === "pazar" ? "Pazar" : "Market"} <span className={s.count}>{sideCount(rows, side)}</span>
+                  {SIDE_LABEL[side]} <span className={s.count}>{sideCount(rows, side)}</span>
                 </h2>
               )}
               {groupList(rows, side).map((g) => (
@@ -163,7 +165,7 @@ export default function ListePage() {
               ))}
               {groupList(rows, side).length === 0 && (
                 <p className={s.remaining} style={{ padding: "16px 0" }}>
-                  {side === "pazar" ? "Pazardan alınacak bir şey yok." : "Marketten alınacak bir şey yok."}
+                  {side === "pazar" ? t("liste.noPazar") : t("liste.noMarket")}
                 </p>
               )}
             </div>
@@ -175,7 +177,7 @@ export default function ListePage() {
       {rows.length > 0 && (
         <div className={s.footer}>
           <button type="button" className={s.finish} onClick={finish}>
-            Alışverişi bitir
+            {t("liste.finish")}
           </button>
           <span className={s.remaining}>{remainingNote(rows)}</span>
         </div>
@@ -202,7 +204,7 @@ function Row({
   const checked = !!row.checkedBy;
   const byPartner = checked && row.checkedBy !== meId;
   const fresh = byPartner && !!row.checkedAt && now().getTime() - new Date(row.checkedAt).getTime() < FRESH_MS;
-  const label = `${row.name}${row.quantityText ? `, ${row.quantityText}` : ""}${checked && who ? `, ${who.name} aldı` : ""}`;
+  const label = `${row.name}${row.quantityText ? `, ${row.quantityText}` : ""}${checked && who ? t("liste.rowGot", { name: who.name }) : ""}`;
   return (
     <li className={s.li}>
       <button
@@ -221,13 +223,13 @@ function Row({
             <span className={s.qty}>{row.quantityText}</span>
           </span>
           <span className={s.line2}>
-            <span className={s.for}>{row.forLabel || "Elle eklendi"}</span>
-            {fresh && who && <span className={s.freshNote}>{who.name} aldı · az önce</span>}
+            <span className={s.for}>{row.forLabel || t("liste.manual")}</span>
+            {fresh && who && <span className={s.freshNote}>{t("liste.gotJustNow", { name: who.name })}</span>}
           </span>
         </span>
       </button>
       {onRemove && (
-        <button type="button" className={s.remove} onClick={onRemove} aria-label={`${row.name} listeden kaldır`}>
+        <button type="button" className={s.remove} onClick={onRemove} aria-label={t("liste.remove", { name: row.name })}>
           <IconClose size={18} />
         </button>
       )}
@@ -248,15 +250,15 @@ function AddItemDialog({ open, onClose, defaultSide }: { open: boolean; onClose:
   async function submit(e: FormEvent) {
     e.preventDefault();
     if (!name.trim()) {
-      setError("Ürünün adını yazar mısın?");
+      setError(t("errors.itemName"));
       return;
     }
     const q = qty.trim() ? Number(qty.replace(",", ".")) : null;
     if (q !== null && (!Number.isFinite(q) || q <= 0)) {
-      setError("Miktar bir sayı olsun (ör. 2 ya da 1,5).");
+      setError(t("liste.qtyNumber"));
       return;
     }
-    await addManualItem({ name, quantity: q, unit: q === null ? null : unit || "adet", side: effectiveSide, aisle: entry?.side === effectiveSide ? entry.aisle : effectiveSide === "pazar" ? "Sebze" : "Diğer" });
+    await addManualItem({ name, quantity: q, unit: q === null ? null : unit || "adet", side: effectiveSide, aisle: entry?.side === effectiveSide ? entry.aisle : FALLBACK_AISLE[effectiveSide] });
     setName("");
     setQty("");
     setUnit("");
@@ -266,35 +268,35 @@ function AddItemDialog({ open, onClose, defaultSide }: { open: boolean; onClose:
   }
 
   return (
-    <Dialog open={open} onClose={onClose} eyebrow="Listeye ekle" title="Ne lazım?">
+    <Dialog open={open} onClose={onClose} eyebrow={t("liste.addEyebrow")} title={t("liste.addTitle")}>
       <form className={s.form} onSubmit={submit} noValidate>
-        <TextField label="Ürün" list="urunler" value={name} onChange={(e) => setName(e.target.value)} placeholder="ör. limon, deterjan" error={error} autoFocus />
+        <TextField label={t("liste.item")} list="urunler" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("liste.itemPlaceholder")} error={error} autoFocus />
         <datalist id="urunler">
           {INGREDIENT_CATALOG.filter((c) => !c.staple).map((c) => (
             <option key={c.name} value={c.name} />
           ))}
         </datalist>
         <div className={s.formRow}>
-          <TextField label="Miktar" inputMode="decimal" value={qty} onChange={(e) => setQty(e.target.value)} placeholder="isteğe bağlı" />
-          <SelectField label="Birim" value={unit} onChange={(e) => setUnit(e.target.value as Unit | "")}>
+          <TextField label={t("liste.qty")} inputMode="decimal" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={t("liste.optional")} />
+          <SelectField label={t("liste.unit")} value={unit} onChange={(e) => setUnit(e.target.value as Unit | "")}>
             <option value="">—</option>
             {UNITS.map((u) => (
               <option key={u} value={u}>
-                {u}
+                {UNIT_LABEL[u]}
               </option>
             ))}
           </SelectField>
         </div>
-        <div role="group" aria-label="Nereden alınacak" className={s.sides}>
+        <div role="group" aria-label={t("liste.where")} className={s.sides}>
           <DishChip selected={effectiveSide === "pazar"} onClick={() => setSide("pazar")}>
-            Pazar
+            {SIDE_LABEL.pazar}
           </DishChip>
           <DishChip selected={effectiveSide === "market"} onClick={() => setSide("market")}>
-            Market
+            {SIDE_LABEL.market}
           </DishChip>
         </div>
         <Button type="submit" size="lg" block>
-          Listeye ekle
+          {t("cook.addToList")}
         </Button>
       </form>
     </Dialog>

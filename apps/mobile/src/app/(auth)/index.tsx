@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useApp } from "@/store";
 import { Button, Screen, Text } from "@/ui";
 
 export default function Giris() {
   const loadDemo = useApp((s) => s.loadDemo);
   const [busy, setBusy] = useState(false);
+  const { t } = useTranslation();
   return (
     <Screen header>
-      <Text variant="display">Akşama ne var?</Text>
+      <Text variant="display">{t("app.name")}</Text>
       <Button
-        title="Örnek evle dene · Ali ve Zeynep"
+        title={t("giris.demo")}
         busy={busy}
         onPress={async () => {
           setBusy(true);

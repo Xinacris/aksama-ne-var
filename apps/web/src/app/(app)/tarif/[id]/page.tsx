@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, t as tr } from "@anv/core/i18n";
 import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useState } from "react";
@@ -22,7 +23,7 @@ import { dishInSentence, offsetLabel } from "@anv/core/domain/prep";
 import { daysSinceCooked, lastCookedMap, rotationLabel } from "@anv/core/domain/rotation";
 import { formatIngredientQuantity, ingredientStatus, recipeLabel } from "@anv/core/domain/shopping";
 import { usePeople } from "@/hooks/usePeople";
-import { dative, lowerFirstTr } from "@anv/core/lib/text";
+import { dative } from "@anv/core/lib/text";
 import { recipesMap, selectList, useApp } from "@/store/app";
 import s from "./page.module.css";
 
@@ -60,16 +61,16 @@ function TarifInner() {
         <div className={s.bar}>
           <Link href="/tarifler" className={s.back}>
             <IconChevronLeft size={20} />
-            Tarifler
+            {tr("tarif.back")}
           </Link>
         </div>
         <div style={{ padding: "16px" }}>
           <EmptyState
-            title="Bu tarifi bulamadık"
-            text="Silinmiş ya da link eksik olabilir. Tarifler arasında arayabilirsin."
+            title={tr("tarif.notFound")}
+            text={tr("tarif.notFoundText")}
             actions={
               <ButtonLink href="/tarifler" size="sm">
-                Tariflere git
+                {tr("edit.toRecipes")}
               </ButtonLink>
             }
           />
@@ -93,20 +94,20 @@ function TarifInner() {
   const custom = recipe.householdId !== null;
 
   const backHref = ctx ? (ctx === today ? "/bugun" : "/hafta") : "/tarifler";
-  const backLabel = ctx ? (ctx === today ? "Bugün" : "Hafta") : "Tarifler";
-  const eyebrow = ctx ? (ctx === today ? "Bu akşamın menüsü" : `${dayName(ctx)} akşamının menüsü`) : COURSE_LABEL[recipe.course];
+  const backLabel = ctx ? (ctx === today ? tr("tarif.backToday") : tr("tarif.backWeek")) : tr("tarif.back");
+  const eyebrow = ctx ? (ctx === today ? tr("tarif.tonightMenu") : tr("tarif.dayMenu", { day: dayName(ctx) })) : COURSE_LABEL[recipe.course];
   const title = ctx ? menuTitle(menu, byId) : recipe.name;
   const recipeMinutes = recipe.prepMinutes + recipe.cookMinutes;
   const metaParts = ctx
     ? [
-        `${items.length} parça`,
-        `yaklaşık ${formatDuration(totalMinutes(menu, byId))}`,
-        `${recipe.servings} kişilik${evening?.outcome.kind === "lunch" ? ", yarına da artar" : evening?.outcome.kind === "fridge" ? ", artanı dolaba" : ""}`,
+        tr("tarif.parts", { count: items.length }),
+        tr("tarif.about", { time: formatDuration(totalMinutes(menu, byId)) }),
+        `${tr("tarif.serves", { n: recipe.servings })}${evening?.outcome.kind === "lunch" ? tr("tarif.lastsTomorrow") : evening?.outcome.kind === "fridge" ? tr("tarif.leftoverFridge") : ""}`,
       ]
     : [
-        recipe.stub ? "ayrıntı bekliyor" : recipe.timeNote ?? formatDuration(recipeMinutes),
-        recipe.waitMinutes ? `+ ${formatDuration(recipe.waitMinutes)} bekleme` : null,
-        `${recipe.servings} kişilik`,
+        recipe.stub ? tr("tarifler.pendingDetails") : recipe.timeNote ?? formatDuration(recipeMinutes),
+        recipe.waitMinutes ? tr("tarif.plusWait", { time: formatDuration(recipe.waitMinutes) }) : null,
+        tr("tarif.serves", { n: recipe.servings }),
         policyMeta(recipe),
       ];
   const rotation = rotationLabel(daysSinceCooked(recipe.id, last, today), solo);
@@ -121,25 +122,25 @@ function TarifInner() {
   const freezerTask = ctx ? tasks.find((t) => t.recipeId === recipe.id && t.freezer) : undefined;
 
   function status(ing: Ingredient): { tone: "olive" | "sand" | "tomato"; label: string; action?: () => void; aria?: string } {
-    if (ing.staple) return { tone: "olive", label: "Evde var" };
+    if (ing.staple) return { tone: "olive", label: tr("tarif.inHome") };
     if (ing.name === recipe!.freezerItem && pantry.some((p) => p.name === ing.name)) {
-      return { tone: "olive", label: freezerTask?.status === "done" ? "Evde · çözülüyor" : "Evde · buzlukta" };
+      return { tone: "olive", label: tr(freezerTask?.status === "done" ? "tarif.thawing" : "tarif.inFreezer") };
     }
     const st2 = ingredientStatus(ing, rows, pantry);
-    const name = lowerFirstTr(ing.name);
+    const name = ing.name.charAt(0).toLocaleLowerCase(intlTag()) + ing.name.slice(1);
     if (st2 === "evde") {
       const removable = pantry.some((p) => p.name === ing.name && p.quantity === null);
       return removable
-        ? { tone: "olive", label: "Evde var", action: () => unmarkHave(ing.name), aria: `${name}: evde var işaretini kaldır` }
-        : { tone: "olive", label: "Evde var" };
+        ? { tone: "olive", label: tr("tarif.inHome"), action: () => unmarkHave(ing.name), aria: tr("tarif.unmarkHave", { name }) }
+        : { tone: "olive", label: tr("tarif.inHome") };
     }
-    if (st2 === "listede") return { tone: "sand", label: "Listede", action: () => markHave(ing.name), aria: `${name}: evde var olarak işaretle` };
+    if (st2 === "listede") return { tone: "sand", label: tr("tarif.onList"), action: () => markHave(ing.name), aria: tr("tarif.markHave", { name }) };
     return {
       tone: "tomato",
-      label: "Eksik · ekle",
+      label: tr("tarif.missingAdd"),
       action: () =>
         addManualItem({ name: ing.name, quantity: ing.quantity ? ing.quantity * factor : null, unit: ing.unit, side: ing.side, aisle: ing.aisle, forRecipeId: recipe!.id }),
-      aria: `${name} listeye ekle`,
+      aria: tr("cook.addNamed", { name }),
     };
   }
 
@@ -152,7 +153,7 @@ function TarifInner() {
           <IconChevronLeft size={20} />
           {backLabel}
         </Link>
-        <button type="button" className={s.more} aria-label="Diğer seçenekler" onClick={() => setMenuOpen(true)}>
+        <button type="button" className={s.more} aria-label={tr("tarif.more")} onClick={() => setMenuOpen(true)}>
           <IconMore size={20} />
         </button>
       </div>
@@ -165,11 +166,11 @@ function TarifInner() {
       </header>
 
       {ctx && items.length > 1 && (
-        <nav aria-label="Menünün parçaları" className={s.parts}>
+        <nav aria-label={tr("tarif.menuParts")} className={s.parts}>
           {SLOTS.filter((sl) => menu[sl]).map((sl) => {
             const r = byId.get(menu[sl]!.recipeId);
             if (!r) return null;
-            const short = sl === "ana" ? "ANA" : SLOT_SHORT[sl].toLocaleUpperCase("tr");
+            const short = sl === "ana" ? tr("tarif.mainShort") : SLOT_SHORT[sl].toLocaleUpperCase(intlTag());
             return (
               <Link key={sl} href={`/tarif/${r.id}?gun=${ctx}`} className={s.part} aria-current={r.id === recipe.id ? "true" : undefined}>
                 <span className={s.partSlot}>{short}</span>
@@ -192,25 +193,24 @@ function TarifInner() {
               {/* The Kaynak text as the user left it in the form; older imports without one get the derived credit. */}
               {recipe.sourceUrl
                 ? recipe.source
-                  ? `Kaynak: ${recipe.source}`
+                  ? tr("import.credit", { text: recipe.source })
                   : sourceCredit({ platform: recipe.sourcePlatform, author: recipe.sourceAuthor, url: recipe.sourceUrl })
                 : recipe.source}
             </strong>
             {creator && (
               <span>
-                {" "}
-                · {creator.name} ekledi, {dayMonth(toIsoDate(new Date(recipe.createdAt)))}
+                {tr("tarif.addedBy", { name: creator.name, date: dayMonth(toIsoDate(new Date(recipe.createdAt))) })}
               </span>
             )}
           </span>
           {recipe.sourceUrl && (
             <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className={s.sourceLink}>
-              {recipe.sourcePlatform === "web" || !recipe.sourcePlatform ? "Sayfayı aç" : "Videoyu aç"}
+              {recipe.sourcePlatform === "web" || !recipe.sourcePlatform ? tr("tarif.openPage") : tr("tarif.openVideo")}
             </a>
           )}
           {recipe.writtenRecipeUrl && (
             <a href={recipe.writtenRecipeUrl} target="_blank" rel="noopener noreferrer" className={s.sourceLink}>
-              Yazılı tarif
+              {tr("tarif.written")}
             </a>
           )}
         </div>
@@ -220,11 +220,11 @@ function TarifInner() {
         <div className={s.stub}>
           <EmptyState
             headingLevel={3}
-            title={params.get("yeni") ? "Kaydedildi, ayrıntılar sonra da olur" : "Bu tarifin ayrıntıları henüz yok"}
-            text="Malzemeleri ve adımları eklersen liste ve hatırlatmalar da bu yemek için çalışır. Acelesi yok; haftaya şimdiden koyabilirsin."
+            title={params.get("yeni") ? tr("tarif.stubSaved") : tr("tarif.stubTitle")}
+            text={tr("tarif.stubText")}
             actions={
               <ButtonLink href={`/tarifler/${recipe.id}/duzenle`} size="sm">
-                Ayrıntıları ekle
+                {tr("tarif.addDetails")}
               </ButtonLink>
             }
           />
@@ -235,9 +235,9 @@ function TarifInner() {
         <section aria-labelledby="onhazirlik" className={s.prep}>
           <div className={s.secHead}>
             <h2 id="onhazirlik" className={s.secTitle}>
-              Ön hazırlık
+              {tr("tarif.prep")}
             </h2>
-            <span className={s.secNote}>Sofra {household?.dinnerTime ?? "19:30"}</span>
+            <span className={s.secNote}>{tr("tarif.dinnerAt", { time: household?.dinnerTime ?? "19:30" })}</span>
           </div>
           <ol className={s.timeline}>
             {ctx
@@ -248,10 +248,10 @@ function TarifInner() {
                   const other = t.recipeId !== recipe.id ? byId.get(t.recipeId) : undefined;
                   const due = clockTime(new Date(t.dueAt));
                   const sub = done
-                    ? `${doer?.name ?? "Biri"} yaptı · ${t.doneAt ? clockTime(new Date(t.doneAt)) : ""}`
+                    ? tr("tarif.didAt", { name: doer?.name ?? tr("tarif.someone"), time: t.doneAt ? clockTime(new Date(t.doneAt)) : "" })
                     : other
-                      ? `${due} · ${dishInSentence(recipeLabel(other))} için`
-                      : `${due}${assignee && !solo ? ` · ${dative(assignee.name)} hatırlatılacak` : ""}`;
+                      ? tr("tarif.forDish", { due, dish: dishInSentence(recipeLabel(other)) })
+                      : `${due}${assignee && !solo ? tr("tarif.willRemind", { name: assignee.name, nameDat: dative(assignee.name) }) : ""}`;
                   return (
                     <li key={t.id} className={[s.tl, done && s.tlDone, t === nextPending && s.tlNext].filter(Boolean).join(" ")}>
                       <span className={s.tlWhen}>{offsetLabel(t.offset)}</span>
@@ -260,7 +260,7 @@ function TarifInner() {
                         className={s.tlDot}
                         style={done ? { background: doer?.color ?? "var(--olive)" } : undefined}
                         aria-pressed={done}
-                        aria-label={`${t.label}: ${done ? "yapıldı, geri al" : "yapıldı olarak işaretle"}`}
+                        aria-label={tr(done ? "tarif.taskDone" : "tarif.taskMark", { label: t.label })}
                         onClick={() => (done ? undoTask(t.id) : completeTask(t.id))}
                       >
                         {done && <IconCheck size={13} strokeWidth={3} />}
@@ -278,7 +278,7 @@ function TarifInner() {
                     <span className={s.tlDot} aria-hidden="true" />
                     <span className={s.tlBody}>
                       <span className={s.tlLabel}>{p.label}</span>
-                      <span className={s.tlSub}>Plana eklenince hatırlatılır</span>
+                      <span className={s.tlSub}>{tr("tarif.remindOnPlan")}</span>
                     </span>
                   </li>
                 ))}
@@ -290,16 +290,16 @@ function TarifInner() {
         <section aria-labelledby="malzemeler" className={s.ingredients}>
           <div className={s.secHead}>
             <h2 id="malzemeler" className={s.secTitle}>
-              Malzemeler
+              {tr("tarif.ingredients")}
             </h2>
             <div className={s.scaler}>
               <span className={s.secNote}>
-                {recipeLabel(recipe)} · {shownServings} kişi
+                {tr("tarif.people", { dish: recipeLabel(recipe), n: shownServings })}
               </span>
-              <button type="button" className={s.scaleBtn} aria-label="Bir kişi azalt" disabled={shownServings <= 1} onClick={() => setServings(Math.max(1, shownServings - 1))}>
+              <button type="button" className={s.scaleBtn} aria-label={tr("tarif.fewer")} disabled={shownServings <= 1} onClick={() => setServings(Math.max(1, shownServings - 1))}>
                 <IconMinus size={16} />
               </button>
-              <button type="button" className={s.scaleBtn} aria-label="Bir kişi artır" disabled={shownServings >= 12} onClick={() => setServings(Math.min(12, shownServings + 1))}>
+              <button type="button" className={s.scaleBtn} aria-label={tr("tarif.more1")} disabled={shownServings >= 12} onClick={() => setServings(Math.min(12, shownServings + 1))}>
                 <IconPlus size={16} />
               </button>
             </div>
@@ -311,7 +311,7 @@ function TarifInner() {
               return (
                 <li key={ing.name} className={s.ing}>
                   <span className={s.ingText}>
-                    {q && <strong>{q}</strong>} {ing.quantity === null ? ing.name : lowerFirstTr(ing.name)}
+                    {q && <strong>{q}</strong>} {ing.quantity === null ? ing.name : ing.name.charAt(0).toLocaleLowerCase(intlTag()) + ing.name.slice(1)}
                     {ing.note ? ` (${ing.note})` : ""}
                   </span>
                   <StatusPill tone={stt.tone} onClick={stt.action} label={stt.aria}>
@@ -324,10 +324,10 @@ function TarifInner() {
               <li className={s.ing}>
                 <span className={s.ingText}>
                   {staples
-                    .map((i, idx) => (idx === 0 ? i.name : lowerFirstTr(i.name)))
+                    .map((i, idx) => (idx === 0 ? i.name : i.name.charAt(0).toLocaleLowerCase(intlTag()) + i.name.slice(1)))
                     .join(", ")}
                 </span>
-                <StatusPill tone="olive">Evde var</StatusPill>
+                <StatusPill tone="olive">{tr("tarif.inHome")}</StatusPill>
               </li>
             )}
           </ul>
@@ -337,7 +337,7 @@ function TarifInner() {
       {recipe.steps.length > 0 && (
         <section aria-labelledby="adimlar" className={s.steps}>
           <h2 id="adimlar" className={s.secTitle}>
-            Hazırlanışı
+            {tr("tarif.method")}
           </h2>
           <ol className={s.stepList}>
             {recipe.steps.map((text, i) => (
@@ -355,21 +355,21 @@ function TarifInner() {
       <div className={s.actions}>
         {recipe.steps.length > 0 && (
           <ButtonLink size="lg" href={`/pisir/${ctx ?? recipe.id}`}>
-            {ctx && items.length > 1 ? "Menüyü pişirmeye başla" : "Pişirmeye başla"}
+            {ctx && items.length > 1 ? tr("tarif.cookMenu") : tr("bugun.startCooking")}
           </ButtonLink>
         )}
         {ctx && mySlot ? (
           <Button variant="secondary" size="md" onClick={() => setReplace({ date: ctx, slot: mySlot })}>
-            Bu parçayı başka yemekle değiştir
+            {tr("tarif.replacePart")}
           </Button>
         ) : courseToSlot(recipe.course) ? (
           <Button variant="secondary" size="md" onClick={() => setPlace({ recipe })}>
-            Bir akşama koy
+            {tr("bugun.putOnEvening")}
           </Button>
         ) : null}
       </div>
 
-      <Dialog open={menuOpen} onClose={() => setMenuOpen(false)} eyebrow="Tarif" title={recipe.name}>
+      <Dialog open={menuOpen} onClose={() => setMenuOpen(false)} eyebrow={tr("tarif.recipe")} title={recipe.name}>
         <ul className={s.dialogList}>
           <li>
             <button
@@ -381,14 +381,14 @@ function TarifInner() {
                 setMenuOpen(false);
               }}
             >
-              {isFav ? "Sık yaptıklarımızdan çıkar" : "Sık yaptıklarımıza ekle"}
+              {isFav ? tr("tarif.unfav") : tr("tarif.fav")}
             </button>
           </li>
           <li>
             <Link className={dialogStyles.option} href={custom ? `/tarifler/${recipe.id}/duzenle` : `/tarifler/yeni?kopya=${recipe.id}`}>
               <span className={dialogStyles.optionText}>
-                {custom ? "Tarifi düzenle" : "Kopyasını düzenle"}
-                {!custom && <span className={dialogStyles.optionSub}>Hazır tarif değişmez; size özel bir kopyası açılır.</span>}
+                {custom ? tr("tarif.edit") : tr("edit.editCopy")}
+                {!custom && <span className={dialogStyles.optionSub}>{tr("tarif.copySub")}</span>}
               </span>
             </Link>
           </li>
@@ -405,13 +405,13 @@ function TarifInner() {
                   }}
                 >
                   <span className={dialogStyles.optionText}>
-                    Evet, sil
-                    <span className={dialogStyles.optionSub}>Plandaysa o gün “silinmiş tarif” olarak görünür.</span>
+                    {tr("tarif.confirmDelete")}
+                    <span className={dialogStyles.optionSub}>{tr("tarif.deleteSub")}</span>
                   </span>
                 </button>
               ) : (
                 <button type="button" className={`${dialogStyles.option} ${dialogStyles.danger}`} onClick={() => setConfirmDelete(true)}>
-                  Tarifi sil
+                  {tr("tarif.delete")}
                 </button>
               )}
             </li>

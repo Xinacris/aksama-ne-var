@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -57,7 +58,7 @@ export default function InvitePage() {
 
   if (status === "booting" || !info) {
     return (
-      <SimpleShell aside="Davet">
+      <SimpleShell aside={t("invite.aside")}>
         <Loading />
       </SimpleShell>
     );
@@ -65,24 +66,24 @@ export default function InvitePage() {
 
   if (info.kind === "missing" || info.kind === "full") {
     return (
-      <SimpleShell aside="Davet">
+      <SimpleShell aside={t("invite.aside")}>
         <main className={shell.narrow}>
-          <h1 className="visually-hidden">Davet</h1>
+          <h1 className="visually-hidden">{t("invite.aside")}</h1>
           <EmptyState
-            title={info.kind === "missing" ? "Bu davet bir eve ait görünmüyor" : "Bu ev şu an dolu"}
+            title={info.kind === "missing" ? t("invite.missingTitle") : t("invite.fullTitle")}
             text={
               info.kind === "missing"
-                ? "Link eksik kopyalanmış olabilir. Davet edenden linki bir daha göndermesini isteyebilirsin."
-                : "Akşama ne var? iki kişinin birlikte karar vermesi için. Kendi evini kurup istediğin kişiyi çağırabilirsin."
+                ? t("invite.missingText")
+                : t("invite.fullText")
             }
             actions={
               <>
                 <ButtonLink href={me ? "/bugun" : "/kayit"} size="sm">
-                  {me ? "Kendi evime dön" : "Kendi evimi kur"}
+                  {me ? t("invite.backHome") : t("invite.setUp")}
                 </ButtonLink>
                 {!me && (
                   <ButtonLink href="/giris" size="sm" variant="secondary">
-                    Giriş yap
+                    {t("auth.signIn")}
                   </ButtonLink>
                 )}
               </>
@@ -95,30 +96,31 @@ export default function InvitePage() {
 
   if (info.kind === "already-member") {
     return (
-      <SimpleShell aside="Davet">
+      <SimpleShell aside={t("invite.aside")}>
         <main className={shell.narrow}>
-          <h1 className={shell.title}>Zaten bu evdesin</h1>
+          <h1 className={shell.title}>{t("invite.alreadyTitle")}</h1>
           <p className={shell.lead}>
-            {me ? `${me.name} olarak girişlisin. ` : ""}Menü, liste ve hatırlatmalar seni bekliyor.
+            {me ? t("invite.signedInAs", { name: me.name }) : ""}
+            {t("invite.waiting")}
           </p>
           <ButtonLink href="/bugun" size="xl" block>
-            Bugüne git
+            {t("invite.toToday")}
           </ButtonLink>
           <Button variant="secondary" size="lg" block onClick={switchAccount}>
-            Farklı bir hesapla katıl
+            {t("invite.otherAccount")}
           </Button>
-          <p className={shell.note}>Aynı tarayıcıda ikinci kişi olarak denemek için: bu sekmede çıkış yapılır, diğer sekme açık kalır.</p>
+          <p className={shell.note}>{t("invite.sameBrowser")}</p>
         </main>
       </SimpleShell>
     );
   }
 
   const owner = info.owner;
-  const ownerPerson = { name: owner?.name ?? "Ev sahibi", initial: owner?.avatarInitial ?? "?", color: MEMBER_COLORS[0] };
+  const ownerPerson = { name: owner?.name ?? t("invite.owner"), initial: owner?.avatarInitial ?? "?", color: MEMBER_COLORS[0] };
   const hasOtherHousehold = status === "ready" && household && household.id !== info.household.id;
 
   return (
-    <SimpleShell aside="Davet">
+    <SimpleShell aside={t("invite.aside")}>
       <main className={s.main}>
         <section className={s.left}>
           <div className={s.avatars}>
@@ -128,9 +130,9 @@ export default function InvitePage() {
             </InviteAvatar>
           </div>
           <div className={s.intro}>
-            <h1 className={shell.title}>{ownerPerson.name} seni evine çağırıyor</h1>
+            <h1 className={shell.title}>{t("invite.title", { name: ownerPerson.name })}</h1>
             <p className={shell.lead}>
-              Akşam kararını birlikte verin. Eşleşmeler, alışveriş listesi ve hatırlatmalar ikinizde aynı anda güncellenir.
+              {t("invite.lead")}
             </p>
           </div>
 
@@ -144,32 +146,32 @@ export default function InvitePage() {
             hasOtherHousehold ? (
               <div className={s.stack}>
                 <p className={shell.lead}>
-                  Zaten bir evin var. Bu eve katılmak için önce Ayarlar › Ev bölümünden mevcut evinden ayrılman gerekiyor.
+                  {t("invite.hasOther")}
                 </p>
                 <ButtonLink href="/ayarlar" size="lg" variant="outlineInk" block>
-                  Ayarlara git
+                  {t("invite.toSettings")}
                 </ButtonLink>
                 <Button variant="secondary" size="lg" block onClick={switchAccount}>
-                  Farklı bir hesapla katıl
+                  {t("invite.otherAccount")}
                 </Button>
               </div>
             ) : (
               <div className={s.stack}>
                 <Button size="xl" block onClick={join} disabled={busy}>
-                  {busy ? "Katılıyorsun…" : `${me.name} olarak eve katıl`}
+                  {busy ? t("invite.joining") : t("invite.joinAs", { name: me.name })}
                 </Button>
                 <Button variant="secondary" size="lg" block onClick={switchAccount}>
-                  Farklı bir hesapla katıl
+                  {t("invite.otherAccount")}
                 </Button>
               </div>
             )
           ) : mode === "signup" ? (
             <div className={s.stack}>
-              <SignUpForm onDone={join} submitLabel="Hesap oluştur ve katıl" />
+              <SignUpForm onDone={join} submitLabel={t("invite.signUpJoin")} />
               <p className={shell.alt}>
-                Hesabın var mı?{" "}
+                {t("invite.haveAccount")}{" "}
                 <button type="button" className={s.linkBtn} onClick={() => setMode("login")}>
-                  Giriş yap ve katıl
+                  {t("invite.logInJoin")}
                 </button>
               </p>
             </div>
@@ -177,21 +179,21 @@ export default function InvitePage() {
             <div className={s.stack}>
               <LogInForm onDone={join} />
               <p className={shell.alt}>
-                Yeni misin?{" "}
+                {t("invite.new")}{" "}
                 <button type="button" className={s.linkBtn} onClick={() => setMode("signup")}>
-                  Hesap oluştur
+                  {t("auth.createAccount")}
                 </button>
               </p>
             </div>
           )}
         </section>
 
-        <aside aria-label="Evin sık yaptıkları" className={s.aside}>
-          <span className={s.eyebrow}>Bu evde sık yapılanlar</span>
+        <aside aria-label={t("invite.favsRegion")} className={s.aside}>
+          <span className={s.eyebrow}>{t("invite.favsTitle")}</span>
           <div className={s.card}>
             {info.favorites.length ? (
               <>
-                <span className={s.cardNote}>Katıldığında bu {info.favorites.length} yemek senin kartlarına da gelir:</span>
+                <span className={s.cardNote}>{t("invite.favsCome", { count: info.favorites.length })}</span>
                 <div className={s.chips}>
                   {info.favorites.map((r) => (
                     <span key={r.id} className={s.chip}>
@@ -201,11 +203,11 @@ export default function InvitePage() {
                 </div>
               </>
             ) : (
-              <span className={s.cardNote}>Henüz seçilmiş yemek yok; katıldıktan sonra birlikte seçersiniz.</span>
+              <span className={s.cardNote}>{t("invite.noFavs")}</span>
             )}
           </div>
           <Link href="/" className={s.small}>
-            Akşama ne var? nedir?
+            {t("invite.what")}
           </Link>
         </aside>
       </main>

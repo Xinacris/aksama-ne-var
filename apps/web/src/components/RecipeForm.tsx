@@ -1,5 +1,7 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
+import { AISLE_LABEL, SIDE_LABEL, UNIT_LABEL } from "@anv/core/data/models";
 import Link from "next/link";
 import { useState, type ClipboardEvent, type FormEvent, type ReactNode } from "react";
 import { AISLES, COURSES, COURSE_LABEL, UNITS } from "@anv/core/data/models";
@@ -15,18 +17,10 @@ import { ChoiceChips } from "./ui/ChoiceChips";
 import { SelectField, TextArea, TextField } from "./ui/Field";
 import s from "./RecipeForm.module.css";
 
-const POLICY_CHOICES = (["none", "lunch", "store"] as const).map((value) => ({ value, label: POLICY_OPTION[value] }));
+const policyChoices = () => (["none", "lunch", "store"] as const).map((value) => ({ value, label: POLICY_OPTION[value] }));
 
-const OFFSETS: [string, string][] = [
-  ["night-before", "Akşamdan"],
-  ["morning", "Sabah"],
-  ["-120min", "Pişirmeden 2 sa önce"],
-  ["-90min", "Pişirmeden 1,5 sa önce"],
-  ["-60min", "Pişirmeden 1 sa önce"],
-  ["-45min", "Pişirmeden 45 dk önce"],
-  ["-30min", "Pişirmeden 30 dk önce"],
-  ["-15min", "Pişirmeden 15 dk önce"],
-];
+/** Prep-ahead timings offered in the form (labels: `form.offset.<value>`). */
+const OFFSETS = ["night-before", "morning", "-120min", "-90min", "-60min", "-45min", "-30min", "-15min"];
 
 export function RecipeForm({
   title,
@@ -35,7 +29,7 @@ export function RecipeForm({
   submitLabel,
   onSubmit,
   header,
-  backLabel = "Geri",
+  backLabel = t("form.back"),
   openFilled = true,
 }: {
   title: string;
@@ -125,10 +119,10 @@ export function RecipeForm({
   function applyBulk() {
     const n = bulk === "ing" ? addIngredientRows(bulkText) : addStepRows(bulkText);
     if (!n) {
-      setBulkNote("Eklenecek satır bulamadık.");
+      setBulkNote(t("form.bulk.none"));
       return;
     }
-    setBulkNote(bulk === "ing" ? `${n} malzeme eklendi.` : `${n} adım eklendi.`);
+    setBulkNote(t(bulk === "ing" ? "form.bulk.ingAdded" : "form.bulk.stepAdded", { count: n }));
     setBulk(null);
     setBulkText("");
   }
@@ -146,20 +140,20 @@ export function RecipeForm({
     if (!offer) return;
     const at = { index: offer.index, before: offer.before };
     const n = offer.kind === "ing" ? addIngredientRows(offer.text, at) : addStepRows(offer.text, at);
-    setBulkNote(offer.kind === "ing" ? `${n} malzeme ayrı ayrı eklendi.` : `${n} adım ayrı ayrı eklendi.`);
+    setBulkNote(t(offer.kind === "ing" ? "form.bulk.ingSplit" : "form.bulk.stepSplit", { count: n }));
     setOffer(null);
   }
 
   const offerRow = (kind: "ing" | "step", index: number) =>
     offer?.kind === kind && offer.index === index ? (
-      <div className={s.offer} role="group" aria-label="Yapıştırılan satırlar">
-        <span className={s.offerText}>{offer.count} satır ayrı ayrı eklensin mi?</span>
+      <div className={s.offer} role="group" aria-label={t("form.bulk.pasted")}>
+        <span className={s.offerText}>{t("form.bulk.offer", { count: offer.count })}</span>
         <div className={s.offerActions}>
           <Button size="sm" pill onClick={splitOffer}>
-            Evet, ayır
+            {t("form.bulk.yes")}
           </Button>
           <Button size="sm" pill variant="ghost" onClick={() => setOffer(null)}>
-            Hayır
+            {t("form.bulk.no")}
           </Button>
         </div>
       </div>
@@ -169,8 +163,8 @@ export function RecipeForm({
     bulk === kind ? (
       <div className={s.bulk}>
         <TextArea
-          label={kind === "ing" ? "Her satıra bir malzeme" : "Her satıra bir adım"}
-          hint={kind === "ing" ? "ör. “2 su bardağı un”, “Tuz, karabiber”. Sonra satır satır düzeltebilirsin." : "Başındaki 1. / 1) numaraları silinir, boş satırlar atlanır."}
+          label={t(kind === "ing" ? "form.bulk.ingLabel" : "form.bulk.stepLabel")}
+          hint={t(kind === "ing" ? "form.bulk.ingHint" : "form.bulk.stepHint")}
           rows={6}
           value={bulkText}
           onChange={(e) => setBulkText(e.target.value)}
@@ -178,7 +172,7 @@ export function RecipeForm({
         />
         <div className={s.offerActions}>
           <Button size="sm" pill onClick={applyBulk}>
-            Satırları ekle
+            {t("form.bulk.add")}
           </Button>
           <Button
             size="sm"
@@ -189,7 +183,7 @@ export function RecipeForm({
               setBulkText("");
             }}
           >
-            Vazgeç
+            {t("form.bulk.cancel")}
           </Button>
         </div>
       </div>
@@ -207,7 +201,7 @@ export function RecipeForm({
         setBulkNote("");
       }}
     >
-      Toplu yapıştır
+      {t("form.bulk.toggle")}
     </Button>
   );
 
@@ -225,10 +219,10 @@ export function RecipeForm({
       <form onSubmit={submit} noValidate style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <section className={s.card} aria-labelledby="f-genel">
           <h2 id="f-genel" className={s.cardTitle}>
-            Genel
+            {t("form.general")}
           </h2>
-          <TextField label="Tarifin adı" value={d.name} onChange={(e) => set("name", e.target.value)} required />
-          <SelectField label="Öğün" value={d.course} onChange={(e) => set("course", e.target.value)}>
+          <TextField label={t("form.name")} value={d.name} onChange={(e) => set("name", e.target.value)} required />
+          <SelectField label={t("form.course")} value={d.course} onChange={(e) => set("course", e.target.value)}>
             {COURSES.map((c) => (
               <option key={c} value={c}>
                 {COURSE_LABEL[c]}
@@ -239,7 +233,7 @@ export function RecipeForm({
 
         <section className={s.card} aria-labelledby="f-malzeme">
           <h2 id="f-malzeme" className={s.cardTitle}>
-            Malzemeler
+            {t("form.ingredients")}
           </h2>
           <datalist id="malzeme-adlari">
             {INGREDIENT_CATALOG.map((c) => (
@@ -247,42 +241,42 @@ export function RecipeForm({
             ))}
           </datalist>
           {d.ingredients.map((ing, i) => (
-            <div key={i} className={s.ingRow} role="group" aria-label={`${i + 1}. malzeme`}>
+            <div key={i} className={s.ingRow} role="group" aria-label={t("form.ingN", { n: i + 1 })}>
               <div className={s.ingTop}>
                 <TextField
-                  label="Malzeme"
+                  label={t("form.ingredient")}
                   list="malzeme-adlari"
                   value={ing.name}
                   onChange={(e) => setIng(i, { name: e.target.value })}
                   onPaste={onPasteInto("ing", i)}
                 />
-                <TextField label="Miktar" inputMode="decimal" value={ing.quantity} onChange={(e) => setIng(i, { quantity: e.target.value })} />
-                <SelectField label="Birim" value={ing.unit} onChange={(e) => setIng(i, { unit: e.target.value })}>
+                <TextField label={t("form.qty")} inputMode="decimal" value={ing.quantity} onChange={(e) => setIng(i, { quantity: e.target.value })} />
+                <SelectField label={t("form.unit")} value={ing.unit} onChange={(e) => setIng(i, { unit: e.target.value })}>
                   <option value="">—</option>
                   {UNITS.map((u) => (
                     <option key={u} value={u}>
-                      {u}
+                      {UNIT_LABEL[u]}
                     </option>
                   ))}
                 </SelectField>
                 <button
                   type="button"
                   className={s.iconBtn}
-                  aria-label={`${i + 1}. malzemeyi kaldır`}
+                  aria-label={t("form.removeIng", { n: i + 1 })}
                   onClick={() => set("ingredients", d.ingredients.filter((_, idx) => idx !== i))}
                 >
                   <IconTrash size={18} />
                 </button>
               </div>
               <div className={s.ingBottom}>
-                <SelectField label="Nereden" value={ing.side} onChange={(e) => setIng(i, { side: e.target.value as "pazar" | "market" })}>
-                  <option value="pazar">Pazar</option>
-                  <option value="market">Market</option>
+                <SelectField label={t("form.side")} value={ing.side} onChange={(e) => setIng(i, { side: e.target.value as "pazar" | "market" })}>
+                  <option value="pazar">{SIDE_LABEL.pazar}</option>
+                  <option value="market">{SIDE_LABEL.market}</option>
                 </SelectField>
-                <SelectField label="Reyon" value={ing.aisle} onChange={(e) => setIng(i, { aisle: e.target.value })}>
+                <SelectField label={t("form.aisle")} value={ing.aisle} onChange={(e) => setIng(i, { aisle: e.target.value })}>
                   {AISLES.map((a) => (
                     <option key={a} value={a}>
-                      {a}
+                      {AISLE_LABEL[a]}
                     </option>
                   ))}
                 </SelectField>
@@ -294,7 +288,7 @@ export function RecipeForm({
           <div className={s.listActions}>
             <Button variant="soft" size="sm" pill onClick={() => set("ingredients", [...d.ingredients, emptyIngredient()])}>
               <IconPlus size={16} />
-              Malzeme ekle
+              {t("form.addIng")}
             </Button>
             {bulkToggle("ing")}
           </div>
@@ -302,7 +296,7 @@ export function RecipeForm({
 
         <section className={s.card} aria-labelledby="f-adim">
           <h2 id="f-adim" className={s.cardTitle}>
-            Hazırlanışı
+            {t("form.steps")}
           </h2>
           {d.steps.map((step, i) => (
             <div key={i} className={s.stepItem}>
@@ -311,14 +305,14 @@ export function RecipeForm({
                   {i + 1}
                 </span>
                 <TextArea
-                  label={`${i + 1}. adım`}
+                  label={t("form.stepN", { n: i + 1 })}
                   hideLabel
                   value={step}
                   rows={2}
                   onChange={(e) => set("steps", d.steps.map((x, idx) => (idx === i ? e.target.value : x)))}
                   onPaste={onPasteInto("step", i)}
                 />
-                <button type="button" className={s.iconBtn} aria-label={`${i + 1}. adımı kaldır`} onClick={() => set("steps", d.steps.filter((_, idx) => idx !== i))}>
+                <button type="button" className={s.iconBtn} aria-label={t("form.removeStep", { n: i + 1 })} onClick={() => set("steps", d.steps.filter((_, idx) => idx !== i))}>
                   <IconTrash size={18} />
                 </button>
               </div>
@@ -329,7 +323,7 @@ export function RecipeForm({
           <div className={s.listActions}>
             <Button variant="soft" size="sm" pill onClick={() => set("steps", [...d.steps, ""])}>
               <IconPlus size={16} />
-              Adım ekle
+              {t("form.addStep")}
             </Button>
             {bulkToggle("step")}
           </div>
@@ -338,64 +332,64 @@ export function RecipeForm({
         <section className={s.details} aria-labelledby="f-ayrinti">
           <div className={s.detailsHead}>
             <h2 id="f-ayrinti" className={s.cardTitle}>
-              Ayrıntılar
+              {t("form.details")}
             </h2>
-            <p className={s.formNote}>İstersen doldur; boş kalırsa da tarif çalışır.</p>
+            <p className={s.formNote}>{t("form.detailsNote")}</p>
           </div>
           <details className={s.more} open={open.genel} onToggle={(e) => toggle("genel", e.currentTarget.open)}>
             <summary className={s.summary}>
-              <span className={s.summaryTitle}>Süre, porsiyon, etiketler</span>
+              <span className={s.summaryTitle}>{t("form.sec.genel")}</span>
               <span className={s.summaryText}>{genelSummary(d)}</span>
             </summary>
             <div className={s.moreBody}>
               <div className={s.grid4}>
-                <TextField label="Hazırlık (dk)" inputMode="numeric" value={d.prepMinutes} onChange={(e) => set("prepMinutes", e.target.value)} />
+                <TextField label={t("form.prepMin")} inputMode="numeric" value={d.prepMinutes} onChange={(e) => set("prepMinutes", e.target.value)} />
                 <TextField
-                  label="Pişirme (dk)"
+                  label={t("form.cookMin")}
                   inputMode="numeric"
                   value={d.cookMinutes}
                   onChange={(e) => set("cookMinutes", e.target.value)}
                   // Gentle only: never blocks saving.
-                  hint={longCook ? "Süre uzun görünüyor, kontrol et" : undefined}
+                  hint={longCook ? t("form.longCook") : undefined}
                 />
                 <TextField
-                  label="Bekleme (dk)"
+                  label={t("form.waitMin")}
                   inputMode="numeric"
                   placeholder="0"
                   value={d.waitMinutes}
                   onChange={(e) => set("waitMinutes", e.target.value)}
                 />
-                <TextField label="Kaç kişilik" inputMode="numeric" value={d.servings} onChange={(e) => set("servings", e.target.value)} />
+                <TextField label={t("form.servings")} inputMode="numeric" value={d.servings} onChange={(e) => set("servings", e.target.value)} />
               </div>
-              <p className={s.formNote}>Pişirme yalnızca ocakta ya da fırında geçen süre. Marine, dinlendirme, ıslatma Bekleme&apos;ye yazılır.</p>
-              <TextField label="Etiketler" hint="Virgülle ayır: Fırında, Kıymalı, Akşamdan ıslat" value={d.tags} onChange={(e) => set("tags", e.target.value)} />
+              <p className={s.formNote}>{t("form.cookNote")}</p>
+              <TextField label={t("form.tags")} hint={t("form.tagsHint")} value={d.tags} onChange={(e) => set("tags", e.target.value)} />
             </div>
           </details>
           <details className={s.more} open={open.prep} onToggle={(e) => toggle("prep", e.currentTarget.open)}>
             <summary className={s.summary}>
-              <span className={s.summaryTitle}>Ön hazırlık</span>
+              <span className={s.summaryTitle}>{t("form.sec.prep")}</span>
               <span className={s.summaryText}>{prepSummary(d)}</span>
             </summary>
             <div className={s.moreBody}>
               {d.prepItems.map((p, i) => (
-                <div key={i} className={s.prepRow} role="group" aria-label={`${i + 1}. ön hazırlık`}>
+                <div key={i} className={s.prepRow} role="group" aria-label={t("form.prepN", { n: i + 1 })}>
                   <TextField
-                    label="Ne yapılacak"
+                    label={t("form.prepWhat")}
                     value={p.label}
-                    placeholder="ör. Kıymayı buzluktan çıkar"
+                    placeholder={t("form.prepPlaceholder")}
                     onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, label: e.target.value } : x)))}
                   />
-                  <SelectField label="Ne zaman" value={p.offset} onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, offset: e.target.value } : x)))}>
-                    {OFFSETS.map(([v, l]) => (
+                  <SelectField label={t("form.prepWhen")} value={p.offset} onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, offset: e.target.value } : x)))}>
+                    {OFFSETS.map((v) => (
                       <option key={v} value={v}>
-                        {l}
+                        {t(`form.offset.${v}`)}
                       </option>
                     ))}
                   </SelectField>
                   <button
                     type="button"
                     className={s.iconBtn}
-                    aria-label={`${i + 1}. ön hazırlığı kaldır`}
+                    aria-label={t("form.removePrep", { n: i + 1 })}
                     onClick={() => set("prepItems", d.prepItems.filter((_, idx) => idx !== i))}
                   >
                     <IconTrash size={18} />
@@ -406,7 +400,7 @@ export function RecipeForm({
                       checked={p.freezer}
                       onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, freezer: e.target.checked } : x)))}
                     />
-                    Buzlukla ilgili
+                    {t("form.freezerRelated")}
                   </label>
                 </div>
               ))}
@@ -418,10 +412,10 @@ export function RecipeForm({
                 onClick={() => set("prepItems", [...d.prepItems, { label: "", offset: "morning", freezer: false }])}
               >
                 <IconPlus size={16} />
-                Ön hazırlık ekle
+                {t("form.addPrep")}
               </Button>
-              <SelectField label="Buzluktan çıkacak malzeme" value={d.freezerItem} onChange={(e) => set("freezerItem", e.target.value)}>
-                <option value="">Yok</option>
+              <SelectField label={t("form.freezerItem")} value={d.freezerItem} onChange={(e) => set("freezerItem", e.target.value)}>
+                <option value="">{t("form.none")}</option>
                 {ingredientNames.map((n) => (
                   <option key={n} value={n}>
                     {n}
@@ -432,34 +426,34 @@ export function RecipeForm({
           </details>
           <details className={s.more} open={open.source} onToggle={(e) => toggle("source", e.currentTarget.open)}>
             <summary className={s.summary}>
-              <span className={s.summaryTitle}>Kaynak ve artarsa</span>
+              <span className={s.summaryTitle}>{t("form.sec.source")}</span>
               <span className={s.summaryText}>{sourceSummary(d)}</span>
             </summary>
             <div className={s.moreBody}>
               <TextField
-                label="Kaynak"
-                hint="Serbest metin: “YouTube · Yemek.com”, “Annemin defteri” ya da bir link."
+                label={t("form.source")}
+                hint={t("form.sourceHint")}
                 value={d.source}
                 onChange={(e) => set("source", e.target.value)}
               />
               <div className={s.leftover}>
                 <ChoiceChips
-                  label="Artarsa ne olur?"
-                  options={POLICY_CHOICES}
+                  label={t("form.leftoverQ")}
+                  options={policyChoices()}
                   value={d.leftoverPolicy}
                   onChange={(v) => set("leftoverPolicy", v)}
                 />
                 {d.leftoverPolicy === "store" && (
-                  <SelectField label="Kaç gün içinde" className={s.days} value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
+                  <SelectField label={t("form.keepDays")} className={s.days} value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
                     {["1", "2", "3", "4"].map((n) => (
                       <option key={n} value={n}>
-                        {n} gün
+                        {t("form.days", { count: Number(n) })}
                       </option>
                     ))}
                   </SelectField>
                 )}
               </div>
-              <p className={s.formNote}>Evde öğlen yiyen yoksa “öğlen yenir” de dolaba kalır. Her akşam ayrıca seçebilirsiniz.</p>
+              <p className={s.formNote}>{t("form.lunchNote")}</p>
             </div>
           </details>
         </section>
@@ -474,7 +468,7 @@ export function RecipeForm({
         )}
         <div className={s.actions}>
           <Button type="submit" size="lg" disabled={busy}>
-            {busy ? "Kaydediliyor…" : submitLabel}
+            {busy ? t("form.saving") : submitLabel}
           </Button>
         </div>
       </form>

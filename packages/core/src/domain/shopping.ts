@@ -1,4 +1,6 @@
+import { t } from "../i18n";
 import {
+  AISLE_LABEL,
   MARKET_AISLES,
   PAZAR_AISLES,
   type Aisle,
@@ -291,7 +293,9 @@ export function generateList(input: ListInput): ListRow[] {
 // ───────────────────────── grouping & counts ─────────────────────────
 
 export interface ListGroup {
-  title: Aisle;
+  aisle: Aisle;
+  /** Shown name of the aisle (current language). */
+  title: string;
   items: ListRow[];
   left: number;
   note: string;
@@ -306,7 +310,7 @@ export function groupList(rows: ListRow[], side: Side): ListGroup[] {
       .sort((a, b) => a.name.localeCompare(b.name, "tr"));
     if (items.length === 0) continue;
     const left = items.filter((i) => !i.checkedBy).length;
-    groups.push({ title: aisle, items, left, note: left === 0 ? "tamam" : `${left} kaldı` });
+    groups.push({ aisle, title: AISLE_LABEL[aisle], items, left, note: left === 0 ? t("list.groupDone") : t("list.groupLeft", { count: left }) });
   }
   return groups;
 }
@@ -320,9 +324,9 @@ export function sideCount(rows: ListRow[], side: Side): string {
 
 export function remainingNote(rows: ListRow[]): string {
   const remaining = rows.filter((r) => !r.checkedBy).length;
-  if (rows.length === 0) return "Liste boş";
-  if (remaining === 0) return "Hepsi alındı · bitirince evde var'a geçer";
-  return `${remaining} ürün kaldı · alınmayanlar listede bekler`;
+  if (rows.length === 0) return t("list.empty");
+  if (remaining === 0) return t("list.allGot");
+  return t("list.remaining", { count: remaining });
 }
 
 // ───────────────────────── finishing ─────────────────────────

@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useState } from "react";
 import { IconChevronLeft, IconChevronRight, IconSnowflake } from "@/components/icons";
@@ -32,7 +33,7 @@ export default function HaftaPage() {
     onDay: (d) => setDay(d),
   };
 
-  const eyebrow = offset === 0 ? "Son iki gün ve önümüzdeki beş gün" : offset < 0 ? `${-offset} hafta önce` : `${offset} hafta sonra`;
+  const eyebrow = offset === 0 ? t("hafta.window") : offset < 0 ? t("hafta.weeksAgo", { count: -offset }) : t("hafta.weeksLater", { count: offset });
 
   return (
     <main className={s.page}>
@@ -42,41 +43,41 @@ export default function HaftaPage() {
           <h1 className={s.title}>{week.range}</h1>
         </div>
         <div className={s.nav}>
-          <button type="button" className={s.round} aria-label="Önceki hafta" onClick={() => setOffset((o) => o - 1)}>
+          <button type="button" className={s.round} aria-label={t("hafta.prev")} onClick={() => setOffset((o) => o - 1)}>
             <IconChevronLeft size={18} />
           </button>
-          <button type="button" className={s.todayBtn} onClick={() => setOffset(0)} aria-label="Bu haftaya dön">
-            Bugün
+          <button type="button" className={s.todayBtn} onClick={() => setOffset(0)} aria-label={t("hafta.backToThisWeek")}>
+            {t("hafta.today")}
           </button>
-          <button type="button" className={s.round} aria-label="Sonraki hafta" onClick={() => setOffset((o) => o + 1)}>
+          <button type="button" className={s.round} aria-label={t("hafta.next")} onClick={() => setOffset((o) => o + 1)}>
             <IconChevronRight size={18} />
           </button>
         </div>
       </div>
 
-      <section aria-label="Haftanın özeti" className={s.summary}>
+      <section aria-label={t("hafta.summary")} className={s.summary}>
         <div className={s.sumCard}>
-          <span className={s.sumLabel}>Akşamlar</span>
-          <span className={s.sumValue}>{week.summary.planned} akşam planlı</span>
+          <span className={s.sumLabel}>{t("hafta.evenings")}</span>
+          <span className={s.sumValue}>{t("hafta.planned", { count: week.summary.planned })}</span>
           <span className={s.sumNote}>{week.summary.note}</span>
         </div>
         <Link href="/liste" className={s.sumCard}>
-          <span className={s.sumLabel}>Alışveriş listesi</span>
-          <span className={s.sumValue}>{week.list.total} ürün</span>
+          <span className={s.sumLabel}>{t("hafta.list")}</span>
+          <span className={s.sumValue}>{t("hafta.items", { count: week.list.total })}</span>
           <span className={s.sumNote}>
             {partner && week.list.partnerBought > 0 && (
               <>
                 <Avatar person={partner} size={20} />
-                {partner.name} {numberAccusative(week.list.partnerBought)} aldı ·{" "}
+                {t("hafta.partnerBought", { name: partner.name, count: week.list.partnerBought, nAcc: numberAccusative(week.list.partnerBought) })}
               </>
             )}
-            {week.list.pazar} pazar, {week.list.market} market
+            {t("hafta.split", { pazar: week.list.pazar, market: week.list.market })}
           </span>
         </Link>
         <div className={s.sumCard} style={{ gap: 8 }}>
           <span className={s.sumLabel}>
             <IconSnowflake size={15} strokeWidth={2} />
-            Bu hafta buzluktan çıkacaklar
+            {t("hafta.freezer")}
           </span>
           {week.freezer.length ? (
             <ul className={s.freezer}>
@@ -91,7 +92,7 @@ export default function HaftaPage() {
               ))}
             </ul>
           ) : (
-            <span className={s.sumNote}>Bu hafta buzluktan çıkacak bir şey yok.</span>
+            <span className={s.sumNote}>{t("hafta.freezerNone")}</span>
           )}
         </div>
       </section>

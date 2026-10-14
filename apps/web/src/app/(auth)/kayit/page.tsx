@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -21,14 +22,14 @@ export default function KayitPage() {
   }, [status, router]);
 
   return (
-    <SimpleShell aside="Yeni hesap">
+    <SimpleShell aside={t("kayit.aside")}>
       {status === "booting" ? (
         <Loading />
       ) : (
         <main className={shell.narrow}>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <h1 className={shell.title}>Akşam yemeğini dert etmeyin</h1>
-            <p className={shell.lead}>Bir hesap aç, sık yaptığınız yemekleri seç, sonra eşini ya da ev arkadaşını çağır.</p>
+            <h1 className={shell.title}>{t("kayit.title")}</h1>
+            <p className={shell.lead}>{t("kayit.lead")}</p>
           </div>
           <SignUpForm
             onDone={async () => {
@@ -39,7 +40,7 @@ export default function KayitPage() {
             }}
           />
           <p className={shell.alt}>
-            Zaten hesabın var mı? <Link href="/giris">Giriş yap</Link>
+            {t("kayit.haveAccount")} <Link href="/giris">{t("auth.signIn")}</Link>
           </p>
         </main>
       )}

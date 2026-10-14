@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useState } from "react";
 import type { LeftoverChoice } from "@anv/core/data/models";
 import { addDays } from "@anv/core/domain/dates";
@@ -20,7 +21,7 @@ function current(ev: EveningLeftover): LeftoverChoice | null {
  * with undo, synced like every other write. `when` is "tonight" (tonight's
  * menu after cooking, finish screen) or "yesterday" (Bugün's lunch card).
  */
-export function LeftoverChoices({ ev, when, title = "Artan oldu mu?" }: { ev: EveningLeftover; when: "tonight" | "yesterday"; title?: string }) {
+export function LeftoverChoices({ ev, when, title = t("leftovers.title") }: { ev: EveningLeftover; when: "tonight" | "yesterday"; title?: string }) {
   const household = useApp((x) => x.household);
   const today = useApp((x) => x.today);
   const setLeftoverChoice = useApp((x) => x.setLeftoverChoice);
@@ -39,14 +40,14 @@ export function LeftoverChoices({ ev, when, title = "Artan oldu mu?" }: { ev: Ev
   const by = ev.choiceBy ? byId.get(ev.choiceBy) : undefined;
   const outcome =
     ev.outcome.kind === "fridge"
-      ? `Dolapta · ${keepUntilLabel(ev.outcome.useBy, today)}`
+      ? t("leftovers.inFridge", { until: keepUntilLabel(ev.outcome.useBy, today) })
       : ev.outcome.kind === "lunch"
         ? ev.outcome.date === today
-          ? "Bugün öğlen yenecek"
-          : "Yarın öğlen yenecek"
+          ? t("leftovers.lunchToday")
+          : t("leftovers.lunchTomorrow")
         : ev.outcome.kind === "discard"
-          ? "Kimse yemeyecek"
-          : "Artan yok";
+          ? t("leftovers.nobody")
+          : t("leftovers.noneLeft");
 
   return (
     <div className={s.wrap}>
@@ -55,14 +56,14 @@ export function LeftoverChoices({ ev, when, title = "Artan oldu mu?" }: { ev: Ev
         <div className={s.choices}>
           {options.map((c) => (
             <button key={c} type="button" className={s.choice} aria-pressed={pressed === c} onClick={() => choose(c)}>
-              {c === "lunch" && when === "yesterday" ? "Bugün öğlen" : CHOICE_LABEL[c]}
+              {c === "lunch" && when === "yesterday" ? t("leftovers.lunchTodayChoice") : CHOICE_LABEL[c]}
             </button>
           ))}
         </div>
       </div>
       <p className={s.status} role="status">
         {outcome}
-        {by ? ` · ${by.name} seçti` : ev.choice === null ? " · tarifteki gibi" : ""}
+        {by ? t("leftovers.chosenBy", { name: by.name }) : ev.choice === null ? t("leftovers.asRecipe") : ""}
         {undo && (
           <>
             {" · "}
@@ -75,7 +76,7 @@ export function LeftoverChoices({ ev, when, title = "Artan oldu mu?" }: { ev: Ev
                 await setLeftoverChoice(ev.fromDate, prev);
               }}
             >
-              Geri al
+              {t("common.undo")}
             </button>
           </>
         )}

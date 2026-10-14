@@ -1,3 +1,5 @@
+import { labelRecord } from "../i18n";
+
 /**
  * Minimal key-value contract the LocalStorage adapter is written against,
  * so tests can inject an in-memory or failing store.
@@ -11,12 +13,8 @@ export interface KeyValueStore {
 
 export type StorageErrorCode = "quota" | "unavailable" | "corrupt";
 
-/** Turkish, calm, non-blaming messages surfaced in the UI. */
-export const STORAGE_ERROR_MESSAGE: Record<StorageErrorCode, string> = {
-  quota: "Tarayıcının kayıt alanı doldu. Eski verileri dışa aktarıp sıfırlamak yer açar.",
-  unavailable: "Tarayıcı şu an kayıt yapmamıza izin vermiyor. Gizli pencere olabilir mi?",
-  corrupt: "Kayıtlı verilerin bir kısmı okunamadı; o kısmı temiz bir sayfayla açtık.",
-};
+/** Calm, non-blaming messages surfaced in the UI (catalog: errors.storage.*). */
+export const STORAGE_ERROR_MESSAGE = labelRecord<StorageErrorCode>("errors.storage", ["quota", "unavailable", "corrupt"]);
 
 export class StorageError extends Error {
   constructor(
