@@ -158,7 +158,7 @@ function TimerBar({ session }: { session: CookingSession }) {
 
   return (
     <>
-      <div className={s.alerts} aria-live="assertive" aria-label={tr("cook.timerAlerts")}>
+      <div className={s.alerts} aria-live="assertive">
         {due.length > 0 && (
           <div className={s.alert} role="alert">
             <span className={s.alertText}>
