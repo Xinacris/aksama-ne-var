@@ -1,9 +1,6 @@
-import { intlTag, t } from "@anv/core/i18n";
+import { t } from "@anv/core/i18n";
 import type { ReactNode } from "react";
 import type { Match, Recipe } from "@anv/core/data/models";
-import { ablativeSuffix, dative } from "@anv/core/lib/text";
-import { dayName } from "@anv/core/domain/dates";
-import { rotationShort } from "@anv/core/domain/rotation";
 import { IconCheck, IconGrip } from "./icons";
 import s from "./MatchList.module.css";
 
@@ -13,19 +10,7 @@ export interface MatchView {
   note: string;
 }
 
-/** "Salı'ya kondu", "Cumartesiden geri döndü", "En son 2 ay önce". */
-export function matchNote(m: Match, daysSince: number | null): string {
-  if (m.status === "placed" && m.placedDate) {
-    const day = dayName(m.placedDate);
-    return t("match.placedOn", { day, dayDat: dative(day) });
-  }
-  if (m.status === "returned" && m.returnedFrom) {
-    const day = dayName(m.returnedFrom);
-    return t("match.returnedFrom", { day, dayAbl: `${day}${ablativeSuffix(day)}` });
-  }
-  const r = rotationShort(daysSince);
-  return r.charAt(0).toLocaleUpperCase(intlTag()) + r.slice(1);
-}
+export { matchNote } from "@anv/core/domain/week";
 
 export function MatchList({
   items,

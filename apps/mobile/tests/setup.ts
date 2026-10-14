@@ -38,3 +38,8 @@ jest.mock("expo-router", () => {
     Link: ({ children }: { children: unknown }) => children,
   };
 });
+
+require("react-native-gesture-handler/jestSetup");
+// Reanimated 4 / Worklets have no native runtime in Jest: their official mocks.
+jest.mock("react-native-worklets", () => require("react-native-worklets/lib/module/mock"));
+jest.mock("react-native-reanimated", () => require("react-native-reanimated/mock"));
