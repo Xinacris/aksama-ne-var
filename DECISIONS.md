@@ -324,3 +324,24 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 
 - **Merge:** `origin/main` already had `round-3` up to `e2edf7b` (PR #1, merge commit). The remaining commit `5d26bbe` can't fast-forward onto a merge commit, so `git merge --no-ff round-3` (no conflicts). The stale local `main` (62282f9, ancestor of everything) was moved to `origin/main` first with `git reset --keep` — no local commits lost.
 - **Docs:** `CLAUDE.md` now says all work happens on `main`; `docs/MOBILE.md` (checkout `main`) and `docs/MONOREPO.md` (Vercel settings now done) no longer refer to `round-3`. History (PROGRESS, DECISIONS, PROMPT-v3) keeps its mentions.
+
+## Round 3.1 — R2 Why the 1.0.0 APK said "App not installed"
+
+**Evidence** (`aksama-ne-var-1.0.0-5d26bbe.apk`, still in `~/Downloads`; no phone on `adb`, so no `INSTALL_FAILED_*` code):
+
+- `apksigner verify --print-certs`: verifies, **v2 only** (v1 false, v3 false), signer `CN=Android Debug, O=Unknown` (SHA-256 `fac61745…033b9c`) — the public React Native template debug key. No warnings.
+- `aapt2 dump badging`: `com.PLACEHOLDER.mealplanner`, versionCode 1 / 1.0.0, **minSdk 24** (Android 7.0), targetSdk 36, **native-code `arm64-v8a` `armeabi-v7a` only**. Not `testOnly`, not debuggable.
+- `zipalign -c -P 16 4`: aligned; `unzip -tq`: no errors; every arm64 `.so` has 16 KB `LOAD` alignment (`llvm-readelf`), native libs stored uncompressed as `extractNativeLibs=false` requires.
+
+**Conclusion:** the file itself is well-formed: an ARM phone on Android 7+ with free space and no earlier copy should install it. So the friend's "Uygulama yüklenmedi" is a phone-side refusal. The installer shows that generic message for all of these, and without his phone's log they can't be told apart. Ranked by likelihood:
+
+1. **An app with the same package but a different signature was already on the phone** (an earlier copy, or a build signed by another machine) → `INSTALL_FAILED_UPDATE_INCOMPATIBLE`. This is the classic cause of exactly this message, and every debug-signed build makes it possible.
+2. **The phone is outside what the file supports:** an x86/x86_64 device (`INSTALL_FAILED_NO_MATCHING_ABIS`, since the build had been narrowed to two ARM ABIs to save memory), or Android 6 or older (minSdk 24).
+3. **A security layer refusing a debug-signed sideload** (Play Protect, or the MIUI/HyperOS/ColorOS installers), or a truncated download (WhatsApp sometimes keeps a partial file when a transfer is interrupted). Running `unzip -t` on his copy would show that.
+
+**What the fix does:** it removes every cause on the APK's side: all four ABIs, a dedicated release key with v1 + v2 + v3 signatures, and versionCode 2. It also documents (`docs/MOBILE.md`) how to read the exact error with `adb install` if it still fails. If his phone already has any copy of the app, he uninstalls it once. minSdk stays 24 because Expo SDK 57 / React Native 0.86 require it, so **Android 7.0 or newer** is supported.
+
+- **Stable key:** `~/.config/aksama-ne-var/release.keystore` (created by the crashed session; kept, never regenerated), alias and passwords in `~/.gradle/gradle.properties`. The plugin `apps/mobile/plugins/withReleaseSigning.js` adds a `release` signingConfig that Gradle fills from those properties at build time, so no secret ever lands in the generated `android/`. Without them, the release falls back to the debug key with a warning from prebuild, Gradle and `npm run apk`.
+- **Heap is not set by the plugin** (the crashed session's draft forced `-Xmx4g` into the generated `gradle.properties`). The user-level `~/.gradle/gradle.properties` holds per-machine limits, and it takes precedence anyway.
+- **Package id kept as `com.PLACEHOLDER.mealplanner`.** The owner reserved that decision in Round 3. Changing it later also means one uninstall (new package = new app). Changing it at the same time as this key change would have cost no extra uninstall, so it is worth deciding before the first wider release.
+- **Unneeded permissions blocked** (`SYSTEM_ALERT_WINDOW`, `READ/WRITE_EXTERNAL_STORAGE`, which the template adds): fewer warnings in the installer and in Play Protect.

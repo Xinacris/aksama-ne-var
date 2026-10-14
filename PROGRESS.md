@@ -162,9 +162,20 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 
 **Where I found it (2026-10-14):** clean tree, no stash. The owner had already merged `round-3` up to V9 (`e2edf7b`) through PR #1 (`ff47760`) after setting Vercel's Root Directory; production `success`. `round-3` had one more commit, `5d26bbe` (local APK build: `npm run apk`, per-platform app-name locales). The local `main` was stale (62282f9). The APK `aksama-ne-var-1.0.0-5d26bbe.apk` from that commit is still in `~/Downloads` — the one that fails with "App not installed" on a friend's phone.
 
+**Where I found it (resume, 2026-10-14, after the RAM crash):** RAM 15 GB total (+15 GB swap). R0/R1 had been done and pushed (`323e1f4`, production green, `round-3` gone). The crashed session left uncommitted work. **R2:** a release keystore (`~/.config/aksama-ne-var/release.keystore`, kept) and the `AKSAMA_UPLOAD_*` keys, the signing plugin + test, version 1.0.1 / versionCode 2, and an `npm run apk` that builds all ABIs and verifies the signature. There was no diagnosis, no Gradle memory limits and no new APK. **R3:** about half done. The core pause/resume/restart/add-time + `timerAlarm.ts` + tests, a synthesized tone script + WAV, web `alarm.ts` + banner edits in `extras.tsx`, the `TimerSoundSetting` toggle and i18n keys. Nothing on mobile (no expo-audio / expo-notifications). A leftover `expo start` was killed.
+
 - [x] R0. Where things stand (note above; spec saved).
 - [x] R1. Consolidate on `main` and close `round-3`.
   - `5d26bbe` merged with `--no-ff` (merge `8fcff18`; the rest was in PR #1). Checks green (lint, typecheck, core 354 / mobile 25 / web 196, build, expo-doctor 21/21, Android export) → pushed `68e36ae` → production `success`, `https://aksama-ne-var.vercel.app` 200, `/api/translate` `{"available":true}`. `git log main..origin/round-3` empty → `round-3` deleted locally (`-d`) and on GitHub. `CLAUDE.md`, `docs/MOBILE.md`, `docs/MONOREPO.md` updated.
 - [ ] R2. APK that installs (diagnose, all four ABIs, stable release key, 1.0.1 / versionCode 2).
 - [ ] R3. Timer alarm (core fire-once from `endsAt`, synthesized tone, mobile sound + notification, web Web Audio + notification, settings toggle, tests).
 - [ ] R4. Final APK from `main`, verified, in `~/Downloads`.
+
+## In progress
+
+R2 — APK that installs.
+- [x] Diagnosis → DECISIONS.md
+- [x] Gradle memory limits in ~/.gradle/gradle.properties (-Xmx2g, 2 workers, no daemon/parallel)
+- [x] Signing plugin (kept from crashed session; heap override removed), 1.0.1 / versionCode 2
+- [ ] docs/MOBILE.md (signing, updates, adb errors, low-RAM Gradle)
+- [ ] `npm run apk` → verify (v2+ release cert, 4 ABIs, aligned)
