@@ -170,20 +170,17 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 - [x] R2. APK that installs (diagnose, all four ABIs, stable release key, 1.0.1 / versionCode 2).
   - Diagnosis in DECISIONS.md: the 1.0.0 file is well-formed (v2 debug signature, minSdk 24, arm64 + armeabi-v7a only, aligned, intact), so the refusal was on the phone's side; the most likely causes are an earlier copy signed differently, an x86 device or Android < 7, or Play Protect / a vendor installer refusing a debug-signed app. Fixed on the APK's side: release key (`~/.config/aksama-ne-var/release.keystore`, plugin `withReleaseSigning`), all four ABIs, 1.0.1 / versionCode 2. Gradle memory limits in `~/.gradle/gradle.properties`.
   - `aksama-ne-var-1.0.1-9b4f405.apk` (102 MB) verified: v2+v3, release cert, 4 ABIs, minSdk 24 (Android 7.0+), aligned. Build peak 12.6 GB system-wide (~4.8 GB for Gradle). docs/MOBILE.md updated. Checks green (lint, typecheck, core 354 / mobile 29 / web 196, build, expo-doctor 21/21) → pushed.
-- [ ] R3. Timer alarm (core fire-once from `endsAt`, synthesized tone, mobile sound + notification, web Web Audio + notification, settings toggle, tests).
+- [x] R3. Timer alarm (core fire-once from `endsAt`, synthesized tone, mobile sound + notification, web Web Audio + notification, settings toggle, tests).
+  - Core (crashed session's work, kept and verified): `domain/timerAlarm.ts` (finish from `endsAt`, once per finish, 10-min stale, 2-min cap, two at once → one ring, schedule + reconcile), pause/resume/restart/+1 min, `devicePrefs` (timer sound, one-time hint). Tone: `apps/mobile/scripts/make-alarm-tone.mjs` → `assets/sounds/timer_alarm.wav`.
+  - Mobile (new): `src/alarm/` — AlarmHost above every screen (expo-audio loop in silent mode + vibration + "Süre doldu" banner with Durdur), expo-notifications (channels Zamanlayıcılar / silent, reconcile on every timer change, tap opens the session = Stop, foreground suppressed), permission on the first timer + one-time hint, pause/resume/+1 dk on the phone, Ayarlar › Zamanlayıcı sesi. 9 tests (mocked notifications/audio).
+  - Web: Web Audio loop, banner + Durdur, hidden tab → notification + blinking title, Ayarlar toggle (crashed session's work); fixed a prohibited `aria-label` axe found. Tests: component (banner/Stop, toggle), e2e `alarm.spec.ts` (hidden tab, loop, Stop, sound off, axe light + dark), `cooking.spec.ts` updated.
+  - Checks green: lint, typecheck, core 371 / mobile 38 / web 197, build, expo-doctor 21/21, iOS + Android export; e2e alarm, cooking, a11y, english green.
 - [ ] R4. Final APK from `main`, verified, in `~/Downloads`.
+
 
 
 
 
 ## In progress
 
-R3 — timer alarm.
-- [x] Core: finished from `endsAt`, fire once, pause/resume/restart/+1 min, 10-min stale, 2-min cap, notification schedule (crashed session's work, verified: 17 tests)
-- [x] Tone: `apps/mobile/scripts/make-alarm-tone.mjs` → `assets/sounds/timer_alarm.wav`
-- [x] Mobile: AlarmHost (sound + vibration + banner), notifications (channels, reconcile, tap), permission + hint, Ayarlar toggle, 9 tests
-- [x] Web: Web Audio alarm, Durdur banner, notification + blinking title, Ayarlar toggle (crashed session's work)
-- [x] Web unit tests (banner, Durdur, toggle)
-- [ ] NOW RUNNING: Playwright alarm.spec + cooking.spec (--workers=1)
-- [ ] DECISIONS (household, silent mode, late delivery, tap = acknowledge), docs/MOBILE.md
-- [ ] Full checks → push
+R4 — final APK from `main` (after the R3 push and deploy check).
