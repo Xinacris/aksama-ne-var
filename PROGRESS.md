@@ -178,7 +178,31 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 - [x] R4. Final APK from `main`, verified, in `~/Downloads`.
   - `~/Downloads/aksama-ne-var-1.0.1-77bd20f.apk` (107 MB, from `77bd20f` = R3 on `main`): v2 + v3 with the release certificate (SHA-256 `76f8ec0b…1a661c`), versionCode 2 / 1.0.1, minSdk 24 (Android 7.0+), targetSdk 36, all four ABIs, `zipalign -P 16` OK, `unzip -t` OK, alarm tone bundled (`raw/timer_alarm`), no RECORD_AUDIO / exact-alarm permissions. Build peak 12.1 GB system-wide (baseline 7.8 GB). The intermediate R2 APK was deleted so it can't be sent by mistake.
 
+## Handoff after Round 3.1
 
+**Done (2026-10-14):** Round 3.1 is complete: R0–R4 are checked off above. `round-3` was merged into `main` and deleted. The APK installs on the APK's side: release key, all four ABIs, 1.0.1 / versionCode 2. The diagnosis is in DECISIONS.md. The timer alarm works on the phone (foreground loop + banner, background notifications) and on the web (Web Audio loop, hidden-tab notification + blinking title), with an Ayarlar toggle. All checks were green at the last code push (`760f920`, production `success`); this handoff commit is docs-only.
 
+- APK: `~/Downloads/aksama-ne-var-1.0.1-77bd20f.apk`, 107 MB.
+  - Version 1.0.1 / versionCode 2, minSdk 24 (Android 7.0+), all four ABIs.
+  - Release cert SHA-256 `76f8ec0b…1a661c`.
+  - Updates install over 1.0.1 from now on. A phone with 1.0.0 must uninstall it once.
+  - The old `aksama-ne-var-1.0.0-5d26bbe.apk` is still in `~/Downloads`; don't send it.
 
+**Open items for the owner:**
+- [ ] Install the APK on a real phone (send it on WhatsApp as a document). If it still fails, get the `adb install -r` output (see docs/MOBILE.md).
+- [ ] Check by hand:
+  - the timer rings in silent mode
+  - the notification arrives with sound while the screen is locked (it may be a few seconds late: no exact-alarm permission)
+  - with notification permission denied, the in-app alarm and the one-time hint still appear
+  - a web tab in the background rings and notifies
+- [ ] Back up `~/.config/aksama-ne-var/release.keystore` **and** the `AKSAMA_UPLOAD_*` lines in `~/.gradle/gradle.properties`, together, off this machine. Losing them means users must uninstall to update.
+- [ ] Decide the package name. It is still `com.PLACEHOLDER.mealplanner` (Android package and iOS bundle ID, `apps/mobile/app.json`). Changing it later means another uninstall/reinstall for everyone, and Play Store locks it forever. Suggestion: `com.aksamanevar.app`, or the reverse of a domain you own. After a change: 1.0.2 / versionCode 3, same keystore.
 
+**Where things live:**
+- Release keystore: `~/.config/aksama-ne-var/release.keystore` (never overwrite or regenerate; never commit). Signing plugin: `apps/mobile/plugins/withReleaseSigning.js`.
+- Passwords and Gradle memory settings: `~/.gradle/gradle.properties`.
+  - Memory: `org.gradle.jvmargs=-Xmx2g -XX:MaxMetaspaceSize=512m`, `org.gradle.workers.max=2`, `org.gradle.parallel=false`, `org.gradle.daemon=false`, `kotlin.daemon.jvmargs=-Xmx1g`.
+  - An APK build peaks around 12–12.6 GB system-wide on this 15 GB machine.
+- APK build: `npm run apk` (scripts/build-apk.mjs).
+- docs/MOBILE.md: the four ABIs, low-RAM build, release key and backup, the adb install error table (debugging "App not installed"), and the timer alarm.
+- Decisions: DECISIONS.md (APK diagnosis, alarm behaviour).
