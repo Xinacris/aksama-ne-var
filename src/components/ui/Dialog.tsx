@@ -31,6 +31,8 @@ export function Dialog({
     if (open && !d.open) {
       if (typeof d.showModal === "function") d.showModal();
       else d.setAttribute("open", "");
+      // showModal() focuses the first control (the close button); a field marked data-autofocus wins.
+      d.querySelector<HTMLElement>("[data-autofocus]")?.focus();
     } else if (!open && d.open) {
       if (typeof d.close === "function") d.close();
       else d.removeAttribute("open");

@@ -58,3 +58,45 @@ test("Tarifler tab opens the recipe list and stays lit on a recipe", async ({ pa
   await expect(page).toHaveURL(/\/tarif\/izmir-kofte/);
   await expect(tabs(page).filter({ hasText: "Tarifler" })).toHaveAttribute("aria-current", "page");
 });
+
+test("from Bugün: Tarifler → quick add by name → the recipe exists", async ({ page }) => {
+  await demo(page);
+  await tabs(page).filter({ hasText: "Tarifler" }).click();
+  await page.getByRole("button", { name: "Yeni tarif" }).click();
+  const sheet = page.getByRole("dialog", { name: "Yeni tarif" });
+  const input = sheet.getByLabel("Link yapıştır ya da yemeğin adını yaz");
+  await expect(input).toBeFocused();
+  await input.fill("Annemin dolması");
+  await sheet.getByRole("button", { name: "Kaydet" }).click();
+  await expect(page).toHaveURL(/\/tarif\/[^/?]+\?yeni=1$/);
+  await expect(page.getByRole("heading", { level: 1, name: "Annemin dolması" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ayrıntıları ekle" })).toBeVisible();
+  // It is in the book (and survives a reload).
+  await page.reload();
+  await expect(page.getByRole("heading", { level: 1, name: "Annemin dolması" })).toBeVisible();
+  await tabs(page).filter({ hasText: "Tarifler" }).click();
+  await page.getByLabel("Tarif ya da malzeme ara").fill("annemin");
+  await expect(page.getByRole("link", { name: "Annemin dolması" })).toBeVisible();
+  await expect(page.getByText(/ayrıntı bekliyor/)).toBeVisible();
+});
+
+test("quick add with a link lands on import", async ({ page }) => {
+  await demo(page);
+  await page.goto("/tarifler");
+  await page.getByRole("button", { name: "Yeni tarif" }).click();
+  const sheet = page.getByRole("dialog", { name: "Yeni tarif" });
+  // Stub the import call: this test is about where the link goes, not the providers.
+  await page.route("**/api/import", (r) => r.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ needsPaste: true, source: null }) }));
+  await sheet.getByLabel("Link yapıştır ya da yemeğin adını yaz").fill("https://www.instagram.com/reel/C9xyz123/");
+  await sheet.getByRole("button", { name: /Linkten içe aktar/ }).click();
+  await expect(page).toHaveURL(/\/tarifler\/ice-aktar\?url=https%3A%2F%2Fwww\.instagram\.com%2Freel%2FC9xyz123%2F/);
+  await expect(page.getByLabel("Link", { exact: true })).toHaveValue("https://www.instagram.com/reel/C9xyz123/");
+});
+
+test("search with no results adds the name with one tap", async ({ page }) => {
+  await demo(page);
+  await page.goto("/tarifler");
+  await page.getByLabel("Tarif ya da malzeme ara").fill("Babaannemin keşkeği");
+  await page.getByRole("button", { name: "“Babaannemin keşkeği” ekle" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Babaannemin keşkeği" })).toBeVisible();
+});

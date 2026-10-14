@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { IconHeart, IconHeartOutline, IconLink, IconPlus, IconSearch } from "@/components/icons";
-import { ButtonLink } from "@/components/ui/Button";
+import { QuickAddSheet, useQuickAdd } from "@/components/QuickAdd";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
 import { EmptyState } from "@/components/ui/Misc";
 import { COURSES, COURSE_LABEL, type Course } from "@/data/models";
 import { formatDuration } from "@/domain/dates";
+import { quickAddIntent } from "@/domain/quickAdd";
 import { daysSinceCooked, lastCookedMap, rotationShort } from "@/domain/rotation";
 import { searchKey } from "@/lib/text";
 import { useApp } from "@/store/app";
@@ -32,6 +34,8 @@ export default function TariflerPage() {
   const [q, setQ] = useState("");
   const [course, setCourse] = useState<Course | "all" | "fav">("all");
   const [tag, setTag] = useState<string | null>(null);
+  const [adding, setAdding] = useState(false);
+  const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
 
@@ -71,10 +75,10 @@ export default function TariflerPage() {
             <IconLink size={16} />
             Linkten ekle
           </ButtonLink>
-          <ButtonLink href="/tarifler/yeni" size="sm" pill>
+          <Button size="sm" pill onClick={() => setAdding(true)} aria-haspopup="dialog">
             <IconPlus size={16} />
             Yeni tarif
-          </ButtonLink>
+          </Button>
         </div>
       </div>
 
@@ -144,14 +148,22 @@ export default function TariflerPage() {
       ) : (
         <EmptyState
           title="Bu aramayla tarif çıkmadı"
-          text="Farklı bir kelime deneyebilir ya da kendi tarifini ekleyebilirsin."
+          text={q.trim() ? "Farklı bir kelime deneyebilir ya da bu adla hemen ekleyebilirsin; ayrıntıları sonra yazarsın." : "Farklı bir süzgeç deneyebilir ya da kendi tarifini ekleyebilirsin."}
           actions={
-            <ButtonLink href={`/tarifler/yeni${q ? `?ad=${encodeURIComponent(q)}` : ""}`} size="sm">
-              Tarif ekle
-            </ButtonLink>
+            quickAddIntent(q).kind === "empty" ? (
+              <Button size="sm" onClick={() => setAdding(true)} aria-haspopup="dialog">
+                Tarif ekle
+              </Button>
+            ) : (
+              // One tap: a name is saved, a link goes to import.
+              <Button size="sm" disabled={quick.busy} onClick={() => void quick.go(quickAddIntent(q))}>
+                {quickAddIntent(q).kind === "name" ? `“${q.trim()}” ekle` : "Linkten içe aktar"}
+              </Button>
+            )
           }
         />
       )}
+      {adding && <QuickAddSheet open onClose={() => setAdding(false)} />}
     </main>
   );
 }
