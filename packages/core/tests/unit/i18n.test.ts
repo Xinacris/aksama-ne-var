@@ -67,6 +67,7 @@ const SCAN = ["apps/web/src", "apps/mobile/src"];
 const ALLOW_FILES = new Set([
   "apps/web/src/server/llm/prompt.ts",
   "apps/web/src/server/llm/claude.ts",
+  "apps/web/src/server/llm/translate.ts",
   "apps/web/src/server/import/handler.ts",
   "apps/web/src/app/manifest.ts",
   "apps/web/src/app/layout.tsx",

@@ -1,17 +1,25 @@
 import { UNITS } from "@anv/core/data/models";
 import { COOKING_METHOD_TAGS, MAIN_INGREDIENT_TAGS, PREP_TAGS } from "@anv/core/domain/import/tags";
 import { IMPORT_ROLES } from "@anv/core/domain/import/types";
-import type { ProviderInput } from "./types";
+import type { LlmTask, ProviderInput } from "./types";
 
 /**
  * The one prompt and output schema every LLM provider uses, so a draft looks
  * the same whichever provider answered.
  */
 
-export const SYSTEM_PROMPT = `Sen bir Türk ev mutfağı asistanısın. Kullanıcının yapıştırdığı sosyal medya açıklamasından ya da tarif metninden yapılandırılmış bir tarif taslağı çıkarırsın.
+const LANGUAGE_RULE: Record<"tr" | "en", string> = {
+  tr: `- Metin hangi dilde olursa olsun anla; taslağın metinlerini (ad, malzeme adları, notlar, adımlar, ön hazırlık) Türkçe yaz. Yemeğin adı kısa ve cümle düzeninde olsun ("Fırında patatesli köfte"), emoji ve etiket olmasın.`,
+  en: `- Metin hangi dilde olursa olsun anla; taslağın metinlerini (ad, malzeme adları, notlar, adımlar, ön hazırlık) İngilizce yaz. Yemeğin adı kısa ve cümle düzeninde olsun ("Baked meatballs with potatoes"); bilinen Türk yemeklerinin adını Türkçe bırakıp parantezde kısa İngilizce açıklama ekleyebilirsin ("Karnıyarık (stuffed aubergine)"). Emoji ve etiket olmasın.`,
+};
+
+/** The import instructions; only the language rule differs between Turkish and English drafts. */
+export function systemPrompt(locale: "tr" | "en" = "tr"): string {
+  return `Sen bir ev mutfağı asistanısın. Kullanıcının yapıştırdığı sosyal medya açıklamasından ya da tarif metninden yapılandırılmış bir tarif taslağı çıkarırsın.
 Kurallar:
 - Yalnızca metinde olanı yaz; malzeme ya da adım uydurma. Metinde tarif yoksa malzeme ve adım listelerini boş bırak.
-- Her şey Türkçe. Yemeğin adı kısa ve cümle düzeninde olsun ("Fırında patatesli köfte"), emoji ve etiket olmasın.
+${LANGUAGE_RULE[locale]}
+- sourceLang: metnin yazıldığı dilin ISO 639-1 kodu ("tr", "en", "it"…).
 - Birimleri şu listeden seç: ${UNITS.join(", ")}. "yk" yemek kaşığı, "tk" tatlı kaşığı, "çk" çay kaşığı, "sb" su bardağı, "gr" g demektir. Miktarsız malzemelerde amount ve unit null.
 - Malzeme adı yalın olsun ("kuru soğan"), "rendelenmiş" gibi ayrıntılar note alanına. Su ekleme.
 - side: sebze, meyve, yeşillik "pazar"; et, süt ürünü, bakliyat, baharat, paketli ürün "market".
@@ -22,6 +30,10 @@ Kurallar:
 - role: çorba "corba", ana yemek "ana", pilav/garnitür "yaninda", salata/meze "salata", tatlı ya da belirsizse null.
 - prep: önceden yapılması gerekenler ("Kıymayı buzluktan çıkar" → morning, "Nohudu ıslatmaya koy" → night-before, "Marine et" → hour-before).
 - Kalori, besin değeri ya da diyet yorumu ekleme.`;
+}
+
+/** The Turkish import prompt (the default). */
+export const SYSTEM_PROMPT = systemPrompt("tr");
 
 /** Added to the user message on the single retry after invalid output. */
 export const RETRY_NOTE = "Önceki yanıt şemaya uymadı. Lütfen yalnızca şemaya uyan geçerli bir tarif taslağı döndür.";
@@ -56,9 +68,11 @@ export const RECIPE_JSON_SCHEMA: JsonSchema = {
     "cookingMethods",
     "mainIngredients",
     "prepTags",
+    "sourceLang",
   ],
   properties: {
     name: { type: "string" },
+    sourceLang: nullable("string"),
     servings: nullable("integer", { minimum: 1, maximum: 20 }),
     role: nullableEnum(IMPORT_ROLES),
     totalMinutes: nullable("integer"),
@@ -96,3 +110,13 @@ export const RECIPE_JSON_SCHEMA: JsonSchema = {
     },
   },
 };
+
+/** The import as a provider task (shared by Gemini and Claude). */
+export function recipeTask(input: ProviderInput, retry: boolean): LlmTask {
+  return {
+    system: systemPrompt(input.locale ?? "tr"),
+    user: userPrompt(input, retry),
+    schema: RECIPE_JSON_SCHEMA,
+    tool: { name: "tarif_taslagi", description: "Metinden çıkarılan tarif taslağını kaydeder." },
+  };
+}

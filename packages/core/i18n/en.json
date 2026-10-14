@@ -392,7 +392,23 @@
     "workingSr": "Making the draft",
     "go": "Make a draft",
     "note": "You can change everything before saving. The recipe’s source and creator show on the recipe page.",
-    "credit": "Source: {{text}}"
+    "credit": "Source: {{text}}",
+    "msg": {
+      "instagram": "Instagram doesn’t share a post’s caption. Copy the caption under the Reel and paste it below, and we’ll take the recipe from there.",
+      "titleOnly": "Only the title came from YouTube. Copy the recipe from the description and paste it, and we’ll take the ingredients from there.",
+      "noRecipeData": "We found no recipe data on this page. You can copy and paste the ingredients and method.",
+      "pageUnavailable": "We can’t reach this page right now. Paste the recipe and we’ll carry on from there.",
+      "platformUnavailable": "{{name}} isn’t answering right now. Paste the caption and we’ll carry on from there.",
+      "noIngredients": "We found no ingredient list in the caption. If the recipe is in the comments or the video, paste or type it here.",
+      "notALink": "That doesn’t look like a link. Copy it again, or paste the recipe directly.",
+      "notParsed": "We couldn’t read this text automatically — please check it.",
+      "limited": "Today’s smart-import limit is reached; we made the draft with simple reading.",
+      "badRequest": "We couldn’t read this request.",
+      "tooLong": "The link or text is a bit long; could you shorten it and try again?",
+      "needInput": "We need a link or a recipe text.",
+      "slow": "The source was slow to answer. Paste the caption and we’ll carry on straight away.",
+      "failed": "We couldn’t get a recipe from this link. Try pasting the caption."
+    }
   },
   "common": {
     "and": "and",
@@ -1028,7 +1044,11 @@
   },
   "language": {
     "tr": "Türkçe",
-    "en": "English"
+    "en": "English",
+    "in": {
+      "tr": "Turkish",
+      "en": "English"
+    }
   },
   "mobile": {
     "passwordHint": "At least 6 characters. Your password stays only on this phone, hashed.",
@@ -1243,5 +1263,16 @@
     "pisirmeden": "No-cook",
     "marine": "Marinated",
     "dinlendirme": "Resting"
+  },
+  "translate": {
+    "badRequest": "We couldn’t read this translation request.",
+    "unavailable": "Translation isn’t available right now.",
+    "limited": "Today’s translation limit is reached; try again tomorrow.",
+    "failed": "We couldn’t translate it right now. Could you try again in a bit?",
+    "action": "Translate / Çevir",
+    "working": "Translating…",
+    "note": "This recipe is written in {{lang}}.",
+    "done": "Translation saved; you can edit it however you like.",
+    "machine": "Machine translation"
   }
 }

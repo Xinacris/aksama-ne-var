@@ -1,6 +1,6 @@
 "use client";
 
-import { t } from "@anv/core/i18n";
+import { getLocale, t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, type FormEvent } from "react";
@@ -59,7 +59,7 @@ function Ice() {
       const res = await fetch("/api/import", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ url: url.trim(), text: text.trim(), householdId: household?.id ?? "" }),
+        body: JSON.stringify({ url: url.trim(), text: text.trim(), householdId: household?.id ?? "", locale: getLocale() }),
       });
       const body = (await res.json()) as ApiResponse;
       if (!res.ok || body.error) {
@@ -75,7 +75,11 @@ function Ice() {
         setDraft(null);
         setFocusPaste((n) => n + 1);
       } else if (body.draft) {
-        setDraft(toRecipeDraft(body.draft, source, lastTags.current, body.writtenRecipeUrl ?? null));
+        setDraft({
+          ...toRecipeDraft(body.draft, source, lastTags.current, body.writtenRecipeUrl ?? null),
+          ...(body.sourceLang ? { sourceLang: body.sourceLang } : {}),
+          ...(body.sourceText ? { sourceText: body.sourceText } : {}),
+        });
         lastTags.current = "";
         setAttempt((n) => n + 1);
         window.scrollTo({ top: 0 });

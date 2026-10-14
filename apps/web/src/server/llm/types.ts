@@ -7,6 +7,19 @@ export type ProviderName = LlmProviderName | "rules";
 export interface ProviderInput {
   text: string;
   platform: SourcePlatform | null;
+  /** Language the draft is written in (the user's). Not personal data: a language code. */
+  locale?: "tr" | "en";
+}
+
+type JsonSchema = { [k: string]: unknown };
+
+/** One structured-output job for any provider: instructions, the user message, the JSON Schema of the answer. */
+export interface LlmTask {
+  system: string;
+  user: string;
+  schema: JsonSchema;
+  /** Claude's forced tool (name + description); Gemini ignores it. */
+  tool: { name: string; description: string };
 }
 
 /** Why a provider gave up; every kind moves on to the next provider. */
@@ -41,5 +54,8 @@ export interface ProviderFallback {
  */
 export interface LlmProvider {
   name: LlmProviderName;
+  /** Recipe structuring (import). */
   call(input: ProviderInput, opts: { signal: AbortSignal; retry: boolean }): Promise<unknown>;
+  /** Any other structured task (translation). Providers without it are skipped there. */
+  run?(task: LlmTask, opts: { signal: AbortSignal }): Promise<unknown>;
 }

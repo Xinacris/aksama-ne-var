@@ -16,6 +16,7 @@ import { intlTag, t as tr } from "@anv/core/i18n";
 import { dative } from "@anv/core/lib/text";
 import { touchTarget } from "@anv/core/design/tokens";
 import { DayPicker, type DayTarget } from "@/components/DayPicker";
+import { TranslateAction } from "@/components/TranslateAction";
 import { usePeople } from "@/hooks/usePeople";
 import { recipesMap, selectList, useApp } from "@/store";
 import { useTheme } from "@/theme";
@@ -169,6 +170,8 @@ export default function RecipePage() {
           </Row>
         </Card>
       ) : null}
+
+      {st.rawRecipes.find((r) => r.id === recipe.id) && <TranslateAction raw={st.rawRecipes.find((r) => r.id === recipe.id)!} />}
 
       {recipe.stub && (
         <EmptyState title={params.yeni ? t("tarif.stubSaved") : t("tarif.stubTitle")} text={t("tarif.stubText")}>

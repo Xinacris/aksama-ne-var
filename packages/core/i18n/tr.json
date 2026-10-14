@@ -392,7 +392,23 @@
     "workingSr": "Taslak hazırlanıyor",
     "go": "Taslağı çıkar",
     "note": "Kaydetmeden önce her şeyi değiştirebilirsin. Tarifin kaynağı ve hazırlayanı tarif sayfasında görünür.",
-    "credit": "Kaynak: {{text}}"
+    "credit": "Kaynak: {{text}}",
+    "msg": {
+      "instagram": "Instagram, gönderinin açıklamasını dışarıya vermiyor. Reels'in altındaki açıklamayı kopyalayıp aşağıya yapıştırırsan tarifi oradan çıkarırız.",
+      "titleOnly": "YouTube'dan yalnızca başlık geldi. Açıklamadaki tarifi kopyalayıp yapıştırırsan malzemeleri oradan alırız.",
+      "noRecipeData": "Bu sayfada tarif bilgisi bulamadık. Malzemeleri ve yapılışı kopyalayıp yapıştırabilirsin.",
+      "pageUnavailable": "Bu sayfaya şu an ulaşamadık. Tarifi kopyalayıp yapıştırırsan oradan devam ederiz.",
+      "platformUnavailable": "{{name}} şu an yanıt vermedi. Açıklamayı yapıştırırsan oradan devam ederiz.",
+      "noIngredients": "Açıklamada malzeme listesi bulamadık. Tarif yorumlarda ya da videonun içindeyse buraya yapıştırabilir veya yazabilirsin.",
+      "notALink": "Bu bir bağlantıya benzemiyor. Linki yeniden kopyalayabilir ya da tarifi doğrudan yapıştırabilirsin.",
+      "notParsed": "Bu metni otomatik ayrıştıramadık, lütfen kontrol et.",
+      "limited": "Bugünlük akıllı içe aktarma sınırına ulaşıldı; taslağı basit okumayla hazırladık.",
+      "badRequest": "Bu isteği okuyamadık.",
+      "tooLong": "Link ya da metin biraz uzun oldu; kısaltıp yeniden dener misin?",
+      "needInput": "Bir link ya da tarif metni gerekiyor.",
+      "slow": "Kaynak geç yanıt verdi. Açıklamayı yapıştırırsan hemen devam ederiz.",
+      "failed": "Bu linkten tarif alamadık. Açıklamayı yapıştırarak deneyebilirsin."
+    }
   },
   "common": {
     "and": "ve",
@@ -1028,7 +1044,11 @@
   },
   "language": {
     "tr": "Türkçe",
-    "en": "English"
+    "en": "English",
+    "in": {
+      "tr": "Türkçe",
+      "en": "İngilizce"
+    }
   },
   "mobile": {
     "passwordHint": "En az 6 karakter. Şifren yalnızca bu telefonda, karıştırılmış olarak durur.",
@@ -1243,5 +1263,16 @@
     "pisirmeden": "Pişirmeden",
     "marine": "Marine",
     "dinlendirme": "Dinlendirme"
+  },
+  "translate": {
+    "badRequest": "Bu çeviri isteğini okuyamadık.",
+    "unavailable": "Çeviri şu an kullanılamıyor.",
+    "limited": "Bugünlük çeviri sınırına ulaşıldı; yarın yeniden deneyebilirsin.",
+    "failed": "Şu an çeviremedik. Biraz sonra yeniden dener misin?",
+    "action": "Çevir / Translate",
+    "working": "Çevriliyor…",
+    "note": "Bu tarif {{lang}} yazılmış.",
+    "done": "Çeviri kaydedildi; istediğin gibi düzenleyebilirsin.",
+    "machine": "Otomatik çeviri"
   }
 }

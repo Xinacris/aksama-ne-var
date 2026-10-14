@@ -176,6 +176,10 @@ export const recipeSchema = z.object({
   writtenRecipeUrl: z.string().url().optional(),
   /** Created from an unknown name during onboarding; details not filled yet. */
   stub: z.boolean().optional(),
+  /** Imported recipes: the original caption's language as the import read it ("it", "en"…). */
+  sourceLang: z.string().regex(/^[a-z]{2,3}$/).optional(),
+  /** Imported recipes: the original caption/page text the draft was made from. */
+  sourceText: z.string().max(20_000).optional(),
   /** Language the recipe was written in (migration v10 sets "tr" on older rows). */
   lang: recipeLangSchema.optional(),
   /** The recipe's text in other languages. */

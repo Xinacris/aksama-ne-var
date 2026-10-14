@@ -6,6 +6,7 @@ import { isBoilerplateLine, stripBoilerplate } from "./boilerplate";
 import { recipeLinks } from "./links";
 import { hasIngredientLines, MAX_INPUT_CHARS, parseRecipeText } from "./parseText";
 import type { ImportedRecipe, ImportPath, ImportProvider, ImportResult, ImportSource } from "./types";
+import { t } from "../../i18n";
 
 /**
  * Turns caption text into a draft (the server's provider chain, see
@@ -18,6 +19,8 @@ export type Structurer = (
 
 export interface ImportDeps extends AdapterContext {
   structure?: Structurer;
+  /** Messages in the request's language (the server passes a fixed-language `t`). */
+  t?: Translate;
 }
 
 export interface ImportInput {
@@ -32,22 +35,54 @@ export interface ImportOutcome {
   counted: { platform: SourcePlatform | null; provider: ImportProvider } | null;
 }
 
-function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" | "no-ingredients" | "no-recipe-data" | "unavailable"): string {
+type Translate = (key: string, options?: Record<string, unknown>) => string;
+
+function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" | "no-ingredients" | "no-recipe-data" | "unavailable", tr: Translate): string {
   const name = PLATFORM_LABEL[source.platform];
   switch (reason) {
     case "instagram":
-      return "Instagram, gönderinin açıklamasını dışarıya vermiyor. Reels'in altındaki açıklamayı kopyalayıp aşağıya yapıştırırsan tarifi oradan çıkarırız.";
+      return tr("import.msg.instagram");
     case "title-only":
-      return "YouTube'dan yalnızca başlık geldi. Açıklamadaki tarifi kopyalayıp yapıştırırsan malzemeleri oradan alırız.";
+      return tr("import.msg.titleOnly");
     case "no-recipe-data":
-      return "Bu sayfada tarif bilgisi bulamadık. Malzemeleri ve yapılışı kopyalayıp yapıştırabilirsin.";
+      return tr("import.msg.noRecipeData");
     case "unavailable":
-      return source.platform === "web"
-        ? "Bu sayfaya şu an ulaşamadık. Tarifi kopyalayıp yapıştırırsan oradan devam ederiz."
-        : `${name} şu an yanıt vermedi. Açıklamayı yapıştırırsan oradan devam ederiz.`;
+      return source.platform === "web" ? tr("import.msg.pageUnavailable") : tr("import.msg.platformUnavailable", { name });
     default:
-      return "Açıklamada malzeme listesi bulamadık. Tarif yorumlarda ya da videonun içindeyse buraya yapıştırabilir veya yazabilirsin.";
+      return tr("import.msg.noIngredients");
   }
+}
+
+/**
+ * The rule parser reads Turkish only. Text that shows no sign of Turkish
+ * (letters, common kitchen words) gets a plain paste draft instead of a
+ * misread one.
+ */
+export function looksTurkish(text: string): boolean {
+  const letters = (text.match(/[çğıöşüÇĞİÖŞÜ]/g) ?? []).length;
+  if (letters >= 3) return true;
+  const words = text.toLocaleLowerCase("tr").match(/\b(ve|bir|ile|için|dakika|bardağı|kaşığı|tuz|biber|soğan|yağ|yumurta|domates|şeker|süt|salça|kıyma|tereyağı|un|pişir|ekle|malzemeler|yapılışı)\b/g) ?? [];
+  return words.length >= 2;
+}
+
+/** "Bu metni otomatik ayrıştıramadık": the lines as steps, a name from the title, nothing guessed. */
+export function pasteDraft(text: string, title: string | null): ImportedRecipe {
+  const lines = text
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter((l) => /\p{L}/u.test(l))
+    .slice(0, 40);
+  const name = (title?.trim() || lines[0] || "").slice(0, 80) || "—";
+  return {
+    name,
+    servings: null,
+    role: null,
+    totalMinutes: null,
+    ingredients: [],
+    steps: lines.filter((l) => l !== name).map((l) => ({ text: l.slice(0, 600), minutes: null })),
+    prep: [],
+    tags: [],
+  };
 }
 
 /** At most this many links are tried for a written recipe. */
@@ -108,13 +143,14 @@ function publicSource(src: ImportSource, hasText: boolean): NonNullable<ImportRe
  * the text when available, and the rule parser is the fallback.
  */
 export async function runImport(input: ImportInput, deps: ImportDeps): Promise<ImportOutcome> {
+  const tr: Translate = deps.t ?? t;
   const pasted = (input.text ?? "").trim().slice(0, MAX_INPUT_CHARS);
   const rawUrl = (input.url ?? "").trim();
   const link = rawUrl ? normalizeUrl(extractUrl(rawUrl) ?? rawUrl) : pasted ? normalizeUrl(extractUrl(pasted) ?? "") : null;
 
   if (rawUrl && !link && !pasted) {
     return {
-      result: { source: null, draft: null, path: null, provider: null, writtenRecipeUrl: null, needsPaste: true, message: "Bu bir bağlantıya benzemiyor. Linki yeniden kopyalayabilir ya da tarifi doğrudan yapıştırabilirsin." },
+      result: { source: null, draft: null, path: null, provider: null, writtenRecipeUrl: null, needsPaste: true, message: tr("import.msg.notALink") },
       counted: null,
     };
   }
@@ -128,7 +164,7 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
     } catch (e) {
       if (!(e instanceof SourceUnavailableError)) throw e;
       source = emptySource(platform, link);
-      message = pasteMessage(source, "unavailable");
+      message = pasteMessage(source, "unavailable", tr);
     }
   }
 
@@ -151,6 +187,7 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
 
   let draft: ImportedRecipe | null = null;
   let provider: ImportProvider | null = null;
+  let notParsed = false;
   if (structured) {
     // schema.org/Recipe data: no LLM call for structure (tags/times are suggested from it later).
     draft = structured;
@@ -158,7 +195,13 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
   } else if (text) {
     const meta = { title: pasted ? null : source?.title ?? null, platform: source?.platform ?? null };
     const out = deps.structure ? await deps.structure(text, meta).catch(() => null) : null;
-    ({ draft, provider } = out ?? { draft: parseRecipeText(text, meta.title), provider: "rules" as const });
+    if (out) ({ draft, provider } = out);
+    else if (looksTurkish(text)) ({ draft, provider } = { draft: parseRecipeText(text, meta.title), provider: "rules" as const });
+    else {
+      draft = pasteDraft(text, meta.title);
+      provider = "rules";
+      notParsed = true;
+    }
   }
   if (draft) draft = { ...draft, steps: draft.steps.filter((st) => !isBoilerplateLine(st.text)) };
   const path: ImportPath | null = provider ? (provider === "gemini" || provider === "claude" ? "llm" : "rules") : null;
@@ -174,8 +217,10 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
           : source.platform === "web"
             ? "no-recipe-data"
             : "no-ingredients",
+      tr,
     );
   }
+  if (notParsed && !message) message = tr("import.msg.notParsed");
 
   return {
     result: {
@@ -186,6 +231,9 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
       needsPaste,
       message,
       writtenRecipeUrl,
+      // The original wording stays with the draft; the LLM says which language it was in.
+      sourceLang: draft?.sourceLang ?? (text ? (looksTurkish(text) ? "tr" : null) : null),
+      sourceText: rawText ? rawText.slice(0, MAX_INPUT_CHARS) : null,
     },
     counted: draft && provider ? { platform: source?.platform ?? null, provider } : null,
   };

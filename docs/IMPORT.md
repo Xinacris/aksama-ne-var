@@ -244,3 +244,30 @@ iOS Safari does not support share targets — iOS users paste the link.
 
 Recipe-site partnerships start from the schema.org adapter (`web.ts`): a partner feed or API
 would be its own adapter returning the same `ImportedRecipe`.
+
+## Round 3: other languages and "Çevir / Translate"
+
+- **Import in any language.** The request carries the user's `locale` (`tr` | `en`). The shared prompt
+  (`systemPrompt(locale)`) tells the provider to read the caption in whatever language it is and to
+  write the draft in the user's language, and to report `sourceLang` (ISO 639-1). The response adds
+  `sourceLang` and `sourceText` (the original caption/page text); both are saved with the recipe
+  (`Recipe.sourceLang`, `Recipe.sourceText`). The recipe's `lang` is the language its text is
+  written in, i.e. the user's.
+- **Without an LLM** the rule parser still reads Turkish only. Text that shows no sign of Turkish
+  (`looksTurkish`: Turkish letters or common kitchen words) gets a plain paste draft — its lines as
+  steps, no guessed ingredients — and the note "Bu metni otomatik ayrıştıramadık, lütfen kontrol et." /
+  "We couldn’t read this text automatically — please check it."
+- **Messages** from the pipeline and the route come in the request's language (`i18n.getFixedT(locale)`,
+  or `Accept-Language` when the body has none).
+- **`/api/translate`** (`apps/web/src/server/translate/handler.ts`, `server/llm/translate.ts`):
+  `GET` → `{ available }` (the apps hide the action when it's false — no keys, never a broken button);
+  `POST { householdId?, from, to, recipe: { name, steps, prepItems, notes, ingredients } }` →
+  `{ translation, provider }`. Same provider order and fall-through as import (Gemini → Claude, one
+  retry on invalid output, 25 s deadline), same daily limit per household (its own counter). The
+  answer must have exactly as many steps and prep labels as the request. **Privacy:** only the recipe
+  text and the two language codes reach a provider; the household id is the quota key only
+  (`tests/unit/translate.test.ts` › privacy checks the exact Gemini body).
+- Providers now take a generic task (`LlmTask`: system, user message, JSON Schema, Claude tool);
+  `call()` is the import task, `run()` any other. The import's request body is unchanged.
+- The saved translation goes to `translations[locale]` with `origin: "llm"` and is editable like any text
+  (editing in that language changes the translation, not the source).

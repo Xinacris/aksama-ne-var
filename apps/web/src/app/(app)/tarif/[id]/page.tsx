@@ -6,6 +6,7 @@ import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useState } from "react";
 import { Loading } from "@/components/Guard";
 import { sourceCredit } from "@/components/ImportSourceCard";
+import { TranslateAction } from "@/components/TranslateAction";
 import { IconCheck, IconChevronLeft, IconImport, IconMinus, IconMore, IconPlus } from "@/components/icons";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { StatusPill } from "@/components/ui/Chip";
@@ -39,6 +40,7 @@ function TarifInner() {
   const rows = useMemo(() => selectList(st), [st]);
   const byId = recipesMap(recipes);
   const recipe = byId.get(id);
+  const rawRecipe = st.rawRecipes.find((r) => r.id === id);
   const gunParam = params.get("gun");
   const gun = gunParam === "today" ? today : gunParam && ISO.test(gunParam) ? gunParam : null;
   const completeTask = useApp((x) => x.completeTask);
@@ -216,6 +218,8 @@ function TarifInner() {
           )}
         </div>
       )}
+
+      {rawRecipe && <TranslateAction raw={rawRecipe} />}
 
       {recipe.stub && (
         <div className={s.stub}>

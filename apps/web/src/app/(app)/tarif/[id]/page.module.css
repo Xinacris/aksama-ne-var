@@ -353,3 +353,15 @@
     padding-top: 12px;
   }
 }
+.translate {
+  margin: 16px 16px 0;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: var(--surface2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  font-size: 14.5px;
+}

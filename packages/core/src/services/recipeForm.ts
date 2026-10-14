@@ -48,6 +48,9 @@ export interface RecipeDraft {
   sourceThumbnailUrl?: string;
   /** "Yazılı tarif": the written recipe a video linked to. */
   writtenRecipeUrl?: string;
+  /** Import: the caption's language and original text, carried into the saved recipe. */
+  sourceLang?: string;
+  sourceText?: string;
 }
 
 export const emptyIngredient = (): IngredientDraft => ({ name: "", quantity: "", unit: "adet", side: "market", aisle: "Diğer" });
@@ -184,6 +187,8 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       ...(d.sourcePlatform ? { sourcePlatform: d.sourcePlatform } : {}),
       ...(d.sourceThumbnailUrl ? { sourceThumbnailUrl: d.sourceThumbnailUrl } : {}),
       ...(d.writtenRecipeUrl ? { writtenRecipeUrl: d.writtenRecipeUrl } : {}),
+      ...(d.sourceLang && /^[a-z]{2,3}$/.test(d.sourceLang) ? { sourceLang: d.sourceLang } : {}),
+      ...(d.sourceText ? { sourceText: d.sourceText.slice(0, 20_000) } : {}),
     },
   };
 }

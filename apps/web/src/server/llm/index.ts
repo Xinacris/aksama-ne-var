@@ -16,6 +16,8 @@ export interface StructureMeta {
   platform: SourcePlatform | null;
   /** Public title of the post/video (YouTube): used by the rule parser and prepended to the caption when missing. */
   title: string | null;
+  /** The user's language: the draft comes back in it. */
+  locale?: "tr" | "en";
 }
 
 export interface StructureOptions {
@@ -33,7 +35,7 @@ export interface StructureOptions {
 /** What LLM providers receive: caption text (title as its first line when not already in it) + platform. */
 export function providerInput(text: string, meta: StructureMeta): ProviderInput {
   const title = meta.title?.trim();
-  return { text: title && !text.includes(title) ? `${title}\n\n${text}` : text, platform: meta.platform };
+  return { text: title && !text.includes(title) ? `${title}\n\n${text}` : text, platform: meta.platform, ...(meta.locale && meta.locale !== "tr" ? { locale: meta.locale } : {}) };
 }
 
 async function attempt(p: LlmProvider, input: ProviderInput, opts: StructureOptions, isLast: boolean): Promise<ImportedRecipe> {
