@@ -104,7 +104,7 @@ function TarifInner() {
         `${recipe.servings} kişilik${evening?.outcome.kind === "lunch" ? ", yarına da artar" : evening?.outcome.kind === "fridge" ? ", artanı dolaba" : ""}`,
       ]
     : [
-        recipe.timeNote ?? formatDuration(recipeMinutes),
+        recipe.stub ? "ayrıntı bekliyor" : recipe.timeNote ?? formatDuration(recipeMinutes),
         recipe.waitMinutes ? `+ ${formatDuration(recipe.waitMinutes)} bekleme` : null,
         `${recipe.servings} kişilik`,
         policyMeta(recipe),
@@ -220,11 +220,11 @@ function TarifInner() {
         <div className={s.stub}>
           <EmptyState
             headingLevel={3}
-            title="Bu tarifin ayrıntıları henüz yok"
-            text="Malzemeleri ve adımları eklersen liste ve hatırlatmalar da bu yemek için çalışır."
+            title={params.get("yeni") ? "Kaydedildi, ayrıntılar sonra da olur" : "Bu tarifin ayrıntıları henüz yok"}
+            text="Malzemeleri ve adımları eklersen liste ve hatırlatmalar da bu yemek için çalışır. Acelesi yok; haftaya şimdiden koyabilirsin."
             actions={
               <ButtonLink href={`/tarifler/${recipe.id}/duzenle`} size="sm">
-                Tarifi tamamla
+                Ayrıntıları ekle
               </ButtonLink>
             }
           />

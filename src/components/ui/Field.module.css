@@ -22,6 +22,14 @@
 .box:focus-within {
   border-color: var(--ink2);
 }
+/* The keyboard focus ring goes around the whole field, not inside it beside the icon. */
+.box:has(.input:focus-visible) {
+  outline: 2.5px solid var(--tomato);
+  outline-offset: 2px;
+}
+.input:focus-visible {
+  outline: none;
+}
 .invalid {
   border-color: var(--tomato);
 }

@@ -87,7 +87,8 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
 - [x] M0. Checked where the last session stopped; unfinished work finished or reverted; "Where I found it" note written.
 - [x] M1. Tarifler tab in the bottom nav; active states; 360/390 px checks; component test.
   - Fifth tab between Liste and Hafta (`IconBook`), lit for `/tarifler/*` and `/tarif/*`. `tests/component/nav.test.tsx` (16 tests at 360/390); `e2e/recipes-mobile.spec.ts` measures the tabs at 360/390 in a real browser.
-- [ ] M2. Quick-add sheet (URL → import, name → one-tap save → detail with "Ayrıntıları ekle"); search empty state uses it; tests.
+- [x] M2. Quick-add sheet (URL → import, name → one-tap save → detail with "Ayrıntıları ekle"); search empty state uses it; tests.
+  - `src/domain/quickAdd.ts` + `src/components/QuickAdd.tsx` (`useQuickAdd`, `QuickAddSheet` on the existing `Dialog`). Tests: `tests/unit/domain/quickAdd.test.ts`, `tests/component/quickadd.test.tsx`, 3 mobile e2e in `e2e/recipes-mobile.spec.ts`.
 - [ ] M3. Collapsible "Ayrıntılar" in the full form (new + edit); existing form tests green.
 - [ ] M4. Toplu yapıştır for ingredients and steps; multi-line paste offer; unit + component tests.
 - [ ] M5. Final: e2e (mobile + desktop), axe light/dark, screenshots checked, all scripts green, push, check Vercel status.
