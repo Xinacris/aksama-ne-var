@@ -310,3 +310,12 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Tight places use the short English name** (`tileName`): board tiles and lunch lines in English show "Lentil soup" rather than a truncated "Mercimek çorbası (red…"; Turkish is unchanged. The week summary note starts with a capital ("Out on Saturday…").
 - **Web component tests time out at 20 s** (was Vitest's 5 s): the cooking-mode tests flaked only when every workspace's tests ran at once — the previous session's note said to harden them if they flaked again.
 - **Known English rough edge:** catalog ingredient names are plural ("Onions") and a recipe line reads "1 onions"; singular forms per ingredient would fix it (follow-up, not done tonight).
+
+## Local Android APK (after Round 3)
+
+- **Local build, no account:** `npm run apk` = `expo prebuild -p android --clean` → `gradlew assembleRelease` → `~/Downloads/aksama-ne-var-<version>-<sha>.apk`. `apps/mobile/android` and `/ios` are git-ignored (Continuous Native Generation). JDK 17 (Temurin) in `~/.local/jdk-17`, SDK in `~/Android/Sdk`, nothing system-wide (sudo needs a password here).
+- **Release APK signed with the template's debug key** — for the owner's and friends' phones only; no keystore created or committed.
+- **Only `armeabi-v7a` + `arm64-v8a`** (no x86 emulator ABIs): every real phone, smaller APK (58 MB), faster build. Overridable with Gradle args.
+- **Locale files split per platform** (`ios`: CFBundle*, `android`: `app_name`): with plain keys, Expo wrote `CFBundleDisplayName` into Android string resources, release lint failed (ExtraTranslation), and the English launcher name was never applied on Android. Now the APK shows "What’s for dinner?" on English phones.
+- **The script restores `apps/mobile/package.json`** after prebuild (prebuild rewrites `android`/`ios` scripts to `expo run:*`, which would break the Expo Go flow).
+- **Committed on `round-3`, not `main`:** `apps/mobile` only exists on `round-3`; pushing to `main` would merge Round 3, which the owner does after review.
