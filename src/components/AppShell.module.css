@@ -20,8 +20,8 @@
   background: var(--surface);
   border-top: 1px solid var(--line);
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding: 6px 8px calc(14px + env(safe-area-inset-bottom));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 6px 4px calc(14px + env(safe-area-inset-bottom));
 }
 .tab {
   min-height: 56px;
@@ -34,6 +34,8 @@
   text-decoration: none;
   font-size: 12px;
   font-weight: 600;
+  /* Five tabs at 360 px leave ~70 px each: labels stay on one line. */
+  white-space: nowrap;
   position: relative;
 }
 .tab:hover {
@@ -46,7 +48,7 @@
 .badge {
   position: absolute;
   top: 4px;
-  left: 54%;
+  left: calc(50% + 4px);
   min-width: 20px;
   height: 20px;
   padding: 0 6px;
