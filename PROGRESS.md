@@ -99,3 +99,59 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
 Vercel status `success` at d7712e7 (and at every M-phase push: ccb31bb, a2e5cbe, a48bbf0, c2bdb8f).
 
 ROUND 2.2 DONE — live: https://aksama-ne-var.vercel.app
+
+## Round 3
+
+Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the first unchecked V-item.
+
+**Where I found it (2026-10-14):** `main` clean and in sync with `origin/main` (62282f9, "PROGRESS: Round 2.2 done"), no stash, no `## In progress` section, no unchecked items. Production deploy of 62282f9: Vercel `success`. Nothing to finish on `main`; branch `round-3` created from 62282f9.
+
+- [x] V0. Where I found it; branch `round-3` created.
+- [x] V1. Monorepo: `apps/web` moved, `packages/core` extracted (framework-free), all existing web checks green from the new layout (lint, typecheck, unit, e2e, build); `docs/MONOREPO.md` with the Vercel setting.
+  - Green: lint 0 (core + web), typecheck 0, core 326 + web 184 = 510 tests (same as before the move), build OK, e2e 55 passed / 11 skipped. Clean-copy `cd apps/web && npm ci && npm run build` OK.
+- [x] V2. Mobile skeleton: Expo app runs in Expo Go config, tabs + stacks, theme tokens, AsyncStorage key-value adapter, crypto interface, demo household loads; `expo export` for iOS and Android green.
+  - `apps/mobile` (Expo SDK 57, RN 0.86.3). `expo export` iOS + Android OK, `expo-doctor` 21/21, `tsc` 0, `expo lint` 0, jest 4 (AsyncStorage hydrate/write-through/restart, PBKDF2 parity with Web Crypto, demo household boots and survives a restart). Tokens + icons in core (token/CSS parity test). Whole repo on React 19.2.3; web unit/build/e2e smoke green.
+- [x] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
+  - 882 keys per language. Core 338 tests (catalog parity, runtime switch, detection, hard-coded-Turkish scan), web 184, mobile 4; lint 0; build OK; e2e 55 + 2 passed (new `e2e/english.spec.ts`: English browser → English UI, quick add, Settings › Türkçe and back, remembered on reload).
+- [x] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
+  - Giriş/Kayıt, onboarding (set up or join by code → dishes → invite code), Bugün, Tarifler (search, course/tag chips, favourites, quick-add sheet), recipe page (statuses, prep timeline, steps, put on an evening, edit/copy/delete), full form (Ayrıntılar, Toplu yapıştır, paste offer), import via `/api/import`, Ayarlar. Mobile jest 15 (Bugün and Tarifler in tr + en), tsc 0, expo lint 0, export iOS/Android OK, expo-doctor 21/21; core 338, web 184.
+- [x] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
+  - `lang` + `translations` (migration v10), 100 built-ins in English (466 steps, 27 prep labels, 20 notes), 109 catalog ingredients + tags in English, localized store copies (`recipes`/`rawRecipes`, translated prep-task labels, list-row labels), edit-in-language rules (`draftForEdit`/`mergeEdit`), English units ("1 cup (200 ml)"). Supabase `recipe_translations` + `profiles.locale` + doc §7. Core 352, web 184, mobile 15; e2e English/journey/import green.
+- [x] V6. `/api/translate` + Translate action (web and mobile); multi-language import; tests.
+  - `/api/translate` (GET availability, POST translate) over the import's provider chain; "Çevir / Translate" on web and phone recipe pages (hidden without a key); import writes drafts in the user's language, keeps `sourceLang`/`sourceText`, non-Turkish text without an LLM → paste draft + calm note; messages in the request's language. Web 196 (12 new: chain, validation, handler, limit, privacy, multi-language import), core 354, mobile 15; build OK (`ƒ /api/translate`); import/English e2e green.
+- [x] V7. Mobile screens: Liste, Hafta, Eşleş.
+  - Liste (aisles, ticks with haptics, Evde var, add/remove, finish), Hafta (evening cards, move-to-evening/swap/remove sheets, recipe picker, day options, matches/fridge/regulars → day picker), Eşleş (Gesture Handler + Reanimated swipe card, buttons, day/course chooser, match moment with haptic, matches list). Mobile jest 22 (Liste tr + en), tsc 0, lint 0, export iOS/Android OK, expo-doctor 21/21; web 196, core 354.
+- [x] V8. Mobile screens: Pişirme modu, Ayarlar; `docs/MOBILE.md`.
+  - Pişirme modu (heads-up, dish tabs, steps, timers with vibration, ingredients sheet, finish with leftovers, keep-awake), started from Bugün and the recipe page; Ayarlar (from V4) tested; `docs/MOBILE.md` (run with Expo Go, what works / doesn't, checks, bundle-ID decision, share-sheet plan, store checklist). Mobile jest 25, tsc 0, lint 0, export iOS/Android OK, expo-doctor 21/21; dev server boots and bundles (one React).
+- [x] V9. Final: all checks green (web incl. e2e and axe, core, mobile tsc/expo-doctor/export/jest), screenshots for web in both languages, push `round-3`, and write the morning note.
+  - Final run: lint 0 (core + web + mobile), typecheck 0, core 354, web 196, mobile 25 (5 suites), web build OK, e2e 61 passed / 11 skipped (desktop-only on mobile, phone-only on desktop) incl. axe light + dark in Turkish and English, screenshots 8 passed (Turkish + `en-*` at 390/1440 × light/dark), mobile tsc 0, expo lint 0, expo-doctor 21/21, `expo export` iOS + Android OK. Vercel preview of `round-3`: failure as expected (Root Directory not yet `apps/web`); production `main` (62282f9) still `success`.
+
+## Sabah notu
+
+**Ne bitti:** Round 3'ün hepsi (V0–V9) bitti ve `round-3` dalına push edildi. `main`'e dokunmadım; canlı site aynı.
+- Repo artık monorepo: `apps/web` (Next.js), `apps/mobile` (Expo SDK 57), `packages/core` (paylaşılan, React'siz kod).
+- Telefon uygulamasında tüm ekranlar var: giriş/kayıt, örnek ev, onboarding, Bugün, Tarifler (hızlı ekleme, tam form, toplu yapıştır, linkten içe aktarma), Liste, Hafta, Eşleş (kaydırmalı), Pişirme modu, Ayarlar.
+- Web ve telefon Türkçe + İngilizce. 100 hazır tarifin İngilizcesi yazıldı. Ev tariflerinde "Çevir / Translate" düğmesi var.
+- Bütün kontroller yeşil (sayılar yukarıda V9'da).
+
+**Telefonda denemek için:**
+```bash
+git checkout round-3
+npm install
+npm run mobile            # QR kodu çıkar
+# farklı ağdaysan:  npm run mobile -- --tunnel
+```
+Telefona App Store / Google Play'den **Expo Go** kur, QR'ı okut (iPhone'da Kamera ile). Sonra "Örnek evle dene · Ali ve Zeynep".
+
+**Elle yapman gerekenler:**
+1. **Vercel:** Settings → Build and Deployment → **Root Directory = `apps/web`**, "Include files outside the root directory" açık kalsın. Önce bu ayarı değiştir, sonra merge et (ayrıntı: `docs/MONOREPO.md`). O arada başarısız olan bir deploy canlı siteyi bozmaz.
+2. **Bundle ID:** `apps/mobile/app.json` içinde şimdilik `com.PLACEHOLDER.mealplanner` var. İlk mağaza sürümünden sonra değişmez; senin seçmen gerek (`docs/MOBILE.md`).
+3. **`round-3`'ü gözden geçirip `main`'e merge etmek.** Ben merge etmedim.
+
+**Dikkat / karar bekleyenler:**
+- Bütün repo **React 19.2.3**'e sabitlendi (web 19.3'teydi). Expo'nun sürümü bu; iki React aynı telefona girmesin diye.
+- Telefonda şifre özeti 10 000 tur PBKDF2 (web'de 100 000). JIT'siz telefonda 100 000 tur ~9 saniye sürüyordu. Demo düzeyinde; Supabase gelince zaten değişecek.
+- **Eşitleme yok:** iki telefon birbirini görmez, Ayarlar'da "Eşitleme yakında" yazıyor.
+- Telefondaki içe aktarma ve çeviri canlı web API'sini çağırıyor. Merge'den önce canlıda `/api/translate` yok, bu yüzden düğme gizli. İçe aktarma çalışır ama taslak Türkçe gelir.
+- İngilizcede küçük pürüz: "1 onions" gibi tekil/çoğul hataları var (malzeme kataloğu çoğul). İstersen sonraki turda düzeltirim.
+- Tanınmış yemeklerin İngilizce adlarını "Karnıyarık (stuffed aubergine)" biçiminde bıraktım. Dar yerlerde (hafta panosu) kısa ad görünüyor ("Lentil soup").

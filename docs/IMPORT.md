@@ -17,7 +17,7 @@ Android share sheet ──────┤→ /tarifler/ice-aktar?url=…&text=�
                 │ "yazılı tarif" link in the text? follow it → │
                 │   its schema.org recipe ("web")              │
                 │ strip channel boilerplate (boilerplate.ts)   │
-                │ else provider chain (src/server/llm):        │
+                │ else provider chain (apps/web/src/server/llm):        │
                 │   Gemini → Claude → rule parser              │
                 │ junk steps dropped (links, promos)           │
                 └──────────────────────────────────────────────┘
@@ -30,19 +30,19 @@ Android share sheet ──────┤→ /tarifler/ice-aktar?url=…&text=�
 
 | Piece | File |
 |---|---|
-| URL detection, normalisation, link-in-text | `src/domain/import/detect.ts` |
-| Source adapters (one per platform) | `src/domain/import/adapters/{tiktok,youtube,instagram,web}.ts`, registry in `adapters/index.ts` |
-| schema.org/Recipe JSON-LD reader | `src/domain/import/schemaOrg.ts` |
-| Rule-based Turkish parser | `src/domain/import/parseText.ts` (+ `units.ts`, `catalogMatch.ts`) |
-| Pipeline (pure, deps injected) | `src/domain/import/pipeline.ts` |
-| LLM provider chain: order, retry, fall-through | `src/server/llm/index.ts` (`structureRecipe`) |
-| Shared prompt + JSON Schema / shared validator | `src/server/llm/prompt.ts` / `src/server/llm/validate.ts` |
-| Providers | `src/server/llm/gemini.ts` (REST, structured output), `src/server/llm/claude.ts` (forced tool use) |
-| Provider selection from env | `providersFromEnv` in `src/server/import/handler.ts` |
-| Route handler, rate limit, private-host guard | `src/server/import/{handler,rateLimit,guardedFetch}.ts`, `src/app/api/import/route.ts` |
-| Draft → form | `src/services/importDraft.ts` |
-| Screen | `src/app/(app)/tarifler/ice-aktar/page.tsx` |
-| Caption fixtures (written for the tests, not copied from creators) | `tests/fixtures/captions/*.txt` |
+| URL detection, normalisation, link-in-text | `packages/core/src/domain/import/detect.ts` |
+| Source adapters (one per platform) | `packages/core/src/domain/import/adapters/{tiktok,youtube,instagram,web}.ts`, registry in `adapters/index.ts` |
+| schema.org/Recipe JSON-LD reader | `packages/core/src/domain/import/schemaOrg.ts` |
+| Rule-based Turkish parser | `packages/core/src/domain/import/parseText.ts` (+ `units.ts`, `catalogMatch.ts`) |
+| Pipeline (pure, deps injected) | `packages/core/src/domain/import/pipeline.ts` |
+| LLM provider chain: order, retry, fall-through | `apps/web/src/server/llm/index.ts` (`structureRecipe`) |
+| Shared prompt + JSON Schema / shared validator | `apps/web/src/server/llm/prompt.ts` / `apps/web/src/server/llm/validate.ts` |
+| Providers | `apps/web/src/server/llm/gemini.ts` (REST, structured output), `apps/web/src/server/llm/claude.ts` (forced tool use) |
+| Provider selection from env | `providersFromEnv` in `apps/web/src/server/import/handler.ts` |
+| Route handler, rate limit, private-host guard | `apps/web/src/server/import/{handler,rateLimit,guardedFetch}.ts`, `apps/web/src/app/api/import/route.ts` |
+| Draft → form | `packages/core/src/services/importDraft.ts` |
+| Screen | `apps/web/src/app/(app)/tarifler/ice-aktar/page.tsx` |
+| Caption fixtures (written for the tests, not copied from creators) | `packages/core/tests/fixtures/captions/*.txt` |
 
 ## Sources — official/public endpoints only
 
@@ -61,7 +61,7 @@ the fetched text has no ingredient-like lines.
 
 Recipe channels (Yemek.com and others) often keep only ingredients — or nothing — in the video
 description and link the written recipe: "Yazılı tarif için: https://…/tarif/…". Before any
-structuring, `src/domain/import/links.ts` scans the description/caption for links:
+structuring, `packages/core/src/domain/import/links.ts` scans the description/caption for links:
 
 - Social (Instagram, Facebook, X, TikTok, Pinterest, …), video (YouTube, Vimeo, …) and link-in-bio
   hosts are never recipe pages. Chef/profile pages are skipped; a site's home page ranks low.
@@ -78,7 +78,7 @@ structuring, `src/domain/import/links.ts` scans the description/caption for link
 
 ## Boilerplate never becomes a step
 
-`src/domain/import/boilerplate.ts` removes, before the LLM or the rule parser sees the text: lines
+`packages/core/src/domain/import/boilerplate.ts` removes, before the LLM or the rule parser sees the text: lines
 that are mostly a link, social handles/links, subscribe/follow calls (abone ol, takip et,
 bildirimleri aç, subscribe), "SOSYAL MEDYA HESAPLARIMIZ", hashtag-only lines, sponsor/affiliate
 lines (sponsor, işbirliği, indirim kodu, "ürünlerine ulaşmak için"), and chef/site promos ("tüm
@@ -144,7 +144,7 @@ does not). So the providers receive **only** `ProviderInput = { text, platform }
 caption/description (a YouTube title is folded in as its first line) and the platform name.
 Never user names, household names or ids, emails, links, author handles or anything from
 storage — the household id is used only as the server's rate-limit key.
-`tests/unit/import/providers.test.ts` › "privacy" asserts the exact Gemini request body and
+`apps/web/tests/unit/import/providers.test.ts` › "privacy" asserts the exact Gemini request body and
 headers. Captions are public posts; still, if that is not acceptable for a deployment, leave
 `GEMINI_API_KEY` unset or use a paid-tier key.
 
@@ -170,10 +170,10 @@ headers. Captions are public posts; still, if that is not acceptable for a deplo
 
 | Field | Where it comes from |
 |---|---|
-| **Kaynak** (never empty) | `sourceLabel` in `src/services/importDraft.ts`: "YouTube · Yemek.com", "TikTok · @mutfakdefteri", just "Instagram" when the author is unknown, the site name for web pages (og:site_name, else the host), "Yapıştırılan tarif metni" for text pasted without any link. Same on every path: fetched text, pasted text, rules, LLM, schema.org. The paste-fallback call fetches the link again; if the platform answers less the second time, `keepSource` keeps the first answer's author/title/thumbnail for the same link. Editable. |
+| **Kaynak** (never empty) | `sourceLabel` in `packages/core/src/services/importDraft.ts`: "YouTube · Yemek.com", "TikTok · @mutfakdefteri", just "Instagram" when the author is unknown, the site name for web pages (og:site_name, else the host), "Yapıştırılan tarif metni" for text pasted without any link. Same on every path: fetched text, pasted text, rules, LLM, schema.org. The paste-fallback call fetches the link again; if the platform answers less the second time, `keepSource` keeps the first answer's author/title/thumbnail for the same link. Editable. |
 | Credit fields | `sourceUrl`, `sourcePlatform`, `sourceAuthor`, `sourceThumbnailUrl` (the platform's own thumbnail URL; never downloaded or re-hosted). The recipe page shows "Kaynak: <the Kaynak text>" with "Videoyu aç"; recipes imported before this had no text and keep the derived "Kaynak: @author · Platform". |
-| **Etiketler** | Only the vocabulary in `src/domain/import/tags.ts`, in the app's existing spelling: cooking method (Kızartma, Fırında, Tencere, Tavada, Izgara, Haşlama, Buharda, Pişirmeden), main ingredient (Kıymalı, Etli, Tavuklu, Balık, Vejetaryen, Bakliyat), prep (Akşamdan ıslat, Marine, Dinlendirme). Synonyms map onto them (Tencerede → Tencere, Balıklı → Balık, Baklagil → Bakliyat, Etsiz → Vejetaryen); anything else is dropped. LLMs fill `cookingMethods` / `mainIngredients` / `prepTags`; the rule parser uses keywords (kızart/kızgın yağ → Kızartma, fırın → Fırında, balık/morina → Balık, …). Merged with tags already in the form, deduplicated; the user can remove any. |
-| **Hazırlık / Pişirme / Bekleme** | Pişirme is time on heat or in the oven only. Marinating, resting, soaking, chilling and rising go to **Bekleme (dk)** (`waitMinutes`), overnight soaks to the prep-ahead notes. LLMs return `prepMinutes`, `cookMinutes`, `waitMinutes` separately and are told this explicitly; the rule parser reads "Hazırlık/Pişirme/Bekleme:" lines and otherwise counts heat steps as cooking and waiting steps (`isWaitingStep`) as Bekleme (`src/domain/import/timing.ts`). Pişirme over 90 min with no step that simmers or roasts that long shows "Süre uzun görünüyor, kontrol et" under the field — a hint, never a block. |
+| **Etiketler** | Only the vocabulary in `packages/core/src/domain/import/tags.ts`, in the app's existing spelling: cooking method (Kızartma, Fırında, Tencere, Tavada, Izgara, Haşlama, Buharda, Pişirmeden), main ingredient (Kıymalı, Etli, Tavuklu, Balık, Vejetaryen, Bakliyat), prep (Akşamdan ıslat, Marine, Dinlendirme). Synonyms map onto them (Tencerede → Tencere, Balıklı → Balık, Baklagil → Bakliyat, Etsiz → Vejetaryen); anything else is dropped. LLMs fill `cookingMethods` / `mainIngredients` / `prepTags`; the rule parser uses keywords (kızart/kızgın yağ → Kızartma, fırın → Fırında, balık/morina → Balık, …). Merged with tags already in the form, deduplicated; the user can remove any. |
+| **Hazırlık / Pişirme / Bekleme** | Pişirme is time on heat or in the oven only. Marinating, resting, soaking, chilling and rising go to **Bekleme (dk)** (`waitMinutes`), overnight soaks to the prep-ahead notes. LLMs return `prepMinutes`, `cookMinutes`, `waitMinutes` separately and are told this explicitly; the rule parser reads "Hazırlık/Pişirme/Bekleme:" lines and otherwise counts heat steps as cooking and waiting steps (`isWaitingStep`) as Bekleme (`packages/core/src/domain/import/timing.ts`). Pişirme over 90 min with no step that simmers or roasts that long shows "Süre uzun görünüyor, kontrol et" under the field — a hint, never a block. |
 | **Artarsa ne olur?** | Always "Artmaz / hepsi biter". Nothing about leftovers is guessed — not by the LLM, not by the rules. |
 
 ## Credit
@@ -183,13 +183,13 @@ the Kaynak text; the recipe page shows "Kaynak: YouTube · Yemek.com" with "Vide
 
 ## Share target
 
-`src/app/manifest.ts` registers a Web Share Target (`GET /tarifler/ice-aktar?title&text&url`).
+`apps/web/src/app/manifest.ts` registers a Web Share Target (`GET /tarifler/ice-aktar?title&text&url`).
 Android often puts the link inside `text`; the screen extracts it and starts automatically.
 iOS Safari does not support share targets — iOS users paste the link.
 
 ## Adding an LLM provider
 
-1. Write `src/server/llm/<name>.ts` returning an `LlmProvider`:
+1. Write `apps/web/src/server/llm/<name>.ts` returning an `LlmProvider`:
    ```ts
    export function mistralProvider(opts: { apiKey: string; fetch: typeof fetch }): LlmProvider {
      return {
@@ -207,22 +207,22 @@ iOS Safari does not support share targets — iOS users paste the link.
    ```
    Use only `SYSTEM_PROMPT`, `userPrompt(input, retry)` and `RECIPE_JSON_SCHEMA` from
    `prompt.ts`, and send nothing but `input` (text + platform). Don't validate — the chain does.
-2. Add its name to `LlmProviderName` (`src/server/llm/types.ts`), to `IMPORT_PROVIDERS`
-   (`src/domain/import/types.ts`), to the `importLog.provider` enum (`src/data/models.ts`, with a
+2. Add its name to `LlmProviderName` (`apps/web/src/server/llm/types.ts`), to `IMPORT_PROVIDERS`
+   (`packages/core/src/domain/import/types.ts`), to the `importLog.provider` enum (`packages/core/src/data/models.ts`, with a
    migration only if old rows change), to the `import_provider` enum in `supabase/schema.sql`,
-   and its label in `src/domain/import/usage.ts`.
-3. Add it to `providersFromEnv` (`src/server/import/handler.ts`) at the right place in the order,
-   behind its env var, and pass the var through in `src/app/api/import/route.ts`.
-4. Test it like `tests/unit/import/providers.test.ts`: mocked HTTP, request shape, 429 →
+   and its label in `packages/core/src/domain/import/usage.ts`.
+3. Add it to `providersFromEnv` (`apps/web/src/server/import/handler.ts`) at the right place in the order,
+   behind its env var, and pass the var through in `apps/web/src/app/api/import/route.ts`.
+4. Test it like `apps/web/tests/unit/import/providers.test.ts`: mocked HTTP, request shape, 429 →
    fall-through, invalid JSON → one retry, and the privacy body check.
 
 ## Adding a source adapter
 
-1. Add the platform to `SOURCE_PLATFORMS` in `src/data/models.ts` (and the `source_platform`
+1. Add the platform to `SOURCE_PLATFORMS` in `packages/core/src/data/models.ts` (and the `source_platform`
    enum in `supabase/schema.sql`) if it is new, plus its label in `PLATFORM_LABEL`.
 2. Teach `detectPlatform` / `normalizeUrl` in `detect.ts` its URL shapes; add cases to
-   `tests/unit/import/detect.test.ts`.
-3. Write `src/domain/import/adapters/<name>.ts` implementing `SourceAdapter`:
+   `packages/core/tests/unit/import/detect.test.ts`.
+3. Write `packages/core/src/domain/import/adapters/<name>.ts` implementing `SourceAdapter`:
    ```ts
    export const exampleAdapter: SourceAdapter = {
      platform: "example",
@@ -238,9 +238,36 @@ iOS Safari does not support share targets — iOS users paste the link.
    If the source has structured data, return it as `recipe` (an `ImportedRecipe`) and the
    pipeline uses it without calling the LLM.
 4. Register it in `ADAPTERS` (`adapters/index.ts`). If its endpoint is a fixed public host, add it
-   to the plain-fetch allowlist in `src/server/import/handler.ts`; arbitrary user hosts stay on
+   to the plain-fetch allowlist in `apps/web/src/server/import/handler.ts`; arbitrary user hosts stay on
    the guarded fetch.
-5. Add adapter tests with a mocked `fetch` (see `tests/unit/import/adapters.test.ts`).
+5. Add adapter tests with a mocked `fetch` (see `packages/core/tests/unit/import/adapters.test.ts`).
 
 Recipe-site partnerships start from the schema.org adapter (`web.ts`): a partner feed or API
 would be its own adapter returning the same `ImportedRecipe`.
+
+## Round 3: other languages and "Çevir / Translate"
+
+- **Import in any language.** The request carries the user's `locale` (`tr` | `en`). The shared prompt
+  (`systemPrompt(locale)`) tells the provider to read the caption in whatever language it is and to
+  write the draft in the user's language, and to report `sourceLang` (ISO 639-1). The response adds
+  `sourceLang` and `sourceText` (the original caption/page text); both are saved with the recipe
+  (`Recipe.sourceLang`, `Recipe.sourceText`). The recipe's `lang` is the language its text is
+  written in, i.e. the user's.
+- **Without an LLM** the rule parser still reads Turkish only. Text that shows no sign of Turkish
+  (`looksTurkish`: Turkish letters or common kitchen words) gets a plain paste draft — its lines as
+  steps, no guessed ingredients — and the note "Bu metni otomatik ayrıştıramadık, lütfen kontrol et." /
+  "We couldn’t read this text automatically — please check it."
+- **Messages** from the pipeline and the route come in the request's language (`i18n.getFixedT(locale)`,
+  or `Accept-Language` when the body has none).
+- **`/api/translate`** (`apps/web/src/server/translate/handler.ts`, `server/llm/translate.ts`):
+  `GET` → `{ available }` (the apps hide the action when it's false — no keys, never a broken button);
+  `POST { householdId?, from, to, recipe: { name, steps, prepItems, notes, ingredients } }` →
+  `{ translation, provider }`. Same provider order and fall-through as import (Gemini → Claude, one
+  retry on invalid output, 25 s deadline), same daily limit per household (its own counter). The
+  answer must have exactly as many steps and prep labels as the request. **Privacy:** only the recipe
+  text and the two language codes reach a provider; the household id is the quota key only
+  (`tests/unit/translate.test.ts` › privacy checks the exact Gemini body).
+- Providers now take a generic task (`LlmTask`: system, user message, JSON Schema, Claude tool);
+  `call()` is the import task, `run()` any other. The import's request body is unchanged.
+- The saved translation goes to `translations[locale]` with `origin: "llm"` and is editable like any text
+  (editing in that language changes the translation, not the source).
