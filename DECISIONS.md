@@ -216,3 +216,10 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Errors in a closed section:** a failed save opens all three sections, so the field named in the message can be found.
 - Open state is React state mirrored by `onToggle`; the chevron is CSS (no motion with `prefers-reduced-motion`).
 - e2e specs that pick "Saklanır" or add an Ön hazırlık on the new form now open the section first (a11y, leftovers, selects, screenshots).
+
+## Round 2.2 — Toplu yapıştır
+
+- **Same reader as import:** `ingredientsFromLines` runs each line through `parseIngredientLine(line, inSection = true)` and builds rows with `ingredientRow` (extracted from `toRecipeDraft`, so catalog names, side and aisle match an imported draft: "soğan" → "Kuru soğan", kıyma → Kasap). "Tuz, karabiber" gives two rows. A line it can't read keeps its text as the name (only a leading list marker like "-", "•", "1." is removed) with no amount or unit, so nothing pasted is lost. Unlike import, water and duplicate names are kept: the user typed them on purpose.
+- **Steps:** one per line; leading "1." / "2)" / "3 -" / "Adım 4:" / keycap emoji / bullets removed; blank lines and lines with no letters skipped. "1-2 dakika kavurun" keeps its range (same lookahead as the caption parser).
+- **Where rows go:** "Satırları ekle" drops the still-empty rows (the blank one a new form starts with) and appends the parsed rows after the filled ones. A result is announced in a `role="status"` line ("5 malzeme eklendi.").
+- **Multi-line paste offer:** the paste goes through as usual (no `preventDefault`), and "N satır ayrı ayrı eklensin mi?" appears under that field. "Evet, ayır" replaces the field with the pasted lines (if the field already had text before the paste, that text stays as its own row first); "Hayır" closes the offer and leaves the field as pasted. Only the pasted text is read from the paste event — no clipboard API, no permission prompt.

@@ -162,3 +162,78 @@ describe("Recipe form: Ayrıntılar", () => {
     expect(section("Kaynak ve artarsa")).not.toHaveAttribute("open");
   });
 });
+
+describe("Recipe form: Toplu yapıştır", () => {
+  it("fills five ingredient rows from five lines, replacing the empty row; rows stay editable", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    const toggle = screen.getAllByRole("button", { name: "Toplu yapıştır" })[0];
+    await userEvent.click(toggle);
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+    const box = screen.getByLabelText("Her satıra bir malzeme");
+    expect(box).toHaveFocus();
+    await userEvent.click(box);
+    await userEvent.paste("2 su bardağı un\n1 tatlı kaşığı tuz\n\n3 yumurta\n1 su bardağı süt\nTuz, karabiber");
+    await userEvent.click(screen.getByRole("button", { name: "Satırları ekle" }));
+    const names = screen.getAllByLabelText("Malzeme").map((el) => (el as HTMLInputElement).value);
+    expect(names).toEqual(["Un", "Tuz", "Yumurta", "Süt", "Tuz", "Karabiber"]);
+    expect(screen.getAllByLabelText("Miktar").map((el) => (el as HTMLInputElement).value).slice(0, 4)).toEqual(["2", "1", "3", "1"]);
+    expect(screen.getAllByLabelText("Birim").map((el) => (el as HTMLSelectElement).value).slice(0, 2)).toEqual(["su bardağı", "tatlı kaşığı"]);
+    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("6 malzeme eklendi.");
+    expect(screen.queryByLabelText("Her satıra bir malzeme")).toBeNull();
+    // Still a normal row
+    await userEvent.clear(screen.getAllByLabelText("Miktar")[0]);
+    await userEvent.type(screen.getAllByLabelText("Miktar")[0], "3");
+    expect(screen.getAllByLabelText("Miktar")[0]).toHaveValue("3");
+  });
+
+  it("fills steps, strips numbering and blank lines, and saves", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    await userEvent.type(screen.getByLabelText("Tarifin adı"), "Krep");
+    await userEvent.click(screen.getAllByRole("button", { name: "Toplu yapıştır" })[1]);
+    await userEvent.click(screen.getByLabelText("Her satıra bir adım"));
+    await userEvent.paste("1. Unu ve yumurtayı çırpın.\n\n2) Sütü azar azar ekleyin.\n3- Tavada iki yüzünü pişirin.");
+    await userEvent.click(screen.getByRole("button", { name: "Satırları ekle" }));
+    expect(screen.getByLabelText("1. adım")).toHaveValue("Unu ve yumurtayı çırpın.");
+    expect(screen.getByLabelText("3. adım")).toHaveValue("Tavada iki yüzünü pişirin.");
+    expect(screen.queryByLabelText("4. adım")).toBeNull();
+    await userEvent.click(screen.getByRole("button", { name: "Tarifi kaydet" }));
+    const r = useApp.getState().recipes.find((x) => x.name === "Krep")!;
+    expect(r.steps).toEqual(["Unu ve yumurtayı çırpın.", "Sütü azar azar ekleyin.", "Tavada iki yüzünü pişirin."]);
+  });
+
+  it("a multi-line paste into one step offers to split it", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    await userEvent.click(screen.getByLabelText("1. adım"));
+    await userEvent.paste("1. Soğanı doğrayın.\n2. Kavurun.\n3. Pirinci ekleyin.");
+    const offer = screen.getByRole("group", { name: "Yapıştırılan satırlar" });
+    expect(offer).toHaveTextContent("3 satır ayrı ayrı eklensin mi?");
+    await userEvent.click(within(offer).getByRole("button", { name: "Evet, ayır" }));
+    expect(screen.getByLabelText("1. adım")).toHaveValue("Soğanı doğrayın.");
+    expect(screen.getByLabelText("3. adım")).toHaveValue("Pirinci ekleyin.");
+    expect(screen.queryByRole("group", { name: "Yapıştırılan satırlar" })).toBeNull();
+  });
+
+  it("a multi-line paste into an ingredient name offers to split; 'Hayır' keeps it as it is", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    await userEvent.click(screen.getByLabelText("Malzeme"));
+    await userEvent.paste("500 g kıyma\n2 adet soğan");
+    await userEvent.click(within(screen.getByRole("group", { name: "Yapıştırılan satırlar" })).getByRole("button", { name: "Hayır" }));
+    expect(screen.getAllByLabelText("Malzeme")).toHaveLength(1);
+    await userEvent.clear(screen.getByLabelText("Malzeme"));
+    await userEvent.paste("500 g kıyma\n2 adet soğan");
+    await userEvent.click(within(screen.getByRole("group", { name: "Yapıştırılan satırlar" })).getByRole("button", { name: "Evet, ayır" }));
+    expect(screen.getAllByLabelText("Malzeme").map((el) => (el as HTMLInputElement).value)).toEqual(["Kıyma", "Kuru soğan"]);
+  });
+
+  it("a one-line paste offers nothing", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    await userEvent.click(screen.getByLabelText("1. adım"));
+    await userEvent.paste("Soğanı doğrayın.");
+    expect(screen.queryByRole("group", { name: "Yapıştırılan satırlar" })).toBeNull();
+  });
+});

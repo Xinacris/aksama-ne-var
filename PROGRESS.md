@@ -91,5 +91,6 @@ Spec: PROMPT-v2.2.md. Continue from the first unchecked M-item.
   - `src/domain/quickAdd.ts` + `src/components/QuickAdd.tsx` (`useQuickAdd`, `QuickAddSheet` on the existing `Dialog`). Tests: `tests/unit/domain/quickAdd.test.ts`, `tests/component/quickadd.test.tsx`, 3 mobile e2e in `e2e/recipes-mobile.spec.ts`.
 - [x] M3. Collapsible "Ayrıntılar" in the full form (new + edit); existing form tests green.
   - `filledSections` / `initialOpen` / summaries in `src/services/recipeForm.ts`; `RecipeForm` `openFilled` (false only for a blank new recipe). Unit + component tests; a11y/leftovers/selects/journey/import e2e green (31 passed).
-- [ ] M4. Toplu yapıştır for ingredients and steps; multi-line paste offer; unit + component tests.
+- [x] M4. Toplu yapıştır for ingredients and steps; multi-line paste offer; unit + component tests.
+  - `src/services/bulkPaste.ts` (`ingredientsFromLines`, `stepsFromLines`), `ingredientRow` shared with import. `tests/unit/bulkPaste.test.ts`, 5 component tests in `tests/component/tarif.test.tsx`, mobile e2e "Toplu yapıştır fills 5 ingredients".
 - [ ] M5. Final: e2e (mobile + desktop), axe light/dark, screenshots checked, all scripts green, push, check Vercel status.

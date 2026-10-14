@@ -3,8 +3,8 @@ import { catalogEntry } from "@/data/seed/ingredients";
 import { isWater, matchCatalog } from "@/domain/import/catalogMatch";
 import { filterTags, keywordTags, mergeTags } from "@/domain/import/tags";
 import { stepMinutes } from "@/domain/import/timing";
-import type { ImportedRecipe, ImportResult } from "@/domain/import/types";
-import { emptyIngredient, type RecipeDraft } from "./recipeForm";
+import type { ImportedIngredient, ImportedRecipe, ImportResult } from "@/domain/import/types";
+import { emptyIngredient, type IngredientDraft, type RecipeDraft } from "./recipeForm";
 
 const OFFSET: Record<ImportedRecipe["prep"][number]["when"], string> = {
   "night-before": "night-before",
@@ -63,22 +63,25 @@ export function draftTimes(r: ImportedRecipe): { prep: number; cook: number; wai
  * Import draft → the existing recipe form's draft. Nothing is saved until the user submits the form.
  * `existingTags` (what the form already had) are kept first; new tags are merged without duplicates.
  */
+/** One parsed ingredient → an editable form row (catalog name, side and aisle when known). */
+export function ingredientRow(i: ImportedIngredient): IngredientDraft {
+  const canonical = matchCatalog(i.item);
+  const entry = canonical ? catalogEntry(canonical) : undefined;
+  const side = entry?.side ?? i.side ?? "market";
+  return {
+    name: canonical ?? i.item,
+    quantity: i.amount === null ? "" : dec(i.amount),
+    unit: i.amount === null ? "" : i.unit ?? "adet",
+    side,
+    aisle: entry?.aisle ?? (side === "pazar" ? "Sebze" : "Diğer"),
+    ...(i.note ? { note: i.note } : {}),
+  };
+}
+
 export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"], existingTags = "", writtenRecipeUrl: string | null = null): RecipeDraft {
   const ingredients = r.ingredients
     .filter((i) => !isWater(i.item))
-    .map((i) => {
-      const canonical = matchCatalog(i.item);
-      const entry = canonical ? catalogEntry(canonical) : undefined;
-      const side = entry?.side ?? i.side ?? "market";
-      return {
-        name: canonical ?? i.item,
-        quantity: i.amount === null ? "" : dec(i.amount),
-        unit: i.amount === null ? "" : i.unit ?? "adet",
-        side,
-        aisle: entry?.aisle ?? (side === "pazar" ? "Sebze" : "Diğer"),
-        ...(i.note ? { note: i.note } : {}),
-      };
-    })
+    .map(ingredientRow)
     // one row per catalog item ("soğan" twice → keep the first)
     .filter((row, idx, all) => all.findIndex((x) => x.name === row.name) === idx);
 
