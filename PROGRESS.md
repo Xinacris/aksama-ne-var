@@ -183,6 +183,7 @@ R3 — timer alarm.
 - [x] Tone: `apps/mobile/scripts/make-alarm-tone.mjs` → `assets/sounds/timer_alarm.wav`
 - [x] Mobile: AlarmHost (sound + vibration + banner), notifications (channels, reconcile, tap), permission + hint, Ayarlar toggle, 9 tests
 - [x] Web: Web Audio alarm, Durdur banner, notification + blinking title, Ayarlar toggle (crashed session's work)
-- [ ] Web: unit tests, e2e (banner + Stop, audio mocked), axe on the banner light + dark; update cooking.spec ("Tamam" → "Durdur")
+- [x] Web unit tests (banner, Durdur, toggle)
+- [ ] NOW RUNNING: Playwright alarm.spec + cooking.spec (--workers=1)
 - [ ] DECISIONS (household, silent mode, late delivery, tap = acknowledge), docs/MOBILE.md
 - [ ] Full checks → push

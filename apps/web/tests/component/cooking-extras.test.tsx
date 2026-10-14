@@ -6,6 +6,7 @@ import { CookingMode } from "@/components/cooking/CookingMode";
 import { cookingExtras } from "@/components/cooking/extras";
 import { setNow } from "@anv/core/lib/clock";
 import { stepTimers } from "@anv/core/domain/cooking";
+import { ALARM_VIBRATION } from "@anv/core/domain/timerAlarm";
 import { useApp } from "@/store/app";
 import { R } from "@anv/core/testing/builders";
 import { freshStore } from "./helpers";
@@ -25,7 +26,7 @@ async function stepsOfMenu() {
 }
 
 describe("cooking timers", () => {
-  it("start two timers on different dishes; they keep running across steps and dishes; finish rings once", async () => {
+  it("start two timers on different dishes; they keep running across steps and dishes; finish rings until Durdur", async () => {
     const vibrate = vi.fn();
     Object.defineProperty(navigator, "vibrate", { value: vibrate, configurable: true });
     await stepsOfMenu();
@@ -51,11 +52,14 @@ describe("cooking timers", () => {
     // 18:20: the soup rings, the köfte keeps counting (and keeps running while we change dish)
     setNow(at(18, 20, 1));
     expect(await screen.findByText(/Süre doldu:/, {}, { timeout: 2500 })).toBeInTheDocument();
-    expect(screen.getByRole("alert", { name: "Zamanlayıcı uyarıları" })).toHaveTextContent("Mercimek çorbası · 20 dk");
+    expect(screen.getByRole("alert")).toHaveTextContent("Süre doldu: Mercimek çorbası · 20 dk");
     expect(screen.getByRole("region", { name: "Zamanlayıcılar" })).toHaveTextContent("4:59");
-    expect(vibrate).toHaveBeenCalledTimes(1);
-    await userEvent.click(screen.getByRole("button", { name: "Tamam" }));
-    expect(screen.getByRole("alert", { name: "Zamanlayıcı uyarıları" })).toBeEmptyDOMElement();
+    expect(vibrate).toHaveBeenCalledWith(ALARM_VIBRATION);
+    // Durdur: the banner goes, the vibration stops, the soup timer is dismissed (everywhere sync reaches)
+    await userEvent.click(screen.getByRole("button", { name: "Alarmı durdur" }));
+    expect(screen.queryByRole("alert")).toBeNull();
+    expect(vibrate).toHaveBeenLastCalledWith(0);
+    expect(useApp.getState().cookingSessions[0].timers.find((t) => t.endsAt === at(18, 20).toISOString())?.dismissed).toBe(true);
     expect(within(screen.getByRole("region", { name: "Zamanlayıcılar" })).getAllByRole("listitem")).toHaveLength(1);
   });
 
