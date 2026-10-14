@@ -4,10 +4,10 @@ import { expect, test, type Page } from "@playwright/test";
 const DESIGN_NOW = new Date("2026-10-12T08:45:00+03:00");
 const only = process.env.SHOTS?.split(",");
 
-async function shot(page: Page, project: string, name: string) {
+async function shot(page: Page, project: string, name: string, fullPage = true) {
   if (only && !only.includes(name)) return;
   await page.waitForTimeout(350);
-  await page.screenshot({ path: `screenshots/${project}/${name}.png`, fullPage: true, animations: "disabled" });
+  await page.screenshot({ path: `screenshots/${project}/${name}.png`, fullPage, animations: "disabled" });
 }
 
 async function demo(page: Page) {
@@ -84,6 +84,25 @@ test("screens", async ({ page }, info) => {
     await sel.scrollIntoViewIfNeeded();
     await page.waitForTimeout(200);
     if (!only || only.includes("tarif-yeni-select")) await page.screenshot({ path: `screenshots/${p}/tarif-yeni-select.png`, animations: "disabled" });
+  }
+  if (!only || only.some((n) => n.startsWith("tarifler-") || n.startsWith("tarif-yeni-"))) {
+    // Round 2.2: the quick-add sheet (name and link), a name-only recipe, the bulk-paste box.
+    await page.goto("/tarifler");
+    await page.getByRole("button", { name: "Yeni tarif" }).click();
+    const sheet = page.getByRole("dialog", { name: "Yeni tarif" });
+    await expect(sheet).toBeVisible();
+    await page.waitForTimeout(250);
+    await shot(page, p, "tarifler-hizli-ekle", false); // a sheet: the screen as seen, not the 100-recipe page
+    await sheet.getByLabel("Link yapıştır ya da yemeğin adını yaz").fill("https://www.instagram.com/reel/C9xyz123/");
+    await shot(page, p, "tarifler-hizli-ekle-link", false);
+    await sheet.getByLabel("Link yapıştır ya da yemeğin adını yaz").fill("Annemin dolması");
+    await sheet.getByRole("button", { name: "Kaydet" }).click();
+    await expect(page.getByRole("link", { name: "Ayrıntıları ekle" })).toBeVisible();
+    await shot(page, p, "tarifler-hizli-kaydedildi");
+    await page.goto("/tarifler/yeni");
+    await page.getByRole("region", { name: "Malzemeler" }).getByRole("button", { name: "Toplu yapıştır" }).click();
+    await page.getByLabel("Her satıra bir malzeme").fill("2 su bardağı un\n1 tatlı kaşığı tuz\n3 yumurta\n1,5 su bardağı süt\n1 paket kabartma tozu");
+    await shot(page, p, "tarif-yeni-toplu");
   }
   if (!only || only.includes("eslesme-eslesti")) {
     await page.goto("/eslesme");
