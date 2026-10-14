@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SLOTS, SLOT_LABEL, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { dayName } from "@anv/core/domain/dates";
 import { keepUntilLabel, type EveningLeftover } from "@anv/core/domain/leftovers";
-import { recipeLabel } from "@anv/core/domain/shopping";
+import { recipeLabel, tileName } from "@anv/core/domain/shopping";
 import { buildWeek, type DayModel } from "@anv/core/domain/week";
 import { intlTag } from "@anv/core/i18n";
 import { numberAccusative } from "@anv/core/lib/text";
@@ -194,7 +194,7 @@ function DayCard({
         </View>
         <IconButton icon="more" label={t("week.dayOptions", { day: full })} onPress={onDay} />
       </Row>
-      {day.lunch && <Text variant="meta">{t("week.lunch", { dish: day.lunch.name.toLocaleLowerCase(intlTag()) })}</Text>}
+      {day.lunch && <Text variant="meta">{t("week.lunch", { dish: tileName(day.lunch).toLocaleLowerCase(intlTag()) })}</Text>}
       {day.ateOut ? (
         <View style={{ gap: 4 }}>
           <Text weight="semibold">{t("week.ateOut")}</Text>
@@ -212,7 +212,7 @@ function DayCard({
                 <Pressable onPress={() => onTile(slot, cell)} accessibilityRole="button" style={{ flex: 1, minHeight: touchTarget, justifyContent: "center" }}>
                   <Text weight={slot === "ana" ? "bold" : "regular"} color={cell.recipe ? colors.ink : colors.ink2}>
                     {cell.item.source === "leftover" ? t("week.fromFridge") : ""}
-                    {cell.recipe?.name ?? t("plan.deletedRecipe")}
+                    {cell.recipe ? tileName(cell.recipe) : t("plan.deletedRecipe")}
                   </Text>
                 </Pressable>
               ) : (

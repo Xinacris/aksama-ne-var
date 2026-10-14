@@ -302,3 +302,11 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Cooking mode** reuses core's session logic (`startCooking`, `moveStep`, timers stored as end times), so a session started in a browser resumes on the phone of the same account and vice versa (on one device until sync exists). `useKeepAwake()` keeps the screen on while the screen is open. A finished timer vibrates (`Vibration` pattern) with a warning haptic and shows an alert row; there is no sound (no extra audio module) and no background alarm (needs notifications → development build).
 - **Ayarlar** (built in V4) shows "Eşitleme yakında" with a plain explanation instead of the web's live/syncing pill; the language switch saves on the user and on the device.
 - **`npm run mobile`** is `npm exec -w @anv/mobile -- expo start`, so `npm run mobile -- --tunnel` really passes `--tunnel` to Expo (with `npm run start -w …` npm would swallow it). Checked: Metro starts and serves an iOS dev bundle (1 263 modules, one copy of React).
+
+## Round 3 — Final checks
+
+- **English screenshots** come from a separate spec (`e2e/screenshots-en.spec.ts`, en-GB browser) because the Turkish one drives the UI by Turkish labels; files are `en-*.png` next to the Turkish ones in each of the four projects.
+- **Axe in English** for the main screens, light and dark, in both Playwright projects (the context keeps the project's phone viewport).
+- **Tight places use the short English name** (`tileName`): board tiles and lunch lines in English show "Lentil soup" rather than a truncated "Mercimek çorbası (red…"; Turkish is unchanged. The week summary note starts with a capital ("Out on Saturday…").
+- **Web component tests time out at 20 s** (was Vitest's 5 s): the cooking-mode tests flaked only when every workspace's tests ran at once — the previous session's note said to harden them if they flaked again.
+- **Known English rough edge:** catalog ingredient names are plural ("Onions") and a recipe line reads "1 onions"; singular forms per ingredient would fix it (follow-up, not done tonight).

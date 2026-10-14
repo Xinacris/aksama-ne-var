@@ -5,7 +5,7 @@ import base from "./playwright.config";
 export default defineConfig({
   ...base,
   testIgnore: [],
-  testMatch: ["**/screenshots.spec.ts"],
+  testMatch: ["**/screenshots.spec.ts", "**/screenshots-en.spec.ts"],
   timeout: 180_000,
   projects: [
     { name: "390-light", use: { viewport: { width: 390, height: 844 }, colorScheme: "light", hasTouch: true } },

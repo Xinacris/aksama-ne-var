@@ -1,4 +1,4 @@
-import { t } from "../i18n";
+import { getLocale, t } from "../i18n";
 import { formatNumber, unitAmount } from "./units";
 import {
   AISLE_LABEL,
@@ -206,6 +206,11 @@ export function forLabel(ids: string[], recipesById: Map<string, Recipe>): strin
 
 export function recipeLabel(r: Pick<Recipe, "name" | "shortName">): string {
   return r.shortName ?? r.name;
+}
+
+/** Name for tight places (board tiles, lunch lines): English names carry a hint in brackets, so the short name fits better there. */
+export function tileName(r: Pick<Recipe, "name" | "shortName">): string {
+  return getLocale() === "en" && r.shortName ? r.shortName : r.name;
 }
 
 /**

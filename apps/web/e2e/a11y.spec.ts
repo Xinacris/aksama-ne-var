@@ -98,4 +98,21 @@ test.describe("accessibility (axe)", () => {
       await audit(page, `eslesme-eslesti ${scheme}`);
     });
   }
+
+  for (const scheme of ["light", "dark"] as const) {
+    test(`main screens in English (${scheme})`, async ({ browser }, info) => {
+      const context = await browser.newContext({ locale: "en-GB", colorScheme: scheme, viewport: info.project.use.viewport, hasTouch: info.project.use.hasTouch });
+      const page = await context.newPage();
+      await page.clock.setFixedTime(NOW);
+      await page.goto("/giris");
+      await audit(page, `en giris ${scheme}`);
+      await page.getByRole("button", { name: /Try the sample home/ }).click();
+      await expect(page).toHaveURL(/\/bugun/);
+      for (const url of ["/bugun", "/eslesme", "/liste", "/hafta", "/tarif/izmir-kofte?gun=today", "/tarifler", "/tarifler/yeni", "/ayarlar", "/pisir/2026-10-12"]) {
+        await page.goto(url);
+        await audit(page, `en ${url} ${scheme}`);
+      }
+      await context.close();
+    });
+  }
 });
