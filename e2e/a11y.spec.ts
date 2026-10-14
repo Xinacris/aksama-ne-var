@@ -51,6 +51,25 @@ test.describe("accessibility (axe)", () => {
       await page.getByRole("radio", { name: "Saklanır" }).click();
       await expect(page.getByLabel("Kaç gün içinde")).toBeVisible();
       await audit(page, `tarif-yeni saklanır ${scheme}`);
+      // Round 2.2: quick-add sheet, a name-only recipe, bulk paste and the split offer
+      await page.goto("/tarifler");
+      await page.getByRole("button", { name: "Yeni tarif" }).click();
+      await page.getByLabel("Link yapıştır ya da yemeğin adını yaz").fill("Annemin dolması");
+      await audit(page, `hizli-ekle ${scheme}`);
+      await page.getByRole("button", { name: "Kaydet" }).click();
+      await expect(page.getByRole("link", { name: "Ayrıntıları ekle" })).toBeVisible();
+      await audit(page, `hizli-kaydedildi ${scheme}`);
+      await page.goto("/tarifler/yeni");
+      await page.getByRole("region", { name: "Malzemeler" }).getByRole("button", { name: "Toplu yapıştır" }).click();
+      await page.getByLabel("Her satıra bir malzeme").fill("2 su bardağı un\n3 yumurta");
+      await page.getByLabel("1. adım", { exact: true }).focus();
+      await page.evaluate(() => {
+        const dt = new DataTransfer();
+        dt.setData("text/plain", "1. Soğanı doğrayın.\n2. Kavurun.");
+        document.activeElement!.dispatchEvent(new ClipboardEvent("paste", { clipboardData: dt, bubbles: true, cancelable: true }));
+      });
+      await expect(page.getByRole("group", { name: "Yapıştırılan satırlar" })).toBeVisible();
+      await audit(page, `toplu-yapistir ${scheme}`);
       // Cooking mode: "Başlamadan önce", the Malzemeler sheet, a step with a running timer, the finish screen
       await page.goto("/pisir/2026-10-12");
       await expect(page.getByRole("heading", { name: "Başlamadan önce" })).toBeVisible();
