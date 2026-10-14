@@ -128,3 +128,27 @@ describe("app store", () => {
     expect(await d.repos.auth.findUserByEmail("ali@ornek.com")).toBeNull();
   });
 });
+
+describe("store in English", () => {
+  it("shows recipes, tasks and list rows in English while lists still merge by catalog name", async () => {
+    const { setLocale } = await import("@/i18n");
+    await appStore.getState().loadDemo();
+    setLocale("en");
+    try {
+      await appStore.getState().refresh();
+      const s = appStore.getState();
+      expect(s.recipes.find((r) => r.id === "izmir-kofte")!.name).toBe("İzmir köfte (meatball and potato bake)");
+      expect(s.rawRecipes.find((r) => r.id === "izmir-kofte")!.name).toBe("İzmir köfte");
+      const task = s.prepTasks.find((t) => t.recipeId === "izmir-kofte" && t.freezer);
+      if (task) expect(task.label).toBe("Take the mince out of the freezer");
+      const rows = selectList(s);
+      const anyCatalog = rows.find((r) => r.label);
+      expect(anyCatalog).toBeTruthy();
+      expect(new Set(rows.map((r) => r.key)).size).toBe(rows.length);
+    } finally {
+      setLocale("tr");
+      await appStore.getState().refresh();
+    }
+    expect(appStore.getState().recipes.find((r) => r.id === "izmir-kofte")!.name).toBe("İzmir köfte");
+  });
+});

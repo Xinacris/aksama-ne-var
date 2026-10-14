@@ -111,7 +111,7 @@ function EslesmeInner() {
   if (moment) {
     const r = byId.get(moment.recipeId);
     if (r) {
-      const missing = r.ingredients.filter((i) => !i.staple && !pantry.some((p) => p.name === i.name)).map((i) => i.name);
+      const missing = r.ingredients.filter((i) => !i.staple && !pantry.some((p) => p.name === i.name)).map((i) => i.label ?? i.name);
       const listNote = missing.length
         ? t("eslesme.toList", { items: listPhrase(missing.slice(0, 4)).replace(/^./, (c) => c.toLocaleUpperCase(intlTag())), more: missing.length > 4 ? t("eslesme.andOthers") : "" })
         : t("eslesme.allHome");

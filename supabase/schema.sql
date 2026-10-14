@@ -31,6 +31,7 @@ create table public.profiles (
   name text not null check (char_length(name) between 1 and 40),
   avatar_initial text not null check (char_length(avatar_initial) between 1 and 2),
   onboarded boolean not null default false,
+  locale text check (locale in ('tr', 'en')),       -- chosen app language (Round 3); null = device default
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
@@ -115,11 +116,30 @@ create table public.recipes (
   source_thumbnail_url text,                   -- the platform's thumbnail URL, never re-hosted
   written_recipe_url text check (written_recipe_url ~ '^https?://'),  -- "Yazılı tarif" a video linked to
   stub boolean not null default false,
+  lang text not null default 'tr' check (lang in ('tr', 'en')),   -- language the recipe was written in (Round 3)
   created_by uuid references public.profiles (id),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
 create index on public.recipes (household_id);
+
+-- Round 3: a recipe's text in other languages. Times, servings, tags, leftovers and ingredient
+-- identity stay on `recipes`; only text lives here, one row per (recipe, locale).
+create table public.recipe_translations (
+  recipe_id text not null references public.recipes (id) on delete cascade,
+  locale text not null check (locale in ('tr', 'en')),
+  name text not null,
+  short_name text,
+  time_note text,
+  ingredients jsonb not null default '{}',     -- {"Kıyma": "Minced beef"}: display names by catalog name
+  notes jsonb not null default '{}',           -- {"Bayat ekmek": "crumb only"}
+  steps text[] not null default '{}',
+  prep_items text[] not null default '{}',     -- prep-ahead labels, same order as recipes.prep_items
+  origin text not null default 'user' check (origin in ('seed', 'llm', 'user')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  primary key (recipe_id, locale)
+);
 
 create table public.favorites (
   id uuid primary key default gen_random_uuid(),
@@ -340,6 +360,7 @@ alter table public.profiles enable row level security;
 alter table public.households enable row level security;
 alter table public.household_members enable row level security;
 alter table public.recipes enable row level security;
+alter table public.recipe_translations enable row level security;
 alter table public.favorites enable row level security;
 alter table public.plan_items enable row level security;
 alter table public.plan_days enable row level security;
@@ -381,6 +402,13 @@ create policy recipes_select on public.recipes for select to authenticated
 create policy recipes_write on public.recipes for all to authenticated
   using (household_id is not null and public.is_member(household_id))
   with check (household_id is not null and public.is_member(household_id));
+
+-- Translations follow their recipe: built-in ones readable by all, household ones by members.
+create policy recipe_translations_select on public.recipe_translations for select to authenticated
+  using (exists (select 1 from public.recipes r where r.id = recipe_id and (r.household_id is null or public.is_member(r.household_id))));
+create policy recipe_translations_write on public.recipe_translations for all to authenticated
+  using (exists (select 1 from public.recipes r where r.id = recipe_id and r.household_id is not null and public.is_member(r.household_id)))
+  with check (exists (select 1 from public.recipes r where r.id = recipe_id and r.household_id is not null and public.is_member(r.household_id)));
 
 -- Everything else: members of the household can read and write.
 do $$

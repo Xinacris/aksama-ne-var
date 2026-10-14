@@ -127,7 +127,8 @@ function TarifInner() {
       return { tone: "olive", label: tr(freezerTask?.status === "done" ? "tarif.thawing" : "tarif.inFreezer") };
     }
     const st2 = ingredientStatus(ing, rows, pantry);
-    const name = ing.name.charAt(0).toLocaleLowerCase(intlTag()) + ing.name.slice(1);
+    const shown = ing.label ?? ing.name;
+    const name = shown.charAt(0).toLocaleLowerCase(intlTag()) + shown.slice(1);
     if (st2 === "evde") {
       const removable = pantry.some((p) => p.name === ing.name && p.quantity === null);
       return removable
@@ -311,7 +312,7 @@ function TarifInner() {
               return (
                 <li key={ing.name} className={s.ing}>
                   <span className={s.ingText}>
-                    {q && <strong>{q}</strong>} {ing.quantity === null ? ing.name : ing.name.charAt(0).toLocaleLowerCase(intlTag()) + ing.name.slice(1)}
+                    {q && <strong>{q}</strong>} {ing.quantity === null ? (ing.label ?? ing.name) : (ing.label ?? ing.name).charAt(0).toLocaleLowerCase(intlTag()) + (ing.label ?? ing.name).slice(1)}
                     {ing.note ? ` (${ing.note})` : ""}
                   </span>
                   <StatusPill tone={stt.tone} onClick={stt.action} label={stt.aria}>
@@ -324,7 +325,7 @@ function TarifInner() {
               <li className={s.ing}>
                 <span className={s.ingText}>
                   {staples
-                    .map((i, idx) => (idx === 0 ? i.name : i.name.charAt(0).toLocaleLowerCase(intlTag()) + i.name.slice(1)))
+                    .map((i, idx) => (idx === 0 ? (i.label ?? i.name) : (i.label ?? i.name).charAt(0).toLocaleLowerCase(intlTag()) + (i.label ?? i.name).slice(1)))
                     .join(", ")}
                 </span>
                 <StatusPill tone="olive">{tr("tarif.inHome")}</StatusPill>

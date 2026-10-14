@@ -32,7 +32,10 @@ export function dishesToCook(target: CookTarget, items: PlanItem[], recipesById:
 
 export interface PrepListRow {
   key: string;
+  /** Stored ingredient name ("evde var", list). */
   name: string;
+  /** Shown name in the current language. */
+  label: string;
   amount: string;
   /** Dishes using it, for menus ("köfte, pilav"). */
   forDishes: string[];
@@ -54,7 +57,7 @@ export function mergedIngredients(recipes: Recipe[]): PrepListRow[] {
   }
   const out: PrepListRow[] = [];
   for (const [key, row] of rows) {
-    out.push({ key, name: row.name, amount: mergeAmounts(row.parts), forDishes: row.dishes, staple: row.staple });
+    out.push({ key, name: row.name, label: row.parts[0]?.label ?? row.name, amount: mergeAmounts(row.parts), forDishes: row.dishes, staple: row.staple });
   }
   // Staples (salt, spices) last: they are usually at hand.
   return out.sort((a, b) => Number(a.staple) - Number(b.staple));

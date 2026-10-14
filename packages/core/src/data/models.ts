@@ -82,6 +82,8 @@ export const ingredientSchema = z.object({
   staple: z.boolean().optional(),
   /** Free-text note shown after the name, e.g. "rendelenmiş". */
   note: z.string().optional(),
+  /** Display-only name in the current language (set when recipes are localized; never stored). */
+  label: z.string().optional(),
 });
 export type Ingredient = z.infer<typeof ingredientSchema>;
 
@@ -117,6 +119,25 @@ export const PLATFORM_LABEL: Record<SourcePlatform, string> = {
 export const LEFTOVER_POLICIES = ["none", "lunch", "store"] as const;
 export const leftoverPolicySchema = z.enum(LEFTOVER_POLICIES);
 export type LeftoverPolicy = z.infer<typeof leftoverPolicySchema>;
+
+/** One language's text of a recipe. Times, servings, tags, leftovers and ingredient identity stay language-neutral. */
+export const recipeTranslationSchema = z.object({
+  name: z.string().min(1),
+  shortName: z.string().optional(),
+  timeNote: z.string().optional(),
+  /** Ingredient display names by canonical ingredient name (the catalog id), e.g. "Kıyma" → "minced beef". */
+  ingredients: z.record(z.string(), z.string()).optional(),
+  /** Ingredient notes by canonical ingredient name ("rendelenmiş" → "grated"). */
+  notes: z.record(z.string(), z.string()).optional(),
+  steps: z.array(z.string().min(1)),
+  /** Prep-ahead labels, same order as `prepItems`. */
+  prepItems: z.array(z.string()).optional(),
+  /** "llm" (Çevir), "seed" (built-in), "user" (written or edited by hand). */
+  origin: z.enum(["seed", "llm", "user"]).optional(),
+});
+export type RecipeTranslation = z.infer<typeof recipeTranslationSchema>;
+
+export const recipeLangSchema = z.enum(["tr", "en"]);
 
 export const recipeSchema = z.object({
   id: z.string().min(1),
@@ -155,6 +176,10 @@ export const recipeSchema = z.object({
   writtenRecipeUrl: z.string().url().optional(),
   /** Created from an unknown name during onboarding; details not filled yet. */
   stub: z.boolean().optional(),
+  /** Language the recipe was written in (migration v10 sets "tr" on older rows). */
+  lang: recipeLangSchema.optional(),
+  /** The recipe's text in other languages. */
+  translations: z.object({ tr: recipeTranslationSchema.optional(), en: recipeTranslationSchema.optional() }).optional(),
   createdBy: uuid.nullable(),
   createdAt: isoDateTime,
   updatedAt: isoDateTime,

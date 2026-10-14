@@ -204,7 +204,7 @@ function Row({
   const checked = !!row.checkedBy;
   const byPartner = checked && row.checkedBy !== meId;
   const fresh = byPartner && !!row.checkedAt && now().getTime() - new Date(row.checkedAt).getTime() < FRESH_MS;
-  const label = `${row.name}${row.quantityText ? `, ${row.quantityText}` : ""}${checked && who ? t("liste.rowGot", { name: who.name }) : ""}`;
+  const label = `${row.label ?? row.name}${row.quantityText ? `, ${row.quantityText}` : ""}${checked && who ? t("liste.rowGot", { name: who.name }) : ""}`;
   return (
     <li className={s.li}>
       <button
@@ -219,7 +219,7 @@ function Row({
         </span>
         <span className={[s.texts, checked && !fresh && s.dim].filter(Boolean).join(" ")}>
           <span className={s.line1}>
-            <span className={s.name}>{row.name}</span>
+            <span className={s.name}>{row.label ?? row.name}</span>
             <span className={s.qty}>{row.quantityText}</span>
           </span>
           <span className={s.line2}>
@@ -229,7 +229,7 @@ function Row({
         </span>
       </button>
       {onRemove && (
-        <button type="button" className={s.remove} onClick={onRemove} aria-label={t("liste.remove", { name: row.name })}>
+        <button type="button" className={s.remove} onClick={onRemove} aria-label={t("liste.remove", { name: row.label ?? row.name })}>
           <IconClose size={18} />
         </button>
       )}
