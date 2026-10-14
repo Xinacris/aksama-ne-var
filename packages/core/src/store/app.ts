@@ -1,4 +1,5 @@
-import { t as tx } from "../i18n";
+import { getLocale, i18n, t as tx } from "../i18n";
+import { ingredientLabel, localizeRecipe, localizeTask } from "../domain/recipeText";
 import { createStore } from "zustand/vanilla";
 import type { DataContext } from "../data/context";
 import type {
@@ -56,7 +57,10 @@ export interface AppData {
   household: Household | null;
   members: Member[];
   people: User[];
+  /** Recipes as shown: name, steps, prep labels and ingredient labels in the current language. */
   recipes: Recipe[];
+  /** Recipes as stored (source language + translations): for editing and translating. */
+  rawRecipes: Recipe[];
   favorites: Favorite[];
   planItems: PlanItem[];
   planDays: PlanDay[];
@@ -77,6 +81,7 @@ const EMPTY: AppData = {
   members: [],
   people: [],
   recipes: [],
+  rawRecipes: [],
   favorites: [],
   planItems: [],
   planDays: [],
@@ -99,6 +104,9 @@ export interface Notice {
 
 export interface RecipeInput {
   name: string;
+  /** Language the text is written in (new recipes: the current language). */
+  lang?: Recipe["lang"];
+  translations?: Recipe["translations"];
   course: Recipe["course"];
   prepMinutes: number;
   cookMinutes: number;
@@ -239,6 +247,11 @@ let syncTimer: ReturnType<typeof setTimeout> | null = null;
 let unsubscribeBus: (() => void) | null = null;
 
 export const appStore = createStore<AppState>()((set, get) => {
+  // Recipes and prep labels are localized when loaded: a language switch reloads them.
+  i18n.on("languageChanged", () => {
+    if (get().status !== "booting" && data) void get().refresh();
+  });
+
   /** Run an action: map storage/app errors to a calm notice, then reload. */
   async function run<T>(fn: () => Promise<T>, opts: { refresh?: boolean; rethrow?: boolean } = {}): Promise<T> {
     try {
@@ -446,8 +459,8 @@ export const appStore = createStore<AppState>()((set, get) => {
         const membership = await repos.households.membershipOf(me.id);
         const household = membership ? await repos.households.get(membership.householdId) : null;
         if (!household) {
-          const recipes = await repos.recipes.list(null);
-          set({ ...EMPTY, me, recipes, status: "no-household", today });
+          const raw = await repos.recipes.list(null);
+          set({ ...EMPTY, me, recipes: raw.map((r) => localizeRecipe(r)), rawRecipes: raw, status: "no-household", today });
           return;
         }
         const hid = household.id;
@@ -469,12 +482,14 @@ export const appStore = createStore<AppState>()((set, get) => {
             repos.imports.list(hid),
             repos.cooking.list(hid),
           ]);
+        const rawById = new Map(recipes.map((r) => [r.id, r]));
         set({
           me,
           household,
           members: people.members,
           people: people.users,
-          recipes,
+          recipes: recipes.map((r) => localizeRecipe(r)),
+          rawRecipes: recipes,
           favorites,
           planItems,
           planDays,
@@ -482,7 +497,7 @@ export const appStore = createStore<AppState>()((set, get) => {
           shoppingItems,
           checks,
           pantry,
-          prepTasks,
+          prepTasks: prepTasks.map((task) => localizeTask(task, rawById.get(task.recipeId))),
           swipes,
           matches,
           activity,
@@ -624,6 +639,7 @@ export const appStore = createStore<AppState>()((set, get) => {
           leftoverDays: 2,
           freezerItem: null,
           stub: true,
+          lang: getLocale(),
           createdBy: me.id,
         });
       });
@@ -800,7 +816,7 @@ export const appStore = createStore<AppState>()((set, get) => {
     async createRecipe(input, opts) {
       const { me, household } = requireCtx();
       return run(async () => {
-        const r = await ctx().repos.recipes.create({ ...input, householdId: household.id, createdBy: me.id, stub: false });
+        const r = await ctx().repos.recipes.create({ lang: getLocale(), ...input, householdId: household.id, createdBy: me.id, stub: false });
         await log(opts?.imported ? "recipe.imported" : "recipe.created", { recipeId: r.id, platform: input.sourcePlatform ?? null });
         return r;
       });
@@ -997,12 +1013,17 @@ export function selectList(s: AppState): ListRow[] {
     checks: s.checks,
     recipesById: recipesMap(s.recipes),
   });
+  // Display names in the current language; rows still merge and check by the stored name.
+  for (const r of rows) {
+    const label = ingredientLabel(r.name);
+    if (label !== r.name) r.label = label;
+  }
   (rows as ListRow[] & { __deps?: unknown[] }).__deps = listDeps(s);
   listCache.set(key, rows);
   return rows;
 }
 function listDeps(s: AppState): unknown[] {
-  return [s.planItems, s.planDays, s.matches, s.recipes, s.pantry, s.shoppingItems, s.checks, s.today];
+  return [s.planItems, s.planDays, s.matches, s.recipes, s.pantry, s.shoppingItems, s.checks, s.today, getLocale()];
 }
 
 export function slugForRecipe(name: string) {

@@ -1,13 +1,18 @@
 import { formatDuration } from "../domain/dates";
+import { ingredientLabel, localizeRecipe } from "../domain/recipeText";
+import type { Locale } from "../i18n";
 import { intlTag, t } from "../i18n";
 import { z } from "zod";
-import { aisleSchema, courseSchema, leftoverPolicySchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe } from "../data/models";
+import { aisleSchema, courseSchema, leftoverPolicySchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe, type RecipeTranslation } from "../data/models";
 import { catalogEntry, normalizeIngredientName } from "../data/seed/ingredients";
 import type { RecipeInput } from "../store/app";
 
 /** Editable draft: everything as strings so inputs stay controlled. */
 export interface IngredientDraft {
+  /** As shown in the form (current language). */
   name: string;
+  /** Stored name the row came from (catalog id); kept when the shown name is unchanged. */
+  key?: string;
   quantity: string;
   unit: string;
   side: "pazar" | "market";
@@ -77,7 +82,8 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     tags: r.tags.join(", "),
     ingredients: r.ingredients.length
       ? r.ingredients.map((i) => ({
-          name: i.name,
+          name: i.label ?? i.name,
+          ...(i.label && i.label !== i.name ? { key: i.name } : {}),
           quantity: i.quantity === null ? "" : String(i.quantity).replace(".", ","),
           unit: i.unit ?? "",
           side: i.side,
@@ -125,7 +131,7 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
       if (i.quantity.trim()) return { ok: false, error: t("form.err.ingredientName", { n: idx + 1 }) };
       continue;
     }
-    const name = normalizeIngredientName(i.name);
+    const name = i.key && (i.name.trim() === i.key || i.name.trim() === ingredientLabel(i.key)) ? i.key : normalizeIngredientName(i.name);
     const q = i.quantity.trim() ? Number(i.quantity.replace(",", ".")) : null;
     if (q !== null && (!Number.isFinite(q) || q <= 0)) return { ok: false, error: t("form.err.quantity", { name }) };
     const unit = i.unit ? unitSchema.safeParse(i.unit) : null;
@@ -237,4 +243,52 @@ export function sourceSummary(d: RecipeDraft): string {
   const policy =
     d.leftoverPolicy === "store" ? t("form.summary.policy.store", { count: Number(d.leftoverDays) || 2 }) : t(`form.summary.policy.${d.leftoverPolicy}`);
   return [d.source.trim(), policy].filter(Boolean).join(" · ");
+}
+
+// ───────── editing in two languages ─────────
+
+/** What an edit in `locale` changes: the recipe's own text, or its saved translation for `locale`. */
+export function editTarget(raw: Recipe, locale: Locale): "source" | "translation" {
+  return (raw.lang ?? "tr") === locale || !raw.translations?.[locale] ? "source" : "translation";
+}
+
+/** The form's starting draft: the recipe as it reads in `locale` (ingredient rows keep their stored name as `key`). */
+export function draftForEdit(raw: Recipe, locale: Locale): RecipeDraft {
+  return draftFromRecipe(localizeRecipe(raw, locale));
+}
+
+/**
+ * Turn the saved form back into a recipe update. Editing the source language
+ * replaces the text; editing a translated language writes `translations[locale]`
+ * (origin "user") and leaves the source text alone. Times, servings, tags,
+ * amounts and leftovers are language-neutral and always update.
+ */
+export function mergeEdit(raw: Recipe, input: RecipeInput, locale: Locale): RecipeInput {
+  const lang = raw.lang ?? "tr";
+  if (editTarget(raw, locale) === "source") return { ...input, lang, ...(raw.translations ? { translations: raw.translations } : {}) };
+  const prev = raw.translations?.[locale];
+  const notes = Object.fromEntries(input.ingredients.filter((i) => i.note).map((i) => [i.name, i.note!]));
+  const translation: RecipeTranslation = {
+    ...(prev ?? {}),
+    name: input.name,
+    steps: input.steps,
+    prepItems: input.prepItems.map((p) => p.label),
+    ...(Object.keys(notes).length ? { notes } : { notes: undefined }),
+    origin: "user",
+  };
+  return {
+    ...input,
+    name: raw.name,
+    steps: raw.steps,
+    // Stored prep labels stay in the source language (prep tasks are keyed by them); new ones keep what was typed.
+    prepItems: input.prepItems.map((p, i) => ({ ...p, label: raw.prepItems[i]?.label ?? p.label })),
+    ingredients: input.ingredients.map((i) => {
+      const old = raw.ingredients.find((o) => o.name === i.name);
+      const { note: _note, ...rest } = i;
+      void _note;
+      return old?.note ? { ...rest, note: old.note } : rest;
+    }),
+    lang,
+    translations: { ...raw.translations, [locale]: translation },
+  };
 }

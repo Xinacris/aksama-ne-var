@@ -36,7 +36,7 @@ describe("Giriş", () => {
 
 describe.each([
   ["tr", "Akşama ne var?", "Bu akşam", "Pazartesi, 12 Ekim", "Dünkü kuru fasulye bugün öğlen için yeterli."],
-  ["en", "What’s for dinner?", "Tonight", "Monday, 12 October", "Yesterday’s kuru fasulye will do for lunch today."],
+  ["en", "What’s for dinner?", "Tonight", "Monday, 12 October", "Yesterday’s kuru fasulye (white bean stew) will do for lunch today."],
 ] as const)("Bugün (%s)", (locale, title, tonight, date, yesterday) => {
   it("shows the date, reminder, tonight's menu and yesterday's leftovers", async () => {
     await freshStore({ demo: true, locale });
@@ -50,16 +50,16 @@ describe.each([
 });
 
 describe.each([
-  ["tr", "Tarifler", "100 tarif", "Yeni tarif", "Kaydet"],
-  ["en", "Recipes", "100 recipes", "New recipe", "Save"],
-] as const)("Tarifler (%s)", (locale, title, count, newLabel, save) => {
+  ["tr", "Tarifler", "100 tarif", "Yeni tarif", "Kaydet", "İmam bayıldı"],
+  ["en", "Recipes", "100 recipes", "New recipe", "Save", "İmam bayıldı (olive-oil stuffed aubergine)"],
+] as const)("Tarifler (%s)", (locale, title, count, newLabel, save, imam) => {
   it("lists, searches, and quick-adds a name with one tap", async () => {
     await freshStore({ demo: true, locale });
     await render(<Recipes />);
     expect(screen.getByText(title)).toBeTruthy();
     expect(screen.getByText(count)).toBeTruthy();
     await fireEvent.changeText(screen.getAllByLabelText(locale === "tr" ? "Tarif ya da malzeme ara" : "Search recipes or ingredients")[0], "imam");
-    expect(screen.getByText("İmam bayıldı")).toBeTruthy();
+    expect(screen.getByText(imam)).toBeTruthy();
     await fireEvent.press(screen.getByRole("button", { name: newLabel }));
     await fireEvent.changeText(screen.getByTestId("quick-add-input"), "Annemin dolması");
     await fireEvent.press(screen.getByRole("button", { name: save }));

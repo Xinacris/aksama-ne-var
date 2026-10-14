@@ -1,4 +1,5 @@
 import type { Aisle, Side, Unit } from "../models";
+import { ingredientLabel } from "../../domain/recipeText";
 
 /**
  * Canonical ingredient catalog. Every recipe ingredient must use one of
@@ -186,6 +187,11 @@ export function normalizeIngredientName(raw: string): string {
   const key = raw.trim().toLocaleLowerCase("tr");
   for (const c of INGREDIENT_CATALOG) {
     if (c.name.toLocaleLowerCase("tr") === key) return c.name;
+  }
+  // An English catalog name ("Minced beef") is the same ingredient: lists merge across languages.
+  const en = raw.trim().toLowerCase();
+  for (const c of INGREDIENT_CATALOG) {
+    if (ingredientLabel(c.name, "en").toLowerCase() === en) return c.name;
   }
   const t = raw.trim();
   return t ? t.charAt(0).toLocaleUpperCase("tr") + t.slice(1) : t;

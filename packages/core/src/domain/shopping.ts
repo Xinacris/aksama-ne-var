@@ -1,4 +1,5 @@
 import { t } from "../i18n";
+import { formatNumber, unitAmount } from "./units";
 import {
   AISLE_LABEL,
   MARKET_AISLES,
@@ -23,7 +24,10 @@ export interface Amount {
 
 export interface ListRow {
   key: string;
+  /** Stored (Turkish catalog) name: merging, checks and "evde var" use it. */
   name: string;
+  /** Shown name in the current language, when it differs. */
+  label?: string;
   side: Side;
   aisle: Aisle;
   amounts: Amount[];
@@ -105,8 +109,7 @@ export function toBase(name: string, quantity: number | null, unit: Unit | null)
 
 // ───────────────────────── formatting ─────────────────────────
 
-const nf = new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 });
-export const formatNumber = (n: number) => nf.format(n);
+export { formatNumber } from "./units";
 
 function formatMass(g: number): string {
   return g >= 1000 ? `${formatNumber(g / 1000)} kg` : `${formatNumber(g)} g`;
@@ -124,12 +127,12 @@ export function formatAmount(name: string, a: Amount): string {
     const n = Math.max(1, Math.ceil(amt / entry.pack.size - 1e-9));
     if (entry.pack.label) {
       const [num, ...rest] = entry.pack.label.split(" ");
-      return `${formatNumber(n * Number(num.replace(",", ".")))} ${rest.join(" ")}`;
+      return unitAmount(n * Number(num.replace(",", ".")), rest.join(" "));
     }
     const total = n * entry.pack.size;
     if (entry.base === "g") return formatMass(total);
     if (entry.base === "ml") return formatVolume(total);
-    return `${formatNumber(total)} ${entry.base}`;
+    return unitAmount(total, entry.base);
   }
   switch (a.unit) {
     case "g": {
@@ -140,9 +143,9 @@ export function formatAmount(name: string, a: Amount): string {
       return formatVolume(Math.ceil(amt / 50 - 1e-9) * 50);
     case "adet":
     case "demet":
-      return `${formatNumber(Math.ceil(amt - 1e-9))} ${a.unit}`;
+      return unitAmount(Math.ceil(amt - 1e-9), a.unit);
     default:
-      return `${formatNumber(Math.round(amt * 100) / 100)}${a.unit ? ` ${a.unit}` : ""}`;
+      return unitAmount(Math.round(amt * 100) / 100, a.unit ?? "");
   }
 }
 
@@ -158,9 +161,8 @@ export function formatIngredientQuantity(ing: Pick<Ingredient, "quantity" | "uni
   if (ing.quantity === null) return "";
   const q = ing.quantity * factor;
   const rounded = ing.unit === "adet" ? Math.round(q * 2) / 2 : Math.round(q * 100) / 100;
-  const n = formatNumber(rounded);
-  if (!ing.unit || ing.unit === "adet") return n;
-  return `${n} ${ing.unit}`;
+  if (!ing.unit || ing.unit === "adet") return formatNumber(rounded);
+  return unitAmount(rounded, ing.unit);
 }
 
 // ───────────────────────── aggregation ─────────────────────────

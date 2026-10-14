@@ -5,13 +5,15 @@ import { useParams, useRouter } from "next/navigation";
 import { RecipeForm } from "@/components/RecipeForm";
 import { ButtonLink } from "@/components/ui/Button";
 import { EmptyState } from "@/components/ui/Misc";
-import { draftFromRecipe } from "@anv/core/services/recipeForm";
+import { draftForEdit, mergeEdit } from "@anv/core/services/recipeForm";
+import { getLocale } from "@anv/core/i18n";
 import { recipesMap, useApp } from "@/store/app";
 
 export default function DuzenlePage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
   const recipes = useApp((x) => x.recipes);
+  const rawRecipes = useApp((x) => x.rawRecipes);
   const updateRecipe = useApp((x) => x.updateRecipe);
   const recipe = recipesMap(recipes).get(id);
   if (!recipe || recipe.householdId === null) {
@@ -39,11 +41,11 @@ export default function DuzenlePage() {
     <RecipeForm
       key={recipe.id}
       title={t(recipe.stub ? "edit.titleComplete" : "edit.title", { name: recipe.name })}
-      initial={draftFromRecipe(recipe)}
+      initial={draftForEdit(rawRecipes.find((r) => r.id === recipe.id) ?? recipe, getLocale())}
       backHref={`/tarif/${recipe.id}`}
       submitLabel={t("edit.save")}
       onSubmit={async (value) => {
-        await updateRecipe(recipe.id, value);
+        await updateRecipe(recipe.id, mergeEdit(rawRecipes.find((r) => r.id === recipe.id) ?? recipe, value, getLocale()));
         router.push(`/tarif/${recipe.id}`);
       }}
     />

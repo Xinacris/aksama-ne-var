@@ -3,6 +3,7 @@ import type { CookLog, LeftoverChoice, Match, PlanDay, PlanItem, PrepTask, Recip
 import { SLOTS } from "../data/models";
 import { addDays, dayName, dayShort, fromIsoDate } from "./dates";
 import { formatIngredientQuantity } from "./shopping";
+import { ingredientLabel } from "./recipeText";
 
 /**
  * Plan transitions are pure: they read the current state and return the
@@ -344,7 +345,7 @@ export function freezerLines(tasks: PrepTask[], dates: string[], recipesById: Ma
       const due = new Date(t.dueAt);
       const dueIso = `${due.getFullYear()}-${String(due.getMonth() + 1).padStart(2, "0")}-${String(due.getDate()).padStart(2, "0")}`;
       const part = tx(due.getHours() < 12 ? "plan.part.morning" : due.getHours() < 17 ? "plan.part.noon" : "plan.part.evening");
-      const name = recipe?.freezerItem ?? t.label;
+      const name = recipe?.freezerItem ? ingredientLabel(recipe.freezerItem) : t.label;
       const who = users.get((t.status === "done" ? t.doneBy : t.assigneeId) ?? "")?.name ?? "";
       return {
         taskId: t.id,

@@ -1,6 +1,7 @@
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { useTranslation } from "react-i18next";
-import { draftFromRecipe } from "@anv/core/services/recipeForm";
+import { draftForEdit, mergeEdit } from "@anv/core/services/recipeForm";
+import { getLocale } from "@anv/core/i18n";
 import { RecipeForm } from "@/components/RecipeForm";
 import { recipesMap, useApp } from "@/store";
 import { Button, EmptyState, Screen } from "@/ui";
@@ -10,6 +11,7 @@ export default function EditRecipe() {
   const { t } = useTranslation();
   const { id } = useLocalSearchParams<{ id: string }>();
   const recipes = useApp((x) => x.recipes);
+  const rawRecipes = useApp((x) => x.rawRecipes);
   const updateRecipe = useApp((x) => x.updateRecipe);
   const recipe = recipesMap(recipes).get(id);
   if (!recipe || recipe.householdId === null) {
@@ -30,10 +32,10 @@ export default function EditRecipe() {
       <Stack.Screen options={{ title: t(recipe.stub ? "edit.titleComplete" : "edit.title", { name: recipe.name }) }} />
       <RecipeForm
         key={recipe.id}
-        initial={draftFromRecipe(recipe)}
+        initial={draftForEdit(rawRecipes.find((r) => r.id === recipe.id) ?? recipe, getLocale())}
         submitLabel={t("edit.save")}
         onSubmit={async (value) => {
-          await updateRecipe(recipe.id, value);
+          await updateRecipe(recipe.id, mergeEdit(rawRecipes.find((r) => r.id === recipe.id) ?? recipe, value, getLocale()));
           router.back();
         }}
       />

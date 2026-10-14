@@ -115,7 +115,8 @@ Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the f
   - 882 keys per language. Core 338 tests (catalog parity, runtime switch, detection, hard-coded-Turkish scan), web 184, mobile 4; lint 0; build OK; e2e 55 + 2 passed (new `e2e/english.spec.ts`: English browser → English UI, quick add, Settings › Türkçe and back, remembered on reload).
 - [x] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
   - Giriş/Kayıt, onboarding (set up or join by code → dishes → invite code), Bugün, Tarifler (search, course/tag chips, favourites, quick-add sheet), recipe page (statuses, prep timeline, steps, put on an evening, edit/copy/delete), full form (Ayrıntılar, Toplu yapıştır, paste offer), import via `/api/import`, Ayarlar. Mobile jest 15 (Bugün and Tarifler in tr + en), tsc 0, expo lint 0, export iOS/Android OK, expo-doctor 21/21; core 338, web 184.
-- [ ] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
+- [x] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
+  - `lang` + `translations` (migration v10), 100 built-ins in English (466 steps, 27 prep labels, 20 notes), 109 catalog ingredients + tags in English, localized store copies (`recipes`/`rawRecipes`, translated prep-task labels, list-row labels), edit-in-language rules (`draftForEdit`/`mergeEdit`), English units ("1 cup (200 ml)"). Supabase `recipe_translations` + `profiles.locale` + doc §7. Core 352, web 184, mobile 15; e2e English/journey/import green.
 - [ ] V6. `/api/translate` + Translate action (web and mobile); multi-language import; tests.
 - [ ] V7. Mobile screens: Liste, Hafta, Eşleş.
 - [ ] V8. Mobile screens: Pişirme modu, Ayarlar; `docs/MOBILE.md`.

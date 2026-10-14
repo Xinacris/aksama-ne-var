@@ -126,3 +126,22 @@ Adapter notes:
   written client-side after a successful draft; a server-side insert is the stricter option.)
 - `GEMINI_API_KEY` / `GEMINI_MODEL` / `ANTHROPIC_API_KEY` / `YOUTUBE_API_KEY` stay server-side env vars on Vercel; nothing about
   import changes with the database move (see `docs/IMPORT.md`).
+
+## 7. Round 3 additions (bilingual recipes, monorepo)
+
+- **Where the code lives now:** models, repositories, migrations and the key-value adapter are in
+  `packages/core/src/data`; write the Supabase adapter there too (framework-free, the client is
+  passed in) so `apps/web` and `apps/mobile` share it. The web builds its data context in
+  `apps/web/src/data/index.ts`, the phone in `apps/mobile/src/boot.ts`.
+- **`recipes.lang`** (`'tr' | 'en'`, default `'tr'`): the language a recipe was written in. Local
+  migration v10 sets `lang: "tr"` on every stored recipe; seed the column the same way.
+- **`recipe_translations`** (one row per recipe and locale): `name`, `short_name`, `time_note`,
+  `ingredients` (display names keyed by catalog name), `notes`, `steps`, `prep_items`, `origin`
+  (`seed` | `llm` | `user`). The app's `Recipe.translations.{tr,en}` maps 1:1 onto these rows:
+  the adapter reads them with the recipe (`select *, recipe_translations(*)`) and writes them with
+  an upsert on `(recipe_id, locale)`. RLS follows the recipe (see the policies in `schema.sql`).
+- **Built-ins:** seed their English text from `builtinRecipes[].translations.en` (origin `seed`).
+- **Never translate identity:** `ingredients[].name` stays the Turkish catalog name in every
+  language — shopping-list merging, "evde var" and prep tasks are keyed by it. Prep tasks store the
+  source-language label; the app shows the translated one.
+- **User language:** `profiles.locale` (`'tr' | 'en'`, nullable) mirrors the local `User.locale`.

@@ -88,7 +88,7 @@ export default function RecipePage() {
   function status(ing: Ingredient): { tone: "olive" | "sand" | "tomato"; label: string; action?: () => void; aria?: string } {
     if (ing.staple) return { tone: "olive", label: t("tarif.inHome") };
     const s2 = ingredientStatus(ing, rows, pantry);
-    const name = lowerFirst(ing.name);
+    const name = lowerFirst(ing.label ?? ing.name);
     if (s2 === "evde") {
       const removable = pantry.some((p) => p.name === ing.name && p.quantity === null);
       return removable ? { tone: "olive", label: t("tarif.inHome"), action: () => st.unmarkHave(ing.name), aria: t("tarif.unmarkHave", { name }) } : { tone: "olive", label: t("tarif.inHome") };
@@ -254,7 +254,7 @@ export default function RecipePage() {
                 <Row style={{ flexWrap: "nowrap", justifyContent: "space-between", paddingTop: 8 }}>
                   <Text style={{ flex: 1 }}>
                     {q ? <Text weight="bold">{q} </Text> : null}
-                    {ing.quantity === null ? ing.name : lowerFirst(ing.name)}
+                    {ing.quantity === null ? (ing.label ?? ing.name) : lowerFirst(ing.label ?? ing.name)}
                     {ing.note ? ` (${ing.note})` : ""}
                   </Text>
                   <Pill tone={s.tone} label={s.label} onPress={s.action} accessibilityLabel={s.aria} />
@@ -266,7 +266,7 @@ export default function RecipePage() {
             <View>
               <Divider />
               <Row style={{ flexWrap: "nowrap", justifyContent: "space-between", paddingTop: 8 }}>
-                <Text style={{ flex: 1 }}>{staples.map((i, idx) => (idx === 0 ? i.name : lowerFirst(i.name))).join(", ")}</Text>
+                <Text style={{ flex: 1 }}>{staples.map((i, idx) => (idx === 0 ? (i.label ?? i.name) : lowerFirst(i.label ?? i.name))).join(", ")}</Text>
                 <Pill tone="olive" label={t("tarif.inHome")} />
               </Row>
             </View>

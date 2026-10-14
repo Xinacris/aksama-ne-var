@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 9;
+export const CURRENT_SCHEMA_VERSION = 10;
 
 export interface Migration {
   version: number;
@@ -57,7 +57,8 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
  * version 6 records which provider made an import draft (`path` → `provider`);
  * version 7 resets built-in recipes to "Artmaz" (leftovers are never guessed);
  * version 8 lets recipes carry `waitMinutes` and `sourceThumbnailUrl` (optional: nothing to convert);
- * version 9 adds the "web" import provider and `writtenRecipeUrl` (old rows stay valid as they are).
+ * version 9 adds the "web" import provider and `writtenRecipeUrl` (old rows stay valid as they are);
+ * version 10 makes recipes bilingual: `lang` (source language, "tr" for every existing recipe) and `translations`.
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -142,6 +143,13 @@ export const MIGRATIONS: Migration[] = [
     version: 9,
     description: "Import log gains provider 'web'; recipes may carry writtenRecipeUrl (nothing to convert: old rows are valid)",
     up: () => {},
+  },
+  {
+    version: 10,
+    description: "Recipes gain lang + translations; every stored recipe was written in Turkish",
+    up: (store) => {
+      mapRows(store, "recipes", (r) => (typeof r.lang === "string" ? r : { ...r, lang: "tr" }));
+    },
   },
 ];
 

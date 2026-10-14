@@ -178,19 +178,19 @@ function PrepScreen({ session, recipes, target }: { session: CookingSession; rec
                 <span className={s.checkText}>
                   <span className={s.checkName}>
                     {r.amount && <strong>{r.amount} </strong>}
-                    {r.name}
+                    {r.label}
                   </span>
                   <span className={s.muted}>{[recipes.length > 1 ? r.forDishes.join(", ") : null, r.onList ? tr("cook.onList") : null].filter(Boolean).join(" · ")}</span>
                 </span>
                 <span className={s.missingActions}>
-                  <Button variant="soft" size="sm" aria-label={tr("cook.haveIt", { name: r.name })} onClick={() => markHave(r.name)}>
+                  <Button variant="soft" size="sm" aria-label={tr("cook.haveIt", { name: r.label })} onClick={() => markHave(r.name)}>
                     {tr("cook.have")}
                   </Button>
                   {!r.onList && (
                     <Button
                       variant="secondary"
                       size="sm"
-                      aria-label={tr("cook.addNamed", { name: r.name })}
+                      aria-label={tr("cook.addNamed", { name: r.label })}
                       onClick={() =>
                         addManualItem({ name: r.name, quantity: r.ingredient.quantity, unit: r.ingredient.unit, side: r.ingredient.side, aisle: r.ingredient.aisle, forRecipeId: r.recipeId })
                       }
@@ -231,7 +231,7 @@ function IngredientsSheet({ recipes }: { recipes: Recipe[] }) {
             <li key={r.key} className={s.sheetRow}>
               <span className={s.checkName}>
                 {r.amount && <strong>{r.amount} </strong>}
-                {r.name}
+                {r.label}
               </span>
               {recipes.length > 1 && <span className={s.muted}>{r.forDishes.join(", ")}</span>}
             </li>

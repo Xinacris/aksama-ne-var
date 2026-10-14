@@ -1,6 +1,7 @@
 import type { Activity, LeftoverChoice, PlanDay, Recipe, User } from "../data/models";
 import { intlTag, t } from "../i18n";
 import { choiceLabel } from "./leftovers";
+import { ingredientLabel } from "./recipeText";
 import { agoTime, dayName } from "./dates";
 import { dishInSentence } from "./prep";
 import { dative, genitive } from "../lib/text";
@@ -54,11 +55,11 @@ export function activityText(
     case "match.made":
       return ctx.partnerName ? t("activity.matchedWith", { ...d, partner: ctx.partnerName }) : t("activity.decided", d);
     case "shopping.checked":
-      return t("activity.bought", { item: str(a.data.itemName) });
+      return t("activity.bought", { item: ingredientLabel(str(a.data.itemName)) });
     case "shopping.finished":
       return t("activity.finishedShopping", { count: Number(str(a.data.count)) || 0 });
     case "shopping.added":
-      return t("activity.addedToList", { item: str(a.data.itemName).toLocaleLowerCase(intlTag()) });
+      return t("activity.addedToList", { item: ingredientLabel(str(a.data.itemName)).toLocaleLowerCase(intlTag()) });
     case "prep.done":
       return t("activity.prepDone", { label: str(a.data.label) });
     case "recipe.created":
