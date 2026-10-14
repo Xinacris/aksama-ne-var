@@ -206,3 +206,13 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Search with no results:** with a typed name the action is "“<ad>” ekle" (one tap saves, opens the recipe); a pasted link reads "Linkten içe aktar"; with no search text (a filter emptied the list) it opens the sheet.
 - **Focus:** `Dialog` focuses a `[data-autofocus]` element after `showModal()` (which otherwise focuses the close button). Text fields now draw the keyboard focus ring around the whole field box (`.box:has(.input:focus-visible)`) instead of inside it next to the icon; it showed as a stray rectangle once the sheet focused the input programmatically.
 - The header keeps "Linkten ekle" next to "Yeni tarif": the sheet takes links too, but the direct button is what people who share from Instagram already know.
+
+## Round 2.2 — Shorter recipe form
+
+- **Order:** Genel (Tarifin adı, Öğün) → Malzemeler → Hazırlanışı → "Ayrıntılar" (three native `<details>`: "Süre, porsiyon, etiketler", "Ön hazırlık", "Kaynak ve artarsa") → Kaydet. Hazırlanışı moved above the optional parts so everything a phone user must touch comes first.
+- **"Buzluktan çıkacak malzeme"** moved from Malzemeler into Ön hazırlık: it is what the freezer reminder is built from, and it kept Malzemeler busy for a field most recipes don't use.
+- **When sections are open:** a blank new recipe (with or without `?ad=`) starts with all three closed. Everything else — edit, "bizim usul" copy, the import review — opens the sections that hold values (`filledSections`: any time > 0 or tags; any prep item or freezer item; a Kaynak text or a leftover choice other than Artmaz). So an import's Kaynak and tags are still in view for review, and a stub being completed (0/0 min) opens nothing. A copy counts as an edit (it carries the original's values).
+- **Closed sections show their values** in one line under the title ("15 dk hazırlık · 30 dk pişirme · 4 kişilik", "Yok", "Artmaz") so the defaults that will be saved are never invisible.
+- **Errors in a closed section:** a failed save opens all three sections, so the field named in the message can be found.
+- Open state is React state mirrored by `onToggle`; the chevron is CSS (no motion with `prefers-reduced-motion`).
+- e2e specs that pick "Saklanır" or add an Ön hazırlık on the new form now open the section first (a11y, leftovers, selects, screenshots).
