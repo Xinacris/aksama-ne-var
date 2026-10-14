@@ -6,3 +6,35 @@ jest.mock("@react-native-async-storage/async-storage", () => mockAsyncStorage);
 jest.mock("expo-crypto", () => ({
   getRandomBytes: (n: number) => new Uint8Array(require("node:crypto").randomBytes(n)),
 }));
+
+jest.mock("react-native-safe-area-context", () => require("react-native-safe-area-context/jest/mock").default);
+
+jest.mock("expo-haptics", () => ({
+  selectionAsync: jest.fn(() => Promise.resolve()),
+  notificationAsync: jest.fn(() => Promise.resolve()),
+  impactAsync: jest.fn(() => Promise.resolve()),
+  NotificationFeedbackType: { Success: "success", Warning: "warning", Error: "error" },
+  ImpactFeedbackStyle: { Light: "light", Medium: "medium", Heavy: "heavy" },
+}));
+
+jest.mock("expo-localization", () => ({ getLocales: () => [{ languageTag: "tr-TR", languageCode: "tr" }] }));
+
+// expo-router: navigation calls are recorded; screens render without a navigator.
+jest.mock("expo-router", () => {
+  const React = require("react");
+  const router = { push: jest.fn(), replace: jest.fn(), back: jest.fn() };
+  const params: { current: Record<string, string> } = { current: {} };
+  const Stack = Object.assign(({ children }: { children?: unknown }) => React.createElement(React.Fragment, null, children), {
+    Screen: () => null,
+    Protected: ({ children }: { children?: unknown }) => React.createElement(React.Fragment, null, children),
+  });
+  return {
+    router,
+    useRouter: () => router,
+    useLocalSearchParams: () => params.current,
+    __params: params,
+    Stack,
+    Redirect: () => null,
+    Link: ({ children }: { children: unknown }) => children,
+  };
+});

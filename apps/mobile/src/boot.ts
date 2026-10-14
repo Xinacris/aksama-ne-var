@@ -13,6 +13,7 @@ export interface MobileData {
 }
 
 let booted: Promise<MobileData> | null = null;
+let current: MobileData | null = null;
 
 /**
  * Read AsyncStorage into memory, wire the shared store to it and boot it.
@@ -27,7 +28,8 @@ export function bootMobile(): Promise<MobileData> {
     const ctx = createDataContext({ store });
     configureApp({ getData: () => ctx });
     await appStore.getState().boot();
-    return { ctx, store, flush };
+    current = { ctx, store, flush };
+    return current;
   })();
   return booted;
 }
@@ -35,5 +37,12 @@ export function bootMobile(): Promise<MobileData> {
 /** Tests: boot again over a fresh AsyncStorage mock. */
 export function resetBootForTests() {
   booted = null;
+  current = null;
   setDataContext(null);
+}
+
+
+/** The booted data (null before boot). For screens that need the device store (language, theme). */
+export function useMobileData(): MobileData | null {
+  return current;
 }

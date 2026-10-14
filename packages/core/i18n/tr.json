@@ -971,7 +971,8 @@
     "copySub": "Hazır tarif değişmez; size özel bir kopyası açılır.",
     "confirmDelete": "Evet, sil",
     "deleteSub": "Plandaysa o gün “silinmiş tarif” olarak görünür.",
-    "delete": "Tarifi sil"
+    "delete": "Tarifi sil",
+    "servingsN": "{{n}} kişi"
   },
   "theme": {
     "light": "Açık",
@@ -1028,5 +1029,30 @@
   "language": {
     "tr": "Türkçe",
     "en": "English"
+  },
+  "mobile": {
+    "passwordHint": "En az 6 karakter. Şifren yalnızca bu telefonda, karıştırılmış olarak durur.",
+    "onb": {
+      "title": "Eviniz",
+      "lead": "Kendi evini kur ya da sana verilen davet koduyla bir eve katıl.",
+      "create": "Kendi evimi kur",
+      "joinTitle": "Davet koduyla katıl",
+      "code": "Davet kodu",
+      "codeHint": "Ev sahibinin Ayarlar › Ev bölümünde yazan kod.",
+      "join": "Katıl",
+      "inviteTitle": "Birlikte karar verin",
+      "inviteLead": "Eşin ya da ev arkadaşın bu kodla katılır.",
+      "syncSoon": "Eşitleme yakında: şimdilik veriler bu telefonda durur, iki telefon birbirini görmez. Kod, aynı telefonda ikinci bir hesapla katılmak için çalışır.",
+      "start": "Başlayalım"
+    },
+    "sync": {
+      "title": "Eşitleme yakında",
+      "text": "Şimdilik her şey bu telefonda durur; iki telefon birbirini görmez. Ortak hesaplar geldiğinde plan, liste ve eşleşmeler ikinizde aynı anda güncellenecek."
+    },
+    "data": {
+      "note": "Bu bir demo: her şey yalnızca bu telefonda durur. Şifreler karıştırılarak saklanır ama bu gerçek bir güvenlik sağlamaz.",
+      "resetText": "Bu telefondaki bütün hesaplar, evler, planlar ve listeler silinir. Geri alınamaz."
+    },
+    "inviteCode": "Davet kodu: {{code}}"
   }
 }

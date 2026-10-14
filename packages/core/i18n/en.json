@@ -971,7 +971,8 @@
     "copySub": "The built-in recipe stays as it is; you get your own copy.",
     "confirmDelete": "Yes, delete",
     "deleteSub": "If it’s in the plan, that day shows “deleted recipe”.",
-    "delete": "Delete recipe"
+    "delete": "Delete recipe",
+    "servingsN": "{{n}} people"
   },
   "theme": {
     "light": "Light",
@@ -1028,5 +1029,30 @@
   "language": {
     "tr": "Türkçe",
     "en": "English"
+  },
+  "mobile": {
+    "passwordHint": "At least 6 characters. Your password stays only on this phone, hashed.",
+    "onb": {
+      "title": "Your household",
+      "lead": "Set up your household, or join one with the invite code you were given.",
+      "create": "Set up my household",
+      "joinTitle": "Join with an invite code",
+      "code": "Invite code",
+      "codeHint": "The code shown in the host’s Settings › Household.",
+      "join": "Join",
+      "inviteTitle": "Decide together",
+      "inviteLead": "Your partner or housemate joins with this code.",
+      "syncSoon": "Sync is coming soon: for now everything stays on this phone and two phones don’t see each other. The code works for a second account on the same phone.",
+      "start": "Let’s start"
+    },
+    "sync": {
+      "title": "Sync is coming soon",
+      "text": "For now everything stays on this phone, and two phones don’t see each other. Once shared accounts arrive, the plan, list and matches will update for both of you at once."
+    },
+    "data": {
+      "note": "This is a demo: everything stays on this phone only. Passwords are stored hashed, but that isn’t real security.",
+      "resetText": "Every account, household, plan and list on this phone is deleted. This can’t be undone."
+    },
+    "inviteCode": "Invite code: {{code}}"
   }
 }
