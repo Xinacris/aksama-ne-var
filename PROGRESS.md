@@ -175,6 +175,14 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 
 
 
+
 ## In progress
 
-R3 — timer alarm. Restoring the crashed session's stash (`r3.1-R3-wip`), then: mobile (expo-audio + expo-notifications), web e2e + axe, docs.
+R3 — timer alarm.
+- [x] Core: finished from `endsAt`, fire once, pause/resume/restart/+1 min, 10-min stale, 2-min cap, notification schedule (crashed session's work, verified: 17 tests)
+- [x] Tone: `apps/mobile/scripts/make-alarm-tone.mjs` → `assets/sounds/timer_alarm.wav`
+- [x] Mobile: AlarmHost (sound + vibration + banner), notifications (channels, reconcile, tap), permission + hint, Ayarlar toggle, 9 tests
+- [x] Web: Web Audio alarm, Durdur banner, notification + blinking title, Ayarlar toggle (crashed session's work)
+- [ ] Web: unit tests, e2e (banner + Stop, audio mocked), axe on the banner light + dark; update cooking.spec ("Tamam" → "Durdur")
+- [ ] DECISIONS (household, silent mode, late delivery, tap = acknowledge), docs/MOBILE.md
+- [ ] Full checks → push
