@@ -1,5 +1,6 @@
 import type { Activity, LeftoverChoice, PlanDay, Recipe, User } from "../data/models";
-import { CHOICE_LABEL } from "./leftovers";
+import { intlTag, t } from "../i18n";
+import { choiceLabel } from "./leftovers";
 import { agoTime, dayName } from "./dates";
 import { dishInSentence } from "./prep";
 import { dative, genitive } from "../lib/text";
@@ -22,55 +23,56 @@ export function activityText(
   ctx: { recipesById: Map<string, Recipe>; todayIso: string; partnerName?: string },
 ): string {
   const recipe = ctx.recipesById.get(str(a.data.recipeId));
-  const dish = recipe ? dishInSentence(recipe.shortName ?? recipe.name) : "bir yemek";
+  const dish = recipe ? dishInSentence(recipe.shortName ?? recipe.name) : t("activity.aDish");
   const date = str(a.data.date);
   const day = date ? dayName(date) : "";
   const isToday = date === ctx.todayIso;
+  const d = { dish, day, dayDat: day ? dative(day) : "" };
   switch (a.type) {
     case "household.joined":
-      return "eve katıldı";
+      return t("activity.joined");
     case "plan.added":
-      return isToday ? `bu akşama ${dish} ekledi` : `${dative(day)} ${dish} ekledi`;
+      return t(isToday ? "activity.addedTonight" : "activity.addedDay", d);
     case "plan.removed":
-      return isToday ? "bu akşamın menüsünü değiştirdi" : `${day} menüsünü değiştirdi`;
+      return t(isToday ? "activity.removedTonight" : "activity.removedDay", d);
     case "plan.moved":
-      return date ? `${dative(day)} ${dish} taşıdı` : "planı yeniden düzenledi";
+      return date ? t("activity.movedDay", d) : t("activity.rearranged");
     case "plan.approved":
-      return isToday ? "bu akşamki menüyü onayladı" : `${day} menüsünü onayladı`;
+      return t(isToday ? "activity.approvedTonight" : "activity.approvedDay", d);
     case "plan.ateOut":
-      return isToday ? "bugün dışarıda yediğinizi işaretledi" : `${day} akşamı dışarıda yediğinizi işaretledi`;
+      return t(isToday ? "activity.ateOutToday" : "activity.ateOutDay", d);
     case "plan.changed":
-      return isToday ? "bu akşamın planını değiştirdi" : `${day} planını değiştirdi`;
+      return t(isToday ? "activity.changedTonight" : "activity.changedDay", d);
     case "plan.leftovers":
-      return `${day} yemeğinin ertesi güne artacağını işaretledi`;
+      return t("activity.leftovers", d);
     case "leftover.set": {
       const choice = str(a.data.choice) as LeftoverChoice | "";
-      if (!choice) return `artan ${dish} için tarifteki seçeneğe döndü`;
-      if (choice === "lunch") return `artan ${dish} için “${a.data.date === ctx.todayIso ? "Yarın öğlen" : "Öğlen"}” dedi`;
-      return `artan ${dish} için “${CHOICE_LABEL[choice]}” dedi`;
+      if (!choice) return t("activity.leftoverReset", d);
+      if (choice === "lunch") return t("activity.leftoverSet", { ...d, choice: t(a.data.date === ctx.todayIso ? "activity.lunchTomorrow" : "activity.lunch") });
+      return t("activity.leftoverSet", { ...d, choice: choiceLabel(choice) });
     }
     case "match.made":
-      return ctx.partnerName ? `ve ${ctx.partnerName} ${dish} için eşleşti` : `${dish} için karar verdi`;
+      return ctx.partnerName ? t("activity.matchedWith", { ...d, partner: ctx.partnerName }) : t("activity.decided", d);
     case "shopping.checked":
-      return `${str(a.data.itemName)} aldı`;
+      return t("activity.bought", { item: str(a.data.itemName) });
     case "shopping.finished":
-      return `alışverişi bitirdi · ${str(a.data.count)} ürün eve girdi`;
+      return t("activity.finishedShopping", { count: Number(str(a.data.count)) || 0 });
     case "shopping.added":
-      return `listeye ${str(a.data.itemName).toLocaleLowerCase("tr")} ekledi`;
+      return t("activity.addedToList", { item: str(a.data.itemName).toLocaleLowerCase(intlTag()) });
     case "prep.done":
-      return `“${str(a.data.label)}” işini tamamladı`;
+      return t("activity.prepDone", { label: str(a.data.label) });
     case "recipe.created":
-      return `${dish} tarifini ekledi`;
+      return t("activity.recipeCreated", d);
     case "recipe.updated":
-      return `${dish} tarifini güncelledi`;
+      return t("activity.recipeUpdated", d);
     case "cooking.started":
-      return date ? (isToday ? "bu akşamın menüsünü pişirmeye başladı" : `${day} menüsünü pişirmeye başladı`) : `${dish} pişirmeye başladı`;
+      return date ? t(isToday ? "activity.cookStartTonight" : "activity.cookStartDay", d) : t("activity.cookStartDish", d);
     case "cooking.finished":
-      return date ? (isToday ? "bu akşamın yemeğini pişirdi · afiyet olsun" : `${day} yemeğini pişirdi`) : `${dish} pişirdi`;
+      return date ? t(isToday ? "activity.cookDoneTonight" : "activity.cookDoneDay", d) : t("activity.cookDoneDish", d);
     case "recipe.imported":
-      return `${dish} tarifini bir bağlantıdan ekledi`;
+      return t("activity.imported", d);
     default:
-      return "bir şey güncelledi";
+      return t("activity.other");
   }
 }
 
@@ -83,7 +85,7 @@ export function viewActivity(
   return {
     id: a.id,
     actorId: a.actorId,
-    actorName: ctx.users.get(a.actorId)?.name ?? "Biri",
+    actorName: ctx.users.get(a.actorId)?.name ?? t("activity.someone"),
     text: activityText(a, { ...ctx, partnerName: other }),
     when: agoTime(a.createdAt, ctx.now),
   };
@@ -117,14 +119,14 @@ export function approvalState(day: PlanDay | undefined, meId: string, members: U
 export function approvalLabel(s: ApprovalState): string {
   switch (s.kind) {
     case "both":
-      return "İkiniz de onayladınız";
+      return t("approval.both");
     case "waitingPartner":
-      return `${genitive(s.partnerName)} onayı bekleniyor`;
+      return t("approval.waitingPartner", { partner: s.partnerName, partnerGen: genitive(s.partnerName) });
     case "waitingMe":
-      return `${s.partnerName} onayladı`;
+      return t("approval.waitingMe", { partner: s.partnerName });
     case "solo":
-      return s.approved ? "Onaylandı" : "Onay bekliyor";
+      return t(s.approved ? "approval.approved" : "approval.pending");
     default:
-      return "Onay bekliyor";
+      return t("approval.pending");
   }
 }

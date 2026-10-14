@@ -1,6 +1,7 @@
 import type { Household, LeftoverChoice, LeftoverPolicy, PlanDay, PlanItem, Recipe } from "../data/models";
 import { addDays, dayName, fromIsoDate } from "./dates";
 import { dative } from "../lib/text";
+import { labelRecord, t } from "../i18n";
 import { dayFor, menuFor, type Menu, type PlanState } from "./plan";
 
 /**
@@ -128,30 +129,22 @@ export function fridgeItems(state: PlanState, household: LunchSetting, todayIso:
 
 /** "Perşembe'ye kadar" / "Bugüne kadar" / "Yarına kadar". */
 export function keepUntilLabel(useBy: string, todayIso: string): string {
-  if (useBy === todayIso) return "Bugüne kadar";
-  if (useBy === addDays(todayIso, 1)) return "Yarına kadar";
-  return `${dative(dayName(useBy))} kadar`;
+  if (useBy === todayIso) return t("leftovers.until.today");
+  if (useBy === addDays(todayIso, 1)) return t("leftovers.until.tomorrow");
+  const day = dayName(useBy);
+  return t("leftovers.until.day", { day, dayDat: dative(day) });
 }
 
 /** One-tap choices (Bugün, cooking finish screen). `lunch` reads "Yarın öğlen" from tonight's menu. */
-export const CHOICE_LABEL: Record<LeftoverChoice, string> = {
-  none: "Hiç kalmadı",
-  lunch: "Yarın öğlen",
-  fridge: "Dolaba kaldır",
-  discard: "Kimse yemeyecek",
-  eaten: "Bitti",
-};
+export const CHOICE_LABEL = labelRecord<LeftoverChoice>("leftovers.choice", ["none", "lunch", "fridge", "discard", "eaten"]);
+export const choiceLabel = (c: LeftoverChoice): string => CHOICE_LABEL[c];
 
-export const POLICY_OPTION: Record<LeftoverPolicy, string> = {
-  none: "Artmaz / hepsi biter",
-  lunch: "Ertesi gün öğlen yenir",
-  store: "Saklanır",
-};
+export const POLICY_OPTION = labelRecord<LeftoverPolicy>("leftovers.policy", ["none", "lunch", "store"]);
 
 /** Recipe page meta: "ertesi gün öğlen yenir", "3 gün saklanır"; null when nothing is left. */
 export function policyMeta(r: Pick<Recipe, "leftoverPolicy" | "leftoverDays">): string | null {
   if (r.leftoverPolicy === "none") return null;
-  return r.leftoverPolicy === "lunch" ? "ertesi gün öğlen yenir" : `artarsa ${r.leftoverDays} gün saklanır`;
+  return r.leftoverPolicy === "lunch" ? t("leftovers.meta.lunch") : t("leftovers.meta.store", { count: r.leftoverDays });
 }
 
 /** Days the board shows "Öğlen · …" on: lunch outcomes only. */

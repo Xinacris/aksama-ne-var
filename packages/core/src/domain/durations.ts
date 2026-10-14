@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 /**
  * Durations in Turkish recipe text: "20 dakika", "yarım saat", "10-15 dk"
  * (upper bound), "1 saat 15 dakika", "bir buçuk saat", "45 saniye".
@@ -87,10 +88,10 @@ export function formatCountdown(totalSeconds: number): string {
 
 /** "20 dk", "1 sa 15 dk", "45 sn" for timer buttons. */
 export function formatTimerLength(seconds: number): string {
-  if (seconds < 60) return `${seconds} sn`;
+  if (seconds < 60) return t("time.sec", { s: seconds });
   const min = Math.round(seconds / 60);
   const h = Math.floor(min / 60);
   const m = min % 60;
-  if (!h) return `${m} dk`;
-  return m ? `${h} sa ${m} dk` : `${h} sa`;
+  if (!h) return t("time.min", { m });
+  return m ? t("time.hourMin", { h, m }) : t("time.hour", { h });
 }

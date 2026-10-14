@@ -1,3 +1,4 @@
+import { intlTag, t } from "@anv/core/i18n";
 import type { ReactNode } from "react";
 import type { Match, Recipe } from "@anv/core/data/models";
 import { ablativeSuffix, dative } from "@anv/core/lib/text";
@@ -14,19 +15,22 @@ export interface MatchView {
 
 /** "Salı'ya kondu", "Cumartesiden geri döndü", "En son 2 ay önce". */
 export function matchNote(m: Match, daysSince: number | null): string {
-  if (m.status === "placed" && m.placedDate) return `${dative(dayName(m.placedDate))} kondu`;
+  if (m.status === "placed" && m.placedDate) {
+    const day = dayName(m.placedDate);
+    return t("match.placedOn", { day, dayDat: dative(day) });
+  }
   if (m.status === "returned" && m.returnedFrom) {
     const day = dayName(m.returnedFrom);
-    return `${day}${ablativeSuffix(day)} geri döndü`;
+    return t("match.returnedFrom", { day, dayAbl: `${day}${ablativeSuffix(day)}` });
   }
   const r = rotationShort(daysSince);
-  return r.charAt(0).toLocaleUpperCase("tr") + r.slice(1);
+  return r.charAt(0).toLocaleUpperCase(intlTag()) + r.slice(1);
 }
 
 export function MatchList({
   items,
   renderItem,
-  empty = "Henüz eşleşme yok. Birlikte kaydırınca burada birikir.",
+  empty = t("match.empty"),
 }: {
   items: MatchView[];
   renderItem?: (v: MatchView, defaultContent: ReactNode) => ReactNode;

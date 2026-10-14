@@ -126,3 +126,14 @@ describe("built-in recipe seed", () => {
     expect(normalizeIngredientName("ıhlamur")).toBe("Ihlamur");
   });
 });
+
+describe("onboarding suggestions", () => {
+  it("point at built-in recipes of the right course", async () => {
+    const { ONBOARDING_GROUPS } = await import("@/domain/onboarding");
+    for (const g of ONBOARDING_GROUPS)
+      for (const id of g.ids) {
+        const r = builtinRecipes.find((x) => x.id === id);
+        expect([id, !!r && g.courses.includes(r.course)]).toEqual([id, true]);
+      }
+  });
+});

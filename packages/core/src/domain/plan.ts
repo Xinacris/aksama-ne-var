@@ -1,3 +1,4 @@
+import { intlTag, t as tx } from "../i18n";
 import type { CookLog, LeftoverChoice, Match, PlanDay, PlanItem, PrepTask, Recipe, Slot, User } from "../data/models";
 import { SLOTS } from "../data/models";
 import { addDays, dayName, dayShort, fromIsoDate } from "./dates";
@@ -51,7 +52,7 @@ export function isPlanned(items: PlanItem[], days: PlanDay[], date: string): boo
 export function menuTitle(menu: Menu, recipesById: Map<string, Recipe>): string {
   const main = menu.ana ?? menu.corba ?? menu.yaninda ?? menu.salata;
   const r = main ? recipesById.get(main.recipeId) : undefined;
-  return r ? `${r.shortName ?? r.name} sofrası` : "Akşam menüsü";
+  return r ? tx("plan.menuTitle", { dish: r.shortName ?? r.name }) : tx("plan.eveningMenu");
 }
 
 /** "Karnıyarık · cacık · şehriyeli pilav": main first, at most three dishes (as in the Yarın card). */
@@ -63,8 +64,8 @@ export function menuLine(menu: Menu, recipesById: Map<string, Recipe>): string {
     .slice(0, 3)
     .map((it, idx) => {
       const r = recipesById.get(it.recipeId);
-      const n = r ? r.shortName ?? r.name : "Silinmiş tarif";
-      return idx === 0 ? n : n.charAt(0).toLocaleLowerCase("tr") + n.slice(1);
+      const n = r ? r.shortName ?? r.name : tx("plan.deletedRecipe");
+      return idx === 0 ? n : n.charAt(0).toLocaleLowerCase(intlTag()) + n.slice(1);
     })
     .join(" · ");
 }
@@ -319,9 +320,9 @@ export function summarizeWeek(state: PlanState, dates: string[], todayIso: strin
     else if (d >= todayIso) empty.push(dayName(d));
   }
   const parts: string[] = [];
-  if (ateOut.length) parts.push(`${ateOut.join(", ")} dışarıda`);
-  if (empty.length) parts.push(`${empty.join(", ")} henüz boş`);
-  return { planned, note: parts.join(" · ") || "Her akşam belli" };
+  if (ateOut.length) parts.push(tx("plan.weekAteOut", { days: ateOut.join(", ") }));
+  if (empty.length) parts.push(tx("plan.weekEmpty", { days: empty.join(", ") }));
+  return { planned, note: parts.join(" · ") || tx("plan.weekAllSet") };
 }
 
 export interface FreezerLine {
@@ -342,7 +343,7 @@ export function freezerLines(tasks: PrepTask[], dates: string[], recipesById: Ma
       const qty = ing ? formatIngredientQuantity(ing) : "";
       const due = new Date(t.dueAt);
       const dueIso = `${due.getFullYear()}-${String(due.getMonth() + 1).padStart(2, "0")}-${String(due.getDate()).padStart(2, "0")}`;
-      const part = due.getHours() < 12 ? "sabah" : due.getHours() < 17 ? "öğlen" : "akşam";
+      const part = tx(due.getHours() < 12 ? "plan.part.morning" : due.getHours() < 17 ? "plan.part.noon" : "plan.part.evening");
       const name = recipe?.freezerItem ?? t.label;
       const who = users.get((t.status === "done" ? t.doneBy : t.assigneeId) ?? "")?.name ?? "";
       return {

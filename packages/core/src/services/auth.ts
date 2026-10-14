@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import { z } from "zod";
 import type { Repos } from "../data/repos";
 import type { SessionStore } from "../data/session";
@@ -6,15 +7,15 @@ import { hashPassword, randomSalt, verifyPassword } from "../lib/crypto";
 import { AppError } from "./errors";
 
 export const signUpSchema = z.object({
-  name: z.string().trim().min(1, "Adını yazar mısın?").max(40, "Biraz daha kısa bir ad olsun."),
-  email: z.string().trim().email("Bu e-posta adresi eksik görünüyor."),
-  password: z.string().min(6, "Şifre en az 6 karakter olsun."),
+  name: z.string().trim().min(1, { error: () => t("auth.err.name") }).max(40, { error: () => t("auth.err.nameLong") }),
+  email: z.string().trim().email({ error: () => t("auth.err.email") }),
+  password: z.string().min(6, { error: () => t("auth.err.password") }),
 });
 export type SignUpInput = z.infer<typeof signUpSchema>;
 
 export const logInSchema = z.object({
-  email: z.string().trim().email("Bu e-posta adresi eksik görünüyor."),
-  password: z.string().min(1, "Şifreni yazar mısın?"),
+  email: z.string().trim().email({ error: () => t("auth.err.email") }),
+  password: z.string().min(1, { error: () => t("auth.err.passwordMissing") }),
 });
 
 export function initialOf(name: string): string {
@@ -30,7 +31,7 @@ export async function signUp(repos: Repos, session: SessionStore, input: SignUpI
   if (!parsed.success) throw new AppError("invalid", firstIssue(parsed.error));
   const { name, email, password } = parsed.data;
   if (await repos.auth.findUserByEmail(email)) {
-    throw new AppError("duplicate", "Bu e-postayla zaten bir hesap var. Giriş yapmayı dener misin?");
+    throw new AppError("duplicate", t("auth.err.duplicate"));
   }
   const salt = randomSalt();
   const user = await repos.auth.createUser({
@@ -50,7 +51,7 @@ export async function logIn(repos: Repos, session: SessionStore, input: { email:
   if (!parsed.success) throw new AppError("invalid", firstIssue(parsed.error));
   const user = await repos.auth.findUserByEmail(parsed.data.email);
   const ok = user ? await verifyPassword(parsed.data.password, user.passwordSalt, user.passwordHash) : false;
-  if (!user || !ok) throw new AppError("credentials", "E-posta ya da şifre eşleşmedi. Bir daha bakar mısın?");
+  if (!user || !ok) throw new AppError("credentials", t("auth.err.credentials"));
   session.set(user.id);
   return user;
 }

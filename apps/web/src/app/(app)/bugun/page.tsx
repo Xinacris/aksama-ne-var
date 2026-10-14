@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, listJoin, t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { menuCardStyles, TonightCard } from "@/components/MenuCard";
@@ -41,13 +42,13 @@ export default function BugunPage() {
   const [place, setPlace] = useState<EveningLeftover | null>(null);
 
   const tomorrowPlanned = menuItems(menuFor(planItems, addDays(model.today, 1))).length > 0;
-  const names = people.map((p) => p.name).join(" ve ");
+  const names = listJoin(people.map((p) => p.name));
   const approval = model.tonight ? model.tonight.approval : null;
   const canApprove = approval && (approval.kind === "waitingMe" || approval.kind === "none" || (approval.kind === "solo" && !approval.approved));
 
   async function onAteOut() {
     await ateOut(model.today);
-    setNotice({ kind: "info", text: "Afiyet olsun. Menü eşleşmelere döndü, malzemeler listede kalıyor." });
+    setNotice({ kind: "info", text: t("bugun.ateOutNotice") });
   }
 
   return (
@@ -55,10 +56,10 @@ export default function BugunPage() {
       <header className={s.header}>
         <div className={s.titles}>
           <span className={s.date}>{model.dateLabel}</span>
-          <h1 className={s.title}>Akşama ne var?</h1>
+          <h1 className={s.title}>{t("app.name")}</h1>
         </div>
         <div className={s.headRight}>
-          <Link href="/ayarlar" className={s.avatarLink} aria-label={`Ev halkı: ${names} · Ayarlar`}>
+          <Link href="/ayarlar" className={s.avatarLink} aria-label={t("nav.household", { names })}>
             <AvatarStack people={people} size={34} ringIds={present ? [present.id] : []} />
           </Link>
           <SyncInline state={sync} />
@@ -83,7 +84,7 @@ export default function BugunPage() {
           )}
 
           {model.partnerLine && personById.get(model.partnerLine.actorId) && (
-            <Link href="/akis" className={s.partner} aria-label="Ev hareketlerinin hepsi">
+            <Link href="/akis" className={s.partner} aria-label={t("bugun.feedAll")}>
               <ActivityLine person={personById.get(model.partnerLine.actorId)!} text={model.partnerLine.text} when={model.partnerLine.when} />
             </Link>
           )}
@@ -94,14 +95,14 @@ export default function BugunPage() {
                 photoDish={model.tonight.photoDish}
                 title={model.tonight.title}
                 rows={model.tonight.rows}
-                approval={model.tonight.cooked ? { tone: "ok", label: "Pişti · afiyet olsun" } : approvalPill(model.tonight.approval)}
+                approval={model.tonight.cooked ? { tone: "ok", label: t("bugun.cookedPill") } : approvalPill(model.tonight.approval)}
                 href={`/tarif/${model.tonight.mainId}?gun=${model.today}`}
                 cook={
                   model.tonight.cooked ? undefined : model.tonight.cooking ? (
                     <CookingRow cooking={model.tonight.cooking} href={`/pisir/${model.today}`} />
                   ) : (
                     <ButtonLink href={`/pisir/${model.today}`} size="lg" block>
-                      Pişirmeye başla
+                      {t("bugun.startCooking")}
                     </ButtonLink>
                   )
                 }
@@ -112,7 +113,7 @@ export default function BugunPage() {
                     <div>
                       <button type="button" className={menuCardStyles.approveBtn} onClick={() => approve(model.today)}>
                         <IconCheck size={16} strokeWidth={2.4} />
-                        {approval?.kind === "waitingMe" ? "Ben de onaylıyorum" : "Menüyü onayla"}
+                        {approval?.kind === "waitingMe" ? t("bugun.meToo") : t("dlg.approve")}
                       </button>
                     </div>
                   ) : undefined
@@ -120,37 +121,37 @@ export default function BugunPage() {
               />
             </div>
           ) : model.ateOut ? (
-            <section aria-label="Bu akşam" className={s.ateOut}>
+            <section aria-label={t("bugun.tonight")} className={s.ateOut}>
               <span className={s.ateIcon}>
                 <IconCutlery size={22} />
               </span>
-              <h2 className={s.ateTitle}>Bu akşam dışarıdasınız</h2>
+              <h2 className={s.ateTitle}>{t("bugun.outTonight")}</h2>
               <p className={s.muted} style={{ margin: 0, lineHeight: 1.45 }}>
                 {model.returnedNames.length
-                  ? `Planlanan ${model.returnedNames.join(", ").toLocaleLowerCase("tr")} eşleşmelere geri döndü.`
-                  : "Afiyet olsun."}
+                  ? t("week.returned", { dishes: model.returnedNames.join(", ").toLocaleLowerCase(intlTag()) })
+                  : t("bugun.enjoy")}
               </p>
               <Button variant="link" size="sm" onClick={() => clearAteOut(model.today)}>
-                Geri al
+                {t("common.undo")}
               </Button>
             </section>
           ) : (
             <div className={s.empty}>
               <EmptyState
-                title={leaveEmpty ? "Bu akşam serbest" : "Bu akşam henüz boş"}
+                title={t(leaveEmpty ? "bugun.free" : "bugun.empty")}
                 text={
                   leaveEmpty
-                    ? "Canın ne isterse. Fikrin değişirse eşleşmeler burada."
-                    : "Eşleşmelerden bir şey seçebilir ya da öyle bırakabilirsiniz."
+                    ? t("bugun.freeText")
+                    : t("bugun.emptyText")
                 }
                 actions={
                   <>
                     <ButtonLink href={`/eslesme?gun=${model.today}`} size="sm">
-                      Eşleşmelerden seç
+                      {t("bugun.pickMatch")}
                     </ButtonLink>
                     {!leaveEmpty && (
                       <Button variant="secondary" size="sm" onClick={() => setLeaveEmpty(true)}>
-                        Boş kalsın
+                        {t("bugun.leaveEmpty")}
                       </Button>
                     )}
                   </>
@@ -166,7 +167,7 @@ export default function BugunPage() {
           {model.fridge.length > 0 && (
             <section aria-labelledby="dolapta" className={s.fridge}>
               <h2 id="dolapta" className={s.fridgeTitle}>
-                Dolapta
+                {t("week.inFridge")}
               </h2>
               <ul className={s.fridgeList}>
                 {model.fridge.map((f) => (
@@ -177,11 +178,11 @@ export default function BugunPage() {
           )}
 
           {model.tonight && (
-            <section aria-label="Plan değişirse" className={s.change}>
+            <section aria-label={t("bugun.ifChanges")} className={s.change}>
               <div className={s.changeGrid}>
                 <button type="button" className={s.changeBtn} onClick={onAteOut}>
                   <IconCutlery size={18} />
-                  Bugün dışarıda yedik
+                  {t("bugun.ateOutToday")}
                 </button>
                 <button
                   type="button"
@@ -191,11 +192,11 @@ export default function BugunPage() {
                   onClick={() => setChangeOpen((v) => !v)}
                 >
                   <IconSwap size={18} />
-                  Plan değişti
+                  {t("bugun.planChanged")}
                 </button>
               </div>
               {changeOpen && (
-                <div id="plan-degisti" className={s.options} role="group" aria-label="Plan değişti seçenekleri">
+                <div id="plan-degisti" className={s.options} role="group" aria-label={t("bugun.planChangedOptions")}>
                   <button
                     type="button"
                     className={s.option}
@@ -204,8 +205,8 @@ export default function BugunPage() {
                       await moveToTomorrow(model.today);
                     }}
                   >
-                    {tomorrowPlanned ? "Yarınla yer değiştir" : "Yarına taşı"}
-                    <span>{tomorrowPlanned ? "Bu akşamki menü yarına, yarınki bu akşama geçer." : "Bu akşamki menü yarın akşama geçer."}</span>
+                    {t(tomorrowPlanned ? "bugun.swapTomorrow" : "bugun.moveTomorrow")}
+                    <span>{t(tomorrowPlanned ? "bugun.swapTomorrowSub" : "bugun.moveTomorrowSub")}</span>
                   </button>
                   <button
                     type="button"
@@ -215,22 +216,22 @@ export default function BugunPage() {
                       await sendBack(model.today);
                     }}
                   >
-                    Eşleşmelere geri gönder
-                    <span>Bu akşam boş kalır; ana yemek sonra seçilmek üzere bekler.</span>
+                    {t("bugun.sendBack")}
+                    <span>{t("bugun.sendBackSub")}</span>
                   </button>
                   <button type="button" className={s.option} onClick={() => setChangeOpen(false)}>
-                    Vazgeç
+                    {t("form.bulk.cancel")}
                   </button>
                 </div>
               )}
-              <p className={s.changeNote}>Olur böyle günler. Menü yarına ya da eşleşmelere geri döner, malzemeler listede kalır.</p>
+              <p className={s.changeNote}>{t("bugun.changeNote")}</p>
             </section>
           )}
 
           {model.tomorrow ? (
-            <Link href="/hafta" aria-label={`Yarın: ${model.tomorrow.line}`} className={s.tomorrow}>
+            <Link href="/hafta" aria-label={t("bugun.tomorrowAria", { line: model.tomorrow.line })} className={s.tomorrow}>
               <div className={s.tomTexts}>
-                <span className={s.eyebrow}>Yarın</span>
+                <span className={s.eyebrow}>{t("bugun.tomorrow")}</span>
                 <span className={s.tomLine}>{model.tomorrow.line}</span>
                 {model.tomorrow.sub && <span className={s.muted}>{model.tomorrow.sub}</span>}
               </div>
@@ -241,9 +242,9 @@ export default function BugunPage() {
           ) : (
             <Link href={`/eslesme?gun=${addDays(model.today, 1)}`} className={s.tomorrow}>
               <div className={s.tomTexts}>
-                <span className={s.eyebrow}>Yarın</span>
-                <span className={s.tomLine}>Henüz boş</span>
-                <span className={s.muted}>Birlikte kaydırıp seçebilirsiniz</span>
+                <span className={s.eyebrow}>{t("bugun.tomorrow")}</span>
+                <span className={s.tomLine}>{t("bugun.tomorrowEmpty")}</span>
+                <span className={s.muted}>{t("bugun.tomorrowEmptySub")}</span>
               </div>
             </Link>
           )}
@@ -265,16 +266,16 @@ function CookingRow({ cooking, href }: { cooking: { userId: string; step: number
   const { byId } = usePeople();
   const who = byId.get(cooking.userId);
   const mine = cooking.userId === me?.id;
-  const label = cooking.step === 0 ? "hazırlık" : `adım ${cooking.step}/${cooking.total}`;
+  const label = cooking.step === 0 ? t("bugun.prepPhase") : t("cook.progress", { step: cooking.step, total: cooking.total });
   return (
     <div className={s.cooking}>
       <div className={s.cookingTop}>
         <span className={s.cookingText} role="status">
           <span className={s.cookingDot} aria-hidden="true" />
-          {mine || !who ? "Pişiyor" : `${who.name} pişiriyor`} · {label}
+          {mine || !who ? t("bugun.cooking") : t("bugun.whoCooking", { name: who.name })} · {label}
         </span>
         <Link href={href} className={s.cookingLink}>
-          {mine ? "Devam et" : "Mutfağa bak"}
+          {mine ? t("bugun.continue") : t("bugun.peek")}
         </Link>
       </div>
       <span className={s.cookingTrack} aria-hidden="true">
@@ -289,25 +290,25 @@ function YesterdayCard({ ev, today, onPlace }: { ev: EveningLeftover; today: str
   const name = dishInSentence(ev.recipe.name);
   const k = ev.outcome.kind;
   const title =
-    k === "lunch" ? `Dünkü ${name} bugün öğlen için yeterli.` : k === "fridge" ? `Dünkü ${name} dolapta.` : k === "discard" ? `Dünkü ${name}: kimse yemeyecek.` : `Dünkü ${name}: artan yok.`;
+    t(k === "lunch" ? "bugun.yLunch" : k === "fridge" ? "bugun.yFridge" : k === "discard" ? "bugun.yDiscard" : "bugun.yNone", { dish: name });
   const sub =
     k === "lunch"
-      ? `Buzdolabında · yaklaşık ${ev.portions} porsiyon`
+      ? t("bugun.inFridgePortions", { count: ev.portions })
       : k === "fridge"
-        ? `${keepUntilLabel(ev.outcome.useBy, today)} · yaklaşık ${ev.portions} porsiyon`
+        ? t("bugun.untilPortions", { until: keepUntilLabel(ev.outcome.useBy, today), count: ev.portions })
         : null;
   return (
-    <section aria-label="Artan yemek" className={s.leftover}>
+    <section aria-label={t("cook.leftoverRegion")} className={s.leftover}>
       <span className={s.leftIcon}>
         <IconLeftover size={22} />
       </span>
       <div className={s.leftTexts}>
         <p className={s.leftTitle}>{title}</p>
         {sub && <span className={s.muted}>{sub}</span>}
-        <LeftoverChoices ev={ev} when="yesterday" title="Dünden kalan" />
+        <LeftoverChoices ev={ev} when="yesterday" title={t("bugun.fromYesterday")} />
         {k === "fridge" && (
           <button type="button" className={s.linkBtn} onClick={() => onPlace(ev)}>
-            Bir akşama koy
+            {t("bugun.putOnEvening")}
           </button>
         )}
       </div>
@@ -324,17 +325,17 @@ function FridgeRow({ ev, today, onPlace }: { ev: EveningLeftover; today: string;
       <span className={s.fridgeTexts}>
         <strong>{ev.recipe.name}</strong>
         <span className={s.muted}>
-          {ev.plannedDate ? `${eveningLabel(ev.plannedDate, today)} yenecek` : `${keepUntilLabel(ev.outcome.useBy, today)} · ${dayName(ev.fromDate)} pişti`}
+          {ev.plannedDate ? t("bugun.eatenOn", { evening: eveningLabel(ev.plannedDate, today) }) : t("bugun.cookedOn", { until: keepUntilLabel(ev.outcome.useBy, today), day: dayName(ev.fromDate) })}
         </span>
       </span>
       <span className={s.fridgeActions}>
         {!ev.plannedDate && (
-          <button type="button" className={s.linkBtn} onClick={() => onPlace(ev)} aria-label={`${ev.recipe.name}: bir akşama koy`}>
-            Akşama koy
+          <button type="button" className={s.linkBtn} onClick={() => onPlace(ev)} aria-label={t("bugun.putNamed", { name: ev.recipe.name })}>
+            {t("bugun.putShort")}
           </button>
         )}
-        <button type="button" className={s.linkBtn} onClick={() => setLeftoverChoice(ev.fromDate, "eaten")} aria-label={`${ev.recipe.name}: bitti`}>
-          Bitti
+        <button type="button" className={s.linkBtn} onClick={() => setLeftoverChoice(ev.fromDate, "eaten")} aria-label={t("bugun.doneNamed", { name: ev.recipe.name })}>
+          {t("cook.done")}
         </button>
       </span>
     </li>
@@ -360,10 +361,10 @@ function RecentFeed() {
     <section className={s.feed} aria-labelledby="son-hareketler">
       <div className={s.feedHead}>
         <h2 id="son-hareketler" className={s.feedTitle}>
-          Evde son hareketler
+          {t("bugun.recent")}
         </h2>
         <Link href="/akis" className={s.feedLink}>
-          Hepsi
+          {t("bugun.all")}
         </Link>
       </div>
       <ul className={s.feedList}>

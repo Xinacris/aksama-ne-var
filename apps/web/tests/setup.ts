@@ -2,6 +2,10 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
 import { afterEach, vi } from "vitest";
 import React from "react";
+import { setI18n } from "react-i18next";
+import { i18n } from "@anv/core/i18n";
+
+setI18n(i18n);
 
 export const router = { push: vi.fn(), replace: vi.fn(), back: vi.fn(), prefetch: vi.fn(), refresh: vi.fn() };
 export const nav = { pathname: "/", params: {} as Record<string, string>, search: new URLSearchParams() };

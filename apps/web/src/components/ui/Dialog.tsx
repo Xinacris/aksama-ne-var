@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useEffect, useRef, type ReactNode } from "react";
 import { IconClose } from "../icons";
 import s from "./Dialog.module.css";
@@ -61,7 +62,7 @@ export function Dialog({
                 {title}
               </h2>
             </div>
-            <button type="button" className={s.close} onClick={onClose} aria-label="Kapat">
+            <button type="button" className={s.close} onClick={onClose} aria-label={t("common.close")}>
               <IconClose size={18} />
             </button>
           </div>

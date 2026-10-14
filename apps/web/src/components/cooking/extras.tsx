@@ -1,5 +1,6 @@
 "use client";
 
+import { listJoin, t as tr } from "@anv/core/i18n";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { CookingSession, Recipe } from "@anv/core/data/models";
 import { newTimer, remainingSeconds, ringingTimers, stepTimers, visibleTimers, type CookTarget } from "@anv/core/domain/cooking";
@@ -111,7 +112,7 @@ function StepTimerButtons({ session, recipe, step }: { session: CookingSession; 
           return (
             <span key={d.index} className={s.running}>
               <IconClock size={20} />
-              {left > 0 ? `${formatCountdown(left)} kaldı` : "Süre doldu"}
+              {left > 0 ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUp")}
             </span>
           );
         }
@@ -124,7 +125,7 @@ function StepTimerButtons({ session, recipe, step }: { session: CookingSession; 
             onClick={() => updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds: d.seconds, now: now() })] })}
           >
             <IconClock size={20} />
-            Zamanlayıcı başlat · {formatTimerLength(d.seconds)}
+            {tr("cook.startTimer", { length: formatTimerLength(d.seconds) })}
           </Button>
         );
       })}
@@ -154,30 +155,30 @@ function TimerBar({ session }: { session: CookingSession }) {
 
   return (
     <>
-      <div className={s.alerts} aria-live="assertive" role="alert" aria-label="Zamanlayıcı uyarıları">
+      <div className={s.alerts} aria-live="assertive" role="alert" aria-label={tr("cook.timerAlerts")}>
         {ringing.map((r) => (
           <div key={r.id} className={s.alert}>
             <span>
-              <strong>Süre doldu:</strong> {r.label}
+              <strong>{tr("cook.timeUpFor")}</strong> {r.label}
             </span>
             <Button size="sm" onClick={() => dismiss(r.id)}>
-              Tamam
+              {tr("cook.ok")}
             </Button>
           </div>
         ))}
       </div>
       {list.length > 0 && (
-        <section className={s.bar} aria-label="Zamanlayıcılar">
+        <section className={s.bar} aria-label={tr("cook.timers")}>
           <ul className={s.timers}>
             {list.map((x) => {
               const left = remainingSeconds(x, t);
               return (
                 <li key={x.id} className={[s.timer, left === 0 && s.done].filter(Boolean).join(" ")}>
                   <span className={s.timerLabel}>{x.label.split(" · ")[0]}</span>
-                  <span className={s.timerLeft} aria-label={left ? `${formatCountdown(left)} kaldı` : "süre doldu"}>
-                    {left ? formatCountdown(left) : "Bitti"}
+                  <span className={s.timerLeft} aria-label={left ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUpLower")}>
+                    {left ? formatCountdown(left) : tr("cook.done")}
                   </span>
-                  <button type="button" className={s.cancel} onClick={() => dismiss(x.id)} aria-label={`${x.label} zamanlayıcısını kapat`}>
+                  <button type="button" className={s.cancel} onClick={() => dismiss(x.id)} aria-label={tr("cook.closeTimer", { label: x.label })}>
                     <IconClose size={16} />
                   </button>
                 </li>
@@ -226,39 +227,39 @@ function FinishScreen({ session, target }: { session: CookingSession; target: Co
         <IconCheck size={30} strokeWidth={2.4} />
       </span>
       <h1 className={s.finishTitle} ref={headRef} tabIndex={-1}>
-        Afiyet olsun
+        {tr("cook.enjoy")}
       </h1>
       <p className={s.finishLead}>
-        {target.kind === "menu" ? "Bu akşamın yemeği pişti olarak işaretlendi." : "Tarifin bütün adımları tamam."}
-        {session.timers.length ? " Zamanlayıcılar kapandı." : ""}
+        {target.kind === "menu" ? tr("cook.menuDone") : tr("cook.recipeDone")}
+        {session.timers.length ? tr("cook.timersClosed") : ""}
       </p>
 
       {ev && (
-        <section className={s.finishCard} aria-label="Artan yemek">
-          <LeftoverChoices ev={ev} when="tonight" title={`Artan ${dishInSentence(ev.recipe.shortName ?? ev.recipe.name)} ne olsun?`} />
+        <section className={s.finishCard} aria-label={tr("cook.leftoverRegion")}>
+          <LeftoverChoices ev={ev} when="tonight" title={tr("cook.leftoverQ", { dish: dishInSentence(ev.recipe.shortName ?? ev.recipe.name) })} />
         </section>
       )}
 
       <section className={s.finishCard} aria-labelledby="eksik">
         <p id="eksik" className={s.finishCardTitle}>
-          Eksik çıkan bir şey oldu mu?
+          {tr("cook.missingQ")}
         </p>
         <form onSubmit={add} className={s.addRow}>
-          <TextField label="Listeye eklenecek ürün" hideLabel placeholder="ör. salça" value={item} onChange={(e) => setItem(e.target.value)} />
+          <TextField label={tr("cook.listItem")} hideLabel placeholder={tr("cook.listItemPlaceholder")} value={item} onChange={(e) => setItem(e.target.value)} />
           <Button type="submit" variant="soft" size="md">
             <IconPlus size={18} />
-            Listeye ekle
+            {tr("cook.addToList")}
           </Button>
         </form>
         {added.length > 0 && (
           <p className={s.added} role="status">
-            Listeye eklendi: {added.join(", ")}
+            {tr("cook.added", { items: listJoin(added) })}
           </p>
         )}
       </section>
 
       <ButtonLink href={back} size="xl" block>
-        {target.kind === "menu" && target.date === today ? "Bugün'e dön" : "Geri dön"}
+        {target.kind === "menu" && target.date === today ? tr("cook.backToday") : tr("cook.back")}
       </ButtonLink>
     </div>
   );

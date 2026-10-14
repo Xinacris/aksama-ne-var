@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, t as tr } from "@anv/core/i18n";
 import { useMemo } from "react";
 import type { Activity, PrepTask, Recipe, Slot } from "@anv/core/data/models";
 import { SLOTS } from "@anv/core/data/models";
@@ -10,7 +11,6 @@ import { eveningLeftover, fridgeItems, type EveningLeftover } from "@anv/core/do
 import { offsetLabel, reminderMeta, reminderSentence, topReminder } from "@anv/core/domain/prep";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { overallProgress } from "@anv/core/domain/cooking";
-import { lowerFirstTr } from "@anv/core/lib/text";
 import { now } from "@anv/core/lib/clock";
 import { recipesMap, selectList, useApp, usersMap } from "@/store/app";
 import type { Approval, MenuRow } from "@/components/MenuCard";
@@ -83,7 +83,7 @@ export function useToday(): TodayModel {
           task,
           text: reminderSentence(task, byId.get(task.recipeId), today),
           meta: reminderMeta(task, users),
-          actionLabel: task.freezer ? "Çıkardım" : "Yaptım",
+          actionLabel: tr(task.freezer ? "reminder.tookOut" : "reminder.done"),
           doneAt: task.doneAt ? clockTime(new Date(task.doneAt)) : null,
         }
       : null;
@@ -113,7 +113,7 @@ export function useToday(): TodayModel {
             photoDish: (() => {
               const main = menu.ana ?? items[0];
               const r = byId.get(main.recipeId);
-              return r ? recipeLabel(r) : "Akşam yemeği";
+              return r ? recipeLabel(r) : tr("today.dinner");
             })(),
             rows: SLOTS.filter((sl) => menu[sl]).map((sl: Slot) => {
               const r = byId.get(menu[sl]!.recipeId);
@@ -155,8 +155,8 @@ export function useToday(): TodayModel {
       const onList = main?.ingredients.find((i) => !i.staple && list.some((r) => r.name === i.name && !r.checkedBy));
       const prep = main?.prepItems[0];
       const sub = [
-        onList ? `${onList.name} listede` : null,
-        prep ? `${offsetLabel(prep.offset)}: ${lowerFirstTr(prep.label)}` : null,
+        onList ? tr("today.onList", { name: onList.name }) : null,
+        prep ? `${offsetLabel(prep.offset)}: ${prep.label.charAt(0).toLocaleLowerCase(intlTag()) + prep.label.slice(1)}` : null,
       ]
         .filter(Boolean)
         .join(" · ");

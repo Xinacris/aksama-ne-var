@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useState, type FormEvent } from "react";
 import { messageOf } from "@anv/core/services/errors";
 import { useApp } from "@/store/app";
@@ -7,7 +8,7 @@ import { Button } from "./ui/Button";
 import { TextField } from "./ui/Field";
 import { shell } from "./SimpleShell";
 
-export function SignUpForm({ onDone, submitLabel = "Hesap oluştur" }: { onDone: () => void | Promise<void>; submitLabel?: string }) {
+export function SignUpForm({ onDone, submitLabel = t("auth.createAccount") }: { onDone: () => void | Promise<void>; submitLabel?: string }) {
   const signUp = useApp((s) => s.signUp);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,9 +31,9 @@ export function SignUpForm({ onDone, submitLabel = "Hesap oluştur" }: { onDone:
 
   return (
     <form className={shell.form} onSubmit={submit} noValidate>
-      <TextField label="Adın" name="name" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} required />
+      <TextField label={t("auth.yourName")} name="name" autoComplete="given-name" value={name} onChange={(e) => setName(e.target.value)} required />
       <TextField
-        label="E-posta"
+        label={t("auth.email")}
         name="email"
         type="email"
         autoComplete="email"
@@ -42,13 +43,13 @@ export function SignUpForm({ onDone, submitLabel = "Hesap oluştur" }: { onDone:
         required
       />
       <TextField
-        label="Şifre"
+        label={t("auth.password")}
         name="password"
         type="password"
         autoComplete="new-password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        hint="En az 6 karakter. Bu bir demo; şifren yalnızca bu tarayıcıda, karıştırılmış olarak durur."
+        hint={t("auth.passwordHint")}
         required
       />
       {error && (
@@ -57,7 +58,7 @@ export function SignUpForm({ onDone, submitLabel = "Hesap oluştur" }: { onDone:
         </p>
       )}
       <Button type="submit" size="xl" block disabled={busy}>
-        {busy ? "Hazırlanıyor…" : submitLabel}
+        {busy ? t("auth.preparing") : submitLabel}
       </Button>
     </form>
   );
@@ -86,7 +87,7 @@ export function LogInForm({ onDone }: { onDone: () => void | Promise<void> }) {
   return (
     <form className={shell.form} onSubmit={submit} noValidate>
       <TextField
-        label="E-posta"
+        label={t("auth.email")}
         name="email"
         type="email"
         autoComplete="email"
@@ -96,7 +97,7 @@ export function LogInForm({ onDone }: { onDone: () => void | Promise<void> }) {
         required
       />
       <TextField
-        label="Şifre"
+        label={t("auth.password")}
         name="password"
         type="password"
         autoComplete="current-password"
@@ -110,7 +111,7 @@ export function LogInForm({ onDone }: { onDone: () => void | Promise<void> }) {
         </p>
       )}
       <Button type="submit" size="xl" block disabled={busy}>
-        {busy ? "Giriliyor…" : "Giriş yap"}
+        {busy ? t("auth.signingIn") : t("auth.signIn")}
       </Button>
     </form>
   );

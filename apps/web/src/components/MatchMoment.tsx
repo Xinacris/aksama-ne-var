@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import { IconHeart } from "./icons";
 import { Avatar, type AvatarPerson } from "./ui/Avatar";
@@ -37,6 +38,7 @@ export function MatchMoment({
   onContinue: () => void;
   busy?: boolean;
 }) {
+  const { t } = useTranslation();
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     headingRef.current?.focus();
@@ -80,7 +82,7 @@ export function MatchMoment({
           {putLabel}
         </button>
         <button type="button" className={s.continue} onClick={onContinue}>
-          Kaydırmaya devam
+          {t("match.keepSwiping")}
         </button>
       </div>
     </section>

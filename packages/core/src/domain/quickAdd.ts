@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import { extractUrl, parseUrl } from "./import/detect";
 
 /** What the quick-add box was given: a link to import, a dish name to save, or a pasted recipe text. */
@@ -26,4 +27,21 @@ export function quickAddIntent(raw: string): QuickAdd {
 /** Where a link or a pasted text goes: the existing import flow (it starts on its own). */
 export function importHref(q: Extract<QuickAdd, { kind: "url" | "text" }>): string {
   return q.kind === "url" ? `/tarifler/ice-aktar?url=${encodeURIComponent(q.url)}` : `/tarifler/ice-aktar?text=${encodeURIComponent(q.text)}`;
+}
+
+/** The sheet's button: what one tap will do. */
+export function quickAddAction(q: QuickAdd, known: boolean): string {
+  if (q.kind === "url") return t("quickAdd.importLink");
+  if (q.kind === "text") return t("quickAdd.importText");
+  if (known) return t("quickAdd.openRecipe");
+  return t("quickAdd.save");
+}
+
+/** The line under the field: what the input was read as. */
+export function quickAddHint(q: QuickAdd, knownName: string | null): string {
+  if (q.kind === "url") return t("quickAdd.hintLink");
+  if (q.kind === "text") return t("quickAdd.hintText");
+  if (knownName) return t("quickAdd.hintKnown", { name: knownName });
+  if (q.kind === "name") return t("quickAdd.hintName");
+  return t("quickAdd.hintEmpty");
 }

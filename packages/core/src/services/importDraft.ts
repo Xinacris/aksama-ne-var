@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import { PLATFORM_LABEL, type Recipe, type SourcePlatform } from "../data/models";
 import { catalogEntry } from "../data/seed/ingredients";
 import { isWater, matchCatalog } from "../domain/import/catalogMatch";
@@ -15,14 +16,16 @@ const OFFSET: Record<ImportedRecipe["prep"][number]["when"], string> = {
 const dec = (n: number) => String(Math.round(n * 100) / 100).replace(".", ",");
 
 /** Pasted text with no link at all: still say where the recipe came from. */
-export const PASTED_SOURCE = "Yapıştırılan tarif metni";
+export const PASTED_SOURCE_KEY = "import.pastedSource";
+/** In the current language (Kaynak for text pasted without a link). */
+export const pastedSource = () => t(PASTED_SOURCE_KEY);
 
 /**
  * The form's Kaynak field, never empty: "YouTube · Yemek.com", "TikTok · @mutfakdefteri",
  * just "Instagram" when the author is unknown, the site name for web pages.
  */
 export function sourceLabel(source: ImportResult["source"]): string {
-  if (!source) return PASTED_SOURCE;
+  if (!source) return pastedSource();
   if (source.platform === "web") return source.siteName || source.author || hostOf(source.url) || PLATFORM_LABEL.web;
   const platform = PLATFORM_LABEL[source.platform];
   return source.author ? `${platform} · ${source.author}` : platform;
@@ -39,8 +42,8 @@ function hostOf(url: string): string | null {
 /** "Kaynak: @mutfakdefteri · TikTok" — credit line for imported recipes. */
 export function sourceCredit(src: { platform?: SourcePlatform; author?: string | null; url: string }): string {
   const platform = src.platform && src.platform !== "web" ? PLATFORM_LABEL[src.platform] : null;
-  if (!src.author) return `Kaynak: ${platform ?? hostOf(src.url) ?? src.url}`;
-  return platform ? `Kaynak: ${src.author} · ${platform}` : `Kaynak: ${src.author}`;
+  if (!src.author) return t("import.credit", { text: platform ?? hostOf(src.url) ?? src.url });
+  return t("import.credit", { text: platform ? `${src.author} · ${platform}` : src.author });
 }
 
 const clampMinutes = (n: number) => Math.max(0, Math.min(Math.round(n), 600));

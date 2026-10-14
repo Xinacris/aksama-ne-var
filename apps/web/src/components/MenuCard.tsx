@@ -1,3 +1,4 @@
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { SLOT_LABEL, type Slot } from "@anv/core/data/models";
@@ -33,7 +34,7 @@ function Rows({ rows, withTime }: { rows: MenuRow[]; withTime: boolean }) {
         <li key={r.slot} className={[s.row, r.slot === "ana" && s.main].filter(Boolean).join(" ")}>
           <span className={s.slot}>{SLOT_LABEL[r.slot]}</span>
           {r.name === null ? (
-            <span className={s.missing}>Silinmiş tarif</span>
+            <span className={s.missing}>{t("plan.deletedRecipe")}</span>
           ) : r.href ? (
             <Link href={r.href} className={s.dish}>
               {r.name}
@@ -102,7 +103,7 @@ export function TonightCard({
       <PhotoPlaceholder dish={photoDish} height={136} />
       <div className={s.body}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Bu akşam</span>
+          <span className={s.eyebrow}>{t("menu.tonight")}</span>
           <ApprovalPill approval={approval} />
         </div>
         <h2 className={s.title}>{title}</h2>
@@ -110,7 +111,7 @@ export function TonightCard({
         {action}
         {cook}
         <Link href={href} className={s.open}>
-          Menüyü ve ön hazırlığı aç
+          {t("menu.openMenu")}
           <IconArrowRight size={18} />
         </Link>
       </div>

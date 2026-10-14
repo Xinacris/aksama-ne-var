@@ -1,5 +1,6 @@
 "use client";
 
+import { intlTag, listJoin, t, tagLabel } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
@@ -22,10 +23,7 @@ import { recipesMap, useApp } from "@/store/app";
 import s from "./page.module.css";
 
 function listPhrase(names: string[]): string {
-  const n = names.map((x) => x.toLocaleLowerCase("tr"));
-  if (n.length === 0) return "";
-  if (n.length === 1) return n[0];
-  return `${n.slice(0, -1).join(", ")} ve ${n[n.length - 1]}`;
+  return listJoin(names.map((x) => x.toLocaleLowerCase(intlTag())));
 }
 
 function EslesmeInner() {
@@ -102,7 +100,7 @@ function EslesmeInner() {
     setBusy(true);
     await addToPlan({ date: moment.date, slot: moment.slot, recipeId: moment.recipeId, source: "match", matchId: moment.id });
     const r = byId.get(moment.recipeId);
-    setNotice({ kind: "info", text: `${r?.name ?? "Yemek"} ${eveningDative(moment.date, today).toLocaleLowerCase("tr")} kondu. Eksikler listede.` });
+    setNotice({ kind: "info", text: t("eslesme.placed", { dish: r?.name ?? t("eslesme.dish"), evening: eveningDative(moment.date, today).toLocaleLowerCase(intlTag()) }) });
     setMoment(null);
     setBusy(false);
     router.replace(`/eslesme?slot=${slot}`);
@@ -115,19 +113,19 @@ function EslesmeInner() {
     if (r) {
       const missing = r.ingredients.filter((i) => !i.staple && !pantry.some((p) => p.name === i.name)).map((i) => i.name);
       const listNote = missing.length
-        ? `${listPhrase(missing.slice(0, 4)).replace(/^./, (c) => c.toLocaleUpperCase("tr"))}${missing.length > 4 ? " ve diğerleri" : ""} listeye eklenir.`
-        : "Malzemelerin hepsi evde görünüyor.";
+        ? t("eslesme.toList", { items: listPhrase(missing.slice(0, 4)).replace(/^./, (c) => c.toLocaleUpperCase(intlTag())), more: missing.length > 4 ? t("eslesme.andOthers") : "" })
+        : t("eslesme.allHome");
       const days = daysSinceCooked(r.id, last, today);
       return (
         <main className={s.momentWrap}>
           <MatchMoment
             people={solo ? people.slice(0, 1) : people}
-            title={solo ? `${r.name} olsun!` : `İkiniz de ${dishInSentence(r.name)} dediniz!`}
-            subtitle={`${eveningLabel(moment.date, today)} için ${solo ? "güzel bir seçim" : "tatlı bir uzlaşma"}.`}
+            title={solo ? t("eslesme.soloTitle", { dish: r.name }) : t("eslesme.bothTitle", { dish: dishInSentence(r.name) })}
+            subtitle={t(solo ? "eslesme.soloSub" : "eslesme.bothSub", { evening: eveningLabel(moment.date, today) })}
             dishName={r.name}
             meta={`${r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)} · ${rotationShort(days)}`}
             listNote={listNote}
-            putLabel={`${eveningDative(moment.date, today)} koy`}
+            putLabel={t("eslesme.put", { evening: eveningDative(moment.date, today) })}
             onPut={put}
             onContinue={() => setMoment(null)}
             busy={busy}
@@ -157,23 +155,23 @@ function EslesmeInner() {
                 aria-controls="gun-sec"
                 onClick={() => setChooser((v) => !v)}
               >
-                {evening} için {SLOT_LABEL[slot].toLocaleLowerCase("tr")}
+                {t("eslesme.context", { evening, slot: SLOT_LABEL[slot].toLocaleLowerCase(intlTag()) })}
                 <IconChevronRight size={14} className={chooser ? s.chevOpen : s.chev} />
               </button>
-              <h1 className={s.title}>Ne dersin?</h1>
+              <h1 className={s.title}>{t("eslesme.title")}</h1>
             </div>
             {card && (
-              <span className={s.counter} aria-label={`${deck.length} karttan ${myDone + 1}. kart`}>
+              <span className={s.counter} aria-label={t("eslesme.counter", { total: deck.length, n: myDone + 1 })}>
                 {myDone + 1} / {deck.length}
               </span>
             )}
           </div>
           {chooser && (
-            <div id="gun-sec" className={s.chooser} role="group" aria-label="Gün ve öğün seç">
+            <div id="gun-sec" className={s.chooser} role="group" aria-label={t("eslesme.chooser")}>
               <div className={s.chooserRow}>
                 {dayOptions.map((d) => (
                   <button key={d} type="button" className={s.opt} aria-pressed={d === date} onClick={() => go(d, slot)}>
-                    {d === today ? "Bugün" : dayName(d)}
+                    {d === today ? t("eslesme.today") : dayName(d)}
                   </button>
                 ))}
               </div>
@@ -189,14 +187,14 @@ function EslesmeInner() {
           {partner && (
             <div className={s.partner}>
               <Avatar person={partner} size={24} />
-              {partner.name} {deck.length} kartın {numberAccusative(partnerDone)} kaydırdı · seçimleri gizli
+              {t("eslesme.partnerProgress", { name: partner.name, total: deck.length, n: partnerDone, nAcc: numberAccusative(partnerDone) })}
             </div>
           )}
-          {solo && <div className={s.partner}>Tek başınasın: beğendiğin kart doğrudan eşleşir.</div>}
+          {solo && <div className={s.partner}>{t("eslesme.solo")}</div>}
         </header>
 
         <p className="visually-hidden" aria-live="polite">
-          {card ? `Kart ${myDone + 1} / ${deck.length}: ${card.name}` : "Kartlar bitti"}
+          {card ? t("eslesme.live", { n: myDone + 1, total: deck.length, name: card.name }) : t("eslesme.out")}
         </p>
 
         {card ? (
@@ -204,21 +202,21 @@ function EslesmeInner() {
         ) : (
           <div className={s.done}>
             <EmptyState
-              title={deck.length ? "Kartlar bitti" : "Bu öğün için kart kalmadı"}
+              title={deck.length ? t("eslesme.out") : t("eslesme.noneForSlot")}
               text={
                 deck.length
                   ? partner && partnerDone < deck.length
-                    ? `${partner.name} henüz kaydırıyor. Aynı karta ikiniz de “olur” derseniz burada eşleşirsiniz.`
-                    : "Bu sefer ortak bir yemek çıkmadı. Başka bir güne bakabilir ya da haftayı elle doldurabilirsiniz."
-                  : "Bu hafta planlananlar dışında uygun yemek bulamadık. Tarif ekleyerek desteyi büyütebilirsiniz."
+                    ? t("eslesme.partnerStill", { name: partner.name })
+                    : t("eslesme.noCommon")
+                  : t("eslesme.noneFit")
               }
               actions={
                 <>
                   <Button size="sm" onClick={() => setChooser(true)}>
-                    Başka güne bak
+                    {t("eslesme.otherDay")}
                   </Button>
                   <ButtonLink href="/hafta" size="sm" variant="secondary">
-                    Haftaya git
+                    {t("eslesme.toWeek")}
                   </ButtonLink>
                 </>
               }
@@ -231,23 +229,23 @@ function EslesmeInner() {
         <div className={s.asideCard}>
           <div className={s.asideHead}>
             <h2 id="eslesmeler-baslik" className={s.asideTitle}>
-              Eşleşmeler
+              {t("eslesme.matches")}
             </h2>
             <Link href="/hafta" className={s.asideLink}>
-              Haftaya yerleştir
+              {t("eslesme.placeInWeek")}
             </Link>
           </div>
           <MatchList items={openMatches} />
         </div>
-        <p className={s.asideNote}>Kartlar sık yaptıklarınızdan ve bir süredir yapmadıklarınızdan gelir.</p>
+        <p className={s.asideNote}>{t("eslesme.deckNote")}</p>
       </aside>
     </main>
   );
 
   function toDeckCard(id: string): DeckCard {
     const r = byId.get(id)!;
-    const tags = [...r.tags.slice(0, 3)];
-    if (r.leftoverPolicy !== "none") tags.push("Ertesi güne artar");
+    const tags = r.tags.slice(0, 3).map(tagLabel);
+    if (r.leftoverPolicy !== "none") tags.push(t("eslesme.leftoverTag"));
     return {
       recipe: r,
       time: r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes),

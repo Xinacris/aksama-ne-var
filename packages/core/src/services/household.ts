@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import type { Household, Member, User } from "../data/models";
 import type { Repos } from "../data/repos";
 import { AppError } from "./errors";
@@ -16,7 +17,7 @@ export function newInviteCode(rand: () => number = Math.random): string {
 }
 
 export function inviteMessage(link: string): string {
-  return `Akşama ne yiyeceğimize birlikte karar verelim mi? Bu linkle evime katıl:\n${link}`;
+  return t("household.invite", { link });
 }
 
 export function whatsappShareUrl(link: string): string {
@@ -32,7 +33,7 @@ export async function createHousehold(repos: Repos, user: User): Promise<Househo
   let code = newInviteCode();
   for (let i = 0; i < 5 && (await repos.households.findByInviteCode(code)); i++) code = newInviteCode();
   const household = await repos.households.create({
-    name: `${user.name} ve ev halkı`,
+    name: t("household.defaultName", { name: user.name }),
     inviteCode: code,
     createdBy: user.id,
     dinnerTime: "19:30",
@@ -67,11 +68,11 @@ export async function lookupInvite(repos: Repos, code: string, userId: string | 
 
 export async function joinHousehold(repos: Repos, user: User, code: string): Promise<Household> {
   const look = await lookupInvite(repos, code, user.id);
-  if (look.kind === "missing") throw new AppError("missing", "Bu davet linki bir eve ait görünmüyor. Linki tekrar isteyebilir misin?");
-  if (look.kind === "full") throw new AppError("full", "Bu evde yer kalmamış; iki kişilik bir ev. Ev sahibine haber verebilirsin.");
+  if (look.kind === "missing") throw new AppError("missing", t("errors.inviteMissing"));
+  if (look.kind === "full") throw new AppError("full", t("errors.householdFull"));
   if (look.kind === "already-member") return look.household;
   const mine = await repos.households.membershipOf(user.id);
-  if (mine) throw new AppError("has-household", "Zaten bir evin var. Önce Ayarlar › Ev bölümünden ayrılman gerekiyor.");
+  if (mine) throw new AppError("has-household", t("errors.hasHousehold"));
   const members = look.members;
   await repos.households.addMember({
     householdId: look.household.id,

@@ -1,3 +1,4 @@
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import s from "./SimpleShell.module.css";
@@ -8,7 +9,7 @@ export function SimpleShell({ aside, children }: { aside?: ReactNode; children: 
     <div className={s.page}>
       <header className={s.header}>
         <Link href="/" className={s.brand}>
-          Akşama ne var?
+          {t("app.name")}
         </Link>
         {aside && <span className={s.aside}>{aside}</span>}
       </header>

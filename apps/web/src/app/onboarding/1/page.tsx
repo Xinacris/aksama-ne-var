@@ -1,5 +1,7 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
+import { ONBOARDING_GROUPS } from "@anv/core/domain/onboarding";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Guard, Loading } from "@/components/Guard";
@@ -7,44 +9,11 @@ import { IconArrowRight, IconSearch } from "@/components/icons";
 import { SimpleShell } from "@/components/SimpleShell";
 import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
-import type { Course, Recipe } from "@anv/core/data/models";
+import type { Recipe } from "@anv/core/data/models";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
 import { useApp } from "@/store/app";
 import s from "../onboarding.module.css";
-
-/** The design's suggested dishes, shown while the search box is empty. */
-const SUGGESTED: { title: string; courses: Course[]; names: string[] }[] = [
-  {
-    title: "Çorbalar",
-    courses: ["corba"],
-    names: ["Mercimek çorbası", "Ezogelin çorbası", "Tarhana çorbası", "Yayla çorbası", "Domates çorbası", "Tavuk suyu çorba"],
-  },
-  {
-    title: "Ana yemekler",
-    courses: ["ana", "kahvalti"],
-    names: [
-      "Kuru fasulye",
-      "İzmir köfte",
-      "Karnıyarık",
-      "İmam bayıldı",
-      "Etli nohut",
-      "Taze fasulye",
-      "Tavuk sote",
-      "Patates oturtma",
-      "Mantı",
-      "Fırın makarna",
-      "Menemen",
-      "Türlü",
-    ],
-  },
-  {
-    title: "Yanında",
-    courses: ["yaninda"],
-    names: ["Tereyağlı pirinç pilavı", "Bulgur pilavı", "Şehriyeli pilav", "Makarna", "Patates kızartması"],
-  },
-  { title: "Salata ve meze", courses: ["salata"], names: ["Cacık", "Çoban salata", "Piyaz", "Gavurdağı", "Haydari", "Turşu"] },
-];
 
 function matches(r: Recipe, q: string) {
   return searchKey(r.name).includes(q) || (r.shortName ? searchKey(r.shortName).includes(q) : false);
@@ -84,10 +53,10 @@ function Step1() {
   const q = searchKey(query);
   const groups = useMemo(() => {
     const custom = recipes.filter((r) => r.householdId !== null);
-    return SUGGESTED.map((g) => {
+    return ONBOARDING_GROUPS.map((g) => {
       let items: Recipe[];
       if (!q) {
-        const base = g.names.map((n) => recipes.find((r) => r.name === n)).filter((r): r is Recipe => !!r);
+        const base = g.ids.map((id) => recipes.find((r) => r.id === id)).filter((r): r is Recipe => !!r);
         const extra = recipes.filter(
           (r) => g.courses.includes(r.course) && (chosen.has(r.id) || custom.includes(r)) && !base.includes(r),
         );
@@ -97,7 +66,7 @@ function Step1() {
           .filter((r) => g.courses.includes(r.course) && matches(r, q))
           .sort((a, b) => a.name.localeCompare(b.name, "tr"));
       }
-      return { title: g.title, items };
+      return { key: g.key, title: t(`onb1.group.${g.key}`), items };
     }).filter((g) => g.items.length > 0);
   }, [recipes, q, chosen]);
 
@@ -133,25 +102,25 @@ function Step1() {
   }
 
   return (
-    <SimpleShell aside={joining || householdFull ? "Adım 1 / 1" : "Adım 1 / 2"}>
+    <SimpleShell aside={t(joining || householdFull ? "onb1.step11" : "onb1.step12")}>
         <main className={s.main1}>
           <div className={s.intro}>
-            <h1 className={s.title}>Evde en sık yaptığınız yemekler hangileri?</h1>
+            <h1 className={s.title}>{t("onb1.title")}</h1>
             <p className={s.lead}>
-              Birkaç tane seçmeniz yeter. İlk haftanın planını ve eşleşme kartlarını bunlardan hazırlarız; kiler saymak yok.
+              {t("onb1.lead")}
             </p>
           </div>
           {joining && partner && (
             <p className={s.joined}>
-              <strong>{partner.name}</strong> bunları seçmiş. İstediğini çıkar, eksik olanları ekle; seçimler ikinizin.
+              <strong>{partner.name}</strong> {t("onb1.partnerPicked")}
             </p>
           )}
 
           <TextField
-            label="Yemek ara"
+            label={t("onb1.search")}
             id="yemek-ara"
             type="search"
-            placeholder="ör. imam bayıldı, ezogelin…"
+            placeholder={t("onb1.searchPlaceholder")}
             icon={<IconSearch size={20} />}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -162,8 +131,8 @@ function Step1() {
 
           <div className={s.groups}>
             {groups.map((g) => (
-              <section key={g.title} className={s.group} aria-labelledby={`g-${g.title}`}>
-                <h2 id={`g-${g.title}`} className={s.groupTitle}>
+              <section key={g.key} className={s.group} aria-labelledby={`g-${g.key}`}>
+                <h2 id={`g-${g.key}`} className={s.groupTitle}>
                   {g.title}
                 </h2>
                 <div className={s.chips}>
@@ -177,9 +146,9 @@ function Step1() {
             ))}
             {groups.length === 0 && query.trim() && (
               <div className={s.notFound}>
-                <span className={s.notFoundText}>Bu isimde bir yemek bulamadık.</span>
+                <span className={s.notFoundText}>{t("onb1.notFound")}</span>
                 <button type="button" className={s.addBtn} onClick={addUnknown}>
-                  “{query.trim()}” olarak ekle
+                  {t("onb1.addAs", { name: query.trim() })}
                 </button>
               </div>
             )}
@@ -189,10 +158,11 @@ function Step1() {
         <footer className={s.footer}>
           <div className={s.footerInner}>
             <span className={s.count} role="status">
-              <strong>{chosen.size} yemek</strong> seçildi · sonradan her zaman değişir
+              <strong>{t("onb1.chosen", { count: chosen.size })}</strong>
+              {t("onb1.chosenTail")}
             </span>
             <button type="button" className={s.continue} onClick={next} disabled={busy}>
-              {joining || householdFull ? "Başlayalım" : "Devam et"}
+              {t(joining || householdFull ? "onb1.letsStart" : "onb1.continue")}
               <IconArrowRight size={18} strokeWidth={2.2} />
             </button>
           </div>

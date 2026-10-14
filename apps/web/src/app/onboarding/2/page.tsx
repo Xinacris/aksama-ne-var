@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -44,7 +45,7 @@ function Step2() {
       setCopied(true);
     } catch {
       inputRef.current?.select();
-      setNotice({ kind: "info", text: "Kopyalayamadık; link seçili, elle kopyalayabilirsin." });
+      setNotice({ kind: "info", text: t("onb2.copyFailed") });
     }
   }
 
@@ -54,7 +55,7 @@ function Step2() {
   }
 
   return (
-    <SimpleShell aside="Adım 2 / 2">
+    <SimpleShell aside={t("onb2.step")}>
       <main className={s.main2}>
         <section className={s.left}>
           <div className={s.avatars}>
@@ -68,20 +69,20 @@ function Step2() {
             )}
           </div>
           <div className={s.intro}>
-            <h1 className={s.title}>Akşam kararını birlikte verin</h1>
+            <h1 className={s.title}>{t("onb2.title")}</h1>
             <p className={s.lead}>
-              Eşini ya da ev arkadaşını davet et. Eşleşmeler, alışveriş listesi ve hatırlatmalar ikinizde aynı anda güncellenir.
+              {t("onb2.lead")}
             </p>
           </div>
 
           {partner ? (
             <p className={s.joined} role="status">
-              <strong>{partner.name}</strong> eve katıldı. Artık kararları birlikte veriyorsunuz.
+              <strong>{partner.name}</strong> {t("onb2.joined")}
             </p>
           ) : (
             <div className={s.field}>
               <label htmlFor="davet-linki" className={s.label}>
-                Davet linki
+                {t("onb2.inviteLink")}
               </label>
               <div className={s.linkBox}>
                 <span className={s.linkIcon}>
@@ -89,7 +90,7 @@ function Step2() {
                 </span>
                 <input id="davet-linki" ref={inputRef} type="text" readOnly value={link.display} className={s.linkInput} onFocus={(e) => e.target.select()} />
                 <button type="button" className={s.copy} onClick={copy} aria-live="polite">
-                  {copied ? "Kopyalandı" : "Kopyala"}
+                  {copied ? t("onb2.copied") : t("onb2.copy")}
                 </button>
               </div>
             </div>
@@ -98,25 +99,25 @@ function Step2() {
           <div className={s.actions}>
             {partner ? (
               <button type="button" className={s.wa} onClick={start}>
-                Hadi başlayalım
+                {t("onb2.letsGo")}
               </button>
             ) : (
               <>
                 <a className={s.wa} href={whatsappShareUrl(link.full)} target="_blank" rel="noopener noreferrer">
                   <IconMessage size={20} />
-                  WhatsApp ile gönder
+                  {t("onb2.whatsapp")}
                 </a>
                 <button type="button" className={s.solo} onClick={start}>
-                  Şimdilik tek başıma başla
+                  {t("onb2.solo")}
                 </button>
               </>
             )}
-            <p className={s.small}>Tek başına da her şey çalışır. Davet linki Ayarlar › Ev bölümünde durur; istediğin zaman gönderirsin.</p>
+            <p className={s.small}>{t("onb2.soloNote")}</p>
           </div>
         </section>
 
-        <aside aria-label="Mesaj önizlemesi" className={s.aside}>
-          <span className={s.asideTitle}>Gönderilecek mesaj</span>
+        <aside aria-label={t("onb2.preview")} className={s.aside}>
+          <span className={s.asideTitle}>{t("onb2.message")}</span>
           <div className={s.card}>
             <div className={s.bubble}>
               {inviteMessage("").trim()}
@@ -126,8 +127,8 @@ function Step2() {
             <div className={s.cardFoot}>
               <span className={s.cardNote}>
                 {favRecipes.length
-                  ? `Katıldığında seçtiğin ${favRecipes.length} yemek onun kartlarına da gelir:`
-                  : "Henüz yemek seçmedin; birlikte de seçebilirsiniz."}
+                  ? t("onb2.favsCome", { count: favRecipes.length })
+                  : t("onb2.noFavs")}
               </span>
               {favRecipes.length > 0 && (
                 <div className={s.favs}>
@@ -141,7 +142,7 @@ function Step2() {
             </div>
           </div>
           <Link href="/onboarding/1" className={s.edit}>
-            Seçimleri düzenle
+            {t("onb2.editPicks")}
           </Link>
         </aside>
       </main>

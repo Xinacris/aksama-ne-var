@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Framework-free shared code: models, repositories, migrations, domain logic, import parser, seed recipes, i18n catalogs, design tokens. No React / React Native imports.",
   "exports": {
+    "./i18n": "./src/i18n/index.ts",
     "./domain/import/adapters": "./src/domain/import/adapters/index.ts",
     "./i18n/*": "./i18n/*",
     "./*": "./src/*.ts"
@@ -16,14 +17,15 @@
   },
   "dependencies": {
     "date-fns": "^4.4.0",
+    "i18next": "^26.4.4",
     "zod": "^4.6.6",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
     "eslint": "^9",
-    "typescript-eslint": "^8",
     "typescript": "^5",
+    "typescript-eslint": "^8",
     "vitest": "^5.0.3"
   }
 }

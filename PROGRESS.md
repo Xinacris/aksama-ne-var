@@ -111,7 +111,8 @@ Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the f
   - Green: lint 0 (core + web), typecheck 0, core 326 + web 184 = 510 tests (same as before the move), build OK, e2e 55 passed / 11 skipped. Clean-copy `cd apps/web && npm ci && npm run build` OK.
 - [x] V2. Mobile skeleton: Expo app runs in Expo Go config, tabs + stacks, theme tokens, AsyncStorage key-value adapter, crypto interface, demo household loads; `expo export` for iOS and Android green.
   - `apps/mobile` (Expo SDK 57, RN 0.86.3). `expo export` iOS + Android OK, `expo-doctor` 21/21, `tsc` 0, `expo lint` 0, jest 4 (AsyncStorage hydrate/write-through/restart, PBKDF2 parity with Web Crypto, demo household boots and survives a restart). Tokens + icons in core (token/CSS parity test). Whole repo on React 19.2.3; web unit/build/e2e smoke green.
-- [ ] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
+- [x] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
+  - 882 keys per language. Core 338 tests (catalog parity, runtime switch, detection, hard-coded-Turkish scan), web 184, mobile 4; lint 0; build OK; e2e 55 + 2 passed (new `e2e/english.spec.ts`: English browser → English UI, quick add, Settings › Türkçe and back, remembered on reload).
 - [ ] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
 - [ ] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
 - [ ] V6. `/api/translate` + Translate action (web and mobile); multi-language import; tests.

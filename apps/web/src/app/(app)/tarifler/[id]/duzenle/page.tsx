@@ -1,5 +1,6 @@
 "use client";
 
+import { t } from "@anv/core/i18n";
 import { useParams, useRouter } from "next/navigation";
 import { RecipeForm } from "@/components/RecipeForm";
 import { ButtonLink } from "@/components/ui/Button";
@@ -17,16 +18,16 @@ export default function DuzenlePage() {
     return (
       <main style={{ padding: 16, maxWidth: 760, margin: "0 auto", width: "100%" }}>
         <EmptyState
-          title={recipe ? "Hazır tarifler düzenlenmez" : "Bu tarifi bulamadık"}
-          text={recipe ? "Size özel bir kopyasını açıp istediğiniz gibi değiştirebilirsiniz." : "Silinmiş olabilir."}
+          title={recipe ? t("edit.builtinTitle") : t("edit.notFound")}
+          text={recipe ? t("edit.builtinText") : t("edit.maybeDeleted")}
           actions={
             recipe ? (
               <ButtonLink href={`/tarifler/yeni?kopya=${recipe.id}`} size="sm">
-                Kopyasını düzenle
+                {t("edit.editCopy")}
               </ButtonLink>
             ) : (
               <ButtonLink href="/tarifler" size="sm">
-                Tariflere git
+                {t("edit.toRecipes")}
               </ButtonLink>
             )
           }
@@ -37,10 +38,10 @@ export default function DuzenlePage() {
   return (
     <RecipeForm
       key={recipe.id}
-      title={recipe.stub ? `${recipe.name} · tarifi tamamla` : `${recipe.name} · düzenle`}
+      title={t(recipe.stub ? "edit.titleComplete" : "edit.title", { name: recipe.name })}
       initial={draftFromRecipe(recipe)}
       backHref={`/tarif/${recipe.id}`}
-      submitLabel="Değişiklikleri kaydet"
+      submitLabel={t("edit.save")}
       onSubmit={async (value) => {
         await updateRecipe(recipe.id, value);
         router.push(`/tarif/${recipe.id}`);
