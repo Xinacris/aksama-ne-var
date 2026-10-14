@@ -43,3 +43,5 @@ require("react-native-gesture-handler/jestSetup");
 // Reanimated 4 / Worklets have no native runtime in Jest: their official mocks.
 jest.mock("react-native-worklets", () => require("react-native-worklets/lib/module/mock"));
 jest.mock("react-native-reanimated", () => require("react-native-reanimated/mock"));
+
+jest.mock("expo-keep-awake", () => ({ useKeepAwake: jest.fn(), activateKeepAwakeAsync: jest.fn(), deactivateKeepAwake: jest.fn() }));

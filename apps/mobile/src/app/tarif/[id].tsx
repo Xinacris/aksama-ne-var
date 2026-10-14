@@ -294,6 +294,9 @@ export default function RecipePage() {
       )}
 
       <View style={{ gap: 10 }}>
+        {recipe.steps.length > 0 && (
+          <Button title={ctx && items.length > 1 ? t("tarif.cookMenu") : t("bugun.startCooking")} size="lg" onPress={() => router.push(`/pisir/${ctx ?? recipe.id}`)} />
+        )}
         {courseToSlot(recipe.course) && <Button title={t("bugun.putOnEvening")} variant="secondary" onPress={() => setPlace({ recipe })} />}
       </View>
 
