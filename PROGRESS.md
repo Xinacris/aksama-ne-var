@@ -175,12 +175,10 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
   - Mobile (new): `src/alarm/` — AlarmHost above every screen (expo-audio loop in silent mode + vibration + "Süre doldu" banner with Durdur), expo-notifications (channels Zamanlayıcılar / silent, reconcile on every timer change, tap opens the session = Stop, foreground suppressed), permission on the first timer + one-time hint, pause/resume/+1 dk on the phone, Ayarlar › Zamanlayıcı sesi. 9 tests (mocked notifications/audio).
   - Web: Web Audio loop, banner + Durdur, hidden tab → notification + blinking title, Ayarlar toggle (crashed session's work); fixed a prohibited `aria-label` axe found. Tests: component (banner/Stop, toggle), e2e `alarm.spec.ts` (hidden tab, loop, Stop, sound off, axe light + dark), `cooking.spec.ts` updated.
   - Checks green: lint, typecheck, core 371 / mobile 38 / web 197, build, expo-doctor 21/21, iOS + Android export; e2e alarm, cooking, a11y, english green.
-- [ ] R4. Final APK from `main`, verified, in `~/Downloads`.
+- [x] R4. Final APK from `main`, verified, in `~/Downloads`.
+  - `~/Downloads/aksama-ne-var-1.0.1-77bd20f.apk` (107 MB, from `77bd20f` = R3 on `main`): v2 + v3 with the release certificate (SHA-256 `76f8ec0b…1a661c`), versionCode 2 / 1.0.1, minSdk 24 (Android 7.0+), targetSdk 36, all four ABIs, `zipalign -P 16` OK, `unzip -t` OK, alarm tone bundled (`raw/timer_alarm`), no RECORD_AUDIO / exact-alarm permissions. Build peak 12.1 GB system-wide (baseline 7.8 GB). The intermediate R2 APK was deleted so it can't be sent by mistake.
 
 
 
 
 
-## In progress
-
-R4 — final APK from `main` (after the R3 push and deploy check).
