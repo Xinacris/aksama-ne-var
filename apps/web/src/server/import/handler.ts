@@ -4,6 +4,7 @@ import { claudeProvider, type MessagesClient } from "@/server/llm/claude";
 import { geminiProvider, type GeminiFetch } from "@/server/llm/gemini";
 import { structureRecipe, type LlmProvider, type ProviderFallback } from "@/server/llm";
 import { DailyLimiter } from "./rateLimit";
+import { detectLocale, i18n } from "@anv/core/i18n";
 
 /**
  * Whole request: platform fetch, an optional written-recipe page, the LLM chain. Gemini 3.1
@@ -39,6 +40,12 @@ export function providersFromEnv(env: ImportEnv, deps: Pick<HandlerDeps, "anthro
   return out;
 }
 
+/** Language for messages when the body has none: the client's Accept-Language (tr → Turkish, else English), else Turkish. */
+export function requestLocale(req: Request): "tr" | "en" {
+  const h = req.headers.get("accept-language");
+  return h ? detectLocale(h.split(",").map((x) => x.split(";")[0].trim())) : "tr";
+}
+
 const jsonResponse = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 
@@ -48,12 +55,13 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   try {
     body = await req.json();
   } catch {
-    return jsonResponse({ error: "Bu isteği okuyamadık." }, 400);
+    return jsonResponse({ error: i18n.getFixedT(requestLocale(req))("import.msg.badRequest") }, 400);
   }
   const parsed = importRequestSchema.safeParse(body);
-  if (!parsed.success) return jsonResponse({ error: "Link ya da metin biraz uzun oldu; kısaltıp yeniden dener misin?" }, 400);
-  const { url, text, householdId } = parsed.data;
-  if (!url.trim() && !text.trim()) return jsonResponse({ error: "Bir link ya da tarif metni gerekiyor." }, 400);
+  const tr = i18n.getFixedT(parsed.success ? parsed.data.locale : requestLocale(req));
+  if (!parsed.success) return jsonResponse({ error: tr("import.msg.tooLong") }, 400);
+  const { url, text, householdId, locale } = parsed.data;
+  if (!url.trim() && !text.trim()) return jsonResponse({ error: tr("import.msg.needInput") }, 400);
 
   const deadline = Date.now() + IMPORT_TIMEOUT_MS;
   const signal = AbortSignal.timeout(IMPORT_TIMEOUT_MS);
@@ -66,7 +74,7 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
     ? async (t, meta) => {
         const allowed = deps.limiter.take(quotaKey);
         if (!allowed) limited = true;
-        return structureRecipe(t, meta, { providers: allowed ? providers : [], signal, deadline, onFailure: (f) => fallbacks.push(f) });
+        return structureRecipe(t, { ...meta, locale }, { providers: allowed ? providers : [], signal, deadline, onFailure: (f) => fallbacks.push(f) });
       }
     : undefined;
 
@@ -78,15 +86,15 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   }) as typeof fetch;
 
   try {
-    const { result, counted } = await runImport({ url, text }, { fetch: routedFetch, env: { YOUTUBE_API_KEY: deps.env.YOUTUBE_API_KEY }, signal, structure });
-    const message = limited && !result.message ? "Bugünlük akıllı içe aktarma sınırına ulaşıldı; taslağı basit okumayla hazırladık." : result.message;
+    const { result, counted } = await runImport({ url, text }, { fetch: routedFetch, env: { YOUTUBE_API_KEY: deps.env.YOUTUBE_API_KEY }, signal, structure, t: tr });
+    const message = limited && !result.message ? tr("import.msg.limited") : result.message;
     // `fallbacks`: which providers gave up and why (status codes only) — the same facts as the log line.
     return jsonResponse({ ...result, message, counted, llmAvailable: providers.length > 0, fallbacks });
   } catch (e) {
     console.warn("[import] failed:", e instanceof Error ? e.name : "unknown");
     const timedOut = signal.aborted;
     return jsonResponse(
-      { error: timedOut ? "Kaynak geç yanıt verdi. Açıklamayı yapıştırırsan hemen devam ederiz." : "Bu linkten tarif alamadık. Açıklamayı yapıştırarak deneyebilirsin." },
+      { error: timedOut ? tr("import.msg.slow") : tr("import.msg.failed") },
       timedOut ? 504 : 502,
     );
   }

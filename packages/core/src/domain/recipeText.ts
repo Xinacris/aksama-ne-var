@@ -67,3 +67,35 @@ export function localizeTask(task: PrepTask, raw: Recipe | undefined, locale: Lo
 export function ingredientText(ing: Pick<Ingredient, "name" | "label">): string {
   return ing.label ?? ing.name;
 }
+
+/** What "Çevir / Translate" sends: the recipe's text only (no ids, names of people or household data). */
+export interface TranslationPayload {
+  name: string;
+  steps: string[];
+  prepItems: string[];
+  notes: Record<string, string>;
+  /** Ingredients outside the shared catalog (catalog ones already have both languages). */
+  ingredients: string[];
+}
+
+export function translationPayload(raw: Recipe, isCatalog: (name: string) => boolean): TranslationPayload {
+  return {
+    name: raw.name,
+    steps: raw.steps,
+    prepItems: raw.prepItems.map((p) => p.label),
+    notes: Object.fromEntries(raw.ingredients.filter((i) => i.note).map((i) => [i.name, i.note!])),
+    ingredients: raw.ingredients.filter((i) => !isCatalog(i.name)).map((i) => i.name),
+  };
+}
+
+/** The provider's answer as the recipe's translation for `locale` (marked as machine-made, editable later). */
+export function translationFromResult(result: { name: string; steps: string[]; prepItems: string[]; notes: Record<string, string>; ingredients: Record<string, string> }): RecipeTranslation {
+  return {
+    name: result.name,
+    steps: result.steps,
+    prepItems: result.prepItems,
+    ...(Object.keys(result.notes).length ? { notes: result.notes } : {}),
+    ...(Object.keys(result.ingredients).length ? { ingredients: result.ingredients } : {}),
+    origin: "llm",
+  };
+}

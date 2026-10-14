@@ -144,3 +144,28 @@ describe("editing in two languages", () => {
     expect(normalizeIngredientName("dragon fruit")).toBe("Dragon fruit");
   });
 });
+
+describe("translate action payload", () => {
+  it("sends only text: name, steps, prep labels, notes, non-catalog ingredient names", async () => {
+    const { translationPayload, translationFromResult } = await import("@/domain/recipeText");
+    const { catalogEntry } = await import("@/data/seed/ingredients");
+    const raw = { ...builtinRecipes.find((r) => r.id === "izmir-kofte")!, householdId: "h", createdBy: "u", ingredients: [...builtinRecipes.find((r) => r.id === "izmir-kofte")!.ingredients, { name: "Annemin baharatı", quantity: null, unit: null, side: "market" as const, aisle: "Baharat" as const }] };
+    const p = translationPayload(raw, (n) => !!catalogEntry(n));
+    expect(Object.keys(p).sort()).toEqual(["ingredients", "name", "notes", "prepItems", "steps"]);
+    expect(p.ingredients).toEqual(["Annemin baharatı"]);
+    expect(p.notes).toEqual({ "Bayat ekmek": "içi" });
+    expect(JSON.stringify(p)).not.toContain('"h"');
+    const tr = translationFromResult({ name: "X", steps: ["a"], prepItems: [], notes: {}, ingredients: { "Annemin baharatı": "Mum’s spices" } });
+    expect(tr).toEqual({ name: "X", steps: ["a"], prepItems: [], ingredients: { "Annemin baharatı": "Mum’s spices" }, origin: "llm" });
+    const shown = localizeRecipe({ ...raw, lang: "tr", translations: { en: tr } }, "en");
+    expect(shown.ingredients.find((i) => i.name === "Annemin baharatı")!.label).toBe("Mum’s spices");
+  });
+
+  it("looksTurkish tells Turkish captions from others", async () => {
+    const { looksTurkish } = await import("@/domain/import/pipeline");
+    expect(looksTurkish("Menemen\n3 yumurta\n2 domates, tuz")).toBe(true);
+    expect(looksTurkish("Kıymayı soğanla yoğurun")).toBe(true);
+    expect(looksTurkish("Pasta al pomodoro\n200 g di spaghetti")).toBe(false);
+    expect(looksTurkish("Pancakes\n2 eggs\n1 cup flour\nMix and fry.")).toBe(false);
+  });
+});

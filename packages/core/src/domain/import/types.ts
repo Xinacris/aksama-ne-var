@@ -61,6 +61,8 @@ export const importedRecipeSchema = z.object({
   waitMinutes: z.number().int().min(0).max(24 * 60).nullable().optional(),
   ingredients: z.array(importedIngredientSchema).max(60),
   steps: z.array(importedStepSchema).max(40),
+  /** ISO 639-1 code of the caption's language as the LLM read it ("tr", "en", "it"…). */
+  sourceLang: z.string().trim().toLowerCase().regex(/^[a-z]{2,3}$/).nullable().optional(),
   prep: z.array(importedPrepSchema).max(10),
   /** Vocabulary tags only (`src/domain/import/tags.ts`). */
   tags: z.array(z.string()).max(12).optional(),
@@ -86,12 +88,18 @@ export interface ImportResult {
   message: string | null;
   /** Fetched text had no ingredient-like lines: open the paste box. */
   needsPaste: boolean;
+  /** Language of the original caption ("tr", "en", "it"…), when known. */
+  sourceLang?: string | null;
+  /** The original caption/page text the draft was made from (kept with the recipe as its source). */
+  sourceText?: string | null;
 }
 
 export const importRequestSchema = z.object({
   url: z.string().trim().max(2048).optional().default(""),
   text: z.string().max(20_000).optional().default(""),
   householdId: z.string().max(100).optional().default(""),
+  /** The user's language: the draft is written in it. */
+  locale: z.enum(["tr", "en"]).optional().default("tr"),
 });
 
 export { sourcePlatformSchema };

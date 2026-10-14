@@ -19,6 +19,7 @@ import type {
   PlanItem,
   PrepTask,
   Recipe,
+  RecipeTranslation,
   ShoppingCheck,
   ShoppingItem,
   Side,
@@ -126,6 +127,8 @@ export interface RecipeInput {
   sourcePlatform?: Recipe["sourcePlatform"];
   sourceThumbnailUrl?: string;
   writtenRecipeUrl?: string;
+  sourceLang?: string;
+  sourceText?: string;
 }
 
 export type InviteInfo =
@@ -196,6 +199,8 @@ export interface AppState extends AppData {
   /** Count a produced import draft (usage shown in Ayarlar). Stores no link or caption. */
   logImport(entry: { platform: ImportLog["platform"]; provider: ImportLog["provider"] }): Promise<void>;
   updateRecipe(id: string, input: RecipeInput): Promise<Recipe>;
+  /** Save a recipe's text in another language (Çevir / Translate); the source text is untouched. */
+  saveTranslation(id: string, locale: "tr" | "en", translation: RecipeTranslation): Promise<void>;
   deleteRecipe(id: string): Promise<void>;
 
   /**
@@ -824,6 +829,14 @@ export const appStore = createStore<AppState>()((set, get) => {
     async logImport(entry) {
       const { me, household } = requireCtx();
       await run(() => ctx().repos.imports.add({ householdId: household.id, platform: entry.platform, provider: entry.provider, createdBy: me.id }));
+    },
+    async saveTranslation(id, locale, translation) {
+      const raw = get().rawRecipes.find((r) => r.id === id);
+      if (!raw || raw.householdId === null) return;
+      await run(async () => {
+        await ctx().repos.recipes.update(id, { translations: { ...raw.translations, [locale]: translation } });
+        await log("recipe.updated", { recipeId: id });
+      });
     },
     async updateRecipe(id, input) {
       return run(async () => {

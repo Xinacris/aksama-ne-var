@@ -59,7 +59,11 @@ export default function ImportRecipe() {
         setPasteOpen(true);
         setDraft(null);
       } else if (body.draft) {
-        setDraft(toRecipeDraft(body.draft, source, lastTags.current, body.writtenRecipeUrl ?? null));
+        setDraft({
+          ...toRecipeDraft(body.draft, source, lastTags.current, body.writtenRecipeUrl ?? null),
+          ...(body.sourceLang ? { sourceLang: body.sourceLang } : {}),
+          ...(body.sourceText ? { sourceText: body.sourceText } : {}),
+        });
         lastTags.current = "";
         setAttempt((n) => n + 1);
       }
