@@ -8,6 +8,7 @@ import { importUsageText } from "@anv/core/domain/import/usage";
 import { getLocale, listJoin, LOCALES } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import type { ThemePreference } from "@anv/core/lib/theme";
+import { useTimerSound } from "@/alarm/prefs";
 import { useMobileData } from "@/boot";
 import { usePeople } from "@/hooks/usePeople";
 import { useSetLanguage } from "@/i18n";
@@ -27,6 +28,7 @@ export default function Settings() {
   const data = useMobileData();
   const setLanguage = useSetLanguage(data?.store ?? null);
   const st = useApp();
+  const [timerSound, setTimerSound] = useTimerSound();
   const { me, household, members, importLog } = st;
   const { people } = usePeople();
   const [name, setName] = useState(me?.name ?? "");
@@ -165,6 +167,16 @@ export default function Settings() {
           ))}
         </Row>
         <Text variant="small">{t("ayarlar.themeNote")}</Text>
+      </Card>
+
+      <Card>
+        <Text variant="h3">{t("ayarlar.cooking")}</Text>
+        <Text weight="semibold">{t("ayarlar.timerSound")}</Text>
+        <Row>
+          <Chip label={t("ayarlar.on")} selected={timerSound} onPress={() => setTimerSound(true)} />
+          <Chip label={t("ayarlar.off")} selected={!timerSound} onPress={() => setTimerSound(false)} />
+        </Row>
+        <Text variant="small">{t("ayarlar.timerSoundNote")}</Text>
       </Card>
 
       <Card>

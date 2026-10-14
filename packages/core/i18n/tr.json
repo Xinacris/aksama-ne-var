@@ -717,7 +717,9 @@
     "restartTimer": "{{label}}: baştan başlat",
     "plusMinute": "+1 dk",
     "paused": "duraklatıldı",
-    "pausedLeft": "Duraklatıldı, {{time}} kaldı"
+    "pausedLeft": "Duraklatıldı, {{time}} kaldı",
+    "pause": "Duraklat",
+    "resume": "Devam"
   },
   "week": {
     "fromMatches": "Eşleşmelerden",
