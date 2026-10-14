@@ -48,9 +48,9 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
 
   // 15 more minutes: it rings with a visible banner
   await ali.clock.fastForward("15:05");
-  await expect(ali.getByRole("alert", { name: "Zamanlayıcı uyarıları" })).toContainText("Süre doldu: İzmir köfte · 20 dk");
-  await ali.getByRole("button", { name: "Tamam" }).click();
-  await expect(ali.getByRole("alert", { name: "Zamanlayıcı uyarıları" })).toBeEmpty();
+  await expect(ali.getByRole("alert").filter({ hasText: "Süre doldu" })).toContainText("Süre doldu: İzmir köfte · 20 dk");
+  await ali.getByRole("button", { name: "Alarmı durdur" }).click();
+  await expect(ali.getByRole("alert").filter({ hasText: "Süre doldu" })).toHaveCount(0);
 
   // Finish every dish
   for (const tab of [/Mercimek/, /İzmir köfte/, /Pirinç pilavı/, /Çoban salata/]) {

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeAll, describe, expect, it } from "vitest";
 import AkisPage from "@/app/(app)/akis/page";
@@ -44,8 +44,18 @@ describe("Ayarlar", () => {
     expect(document.documentElement).toHaveAttribute("data-theme", "dark");
     expect(localStorage.getItem("anv.theme")).toBe("dark");
     expect(screen.getByRole("button", { name: "Koyu" })).toHaveAttribute("aria-pressed", "true");
-    await userEvent.click(screen.getByRole("button", { name: "Açık" }));
+    await userEvent.click(within(screen.getByRole("group", { name: "Tema" })).getByRole("button", { name: "Açık" }));
     expect(document.documentElement).toHaveAttribute("data-theme", "light");
+  });
+
+  it("Zamanlayıcı sesi is on by default and turning it off persists on this device", async () => {
+    await freshStore({ demo: true });
+    render(<AyarlarPage />);
+    const group = screen.getByRole("group", { name: "Zamanlayıcı sesi" });
+    expect(within(group).getByRole("button", { name: "Açık" })).toHaveAttribute("aria-pressed", "true");
+    await userEvent.click(within(group).getByRole("button", { name: "Kapalı" }));
+    expect(localStorage.getItem("anv.timerSound")).toBe("off");
+    expect(within(group).getByRole("button", { name: "Kapalı" })).toHaveAttribute("aria-pressed", "true");
   });
 
   it("solo household shows the invite link and WhatsApp share", async () => {
