@@ -73,6 +73,7 @@ test("screens", async ({ page }, info) => {
     // Recipe form with a select opened. The native popup is drawn outside the page, so the
     // select is expanded in place (size=N): the same option colours, captured in the shot.
     await page.goto("/tarifler/yeni");
+    await page.getByText("Kaynak ve artarsa").click();
     await page.getByRole("radio", { name: "Saklanır" }).click();
     const sel = page.getByLabel("Öğün");
     await sel.evaluate((el: HTMLSelectElement) => {

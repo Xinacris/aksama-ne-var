@@ -168,3 +168,75 @@
   color: var(--ink2);
   line-height: 1.4;
 }
+
+/* ───── "Ayrıntılar": collapsible sections ───── */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detailsHead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px 4px;
+}
+.detailsHead .formNote {
+  margin: 0;
+}
+.more {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+.summary {
+  min-height: 60px;
+  padding: 12px 48px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  border-radius: 20px;
+}
+.summary::-webkit-details-marker {
+  display: none;
+}
+.summary::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--ink2);
+  border-bottom: 2px solid var(--ink2);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.15s ease;
+}
+.more[open] > .summary::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+.summaryTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+}
+.summaryText {
+  font-size: 13.5px;
+  color: var(--ink2);
+  line-height: 1.35;
+}
+.moreBody {
+  padding: 4px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .summary::after {
+    transition: none;
+  }
+}

@@ -47,6 +47,7 @@ test.describe("accessibility (axe)", () => {
       }
       // Recipe form with the leftover chips on "Saklanır" (shows "Kaç gün içinde")
       await page.goto("/tarifler/yeni");
+      for (const t of ["Süre, porsiyon, etiketler", "Ön hazırlık", "Kaynak ve artarsa"]) await page.getByText(t, { exact: true }).click();
       await page.getByRole("radio", { name: "Saklanır" }).click();
       await expect(page.getByLabel("Kaç gün içinde")).toBeVisible();
       await audit(page, `tarif-yeni saklanır ${scheme}`);

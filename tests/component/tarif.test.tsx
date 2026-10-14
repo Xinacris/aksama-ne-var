@@ -124,3 +124,41 @@ describe("Yeni tarif", () => {
     expect(router.push).toHaveBeenCalledWith(`/tarif/${r!.id}`);
   });
 });
+
+describe("Recipe form: Ayrıntılar", () => {
+  const section = (title: string) => screen.getByText(title, { selector: "summary span" }).closest("details")!;
+
+  it("new recipe: only name, Öğün, Malzemeler and Hazırlanışı are open", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    expect(screen.getByLabelText("Tarifin adı")).toBeInTheDocument();
+    expect(screen.getByLabelText("Öğün")).toBeInTheDocument();
+    expect(screen.getByLabelText("Malzeme").closest("details")).toBeNull();
+    expect(screen.getByLabelText("1. adım").closest("details")).toBeNull();
+    for (const t of ["Süre, porsiyon, etiketler", "Ön hazırlık", "Kaynak ve artarsa"]) expect(section(t)).not.toHaveAttribute("open");
+    expect(section("Süre, porsiyon, etiketler")).toHaveTextContent("15 dk hazırlık · 30 dk pişirme · 4 kişilik");
+    expect(section("Kaynak ve artarsa")).toHaveTextContent("Artmaz");
+    expect(screen.getByLabelText("Pişirme (dk)").closest("details")).toBe(section("Süre, porsiyon, etiketler"));
+    expect(screen.getByLabelText("Kaynak").closest("details")).toBe(section("Kaynak ve artarsa"));
+    expect(screen.getByLabelText("Buzluktan çıkacak malzeme").closest("details")).toBe(section("Ön hazırlık"));
+  });
+
+  it("a validation error inside a closed section opens the sections", async () => {
+    await freshStore({ demo: true });
+    render(<YeniTarifPage />);
+    await userEvent.type(screen.getByLabelText("Tarifin adı"), "Annemin dolması");
+    await userEvent.clear(screen.getByLabelText("Kaç kişilik"));
+    await userEvent.click(screen.getByRole("button", { name: "Tarifi kaydet" }));
+    expect(screen.getByRole("alert")).toHaveTextContent("Kişi sayısı");
+    expect(section("Süre, porsiyon, etiketler")).toHaveAttribute("open");
+  });
+
+  it("edit opens the sections that have values", async () => {
+    await freshStore({ demo: true });
+    nav.search = new URLSearchParams("kopya=izmir-kofte");
+    render(<YeniTarifPage />);
+    expect(section("Süre, porsiyon, etiketler")).toHaveAttribute("open");
+    expect(section("Ön hazırlık")).toHaveAttribute("open");
+    expect(section("Kaynak ve artarsa")).not.toHaveAttribute("open");
+  });
+});

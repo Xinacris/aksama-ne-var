@@ -179,3 +179,62 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
     },
   };
 }
+
+// ───────── "Ayrıntılar": the collapsible parts of the form ─────────
+
+export type DetailSection = "genel" | "prep" | "source";
+
+const minutes = (v: string) => Number(v.replace(",", ".")) || 0;
+
+/** Which collapsible sections hold something the user (or an import) filled in. */
+export function filledSections(d: RecipeDraft): Record<DetailSection, boolean> {
+  return {
+    genel:
+      minutes(d.prepMinutes) > 0 ||
+      minutes(d.cookMinutes) > 0 ||
+      minutes(d.waitMinutes) > 0 ||
+      !!d.tags.trim(),
+    prep: d.prepItems.some((p) => p.label.trim()) || !!d.freezerItem.trim(),
+    source: !!d.source.trim() || d.leftoverPolicy !== "none",
+  };
+}
+
+/** New blank recipes start with every section closed; edits, copies and imports open the ones with values. */
+export function initialOpen(d: RecipeDraft, openFilled: boolean): Record<DetailSection, boolean> {
+  const f = filledSections(d);
+  return { genel: openFilled && f.genel, prep: openFilled && f.prep, source: openFilled && f.source };
+}
+
+const dk = (v: string) => {
+  const n = minutes(v);
+  if (n < 60) return `${n} dk`;
+  return n % 60 ? `${Math.floor(n / 60)} sa ${n % 60} dk` : `${n / 60} sa`;
+};
+
+/** One line under a closed section's title, so its defaults are visible without opening it. */
+export function genelSummary(d: RecipeDraft): string {
+  const parts = [`${dk(d.prepMinutes)} hazırlık`, `${dk(d.cookMinutes)} pişirme`];
+  if (minutes(d.waitMinutes) > 0) parts.push(`${dk(d.waitMinutes)} bekleme`);
+  parts.push(`${d.servings.trim() || "?"} kişilik`);
+  const tags = d.tags
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean);
+  if (tags.length) parts.push(tags.slice(0, 2).join(", ") + (tags.length > 2 ? ` +${tags.length - 2}` : ""));
+  return parts.join(" · ");
+}
+
+export function prepSummary(d: RecipeDraft): string {
+  const n = d.prepItems.filter((p) => p.label.trim()).length;
+  const parts = [n ? `${n} hatırlatma` : "Yok"];
+  if (d.freezerItem.trim()) parts.push(`buzluktan: ${d.freezerItem.trim().toLocaleLowerCase("tr")}`);
+  return parts.join(" · ");
+}
+
+const POLICY_SHORT = { none: "Artmaz", lunch: "Ertesi gün öğlen yenir", store: "Saklanır" } as const;
+
+export function sourceSummary(d: RecipeDraft): string {
+  const policy =
+    d.leftoverPolicy === "store" ? `${d.leftoverDays} gün saklanır` : POLICY_SHORT[d.leftoverPolicy];
+  return [d.source.trim(), policy].filter(Boolean).join(" · ");
+}

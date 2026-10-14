@@ -22,6 +22,7 @@ function Yeni() {
       initial={initial}
       backHref={source ? `/tarif/${source.id}` : "/tarifler"}
       submitLabel="Tarifi kaydet"
+      openFilled={!!source}
       onSubmit={async (value) => {
         const r = await createRecipe(value);
         if (r) router.push(`/tarif/${r.id}`);

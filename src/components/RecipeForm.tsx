@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { AISLES, COURSES, COURSE_LABEL, UNITS } from "@/data/models";
 import { catalogEntry, INGREDIENT_CATALOG, normalizeIngredientName } from "@/data/seed/ingredients";
-import { emptyIngredient, parseDraft, type RecipeDraft } from "@/services/recipeForm";
+import { emptyIngredient, genelSummary, initialOpen, parseDraft, prepSummary, sourceSummary, type DetailSection, type RecipeDraft } from "@/services/recipeForm";
 import { cookTimeLooksLong } from "@/domain/import/timing";
 import { POLICY_OPTION } from "@/domain/leftovers";
 import type { RecipeInput } from "@/store/app";
@@ -35,6 +35,7 @@ export function RecipeForm({
   onSubmit,
   header,
   backLabel = "Geri",
+  openFilled = true,
 }: {
   title: string;
   initial: RecipeDraft;
@@ -44,8 +45,12 @@ export function RecipeForm({
   /** Shown under the title (the import screen's source card). */
   header?: ReactNode;
   backLabel?: string;
+  /** Open the "Ayrıntılar" sections that already hold values (edit, copy, import). False for a blank new recipe. */
+  openFilled?: boolean;
 }) {
   const [d, setD] = useState<RecipeDraft>(initial);
+  const [open, setOpen] = useState(() => initialOpen(initial, openFilled));
+  const toggle = (k: DetailSection, v: boolean) => setOpen((o) => (o[k] === v ? o : { ...o, [k]: v }));
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const set = <K extends keyof RecipeDraft>(k: K, v: RecipeDraft[K]) => setD((x) => ({ ...x, [k]: v }));
@@ -55,6 +60,8 @@ export function RecipeForm({
     const res = parseDraft(d);
     if (!res.ok) {
       setError(res.error);
+      // The problem may sit in a closed section: open them all so it can be found.
+      setOpen({ genel: true, prep: true, source: true });
       return;
     }
     setError(null);
@@ -106,51 +113,6 @@ export function RecipeForm({
               </option>
             ))}
           </SelectField>
-          <div className={s.grid4}>
-            <TextField label="Hazırlık (dk)" inputMode="numeric" value={d.prepMinutes} onChange={(e) => set("prepMinutes", e.target.value)} />
-            <TextField
-              label="Pişirme (dk)"
-              inputMode="numeric"
-              value={d.cookMinutes}
-              onChange={(e) => set("cookMinutes", e.target.value)}
-              // Gentle only: never blocks saving.
-              hint={longCook ? "Süre uzun görünüyor, kontrol et" : undefined}
-            />
-            <TextField
-              label="Bekleme (dk)"
-              inputMode="numeric"
-              placeholder="0"
-              value={d.waitMinutes}
-              onChange={(e) => set("waitMinutes", e.target.value)}
-            />
-            <TextField label="Kaç kişilik" inputMode="numeric" value={d.servings} onChange={(e) => set("servings", e.target.value)} />
-          </div>
-          <p className={s.formNote}>Pişirme yalnızca ocakta ya da fırında geçen süre. Marine, dinlendirme, ıslatma Bekleme&apos;ye yazılır.</p>
-          <TextField label="Etiketler" hint="Virgülle ayır: Fırında, Kıymalı, Akşamdan ıslat" value={d.tags} onChange={(e) => set("tags", e.target.value)} />
-          <TextField
-            label="Kaynak"
-            hint="Serbest metin: “YouTube · Yemek.com”, “Annemin defteri” ya da bir link."
-            value={d.source}
-            onChange={(e) => set("source", e.target.value)}
-          />
-          <div className={s.leftover}>
-            <ChoiceChips
-              label="Artarsa ne olur?"
-              options={POLICY_CHOICES}
-              value={d.leftoverPolicy}
-              onChange={(v) => set("leftoverPolicy", v)}
-            />
-            {d.leftoverPolicy === "store" && (
-              <SelectField label="Kaç gün içinde" className={s.days} value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
-                {["1", "2", "3", "4"].map((n) => (
-                  <option key={n} value={n}>
-                    {n} gün
-                  </option>
-                ))}
-              </SelectField>
-            )}
-          </div>
-          <p className={s.formNote}>Evde öğlen yiyen yoksa “öğlen yenir” de dolaba kalır. Her akşam ayrıca seçebilirsiniz.</p>
         </section>
 
         <section className={s.card} aria-labelledby="f-malzeme">
@@ -203,63 +165,6 @@ export function RecipeForm({
             <IconPlus size={16} />
             Malzeme ekle
           </Button>
-          <SelectField label="Buzluktan çıkacak malzeme" value={d.freezerItem} onChange={(e) => set("freezerItem", e.target.value)}>
-            <option value="">Yok</option>
-            {ingredientNames.map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
-            ))}
-          </SelectField>
-        </section>
-
-        <section className={s.card} aria-labelledby="f-hazirlik">
-          <h2 id="f-hazirlik" className={s.cardTitle}>
-            Ön hazırlık
-          </h2>
-          {d.prepItems.map((p, i) => (
-            <div key={i} className={s.prepRow} role="group" aria-label={`${i + 1}. ön hazırlık`}>
-              <TextField
-                label="Ne yapılacak"
-                value={p.label}
-                placeholder="ör. Kıymayı buzluktan çıkar"
-                onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, label: e.target.value } : x)))}
-              />
-              <SelectField label="Ne zaman" value={p.offset} onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, offset: e.target.value } : x)))}>
-                {OFFSETS.map(([v, l]) => (
-                  <option key={v} value={v}>
-                    {l}
-                  </option>
-                ))}
-              </SelectField>
-              <button
-                type="button"
-                className={s.iconBtn}
-                aria-label={`${i + 1}. ön hazırlığı kaldır`}
-                onClick={() => set("prepItems", d.prepItems.filter((_, idx) => idx !== i))}
-              >
-                <IconTrash size={18} />
-              </button>
-              <label className={s.check} style={{ gridColumn: "1 / -1" }}>
-                <input
-                  type="checkbox"
-                  checked={p.freezer}
-                  onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, freezer: e.target.checked } : x)))}
-                />
-                Buzlukla ilgili
-              </label>
-            </div>
-          ))}
-          <Button
-            variant="soft"
-            size="sm"
-            pill
-            className={s.add}
-            onClick={() => set("prepItems", [...d.prepItems, { label: "", offset: "morning", freezer: false }])}
-          >
-            <IconPlus size={16} />
-            Ön hazırlık ekle
-          </Button>
         </section>
 
         <section className={s.card} aria-labelledby="f-adim">
@@ -281,6 +186,135 @@ export function RecipeForm({
             <IconPlus size={16} />
             Adım ekle
           </Button>
+        </section>
+
+        <section className={s.details} aria-labelledby="f-ayrinti">
+          <div className={s.detailsHead}>
+            <h2 id="f-ayrinti" className={s.cardTitle}>
+              Ayrıntılar
+            </h2>
+            <p className={s.formNote}>İstersen doldur; boş kalırsa da tarif çalışır.</p>
+          </div>
+          <details className={s.more} open={open.genel} onToggle={(e) => toggle("genel", e.currentTarget.open)}>
+            <summary className={s.summary}>
+              <span className={s.summaryTitle}>Süre, porsiyon, etiketler</span>
+              <span className={s.summaryText}>{genelSummary(d)}</span>
+            </summary>
+            <div className={s.moreBody}>
+              <div className={s.grid4}>
+                <TextField label="Hazırlık (dk)" inputMode="numeric" value={d.prepMinutes} onChange={(e) => set("prepMinutes", e.target.value)} />
+                <TextField
+                  label="Pişirme (dk)"
+                  inputMode="numeric"
+                  value={d.cookMinutes}
+                  onChange={(e) => set("cookMinutes", e.target.value)}
+                  // Gentle only: never blocks saving.
+                  hint={longCook ? "Süre uzun görünüyor, kontrol et" : undefined}
+                />
+                <TextField
+                  label="Bekleme (dk)"
+                  inputMode="numeric"
+                  placeholder="0"
+                  value={d.waitMinutes}
+                  onChange={(e) => set("waitMinutes", e.target.value)}
+                />
+                <TextField label="Kaç kişilik" inputMode="numeric" value={d.servings} onChange={(e) => set("servings", e.target.value)} />
+              </div>
+              <p className={s.formNote}>Pişirme yalnızca ocakta ya da fırında geçen süre. Marine, dinlendirme, ıslatma Bekleme&apos;ye yazılır.</p>
+              <TextField label="Etiketler" hint="Virgülle ayır: Fırında, Kıymalı, Akşamdan ıslat" value={d.tags} onChange={(e) => set("tags", e.target.value)} />
+            </div>
+          </details>
+          <details className={s.more} open={open.prep} onToggle={(e) => toggle("prep", e.currentTarget.open)}>
+            <summary className={s.summary}>
+              <span className={s.summaryTitle}>Ön hazırlık</span>
+              <span className={s.summaryText}>{prepSummary(d)}</span>
+            </summary>
+            <div className={s.moreBody}>
+              {d.prepItems.map((p, i) => (
+                <div key={i} className={s.prepRow} role="group" aria-label={`${i + 1}. ön hazırlık`}>
+                  <TextField
+                    label="Ne yapılacak"
+                    value={p.label}
+                    placeholder="ör. Kıymayı buzluktan çıkar"
+                    onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, label: e.target.value } : x)))}
+                  />
+                  <SelectField label="Ne zaman" value={p.offset} onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, offset: e.target.value } : x)))}>
+                    {OFFSETS.map(([v, l]) => (
+                      <option key={v} value={v}>
+                        {l}
+                      </option>
+                    ))}
+                  </SelectField>
+                  <button
+                    type="button"
+                    className={s.iconBtn}
+                    aria-label={`${i + 1}. ön hazırlığı kaldır`}
+                    onClick={() => set("prepItems", d.prepItems.filter((_, idx) => idx !== i))}
+                  >
+                    <IconTrash size={18} />
+                  </button>
+                  <label className={s.check} style={{ gridColumn: "1 / -1" }}>
+                    <input
+                      type="checkbox"
+                      checked={p.freezer}
+                      onChange={(e) => set("prepItems", d.prepItems.map((x, idx) => (idx === i ? { ...x, freezer: e.target.checked } : x)))}
+                    />
+                    Buzlukla ilgili
+                  </label>
+                </div>
+              ))}
+              <Button
+                variant="soft"
+                size="sm"
+                pill
+                className={s.add}
+                onClick={() => set("prepItems", [...d.prepItems, { label: "", offset: "morning", freezer: false }])}
+              >
+                <IconPlus size={16} />
+                Ön hazırlık ekle
+              </Button>
+              <SelectField label="Buzluktan çıkacak malzeme" value={d.freezerItem} onChange={(e) => set("freezerItem", e.target.value)}>
+                <option value="">Yok</option>
+                {ingredientNames.map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </SelectField>
+            </div>
+          </details>
+          <details className={s.more} open={open.source} onToggle={(e) => toggle("source", e.currentTarget.open)}>
+            <summary className={s.summary}>
+              <span className={s.summaryTitle}>Kaynak ve artarsa</span>
+              <span className={s.summaryText}>{sourceSummary(d)}</span>
+            </summary>
+            <div className={s.moreBody}>
+              <TextField
+                label="Kaynak"
+                hint="Serbest metin: “YouTube · Yemek.com”, “Annemin defteri” ya da bir link."
+                value={d.source}
+                onChange={(e) => set("source", e.target.value)}
+              />
+              <div className={s.leftover}>
+                <ChoiceChips
+                  label="Artarsa ne olur?"
+                  options={POLICY_CHOICES}
+                  value={d.leftoverPolicy}
+                  onChange={(v) => set("leftoverPolicy", v)}
+                />
+                {d.leftoverPolicy === "store" && (
+                  <SelectField label="Kaç gün içinde" className={s.days} value={d.leftoverDays} onChange={(e) => set("leftoverDays", e.target.value)}>
+                    {["1", "2", "3", "4"].map((n) => (
+                      <option key={n} value={n}>
+                        {n} gün
+                      </option>
+                    ))}
+                  </SelectField>
+                )}
+              </div>
+              <p className={s.formNote}>Evde öğlen yiyen yoksa “öğlen yenir” de dolaba kalır. Her akşam ayrıca seçebilirsiniz.</p>
+            </div>
+          </details>
         </section>
 
         {error && (

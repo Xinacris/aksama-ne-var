@@ -88,6 +88,8 @@ for (const mode of ["system-dark", "chosen-dark", "chosen-light-on-dark-system",
 
     // Recipe form: Öğün, Birim, Nereden, Reyon, Buzluktan…, Kaç gün içinde (Saklanır), Ne zaman (ön hazırlık)
     await page.goto("/tarifler/yeni");
+    await page.getByText("Kaynak ve artarsa").click();
+    await page.getByText("Ön hazırlık", { exact: true }).click();
     await page.getByRole("radio", { name: "Saklanır" }).click();
     await page.getByRole("button", { name: "Ön hazırlık ekle" }).click();
     const labels = await checkAll(page, scheme);
