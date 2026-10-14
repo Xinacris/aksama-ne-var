@@ -1,4 +1,6 @@
-Round 3 spec is in PROMPT-v3.md; work on branch round-3; continue from the first unchecked V-item in PROGRESS.md.
+All work happens on `main`. Every push to `main` deploys production — push only with all checks green. Current spec: PROMPT-v3.1.md; continue from the first unchecked item in PROGRESS.md.
+
+Round 3 spec is in PROMPT-v3.md (done).
 
 Round 2.2 spec is in PROMPT-v2.2.md; continue from the first unchecked M-item in PROGRESS.md.
 

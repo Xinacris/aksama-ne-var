@@ -155,3 +155,15 @@ Telefona App Store / Google Play'den **Expo Go** kur, QR'ı okut (iPhone'da Kame
 - Telefondaki içe aktarma ve çeviri canlı web API'sini çağırıyor. Merge'den önce canlıda `/api/translate` yok, bu yüzden düğme gizli. İçe aktarma çalışır ama taslak Türkçe gelir.
 - İngilizcede küçük pürüz: "1 onions" gibi tekil/çoğul hataları var (malzeme kataloğu çoğul). İstersen sonraki turda düzeltirim.
 - Tanınmış yemeklerin İngilizce adlarını "Karnıyarık (stuffed aubergine)" biçiminde bıraktım. Dar yerlerde (hafta panosu) kısa ad görünüyor ("Lentil soup").
+
+## Round 3.1
+
+Spec: `PROMPT-v3.1.md`. All work on `main`.
+
+**Where I found it (2026-10-14):** clean tree, no stash. The owner had already merged `round-3` up to V9 (`e2edf7b`) through PR #1 (`ff47760`) after setting Vercel's Root Directory; production `success`. `round-3` had one more commit, `5d26bbe` (local APK build: `npm run apk`, per-platform app-name locales). The local `main` was stale (62282f9). The APK `aksama-ne-var-1.0.0-5d26bbe.apk` from that commit is still in `~/Downloads` — the one that fails with "App not installed" on a friend's phone.
+
+- [x] R0. Where things stand (note above; spec saved).
+- [ ] R1. Consolidate on `main` and close `round-3`.
+- [ ] R2. APK that installs (diagnose, all four ABIs, stable release key, 1.0.1 / versionCode 2).
+- [ ] R3. Timer alarm (core fire-once from `endsAt`, synthesized tone, mobile sound + notification, web Web Audio + notification, settings toggle, tests).
+- [ ] R4. Final APK from `main`, verified, in `~/Downloads`.

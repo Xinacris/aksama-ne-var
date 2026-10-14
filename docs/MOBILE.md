@@ -10,7 +10,7 @@ repositories, migrations, store and copy as the web (`packages/core`); data live
 2. On the computer, from the repo root:
 
    ```bash
-   git checkout round-3
+   git checkout main && git pull
    npm install
    npm run mobile          # = expo start in apps/mobile
    ```
@@ -26,8 +26,8 @@ repositories, migrations, store and copy as the web (`packages/core`); data live
 4. In the app: **Örnek evle dene · Ali ve Zeynep** (sample household), or create a local account.
 
 Import and translation call the web app's API (`EXPO_PUBLIC_API_URL`, default
-`https://aksama-ne-var.vercel.app`). Until `round-3` is merged and deployed, production has
-`/api/import` (works) but not `/api/translate` — the phone then simply hides "Çevir / Translate".
+`https://aksama-ne-var.vercel.app`). When the server has no LLM key, `/api/translate` reports
+itself unavailable and the phone hides "Çevir / Translate".
 To use a local web server instead: `EXPO_PUBLIC_API_URL=http://<computer-ip>:3000 npm run mobile`
 (with `npm run dev` running).
 

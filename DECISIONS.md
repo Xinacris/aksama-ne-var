@@ -319,3 +319,8 @@ Data-model plan (each change ships with a versioned migration in `src/data/migra
 - **Locale files split per platform** (`ios`: CFBundle*, `android`: `app_name`): with plain keys, Expo wrote `CFBundleDisplayName` into Android string resources, release lint failed (ExtraTranslation), and the English launcher name was never applied on Android. Now the APK shows "What’s for dinner?" on English phones.
 - **The script restores `apps/mobile/package.json`** after prebuild (prebuild rewrites `android`/`ios` scripts to `expo run:*`, which would break the Expo Go flow).
 - **Committed on `round-3`, not `main`:** `apps/mobile` only exists on `round-3`; pushing to `main` would merge Round 3, which the owner does after review.
+
+## Round 3.1 — R1 Consolidate on main
+
+- **Merge:** `origin/main` already had `round-3` up to `e2edf7b` (PR #1, merge commit). The remaining commit `5d26bbe` can't fast-forward onto a merge commit, so `git merge --no-ff round-3` (no conflicts). The stale local `main` (62282f9, ancestor of everything) was moved to `origin/main` first with `git reset --keep` — no local commits lost.
+- **Docs:** `CLAUDE.md` now says all work happens on `main`; `docs/MOBILE.md` (checkout `main`) and `docs/MONOREPO.md` (Vercel settings now done) no longer refer to `round-3`. History (PROGRESS, DECISIONS, PROMPT-v3) keeps its mentions.
