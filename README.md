@@ -9,18 +9,32 @@ Round 2 added: **recipe import from a link** (Instagram Reels, YouTube Shorts, T
 — with a paste fallback), **leftovers as a choice** (per recipe, per household lunch habit, per
 evening) and a real **cooking mode** (one step per screen, several timers at once, screen stays on).
 
+Round 3 turned the repo into a monorepo with an **iOS + Android app (Expo)** on the same local-first
+data, and made both apps **Turkish + English**.
+
 **Live:** https://aksama-ne-var.vercel.app · **Morning demo script:** [DEMO.md](DEMO.md)
+
+## Layout (npm workspaces)
+
+| Path | What |
+|---|---|
+| `apps/web` | Next.js app (pages, components, server routes `/api/import`, `/api/translate`) |
+| `apps/mobile` | Expo app (Expo Router, runs in Expo Go) — see [docs/MOBILE.md](docs/MOBILE.md) |
+| `packages/core` | Framework-free TypeScript shared by both: models, repositories, migrations, key-value adapter, domain rules, import parser, seed recipes, store (zustand/vanilla), i18n catalogs, design tokens |
+
+Vercel needs Root Directory `apps/web`: see [docs/MONOREPO.md](docs/MONOREPO.md).
 
 ## Run
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
+npm run dev        # web, http://localhost:3000
+npm run mobile     # Expo dev server; scan the QR code with Expo Go
 ```
 
 Node 24 LTS (`.nvmrc`). No backend: everything is stored in the browser. **No environment variables
 are required.** Optional server-side keys improve recipe import (details in [docs/IMPORT.md](docs/IMPORT.md),
-template in [.env.example](.env.example)):
+template in [apps/web/.env.example](apps/web/.env.example)):
 
 | Variable | Optional? | Effect |
 |---|---|---|
@@ -31,13 +45,15 @@ template in [.env.example](.env.example)):
 
 Without any LLM key a rule-based Turkish parser pre-fills the form.
 
+Root scripts run across the workspaces (`npm run <script> -w @anv/web` etc. for one):
+
 | Script | What it does |
 |---|---|
-| `npm run dev` / `build` / `start` | Next.js |
-| `npm run lint` / `typecheck` | ESLint, `next typegen && tsc` |
-| `npm test` | Vitest: domain, data layer, store, seed, import (12 caption fixtures), route, component tests (~380) |
+| `npm run dev` / `build` | Next.js (web) |
+| `npm run lint` / `typecheck` | ESLint and TypeScript in every workspace |
+| `npm test` | Vitest in core (domain, data layer, store, seed, import parser) and web (routes, components); Jest (jest-expo) in mobile |
 | `npm run test:e2e` | Playwright at 390×844 and 1440×900: two-member journey, board drag-and-drop, import, leftovers, cooking mode with timers, axe on every screen (builds and starts the app on port 3100) |
-| `npm run screenshots` | Every screen at 390/1440 × light/dark into `screenshots/` (`SHOTS=bugun,liste` to limit) |
+| `npm run screenshots` | Every screen at 390/1440 × light/dark into `apps/web/screenshots/` (`SHOTS=bugun,liste` to limit) |
 
 ## Try it with two people in one browser
 
@@ -56,19 +72,20 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
 ## How it's built
 
 - **Next.js 16 (App Router) + React 19 + TypeScript strict**, CSS Modules over the design tokens
-  in `src/app/globals.css` (light/dark/system, no flash), Young Serif + Figtree via `next/font`.
-- **Data layer** (`src/data`): zod models shaped like Postgres tables, repository interfaces
-  (`repos.ts`), one implementation `LocalStorageAdapter` (one JSON array per table, schema
+  in `apps/web/src/app/globals.css` (light/dark/system, no flash), Young Serif + Figtree via `next/font`.
+- **Data layer** (`packages/core/src/data`): zod models shaped like Postgres tables, repository interfaces
+  (`repos.ts`), one implementation `KeyValueAdapter` over any synchronous `KeyValueStore`
+  (localStorage on the web, an AsyncStorage-backed mirror on phones; one JSON array per table, schema
   version + migrations, corrupt-data quarantine, quota errors), a per-tab session, and a
-  `SyncBus` (BroadcastChannel + `storage` events) for live updates and presence.
-- **Domain** (`src/domain`): pure, unit-tested rules — list aggregation with unit conversion and
+  `SyncBus` (web: BroadcastChannel + `storage` events, `apps/web/src/data/browserBus.ts`) for live updates and presence.
+- **Domain** (`packages/core/src/domain`): pure, unit-tested rules — list aggregation with unit conversion and
   pack rounding, "evde var" subtraction, prep scheduling, deck building and matching, rotation
   memory, leftovers, plan transitions (ate out, plan changed, swaps), summaries, Turkish copy.
-- **Store** (`src/store/app.ts`): Zustand over the repositories; components never touch storage.
-- **Seed** (`src/data/seed`): 100 Turkish home recipes over a canonical ingredient catalog.
-- **Import** (`src/domain/import`, `src/server/import`, `/api/import`): source adapters over public
+- **Store** (`packages/core/src/store/app.ts`): a vanilla Zustand store over the repositories; each app binds it to React (`apps/web/src/store/app.ts`, `apps/mobile/src/store.ts`); components never touch storage.
+- **Seed** (`packages/core/src/data/seed`): 100 Turkish home recipes over a canonical ingredient catalog.
+- **Import** (`packages/core/src/domain/import`, `apps/web/src/server/import`, `/api/import`): source adapters over public
   endpoints only, schema.org reader, rule parser, optional Claude structuring with validation.
-- **Cooking mode** (`/pisir/<date|recipe>`, `src/components/cooking`): shared resumable session,
+- **Cooking mode** (`/pisir/<date|recipe>`, `apps/web/src/components/cooking`): shared resumable session,
   timers stored as end timestamps, Screen Wake Lock.
 - **Supabase path**: `supabase/schema.sql` (draft, with RLS) and `docs/SUPABASE_MIGRATION.md`.
 - Decisions and reasons: [DECISIONS.md](DECISIONS.md). Build log: [PROGRESS.md](PROGRESS.md).
