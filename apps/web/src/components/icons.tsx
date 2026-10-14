@@ -111,6 +111,26 @@ export const IconClose = (p: IconProps) => (
     <path d="M6 6l12 12M18 6L6 18" />
   </Svg>
 );
+export const IconPause = (p: IconProps) => (
+  <Svg strokeWidth={2.2} {...p}>
+    <path d="M9 5v14M15 5v14" />
+  </Svg>
+);
+export const IconPlay = (p: IconProps) => (
+  <Svg strokeWidth={2} {...p}>
+    <path d="M8 5.5v13l10.5-6.5z" />
+  </Svg>
+);
+export const IconRestart = (p: IconProps) => (
+  <Svg strokeWidth={2} {...p}>
+    <path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5" />
+  </Svg>
+);
+export const IconBell = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0" />
+  </Svg>
+);
 export function IconHeart({ size = 22, ...p }: Omit<IconProps, "strokeWidth">) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" {...p}>

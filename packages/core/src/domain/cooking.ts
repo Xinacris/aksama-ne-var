@@ -163,14 +163,44 @@ export function newTimer(args: { id: string; recipe: Recipe; step: number; secon
 }
 
 /** Seconds left; computed from the end time, so a reload or another tab shows the same thing. */
-export function remainingSeconds(t: Pick<CookingTimer, "endsAt"> & { seconds?: number }, now: Date): number {
+export function remainingSeconds(t: Pick<CookingTimer, "endsAt"> & { seconds?: number; pausedLeft?: number | null }, now: Date): number {
+  if (t.pausedLeft != null) return t.pausedLeft;
   const left = Math.max(0, Math.ceil((Date.parse(t.endsAt) - now.getTime()) / 1000));
   // A render clock up to a second old must not show "20:01" for a 20-minute timer.
   return t.seconds ? Math.min(t.seconds, left) : left;
 }
 
-export function isFinished(t: Pick<CookingTimer, "endsAt">, now: Date): boolean {
-  return remainingSeconds(t, now) === 0;
+export function isFinished(t: Pick<CookingTimer, "endsAt"> & { pausedLeft?: number | null }, now: Date): boolean {
+  return t.pausedLeft == null && remainingSeconds(t, now) === 0;
+}
+
+export function isPaused(t: Pick<CookingTimer, "pausedLeft">): boolean {
+  return t.pausedLeft != null;
+}
+
+/** Pause a running timer: the seconds left are frozen; a finished or paused one is returned as is. */
+export function pauseTimer(t: CookingTimer, now: Date): CookingTimer {
+  if (isPaused(t) || isFinished(t, now)) return t;
+  return { ...t, pausedLeft: remainingSeconds(t, now) };
+}
+
+/** Resume: a new end time from the frozen seconds (a new `endsAt`, so the alarm can ring for it). */
+export function resumeTimer(t: CookingTimer, now: Date): CookingTimer {
+  if (!isPaused(t)) return t;
+  return { ...t, endsAt: new Date(now.getTime() + (t.pausedLeft ?? 0) * 1000).toISOString(), pausedLeft: null };
+}
+
+/** Start again from the full length (also brings back a dismissed one). */
+export function restartTimer(t: CookingTimer, now: Date): CookingTimer {
+  return { ...t, endsAt: new Date(now.getTime() + t.seconds * 1000).toISOString(), pausedLeft: null, dismissed: false };
+}
+
+/** Edit: add (or with a negative delta, take away) time; a finished timer starts counting again. Never below 1 s. */
+export function addTimerTime(t: CookingTimer, deltaSeconds: number, now: Date): CookingTimer {
+  const left = Math.max(1, remainingSeconds(t, now) + deltaSeconds);
+  const seconds = Math.max(t.seconds, left);
+  if (isPaused(t)) return { ...t, seconds, pausedLeft: left };
+  return { ...t, seconds, endsAt: new Date(now.getTime() + left * 1000).toISOString(), dismissed: false };
 }
 
 /** Running first (soonest end first), then finished ones not yet dismissed. */

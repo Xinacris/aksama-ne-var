@@ -156,3 +156,41 @@
   color: var(--olive);
   font-weight: 600;
 }
+
+/* Timer alarm banner ("Süre doldu: …" + Durdur) */
+.alertText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  color: var(--ink);
+}
+.alertText svg {
+  flex: none;
+  color: var(--tomato);
+}
+.stopBtn {
+  min-width: 112px;
+}
+.plus {
+  min-width: 44px;
+  height: 36px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+.plus:hover {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+.plus:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.timer.paused {
+  background: var(--ink2);
+}

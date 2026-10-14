@@ -389,8 +389,10 @@ export const cookingTimerSchema = z.object({
   seconds: z.number().int().positive(),
   /** Absolute end time, so timers survive reloads and other tabs see the same countdown. */
   endsAt: isoDateTime,
-  /** The cook dismissed the finished banner. */
+  /** The cook dismissed the finished banner (or stopped its alarm) — on every device sync reaches. */
   dismissed: z.boolean(),
+  /** Seconds left while paused; `null`/absent while running (then `endsAt` counts). */
+  pausedLeft: z.number().int().min(0).nullable().optional(),
 });
 export type CookingTimer = z.infer<typeof cookingTimerSchema>;
 
