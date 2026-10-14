@@ -5,6 +5,7 @@ import { DarkTheme, DefaultTheme, Stack, ThemeProvider as NavThemeProvider } fro
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { fonts } from "@anv/core/design/tokens";
@@ -12,6 +13,7 @@ import { bootMobile, type MobileData } from "@/boot";
 import { useApp } from "@/store";
 import { LocaleProvider } from "@/i18n";
 import { ThemeProvider, useTheme } from "@/theme";
+import { NoticeHost } from "@/ui/more";
 
 void SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -46,6 +48,7 @@ export default function RootLayout() {
 }
 
 function Navigation() {
+  const { t } = useTranslation();
   const { colors, scheme } = useTheme();
   const status = useApp((s) => s.status);
   const onboarded = useApp((s) => !!s.me?.onboarded);
@@ -76,9 +79,15 @@ function Navigation() {
           <Stack.Screen name="onboarding" options={{ headerShown: false }} />
         </Stack.Protected>
         <Stack.Protected guard={inApp}>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false, title: t("nav.bugun") }} />
+          <Stack.Screen name="tarif/[id]" options={{ title: "" }} />
+          <Stack.Screen name="tarifler/yeni" />
+          <Stack.Screen name="tarifler/[id]/duzenle" />
+          <Stack.Screen name="tarifler/ice-aktar" />
+          <Stack.Screen name="ayarlar" />
         </Stack.Protected>
       </Stack>
+      <NoticeHost />
     </NavThemeProvider>
   );
 }

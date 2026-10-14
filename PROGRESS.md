@@ -113,7 +113,8 @@ Spec: PROMPT-v3.md. Work on branch `round-3` (never `main`). Continue from the f
   - `apps/mobile` (Expo SDK 57, RN 0.86.3). `expo export` iOS + Android OK, `expo-doctor` 21/21, `tsc` 0, `expo lint` 0, jest 4 (AsyncStorage hydrate/write-through/restart, PBKDF2 parity with Web Crypto, demo household boots and survives a restart). Tokens + icons in core (token/CSS parity test). Whole repo on React 19.2.3; web unit/build/e2e smoke green.
 - [x] V3. i18n foundation: catalogs in core, i18next in web and mobile, language switch in Ayarlar, web strings extracted; key-parity test.
   - 882 keys per language. Core 338 tests (catalog parity, runtime switch, detection, hard-coded-Turkish scan), web 184, mobile 4; lint 0; build OK; e2e 55 + 2 passed (new `e2e/english.spec.ts`: English browser → English UI, quick add, Settings › Türkçe and back, remembered on reload).
-- [ ] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
+- [x] V4. Mobile screens: auth/onboarding, Bugün, Tarifler (list, detail, quick add, form) — in both languages.
+  - Giriş/Kayıt, onboarding (set up or join by code → dishes → invite code), Bugün, Tarifler (search, course/tag chips, favourites, quick-add sheet), recipe page (statuses, prep timeline, steps, put on an evening, edit/copy/delete), full form (Ayrıntılar, Toplu yapıştır, paste offer), import via `/api/import`, Ayarlar. Mobile jest 15 (Bugün and Tarifler in tr + en), tsc 0, expo lint 0, export iOS/Android OK, expo-doctor 21/21; core 338, web 184.
 - [ ] V5. Recipe translations: data shape + migration, 100 built-in English translations, units display, schema/doc update.
 - [ ] V6. `/api/translate` + Translate action (web and mobile); multi-language import; tests.
 - [ ] V7. Mobile screens: Liste, Hafta, Eşleş.

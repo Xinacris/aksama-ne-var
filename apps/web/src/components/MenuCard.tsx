@@ -1,19 +1,13 @@
 import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { SLOT_LABEL, type Slot } from "@anv/core/data/models";
+import { SLOT_LABEL } from "@anv/core/data/models";
 import { IconArrowRight, IconCheck } from "./icons";
 import { PhotoPlaceholder } from "./ui/Misc";
 import s from "./MenuCard.module.css";
 
-export interface MenuRow {
-  slot: Slot;
-  name: string | null;
-  href?: string;
-  time?: string;
-}
-
-export type Approval = { tone: "ok" | "wait"; label: string } | null;
+import type { Approval, MenuRow } from "@anv/core/domain/today";
+export type { Approval, MenuRow } from "@anv/core/domain/today";
 
 function ApprovalPill({ approval }: { approval: Approval }) {
   if (!approval) return null;
