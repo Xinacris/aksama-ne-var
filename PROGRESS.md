@@ -284,3 +284,17 @@ Günaydın. Katalog dalı hazır: `round-3.3-catalog` (push'landı, `main`'e bir
    - Claude ile istersen: `GEN_PROVIDER=anthropic` + `ANTHROPIC_API_KEY`. Haiku 5.5 toplu iş, yaklaşık $0.60–0.90.
 5. `failed.json` dolarsa, çoğu bilinmeyen malzeme demektir. `packages/core/src/data/seed/pantry.ts`'e ekle, tekrar çalıştır.
 6. Bitince kontrolleri çalıştırıp dalı `main`'e birleştir. Birleştirme mesajına `recipes:validate` sayılarını yaz. Her `main` push'u production'a gider.
+
+## Round 3.4 — full catalog run (Haiku subagents)
+
+Owner's PRISM (2026-10-15): finish the 1,000 recipes with Haiku subagents (no API key), merge `round-3.3-catalog` into `main` only when everything is green, then tidy the repo root on `chore/tidy-root`. The sample of record is sample-H (merged; the sample branches are deleted). There is no secret in git history (checked: no `.env*` ever committed, no key-like strings).
+
+Workflow (reusable): `packages/core/scripts/agent-batch.ts` + `packages/core/data/recipes/agent/BRIEF.md` (compact style guide + pantry) + the state file `packages/core/data/recipes/.gen-state.json` (committed; written only by the orchestrator). One batch = one agent = one catalog file, ≤ 10 dishes; at most 4 agents at once, never two on the same file. An agent writes its staging file and runs `agent-batch.ts run <batch> <staged>` (places what passes, lists what doesn't); the orchestrator then runs `record <batch> <tokens>`.
+
+## In progress
+
+**Resume ("devam"):** on branch `round-3.3-catalog`, from `packages/core`:
+1. `npx tsx scripts/agent-batch.ts reset-running` (batches that were running when the session stopped go back to pending; their catalog file only holds recipes that passed).
+2. `npx tsx scripts/agent-batch.ts status`.
+3. Loop: `npx tsx scripts/agent-batch.ts next 4` → one Haiku subagent per printed batch (prompt = brief path + batch line; see the previous agents' prompts in git log), then `record <batch> <tokens>` for each; commit after every batch, push the branch every ~5 batches.
+4. When no generate batches are pending: `plan-retry`, run those; then `plan-fill`, run those (BRIEF-fill.md); then `npm run recipes:validate` (no args) must say 1000/1000; then the full checks; then the merge (PRISM Motion step 7) and the tidy branch (step 8).
