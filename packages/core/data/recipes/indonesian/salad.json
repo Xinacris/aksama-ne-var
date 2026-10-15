@@ -1,1 +1,287 @@
-[]
+[
+ {
+  "id": "ef660f2b-dfc7-4e82-ab64-3fdc113a9a4e",
+  "slug": "gado-gado",
+  "cuisine": "indonesian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Gado-gado",
+   "en": "Gado-gado (vegetables with peanut sauce)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış sebze, yumurta ve kızarmış tofunun sıcak, tatlı-acı kavrulmuş fıstık sosuyla servis edildiği, doyurucu bir Endonezya salatası.",
+   "en": "Blanched vegetables, boiled egg and crisp tofu under a warm, sweet-hot peanut sauce. A filling Indonesian salad that works well as a light main."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "küçük, kabuklu",
+     "en": "small, unpeeled"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fasulye",
+     "en": "Green beans"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "uçları alınmış, 4 cm'lik parçalar",
+     "en": "trimmed, cut into 4 cm pieces"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fasulye filizi",
+     "en": "Bean sprouts"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "bean-sprouts",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim, servis için",
+     "en": "sliced, to serve"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tofu",
+     "en": "Tofu"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "tofu",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış, ikiye kesilmiş",
+     "en": "boiled, halved"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yer fıstığı",
+     "en": "Peanuts"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kavrulmuş, kabuğu soyulmuş",
+     "en": "roasted, skinned"
+    },
+    "pantryKey": "peanut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sambal",
+     "en": "Sambal"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "acı biber ezmesi",
+     "en": "chilli paste"
+    },
+    "pantryKey": "sambal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı soya sosu (kecap manis)",
+     "en": "Sweet soy sauce (kecap manis)"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sweet-soy-sauce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Misket limonu",
+     "en": "Lime"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lime",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "sos için",
+     "en": "for the sauce"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "tofu için",
+     "en": "for frying the tofu"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri kabuklarıyla tuzlu suda 20 dakika haşla, suyunu süzüp soyun ve dilim dilim kes.",
+     "en": "Boil the potatoes in their skins in salted water for 20 minutes, drain, peel and slice them."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları ayrı bir tencerede 9 dakika haşla, soğuk suya al, kabuklarını soyup ikiye kes.",
+     "en": "Boil the eggs in a separate pan for 9 minutes, cool them in cold water, peel and halve them."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Fasulyeyi ve filizi kaynayan tuzlu suda 2 dakika haşla, süzüp hemen soğuk suya al ki renkleri kalsın.",
+     "en": "Blanch the beans and sprouts in boiling salted water for 2 minutes, drain, then plunge them into cold water to keep their colour."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tofuyu kağıt havluyla kurulayıp 3 yemek kaşığı yağda altın rengi olana kadar her yanını çevirerek kızart.",
+     "en": "Pat the tofu dry with kitchen paper and fry it in the oil, turning as needed, until golden all over."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fıstıkları blendera al; sarımsak, sambal, tatlı soya sosu, limon suyu ve suyu ekleyip pürüzsüz bir sos olana kadar çek.",
+     "en": "Put the peanuts in a blender with the garlic, sambal, sweet soy sauce, lime juice and water, and blend until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu küçük bir tencereye al, kısık ateşte 3 dakika sürekli karıştırarak pişir; kıvamı tutmazsa biraz daha su ekle.",
+     "en": "Pour the sauce into a small pan and simmer on low for 3 minutes, stirring constantly. If it is too thick, add a little more water."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Patates, fasulye, filiz, tofu, yumurta ve salatalığı tabağa dizip üzerine ılık sosu gezdirerek servis et.",
+     "en": "Arrange the potatoes, beans, sprouts, tofu, eggs and cucumber on a plate, spoon the warm sauce over and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "vegetarian",
+   "dairyFree",
+   "spicy",
+   "Haşlama",
+   "Vejetaryen",
+   "Sebzeli",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
