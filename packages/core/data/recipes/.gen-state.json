@@ -453,12 +453,23 @@
     "yesil-mercimek-salatasi",
     "barbunya-salatasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "babagannus",
+    "humus",
+    "fava",
+    "muhammara",
+    "atom",
+    "tarator",
+    "borulce-salatasi",
+    "nohut-salatasi",
+    "yesil-mercimek-salatasi",
+    "barbunya-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 84428,
    "startedAt": "2026-10-15T19:29:26.501Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:32:14.346Z"
   },
   {
    "id": "g020",
@@ -623,11 +634,11 @@
     "karides-guvec",
     "firinda-mantar"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:30:22.851Z",
    "finishedAt": null
   },
   {
