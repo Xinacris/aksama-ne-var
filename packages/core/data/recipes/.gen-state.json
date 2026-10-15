@@ -2772,12 +2772,23 @@
     "balik-taco",
     "jambalaya"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "meatloaf",
+    "pot-roast",
+    "dana-kaburga-barbeku",
+    "pulled-beef-sandvic",
+    "tavuk-pot-pie",
+    "tavuklu-quesadilla",
+    "tex-mex-tavuk-fajita",
+    "dana-taco",
+    "balik-taco",
+    "jambalaya"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 96073,
    "startedAt": "2026-10-15T22:47:10.215Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:50:32.387Z"
   },
   {
    "id": "g088",
@@ -2996,11 +3007,11 @@
    "slugs": [
     "gratin-dauphinois"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:50:04.588Z",
    "finishedAt": null
   },
   {
