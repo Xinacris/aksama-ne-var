@@ -3012,5 +3012,2669 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "9eec011a-ab81-4834-a765-637cae400b2d",
+  "slug": "rajma",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Rajma",
+   "en": "Rajma (kidney bean curry)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kırmızı fasulyenin yoğun, baharatlı domates sosunda pişirildiği, pilavın yanına çok yakışan sade bir Hint yemeği. Fasulyelerin yumuşak ama dağılmamış olması işin püf noktasıdır.",
+   "en": "Red kidney beans simmered in a thick, gently spiced tomato sauce, the classic partner for plain rice. The beans should be soft but still hold their shape."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 90,
+  "waitMinutes": 480,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuru kırmızı fasulye",
+     "en": "Dried red kidney beans"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "gece boyunca ıslatılmış",
+     "en": "soaked overnight"
+    },
+    "pantryKey": "dried-kidney-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı biber",
+     "en": "Hot green chilli"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "hot-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı toz biber",
+     "en": "Chilli powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kişniş (toz)",
+     "en": "Ground coriander"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "coriander-ground",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "iyice çırpılmış",
+     "en": "whisked smooth"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fasulyeleri bol suda yıkayıp gece boyunca suda ıslat.",
+     "en": "Rinse the beans well and soak them in plenty of water overnight."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ertesi gün fasulyeleri süzüp yeni suyla tencereye al, yarım soğanı ve 1 diş sarımsağı ekleyip kısık ateşte 1 saat pişir.",
+     "en": "Next day, drain the beans, transfer to a pan with fresh water, add half an onion and one garlic clove, and simmer gently for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Kalan soğanları geniş bir tavada yağı ile birlikte pembeleşinceye kadar kavur.",
+     "en": "Heat the oil in a wide pan and fry the remaining onions until pink and soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zencefil, kalan sarımsak ve doğranmış biberi ekleyip 1 dakika kavur.",
+     "en": "Add the ginger, the rest of the garlic and the chopped chilli, and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kimyonu ekleyip tohumlar çıtırdayana kadar kavur, ardından domatesleri koyup 10 dakika pişir.",
+     "en": "Add the cumin and fry until the seeds crackle, then add the tomatoes and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Toz baharatları ve tuzu ekle, yoğurdu azar azar katarak sosu 5 dakika daha kısık ateşte pişir.",
+     "en": "Stir in the ground spices and salt, add the yoghurt a spoonful at a time, and cook the sauce gently for 5 minutes more."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pişmiş fasulyeleri ve 200 ml pişirme suyunu sosa ekle, kıvam alana kadar 15 dakika kaynat.",
+     "en": "Add the cooked beans and 200 ml of their cooking water to the sauce and simmer for 15 minutes until thickened."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocaktan almadan önce kişniş yapraklarını serpip sıcak pilavla servis et.",
+     "en": "Scatter the coriander leaves over before taking it off the heat, and serve hot with rice."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Fasulyeleri akşamdan suya koy.",
+     "en": "Put the beans in water the evening before."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Tencere",
+   "Kolay",
+   "Akşamdan ıslat"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "65eea52d-cde8-4230-b08a-ddd0e3eb4663",
+  "slug": "palak-paneer",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Palak paneer",
+   "en": "Palak paneer"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yeşil, kremalı ıspanak sosu içinde yumuşacık paneer parçaları. Ispanağı önce haşlamak rengini korur ve sosun acı tat bırakmasını engeller.",
+   "en": "Soft cubes of paneer in a creamy spinach sauce. Blanching the spinach first keeps its bright colour and stops the sauce tasting bitter."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "iyice yıkanmış",
+     "en": "washed well"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze peynir (paneer)",
+     "en": "Paneer"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "paneer",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı biber",
+     "en": "Hot green chilli"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "hot-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ispanakları kaynar suda 2 dakika haşla, hemen süzüp buzlu suya al.",
+     "en": "Blanch the spinach in boiling water for 2 minutes, then drain and plunge into iced water."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Ispanakları süzüp blenderdan geçirerek pürüzsüz bir püre yap.",
+     "en": "Drain the spinach and blend it to a smooth purée."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Paneri küp küp doğrayıp tereyağının yarısında hafifçe kızart, bir kenara al.",
+     "en": "Fry the paneer cubes in half the butter until lightly golden, then set them aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağında soğanı altın rengi alana kadar kavur, sarımsak ve zencefili ekleyip 1 dakika daha kavur.",
+     "en": "In the remaining butter, fry the onion until golden, then add the garlic and ginger and fry for 1 minute more."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domatesi, biberi ve kimyonu ekleyip yağ ayrılana kadar 8 dakika pişir.",
+     "en": "Add the tomato, chilli and cumin and cook until the fat separates, about 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Garam masala ve tuzu ekleyip bir dakika kavur, ardından ıspanak püresini ilave et.",
+     "en": "Stir in the garam masala and salt, fry for a minute, then add the spinach purée."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sosu 5 dakika kısık ateşte kaynat, ara sıra karıştırarak rengi bozulmadan koyulaşmasını sağla.",
+     "en": "Simmer the sauce gently for 5 minutes, stirring now and then so the colour stays bright."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kremayı ekleyip karıştır, paneri sosa katarak 3 dakika daha ısıt ve sıcak servis yap.",
+     "en": "Stir in the cream, add the paneer and heat through for 3 minutes more. Serve hot."
+    },
+    "timerSeconds": 180
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Vejetaryen",
+   "Tencere",
+   "Sebzeli",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "84550a53-3c6a-4ac8-8f76-de114a355627",
+  "slug": "shahi-paneer",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Shahi paneer",
+   "en": "Shahi paneer"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kaju kremasıyla yumuşatılmış, hafif tatlımsı ve kremalı bir domates sosunda paneer. Misafir sofrasına yakışan, yumuşak tatlı bir Hint yemeği.",
+   "en": "Paneer in a mild, slightly sweet tomato sauce enriched with cashew cream. A gentle, rich dish that suits a guest table."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 30,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze peynir (paneer)",
+     "en": "Paneer"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "paneer",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaju",
+     "en": "Cashew nuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "ılık suda bekletilmiş",
+     "en": "soaked in warm water"
+    },
+    "pantryKey": "cashew",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kişniş (toz)",
+     "en": "Ground coriander"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "coriander-ground",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kaju fıstıklarını 20 dakika ılık suda beklet, süzüp blenderda kremayla birlikte pürüzsüz bir macun yap.",
+     "en": "Soak the cashews in warm water for 20 minutes, drain, and blend them with the cream to a smooth paste."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Paneri küp şeklinde doğrayıp tereyağının yarısında hafifçe kızart, bir kenara al.",
+     "en": "Fry the paneer cubes in half the butter until lightly golden, then set aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağında soğanları altın rengi olana kadar kavur, sarımsak ve zencefili ekleyip 1 dakika daha kavur.",
+     "en": "In the rest of the butter, fry the onions until golden, then add the garlic and ginger and fry for 1 minute more."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domatesleri rendeleyip ekle, garam masala, kişniş ve tuzla birlikte yağ ayrılana kadar 10 dakika pişir.",
+     "en": "Add the grated tomatoes with the garam masala, coriander and salt, and cook until the fat separates, about 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kaju kremasını sosa ekleyip karıştır ve 5 dakika kısık ateşte pişir.",
+     "en": "Stir in the cashew cream and simmer gently for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Şekeri ve suyu ekleyip sosu istediğin kıvama getir, 3 dakika daha kaynat.",
+     "en": "Add the sugar and water, adjust the sauce to a pouring consistency, and boil for 3 minutes more."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Paneri sosa ekleyip 2 dakika ısıt, taze kişniş yapraklarıyla süsleyerek servis et.",
+     "en": "Add the paneer to the sauce, heat for 2 minutes, and serve topped with fresh coriander leaves."
+    },
+    "timerSeconds": 120
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "guest",
+   "Vejetaryen",
+   "Tencere",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "eb7df901-7f69-4e1b-87ac-e9c3726013f7",
+  "slug": "paneer-tikka-masala",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Paneer tikka masala",
+   "en": "Paneer tikka masala"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yoğurt ve baharatlı marinede bekletilmiş, tavada kızartılan paneer parçalarının kremalı domates sosuyla buluşması. Marinasyon işin en çok zaman isteyen kısmıdır.",
+   "en": "Paneer marinated in spiced yoghurt, pan-fried, then finished in a creamy tomato sauce. The marinating takes the longest but needs little attention."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze peynir (paneer)",
+     "en": "Paneer"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "4 cm'lik küpler halinde kesilmiş",
+     "en": "cut into 4 cm cubes"
+    },
+    "pantryKey": "paneer",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı toz biber",
+     "en": "Chilli powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yoğurt, zencefil, sarımsak, garam masala, acı toz biber, limon suyu ve tuzu karıştırarak marinadeyi hazırla.",
+     "en": "Mix the yoghurt, ginger, garlic, garam masala, chilli powder, lemon juice and salt to make the marinade."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Paneri marinadeye bulayıp kapağını kapatarak 2 saat buzdolabında beklet.",
+     "en": "Coat the paneer in the marinade, cover, and leave it in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Tavada tereyağını ısıt, paneri her yüzünü 2 dakika kızart ve bir kenara al.",
+     "en": "Heat the butter in a pan and fry the paneer for 2 minutes per side, then set aside."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Aynı tavaya soğanı koyup altın rengi olana kadar kavur, rendelenmiş domatesi ekleyip 8 dakika pişir.",
+     "en": "In the same pan, fry the onion until golden, then add the grated tomatoes and cook for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sosu blenderdan geçirip tavaya geri al, kremayı ekleyip karıştır.",
+     "en": "Blend the sauce smooth, return it to the pan and stir in the cream."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kızartılmış paneri sosun içine ekle ve 5 dakika kısık ateşte birlikte pişir.",
+     "en": "Add the fried paneer to the sauce and cook together gently for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Taze kişnişle süsleyip pilav ya da naan ile servis et.",
+     "en": "Garnish with fresh coriander and serve with rice or naan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Vejetaryen",
+   "Tavada",
+   "Marine",
+   "Yoğurtlu"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5cc9ee3b-1f88-49d2-aace-275c49a0d898",
+  "slug": "aloo-gobi",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Aloo gobi",
+   "en": "Aloo gobi"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patates ve karnabaharın kimyonlu, zerdeçallı tavada kendi suyunda yumuşayıp pişirildiği basit bir sebze yemeği. Ayrı bir sos gerektirmez, ekmekle de pilavla da iyi gider.",
+   "en": "Potatoes and cauliflower cooked in a spiced pan with their own steam, a simple vegetable dish that needs no separate sauce. Good with bread or rice."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "3 cm'lik küpler halinde doğranmış",
+     "en": "cut into 3 cm cubes"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karnabahar",
+     "en": "Cauliflower"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çiçeklerine ayrılmış",
+     "en": "broken into florets"
+    },
+    "pantryKey": "cauliflower",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı biber",
+     "en": "Hot green chilli"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "hot-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Karnabahar çiçeklerini ayır, patatesleri küp küp doğra.",
+     "en": "Separate the cauliflower into florets and cut the potatoes into cubes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı geniş tavada ısıt, kimyonu ekleyip tohumlar çatlayana kadar kavur.",
+     "en": "Heat the oil in a wide pan and fry the cumin until the seeds crackle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ekleyip altın rengi alana kadar 8 dakika kavur.",
+     "en": "Add the onion and fry for 8 minutes until golden."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Zencefil, sarımsak ve biberi ekleyip 1 dakika kavur.",
+     "en": "Add the ginger, garlic and chilli and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domatesi, zerdeçalı, garam masala ve tuzu ekleyip yağı ayrılana kadar 5 dakika pişir.",
+     "en": "Add the tomatoes, turmeric, garam masala and salt, and cook until the oil separates, about 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Patatesleri ekleyip sosla iyice karıştır, 2 yemek kaşığı su ilave et ve kapağını kapatarak 10 dakika kısık ateşte pişir.",
+     "en": "Add the potatoes, toss them well in the sauce, add 2 tablespoons of water, cover and cook gently for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Karnabahar çiçeklerini ekleyip karıştır, kapağı kapalı olarak 15 dakika daha pişir, arada bir karıştır.",
+     "en": "Add the cauliflower, stir, cover and cook for 15 minutes more, stirring now and then."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Üzerine kişniş yapraklarını serpip sıcak servis yap.",
+     "en": "Scatter the coriander leaves on top and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "vegetarian",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Sebzeli",
+   "Tavada",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c010b67a-0fa8-4f48-b737-1bf5caeb925b",
+  "slug": "baingan-bharta",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Baingan bharta (smoky aubergine curry)",
+   "en": "Baingan bharta (smoky aubergine curry)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ocakta ya da fırında közlenmiş patlıcanın ezilip baharatlı domates ve soğanla kavrulduğu, dumanlı tatlı bir sebze yemeği. Patlıcanın kabuğunun iyice kararması lezzetin kaynağıdır.",
+   "en": "Charred aubergine mashed and cooked down with onion, tomato and spices, with a deep smoky flavour. The skin must be properly blackened for the taste."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "iri olanlardan",
+     "en": "large ones"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı biber",
+     "en": "Hot green chilli"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "hot-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı toz biber",
+     "en": "Chilli powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanları gaz ocağının üzerinde ya da fırında kabuğu tamamen kararana kadar közle, serin bir yere al.",
+     "en": "Char the aubergines over a gas flame or under a grill until the skin is completely blackened, then set them somewhere cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Közlenmiş patlıcanların kabuklarını soy, içini çatalla ezerek bir kenara koy.",
+     "en": "Peel the charred aubergines and mash the flesh with a fork. Set aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tavada ısıt, kimyonu ekleyip çatlayana kadar kavur.",
+     "en": "Heat the oil in a pan and fry the cumin until the seeds crackle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ekleyip kısık ateşte 8 dakika yumuşayana kadar kavur.",
+     "en": "Add the onion and cook gently for 8 minutes until soft."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsak, zencefil ve biberi ekleyip 1 dakika kavur.",
+     "en": "Add the garlic, ginger and chilli and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekleyip suyunu çekene kadar 10 dakika pişir.",
+     "en": "Add the tomatoes and cook for 10 minutes until their juices have reduced."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş patlıcanı, garam masala, toz biber ve tuzu ekleyip 5 dakika karıştırarak pişir.",
+     "en": "Stir in the mashed aubergine with the garam masala, chilli powder and salt, and cook for 5 minutes, stirring."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kişniş yapraklarıyla süsleyip sıcak servis et.",
+     "en": "Garnish with the coriander leaves and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "vegetarian",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Sebzeli",
+   "Tavada",
+   "Közleme",
+   "spicy"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9cf69655-137f-42f1-8e9b-962fd8615885",
+  "slug": "sebzeli-biryani",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Sebzeli biryani",
+   "en": "Vegetable biryani"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Baharatlı, kızarmış soğanlı pirinç ile havuç ve bezelyenin tek tencerede pişirildiği, misafirlere de servis edilebilen bir pilav. Pirincin kendi buharında dinlendirilmesi tanesini ayrı tutar.",
+   "en": "Fragrant basmati layered with carrot and peas, scented with spices and topped with crisp fried onion. It is cooked in one pot, and resting the rice in its own steam keeps the grains separate."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Basmati pirinç",
+     "en": "Basmati rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "basmati-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yarısı halka, yarısı ince doğranmış",
+     "en": "half sliced into rings, half finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 600,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci 3 kez yıka ve 30 dakika ılık suda beklet, sonra süz.",
+     "en": "Rinse the rice three times and soak it in lukewarm water for 30 minutes, then drain."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Halka doğranmış soğanların yarısını yağda altın rengi ve gevrek olana kadar kızart, kâğıt havlu üzerine al.",
+     "en": "Fry the sliced onion in some of the oil until golden and crisp, then drain on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan soğanı aynı yağda ince doğrayıp kavur, sarımsak ve zencefili ekleyip kokusu çıkana kadar 5 dakika pişir.",
+     "en": "In the same oil, fry the chopped onion with the garlic and ginger for 5 minutes until fragrant."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Garam masala, zerdeçal, kimyon, defne yaprağı ve tuzu ekleyip yoğurdu azar azar katarak karıştır.",
+     "en": "Stir in the garam masala, turmeric, cumin, bay leaves and salt, then add the yoghurt gradually, stirring."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havuç küplerini ve bezelyeyi ekleyip 5 dakika kavur.",
+     "en": "Add the carrot cubes and peas and fry for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip hafifçe karıştır, üzerine sıcak suyu dök.",
+     "en": "Add the drained rice, stir gently, and pour over the hot water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp kısık ateşte suyunu çekene kadar 15 dakika pişir.",
+     "en": "Cover and cook on low heat for 15 minutes until the water is absorbed."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı açmadan 10 dakika dinlendir, kızarmış soğanları üzerine serpip servis et.",
+     "en": "Turn off the heat and rest it, covered, for 10 minutes. Top with the crisp onions and serve."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "onePot",
+   "Vejetaryen",
+   "Pilav",
+   "Tencere",
+   "Sebzeli",
+   "guest"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2d3cf32f-04b5-4d2d-b5f8-ec74d63a3af7",
+  "slug": "tandir-tavuk",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tandır tavuk (tandoori)",
+   "en": "Tandoori chicken"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Süzme yoğurt ve baharatlı marinede bekletilip fırında kızartılan tavuk butları. Kırmızımsı rengi ve hafif ekşi, dumanlı tadı ile tandırın yerine geçer.",
+   "en": "Chicken thighs marinated in strained yoghurt and spices, then roasted in the oven. The yoghurt keeps the meat moist and the spices give it a deep red colour and a slight tang."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, kemikli",
+     "en": "skinless, bone-in"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Garam masala",
+     "en": "Garam masala"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Ground cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kişniş (toz)",
+     "en": "Ground coriander"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "coriander-ground",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "fırça ile sürmek için",
+     "en": "for brushing"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış, servis için",
+     "en": "sliced into rings, to serve"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarının üzerine derine çizikler at ve derin bir kaba al.",
+     "en": "Make deep slashes in the chicken thighs and place them in a deep bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Süzme yoğurt, limon suyu, zencefil, sarımsak, baharatlar ve tuzu karıştırıp marinadeyi hazırla.",
+     "en": "Mix the strained yoghurt, lemon juice, ginger, garlic, spices and salt to make the marinade."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavukları marinadeye bulayıp kapağını kapatarak 2 saat buzdolabında beklet.",
+     "en": "Coat the chicken in the marinade, cover, and leave in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt ve fırın tepsisini alüminyum folyo ile kapla.",
+     "en": "Heat the oven to 220 degrees and line a baking tray with foil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavukları tepsiye diz, üzerine yağ sür ve 25 dakika fırınla.",
+     "en": "Lay the chicken on the tray, brush with oil and roast for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tavukları çevirip yüzeyine yağ sür ve 15 dakika daha fırınla.",
+     "en": "Turn the chicken over, brush again with oil and roast for 15 minutes more."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Fırını üst ızgara moduna alıp yüzeyleri 5 dakika kızart.",
+     "en": "Switch the oven to grill and colour the surfaces for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Halka doğranmış kırmızı soğanla birlikte sıcak servis yap.",
+     "en": "Serve hot with the red onion rings."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Fırında",
+   "Marine",
+   "Tavuklu"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0f513801-f419-4b94-9f09-4e04330f6068",
+  "slug": "tavuk-vindaloo",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk vindaloo",
+   "en": "Chicken vindaloo"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sirkeli, sarımsaklı ve acılı bir marinede bekletilen tavuğun yavaşça pişirildiği, ekşi ve acılı Goa yemeği. Acılığı biberle ayarlanabilir.",
+   "en": "A sharp, hot dish from Goa: chicken marinated in vinegar, garlic and chilli, then slowly simmered. The heat can be adjusted with the number of chillies."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, kemiksiz",
+     "en": "skinless, boneless"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı acı biber",
+     "en": "Red chillies"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "kurutulmuş ya da taze",
+     "en": "dried or fresh"
+    },
+    "pantryKey": "red-chilli",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kişniş (toz)",
+     "en": "Ground coriander"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "coriander-ground",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karanfil",
+     "en": "Cloves"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "clove",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kırmızı biber, karanfil, zencefil, 3 diş sarımsak, kimyon, zerdeçal, sirke ve 100 ml suyu blenderdan geçirip pürüzsüz bir marinade yap.",
+     "en": "Blend the chillies, cloves, ginger, three garlic cloves, cumin, turmeric, vinegar and 100 ml of the water into a smooth marinade."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuğu ve tuzu marinadeye bulayıp 4 saat buzdolabında beklet.",
+     "en": "Coat the chicken and salt in the marinade and leave it in the fridge for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede yağı ısıt, soğanları ince doğrayıp altın rengi olana kadar kavur.",
+     "en": "Heat the oil in a wide pan and fry the onions until golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan sarımsağı ekleyip 1 dakika kavur, marine edilmiş tavukları ilave edip her tarafı hafifçe mühürle.",
+     "en": "Add the remaining garlic and fry for 1 minute, then add the marinated chicken and seal it on all sides."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kalan 100 ml suyu ekleyip kapağını kapatarak kısık ateşte 35 dakika pişir.",
+     "en": "Add the remaining 100 ml water, cover and simmer gently for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Kapağı aç, sosu koyulaştırmak için 5 dakika daha kaynat ve sıcak servis yap.",
+     "en": "Uncover and boil for 5 minutes more to thicken the sauce. Serve hot."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "spicy",
+   "glutenFree",
+   "dairyFree",
+   "makeAhead",
+   "Tavuklu",
+   "Tencere",
+   "Marine"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "325d4d8e-7f03-4e98-afd4-fa018de07ab1",
+  "slug": "balik-kori",
+  "cuisine": "indian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Balık köri",
+   "en": "Fish curry"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Hindistan cevizi sütlü, domatesli ve hafif acılı bir köri sosunda pişirilen beyaz balık. Balık çok pişmez, bu yüzden sos tamamen hazır olduktan sonra eklenmelidir.",
+   "en": "White fish cooked in a mildly hot curry sauce with coconut milk and tomato. The fish cooks quickly, so add it only once the sauce is ready."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz balık fileto",
+     "en": "White fish fillets"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kalın parçalar halinde kesilmiş",
+     "en": "cut into thick pieces"
+    },
+    "pantryKey": "white-fish-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hindistan cevizi sütü",
+     "en": "Coconut milk"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "coconut-milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köri",
+     "en": "Curry powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "curry-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı biber",
+     "en": "Hot green chilli"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "hot-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Balık parçalarını yıka, kurula ve tuz ile limon suyunu serperek 10 dakika beklet.",
+     "en": "Rinse the fish pieces, pat dry, and leave them 10 minutes with salt and lemon juice sprinkled over."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yağı geniş tencerede ısıt, soğanı ince doğrayıp yumuşayana kadar kavur.",
+     "en": "Heat the oil in a wide pan and fry the onion until soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsak, zencefil ve biberi ekleyip kokusu çıkana kadar kavur.",
+     "en": "Add the garlic, ginger and chilli and fry until fragrant."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köri tozu ve zerdeçalı ekleyip 30 saniye kavur.",
+     "en": "Add the curry powder and turmeric and fry for 30 seconds."
+    },
+    "timerSeconds": 30
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekleyip yağ ayrılana kadar 8 dakika pişir.",
+     "en": "Add the tomatoes and cook until the oil separates, about 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hindistan cevizi sütü ve 150 ml suyu ekleyip karıştır, sosu 5 dakika kaynat.",
+     "en": "Stir in the coconut milk and the 150 ml water, and boil the sauce for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Balık parçalarını sosun içine yerleştir, kapağını kapatıp kısık ateşte 8 dakika pişir.",
+     "en": "Lower the fish pieces into the sauce, cover, and cook gently for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Taze kişnişle süsleyip pilavla servis et.",
+     "en": "Garnish with fresh coriander and serve with rice."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "glutenFree",
+   "dairyFree",
+   "Balık",
+   "Tencere",
+   "onePot"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

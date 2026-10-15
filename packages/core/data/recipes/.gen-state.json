@@ -2600,12 +2600,23 @@
     "tavuk-vindaloo",
     "balik-kori"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "rajma",
+    "palak-paneer",
+    "shahi-paneer",
+    "paneer-tikka-masala",
+    "aloo-gobi",
+    "baingan-bharta",
+    "sebzeli-biryani",
+    "tandir-tavuk",
+    "tavuk-vindaloo",
+    "balik-kori"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 89097,
    "startedAt": "2026-10-15T22:42:57.853Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:45:51.376Z"
   },
   {
    "id": "g082",
@@ -2816,11 +2827,11 @@
     "firinda-misir",
     "deviled-eggs"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:45:39.632Z",
    "finishedAt": null
   },
   {
