@@ -1450,12 +1450,23 @@
     "lahana-dolmasi",
     "zeytinyagli-patlican-dolmasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "etli-pazi-sarmasi",
+    "kuru-dolma",
+    "mumbar-dolmasi",
+    "sogan-dolmasi",
+    "ayva-dolmasi",
+    "kabak-cicegi-dolmasi",
+    "kereviz-dolmasi",
+    "havuc-dolmasi",
+    "lahana-dolmasi",
+    "zeytinyagli-patlican-dolmasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 90026,
    "startedAt": "2026-10-15T20:03:26.024Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:06:27.347Z"
   },
   {
    "id": "g046",
@@ -1929,11 +1940,11 @@
     "safranli-risotto",
     "bezelyeli-risotto"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:05:30.201Z",
    "finishedAt": null
   },
   {
