@@ -1677,12 +1677,23 @@
     "firinda-kiymali-eriste",
     "etli-pilav"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kalkan-tava",
+    "ton-balikli-makarna",
+    "somonlu-makarna",
+    "kiymali-makarna",
+    "yogurtlu-makarna",
+    "peynirli-makarna",
+    "tavuklu-makarna",
+    "mantarli-makarna",
+    "firinda-kiymali-eriste",
+    "etli-pilav"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 81377,
    "startedAt": "2026-10-15T20:02:13.627Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:04:56.900Z"
   },
   {
    "id": "g055",
@@ -1893,11 +1904,11 @@
     "tost",
     "karisik-tost"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:04:47.849Z",
    "finishedAt": null
   },
   {
