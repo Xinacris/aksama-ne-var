@@ -2979,12 +2979,15 @@
     "salade-nicoise",
     "salade-de-chevre-chaud"
    ],
-   "status": "pending",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "salade-nicoise",
+    "salade-de-chevre-chaud"
+   ],
    "failed": [],
-   "tokens": null,
-   "startedAt": null,
-   "finishedAt": null
+   "tokens": 57646,
+   "startedAt": "2026-10-15T22:49:01.354Z",
+   "finishedAt": "2026-10-15T22:50:03.254Z"
   },
   {
    "id": "g098",
