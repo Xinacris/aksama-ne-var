@@ -3058,12 +3058,21 @@
     "ile-flottante",
     "tarte-au-citron"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "creme-br-lee",
+    "cikolatali-mousse",
+    "tarte-tatin",
+    "clafoutis",
+    "madeleine",
+    "crepes-suzette",
+    "ile-flottante",
+    "tarte-au-citron"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 88704,
    "startedAt": "2026-10-15T22:50:50.367Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:53:57.377Z"
   },
   {
    "id": "g100",
@@ -3120,11 +3129,11 @@
     "sayur-asem",
     "sop-buntut"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:53:19.438Z",
    "finishedAt": null
   },
   {
