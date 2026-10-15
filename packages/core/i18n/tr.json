@@ -407,8 +407,15 @@
       "tooLong": "Link ya da metin biraz uzun oldu; kısaltıp yeniden dener misin?",
       "needInput": "Bir link ya da tarif metni gerekiyor.",
       "slow": "Kaynak geç yanıt verdi. Açıklamayı yapıştırırsan hemen devam ederiz.",
-      "failed": "Bu linkten tarif alamadık. Açıklamayı yapıştırarak deneyebilirsin."
-    }
+      "failed": "Bu linkten tarif alamadık. Açıklamayı yapıştırarak deneyebilirsin.",
+      "instagramPrivate": "Bu gönderiye ulaşamadık: hesap gizli ya da gönderi kaldırılmış olabilir. Açıklamayı görebiliyorsan kopyalayıp aşağıya yapıştır, tarifi oradan çıkaralım."
+    },
+    "fromScreenshot": "Ekran görüntüsünden oku",
+    "screenshotHint": "Açıklamanın ekran görüntülerini seç; uzunsa sırayla birkaç tane. Yazı telefonunda okunur, görüntüler hiçbir yere gönderilmez.",
+    "screenshotRead": "{{count}} ekran görüntüsünden okundu. Metni kontrol edebilirsin; tarif hazırlanıyor.",
+    "screenshotEmpty": "Görüntülerde yazı bulamadık. Açıklamayı kopyalayıp yapıştırmayı dene.",
+    "screenshotFailed": "Ekran görüntüsü okunamadı. Açıklamayı kopyalayıp yapıştırmayı dene.",
+    "screenshotUnavailable": "Bu sürümde ekran görüntüsü okuma yok; açıklamayı kopyalayıp yapıştırabilirsin."
   },
   "common": {
     "and": "ve",

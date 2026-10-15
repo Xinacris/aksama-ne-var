@@ -407,8 +407,15 @@
       "tooLong": "The link or text is a bit long; could you shorten it and try again?",
       "needInput": "We need a link or a recipe text.",
       "slow": "The source was slow to answer. Paste the caption and we’ll carry on straight away.",
-      "failed": "We couldn’t get a recipe from this link. Try pasting the caption."
-    }
+      "failed": "We couldn’t get a recipe from this link. Try pasting the caption.",
+      "instagramPrivate": "We couldn’t reach this post: the account may be private or the post removed. If you can see the caption, copy it and paste it below and we’ll take the recipe from there."
+    },
+    "fromScreenshot": "Read from screenshot",
+    "screenshotHint": "Pick screenshots of the caption; for a long one, several in order. The text is read on your phone and the images aren’t sent anywhere.",
+    "screenshotRead": "Read from {{count}} screenshot(s). You can check the text; the recipe is on its way.",
+    "screenshotEmpty": "We found no text in the images. Try copying and pasting the caption.",
+    "screenshotFailed": "Couldn’t read the screenshot. Try copying and pasting the caption.",
+    "screenshotUnavailable": "This version can’t read screenshots; you can copy and paste the caption."
   },
   "common": {
     "and": "and",

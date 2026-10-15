@@ -226,5 +226,20 @@ Spec: `PROMPT-v3.2.md` (with the owner's four answers at the end). All work on `
 - [x] R4. iOS AlarmKit local module (`apps/mobile/modules`), gated by `EXPO_PUBLIC_ENABLE_ALARMKIT` (default off, not linked when off), fallback to the notification.
   - `modules/anv-alarmkit` (Swift + podspec), `plugins/withAlarmKit.js` (writes or deletes the untracked `expo-module.config.json`; checked with `expo-modules-autolinking resolve`), `src/alarm/alarmKit.ts`. JS tested against an in-memory module (schedule, +1 dk moves, close cancels, refused → notification, type switch, sound off, flag off, iOS < 26). **The Swift has never been compiled:** no Xcode here. The owner's first flag-on dev build is the test.
   - Also: expo patch updates (57.0.29 etc.) that expo-doctor asked for, expo-intent-launcher added.
-- [ ] R5. Import: `AI_PROVIDER` (anthropic | gemini | none; unset = today's chain), Instagram tokenless oEmbed as a public/private check, YouTube check, share-sheet intake (mobile), "Ekran görüntüsünden oku" (on-device OCR, mobile).
-- [ ] R6. README: what needs a dev build, env vars, provider costs. Checks green → push.
+- [x] R5. Import: `AI_PROVIDER` (anthropic | gemini | none; unset = today's chain), Instagram tokenless oEmbed as a public/private check, YouTube check, share-sheet intake (mobile), "Ekran görüntüsünden oku" (on-device OCR, mobile).
+  - `providersFromEnv` + `aiProvider` (web), the Instagram adapter on tokenless oEmbed (checked live: public → paste message, a fake id → the new private message), `+native-intent.ts` + `share/incoming.ts` + `plugins/withShareIntake.js` (Android on, iOS extension behind `ANV_IOS_SHARE_EXTENSION=1`), `import/screenshots.ts` + core `captionFromScreenshots`. New deps: expo-sharing, expo-image-picker, expo-text-extractor 2.0.0.
+- [x] R6. README: what needs a dev build, env vars, provider costs. Checks green → push.
+  - README (native-build table, AlarmKit test steps, `AI_PROVIDER`, costs), docs/IMPORT.md (sources, providers, costs, share, screenshots), docs/MOBILE.md, `.env.example`.
+
+## Handoff after Round 3.2
+
+**Done (2026-10-15):** R0–R6 above. Last code push is green: lint, typecheck, core 385 / mobile 60 / web 200, build, full e2e 69, expo-doctor 21/21, iOS + Android export. No APK was built (no pipeline changes this round). The 1.0.1 APK in `~/Downloads` predates this round.
+
+**Open items for the owner:**
+- [ ] **New dev build on the iPhone** (the "Custom sound … not found" log means the current one has no sound file). Then check the cooking timer: nothing moves while it counts, Duraklat / +1 dk / Kapat, the "Diğer zamanlayıcılar" strip, and the notification sound with the phone locked.
+- [ ] **AlarmKit test build:** `EXPO_PUBLIC_ENABLE_ALARMKIT=1` (README › "iOS: Telefonun saati / AlarmKit"). The Swift has never been compiled. If it fails, build without the flag and send the Xcode error.
+- [ ] **Android build** (dev build or the next APK): "Telefonun saatinde kur" on a running timer, sharing a reel from Instagram → "Akşama ne var?", and "Ekran görüntüsünden oku" with two screenshots of a long caption.
+- [ ] **iOS share extension:** only if wanted, build with `ANV_IOS_SHARE_EXTENSION=1` (needs a paid Apple team; EAS registers the App Group).
+- [ ] **AI provider:** production still runs Gemini → Claude (unset `AI_PROVIDER`). To use Claude only, set `ANTHROPIC_API_KEY` and `AI_PROVIDER=anthropic` on Vercel and redeploy (≈ $0.0005 per import).
+- [ ] Still open from 3.1: back up the release keystore + `AKSAMA_UPLOAD_*`; decide the package name.
+- An untracked root `tsconfig.json` (`extends: expo/tsconfig.base`, created 2026-10-15 05:14, probably by an `expo` command run at the repo root) was left alone. Delete it unless you made it.

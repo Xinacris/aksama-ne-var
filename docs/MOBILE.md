@@ -53,8 +53,6 @@ To use a local web server instead: `EXPO_PUBLIC_API_URL=http://<computer-ip>:300
 
 - **Sync between devices.** Two phones (or a phone and a browser) don't see each other; Ayarlar says
   "Eşitleme yakında". Comes with the Supabase round (`docs/SUPABASE_MIGRATION.md`).
-- **Share sheet import** (sharing a reel from Instagram/TikTok straight into the app). Needs a
-  development build — see the plan below.
 - **Push notifications** for prep reminders (reminders show inside the app).
 - **Store builds** (EAS) and real icons/splash artwork.
 
@@ -242,14 +240,20 @@ replaced before the first store build, and **it can't be changed after the first
 `com.<your-company>.mealplanner` or `app.<brand>.dinner`. Display names: "Akşama ne var?" (Turkish),
 "What’s for dinner?" (English) via `app.json` `locales`.
 
-## Share-sheet import — plan
+## Share-sheet import and screenshots
 
-1. Create a development build (`npx expo prebuild` / EAS development profile).
-2. Add `expo-share-intent` (or a small config plugin): iOS Share Extension + Android
-   `ACTION_SEND` intent filter for `text/plain` and URLs.
-3. On receive, open `/tarifler/ice-aktar?url=…` (or `?text=…`) — the screen already starts the
-   import by itself for both parameters (the web's Web Share Target uses the same route).
-4. Test with Instagram, TikTok and YouTube shares on both platforms.
+- **Android:** share a reel or video from Instagram / TikTok / YouTube → "Akşama ne var?" (an
+  `ACTION_SEND` `text/plain` intent filter from expo-sharing, via `plugins/withShareIntake.js`). The
+  import screen opens with the link and starts on its own (`src/app/+native-intent.ts`,
+  `src/share/incoming.ts`).
+- **iOS:** the Share Extension is off by default. Build with `ANV_IOS_SHARE_EXTENSION=1` to add it:
+  it is a second signed target with an App Group (`group.<bundle id>`), which a free Apple team
+  can't sign; EAS registers it on the first build. Expo marks receiving shares experimental.
+- **"Ekran görüntüsünden oku"** in the Instagram paste fallback: pick screenshots of the caption;
+  the text is read on the phone (expo-text-extractor: Vision / ML Kit) and imported like a pasted
+  caption (docs/IMPORT.md). The system photo picker needs no library permission; camera and
+  microphone permissions are off (Android `CAMERA` blocked).
+- All three need a native build (development build or APK); Expo Go has none of them.
 
 ## Store-release checklist (later)
 

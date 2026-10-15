@@ -41,7 +41,7 @@ function pasteMessage(source: ImportSource, reason: "instagram" | "title-only" |
   const name = PLATFORM_LABEL[source.platform];
   switch (reason) {
     case "instagram":
-      return tr("import.msg.instagram");
+      return source.availability === "private" ? tr("import.msg.instagramPrivate") : tr("import.msg.instagram");
     case "title-only":
       return tr("import.msg.titleOnly");
     case "no-recipe-data":

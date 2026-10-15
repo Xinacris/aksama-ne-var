@@ -12,7 +12,7 @@ const limiter = new DailyLimiter();
 function deps(): TranslateDeps {
   return {
     fetch,
-    env: { GEMINI_API_KEY: process.env.GEMINI_API_KEY, GEMINI_MODEL: process.env.GEMINI_MODEL, ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY },
+    env: { AI_PROVIDER: process.env.AI_PROVIDER, GEMINI_API_KEY: process.env.GEMINI_API_KEY, GEMINI_MODEL: process.env.GEMINI_MODEL, ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY },
     anthropic: (apiKey) => new Anthropic({ apiKey }),
     limiter,
   };
