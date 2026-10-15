@@ -1,1 +1,818 @@
-[]
+[
+ {
+  "id": "fd339a4a-be57-475f-9bf9-37d472a40ce3",
+  "slug": "mulligatawny",
+  "cuisine": "indian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Mulligatawny",
+   "en": "Mulligatawny soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Güney Hindistan kökenli, tavuk ve kırmızı mercimekle yapılan köri aromalı bir çorba. Elmanın tatlılığı ve biraz hindistan cevizi sütü dengeyi tutar.",
+   "en": "A curry-spiced soup from southern India, made with chicken and red lentils. The sweetness of the apple and a little coconut milk keep it balanced."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, küp doğranmış",
+     "en": "skinned, cut into cubes"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı mercimek",
+     "en": "Red lentils"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "red-lentil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma",
+     "en": "Apple"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulup küp doğranmış",
+     "en": "peeled and diced"
+    },
+    "pantryKey": "apple",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köri tozu",
+     "en": "Curry powder"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "curry-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hindistan cevizi sütü",
+     "en": "Coconut milk"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "coconut-milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Basmati pirinç",
+     "en": "Basmati rice"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "servis için pişirilecek",
+     "en": "to cook and serve on the side"
+    },
+    "pantryKey": "basmati-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim kesilmiş, servis için",
+     "en": "cut into wedges, for serving"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tencerede zeytinyağını ısıt, tavuk parçalarını ekleyip kenarları altın rengi olana kadar çevirerek soteleyin.",
+     "en": "Heat the olive oil in a heavy pan and brown the chicken pieces on all sides, turning until golden at the edges."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı, havucu ve elmayı ekleyip 5 dakika yumuşayana kadar kavur.",
+     "en": "Add the onion, carrot and apple and fry for 5 minutes until softened."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ve köriyi ekleyip 1 dakika kavur, ardından domatesleri ekleyip suyunu salana kadar pişir.",
+     "en": "Stir in the garlic and curry powder and fry for 1 minute, then add the tomatoes and cook until they release their juice."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Mercimeği ve tavuk suyunu ekle, kaynayınca ateşi kısıp 25 dakika pişir.",
+     "en": "Add the lentils and chicken stock, bring to the boil, then lower the heat and simmer for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tavuğu tencereden çıkarıp küçük parçalara ayır, tencereye geri koy ve hindistan cevizi sütünü ekleyip karıştır.",
+     "en": "Lift out the chicken, shred it into small pieces, return it to the pot and stir in the coconut milk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı blenderdan geçir, kıvamı kısa gelirse sıcak su ekle ve tuzunu ayarla.",
+     "en": "Blend the soup until smooth, thin it with a little hot water if it is too thick, and season with salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirinci ayrı bir tencerede tuzlu suda pişirip süz; çorbayı kaselere al, pirinç ve limon dilimleriyle sıcak servis et.",
+     "en": "Cook the rice separately in salted water and drain it. Ladle the soup into bowls and serve hot with the rice and lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [],
+  "freezerItem": null,
+  "tags": [
+   "Tencere",
+   "Tavuklu",
+   "onePot",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c8f0c0fa-cb0c-4b54-9039-2bd2a5b13a4a",
+  "slug": "domates-rasam",
+  "cuisine": "indian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Domates rasam",
+   "en": "Tomato rasam"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Güney Hindistan'ın ekşi, baharatlı ve sulu çorbası. Demirhindi ve kavrulmuş tohumlar domatesle buluşur, genellikle pilavın yanında içilir.",
+   "en": "A sour, spiced, thin soup from South India. Tamarind and toasted, crushed seeds meet tomato, and it is usually eaten with rice."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Demirhindi",
+     "en": "Tamarind"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "sıcak suda ıslatılıp posası ezilmiş",
+     "en": "soaked in hot water and mashed to a pulp"
+    },
+    "pantryKey": "tamarind",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon tohumu",
+     "en": "Cumin seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "kuru tavada kavrulmuş, dövülmüş",
+     "en": "dry-toasted and crushed"
+    },
+    "pantryKey": "cumin-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kişniş tohumu",
+     "en": "Coriander seeds"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "kuru tavada kavrulmuş, dövülmüş",
+     "en": "dry-toasted and crushed"
+    },
+    "pantryKey": "coriander-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "kuru tavada kavrulmuş, dövülmüş",
+     "en": "dry-toasted and crushed"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hardal tohumu",
+     "en": "Mustard seeds"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "mustard-seed",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köri yaprağı",
+     "en": "Curry leaves"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "curry-leaves",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış, süslemek için",
+     "en": "finely chopped, for garnish"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kuru tavada kimyon, kişniş tohumu ve karabiberi 1 dakika kavur, havanda kabaca dövüp ayır.",
+     "en": "Dry-toast the cumin, coriander seeds and black pepper in a pan for 1 minute, then crush them roughly in a mortar."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Demirhindiyi sıcak suda 10 dakika bekletip posasını ez ve suyunu süz.",
+     "en": "Leave the tamarind in hot water for 10 minutes, press the pulp and strain the juice."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tencerede yağı ısıt, hardal tohumlarını ekle; taneler çıtlayınca köri yaprağı, pul biber, sarımsak ve zencefili 30 saniye kavur.",
+     "en": "Heat the oil in a pot and add the mustard seeds. When they start to pop, fry the curry leaves, chilli flakes, garlic and ginger for 30 seconds."
+    },
+    "timerSeconds": 30
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekleyip suyunu salana kadar 5 dakika pişir.",
+     "en": "Add the tomatoes and cook for 5 minutes until they break down and release their juice."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Dövülmüş baharatı, demirhindi suyunu, 1 litre sıcak suyu ve tuzu ekle. Kısık ateşte 10 dakika kaynat.",
+     "en": "Add the crushed spices, the tamarind juice, the hot water and salt. Simmer gently for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Çorba köpürmeye başlayınca ocaktan al, taze kişnişle süsleyip sıcak servis et.",
+     "en": "Once it starts to foam, take it off the heat, garnish with fresh coriander and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "onePot",
+   "budget",
+   "Tencere",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "4736a814-84c2-4482-ae82-6817297347e3",
+  "slug": "mercimek-shorba",
+  "cuisine": "indian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Mercimek shorba",
+   "en": "Spiced lentil shorba"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kırmızı mercimeğin kimyon ve paprikayla tatlandırılmış sade bir çorbası. Üstüne gezdirilen nane ve pul biberli tereyağı ile limon sıkılarak servis edilir.",
+   "en": "A plain red lentil soup warmed with cumin and paprika. It is finished with a mint and chilli butter poured over the top and a squeeze of lemon."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kırmızı mercimek",
+     "en": "Red lentils"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "iki kez yıkanmış",
+     "en": "rinsed twice"
+    },
+    "pantryKey": "red-lentil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "yarısı çorbaya, yarısı üstüne",
+     "en": "half for the soup, half for the topping"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Ground cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "tereyağı için",
+     "en": "for the butter"
+    },
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "tereyağı için",
+     "en": "for the butter"
+    },
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim kesilmiş",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mercimeği süzüp yıka, soğanı ve havucu küçük küçük doğra.",
+     "en": "Drain and rinse the lentils, then finely dice the onion and carrot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede tereyağının yarısını eritip soğan ve havucu 5 dakika yumuşayana kadar soteleyin.",
+     "en": "Melt half the butter in a pot and soften the onion and carrot for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domates salçasını, sarımsağı, kimyonu ve paprikayı ekleyip 1 dakika kavur.",
+     "en": "Stir in the tomato paste, garlic, cumin and paprika and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Mercimeği ve sebze suyunu ekle, kaynayınca ateşi kısıp mercimekler tamamen dağılana kadar 25 dakika pişir.",
+     "en": "Add the lentils and vegetable stock. Once boiling, lower the heat and cook for 25 minutes until the lentils have completely broken down."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Çorbayı blenderdan geçir, kıvamı kısa gelirse sıcak su ekle ve tuzunu ayarla.",
+     "en": "Blend until smooth, add a splash of hot water if it is too thick, and season with salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tavada kalan tereyağını eritip pul biber ve kuru nane ile birlikte 30 saniye çevirerek kavur.",
+     "en": "Melt the remaining butter in a small pan and swirl it with the chilli flakes and dried mint for 30 seconds."
+    },
+    "timerSeconds": 30
+   },
+   {
+    "text": {
+     "tr": "Çorbayı kaselere al, üzerine nane ve pul biberli tereyağını gezdir, limon dilimleriyle sıcak servis et.",
+     "en": "Ladle the soup into bowls, drizzle the mint and chilli butter over the top and serve hot with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "budget",
+   "onePot",
+   "Tencere",
+   "Vejetaryen",
+   "Bakliyat",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
