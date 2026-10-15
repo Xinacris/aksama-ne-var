@@ -16066,5 +16066,2283 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "df680c65-6c4a-4a03-9279-ad694e3d89a8",
+  "slug": "terbiyeli-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Terbiyeli köfte",
+   "en": "Meatballs in egg-lemon broth"
+  },
+  "shortTitle": {
+   "en": "Egg-lemon meatballs"
+  },
+  "description": {
+   "tr": "Pirinçli küçük köftelerin yumurta ve limonlu terbiye ile hazırlanan, ılık ve hafif ekşimsi bir çorbası. Lezzetini terbiyenin pürüzsüz kıvamı verir.",
+   "en": "Small rice-and-meat meatballs served in a silky egg and lemon broth. The soup is warm and lightly sour, and the texture of the sauce is what makes it."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "terbiye için",
+     "en": "for the sauce"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kıymayı, rendelenmiş soğanı, yıkanmış pirinci, maydanozu, tuzu ve karabiberi bir kapta iyice yoğur. Cevizden biraz büyük köfteler yuvarla.",
+     "en": "Knead the mince, grated onion, rinsed rice, parsley, salt and pepper together in a bowl. Roll into meatballs a little larger than a walnut."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede suyu tuzla birlikte kaynat. Köfteleri tek tek suya bırak.",
+     "en": "Bring the water to the boil in a wide pan with a little salt. Drop the meatballs in one at a time."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köfteleri kısık ateşte 20 dakika pişir.",
+     "en": "Simmer the meatballs gently for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları ve limon suyunu bir kasede çırp. Unu serpip karıştır, üzerine bir kepçe sıcak et suyu ekleyip çırparak ılıt.",
+     "en": "Beat the eggs and lemon juice in a bowl. Stir in the flour, then add a ladle of hot broth while whisking to temper the mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Terbiyeyi tencereye yavaşça dök, sürekli karıştırarak 3 dakika ocakta bekle. Kaynatma.",
+     "en": "Pour the mixture slowly into the pan and stir constantly for 3 minutes over low heat. Do not let it boil."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Tereyağını küçük bir tavada eritip kuru naneyi karıştır ve çorbanın üstüne gezdir.",
+     "en": "Melt the butter in a small pan, stir in the dried mint and drizzle it over the soup."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Tencere",
+   "onePot"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f3f28aa9-c4ba-405b-a891-4a7de1d0a856",
+  "slug": "arpacik-soganli-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Arpacık soğanlı köfte",
+   "en": "Meatballs with pearl onions"
+  },
+  "shortTitle": {
+   "tr": "Arpacık köfte",
+   "en": "Meatballs & onions"
+  },
+  "description": {
+   "tr": "Kızartılmış köftelerin arpacık soğanlarla domates sosunda pişirilmiş hali. Soğanlar tatlanır, sos kıvam bulur ve köftelere sinmiş olur.",
+   "en": "Fried meatballs finished in a tomato sauce with sweet pearl onions. The onions soften and turn sweet while the sauce thickens around the meat."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Pearl onions"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş",
+     "en": "peeled"
+    },
+    "pantryKey": "pearl-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kıymayı, rendelenmiş soğanı, galeta ununu, yumurtayı, tuzu ve karabiberi iyice yoğur. Cevizden biraz küçük köfteler yuvarla.",
+     "en": "Knead the mince, grated onion, breadcrumbs, egg, salt and pepper together well. Roll into meatballs a little smaller than a walnut."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada yağı ısıt, köfteleri her yüzü altın renk alana kadar kızart ve bir tabağa al.",
+     "en": "Heat the oil in a frying pan and fry the meatballs until golden on all sides. Set them aside on a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı yağda soyulmuş arpacık soğanları 5 dakika kavur.",
+     "en": "In the same oil, fry the peeled pearl onions for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Salçayı ekleyip 1 dakika karıştır.",
+     "en": "Add the tomato paste and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Rendelenmiş domatesi ve suyu ekle. Sos kaynamaya başlayınca köfteleri sosun içine diz.",
+     "en": "Add the grated tomato and the water. When the sauce starts to bubble, arrange the meatballs in it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp kısık ateşte 25 dakika pişir.",
+     "en": "Cover and simmer over low heat for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, ince doğranmış maydanozla süsle ve sıcak servis et.",
+     "en": "Take off the heat, scatter over the chopped parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ca2214db-0e4e-460b-b312-fbdae7f3a63d",
+  "slug": "patatesli-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Patatesli köfte",
+   "en": "Meatball and potato stew"
+  },
+  "shortTitle": {
+   "en": "Potato meatball stew"
+  },
+  "description": {
+   "tr": "Kıymalı köftelerin patates ve sivri biberle domates sosunda birlikte pişirildiği, tek tencerede hazırlanan doyurucu bir yemek. Patatesler sosu emer.",
+   "en": "Meatballs and potatoes simmered together in a light tomato sauce with long green peppers. Everything cooks in one pan, and the potatoes soak up the sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "cubed"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green peppers"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kıymayı galeta unu, tuz, karabiber ve toz kırmızı biberle yoğur. Cevizden büyük, yassı köfteler yap.",
+     "en": "Knead the mince with breadcrumbs, salt, pepper and paprika. Shape into large, flattened meatballs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri yağın yarısında 5 dakika çevirerek kızart, bir kenara al.",
+     "en": "Fry the potato cubes in half the oil for 5 minutes, turning them, then set aside."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kalan yağda köfteleri her yüzü renk alana kadar kızart.",
+     "en": "Brown the meatballs on both sides in the remaining oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tavaya soğan ve sivri biberi ekle, yumuşayana kadar kavur.",
+     "en": "Add the onion and long green peppers to the same pan and cook until soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salçayı ve rendelenmiş domatesi ekle, 2 dakika kavur.",
+     "en": "Stir in the tomato paste and grated tomato and fry for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Suyu ekleyip kaynat, patatesleri ve köfteleri sosun içine yerleştir.",
+     "en": "Add the water and bring to the boil, then nestle the potatoes and meatballs into the sauce."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp kısık ateşte 25 dakika pişir, tuzunu ayarlayıp sıcak servis et.",
+     "en": "Cover and simmer gently for 25 minutes, adjust the salt and serve hot."
+    },
+    "timerSeconds": 1500
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Tencere",
+   "onePot"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "48b2e252-8240-4503-9474-8271b009d291",
+  "slug": "bezelyeli-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Bezelyeli köfte",
+   "en": "Meatballs with peas"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kıymalı köftelerin havuç ve bezelyeyle hafif bir domates sosunda pişirilmiş hali. Sade, kolay bir ev yemeği.",
+   "en": "Home-style meatballs cooked in a light tomato sauce with carrot and peas. A gentle, easy weeknight dish that children usually like."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "cubed"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "çözdürülmemiş",
+     "en": "not thawed"
+    },
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kıymayı galeta unu, tuz ve karabiberle yoğur. Cevizden küçük köfteler yuvarla.",
+     "en": "Knead the mince with breadcrumbs, salt and pepper. Roll into small meatballs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tavada ısıt, köfteleri her yüzü renk alana kadar kızart ve bir kenara al.",
+     "en": "Heat the oil in a pan and brown the meatballs on all sides. Set them aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tavada soğan ve havucu 5 dakika kavur.",
+     "en": "In the same pan, fry the onion and carrot for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Salçayı ekleyip 1 dakika karıştır.",
+     "en": "Stir in the tomato paste and cook for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Suyu ekleyip kaynat, bezelyeyi ekle ve 10 dakika pişir.",
+     "en": "Add the water, bring to the boil, stir in the peas and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Köfteleri sosa ekle, kapağı kapatıp kısık ateşte 15 dakika pişir.",
+     "en": "Return the meatballs to the pan, cover and cook over low heat for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Maydanozla süsle ve sıcak servis et.",
+     "en": "Scatter over the parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Tencere",
+   "Kolay",
+   "onePot"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9c15a2e3-d503-4ef1-a7a1-8dc658e75fec",
+  "slug": "firinda-sebzeli-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Fırında sebzeli köfte",
+   "en": "Baked meatballs with vegetables"
+  },
+  "shortTitle": {
+   "en": "Baked veg meatballs"
+  },
+  "description": {
+   "tr": "Köftelerin patates, kabak, soğan ve biberle birlikte fırın tepsisinde pişirildiği, az emek isteyen bir akşam yemeği. Sebzeler köftenin suyunu çeker.",
+   "en": "Meatballs roasted on one tray with potatoes, courgette, onion and pepper. There is little hands-on work, and the vegetables take on the juices from the meat."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "kuru",
+     "en": "dried"
+    },
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "kalın dilim",
+     "en": "thick slices"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka dilim",
+     "en": "sliced into rounds"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "doğranmış",
+     "en": "chopped"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kıymayı yumurta, galeta unu, kekik, tuz ve karabiberle iyice yoğur. Cevizden biraz büyük köfteler yuvarla.",
+     "en": "Knead the mince with the egg, breadcrumbs, thyme, salt and pepper until well combined. Roll into meatballs a little larger than a walnut."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt.",
+     "en": "Heat the oven to 200 degrees."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patates, kabak, soğan, domates ve biberi fırın tepsisine yay. Zeytinyağı ve tuzla karıştır.",
+     "en": "Spread the potatoes, courgette, onion, tomato and pepper in a roasting tin. Toss with the olive oil and salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köfteleri sebzelerin arasına diz ve üzerlerine kalan zeytinyağını gezdir.",
+     "en": "Nestle the meatballs among the vegetables and drizzle over any oil left in the bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tepsiyi fırına ver ve 40 dakika pişir.",
+     "en": "Put the tin in the oven and bake for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 5 dakika dinlendir, sıcak servis et.",
+     "en": "Take out of the oven, rest for 5 minutes and serve hot."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Fırında",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9ec36219-9ce3-493a-8f77-383ef20e881d",
+  "slug": "yumurtali-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Yumurtalı köfte",
+   "en": "Egg-dipped fried meatballs"
+  },
+  "shortTitle": {
+   "en": "Egg-dipped meatballs"
+  },
+  "description": {
+   "tr": "Una ve çırpılmış yumurtaya bulanıp kızartılan köfteler dışarıda çıtır, içeride yumuşak olur. Limonla servis edilir.",
+   "en": "Meatballs dusted in flour, dipped in beaten egg and fried until crisp outside and soft inside. They are served with lemon."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Rendelenmiş soğanı, kıymayı, galeta ununu, kimyonu, tuzu ve karabiberi iyice yoğur.",
+     "en": "Knead the grated onion, mince, breadcrumbs, cumin, salt and pepper together thoroughly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köfteleri cevizden biraz küçük yuvarla ve hafifçe bastırıp yassı şekil ver.",
+     "en": "Shape into balls a little smaller than a walnut, then flatten them slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her köfteyi önce unun içinde hafifçe çevir ve fazlasını silkele.",
+     "en": "Roll each meatball lightly in the flour and shake off the excess."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları bir kaseye kır, tuzlu bir çatalla çırp. Köfteleri yumurtaya batırıp çıkar.",
+     "en": "Crack the eggs into a bowl, beat with a pinch of salt and dip each meatball in the egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı orta-yüksek ateşte ısıt, köfteleri sıcak yağa tek tek bırak.",
+     "en": "Heat the oil over medium-high heat and lower the meatballs in one at a time."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her yüzünü 4 dakika kızart.",
+     "en": "Fry each side for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Kağıt havluya al, limon dilimleriyle servis et.",
+     "en": "Drain on kitchen paper and serve with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Kızartma",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "83a8e90d-af9d-4c1c-8ae0-d451d873f4db",
+  "slug": "kuru-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kuru köfte",
+   "en": "Fried meatballs"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ekmek içli, sosu olmayan ve kızartılarak yapılan küçük köftelerin ev usulü hali. Dilim domates ile sofrada yenir.",
+   "en": "Small, dry fried meatballs bound with soaked bread and herbs, eaten without sauce. They are served with sliced tomato as a simple family dish."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 2,
+    "unit": "dilim",
+    "note": {
+     "tr": "suda ıslatılıp sıkılmış",
+     "en": "soaked in water and squeezed"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köfte baharatı",
+     "en": "Meatball spice mix"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "meatball-spice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Bayat ekmeği suda ıslat, ellerinle sıkıp suyunu al.",
+     "en": "Soak the stale bread in water, then squeeze out the water with your hands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ekmek, kıyma, rendelenmiş soğan, yumurta, maydanoz, köfte baharatı, tuz ve karabiberi iyice yoğur.",
+     "en": "Knead the bread, mince, grated onion, egg, parsley, meatball spice, salt and pepper until fully combined."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı 10 dakika buzdolabında dinlendir.",
+     "en": "Rest the mixture in the fridge for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Karışımdan küçük, ince köfteler şekillendir.",
+     "en": "Shape the mixture into small, thin meatballs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı ısıt, köfteleri orta ateşte her yüzü kızarana kadar kızart.",
+     "en": "Heat the oil and fry the meatballs over medium heat until browned on both sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kağıt havluya al ve dilim domatesle birlikte servis et.",
+     "en": "Drain on kitchen paper and serve with the sliced tomato."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Kızartma",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e6df31ae-6b28-4680-abe1-ca8bc4c10bb1",
+  "slug": "tavuk-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk köfte",
+   "en": "Chicken köfte"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tavuk kıymadan yapılan, kimyonlu ve hafif bir köfte. Sarımsaklı yoğurtla servis edildiğinde dengeli bir öğün olur.",
+   "en": "Light chicken meatballs with cumin and parsley, fried in a little oil. Served with garlicky yoghurt, they make a balanced meal that comes together quickly."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk kıyma",
+     "en": "Minced chicken"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-chicken",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "servis için",
+     "en": "for serving"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk kıymayı soğan, yumurta, galeta unu, maydanoz, kimyon, tuz ve karabiberle iyice yoğur.",
+     "en": "Knead the minced chicken with the onion, egg, breadcrumbs, parsley, cumin, salt and pepper until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı 15 dakika buzdolabında dinlendir.",
+     "en": "Rest the mixture in the fridge for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Elleri ıslatıp küçük, hafif yassı köfteler yap.",
+     "en": "Wet your hands and shape the mixture into small, lightly flattened meatballs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıvı yağı tavada ısıt, köfteleri orta ateşte her yüzü altın renk alana kadar pişir.",
+     "en": "Heat the oil in a pan and cook the meatballs over medium heat until golden on both sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştırıp köftelerin yanında servis et.",
+     "en": "Stir the garlic and a pinch of salt into the yoghurt and serve it alongside the meatballs."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Tavuklu",
+   "Tavada",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "dbe649e4-7045-4936-bef4-f387d097c888",
+  "slug": "balik-kofte",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Balık köfte",
+   "en": "Fish köfte"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz'de taze hamsiyle yapılan, mısır unu ve dereotuyla bağlanan köfteler. Kızartıldığında dışı çıtır, içi yumuşak olur.",
+   "en": "Black Sea style fish meatballs made from fresh anchovy, bound with cornmeal and dill. Fried until crisp outside, they stay soft inside."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 10,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Hamsi",
+     "en": "Fresh anchovy"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş, kılçıkları ayrılmış",
+     "en": "cleaned and boned"
+    },
+    "pantryKey": "anchovy",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mısır unu",
+     "en": "Cornmeal"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for frying"
+    },
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Hamsileri başlarından ayır, iç organlarını ve kılçıklarını temizle. Yıkayıp süz.",
+     "en": "Pull the heads off the anchovies, clean out the insides and remove the bones. Rinse and drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Temizlediğin hamsileri ince ince doğra.",
+     "en": "Chop the cleaned anchovies finely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamsi, soğan, maydanoz ve dereotunu bir kapta topla; yumurta, mısır unu, tuz ve pul biberi ekleyip iyice yoğur.",
+     "en": "Combine the anchovy, onion, parsley and dill in a bowl. Add the egg, cornmeal, salt and chilli flakes and knead well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 15 dakika dinlendirmeye bırak.",
+     "en": "Leave the mixture to rest for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ellerini ıslatıp cevizden küçük köfteler yuvarla ve hafifçe bastır.",
+     "en": "Wet your hands, roll into walnut-sized balls and flatten them lightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tavada ısıt, köfteleri orta ateşte her yüzü kızarana kadar kızart.",
+     "en": "Heat the oil in a pan and fry the meatballs over medium heat until browned on both sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kağıt havluya al ve limon dilimleriyle servis et.",
+     "en": "Drain on kitchen paper and serve with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Balık",
+   "Kızartma",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "25d06368-86eb-4e10-ab14-3cf92f635d61",
+  "slug": "kiymali-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kıymalı pide",
+   "en": "Kıymalı pide (minced meat pide)"
+  },
+  "shortTitle": {
+   "tr": "Kıymalı pide",
+   "en": "Minced meat pide"
+  },
+  "description": {
+   "tr": "Ev yapımı hamurun üzerine baharatlı kıymalı harç ve kaşar serilerek fırında pişirilen pide. Hamur mayalandığında yumuşak ve havalı olur.",
+   "en": "A homemade pide base with a spiced minced meat topping and kaşar cheese, baked in a hot oven. The dough rises soft and airy, and the pide is sliced hot."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 20,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 7,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green peppers"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mayayı, şekeri ve 100 ml ılık suyu bir kapta karıştır; 5 dakika dinlenmeye bırak.",
+     "en": "Stir the yeast, sugar and 100 ml of lukewarm water together in a bowl and leave for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Unu, tuzu, zeytinyağını ve kalan 200 ml suyu ekleyip yumuşak bir hamur çıkana kadar 10 dakika yoğur.",
+     "en": "Add the flour, salt, olive oil and the remaining 200 ml of water and knead for 10 minutes until the dough is soft and smooth."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru üzerini örtüp sıcak bir yerde 60 dakika mayalanmaya bırak.",
+     "en": "Cover the dough and leave it in a warm place to rise for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Tavada zeytinyağında soğanı 4 dakika kavur. Kıymayı ekleyip suyunu çekene kadar kavur, sonra salça, sivri biber ve karabiberi ekle. Ocaktan alıp soğumaya bırak.",
+     "en": "Fry the onion in olive oil for 4 minutes. Add the mince and fry until its liquid has evaporated, then stir in the tomato paste, long green peppers and pepper. Take off the heat and let it cool."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt. Hamuru 4 parçaya böl, uzun oval şekiller ver ve kenarlarını kaldırarak ortasına harcı yay.",
+     "en": "Heat the oven to 220 degrees. Divide the dough into 4, shape each into a long oval, lift the edges and spread the filling in the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine kaşar peynirini serp, çırpılmış yumurtayı sürüp fırında 12 dakika pişir.",
+     "en": "Scatter over the kaşar cheese, brush with the beaten egg and bake for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan pideyi hemen dilimleyip sıcak servis et.",
+     "en": "Slice the pide as soon as it comes out of the oven and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Etli",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
