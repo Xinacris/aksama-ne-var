@@ -3550,12 +3550,18 @@
     "kabak-tatlisi",
     "muhallebi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "sutlac",
+    "irmik-helvasi",
+    "revani",
+    "kabak-tatlisi",
+    "muhallebi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 43905,
    "startedAt": "2026-10-15T22:59:15.045Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:59:42.719Z"
   }
  ]
 }

@@ -118,7 +118,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Baldo pirinç, süt ve şekerle kıvamına kadar pişirilen, vanilyalı ve soğuk servis edilen klasik bir fırınsız tatlı. Tarçınla servis edilince hafif, yumuşak ve dengeli bir lezzet verir.",
+   "en": "A classic stovetop pudding of short-grain rice, milk and sugar, flavoured with vanilla and served cold. The cinnamon on top keeps it light and smooth."
+  }
  },
  {
   "id": "64cfea4b-4a0e-435d-b8d7-fcdf511d5409",
@@ -224,7 +228,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "İrmiğin tereyağında kavrulup sıcak şerbetle buluşturulmasıyla yapılan, çam fıstıklı ve kısa sürede hazırlanan bir helva. Kavurma rengi ve dinlendirme süresi tadını belirler.",
+   "en": "Semolina toasted in butter with pine nuts and then combined with hot syrup, a quick halva whose flavour depends on how far the semolina is browned and how long it rests."
+  }
  },
  {
   "id": "c8b7a177-34fc-4dee-82d5-a29a1098e51f",
@@ -372,7 +380,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "İrmik ve yoğurtla yapılan, fırından çıkınca soğuk şerbetle ıslatılan nemli bir kek. Limonlu şerbet hamurun tatlılığını dengeler ve kek birkaç saat içinde iyice yumuşar.",
+   "en": "A moist semolina and yoghurt cake baked in a tray and soaked in cold lemon syrup straight from the oven. The lemon balances the sweetness, and the cake softens further as it rests."
+  }
  },
  {
   "id": "ad5441f6-ecfe-4111-a73a-557afd1e2d52",
@@ -469,7 +481,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Bal kabağının şekerle bir gece bekletilip kısık ateşte yumuşatılmasıyla yapılan, sonbaharın bilinen tatlılarından biri. Üzerine serpilen ceviz, kabağın tatlı ve yumuşak dokusuna çıtırlık katar.",
+   "en": "Pumpkin left overnight in sugar, then slowly cooked until it turns soft and syrupy, is one of the best-known autumn sweets. Walnuts add a welcome crunch to its soft, sweet texture."
+  }
  },
  {
   "id": "0a8ad721-ba7f-4cc1-a76d-767b4a164334",
@@ -584,7 +600,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Süt, şeker ve pirinç unu ile nişastanın koyulaştırdığı, vanilyalı ve tarçınlı hafif bir muhallebi. Kısa pişme süresi ve sade malzemeleriyle hazırlanması en kolay tatlılardan biridir.",
+   "en": "A light milk pudding thickened with rice flour and cornflour, flavoured with vanilla and cinnamon. It needs only a few plain ingredients and a short cooking time, which makes it one of the easiest desserts to make."
+  }
  },
  {
   "id": "d7e6ffab-fadd-4f93-bfe2-d39e5a01bffb",
