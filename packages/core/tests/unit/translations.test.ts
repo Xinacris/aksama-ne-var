@@ -32,7 +32,9 @@ describe("built-in recipes in English", () => {
   it("every catalog ingredient and seed tag has an English name", () => {
     setLocale("en");
     try {
-      for (const c of INGREDIENT_CATALOG) expect([c.name, ingredientLabel(c.name) !== c.name || c.name === "Tarhana" || c.name === "Spagetti"]).toEqual([c.name, true]);
+      // Catalog additions carry their own English name (`en`), which may equal the Turkish one ("Mozzarella").
+      for (const c of INGREDIENT_CATALOG) expect([c.name, !!c.en || ingredientLabel(c.name) !== c.name || c.name === "Tarhana" || c.name === "Spagetti"]).toEqual([c.name, true]);
+      for (const c of INGREDIENT_CATALOG) if (c.en) expect(ingredientLabel(c.name)).toBe(c.en);
       for (const r of builtinRecipes) for (const tag of r.tags) expect([tag, tagLabel(tag) !== tag || tag === "Meze" || tag === "Dolma"]).toEqual([tag, true]);
     } finally {
       setLocale("tr");

@@ -49,7 +49,7 @@ export function convertBuiltin(r: Recipe, dish: Dish): CatalogRecipe {
     category: dish.category,
     ...(dish.region ? { region: dish.region } : {}),
     title: { tr: r.name, en: en.name },
-    ...(r.shortName ? { shortTitle: { tr: r.shortName, en: en.shortName ?? en.name } } : {}),
+    ...(r.shortName || en.shortName ? { shortTitle: { ...(r.shortName ? { tr: r.shortName } : {}), ...(en.shortName ? { en: en.shortName } : {}) } } : {}),
     servings: r.servings,
     prepMinutes: r.prepMinutes,
     cookMinutes: r.cookMinutes,

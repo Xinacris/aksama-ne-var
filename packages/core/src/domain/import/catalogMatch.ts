@@ -1,4 +1,4 @@
-import { catalogEntry, INGREDIENT_CATALOG } from "../../data/seed/ingredients";
+import { BASE_CATALOG, catalogEntry } from "../../data/seed/ingredients";
 
 /**
  * Free-text ingredient ("orta boy kuru soğan, ince doğranmış") → catalog name
@@ -92,7 +92,7 @@ const ALIASES: [RegExp, string][] = [
   [/bayat ekmek|ekmek içi/, "Bayat ekmek"],
 ];
 
-const BY_LENGTH = [...INGREDIENT_CATALOG].sort((a, b) => b.name.length - a.name.length);
+const BY_LENGTH = [...BASE_CATALOG].sort((a, b) => b.name.length - a.name.length);
 
 /** Water is never bought; it belongs in the steps, not the list. */
 export function isWater(item: string): boolean {

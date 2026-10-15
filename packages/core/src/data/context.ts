@@ -1,6 +1,6 @@
 import { KeyValueAdapter } from "./adapters/keyValue";
 import type { Repos } from "./repos";
-import { builtinRecipes } from "./seed/recipes";
+import { catalogRecipes as builtinRecipes } from "../recipes/catalog";
 import { SessionStore } from "./session";
 import { memoryStore, type KeyValueStore } from "./storage";
 import { createLocalBus, type SyncBus } from "./sync";
