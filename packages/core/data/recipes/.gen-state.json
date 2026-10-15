@@ -544,12 +544,17 @@
     "tavuklu-domates-corbasi",
     "kuskuslu-tavuk-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kirmizi-biberli-bulgur-corbasi",
+    "mercimekli-bulgur-kofteli-corba",
+    "tavuklu-domates-corbasi",
+    "kuskuslu-tavuk-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 70328,
    "startedAt": "2026-10-15T19:53:13.052Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:55:22.383Z"
   },
   {
    "id": "g018",
@@ -1286,11 +1291,11 @@
     "sac-kavurma",
     "kusbasili-guvec"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:55:04.959Z",
    "finishedAt": null
   },
   {

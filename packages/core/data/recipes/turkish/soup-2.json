@@ -16094,5 +16094,1069 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "22066439-b53a-4f60-bb79-46ffb2abf70f",
+  "slug": "kirmizi-biberli-bulgur-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Kırmızı biberli bulgur çorbası",
+   "en": "Red pepper and bulgur soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Güneydoğu sofralarının sade ama doyurucu çorbalarından biri. Biber salçası ve tereyağlı pul biber yağı, bulgurun tadını öne çıkarır.",
+   "en": "A plain but filling soup from south-eastern Turkey. Pepper paste and a butter-and-chilli topping bring out the flavour of the bulgur."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İnce bulgur",
+     "en": "Fine bulgur"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "fine-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "tereyağlı yağ için",
+     "en": "for the butter topping"
+    },
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "tereyağlı yağ için",
+     "en": "for the butter topping"
+    },
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze nane",
+     "en": "Fresh mint"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar ince kıyılmış",
+     "en": "leaves finely chopped"
+    },
+    "pantryKey": "fresh-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim servis için",
+     "en": "cut into wedges to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Bulguru süzgeçte bir kez yıkayıp suyunu süzün.",
+     "en": "Rinse the bulgur once in a sieve and let it drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede tereyağının yarısını ve zeytinyağını ısıtın, soğanı ekleyip 5 dakika yumuşayana kadar kavurun.",
+     "en": "Heat half the butter and the olive oil in a wide pan, add the onion and fry gently for 5 minutes until soft."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Biber ve domates salçasını ekleyip kokusu çıkana kadar karıştırarak kavurun.",
+     "en": "Add both pastes and stir until they smell cooked and darken a little."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bulguru ekleyip 1 dakika daha çevirin, ardından sıcak sebze suyunu dökün.",
+     "en": "Stir the bulgur in for 1 minute, then pour in the hot vegetable stock."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberi ekleyin, kaynayınca ateşi kısın ve kapağı yarı açık 20 dakika pişirin.",
+     "en": "Season with salt and pepper, and once it boils turn the heat down and simmer with the lid part-covered for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tavada kalan tereyağını eritin, pul biber ve kuru naneyi ekleyip çok kısık ateşte 1 dakika bekletin.",
+     "en": "Melt the rest of the butter in a small pan, add the chilli flakes and dried mint and keep on a very low heat for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Çorbayı kaselere alın, tereyağlı pul biberi üzerine gezdirin ve taze nane ile limon dilimleriyle servis edin.",
+     "en": "Ladle the soup into bowls, drizzle the chilli butter over the top and serve with fresh mint and lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Tencere",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ba46bc65-9ae9-4243-acbf-8ceb69ff16b4",
+  "slug": "mercimekli-bulgur-kofteli-corba",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Mercimekli bulgur köfteli çorba",
+   "en": "Lentil soup with bulgur dumplings"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kırmızı mercimekli bir çorbanın içine elle şekillendirilen bulgur köfteleri eklenir. Hem doyurucu hem de her malzemeyi tek tencerede halleden bir yemektir.",
+   "en": "A red lentil soup with hand-shaped bulgur dumplings dropped in at the end. It is filling and comes together in one pan."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kırmızı mercimek",
+     "en": "Red lentils"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "red-lentil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İnce bulgur",
+     "en": "Fine bulgur"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "köftelik",
+     "en": "for the dumplings"
+    },
+    "pantryKey": "fine-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "kaynar",
+     "en": "boiling"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "yağda kavurmak için",
+     "en": "to fry in the oil"
+    },
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim servis için",
+     "en": "cut into wedges to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mercimeği yıkayıp süzün. Soğanı ince doğrayın.",
+     "en": "Rinse and drain the lentils. Finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köftelik bulguru bir kaseye alın, biber salçasını ve 2 yemek kaşığı zeytinyağını ekleyip elinizle iyice karıştırın.",
+     "en": "Put the bulgur in a bowl, add the pepper paste and 2 tablespoons of olive oil and work it in with your hands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine 300 ml kaynar su dökün, kapağını kapatıp 20 dakika dinlendirin.",
+     "en": "Pour over 300 ml boiling water, cover and rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Bulgur dinlenirken tencerede 1 yemek kaşığı zeytinyağını ısıtın, soğanı 5 dakika yumuşayana kadar kavurun.",
+     "en": "While the bulgur rests, heat 1 tablespoon of olive oil in a pan and soften the onion for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domates salçasını ekleyip 1 dakika kavurun, ardından mercimeği ve sebze suyunu ekleyin.",
+     "en": "Stir in the tomato paste and fry for 1 minute, then add the lentils and vegetable stock."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kaynayınca ateşi orta-kısık yapın ve mercimekler dağılana kadar 20 dakika pişirin.",
+     "en": "When it boils, lower the heat to medium-low and cook for 20 minutes until the lentils break down."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Bulgur karışımından cevizden biraz küçük parçalar koparıp avuçlarınızda yuvarlayın, çorbaya tek tek bırakın ve 10 dakika daha pişirin.",
+     "en": "Pinch off small pieces of the bulgur mix, roll them into dumplings the size of a walnut or a little smaller, drop them into the soup and simmer for 10 more minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tavada kalan zeytinyağı ile pul biber ve kuru naneyi kokusu çıkana kadar kısık ateşte ısıtın.",
+     "en": "In a small pan, warm the remaining olive oil with the chilli flakes and dried mint on low heat until fragrant."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı kaselere alın, üzerine yağlı pul biberi ve maydanozu gezdirin, limon dilimleriyle servis edin.",
+     "en": "Ladle into bowls, spoon the chilli oil and parsley over the top, and serve with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "28148bc9-39ae-4af2-8ee5-192ec9672efe",
+  "slug": "tavuklu-domates-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Tavuklu domates çorbası",
+   "en": "Chicken and tomato soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Domatesin ekşimsi tadı, un ve tereyağıyla hazırlanan hafif bir sosla yumuşatılır. Tavuk parçaları çorbayı akşam yemeği olacak kadar doyurucu yapar.",
+   "en": "The sharpness of the tomatoes is softened by a light butter and flour base. The chicken pieces make it filling enough for a light supper."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thigh"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "kemiksiz, küçük küp doğranmış",
+     "en": "boneless, cut into small cubes"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim servis için",
+     "en": "cut into wedges to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butları küp doğrayıp tuz ve karabiberle tatlandırın.",
+     "en": "Cut the chicken thighs into cubes and season them with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede zeytinyağı ve tereyağının yarısını ısıtın, tavukları ekleyip 5 dakika dışları renk alana kadar kavurun.",
+     "en": "Heat the olive oil and half the butter in a wide pan, add the chicken and brown the outside for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tavukları bir tabağa alın. Aynı tencerede kalan tereyağıyla soğanı ve sarımsağı 4 dakika kavurun.",
+     "en": "Lift the chicken onto a plate. In the same pan, fry the onion and garlic in the remaining butter for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Unu ve domates salçasını ekleyip 1 dakika karıştırarak kavurun.",
+     "en": "Sprinkle in the flour and tomato paste and stir-fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Küp doğranmış domatesleri ekleyin ve domatesler suyunu bırakıp yumuşayana kadar 5 dakika pişirin.",
+     "en": "Add the diced tomatoes and cook for 5 minutes, until they release their juice and soften."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tavukları geri koyun, sıcak tavuk suyunu dökün ve kaynayınca ateşi kısıp 20 dakika pişirin.",
+     "en": "Return the chicken to the pan, pour in the hot chicken stock and once it boils, lower the heat and simmer for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Çorbayı blenderdan geçirin ya da pürüzsüz olması için bir çatalla iyice ezin, ardından 5 dakika kısık ateşte ısıtın.",
+     "en": "Blend the soup or mash it well with a fork for a smooth texture, then reheat gently on a low heat for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tuzunu ve karabiberini kontrol edin, kaselere alıp maydanozla ve limon dilimleriyle servis edin.",
+     "en": "Taste and adjust the salt and pepper, ladle into bowls and serve with parsley and lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "kidFriendly",
+   "Tavuklu",
+   "Tencere",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "261775b5-6f86-46bc-8e16-c2f44f4daecf",
+  "slug": "kuskuslu-tavuk-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Kuskuslu tavuk çorbası",
+   "en": "Chicken soup with pearl couscous"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bir tavuk parçasının yavaşça pişirilmesiyle çıkan sade bir çorba. Limonlu yumurta ile kıvamlanır, Türk kuskusu ise ona hem dolgunluk hem de biraz dişlilik kazandırır.",
+   "en": "A simple chicken soup built slowly from bone-in pieces. A lemon and egg finish thickens it, and the pearl couscous gives it body and a little bite."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 50,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kemikli, derisi alınmış",
+     "en": "bone-in, skinned"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk bulyon",
+     "en": "Chicken stock cube"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "stock-cube-chicken",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "small dice"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kereviz",
+     "en": "Celery"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "small dice"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Türk kuskusu",
+     "en": "Pearl couscous"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "kuskus-turkish",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını yıkayıp bir tencereye alın, üzerine suyu ve tavuk bulyonunu ekleyin.",
+     "en": "Rinse the chicken thighs, put them in a pot and cover with the water and the stock cube."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaynamaya bırakın, köpüğünü alın, ardından kısık ateşte 30 dakika pişirin.",
+     "en": "Bring to the boil, skim off the foam, then simmer gently for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Tavukları çıkarıp soğumaya bırakın. Suyu süzüp tencereye geri alın, tavukların kemiklerini ayırıp etlerini küçük parçalar halinde doğrayın.",
+     "en": "Lift out the chicken and leave it to cool. Strain the stock back into the pot, then pull the meat off the bones and cut it into small pieces."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Başka bir tencerede tereyağı ve zeytinyağını ısıtın, soğan, havuç ve kerevizi ekleyip 5 dakika kavurun.",
+     "en": "In another pan, warm the butter and olive oil, add the onion, carrot and celery and fry for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kavrulan sebzeleri tavuk suyuna ekleyin, doğranmış tavuğu ve kuskusu koyup 10 dakika pişirin.",
+     "en": "Tip the softened vegetables into the stock, add the shredded chicken and the couscous and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı limon suyuyla iyice çırpın. Çorbadan bir kepçe alıp yumurtaya yavaşça karıştırın, ardından tüm çorbaya dökün.",
+     "en": "Whisk the egg with the lemon juice. Slowly add a ladle of hot soup to the egg, stirring, then pour the mixture back into the pot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi çok kısın, tuz ve karabiberi ayarlayın ve kaynatmadan ısıtıp maydanozla servis edin.",
+     "en": "Lower the heat, adjust the salt and pepper, heat through without letting it boil, and serve with parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "kidFriendly",
+   "Tavuklu",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
