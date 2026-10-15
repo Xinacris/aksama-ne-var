@@ -509,12 +509,23 @@
     "kalamar-salatasi",
     "karides-salatasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "bulgur-salatasi",
+    "kuskus-salatasi",
+    "makarna-salatasi",
+    "patates-salatasi",
+    "yumurta-salatasi",
+    "ton-balikli-salata",
+    "tavuklu-salata",
+    "ahtapot-salatasi",
+    "kalamar-salatasi",
+    "karides-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 93417,
    "startedAt": "2026-10-15T19:32:17.735Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:35:45.666Z"
   },
   {
    "id": "g021",
@@ -690,11 +701,11 @@
     "zeytinyagli-biber-dolmasi",
     "zeytinyagli-kabak-dolmasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:33:54.103Z",
    "finishedAt": null
   },
   {
