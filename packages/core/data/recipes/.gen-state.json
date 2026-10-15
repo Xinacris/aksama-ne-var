@@ -2523,12 +2523,17 @@
     "flan",
     "arroz-con-leche"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "crema-catalana",
+    "churros",
+    "flan",
+    "arroz-con-leche"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 71404,
    "startedAt": "2026-10-15T22:39:00.216Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:41:06.612Z"
   },
   {
    "id": "g080",
@@ -2605,11 +2610,11 @@
     "domates-rasam",
     "mercimek-shorba"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:41:01.280Z",
    "finishedAt": null
   },
   {
