@@ -1,1 +1,1125 @@
-[]
+[
+ {
+  "id": "49accc9f-ac21-4896-94a8-ee461629095b",
+  "slug": "firinda-patates",
+  "cuisine": "american",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Fırında patates (baked potato)",
+   "en": "Loaded baked potato"
+  },
+  "shortTitle": {
+   "tr": "Fırında patates",
+   "en": "Loaded potato"
+  },
+  "description": {
+   "tr": "Fırında pişen patatesin içi yumuşak kalır, üstü ekşi krema, eriyen cheddar ve gevrek dana füme et ile dolar. Tek başına doyurucu bir akşam yemeği olur.",
+   "en": "A baked potato split open and loaded with melted cheddar, sour cream, crisp beef bacon and spring onion. Filling enough to eat on its own for supper."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 65,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy, iyice yıkanmış",
+     "en": "medium, well scrubbed"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Cheddar",
+     "en": "Cheddar"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "cheddar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ekşi krema",
+     "en": "Sour cream"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sour-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Smoked beef bacon"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "ince doğranmış, gevrekleştirilmiş",
+     "en": "finely chopped and fried crisp"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil soğan",
+     "en": "Spring onion"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "spring-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıtın. Patatesleri iyice yıkayıp kurulayın, kabuklarını çatalla birkaç yerden delin.",
+     "en": "Heat the oven to 200°C. Scrub the potatoes well, dry them and prick the skins a few times with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patateslerin üstünü zeytinyağı ve tuzla ovalayıp fırın tepsisine dizin.",
+     "en": "Rub the potatoes with the olive oil and salt, then set them on the baking tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri 55 dakika fırında pişirin, içleri yumuşayana kadar.",
+     "en": "Bake the potatoes for 55 minutes, until the insides are soft."
+    },
+    "timerSeconds": 3300
+   },
+   {
+    "text": {
+     "tr": "Dana füme eti tavada gevrekleşene kadar kızartın, kağıt havluya alıp süzün.",
+     "en": "Fry the beef bacon in a pan until crisp, then drain it on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri fırından alın, üstlerini çapraz kesip içlerini hafifçe açın. İçine tereyağını, bir tutam tuz ve karabiberi koyup karıştırın.",
+     "en": "Take the potatoes out, cut a cross in each top and open them up a little. Add the butter, a pinch of salt and black pepper, and mix."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerlerine rendelenmiş cheddar serpin, 5 dakika daha fırına geri verin.",
+     "en": "Sprinkle over the grated cheddar and put them back in the oven for 5 minutes more."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ekşi kremayı, dana füme eti ve yeşil soğanı üzerine ekleyin, paprikayla serpip hemen servis yapın.",
+     "en": "Spoon on the sour cream, beef bacon and spring onion, dust with paprika and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Kolay",
+   "glutenFree",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "28796bbb-95e6-4122-ae57-f6528895096f",
+  "slug": "sogan-halkasi",
+  "cuisine": "american",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Soğan halkası",
+   "en": "Onion rings"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce dilimlenmiş soğanın kıvamlı bir hamurla kaplanıp kızartılmış hali. Dışı gevrek, içi tatlı olur ve ketçapla sıcak sıcak yenir.",
+   "en": "Thick slices of onion dipped in a light flour batter and fried until crisp. The inside turns sweet and soft, best eaten hot with ketchup."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "büyük boy, 1 cm kalınlığında halka halka",
+     "en": "large, sliced into 1 cm rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 700,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ketçap",
+     "en": "Ketchup"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "ketchup",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanları soyup 1 cm kalınlığında halkalara kesin, halkaları birbirinden ayırın.",
+     "en": "Peel the onions, slice them into 1 cm rings and separate the rings."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bir kasede unu, kabartma tozunu, tuzu, karabiberi ve toz kırmızı biberi karıştırın.",
+     "en": "In a bowl, mix the flour, baking powder, salt, black pepper and paprika."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ayrı bir kapta yumurtayı ve sütü çırpın, galeta ununu geniş bir tabağa alın.",
+     "en": "In another bowl, whisk the egg and milk together. Tip the breadcrumbs onto a wide plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Halkaları önce unun içinde çevirip fazlasını silkin, sonra yumurtalı sütten geçirin ve galeta ununa bulayın.",
+     "en": "Toss the rings in the flour mix and shake off the excess, dip them in the egg mixture, then coat in breadcrumbs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavaya yağı 1 cm yükseklikte koyup orta yüksek ateşte ısıtın.",
+     "en": "Pour the oil into a wide pan to a depth of about 1 cm and heat over medium-high until it is hot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Halkaları parti parti yağa bırakın, yaklaşık 2 dakika altın sarısı olana kadar kızartın.",
+     "en": "Fry the rings in batches for about 2 minutes, until golden."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Kızarmış halkaları kağıt havluya alıp süzün ve hemen tuz serpin.",
+     "en": "Drain the fried rings on kitchen paper and salt them straight away."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ketçapla sıcak sıcak servis yapın.",
+     "en": "Serve hot with ketchup."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kızartma",
+   "vegetarian",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2e24e0bc-9c86-49e3-9c7a-87876a7431f0",
+  "slug": "firinda-fasulye",
+  "cuisine": "american",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Fırında fasulye (baked beans)",
+   "en": "Baked beans"
+  },
+  "shortTitle": {
+   "tr": "Fırında fasulye",
+   "en": "Baked beans"
+  },
+  "description": {
+   "tr": "Beyaz fasulyenin tatlı ekşi domates sosunda fırınlanmış hali. Dana füme etin tuzluluğu ile dengelenir ve kızarmış ekmekle servis edilir.",
+   "en": "White beans baked in a sweet and tangy tomato sauce with a little smoked beef for depth. Served with toast for a filling breakfast or supper."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Haşlanmış kuru fasulye",
+     "en": "Cooked white beans"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş ve yıkanmış",
+     "en": "drained and rinsed"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Smoked beef bacon"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Konserve domates",
+     "en": "Canned tomatoes"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "parçalı",
+     "en": "chopped"
+    },
+    "pantryKey": "canned-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Esmer şeker",
+     "en": "Brown sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "brown-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hardal",
+     "en": "Mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ekmek",
+     "en": "Bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "kızartılmış",
+     "en": "toasted"
+    },
+    "pantryKey": "bread",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıtın. Soğanı ince doğrayın.",
+     "en": "Heat the oven to 180°C. Finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağında dana füme eti tencerede gevrekleşene kadar kavurun, soğanı ekleyip 5 dakika daha yumuşatın.",
+     "en": "Fry the beef bacon in the oil in a pan until crisp, then add the onion and soften for 5 minutes more."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domates salçasını ekleyip kokusu çıkana kadar kavurun.",
+     "en": "Stir in the tomato paste and fry until it smells rich."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Konserve domatesi, esmer şekeri, hardalı, Worcestershire sosunu ve 150 ml suyu ekleyip karıştırın, kısık ateşte 10 dakika pişirin.",
+     "en": "Add the canned tomatoes, brown sugar, mustard, Worcestershire sauce and 150 ml water, stir, and simmer gently for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Süzülmüş fasulyeleri ekleyin, tuz ve karabiberle tatlandırıp karıştırın.",
+     "en": "Stir in the drained beans, then season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı fırın kabına alıp üzeri açık 40 dakika fırında pişirin, yarısında bir kez karıştırın.",
+     "en": "Transfer to an ovenproof dish, uncovered, and bake for 40 minutes, stirring once halfway through."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 10 dakika dinlendirin, kızarmış ekmekle servis yapın.",
+     "en": "Rest for 10 minutes out of the oven, then serve with the toast."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Bakliyat",
+   "Etli",
+   "Kolay",
+   "budget",
+   "kidFriendly",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "986282fe-4e0f-4087-b7ce-f378cec99e39",
+  "slug": "firinda-misir",
+  "cuisine": "american",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Fırında mısır",
+   "en": "Corn on the cob with butter"
+  },
+  "shortTitle": {
+   "tr": "Fırında mısır",
+   "en": "Buttered corn"
+  },
+  "description": {
+   "tr": "Koçanda fırınlanan mısır, sarımsaklı tereyağı ve parmesanla servis edilir. Yazın taze mısırla en güzel hali olur.",
+   "en": "Sweetcorn roasted in its husk, finished with garlic butter and parmesan. Best in summer with fresh cobs."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mısır (koçan)",
+     "en": "Sweetcorn cobs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "kabukları yarısına kadar sıyrılmış",
+     "en": "husks peeled back halfway"
+    },
+    "pantryKey": "sweetcorn",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıtın, fırın tepsisine pişirme kağıdı serin.",
+     "en": "Heat the oven to 220°C and line a baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mısırların kabuklarını yarısına kadar sıyırıp ipliklerini temizleyin.",
+     "en": "Peel the husks back halfway and pull off the silk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağının yarısını ezilmiş sarımsak, tuz, karabiber ve pul biberle karıştırın, mısırların tanelerine sürün.",
+     "en": "Mix half the butter with the garlic, salt, black pepper and chilli flakes, and brush it over the corn kernels."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabukları geri kapatıp tepsiye dizin, 25 dakika fırında pişirin.",
+     "en": "Fold the husks back over and lay the cobs on the tray. Roast for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Kabukları açıp kalan tereyağını sürün, parmesanı serpin ve 5 dakika daha fırında bekletin.",
+     "en": "Open the husks, brush over the rest of the butter, sprinkle with parmesan and leave in the oven for 5 minutes more."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Limon dilimleri ve doğranmış maydanozla servis yapın.",
+     "en": "Serve with the lemon wedges and chopped parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Vejetaryen",
+   "vegetarian",
+   "glutenFree",
+   "kidFriendly",
+   "Kolay",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c71c0c0b-edff-4d0a-9ece-7cb856014f26",
+  "slug": "deviled-eggs",
+  "cuisine": "american",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Deviled eggs",
+   "en": "Deviled eggs"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış yumurta sarılarının mayonez ve hardalla kremalaştırılıp beyazlara doldurulması. Misafirlere servis edilen hafif bir meze.",
+   "en": "Hard-boiled egg halves filled with a creamy yolk mixture of mayonnaise, mustard and gherkin. A light starter for guests."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 10,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mayonez",
+     "en": "Mayonnaise"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "mayonnaise",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kornişon turşu",
+     "en": "Gherkin"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "gherkin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "süslemek için",
+     "en": "to garnish"
+    },
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurtaları üzerini geçecek kadar soğuk suyla tencereye alın, kaynayınca ateşi kısıp 10 dakika pişirin.",
+     "en": "Put the eggs in a pan with cold water to cover, bring to the boil, then lower the heat and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları buzlu suya alıp soğuyunca kabuklarını soyun, ikiye kesin.",
+     "en": "Move the eggs to iced water, peel them once cool and cut them in half lengthways."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarıları çıkarıp küçük bir kaseye alın, çatalla iyice ezin.",
+     "en": "Scoop the yolks into a small bowl and mash them well with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarılara mayonez, hardal, limon suyu, bir tutam tuz ve karabiber ekleyip pürüzsüz olana kadar karıştırın.",
+     "en": "Add the mayonnaise, mustard, lemon juice, a pinch of salt and black pepper, and beat until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kornişonu ve dereotunu karışıma ekleyip karıştırın.",
+     "en": "Stir in the gherkin and dill."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Beyaz yarımları bir tabağa dizin, içlerini sarı karışımla doldurun.",
+     "en": "Arrange the white halves on a plate and fill each with the yolk mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine paprika serpin, servisten önce 30 dakika buzdolabında bekletin.",
+     "en": "Dust with paprika and chill in the fridge for 30 minutes before serving."
+    },
+    "timerSeconds": 1800
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "dairyFree",
+   "guest",
+   "Haşlama",
+   "Kolay",
+   "Meze"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
