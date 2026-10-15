@@ -1,1 +1,822 @@
-[]
+[
+ {
+  "id": "a580edf8-704c-47dc-b6a5-97f86a9aaf5d",
+  "slug": "gulab-jamun",
+  "cuisine": "indian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Gulab jamun",
+   "en": "Gulab jamun"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Şerbetle ıslatılmış, dışı altın rengi, içi yumuşacık süt topları. Hint düğünlerinin ve bayramlarının vazgeçilmez tatlısı.",
+   "en": "Milk dough balls fried until golden and soaked in cardamom and rose syrup. A familiar sweet at weddings and festivals across India."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 30,
+  "waitMinutes": 70,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "iyice süzülmüş, khoya yerine",
+     "en": "well drained, in place of khoya"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sade yağ",
+     "en": "Ghee"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "ghee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hamuru yoğurmak için",
+     "en": "to bring the dough together"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 350,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakule",
+     "en": "Cardamom"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "cardamom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gül suyu",
+     "en": "Rose water"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "rose-water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ricottayı temiz bir bez ya da süzgeçte iyice süz, suyunu sıkıp elinle ufala.",
+     "en": "Drain the ricotta in a clean cloth or sieve, squeeze out the water and crumble it with your fingers."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ufalanan peynire unu, irmiği, kabartma tozunu ve eritilmiş sade yağı ekle. Sütü azar azar ekleyerek yumuşak, yapışmayan bir hamur yoğur.",
+     "en": "Add the flour, semolina, baking powder and melted ghee to the crumbled cheese. Add the milk a little at a time and knead into a soft dough that does not stick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ıslak ellerinle 12 küçük topa böl, üstlerini örtüp 10 dakika dinlendir.",
+     "en": "Shape the dough into 12 small balls with wet hands, cover them and rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Şekeri suyla birlikte kısık ateşte eritip 5 dakika kaynat. Ocaktan almadan önce gül suyunu ve ezilmiş kakuleyi ekle, şerbeti sıcak tut.",
+     "en": "Melt the sugar with the water over a low heat, then boil for 5 minutes. Stir in the rose water and crushed cardamom and keep the syrup warm."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yağı orta ateşte ısıt. Topları birkaç partide, her partide 8 dakika, sürekli çevirerek altın rengi olana kadar kızart.",
+     "en": "Heat the oil over a medium flame. Fry the balls in batches for 8 minutes each, turning them often, until golden brown."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kızarmış topları kağıt havluya al, hâlâ sıcakken şerbetin içine at.",
+     "en": "Lift the fried balls onto kitchen paper, then drop them into the warm syrup while still hot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Topları şerbette 1 saat bekletip iyice emmesini sağla, sonra ılık ya da oda sıcaklığında servis et.",
+     "en": "Leave the balls to soak in the syrup for 1 hour so they absorb it fully, then serve warm or at room temperature."
+    },
+    "timerSeconds": 3600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Kızartma",
+   "Şerbetli",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "36fc0a80-0b6c-493f-a64b-1328d7720f6d",
+  "slug": "kheer",
+  "cuisine": "indian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Kheer",
+   "en": "Kheer (rice pudding)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pirincin süt ve kakuleyle kısık ateşte kıvam aldığı, soğuk servis edilen Hint pirinç muhallebisi. Kuru meyve ve kuruyemiş dokuya derinlik katar.",
+   "en": "A slow-cooked rice pudding thickened in milk with cardamom and served chilled. The dried fruit and nuts add texture and depth."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 40,
+  "waitMinutes": 140,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Basmati pirinç",
+     "en": "Basmati rice"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "basmati-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakule",
+     "en": "Cardamom"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "cardamom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş, yarısı pişirilir, yarısı süs için",
+     "en": "thinly sliced, half cooked in, half for garnish"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 15,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru üzüm",
+     "en": "Raisins"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "raisin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sade yağ",
+     "en": "Ghee"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "ghee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gül suyu",
+     "en": "Rose water"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "rose-water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci bir kâseye al, iki kez durulayıp suyunda 20 dakika beklet, sonra süzüp kenara koy.",
+     "en": "Put the rice in a bowl, rinse it twice, soak it in water for 20 minutes, then drain and set aside."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Sütü kalın tabanlı bir tencerede orta ateşe koy. Kaynamaya başlayınca pirinci ekle ve ateşi kısmaya başla.",
+     "en": "Put the milk in a heavy-based pan over a medium heat. Once it starts to simmer, add the rice and turn the heat down."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ara sıra karıştırarak kısık ateşte 35 dakika pişir; süt yarıya inip pirinç iyice yumuşayana kadar devam et.",
+     "en": "Simmer over a low heat for 35 minutes, stirring now and then, until the milk has reduced by about half and the rice is very soft."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Şekeri, ezilmiş kakuleyi, kuru üzümü ve bademin yarısını ekleyip 5 dakika daha karıştırarak pişir.",
+     "en": "Stir in the sugar, crushed cardamom, raisins and half the almonds, then cook for 5 more minutes, stirring."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, sade yağı ve gül suyunu karıştır. Kaseler içine paylaştırıp 2 saat buzdolabında soğut.",
+     "en": "Take the pan off the heat, stir in the ghee and rose water. Divide between bowls and chill in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Servis etmeden önce üstüne kalan bademi ve fıstığı serpip soğuk servis et.",
+     "en": "Just before serving, scatter the remaining almonds and pistachios over the top and serve cold."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kheer'i servisten bir gece önce yapıp kapaklı bir kapta buzdolabında sakla.",
+     "en": "Make the kheer the night before serving and keep it covered in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "kidFriendly",
+   "Tencere",
+   "Sütlü",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6c3665df-6b75-4606-b524-d73c4e8eeaa7",
+  "slug": "gajar-halwa",
+  "cuisine": "indian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Gajar halwa",
+   "en": "Gajar halwa (carrot halva)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Rendelenmiş havucun süt ve sade yağla yavaşça kıvam aldığı, kardamom kokulu Hint tatlısı. Genellikle kış aylarında sıcak servis edilir.",
+   "en": "Grated carrot slowly cooked in milk and ghee until thick and fragrant with cardamom. Usually served warm in the winter months."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "ince rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sade yağ",
+     "en": "Ghee"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "ghee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakule",
+     "en": "Cardamom"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "cardamom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru üzüm",
+     "en": "Raisins"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "raisin",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Havuçları ince rendeyle rendele ya da mutfak robotunda ince ince çek.",
+     "en": "Grate the carrots finely on a fine grater, or pulse them finely in a food processor."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sade yağı geniş bir tencerede orta ateşte eritip rendelenmiş havucu ekle. 5 dakika sürekli karıştırarak soteleyip rengi biraz koyulaşana kadar kavur.",
+     "en": "Melt the ghee in a wide pan over a medium heat and add the grated carrot. Sauté, stirring constantly, for 5 minutes until it deepens slightly in colour."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sütü ekleyip kısık-orta ateşte, sıvının neredeyse tamamı çekilene kadar 25 dakika pişir.",
+     "en": "Add the milk and cook over a low-medium heat for 25 minutes, until almost all of the liquid has been absorbed."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Şekeri, ezilmiş kakuleyi ve kuru üzümü ekleyip karıştır. Halva kalınlaşıp tencerenin kenarından ayrılmaya başlayana kadar 10 dakika daha pişir.",
+     "en": "Stir in the sugar, crushed cardamom and raisins. Cook for another 10 minutes, until the halva thickens and starts to pull away from the sides of the pan."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Badem ve fıstığın çoğunu karıştırıp ocaktan al. Kalanla süsleyerek sıcak ya da ılık servis et.",
+     "en": "Fold in most of the almonds and pistachios and take the pan off the heat. Top with the rest and serve warm or lukewarm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tencere",
+   "Sütlü",
+   "Vejetaryen",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b390dd09-c83f-4ca3-94ed-e372e0d7d971",
+  "slug": "kulfi",
+  "cuisine": "indian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Kulfi",
+   "en": "Kulfi"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sütün uzun süre kaynatılarak koyulaştırıldığı, kakule ve fıstıklı, kalıpta donmuş Hint dondurması. Yavaş donduğu için dokusu yoğun ve kremalıdır.",
+   "en": "A frozen Indian dessert made from milk reduced slowly with cardamom and pistachio. It sets in moulds to a dense, creamy texture."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 50,
+  "waitMinutes": 520,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "kremalılık için",
+     "en": "for richness"
+    },
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "3 yemek kaşığı soğuk sütte eritilmiş",
+     "en": "dissolved in 3 tbsp cold milk"
+    },
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakule",
+     "en": "Cardamom"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "cardamom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış, yarısı karışımda, yarısı üstte",
+     "en": "roughly chopped, half in the mix, half on top"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sütü geniş ve kalın tabanlı bir tencerede orta ateşte kaynat, sonra kısık ateşe al.",
+     "en": "Bring the milk to the boil in a wide, heavy-based pan over a medium heat, then lower the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ara sıra karıştırarak 40 dakika kısık ateşte pişir. Süt yarıya yakın azalıp kenarlarda koyulaşmaya başlayınca kenarlardaki kıvamı kazıyıp karışıma kat.",
+     "en": "Simmer over a low heat for 40 minutes, stirring now and then. When the milk has reduced by about half and thickened at the edges, scrape those edges back into the pan."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Nişastayı soğuk sütte iyice eritip tencereye ekle ve 5 dakika karıştırarak pişir.",
+     "en": "Stir the cornflour into the cold milk until fully dissolved, add it to the pan and cook for 5 minutes, stirring."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Şekeri, ezilmiş kakuleyi, fıstık ve bademin yarısını ekleyip 3 dakika daha karıştır.",
+     "en": "Add the sugar, crushed cardamom and half the pistachios and almonds. Stir for 3 more minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kremayı ekleyip ocaktan al ve tamamen soğumaya bırak.",
+     "en": "Stir in the cream, take the pan off the heat and leave until completely cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğuyan karışımı kalıplara dök, üstüne kalan kuruyemişi serp ve 8 saat dondurucuda dondur.",
+     "en": "Pour the cooled mixture into moulds, sprinkle the remaining nuts on top and freeze for 8 hours."
+    },
+    "timerSeconds": 28800
+   },
+   {
+    "text": {
+     "tr": "Servisten önce kalıpları 10 dakika oda sıcaklığında bekletip kulfileri çıkar ve dilimleyerek ya da bütün olarak servis et.",
+     "en": "Before serving, leave the moulds at room temperature for 10 minutes, then unmould the kulfi and serve whole or sliced."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kulfiyi servisten bir gece önce kalıplarda dondurucuya koy.",
+     "en": "Put the kulfi into the freezer in its moulds the night before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "freezable",
+   "guest",
+   "Tencere",
+   "Sütlü",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

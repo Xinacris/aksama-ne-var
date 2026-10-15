@@ -2691,12 +2691,17 @@
     "gajar-halwa",
     "kulfi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gulab-jamun",
+    "kheer",
+    "gajar-halwa",
+    "kulfi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 68075,
    "startedAt": "2026-10-15T22:42:41.673Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:44:31.073Z"
   },
   {
    "id": "g086",
@@ -2773,11 +2778,11 @@
     "clam-chowder",
     "tavuklu-noodle-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:44:26.095Z",
    "finishedAt": null
   },
   {
