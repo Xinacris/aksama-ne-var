@@ -1994,12 +1994,23 @@
     "bulgurlu-biber-dolmasi",
     "bulgurlu-lahana-sarmasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "etli-durum",
+    "cokertme-kebabi",
+    "tavuk-sinitzel",
+    "tavuk-gogsu-izgara",
+    "tavuk-sarma",
+    "tavuklu-pide",
+    "tavuklu-borek",
+    "mantar-dolmasi",
+    "bulgurlu-biber-dolmasi",
+    "bulgurlu-lahana-sarmasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 97746,
    "startedAt": "2026-10-15T22:37:21.440Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:40:59.933Z"
   },
   {
    "id": "g062",
@@ -2535,11 +2546,11 @@
     "dal-makhani",
     "chana-masala"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:39:14.678Z",
    "finishedAt": null
   },
   {
