@@ -2403,12 +2403,23 @@
     "escalivada-ile-tavuk",
     "garbanzos-con-espinacas"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kuzu-caldereta",
+    "merluza-en-salsa-verde",
+    "bacalao-a-la-vizca-na",
+    "pisto-manchego",
+    "huevos-rotos",
+    "patatas-a-la-riojana",
+    "pollo-al-chilindr-n",
+    "fabada",
+    "escalivada-ile-tavuk",
+    "garbanzos-con-espinacas"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 96904,
    "startedAt": "2026-10-15T22:35:21.579Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:38:50.866Z"
   },
   {
    "id": "g075",
@@ -2436,11 +2447,11 @@
     "pipirrana",
     "ensaladilla-rusa"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:37:51.475Z",
    "finishedAt": null
   },
   {
