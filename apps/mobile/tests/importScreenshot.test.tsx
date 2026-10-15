@@ -9,7 +9,11 @@ const mockOcr: { isSupported: boolean; pages: string[][]; extractTextFromImage: 
   pages: [],
   extractTextFromImage: jest.fn(async (_path: string): Promise<string[]> => mockOcr.pages.shift() ?? []),
 };
-jest.mock("expo", () => ({ ...jest.requireActual("expo"), requireOptionalNativeModule: jest.fn((name: string) => (name === "ExpoTextExtractor" ? mockOcr : null)) }));
+const mockTurkish = { isSupported: false, extractTextFromImage: jest.fn(async (_path: string): Promise<string[]> => ["Malzemeler:\n1 adet soğan"]) };
+jest.mock("expo", () => ({
+  ...jest.requireActual("expo"),
+  requireOptionalNativeModule: jest.fn((name: string) => (name === "ExpoTextExtractor" ? mockOcr : name === "AnvTextRecognition" ? mockTurkish : null)),
+}));
 jest.mock("expo-image-picker", () => ({ launchImageLibraryAsync: jest.fn() }));
 const picker = () => jest.requireMock("expo-image-picker") as { launchImageLibraryAsync: jest.Mock };
 
@@ -36,6 +40,7 @@ beforeEach(() => {
   bodies = [];
   mockOcr.isSupported = true;
   mockOcr.pages = [];
+  mockTurkish.isSupported = false;
   jest.clearAllMocks();
   global.fetch = jest.fn(async (_url: string, init: { body: string }) => {
     const body = JSON.parse(init.body) as { url: string; text: string };
@@ -63,7 +68,9 @@ describe("Instagram: Ekran görüntüsünden oku", () => {
     expect(picker().launchImageLibraryAsync).toHaveBeenCalledWith(expect.objectContaining({ allowsMultipleSelection: true, mediaTypes: ["images"] }));
     expect(mockOcr.extractTextFromImage).toHaveBeenCalledWith("/a.png");
     await waitFor(() => expect(bodies).toHaveLength(2));
-    expect(bodies[1]).toMatchObject({ url: IG, text: "aysemutfakta\nFırında köfte\nMalzemeler:\n500 gr kıyma\n1 soğan\nKıymayı yoğurun." });
+    expect(bodies[1]).toMatchObject({ url: IG, text: "aysemutfakta\nFırında köfte\nMalzemeler:\n500 gr kıyma\n1 soğan\nKıymayı yoğurun.", textOrigin: "ocr" });
+    // the first request (the link alone) wasn't OCR
+    expect(bodies[0]).not.toHaveProperty("textOrigin");
     // on to the usual review form
     expect(await screen.findByDisplayValue("Fırında köfte")).toBeTruthy();
   }, 20000);
@@ -79,6 +86,17 @@ describe("Instagram: Ekran görüntüsünden oku", () => {
     expect(await screen.findByText(/Görüntülerde yazı bulamadık/)).toBeTruthy();
     expect(bodies).toHaveLength(1);
     expect(screen.getByLabelText("Açıklamayı buraya yapıştır")).toBeTruthy();
+  }, 20000);
+
+  it("iOS: the Turkish reader (anv-text-recognition) is used when the build has it", async () => {
+    mockTurkish.isSupported = true;
+    await openInstagram();
+    picker().launchImageLibraryAsync.mockResolvedValueOnce({ canceled: false, assets: [{ uri: "file:///a.png" }] });
+    await fireEvent.press(screen.getByRole("button", { name: "Ekran görüntüsünden oku" }));
+    await waitFor(() => expect(bodies).toHaveLength(2));
+    expect(mockTurkish.extractTextFromImage).toHaveBeenCalledWith("/a.png");
+    expect(mockOcr.extractTextFromImage).not.toHaveBeenCalled();
+    expect(bodies[1]).toMatchObject({ text: "Malzemeler:\n1 adet soğan", textOrigin: "ocr" });
   }, 20000);
 
   it("isn't offered where the phone can't read images (Expo Go) — paste only", async () => {

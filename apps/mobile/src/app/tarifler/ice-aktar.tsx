@@ -35,13 +35,15 @@ export default function ImportRecipe() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [note, setNote] = useState<string | null>(null);
+  // The paste box holds text read from screenshots: the server is told (Turkish letters may be missing).
+  const [fromOcr, setFromOcr] = useState(false);
   const [result, setResult] = useState<ImportResult | null>(null);
   const [draft, setDraft] = useState<RecipeDraft | null>(null);
   const [attempt, setAttempt] = useState(0);
   const auto = useRef(false);
   const lastTags = useRef("");
 
-  async function run(caption: string = text) {
+  async function run(caption: string = text, ocr: boolean = fromOcr && !!caption.trim()) {
     if (!url.trim() && !caption.trim()) {
       setError(t("import.needLink"));
       return;
@@ -49,7 +51,7 @@ export default function ImportRecipe() {
     setBusy(true);
     setError(null);
     try {
-      const res = await postJson<ApiResponse>("/api/import", { url: url.trim(), text: caption.trim(), householdId: household?.id ?? "", locale: getLocale() });
+      const res = await postJson<ApiResponse>("/api/import", { url: url.trim(), text: caption.trim(), householdId: household?.id ?? "", locale: getLocale(), ...(ocr ? { textOrigin: "ocr" } : {}) });
       const body = res.body;
       if (!res.ok || body.error) {
         setError(body.error ?? t("import.failed"));
@@ -91,9 +93,10 @@ export default function ImportRecipe() {
     }
     const caption = text.trim() ? `${text.trim()}\n${r.text}` : r.text;
     setText(caption);
+    setFromOcr(true);
     setPasteOpen(true);
     setNote(t("import.screenshotRead", { count: r.count }));
-    await run(caption);
+    await run(caption, true);
   }
   const offerScreenshots = pasteOpen && result?.source?.platform === "instagram" && screenshotReadingAvailable();
 
@@ -180,7 +183,19 @@ export default function ImportRecipe() {
         </Text>
       )}
       <Button title={pasteOpen ? t("import.hidePaste") : t("import.showPaste")} variant="ghost" onPress={() => setPasteOpen((v) => !v)} />
-      {pasteOpen && <Field label={t("import.pasteLabel")} hint={t("import.pasteHint")} multiline maxLength={20000} value={text} onChangeText={setText} />}
+      {pasteOpen && (
+        <Field
+          label={t("import.pasteLabel")}
+          hint={t("import.pasteHint")}
+          multiline
+          maxLength={20000} value={text}
+          onChangeText={(v) => {
+            setText(v);
+            // Cleared and typed again: no longer screenshot text.
+            if (!v.trim()) setFromOcr(false);
+          }}
+        />
+      )}
       {offerScreenshots && (
         <View style={{ gap: 6 }}>
           <Button title={t("import.fromScreenshot")} icon="import" variant="secondary" disabled={busy} onPress={() => void fromScreenshots()} />

@@ -7,7 +7,7 @@ import { DailyLimiter } from "@/server/import/rateLimit";
 import { providerInput, structureRecipe, type LlmProvider } from "@/server/llm";
 import { CLAUDE_TOOL } from "@/server/llm/claude";
 import { GEMINI_DEFAULT_MODEL, geminiProvider, thinkingFor, toGeminiSchema } from "@/server/llm/gemini";
-import { RECIPE_JSON_SCHEMA, SYSTEM_PROMPT, userPrompt } from "@/server/llm/prompt";
+import { OCR_RULE, RECIPE_JSON_SCHEMA, SYSTEM_PROMPT, userPrompt } from "@/server/llm/prompt";
 
 const caption = readFileSync("../../packages/core/tests/fixtures/captions/03-satir-ici.txt", "utf8");
 const TIKTOK = "https://www.tiktok.com/@mutfakdefteri/video/7312345678901234567";
@@ -349,6 +349,23 @@ describe("privacy", () => {
     const raw = String(init.body);
     for (const secret of ["ev-ali-zeynep-42", "ali@demo.ev", "203.0.113.9", "mutfakdefteri", "Mutfak Defteri", TIKTOK]) expect(raw).not.toContain(secret);
     expect(Object.keys(init.headers as Record<string, string>).sort()).toEqual(["content-type", "x-goog-api-key"]);
+  });
+
+  it("screenshot text (textOrigin: ocr): the system prompt also asks to restore Turkish letters, nothing else changes", async () => {
+    const ocrText = "Malzemeler:\n1 adet sogan\n1 yemek kasigi seker\nYapilisi:\nSogani dograyin.";
+    for (const env of [{ GEMINI_API_KEY: "g" }, { ANTHROPIC_API_KEY: "a" }]) {
+      const d = deps(env);
+      await run(d, { text: ocrText, textOrigin: "ocr" });
+      const system = env.GEMINI_API_KEY
+        ? JSON.parse(String((d.gemini.mock.calls[0] as [string, RequestInit])[1].body)).systemInstruction.parts[0].text
+        : (d.create.mock.calls[0][0] as { system: string }).system;
+      expect(system).toBe(`${SYSTEM_PROMPT}\n${OCR_RULE}`);
+      expect(OCR_RULE).toMatch(/sayıları, miktarları ve birimleri değiştirme/);
+    }
+    // a plain paste keeps the exact prompt
+    const plain = deps({ GEMINI_API_KEY: "g" });
+    await run(plain, { text: ocrText });
+    expect(JSON.parse(String((plain.gemini.mock.calls[0] as [string, RequestInit])[1].body)).systemInstruction).toEqual({ parts: [{ text: SYSTEM_PROMPT }] });
   });
 
   it("provider input type has only text and platform; a public title becomes the caption's first line", () => {

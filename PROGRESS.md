@@ -238,8 +238,17 @@ Spec: `PROMPT-v3.2.md` (with the owner's four answers at the end). All work on `
 **Open items for the owner:**
 - [ ] **New dev build on the iPhone** (the "Custom sound … not found" log means the current one has no sound file). Then check the cooking timer: nothing moves while it counts, Duraklat / +1 dk / Kapat, the "Diğer zamanlayıcılar" strip, and the notification sound with the phone locked.
 - [ ] **AlarmKit test build:** `EXPO_PUBLIC_ENABLE_ALARMKIT=1` (README › "iOS: Telefonun saati / AlarmKit"). The Swift has never been compiled. If it fails, build without the flag and send the Xcode error.
+- [ ] **iOS OCR (Round 3.3):** in the same dev build, read a Turkish caption from a screenshot; the letters should survive. If the build fails in `AnvTextRecognitionModule.swift`, build with `ANV_IOS_TR_OCR=0`.
 - [ ] **Android build** (dev build or the next APK): "Telefonun saatinde kur" on a running timer, sharing a reel from Instagram → "Akşama ne var?", and "Ekran görüntüsünden oku" with two screenshots of a long caption.
 - [ ] **iOS share extension:** only if wanted, build with `ANV_IOS_SHARE_EXTENSION=1` (needs a paid Apple team; EAS registers the App Group).
 - [ ] **AI provider:** production still runs Gemini → Claude (unset `AI_PROVIDER`). To use Claude only, set `ANTHROPIC_API_KEY` and `AI_PROVIDER=anthropic` on Vercel and redeploy (≈ $0.0005 per import).
 - [ ] Still open from 3.1: back up the release keystore + `AKSAMA_UPLOAD_*`; decide the package name.
 - An untracked root `tsconfig.json` (`extends: expo/tsconfig.base`, created 2026-10-15 05:14, probably by an `expo` command run at the repo root) was left alone. Delete it unless you made it.
+
+## Round 3.3
+
+Spec: `PROMPT-v3.3.md` (Turkish letters in iOS screenshot OCR).
+
+- [x] T1. OCR language config: local module `modules/anv-text-recognition` (upstream expo-text-extractor Swift + `tr-TR`/`en-US` filtered by the device's supported list, accurate, language correction), linked unless `ANV_IOS_TR_OCR=0` (`plugins/withTurkishOcr.js`, checked with the autolinking resolver). Android unchanged (ML Kit reads Turkish). **Not compiled yet** (no Xcode).
+- [x] T2. `textOrigin: "ocr"` from the phone; `OCR_RULE` in the LLM system prompt only for OCR text.
+- [x] T3. `restoreDiacritics` (core `domain/import/diacritics.ts`) before the rule parser for OCR text; fixture `tests/fixtures/ocr/01-kuru-fasulye-*`, ambiguous-word and English tests.

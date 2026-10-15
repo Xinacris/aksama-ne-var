@@ -219,9 +219,22 @@ screenshots of the caption, in order; expo-text-extractor reads them on the devi
 Android ML Kit through Google Play services — free, nothing uploaded), core `captionFromScreenshots`
 merges the pages (lines repeated where scrolled screenshots overlap are dropped, as are Instagram's
 own interface lines: likes, comments, "devamı", "Çeviriyi gör", times) and the text is imported like
-a pasted caption. Needs a native build; Expo Go shows paste only. iOS Vision runs with its default
-language (English), so a Turkish letter can come back plain (ş → s); the parser and the LLM tolerate
-it, and the review form is there to fix the rest.
+a pasted caption. Needs a native build; Expo Go shows paste only.
+
+**Turkish letters (Round 3.3).** On iOS the local module `apps/mobile/modules/anv-text-recognition`
+reads instead of expo-text-extractor (whose iOS reader is English-only): Vision with
+`recognitionLanguages` = `tr-TR`, `en-US` as far as the device's Vision supports them (asked on the
+device: Apple publishes no per-version list), `.accurate`, language correction on. It's linked unless
+the build sets `ANV_IOS_TR_OCR=0`. Android's ML Kit Latin recognizer reads Turkish letters already.
+Two safety nets on the server, for text the phone marks `textOrigin: "ocr"`:
+- the LLMs get one extra system-prompt rule (`OCR_RULE`): restore Turkish letters in the name,
+  ingredients and steps; change letters only, never numbers, amounts or units; leave a word as is
+  when unsure. Every other request's prompt is byte-identical to before;
+- the rule parser gets the text through `restoreDiacritics` (core `domain/import/diacritics.ts`): a
+  recipe dictionary of words with one meaning ("sogan" → "soğan", "pisirin" → "pişirin"), and words
+  that are real both ways ("sis"/"şiş", "kasik"/"kaşık", "dis"/"diş", "ilik"/"ılık") only in a clear
+  context ("yemek kasigi", "2 dis sarimsak", "ilik su", "sis kebap"). Unknown words are kept as read;
+  text that doesn't come out Turkish (an English caption) is returned unchanged.
 
 ## Adding an LLM provider
 

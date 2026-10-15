@@ -18,6 +18,8 @@ export interface StructureMeta {
   title: string | null;
   /** The user's language: the draft comes back in it. */
   locale?: "tr" | "en";
+  /** Text read from screenshots: the prompt asks to restore Turkish letters. */
+  ocr?: boolean;
 }
 
 export interface StructureOptions {
@@ -35,7 +37,12 @@ export interface StructureOptions {
 /** What LLM providers receive: caption text (title as its first line when not already in it) + platform. */
 export function providerInput(text: string, meta: StructureMeta): ProviderInput {
   const title = meta.title?.trim();
-  return { text: title && !text.includes(title) ? `${title}\n\n${text}` : text, platform: meta.platform, ...(meta.locale && meta.locale !== "tr" ? { locale: meta.locale } : {}) };
+  return {
+    text: title && !text.includes(title) ? `${title}\n\n${text}` : text,
+    platform: meta.platform,
+    ...(meta.locale && meta.locale !== "tr" ? { locale: meta.locale } : {}),
+    ...(meta.ocr ? { ocr: true } : {}),
+  };
 }
 
 async function attempt(p: LlmProvider, input: ProviderInput, opts: StructureOptions, isLast: boolean): Promise<ImportedRecipe> {

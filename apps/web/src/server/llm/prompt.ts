@@ -14,7 +14,14 @@ const LANGUAGE_RULE: Record<"tr" | "en", string> = {
 };
 
 /** The import instructions; only the language rule differs between Turkish and English drafts. */
-export function systemPrompt(locale: "tr" | "en" = "tr"): string {
+/**
+ * Screenshot text (phone OCR) can come back without Turkish letters. Added only for such text, so
+ * every other request is unchanged.
+ */
+export const OCR_RULE =
+  "- Bu metin telefonda ekran görüntüsünden okundu; Türkçe harfler kaybolmuş olabilir (ş→s, ı→i, ğ→g, ç→c, ö→o, ü→u). Tarif adında, malzemelerde ve adımlarda doğru Türkçe yazımı geri getir (\"sogan\" → \"soğan\", \"yemek kasigi\" → \"yemek kaşığı\"). Yalnızca harfleri düzelt: kelime ekleme ya da çıkarma, sayıları, miktarları ve birimleri değiştirme. Bir kelimenin doğru hâlinden emin değilsen olduğu gibi bırak.";
+
+export function systemPrompt(locale: "tr" | "en" = "tr", opts: { ocr?: boolean } = {}): string {
   return `Sen bir ev mutfağı asistanısın. Kullanıcının yapıştırdığı sosyal medya açıklamasından ya da tarif metninden yapılandırılmış bir tarif taslağı çıkarırsın.
 Kurallar:
 - Yalnızca metinde olanı yaz; malzeme ya da adım uydurma. Metinde tarif yoksa malzeme ve adım listelerini boş bırak.
@@ -29,7 +36,7 @@ ${LANGUAGE_RULE[locale]}
 - Etiketler: cookingMethods (${COOKING_METHOD_TAGS.join(", ")}), mainIngredients (${MAIN_INGREDIENT_TAGS.join(", ")}; Vejetaryen = et, tavuk ve balık yok), prepTags (${PREP_TAGS.join(", ")}). Yalnızca bu listelerdeki değerleri, yalnızca metin açıkça destekliyorsa kullan; emin değilsen boş bırak.
 - role: çorba "corba", ana yemek "ana", pilav/garnitür "yaninda", salata/meze "salata", tatlı ya da belirsizse null.
 - prep: önceden yapılması gerekenler ("Kıymayı buzluktan çıkar" → morning, "Nohudu ıslatmaya koy" → night-before, "Marine et" → hour-before).
-- Kalori, besin değeri ya da diyet yorumu ekleme.`;
+- Kalori, besin değeri ya da diyet yorumu ekleme.${opts.ocr ? `\n${OCR_RULE}` : ""}`;
 }
 
 /** The Turkish import prompt (the default). */
@@ -114,7 +121,7 @@ export const RECIPE_JSON_SCHEMA: JsonSchema = {
 /** The import as a provider task (shared by Gemini and Claude). */
 export function recipeTask(input: ProviderInput, retry: boolean): LlmTask {
   return {
-    system: systemPrompt(input.locale ?? "tr"),
+    system: systemPrompt(input.locale ?? "tr", { ocr: input.ocr }),
     user: userPrompt(input, retry),
     schema: RECIPE_JSON_SCHEMA,
     tool: { name: "tarif_taslagi", description: "Metinden çıkarılan tarif taslağını kaydeder." },
