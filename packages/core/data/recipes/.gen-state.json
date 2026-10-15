@@ -1518,11 +1518,11 @@
     "zeytinyagli-mantar",
     "eksili-kofte"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:09:16.121Z",
    "finishedAt": null
   },
   {
@@ -1971,12 +1971,23 @@
     "safranli-risotto",
     "bezelyeli-risotto"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "spagetti-napoliten",
+    "spagetti-aglio-e-olio",
+    "fettuccine-alfredo",
+    "penne-arrabbiata",
+    "firinda-lazanya",
+    "sebzeli-lazanya",
+    "ispanakli-ricotta-cannelloni",
+    "mantarli-risotto",
+    "safranli-risotto",
+    "bezelyeli-risotto"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 101967,
    "startedAt": "2026-10-15T20:05:30.201Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:22:24.042Z"
   },
   {
    "id": "g065",
