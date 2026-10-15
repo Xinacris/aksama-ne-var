@@ -1938,11 +1938,11 @@
     "yogurtlu-kebap",
     "yogurtlu-kofte"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:33:23.127Z",
    "finishedAt": null
   },
   {
@@ -2150,12 +2150,23 @@
     "firinda-levrek-italyan-usulu",
     "midye-marinara"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "tavuk-cacciatore",
+    "tavuk-piccata",
+    "tavuk-saltimbocca",
+    "tavuk-parmigiana",
+    "osso-buco",
+    "dana-scaloppine",
+    "italyan-koftesi",
+    "balik-acqua-pazza",
+    "firinda-levrek-italyan-usulu",
+    "midye-marinara"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 95869,
    "startedAt": "2026-10-15T22:30:11.146Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:33:32.496Z"
   },
   {
    "id": "g068",
