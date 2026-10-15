@@ -4911,5 +4911,2140 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "11163867-74c5-4067-826d-e1f3adfe02a0",
+  "slug": "gnocchi-domates-soslu",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Gnocchi domates soslu",
+   "en": "Potato gnocchi in tomato sauce"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patatesli, yumuşacık küçük hamur parçaları sade bir domates sosunda pişirilir. Hamuru fazla yoğurmamak gnocchilerin hafif kalmasını sağlar.",
+   "en": "Soft potato dumplings cooked in a plain tomato sauce. Handle the dough as little as possible so the gnocchi stay light."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklu haşlanıp ezilmiş",
+     "en": "boiled in their skins and mashed"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fesleğen",
+     "en": "Basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları koparılmış",
+     "en": "leaves torn"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri kabuklu haşla. Yumuşayınca süzüp sıcakken soy ve pürüzsüz olana kadar ez.",
+     "en": "Boil the potatoes in their skins until tender. Drain, peel while still hot and mash until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş patatesi soğumaya bırak. Un, yumurta, parmesan ve bir tutam tuzla yumuşak bir hamur yoğur; hamur yapışırsa biraz daha un ekle.",
+     "en": "Leave the mash to cool. Work in the flour, egg, parmesan and a pinch of salt to a soft dough; add a little more flour if it sticks."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl. Her parçayı uzun çubuk haline getir, küçük parçalara kes ve çatalın sırtıyla hafif çizgi izi ver.",
+     "en": "Divide the dough into 4 pieces. Roll each into a long rope, cut into small pieces and press lightly with the back of a fork to mark them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede tuzlu suyu kaynat, gnocchileri partiler halinde ekle. Yüzeye çıktıktan 1 dakika sonra süzgece al.",
+     "en": "Bring a large pan of salted water to the boil and add the gnocchi in batches. Once they float, cook for 1 more minute, then lift out with a slotted spoon."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada zeytinyağını ısıt, soğanı yumuşayana kadar kavur. Sarımsağı ekleyip kokusu çıkana kadar çevir.",
+     "en": "Heat the olive oil in a wide pan and soften the onion. Add the garlic and stir until fragrant."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domates püresini ekle, tuz ve karabiberle tatlandır, kısık ateşte 15 dakika pişir.",
+     "en": "Add the passata, season with salt and black pepper and simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Gnocchileri sosa al, nazikçe karıştır. Fesleğen ve rendelenmiş parmesanla servis et.",
+     "en": "Gently toss the gnocchi through the sauce. Serve topped with basil and grated parmesan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "fe0db05a-c8da-494e-9b3d-24e5decb2918",
+  "slug": "gnocchi-sorrentina",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Gnocchi sorrentina",
+   "en": "Gnocchi alla sorrentina"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sorrento usulü, domates sosunda pişirilip üzeri mozzarella ve parmesanla fırında gratine edilmiş gnocchi. Yoğun sos ve iyi erimiş peynir yemeği özel kılar.",
+   "en": "Gnocchi baked in the Sorrento style: tomato sauce, then melted mozzarella and parmesan browned in the oven. The thick sauce and golden cheese top are what make it good."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklu haşlanıp ezilmiş",
+     "en": "boiled in their skins and mashed"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş, yarısı üst için",
+     "en": "finely grated, half for the top"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fesleğen",
+     "en": "Basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": null,
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "fırın kabı için",
+     "en": "for greasing the dish"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri kabuklu haşla, sıcakken soyup pürüzsüz ez.",
+     "en": "Boil the potatoes in their skins, then peel and mash them while still warm."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş patatese un, yumurta, rendelenmiş parmesanın yarısı ve bir tutam tuz ekleyip yumuşak bir hamur yoğur.",
+     "en": "Mix the flour, egg, half the parmesan and a pinch of salt into the mash to make a soft dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru çubuk haline getirip parçalara kes, her parçayı çatalla hafifçe çizgili yap.",
+     "en": "Roll the dough into ropes, cut into pieces and mark each one lightly with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tuzlu kaynar suda gnocchileri pişir; yüzeye çıktıktan 1 dakika sonra süzgece al.",
+     "en": "Cook the gnocchi in boiling salted water. Once they float, cook for 1 more minute and lift them out."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını bir tavada ısıt, sarımsağı kokusu çıkana kadar kavur. Passatayı ekle, tuz ve karabiberle tatlandırıp 10 dakika kısık ateşte pişir.",
+     "en": "Warm the olive oil in a pan and cook the garlic until fragrant. Add the passata, season with salt and pepper and simmer on low heat for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Fırın kabını tereyağıyla yağla, gnocchileri sosla karıştırıp kaba yay.",
+     "en": "Heat the oven to 200°C. Butter an ovenproof dish and spread the gnocchi, mixed with the sauce, in it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mozzarella dilimlerini üstüne diz, kalan parmesanı serp ve fırında 15 dakika pişir.",
+     "en": "Lay the mozzarella slices on top, sprinkle over the remaining parmesan and bake for 15 minutes, until golden and bubbling."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Fesleğenle süsleyip sıcak servis et.",
+     "en": "Scatter with basil and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "guest"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "12cafe8f-3cd0-4eef-8106-141f73771652",
+  "slug": "ricotta-gnudi",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Ricotta gnudi",
+   "en": "Ricotta gnudi with sage butter"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Gnudi, yani çıplak ravioli, makarna hamuru olmadan sadece ricotta ve ıspanaktan yapılan küçük toplardır. Adaçayı tereyağıyla servis edilince hafif ve aromatik olur.",
+   "en": "Gnudi, or naked ravioli, are ricotta and spinach dumplings with just enough flour to hold them together. Served in sage butter, they are light and fragrant."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 15,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "iyice yıkanmış",
+     "en": "thoroughly washed"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "ve unlamak için biraz daha",
+     "en": "plus a little extra for dusting"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "taze rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Adaçayı",
+     "en": "Sage"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ayrılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-sage",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ispanağı kaynar suda 1 dakika haşla, soğuk suda çalkala, elinle sıkıp suyunu al ve ince doğra.",
+     "en": "Blanch the spinach in boiling water for 1 minute, rinse in cold water, squeeze dry and chop finely."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Ricottayı büyük bir kaseye al. Ispanak, yumurta, parmesan, tuz, karabiber ve muskatı ekleyip karıştır.",
+     "en": "Put the ricotta in a large bowl. Add the spinach, egg, parmesan, salt, black pepper and nutmeg and mix."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu ekleyip yumuşak, yapışkanlığı az bir karışım elde edene kadar nazikçe kat.",
+     "en": "Fold in the flour gently until you have a soft mixture that is not too sticky."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı ceviz büyüklüğünde toplara ayır, unlanmış bir tepsiye dizip buzdolabında 2 saat dinlendir.",
+     "en": "Shape the mixture into walnut-sized balls, arrange them on a floured tray and chill in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Tereyağını küçük bir tavada kısık ateşte eritip adaçayı yapraklarını ekle. Köpüğü çekip tereyağı fındık rengine dönene kadar bekle.",
+     "en": "Melt the butter in a small pan over low heat and add the sage leaves. Wait until the foam settles and the butter turns hazelnut brown."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede tuzlu suyu kaynat, gnudileri ekle ve yüzeye çıktıktan sonra 2 dakika daha pişir.",
+     "en": "Bring a large pan of salted water to the boil, add the gnudi and, once they float, cook for 2 more minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Süzgeçle alıp adaçayılı tereyağında hafifçe çevir, parmesanla servis et.",
+     "en": "Lift out with a slotted spoon, toss gently in the sage butter and serve with parmesan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "makeAhead",
+   "guest",
+   "Vejetaryen",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "fabeaf19-1699-44d8-bf1a-2865f160e104",
+  "slug": "pizza-margherita",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Pizza margherita",
+   "en": "Pizza margherita"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce hamurlu, domates sosu, taze mozzarella ve fesleğenle yapılan klasik İtalyan pizzası. Az malzeme kullanıldığı için hamurun iyi pişmesi lezzeti belirler.",
+   "en": "The classic Italian pizza: a thin base, tomato, fresh mozzarella and basil. With so few ingredients, a well-cooked base matters most."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 15,
+  "waitMinutes": 80,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 320,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş ve parçalanmış",
+     "en": "drained and torn"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fesleğen",
+     "en": "Basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves torn"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, mayayı, şekeri ve tuzu karıştır. Ilık suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast, sugar and salt. Add the lukewarm water and olive oil and knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağlanmış bir kaseye al, üstünü örtüp sıcak bir yerde 1 saat mayalanmaya bırak.",
+     "en": "Put the dough in an oiled bowl, cover it and leave in a warm place for 1 hour to rise."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 2 eşit parçaya böl, toplar yapıp unlu bir tepsiye diz ve 20 dakika dinlendir.",
+     "en": "Divide the dough into 2 equal pieces, shape into balls and rest them on a floured tray for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırını en yüksek dereceye ısıt. Passatayı bir tutam tuzla karıştır.",
+     "en": "Heat the oven as high as it will go. Season the passata with a pinch of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her topu unlu tezgâhta elinle yayıp yaklaşık 25 cm'lik ince bir daire yap, kenarlarını biraz kalın bırak.",
+     "en": "Press each ball out by hand on a floured surface into a thin round about 25 cm across, leaving the edges a little thicker."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamurların üzerine sosu yay, mozzarella parçalarını dağıt ve fırında 10 dakika pişir.",
+     "en": "Spread the sauce over the bases, scatter the mozzarella and bake for 10 minutes, until the crust is blistered and the cheese bubbling."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Çıkınca fesleğen yapraklarını serp, bir damla zeytinyağı gezdirip hemen dilimle.",
+     "en": "Scatter over the basil, drizzle with a little olive oil and slice straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "Hamur işi",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "68d2a569-d5c6-4b5f-8fce-b90ae0b1a5b4",
+  "slug": "sucuklu-pizza",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Sucuklu pizza",
+   "en": "Pizza with spicy beef sausage"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Türk sucuğunun baharatlı ve yağlı tadı, domates sosu ve mozzarellayla dengelenen, hızlı hazırlanan bir pizza. Sucuğu önce tavada kızartmak fazla yağını azaltır ve tadını derinleştirir.",
+   "en": "Spicy Turkish sucuk on a tomato base under melted mozzarella. Frying the sucuk first drains some of its fat and deepens its flavour."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pizza hamuru",
+     "en": "Pizza dough"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pizza-dough",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "parçalanmış",
+     "en": "torn"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sucuk",
+     "en": "Sucuk (beef sausage)"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "sucuk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 250 dereceye ısıt. Pizza hamurunu unlu tezgâhta elinle yayıp yaklaşık 30 cm'lik yuvarlak bir taban yap.",
+     "en": "Heat the oven to 250°C. Stretch the dough by hand on a floured surface into a round about 30 cm across."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sucuk dilimlerini kuru tavada orta ateşte yağı salana kadar kızart, kağıt havluya al.",
+     "en": "Fry the sliced sucuk in a dry pan over medium heat until its fat renders out, then drain on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domates püresini zeytinyağı, kekik, pul biber ve bir tutam tuzla karıştır; hamurun üzerine yay.",
+     "en": "Mix the passata with the olive oil, oregano, chilli flakes and a pinch of salt, then spread it over the base."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mozzarellayı parçalayıp üstüne dağıt, sucuk dilimlerini dizin.",
+     "en": "Tear the mozzarella over the base and arrange the sucuk slices on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 12 dakika, kenarları kızarana ve peynir eriyene kadar pişir.",
+     "en": "Bake for 12 minutes, until the edges are golden and the cheese has melted."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Hemen dilimleyip sıcak servis et.",
+     "en": "Slice straight away and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi",
+   "spicy",
+   "kidFriendly",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6fc73e47-b793-407d-baa6-9f662d2d608c",
+  "slug": "sebzeli-pizza",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Sebzeli pizza",
+   "en": "Vegetable pizza"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Biber, kabak, mantar ve kırmızı soğanla hazırlanan, tatlı sebzelerin öne çıktığı bir pizza. Sebzeleri önceden kısa süre soteleyip nemlerini almak hamurun ıslanmasını önler.",
+   "en": "A pizza where sweet peppers, courgette and mushroom take centre stage. Softening the vegetables briefly first removes their moisture so the base stays crisp."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pizza hamuru",
+     "en": "Pizza dough"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pizza-dough",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "parçalanmış",
+     "en": "torn"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz, dilimlenmiş",
+     "en": "pitted and sliced"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 250 dereceye ısıt. Hamuru yağlı bir fırın tepsisine yay, kenarlarını biraz kalınlaştır.",
+     "en": "Heat the oven to 250°C. Press the dough into an oiled baking tray and build up a slightly thicker edge."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada yarım yemek kaşığı zeytinyağını ısıt; biber, kabak, mantar ve soğanı ekleyip tuz serperek 5 dakika sotele.",
+     "en": "Heat half a tablespoon of the olive oil in a pan. Add the pepper, courgette, mushroom and onion, season with salt and soften for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domates püresini kalan zeytinyağı, kekik ve bir tutam tuzla karıştır; hamurun üzerine yay.",
+     "en": "Mix the passata with the rest of the olive oil, the oregano and a pinch of salt, then spread it over the base."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sebzeleri sosun üzerine dağıt; mozzarella parçalarını ve zeytinleri ekle.",
+     "en": "Spread the cooked vegetables over the sauce, then add the mozzarella and olives."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarları kızarana ve peynir eriyene kadar 12 dakika pişir.",
+     "en": "Bake for 12 minutes, until the crust is golden and the cheese has melted."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip sıcak servis et.",
+     "en": "Slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "Hamur işi",
+   "kidFriendly",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8d2f7e49-a0bd-4ef9-be3e-85036f18de99",
+  "slug": "dort-peynirli-pizza",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Dört peynirli pizza",
+   "en": "Four-cheese pizza"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Domates yerine krema tabanı kullanılan, mozzarella, gravyer, keçi peyniri ve parmesanla hazırlanan zengin bir pizza. Üzerine bal ve karabiber gezdirilince tuzlu ile tatlının dengesi oluşur.",
+   "en": "A rich white pizza with no tomato: a cream base under mozzarella, gruyere, goat's cheese and parmesan. A drizzle of honey and black pepper at the end balances the saltiness."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pizza hamuru",
+     "en": "Pizza dough"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pizza-dough",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cooking cream"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "parçalanmış",
+     "en": "torn"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gravyer peyniri",
+     "en": "Gruyere"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "gruyere",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Keçi peyniri",
+     "en": "Goat's cheese"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "goat-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bal",
+     "en": "Honey"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "honey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 250 dereceye ısıt. Pizza hamurunu unlu tezgâhta elinle yayıp tepsiye al.",
+     "en": "Heat the oven to 250°C. Stretch the dough by hand on a floured surface and transfer it to a tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kremayı tuz ve karabiberle tatlandır, hamurun üzerine ince bir tabaka halinde yay; kenarlarını boş bırak.",
+     "en": "Season the cream with salt and pepper and spread a thin layer over the base, leaving the edge bare."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mozzarella, gravyer ve keçi peynirini hamurun üzerine dağıt; parmesanı en son serp.",
+     "en": "Scatter the mozzarella, gruyere and goat's cheese over the base, and finish with the parmesan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarlar kızarana ve peynirler eriyene kadar 10 dakika pişir.",
+     "en": "Bake for 10 minutes, until the edges are golden and the cheeses have melted."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Çıkar, zeytinyağı ve balı gezdirip hemen dilimle.",
+     "en": "Take out, drizzle with the olive oil and honey, and slice straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "94953497-82f3-4b23-a713-afde15d88665",
+  "slug": "calzone",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Calzone",
+   "en": "Calzone"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ricotta, mozzarella ve salamla doldurulup kapatılmış, dışı kızarmış pizza hamurundan bir hamur işi. Kenarları iyice kapatmak içinin dışarı akmasını önler.",
+   "en": "A folded pizza dough filled with ricotta, mozzarella and salami, then baked until golden. Pressing the edges firmly shut keeps the filling inside."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pizza hamuru",
+     "en": "Pizza dough"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pizza-dough",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana salam",
+     "en": "Beef salami"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "beef-salami",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 120,
+    "unit": "ml",
+    "note": {
+     "tr": "yarısı içi, yarısı servis için",
+     "en": "half for the filling, half to serve"
+    },
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt ve fırın tepsisine kağıt ser.",
+     "en": "Heat the oven to 220°C and line a baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ricottayı, mozzarellayı, salamı ve parmesanı bir kasede karıştır; karabiber ekle.",
+     "en": "Mix the ricotta, mozzarella, salami and parmesan in a bowl and season with black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Passatanın yarısını kekik, bir tutam tuz ve zeytinyağıyla karıştır. Diğer yarısını servis için ayır.",
+     "en": "Mix half the passata with the oregano, a pinch of salt and the olive oil. Set the other half aside to serve."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ikiye böl, her birini yaklaşık 25 cm'lik yuvarlak aç. Yarısına harcı ve birer kaşık sosu koy, kenarları iyice bastırıp kapat ve kıvrımlı bir kenar oluştur.",
+     "en": "Divide the dough in two and roll each into a round about 25 cm across. Spoon the filling and a spoonful of the sauce on one half of each, press the edges firmly shut and crimp them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üstlerini çırpılmış yumurtayla boya, fırında 20 dakika pişir.",
+     "en": "Brush the tops with the beaten egg and bake for 20 minutes, until deep golden."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Birkaç dakika dinlendirip kalan sosla servis et.",
+     "en": "Rest for a few minutes and serve with the remaining sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f078ba0d-bdcd-411f-94dd-b8a4c459a411",
+  "slug": "focaccia",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Focaccia",
+   "en": "Focaccia"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Zeytinyağı ve biberiyle kızarmış, parmak izleriyle çukurlu bir İtalyan ekmeği. Hamurun yavaş yükselmesi hafif ve gözenekli bir iç doku verir.",
+   "en": "An Italian flatbread with a dimpled, oily top and fresh rosemary. A slow rise gives it an airy, open crumb."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
+  "waitMinutes": 90,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 350,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hamur ve tepsi için",
+     "en": "for the dough and the tin"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biberiye",
+     "en": "Rosemary"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-rosemary",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, mayayı, şekeri ve tuzu karıştır. Ilık suyu ve 2 yemek kaşığı zeytinyağını ekleyip 8 dakika yoğur.",
+     "en": "Mix the flour, yeast, sugar and salt. Add the lukewarm water and 2 tablespoons of the olive oil and knead for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağlı bir kaseye al, folyeyle ört ve sıcak bir yerde 1 saat mayalanmaya bırak.",
+     "en": "Put the dough in an oiled bowl, cover with cling film and leave in a warm place for 1 hour to rise."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Kalan zeytinyağının yarısını fırın tepsisine sür. Hamuru tepsiye yay ve parmak uçlarınla yüzeyine çukurlar aç.",
+     "en": "Brush the tin with half the remaining olive oil. Press the dough into the tin and dimple the surface with your fingertips."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üstünü örtüp 30 dakika daha dinlendir.",
+     "en": "Cover and leave to rest for another 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırını 230 dereceye ısıt. Kalan zeytinyağını gezdir, biberiye yapraklarını ve tuzu serp.",
+     "en": "Heat the oven to 230°C. Drizzle over the rest of the olive oil and scatter with the rosemary leaves and a little salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "20 dakika, yüzeyi altın rengi alana kadar pişir.",
+     "en": "Bake for 20 minutes, until golden on top and firm when you tap the base."
+    },
+    "timerSeconds": 1200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e091b52d-fd5c-4bdc-98f7-d2131ca2987d",
+  "slug": "parmigiana-di-melanzane",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Parmigiana di melanzane",
+   "en": "Aubergine parmigiana"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kızartılmış patlıcan dilimleri, domates sosu, mozzarella ve parmesanla katman katman fırınlanan Güney İtalya usulü bir yemek. Patlıcanları tuzlayıp suyunu çekmek fazla yağ emmesini önler.",
+   "en": "Fried aubergine slices layered with tomato sauce, mozzarella and parmesan, then baked. Salting the aubergine first draws out its bitter water and stops it soaking up too much oil."
+  },
+  "servings": 6,
+  "prepMinutes": 40,
+  "cookMinutes": 55,
+  "waitMinutes": 45,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "uzunlamasına ince dilimlenmiş",
+     "en": "thinly sliced lengthways"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fesleğen",
+     "en": "Basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": null,
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcan dilimlerini süzgece diz, iki yüzüne tuz serp ve 30 dakika bekleyip suyunu çekmeye bırak.",
+     "en": "Lay the aubergine slices in a colander, salt both sides and leave for 30 minutes to draw out their juices."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Dilimleri kağıt havluyla kurulayıp sıvı yağda orta ateşte iki yüzü altın renk alana kadar kızart, kağıt havlu üzerine al.",
+     "en": "Pat the slices dry, fry them in the vegetable oil over medium heat until golden on both sides, then drain on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağında soğanı soteleyip sarımsağı ekle. Passatayı, tuz ve karabiberi ekleyip 15 dakika kısık ateşte pişir; sonunda fesleğen yapraklarını at.",
+     "en": "Soften the onion in the olive oil and add the garlic. Stir in the passata, salt and pepper, simmer on low heat for 15 minutes, then add the basil leaves at the end."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Fırını 190 dereceye ısıt. Fırın kabının dibine biraz sos yay; üzerine patlıcan, mozzarella, parmesan ve sostan oluşan katmanları üç kez tekrarla.",
+     "en": "Heat the oven to 190°C. Spread a little sauce over the base of an ovenproof dish, then layer aubergine, mozzarella, parmesan and sauce three times over."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "En üstte sos ve parmesan olacak şekilde 25 dakika fırında pişir.",
+     "en": "Finish with sauce and parmesan on top and bake for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 15 dakika dinlendir, sonra dilimle.",
+     "en": "Take out and rest for 15 minutes before slicing."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "Sebzeli",
+   "Dinlendirme"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
