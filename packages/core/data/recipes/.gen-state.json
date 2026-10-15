@@ -1323,12 +1323,14 @@
    "slugs": [
     "dana-rosto"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "dana-rosto"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 56228,
    "startedAt": "2026-10-15T20:04:26.646Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:05:28.881Z"
   },
   {
    "id": "g042",
@@ -1711,11 +1713,11 @@
     "oruk",
     "nohutlu-kuzu-yahni"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:04:58.244Z",
    "finishedAt": null
   },
   {
