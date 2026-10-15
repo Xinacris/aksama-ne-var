@@ -2804,12 +2804,21 @@
     "hash-brown-ve-yumurta",
     "biftek"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "dolgulu-hindi",
+    "somon-teriyaki",
+    "karides-scampi",
+    "pancake",
+    "fransiz-tostu",
+    "eggs-benedict",
+    "hash-brown-ve-yumurta",
+    "biftek"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 83361,
    "startedAt": "2026-10-15T22:50:33.724Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:53:18.089Z"
   },
   {
    "id": "g089",
