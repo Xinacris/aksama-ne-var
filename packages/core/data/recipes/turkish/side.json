@@ -8635,5 +8635,2061 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "db26ac0b-505f-4dd4-ba52-b5b0b5b22ca0",
+  "slug": "misir-ekmegi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Mısır ekmeği",
+   "en": "Cornbread"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz sofralarının vazgeçilmezi: mısır unundan yapılan, dışı çıtır içi yumuşacık bir ekmek. Peynirli yemeklerin, çorbaların ve turşuların yanında en çok yakışanı.",
+   "en": "A Black Sea table staple: a cornmeal bread with a crisp crust and a soft, slightly crumbly crumb. It suits cheese dishes, soups and pickles best."
+  },
+  "servings": 6,
+  "prepMinutes": 15,
+  "cookMinutes": 35,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mısır unu",
+     "en": "Cornmeal"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ince öğütülmüş",
+     "en": "finely ground"
+    },
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Buğday unu",
+     "en": "Plain flour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 2,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş, kalıbı yağlamak için de",
+     "en": "melted, plus extra for greasing the tin"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mısır unu, buğday unu, kabartma tozu, tuz ve şekeri geniş bir kapta karıştır.",
+     "en": "Mix the cornmeal, flour, baking powder, salt and sugar in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı, yoğurdu, sütü ve eritilmiş tereyağını ayrı bir kapta çırpıp kuru karışıma ekle. Yumuşak, hafif yapışkan bir hamur çıkana kadar karıştır.",
+     "en": "Whisk the egg, yoghurt, milk and melted butter in a separate bowl, then add to the dry mix. Stir until you have a soft, slightly sticky batter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 5 dakika dinlendir ki mısır unu sıvıyı çeksin.",
+     "en": "Leave the batter to rest for 5 minutes so the cornmeal can take up the liquid."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt ve 22 santimlik bir kalıbın içini tereyağıyla yağla.",
+     "en": "Heat the oven to 200°C and grease a 22 cm tin with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru kalıba dök ve ıslak parmaklarınla üstünü düzleştir.",
+     "en": "Pour the batter into the tin and smooth the top with wet fingers."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Önceden ısıtılmış fırında 30 dakika pişir; üstü altın rengi olunca bir kez kontrol et.",
+     "en": "Bake in the preheated oven for 30 minutes, checking once the top turns golden."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kalıbın içinde 5 dakika dinlendirip dilimleyerek servis et.",
+     "en": "Rest in the tin for 5 minutes, then slice and serve."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "budget",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c411aa0b-2ae8-4950-b602-59fc025cd029",
+  "slug": "bazlama",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Bazlama",
+   "en": "Bazlama (griddle flatbread)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Fırına değil tavaya konan, kabarık ve yumuşak yassı bir ekmek. Sabah çayının yanında peynir ve zeytinle, akşam da bir çorbanın yanında kolay ve doyurucu.",
+   "en": "A soft, puffed flatbread cooked in a pan rather than an oven. Easy and filling, with tea and cheese at breakfast or alongside a soup at dinner."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": 90,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hamuru yağlamak için",
+     "en": "for greasing the dough"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "sıcak servis için",
+     "en": "for brushing on warm bread"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, maya, tuz ve şekeri geniş bir kapta karıştır.",
+     "en": "Mix the flour, yeast, salt and sugar in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ve ılık suyu ekleyip 8 dakika yoğur; hamur yumuşak ve yapışmaz olsun.",
+     "en": "Add the yoghurt and lukewarm water and knead for 8 minutes until the dough is soft and no longer sticky."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağladığın bir kaba al, üzerini örtüp sıcak bir yerde 60 dakika mayalanmaya bırak.",
+     "en": "Put the dough in an oiled bowl, cover and leave somewhere warm to rise for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 6 eşit topa böl ve her topu elinle yaklaşık 1 santim kalınlığında yuvarlak bir yassı ekmek haline getir.",
+     "en": "Divide the dough into 6 equal balls and press each into a round flatbread about 1 cm thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağsız, kalın tabanlı bir tavayı orta ateşte ısıt ve bazlamaları kapağı kapalı olarak 8 dakika pişir; yarısında çevir.",
+     "en": "Heat a heavy pan over medium heat without oil. Cook the flatbreads under a lid for 8 minutes, turning them halfway through."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sıcakken üzerlerine tereyağı sür ve ılık servis et.",
+     "en": "Brush the warm breads with butter and serve them lukewarm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Tavada",
+   "budget"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7bbc9f8a-deb0-4d2f-b129-eb7f163fe4f5",
+  "slug": "kete",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Doğu Anadolu",
+  "title": {
+   "tr": "Kete",
+   "en": "Kete (layered buns)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Doğu Anadolu'da ince açılıp tereyağıyla katlanarak yapılan, kat kat ayrılan yumuşak hamur topları. Çayın yanına en çok yakışan hamur işlerinden.",
+   "en": "An eastern Anatolian bread: a soft dough rolled thin, layered with butter and folded into buns that pull apart in flaky layers. Best with tea."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 25,
+  "waitMinutes": 80,
+  "timeNote": null,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş; katlamak ve üstü için",
+     "en": "melted, for layering and brushing"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "üzeri için çırpılmış",
+     "en": "beaten, for the glaze"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Susam",
+     "en": "Sesame"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "üstü için",
+     "en": "for sprinkling on top"
+    },
+    "pantryKey": "sesame",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, mayayı, şekeri ve tuzu geniş bir kapta karıştır.",
+     "en": "Mix the flour, yeast, sugar and salt in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ilık sütü ekleyip yumuşak, yapışmayan bir hamur oluşana kadar 8 dakika yoğur.",
+     "en": "Add the lukewarm milk and knead for 8 minutes until you have a soft dough that no longer sticks."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp sıcak bir yerde 60 dakika dinlendir.",
+     "en": "Cover the dough and leave it somewhere warm to rest for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 6 eşit parçaya böl ve her parçayı elinle ince bir yufka gibi aç.",
+     "en": "Divide the dough into 6 equal pieces and stretch each one into a thin sheet."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her açtığın hamurun üzerine eritilmiş tereyağından sürüp sıkıca rulo yap, rulonun ucunu bastır ve 4 cm'lik dilimlere kes.",
+     "en": "Brush each sheet with melted butter, roll it up tightly and cut it into 4 cm slices."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dilimleri yağlı bir fırın tepsisine kesik yüzleri yukarı gelecek şekilde diz ve 20 dakika mayalanmaya bırak.",
+     "en": "Place the slices cut side up on a greased baking tray and leave them to prove for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırını 190 dereceye ısıt, dilimlerin üzerine çırpılmış yumurtayı sür ve susam serp.",
+     "en": "Heat the oven to 190°C, brush the slices with beaten egg and sprinkle with sesame."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Önceden ısıtılmış fırında 25 dakika pişir.",
+     "en": "Bake in the preheated oven for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca kalan tereyağını üzerine gezdirip sıcak servis et.",
+     "en": "Take out of the oven, drizzle over the remaining melted butter and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3143adf3-4fb7-4fd0-a7e6-2da391a7e0ec",
+  "slug": "pogaca",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Poğaça",
+   "en": "Poğaça (savoury buns)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yoğurtlu ve tereyağlı bir hamurdan yapılan, içi beyaz peynirli, üstü yumurtalı ve çörek otlu tuzlu hamur işi. Çay sofrasının en sevilen parçası.",
+   "en": "A tender, buttery yoghurt dough filled with white cheese, brushed with egg and topped with nigella seeds. A favourite on the tea table."
+  },
+  "servings": 6,
+  "prepMinutes": 40,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi hamura, 1 tanesi sürmek için",
+     "en": "one for the dough, one for brushing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 2,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çörek otu",
+     "en": "Nigella seeds"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "üstü için",
+     "en": "for the topping"
+    },
+    "pantryKey": "nigella",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Oda sıcaklığındaki tereyağı, yoğurt, bir yumurta, kabartma tozu ve tuzu unla yoğurup yumuşak bir hamur yap.",
+     "en": "Knead the soft butter, yoghurt, one egg, baking powder and salt with the flour into a soft dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 30 dakika buzdolabında dinlendir.",
+     "en": "Rest the dough in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Hamuru ceviz büyüklüğünde toplara ayır, her birini avucunda yassılaştır ve ortasına bir kaşık beyaz peynir koyup kapat.",
+     "en": "Divide the dough into walnut-sized pieces, flatten each in your palm, add a spoonful of white cheese in the middle and seal."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Poğaçaları yağlı fırın tepsisine diz, üzerlerine çırpılmış yumurtayı sür ve çörek otu serp.",
+     "en": "Arrange the buns on a greased tray, brush with the beaten egg and sprinkle with nigella seeds."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt ve poğaçaları 25 dakika pişir.",
+     "en": "Heat the oven to 180°C and bake the buns for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca tel ızgarada soğumaya bırak.",
+     "en": "Take them out and leave to cool on a wire rack."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında",
+   "freezable",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d8764ff2-34ee-4311-b1b7-aacfb55de814",
+  "slug": "simit-pogaca",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Simit poğaça",
+   "en": "Sesame poğaça"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Simidin tadını poğaça hamuruna taşıyan bir hamur işi. Üstü pekmezle sürülüp susamla kaplanır; çıtır kabuğu ve hafif tatlı bir notasıyla çay saatine uyar.",
+   "en": "A poğaça that borrows the flavour of simit: the top is brushed with grape molasses and pressed into sesame, giving a crisp crust and a faintly sweet, nutty note. Good with tea."
+  },
+  "servings": 6,
+  "prepMinutes": 35,
+  "cookMinutes": 20,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 180,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 2,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Susam",
+     "en": "Sesame"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kavrulmuş, üst kaplama için",
+     "en": "toasted, for coating the tops"
+    },
+    "pantryKey": "sesame",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pekmez",
+     "en": "Grape molasses"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "sürmek için",
+     "en": "for brushing"
+    },
+    "pantryKey": "pekmez",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu, şekeri ve tuzu geniş bir kapta karıştır.",
+     "en": "Mix the flour, baking powder, sugar and salt in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını, yoğurdu ve yumurtayı ekleyip 5 dakika yoğur; düzgün bir hamur olsun.",
+     "en": "Add the butter, yoghurt and egg and knead for 5 minutes until smooth."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru 30 dakika dinlendir.",
+     "en": "Leave the dough to rest for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Hamuru 8 eşit parçaya böl ve her birini yuvarlayıp yassı bir poğaça şekli ver.",
+     "en": "Divide the dough into 8 equal pieces, round each one and flatten into a poğaça shape."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pekmezi üstlerine ince bir tabaka halinde sür, ardından susamı bastırarak kaplat.",
+     "en": "Brush the tops with a thin layer of molasses, then press in the sesame so it coats the surface."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt ve poğaçaları 20 dakika pişir.",
+     "en": "Heat the oven to 200°C and bake the poğaça for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca 10 dakika bekletip ılık servis et.",
+     "en": "Rest for 10 minutes after they come out, then serve lukewarm."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3dbad1d1-6737-4ef9-9f99-3ab1b0fc858d",
+  "slug": "cevizli-bulgur-pilavi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Cevizli bulgur pilavı",
+   "en": "Bulgur pilaf with walnuts"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Güneydoğu sofralarında sık görülen, pilavlık bulgurun zeytinyağında kavrulup sebze suyuyla pişirildiği ve kavrulmuş cevizle tamamlandığı sade ama doyurucu bir pilav.",
+   "en": "A simple, filling pilaf from south-eastern Anatolia: coarse bulgur toasted in olive oil, simmered in stock and finished with toasted walnuts."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pilavlık bulgur",
+     "en": "Coarse bulgur"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "iyice süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "coarse-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "üstü için",
+     "en": "to finish"
+    },
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Zeytinyağının yarısını geniş bir tencerede ısıt ve soğanı orta ateşte 5 dakika soteleyip yumuşat.",
+     "en": "Heat half the olive oil in a wide pan and soften the onion over medium heat for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Salçayı ekleyip 1 dakika kavur.",
+     "en": "Stir in the tomato paste and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Bulguru kalan yağla birlikte 3 dakika kavur.",
+     "en": "Add the bulgur with the remaining oil and toast for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu ve tuzu ekleyip kaynayınca kapağını kapatarak kısık ateşte 15 dakika pişir.",
+     "en": "Add the hot stock and salt, and once boiling, cover and simmer on low for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı kapalı halde 10 dakika dinlendir.",
+     "en": "Turn off the heat and let it rest, covered, for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Cevizleri kuru bir tavada 3 dakika kavurup bulgurun üzerine ekle ve çatalla karıştırarak kabart.",
+     "en": "Toast the walnuts in a dry pan for 3 minutes, then add them to the bulgur and fluff with a fork."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Maydanoz ve pul biberle serpip servis et.",
+     "en": "Scatter over the parsley and chilli flakes and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "vegetarian",
+   "Pilav",
+   "Bakliyat",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere",
+   "Kolay",
+   "budget"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a25c0db4-6ea0-4d7b-8fe7-3e38e2ed5af9",
+  "slug": "domatesli-pirinc-pilavi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Domatesli pirinç pilavı",
+   "en": "Tomato rice pilaf"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Domates ve salçanın tereyağında kavrulup pirinçle pişirildiği, ev yapımı bir pilav. Taneleri hafif kızıl ve tatlımsı bir tada kavuşur; kuru fasulyenin yanına çok yakışır.",
+   "en": "Rice cooked in a tomato and paste base, with the sauce browned in butter first so the grains take on colour and a mellow sweetness. Serve with beans or chicken."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Osmancık pirinç",
+     "en": "Osmancık rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanıp süzülmüş",
+     "en": "rinsed and drained"
+    },
+    "pantryKey": "osmancik-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 550,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını tencerede eritip soğanı 4 dakika soteleyerek yumuşat.",
+     "en": "Melt the butter in a pan and soften the onion for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Domates küplerini ve salçayı ekleyip 5 dakika kavur; domatesler suyunu salıp yumuşasın.",
+     "en": "Add the diced tomato and paste and cook for 5 minutes until the tomatoes soften and release their juice."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip 1 dakika kavur.",
+     "en": "Stir in the rice and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu, tuzu ve karabiberi ekle; kaynayınca ateşi en kısık seviyeye alıp kapağı kapalı olarak 18 dakika pişir.",
+     "en": "Add the hot stock, salt and pepper. Once boiling, lower the heat to the minimum, cover and cook for 18 minutes."
+    },
+    "timerSeconds": 1080
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı kapalı halde 10 dakika dinlendir.",
+     "en": "Turn off the heat and rest, covered, for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Pilavı çatalla kabartıp üzerine maydanoz serperek servis et.",
+     "en": "Fluff the rice with a fork, scatter over the parsley and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Pilav",
+   "Tencere",
+   "Vejetaryen",
+   "budget",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c0b2999b-e28a-4eb1-b110-8bcf5ac9b7d0",
+  "slug": "mantarli-pilav",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Mantarlı pilav",
+   "en": "Mushroom pilaf"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağında sotelenmiş mantarın pirinçle buluştuğu, et olmadan da doyuran bir pilav. Üzerine taze maydanoz serpilince tabağa hafif bir toprak kokusu gelir.",
+   "en": "Butter-fried mushrooms folded into rice cooked in stock, a filling meat-free pilaf. Finish with fresh parsley for a light, earthy note."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 600,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci soğuk suyla yıkayıp süz.",
+     "en": "Rinse the rice in cold water and drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağının yarısını ve sıvı yağı tencerede ısıt; mantarları orta ateşte 6 dakika sotele ve kenara al.",
+     "en": "Heat half the butter and the oil in a pan and sauté the mushrooms over medium heat for 6 minutes. Set aside."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağında soğanı 5 dakika soteleyip yumuşat.",
+     "en": "In the remaining butter, soften the onion for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip 1 dakika kavur.",
+     "en": "Stir in the rice and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu, tuzu ve karabiberi ekleyip kaynayınca kapağını kapat ve kısık ateşte 15 dakika pişir.",
+     "en": "Add the hot stock, salt and pepper, and once boiling, cover and cook on low for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Mantarları pilava ekleyip karıştır, ocağı kapatarak kapağı kapalı halde 10 dakika dinlendir.",
+     "en": "Fold the mushrooms into the rice, turn off the heat and rest, covered, for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Maydanozla serpip servis et.",
+     "en": "Scatter over the parsley and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Pilav",
+   "Tencere",
+   "Vejetaryen",
+   "budget",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cd479b0c-a45b-40c0-b70b-ab6c94ad105c",
+  "slug": "sebzeli-pilav",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Sebzeli pilav",
+   "en": "Vegetable rice pilaf"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Havuç, bezelye ve dolmalık biberin pirincin arasında kavrulduğu, renkli ve hafif bir pilav. Tek tencerede pişer; et yemeklerinin yanında da tek başına da yakışır.",
+   "en": "A colourful, light rice pilaf with carrot, peas and pepper stirred through, cooked in a single pot. Works beside meat dishes or on its own."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 26,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Osmancık pirinç",
+     "en": "Osmancık rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "osmancik-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Green pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "çözdürmeden",
+     "en": "no need to thaw"
+    },
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 550,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci iyice yıkayıp süz.",
+     "en": "Rinse the rice well and drain it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tencerede ısıt ve soğanı 4 dakika soteleyerek yumuşat.",
+     "en": "Heat the oil in a pan and soften the onion for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Havuç ve biberi ekleyip 6 dakika birlikte kavur.",
+     "en": "Add the carrot and pepper and fry together for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip 1 dakika kavur.",
+     "en": "Stir in the rice and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu, tuzu ve karabiberi ekle; kaynayınca bezelyeleri de katıp kapağı kapalı halde kısık ateşte 15 dakika pişir.",
+     "en": "Add the hot stock, salt and pepper. Once boiling, stir in the peas, cover and cook on low for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı kapalı halde 10 dakika dinlendir.",
+     "en": "Turn off the heat and rest, covered, for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Dereotuyla karıştırıp servis et.",
+     "en": "Fold in the dill and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "vegetarian",
+   "glutenFree",
+   "dairyFree",
+   "onePot",
+   "Pilav",
+   "Sebzeli",
+   "Tencere",
+   "Vejetaryen",
+   "budget",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a0661a04-613e-4c66-ac06-9d3e79330d11",
+  "slug": "firik-pilavi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Firik pilavı",
+   "en": "Freekeh pilaf"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Henüz olgunlaşmamış yeşil buğdayın kavrulup kırılmasıyla elde edilen firikle yapılan, Güneydoğu sofralarında yaygın bir pilav. Hafif dumanlı, fıstıklı bir tadı ve dolgun bir dokusu var.",
+   "en": "A pilaf made with freekeh, young green wheat that has been roasted and cracked. It has a smoky, nutty flavour and a chewy bite, and is common across south-eastern Anatolia."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Firik",
+     "en": "Freekeh"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "iyice yıkanmış",
+     "en": "rinsed well"
+    },
+    "pantryKey": "freekeh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık fıstık",
+     "en": "Pine nuts"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hafifçe kavrulmuş",
+     "en": "lightly toasted"
+    },
+    "pantryKey": "pine-nut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Ground cumin"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 600,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Firiki bol suda yıkayıp iyice süz.",
+     "en": "Rinse the freekeh in plenty of water and drain well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağı ve zeytinyağını tencerede ısıt, soğanı 5 dakika soteleyip yumuşat.",
+     "en": "Heat the butter and olive oil in a pan and soften the onion for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Fıstıkları ekleyip 2 dakika kavur, ardından kimyonu katıp karıştır.",
+     "en": "Add the pine nuts and fry for 2 minutes, then stir in the cumin."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Firiki ekleyip 2 dakika daha kavur.",
+     "en": "Add the freekeh and fry for another 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu, tuz ve karabiberi ekleyip kaynayınca kapağını kapat ve kısık ateşte 20 dakika pişir.",
+     "en": "Add the hot stock, salt and pepper. Once boiling, cover and simmer on low for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı kapalı halde 10 dakika dinlendir.",
+     "en": "Turn off the heat and rest, covered, for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Çatalla kabartıp maydanozla servis et.",
+     "en": "Fluff with a fork and serve with the parsley scattered on top."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Pilav",
+   "Tencere",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

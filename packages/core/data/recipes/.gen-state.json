@@ -154,11 +154,11 @@
     "manti-corbasi",
     "yuksuk-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:39:33.005Z",
    "finishedAt": null
   },
   {
@@ -779,12 +779,23 @@
     "sebzeli-pilav",
     "firik-pilavi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "misir-ekmegi",
+    "bazlama",
+    "kete",
+    "pogaca",
+    "simit-pogaca",
+    "cevizli-bulgur-pilavi",
+    "domatesli-pirinc-pilavi",
+    "mantarli-pilav",
+    "sebzeli-pilav",
+    "firik-pilavi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87405,
    "startedAt": "2026-10-15T19:36:57.137Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:39:57.169Z"
   },
   {
    "id": "g029",
