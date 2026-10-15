@@ -112,7 +112,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Süzme yoğurda salatalık, sarımsak ve kuru nane eklenerek hazırlanan serinletici bir meze. Yoğurdun ferahlığı ve salatalığın tazeliği, kebaplara ya da sıcak yemeklere eşlik etmesini sağlar.",
+   "en": "A cooling meze of strained yoghurt, cucumber, garlic and dried mint. The tang of the yoghurt and the crispness of the cucumber make it a natural partner for kebabs and hot dishes."
+  }
  },
  {
   "id": "c7e7b057-b302-408e-8592-1e3fad700d41",
@@ -246,7 +250,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Domates, salatalık, sivri biber ve soğanın küçük küp doğranıp limon ve zeytinyağıyla tatlandırıldığı taze bir salata. Soğanın acısını tuzla almak, tadı yumuşatır.",
+   "en": "Diced tomato, cucumber, long green pepper and onion dressed with lemon and olive oil. Salting the onion first softens its bite and keeps the salad bright."
+  }
  },
  {
   "id": "3f8a4efe-1277-4c1b-bfeb-06fbe8d81431",
@@ -416,7 +424,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış kuru fasulye, soğan, maydanoz ve yumurtadan oluşan, sumakla tatlandırılmış geleneksel bir fasulye salatası. Sirke ve zeytinyağının dengesi, fasulyenin yumuşaklığını canlandırır.",
+   "en": "A traditional white bean salad of cooked beans, onion, parsley and boiled egg, finished with sumac. The balance of vinegar and olive oil lifts the soft, creamy beans."
+  }
  },
  {
   "id": "55b84126-8415-4c4e-b0f5-01a4e1315e0b",
@@ -566,7 +578,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Domates, acı biber ve cevizin nar ekşisi ve sumakla ekşi-tatlı bir sosta buluştuğu, Güneydoğu Anadolu kökenli bir salata. Kırılmış cevizin çıtırlığı ve pul biberin sıcaklığı, dokuyu zenginleştirir.",
+   "en": "A salad from south-eastern Anatolia where tomato, long green pepper and walnut meet in a sweet-sour dressing of pomegranate molasses and sumac. Crushed walnuts add crunch and chilli flakes add a gentle heat."
+  }
  },
  {
   "id": "2644953c-3226-4e91-9ac1-dda94794a455",
@@ -681,7 +697,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Süzme yoğurt, beyaz peynir, sarımsak ve dereotundan yapılan kalın kıvamlı bir meze. Peynirin tuzluluğu ve dereotunun taze kokusu, yoğurdun hafifliğiyle dengelenir.",
+   "en": "A thick dip of strained yoghurt, white cheese, garlic and dill. The salt of the cheese and the fresh herbal note of the dill are balanced by the lightness of the yoghurt."
+  }
  },
  {
   "id": "03aaa569-abde-41aa-874e-ec9bbb0ebd76",
@@ -815,7 +835,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Salatalık, havuç ve çarliston biberin sarımsak ve limonla kavanozda tuzlu sirkeye yatırılmasıyla hazırlanan geleneksel bir turşu. Sebzelerin çıtırlığı, kışın bile tazeliğini korur.",
+   "en": "Cucumber, carrot and Charleston pepper packed into jars with garlic and lemon and covered in salted vinegar brine. The vegetables stay crisp and keep their freshness well into winter."
+  }
  },
  {
   "id": "cd3bf758-745a-465c-81af-ce24ab1a1df1",
@@ -949,7 +973,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Marul, roka, havuç ve yeşil soğandan oluşan, nar ekşisi ve limonla hafifçe ekşitilmiş yeşil bir salata. Her mevsimde bulunan sebzelerle hazırlandığı için adı da buradan gelir.",
+   "en": "A green salad of lettuce, rocket, carrot and spring onion, lightly sharpened with pomegranate molasses and lemon. It takes its name from the vegetables that are in season and easy to find."
+  }
  },
  {
   "id": "a53351df-70da-492f-94cf-ec0d4f924da5",
@@ -1125,7 +1153,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Köftelik bulgurun domates ve biber salçası, taze otlar ve nar ekşisiyle yoğrularak hazırlanan, bulgurun yumuşak dokusunu koruyan bir salata. Maydanoz ve naneyle servis edildiğinde tazeliği öne çıkar.",
+   "en": "Fine bulgur worked with tomato and pepper paste, fresh herbs and pomegranate molasses. The bulgur keeps a soft, tender texture, and the parsley and mint give it a fresh finish."
+  }
  },
  {
   "id": "1a0ed151-c4b3-45a0-86d5-7c18fe2534f6",
@@ -1239,7 +1271,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patlıcanın ocakta ya da fırında közlenmesiyle kazandığı dumanlı aromayla hazırlanan, sarımsak, limon ve zeytinyağıyla tatlandırılmış bir salata. Patlıcanın acı suyunun iyice süzülmesi tadı belirgin biçimde yumuşatır.",
+   "en": "An aubergine salad with a smoky flavour from charring the skins over a flame or in the oven, dressed with garlic, lemon and olive oil. Draining the bitter juices well keeps the flavour clean and mild."
+  }
  },
  {
   "id": "ae41c706-6688-46be-bec2-8a5721ff3a84",
@@ -1363,7 +1399,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patates, havuç ve bezelyenin mayonez ve yoğurtla bağlandığı, kornişon turşusuyla canlandırılmış klasik bir salata. Malzemelerin soğuk haşlanıp küp doğranması, kıvamın dağılmadan korunmasını sağlar.",
+   "en": "A classic salad of potato, carrot and peas bound with mayonnaise and yoghurt, with a sharp note from gherkins. Cooking and cooling the vegetables before dicing keeps the texture firm and the salad neat."
+  }
  },
  {
   "id": "5fbeab66-899b-4528-9fd1-6963aa87646c",
@@ -1514,7 +1554,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Domates, sivri ve kapya biberin ince doğranıp biber salçası, nar ekşisi ve pul biberle tatlandırıldığı, ekşi-acılı bir meze. Maydanozun taze kokusu ve zeytinyağının yumuşaklığı tadı dengeler.",
+   "en": "A sour and spicy dip of finely chopped tomato, long green and red peppers, with pepper paste, pomegranate molasses and chilli flakes. Fresh parsley and olive oil round the flavour off."
+  }
  },
  {
   "id": "86471d73-9aa1-4b00-86c7-b2a5b0d5a31a",
@@ -1620,7 +1664,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Semizotunun hafif ekşi tadının süzme yoğurt ve sarımsakla buluştuğu, sade ama ferah bir yoğurtlu salata. Yapraklar yoğurtla karıştırılmadan önce iyice kurulandığında kıvamı bozulmaz.",
+   "en": "A simple, fresh salad where the slightly sour purslane meets strained yoghurt and garlic. Drying the leaves well before mixing keeps the dressing from thinning."
+  }
  },
  {
   "id": "8b803fc0-d4bd-4c6f-978f-8cad33140497",
@@ -1735,7 +1783,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Havuçların zeytinyağında hafifçe sotelenip süzme yoğurt, sarımsak ve kırılmış cevizle karıştırıldığı tatlımsı bir meze. Havucun yumuşak tatlılığı, cevizin çıtırlığıyla iyi bir denge kurar.",
+   "en": "A mild, slightly sweet dip of carrots softened in olive oil and folded into strained yoghurt with garlic and crushed walnut. The sweetness of the carrot balances the crunch of the walnut."
+  }
  },
  {
   "id": "bb9e5bae-6350-43fc-9ba8-94042997231c",
@@ -1867,7 +1919,11 @@
    "reheatable": false
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patlıcan, kabak, patates ve kapya biberin ayrı ayrı kızartılıp sarımsaklı domates sosunda pişirildiği, sıcak ya da ılık servis edilen bir sebze yemeği. Her sebzenin ayrı kızartılması, dokusunu ve tadını korur.",
+   "en": "Aubergine, courgette, potato and red pepper, each fried separately and then simmered in a garlicky tomato sauce, served warm or at room temperature. Frying each vegetable on its own keeps its texture and flavour distinct."
+  }
  },
  {
   "id": "2d133876-e789-4c67-a9e8-acc247919dad",

@@ -3462,12 +3462,27 @@
     "havuc-tarator",
     "saksuka"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "cacik",
+    "coban-salata",
+    "piyaz",
+    "gavurdagi",
+    "haydari",
+    "tursu",
+    "mevsim-salata",
+    "kisir",
+    "patlican-salatasi",
+    "rus-salatasi",
+    "acili-ezme",
+    "yogurtlu-semizotu",
+    "havuc-tarator",
+    "saksuka"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 48918,
    "startedAt": "2026-10-15T22:58:22.271Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:59:13.713Z"
   },
   {
    "id": "f005",
@@ -3492,11 +3507,11 @@
     "mercimek-koftesi",
     "pisi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:59:08.964Z",
    "finishedAt": null
   },
   {
