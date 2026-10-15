@@ -1518,11 +1518,11 @@
     "zeytinyagli-mantar",
     "eksili-kofte"
    ],
-   "status": "running",
+   "status": "pending",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": "2026-10-15T20:09:16.121Z",
+   "startedAt": null,
    "finishedAt": null
   },
   {
@@ -1769,12 +1769,23 @@
     "kaygana",
     "kuymak"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "elbasan-tava",
+    "islama-kofte",
+    "ciger-kavurma",
+    "sucuklu-kuru-fasulye",
+    "sucuklu-patates",
+    "pastirmali-kuru-fasulye",
+    "pastirmali-yumurta",
+    "kavurmali-yumurta",
+    "kaygana",
+    "kuymak"
+   ],
    "failed": [],
-   "tokens": null,
-   "startedAt": "2026-10-15T20:07:48.304Z",
-   "finishedAt": null
+   "tokens": 0,
+   "startedAt": null,
+   "finishedAt": "2026-10-15T22:23:34.610Z"
   },
   {
    "id": "g057",
@@ -2091,11 +2102,11 @@
     "tortellini-in-brodo",
     "zuppa-di-lenticchie"
    ],
-   "status": "running",
+   "status": "pending",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": "2026-10-15T20:07:20.668Z",
+   "startedAt": null,
    "finishedAt": null
   },
   {
