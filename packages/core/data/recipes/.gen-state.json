@@ -3090,12 +3090,23 @@
     "ikan-bakar",
     "udang-balado"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "mie-goreng",
+    "tavuk-satay",
+    "kuzu-satay",
+    "beef-rendang",
+    "ayam-goreng",
+    "ayam-bakar",
+    "opor-ayam",
+    "tavuk-kecap",
+    "ikan-bakar",
+    "udang-balado"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 97451,
    "startedAt": "2026-10-15T22:50:50.367Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:54:16.608Z"
   },
   {
    "id": "g101",
@@ -3143,11 +3154,11 @@
    "slugs": [
     "gado-gado"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:53:58.716Z",
    "finishedAt": null
   },
   {
