@@ -2986,11 +2986,11 @@
     "tavuk-provencal",
     "omlet-aux-fines-herbes"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:55:39.171Z",
    "finishedAt": null
   },
   {
@@ -3226,12 +3226,15 @@
     "yorkshire-pudding",
     "mushy-peas"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "yorkshire-pudding",
+    "mushy-peas"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 60355,
    "startedAt": "2026-10-15T22:55:20.773Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:56:34.797Z"
   },
   {
    "id": "g107",
