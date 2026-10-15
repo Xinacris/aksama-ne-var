@@ -1094,12 +1094,23 @@
     "firin-irmik-tatlisi",
     "irmikli-portakal-tatlisi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "laz-boregi",
+    "hasuda",
+    "pekmezli-irmik-tatlisi",
+    "visneli-ekmek-tatlisi",
+    "gul-tatlisi",
+    "kemalpasa-tatlisi",
+    "sutlu-nuriye",
+    "kadayif-dolmasi",
+    "firin-irmik-tatlisi",
+    "irmikli-portakal-tatlisi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 99400,
    "startedAt": "2026-10-15T19:53:36.136Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:57:21.628Z"
   },
   {
    "id": "g035",
@@ -1521,11 +1532,11 @@
     "cipura-izgara",
     "levrek-bugulama"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:55:23.715Z",
    "finishedAt": null
   },
   {
