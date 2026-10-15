@@ -1893,11 +1893,11 @@
     "kiymali-bamya",
     "kiymali-kereviz"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:30:34.162Z",
    "finishedAt": null
   },
   {
@@ -2263,12 +2263,21 @@
     "biscotti",
     "semifreddo"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "panna-cotta",
+    "cannoli",
+    "affogato",
+    "zabaione",
+    "ricotta-cheesecake",
+    "torta-della-nonna",
+    "biscotti",
+    "semifreddo"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 92376,
    "startedAt": "2026-10-15T22:28:34.444Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:31:56.865Z"
   },
   {
    "id": "g073",
