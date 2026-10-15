@@ -18810,5 +18810,308 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "31cd83be-3763-4271-87be-d08d63a15e21",
+  "slug": "dana-rosto",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Dana rosto",
+   "en": "Roast beef"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dana bonfilenin dışı sarımsaklı otlu hardalla kızarır, içi ortası pembe kalacak şekilde fırınlanır. Sos, tepsinin dibindeki sularla yapıldığı için ekstra iş gerektirmez.",
+   "en": "Beef tenderloin with a crust of garlic, herbs and mustard, roasted until it is pink in the middle. The gravy is made from the pan juices, so there is little extra work."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 45,
+  "waitMinutes": 75,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana bonfile",
+     "en": "Beef tenderloin"
+    },
+    "amount": 1200,
+    "unit": "g",
+    "note": {
+     "tr": "bağsız, tek parça",
+     "en": "trimmed, in one piece"
+    },
+    "pantryKey": "beef-steak",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kekik",
+     "en": "Fresh thyme"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ayrılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze biberiye",
+     "en": "Fresh rosemary"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "fresh-rosemary",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "kalın halka halka dilimlenmiş",
+     "en": "cut into thick rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "uzunlamasına ikiye bölünmüş",
+     "en": "halved lengthways"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı şarap",
+     "en": "Red wine"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "kuru",
+     "en": "dry"
+    },
+    "pantryKey": "red-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu + üzüm sirkesi",
+      "en": "Chicken stock + grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "Rocket"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Eti buzdolabından çıkarıp 1 saat oda sıcaklığında beklet.",
+     "en": "Take the beef out of the fridge and leave it at room temperature for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt. Geniş bir tavada zeytinyağını orta-yüksek ateşte ısıt ve eti her tarafı kızarana kadar mühürle.",
+     "en": "Heat the oven to 220°C. Warm the olive oil in a wide pan over a medium-high heat and sear the beef on all sides until well browned."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havuçları ve kırmızı soğanları fırın tepsisine yay, üzerlerine tereyağının yarısını koy. Eti bunların üstüne yerleştir.",
+     "en": "Spread the carrots and red onion over a roasting tin and dot them with half the butter. Set the beef on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 25 dakika pişir. Kalın bir termometreyle ortasını ölçtüğünde 52-55 dereceyi gösterince fırından çıkar.",
+     "en": "Roast for 25 minutes. Check the centre with a meat thermometer and take it out at 52-55°C for medium-rare."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Eti tepsiden alıp folyoyla gevşekçe ört ve 15 dakika dinlendir. Bu sırada sosu hazırlamaya başla.",
+     "en": "Lift the beef onto a board, cover loosely with foil and rest it for 15 minutes while you make the gravy."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tepsinin dibindeki suyu ve sebzeleri bir tavaya al. Şarabı (ya da yerine kullandığın karışımı) ekleyip 2 dakika kaynat.",
+     "en": "Tip the pan juices and vegetables into a saucepan. Add the wine (or the mixture you use instead) and boil for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Et suyunu ekle, sosu kısık ateşte 5 dakika kaynat. Sebzeleri ezip sosu koyulaştır, tuz ve karabiberle tatlandır.",
+     "en": "Add the beef stock and simmer gently for 5 minutes. Mash the vegetables into the sauce to thicken it, then season with salt and pepper."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Eti ince dilimle, sosu süzerek üzerine gezdir ve yanında rokayla servis et.",
+     "en": "Slice the beef thinly, strain the sauce over it and serve with the rocket on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Sarımsağı ezip zeytinyağı, dijon hardalı, dövülmüş kekik ve biberiye ile karıştır. Bonfilenin her yanına sür, tuz ve karabiber serp, sarıp buzdolabında bir gece beklet.",
+     "en": "Crush the garlic and mix it with the olive oil, Dijon mustard, thyme and rosemary. Rub it over the whole tenderloin, season with salt and pepper, wrap and leave in the fridge overnight."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Fırında",
+   "makeAhead",
+   "guest",
+   "containsAlcohol"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
