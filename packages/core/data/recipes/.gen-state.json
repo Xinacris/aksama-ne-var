@@ -3140,12 +3140,16 @@
     "sayur-asem",
     "sop-buntut"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "soto-ayam",
+    "sayur-asem",
+    "sop-buntut"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 72926,
    "startedAt": "2026-10-15T22:53:19.438Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:55:19.451Z"
   },
   {
    "id": "g103",
@@ -3179,11 +3183,11 @@
     "lancashire-hotpot",
     "kedgeree"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:54:58.113Z",
    "finishedAt": null
   },
   {
