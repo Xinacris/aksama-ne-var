@@ -7,7 +7,7 @@ import { courseToSlot } from "@anv/core/domain/matching";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { touchTarget } from "@anv/core/design/tokens";
-import { recipesMap, useApp } from "@/store";
+import { browsableRecipes, recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Sheet, Text } from "@/ui";
 
@@ -24,7 +24,7 @@ export function DayPicker({ target, onClose }: { target: DayTarget | null; onClo
   const { colors } = useTheme();
   const today = useApp((x) => x.today);
   const planItems = useApp((x) => x.planItems);
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const addToPlan = useApp((x) => x.addToPlan);
   const placeLeftover = useApp((x) => x.placeLeftover);
   const byId = recipesMap(recipes);

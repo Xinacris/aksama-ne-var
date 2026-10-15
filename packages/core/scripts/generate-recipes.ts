@@ -212,7 +212,8 @@ function batchRequests(groups: Dish[][], prompt: (g: Dish[]) => string, tool: An
   return { params, requests };
 }
 
-async function runAnthropic(list: Dish[]) {
+/** Uses `todo()` itself on each round (the dish list may change between resumed runs). */
+async function runAnthropic() {
   if (!process.env.ANTHROPIC_API_KEY) throw new Error("ANTHROPIC_API_KEY is not set");
   const client = new Anthropic();
   const tool = { name: "save_recipes", description: "Saves the written recipes.", input_schema: answerJsonSchema(fill) as Anthropic.Tool.InputSchema };
@@ -303,7 +304,7 @@ async function main() {
   console.log(`${provider}${fill ? " (fill descriptions)" : ""}: ${list.length} dishes to write; ${haveRecipe.size} recipes exist`);
   if (!list.length && !(provider === "anthropic" && readJson(".anthropic-batch.json", null))) return;
   try {
-    const done = provider === "anthropic" ? await runAnthropic(list) : await runGemini(list);
+    const done = provider === "anthropic" ? await runAnthropic() : await runGemini(list);
     console.log(`done: ${done} written, ${failed.size} in failed.json. Validate with: npm run recipes:validate -- --partial`);
   } catch (e) {
     if (e instanceof QuotaExhausted) {

@@ -12,7 +12,7 @@ import type { AsideMatch } from "@anv/core/domain/week";
 import { labelRecord } from "@anv/core/i18n";
 import { searchKey } from "@anv/core/lib/text";
 import { touchTarget } from "@anv/core/design/tokens";
-import { recipesMap, useApp } from "@/store";
+import { browsableRecipes, recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Field, Sheet, Text } from "@/ui";
 
@@ -35,7 +35,7 @@ function Option({ title, sub, onPress, danger }: { title: string; sub?: string; 
 /** Choose a dish for a day's slot: matches, frequent dishes, or search (same lists as the web dialog). */
 export function RecipePicker({ target, onClose, matches, frequent }: { target: { date: string; slot: Slot } | null; onClose: () => void; matches: AsideMatch[]; frequent: Recipe[] }) {
   const { t } = useTranslation();
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const today = useApp((x) => x.today);
   const addToPlan = useApp((x) => x.addToPlan);
   const [q, setQ] = useState("");
@@ -87,7 +87,7 @@ export function SlotSheet({
   const { t } = useTranslation();
   const today = useApp((x) => x.today);
   const planItems = useApp((x) => x.planItems);
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const removeFromPlan = useApp((x) => x.removeFromPlan);
   const moveItem = useApp((x) => x.moveItem);
   const [moving, setMoving] = useState(false);

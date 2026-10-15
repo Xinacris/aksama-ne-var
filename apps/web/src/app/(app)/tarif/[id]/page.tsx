@@ -164,6 +164,7 @@ function TarifInner() {
       <header className={s.header}>
         <span className={s.eyebrow}>{eyebrow}</span>
         <h1 className={s.title}>{title}</h1>
+        {recipe.description && <p className={s.description}>{recipe.description}</p>}
         <span className={s.meta}>{metaParts.filter(Boolean).join(" · ")}</span>
         <span className={s.meta}>{rotation}</span>
       </header>
@@ -318,6 +319,7 @@ function TarifInner() {
                   <span className={s.ingText}>
                     {q && <strong>{q}</strong>} {ing.quantity === null ? (ing.label ?? ing.name) : (ing.label ?? ing.name).charAt(0).toLocaleLowerCase(intlTag()) + (ing.label ?? ing.name).slice(1)}
                     {ing.note ? ` (${ing.note})` : ""}
+                    {ing.substitute && <span className={s.ingSub}>{ing.substitute.note}</span>}
                   </span>
                   <StatusPill tone={stt.tone} onClick={stt.action} label={stt.aria}>
                     {stt.label}

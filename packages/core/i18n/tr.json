@@ -1069,7 +1069,9 @@
     "timerKind": "Zamanlayıcı türü",
     "timerKindNotification": "Uygulama bildirimi",
     "timerKindPhoneClock": "Telefonun saati",
-    "timerKindNote": "Telefonun saati: süre dolunca sessiz modda ve kilit ekranında da telefonun alarmı gibi çalar."
+    "timerKindNote": "Telefonun saati: süre dolunca sessiz modda ve kilit ekranında da telefonun alarmı gibi çalar.",
+    "alcoholFree": "Alkollü malzemelerde alternatifi kullan",
+    "alcoholFreeNote": "Açıksa alışveriş listesine şarap, bira gibi malzemelerin yerine alkolsüz alternatifleri eklenir. Tarifte ikisi de görünmeye devam eder."
   },
   "language": {
     "tr": "Türkçe",
@@ -1326,5 +1328,29 @@
     "phoneClockSet": "Telefonun saatinde kuruldu. Duraklat ve +1 dk oraya gitmez.",
     "phoneClockFailed": "Telefonun saati açılamadı; zamanlayıcı uygulamada çalmaya devam ediyor.",
     "alarmKitDenied": "Alarm izni kapalı: zamanlayıcılar uygulamanın bildirimiyle çalar."
+  },
+  "recipe": {
+    "removed": "Tarif kaldırıldı",
+    "cuisine": "Mutfak",
+    "category": "Kategori",
+    "allCuisines": "Tüm mutfaklar",
+    "allCategories": "Tüm kategoriler"
+  },
+  "cuisine": {
+    "turkish": "Türk",
+    "italian": "İtalyan",
+    "spanish": "İspanyol",
+    "indian": "Hint",
+    "american": "Amerikan",
+    "french": "Fransız",
+    "indonesian": "Endonez",
+    "british": "İngiliz"
+  },
+  "category": {
+    "main": "Ana yemek",
+    "soup": "Çorba",
+    "salad": "Salata",
+    "side": "Ara sıcak / yan yemek",
+    "dessert": "Tatlı"
   }
 }

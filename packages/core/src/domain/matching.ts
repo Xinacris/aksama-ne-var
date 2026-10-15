@@ -38,7 +38,7 @@ export function buildDeck(args: {
     args.matches.filter((m) => m.date === args.date && m.slot === args.slot).map((m) => m.recipeId),
   );
   const courses = SLOT_COURSES[args.slot];
-  const candidates = args.recipes.filter(
+  const candidates = args.recipes.filter((r) => !r.removed).filter(
     (r) => courses.includes(r.course) && !args.plannedRecipeIds.has(r.id) && !matchedHere.has(r.id),
   );
   const score = (r: Recipe) => {
