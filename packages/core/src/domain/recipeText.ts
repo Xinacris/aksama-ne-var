@@ -1,6 +1,7 @@
 import type { Ingredient, PrepTask, Recipe, RecipeTranslation } from "../data/models";
 import { getLocale, t, type Locale } from "../i18n";
 import { slugify } from "../lib/text";
+import { catalogEntry } from "../data/seed/ingredients";
 
 /**
  * Recipes in two languages. A recipe keeps its language-neutral data (times,
@@ -14,7 +15,7 @@ import { slugify } from "../lib/text";
 /** Catalog ingredient in the current language ("Kıyma" → "Minced beef"); unknown names stay as written. */
 export function ingredientLabel(name: string, locale: Locale = getLocale()): string {
   if (locale === "tr") return name;
-  return t(`ing.${slugify(name)}`, { defaultValue: name, lng: locale });
+  return t(`ing.${slugify(name)}`, { defaultValue: catalogEntry(name)?.en ?? name, lng: locale });
 }
 
 export function sourceLang(r: Pick<Recipe, "lang">): Locale {

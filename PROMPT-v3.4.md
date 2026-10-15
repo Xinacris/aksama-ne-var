@@ -1,6 +1,6 @@
 # Round 3.4 — Curated recipe catalog v1 (1,000 recipes, local, Supabase-ready)
 
-Pasted by the owner on 2026-10-15 ("PRISM KERNEL"). The owner's answers at the end override the spec where they differ. Runs on the branch `round-3.4-catalog` (it swaps the app's recipe source); merge into `main` only when every check is green.
+Pasted by the owner on 2026-10-15 ("PRISM KERNEL"). The owner's answers at the end override the spec where they differ. Runs on the branch `round-3.3-catalog` (it swaps the app's recipe source); merge into `main` only when every check is green.
 
 ## Purpose
 Replace the current seed recipes with 1,000 curated recipes stored locally, structured so they can be bulk-seeded into Supabase in the next round without reshaping.
