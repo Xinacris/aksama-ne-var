@@ -3138,12 +3138,23 @@
     "perkedel-ve-tavuk",
     "semur-daging"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "telur-balado",
+    "ayam-rica-rica",
+    "tahu-goreng",
+    "nasi-kuning",
+    "nasi-uduk",
+    "ayam-penyet",
+    "bakmi-ayam",
+    "kari-ayam",
+    "perkedel-ve-tavuk",
+    "semur-daging"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87783,
    "startedAt": "2026-10-15T22:54:17.951Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:57:09.851Z"
   },
   {
    "id": "g102",
