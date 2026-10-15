@@ -718,7 +718,12 @@
     "paused": "duraklatıldı",
     "pausedLeft": "Duraklatıldı, {{time}} kaldı",
     "pause": "Duraklat",
-    "resume": "Devam"
+    "resume": "Devam",
+    "timerStep": "Adım {{n}}",
+    "otherTimers": "Diğer zamanlayıcılar",
+    "leftWord": "kaldı",
+    "restart": "Baştan",
+    "goToStep": "O adıma gider"
   },
   "week": {
     "fromMatches": "Eşleşmelerden",

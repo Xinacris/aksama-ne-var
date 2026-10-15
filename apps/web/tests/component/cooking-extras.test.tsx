@@ -25,42 +25,60 @@ async function stepsOfMenu() {
   return view;
 }
 
+const OTHER = { name: "Diğer zamanlayıcılar" };
+
 describe("cooking timers", () => {
-  it("start two timers on different dishes; they keep running across steps and dishes; finish rings until Durdur", async () => {
+  it("start two timers on different dishes; the step shows its own, the strip the others; finish rings until Durdur", async () => {
     const vibrate = vi.fn();
     Object.defineProperty(navigator, "vibrate", { value: vibrate, configurable: true });
     await stepsOfMenu();
     const corba = R("Mercimek çorbası");
-    // go to the soup step with a duration
     // first step with a real duration ("birkaç dakika" is not one)
     const idx = corba.steps.findIndex((t) => stepTimers(t).length > 0);
     expect(idx).toBeGreaterThan(0);
     for (let i = 0; i < idx; i++) await userEvent.click(screen.getByRole("button", { name: "Sonraki" }));
     await userEvent.click(screen.getByRole("button", { name: /^Zamanlayıcı başlat/ }));
-    expect(screen.getByRole("region", { name: "Zamanlayıcılar" })).toHaveTextContent("Mercimek");
+    // shown once, in place of its button; no strip while only this step has a timer
+    expect(screen.getAllByText("20:00")).toHaveLength(1);
+    expect(screen.queryByRole("region", OTHER)).toBeNull();
+    expect(screen.getByRole("button", { name: new RegExp(`· Adım ${idx + 1}: duraklat$`) })).toBeInTheDocument();
 
-    // five minutes later, a second timer on the köfte (resting harç)
+    // five minutes later, a second timer on the köfte (resting harç): the soup moves to the strip
     setNow(at(18, 5));
     await userEvent.click(screen.getByRole("tab", { name: /İzmir köfte/ }));
     await userEvent.click(screen.getByRole("button", { name: /^Zamanlayıcı başlat · 20 dk/ }));
-    const bar = screen.getByRole("region", { name: "Zamanlayıcılar" });
-    expect(within(bar).getAllByRole("listitem")).toHaveLength(2);
-    expect(bar).toHaveTextContent("20:00");
+    const strip = screen.getByRole("region", OTHER);
+    expect(within(strip).getAllByRole("listitem")).toHaveLength(1);
+    expect(strip).toHaveTextContent(new RegExp(`Mercimek.* · Adım ${idx + 1}\\d+:\\d\\d`));
     const timers = useApp.getState().cookingSessions[0].timers;
     expect(timers.map((t) => t.endsAt)).toEqual([at(18, 20).toISOString(), at(18, 25).toISOString()]);
 
-    // 18:20: the soup rings, the köfte keeps counting (and keeps running while we change dish)
+    // 18:20: the soup rings, the köfte keeps counting under its step
     setNow(at(18, 20, 1));
     expect(await screen.findByText(/Süre doldu:/, {}, { timeout: 2500 })).toBeInTheDocument();
     expect(screen.getByRole("alert")).toHaveTextContent("Süre doldu: Mercimek çorbası · 20 dk");
-    expect(screen.getByRole("region", { name: "Zamanlayıcılar" })).toHaveTextContent("4:59");
+    expect(await screen.findByText("4:59", {}, { timeout: 2500 })).toBeInTheDocument();
     expect(vibrate).toHaveBeenCalledWith(ALARM_VIBRATION);
     // Durdur: the banner goes, the vibration stops, the soup timer is dismissed (everywhere sync reaches)
     await userEvent.click(screen.getByRole("button", { name: "Alarmı durdur" }));
     expect(screen.queryByRole("alert")).toBeNull();
     expect(vibrate).toHaveBeenLastCalledWith(0);
     expect(useApp.getState().cookingSessions[0].timers.find((t) => t.endsAt === at(18, 20).toISOString())?.dismissed).toBe(true);
-    expect(within(screen.getByRole("region", { name: "Zamanlayıcılar" })).getAllByRole("listitem")).toHaveLength(1);
+    expect(screen.queryByRole("region", OTHER)).toBeNull();
+  });
+
+  it("+1 dk keeps the countdown in place; a strip timer opens its step", async () => {
+    await stepsOfMenu();
+    await userEvent.click(screen.getByRole("tab", { name: /İzmir köfte/ }));
+    await userEvent.click(screen.getByRole("button", { name: /^Zamanlayıcı başlat · 20 dk/ }));
+    await userEvent.click(screen.getByRole("button", { name: /Adım 1: 1 dakika ekle$/ }));
+    expect(screen.getByText("21:00")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /^Zamanlayıcı başlat · 20 dk/ })).toBeNull();
+    await userEvent.click(screen.getByRole("button", { name: "Sonraki" }));
+    const strip = screen.getByRole("region", OTHER);
+    await userEvent.click(within(strip).getByRole("button", { name: /Adım 1: 21:00 kaldı/ }));
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Adım 1 /");
+    expect(screen.queryByRole("region", OTHER)).toBeNull();
   });
 
   it("timers survive a reload (end timestamps, not counters)", async () => {
@@ -70,8 +88,7 @@ describe("cooking timers", () => {
     view.unmount();
     setNow(at(18, 5));
     render(<CookingMode id={MON} extras={cookingExtras} />);
-    const bar = await screen.findByRole("region", { name: "Zamanlayıcılar" });
-    expect(bar).toHaveTextContent("15:00");
+    expect(await screen.findByText("15:00")).toBeInTheDocument();
   });
 });
 

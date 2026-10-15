@@ -393,6 +393,8 @@ export const cookingTimerSchema = z.object({
   dismissed: z.boolean(),
   /** Seconds left while paused; `null`/absent while running (then `endsAt` counts). */
   pausedLeft: z.number().int().min(0).nullable().optional(),
+  /** Which of the step's timer buttons started it (0 or 1); absent on timers from before Round 3.2. */
+  slot: z.number().int().min(0).optional(),
 });
 export type CookingTimer = z.infer<typeof cookingTimerSchema>;
 

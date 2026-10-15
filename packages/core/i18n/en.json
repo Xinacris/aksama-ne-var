@@ -718,7 +718,12 @@
     "paused": "paused",
     "pausedLeft": "Paused, {{time}} left",
     "pause": "Pause",
-    "resume": "Resume"
+    "resume": "Resume",
+    "timerStep": "Step {{n}}",
+    "otherTimers": "Other timers",
+    "leftWord": "left",
+    "restart": "Restart",
+    "goToStep": "Goes to that step"
   },
   "week": {
     "fromMatches": "From matches",

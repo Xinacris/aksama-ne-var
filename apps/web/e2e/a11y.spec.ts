@@ -81,8 +81,11 @@ test.describe("accessibility (axe)", () => {
       await page.keyboard.press("Escape");
       await page.getByRole("tab", { name: /İzmir köfte/ }).click();
       await page.getByRole("button", { name: /^Zamanlayıcı başlat/ }).click();
-      await expect(page.getByRole("region", { name: "Zamanlayıcılar" })).toBeVisible();
+      await expect(page.getByRole("button", { name: /Adım 1: duraklat$/ })).toBeVisible();
       await audit(page, `pisir-adim ${scheme}`);
+      await page.getByRole("button", { name: "Sonraki" }).click();
+      await expect(page.getByRole("region", { name: "Diğer zamanlayıcılar" })).toBeVisible();
+      await audit(page, `pisir-diger-zamanlayicilar ${scheme}`);
       await page.goto("/bugun");
       await audit(page, `bugun-pisiyor ${scheme}`);
       await page.goto("/pisir/menemen");
