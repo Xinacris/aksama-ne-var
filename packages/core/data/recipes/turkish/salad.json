@@ -4260,5 +4260,1990 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "a0572f06-b8b7-4b8d-bbbb-9ff404b8d825",
+  "slug": "babagannus",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Akdeniz",
+  "title": {
+   "tr": "Babagannuş",
+   "en": "Babagannuş (smoky aubergine with tahini)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kor üzerinde közlenmiş patlıcanın dumanlı tadını tahin ve limonla birleştiren, ekmekle ya da çiğ sebzelerle servis edilen bir meze.",
+   "en": "Charred aubergine blended with tahini and lemon, with a smoky flavour that works well with bread or raw vegetables."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy",
+     "en": "medium"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tahin",
+     "en": "Tahini"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tahini",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanları gaz ocağında ya da 220 derece fırında 25 dakika, kabukları kararıncaya kadar közle.",
+     "en": "Char the aubergines over a gas flame or roast them at 220°C for 25 minutes, until the skins are blackened."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Patlıcanları soğumaya bırak, kabuklarını soy ve sapını at.",
+     "en": "Leave the aubergines to cool, then peel off the skins and discard the stalks."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patlıcanı çatalla ezip kabaca bir püre yap; tamamen pürüzsüz olmasına gerek yok.",
+     "en": "Mash the flesh with a fork into a coarse purée. It does not need to be perfectly smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tahin, sarımsak, limon suyu ve tuzu ekleyip iyice karıştır.",
+     "en": "Stir in the tahini, crushed garlic, lemon juice and salt until well combined."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Servisten önce 30 dakika buzdolabında dinlendir.",
+     "en": "Rest it in the fridge for 30 minutes before serving."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı gezdirip pul biber ve maydanozla servis et.",
+     "en": "Drizzle over the olive oil and serve topped with chilli flakes and parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Meze",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "bd875b64-8f8f-4cea-b9ff-b66c65c8b73b",
+  "slug": "humus",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Akdeniz",
+  "title": {
+   "tr": "Humus",
+   "en": "Hummus"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Nohudun tahin, limon ve sarımsakla pürüzsüz bir ezmeye dönüştüğü, kahvaltıda da mezede de yakışan klasik bir lezzet.",
+   "en": "Chickpeas blended with tahini, lemon and garlic into a smooth, creamy dip that suits breakfast or a meze table."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Konserve nohut",
+     "en": "Canned chickpeas"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "chickpea-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tahin",
+     "en": "Tahini"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tahini",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "cold"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Konserve nohudu süzüp bolca suyla yıka.",
+     "en": "Drain the canned chickpeas and rinse them well under cold water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nohudu blendere al; tahin, limon suyu, ezilmiş sarımsak ve kimyonu ekle.",
+     "en": "Put the chickpeas in a blender with the tahini, lemon juice, crushed garlic and cumin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "100 ml soğuk suyu ekleyip blenderi 2 dakika çalıştır; pürüzsüz bir kıvam alana kadar karıştır.",
+     "en": "Add the cold water and blend for 2 minutes until smooth and creamy."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tuzu ayarla, kaseye al ve zeytinyağı ile bir tutam toz kırmızı biber gezdir.",
+     "en": "Adjust the salt, transfer to a bowl and drizzle with the olive oil and a pinch of paprika."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Servisten önce 30 dakika buzdolabında dinlendir.",
+     "en": "Chill for 30 minutes before serving."
+    },
+    "timerSeconds": 1800
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Meze"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a7aa112c-a777-4e53-9ea3-71e9aded6005",
+  "slug": "fava",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Fava",
+   "en": "Fava (broad bean purée)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuru baklanın soğan ve zeytinyağıyla yumuşatılıp dereotuyla servis edildiği, Ege sofralarının sade ve doyurucu bir mezesi.",
+   "en": "Dried broad beans softened with onion and olive oil, then served with dill. A plain, filling meze from the Aegean table."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 65,
+  "waitMinutes": 720,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuru bakla",
+     "en": "Dried broad beans"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "akşamdan ıslatılmış",
+     "en": "soaked overnight"
+    },
+    "pantryKey": "dried-broad-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 800,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kuru baklayı akşam bol suda beklet, sabah süzüp yıka ve mümkünse kabuklarını ayıkla.",
+     "en": "Soak the dried broad beans in plenty of water overnight, then drain, rinse and peel off the skins if you can."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı zeytinyağında 5 dakika soteleyip sarımsağı ekle.",
+     "en": "Soften the onion in the olive oil for 5 minutes, then add the garlic."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Baklaları ekle, üzerine 800 ml su dökerek kaynat ve kısık ateşte 1 saat pişir.",
+     "en": "Add the beans, pour over the 800 ml water, bring to the boil and simmer gently for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Baklalar yumuşayınca blenderdan geçir ya da çatalla ez; kıvam çok koyuysa biraz sıcak su ekle.",
+     "en": "When the beans are soft, blend or mash them. If the texture is too thick, add a little hot water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tuz ve bir tutam karabiberle tatlandır; sıcak ya da ılık servis et.",
+     "en": "Season with salt and a pinch of black pepper, then serve warm or lukewarm."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine zeytinyağı, dereotu ve limon dilimleriyle servis et.",
+     "en": "Serve drizzled with olive oil, sprinkled with dill and with lemon slices on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Baklaları akşamdan suda beklet.",
+     "en": "Soak the broad beans in water the night before."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Zeytinyağlı",
+   "Akşamdan ıslat",
+   "Meze"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "32c20d1e-24a7-48df-a446-30ac7f26d8c5",
+  "slug": "muhammara",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Muhammara",
+   "en": "Muhammara (roasted pepper and walnut dip)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Közlenmiş kırmızı biber, ceviz ve nar ekşisinin tatlı ekşi dengesiyle hazırlanan, Güneydoğu mutfağının koyu renkli bir ezmesi.",
+   "en": "Roasted red peppers and walnuts with pomegranate molasses, a deep red dip from the south-east with a sweet and sour balance."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 5,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Közlenmiş kırmızı biber",
+     "en": "Roasted red peppers"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "roasted-red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nar ekşisi",
+     "en": "Pomegranate molasses"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pomegranate-molasses",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Cevizi kuru bir tavada 5 dakika hafifçe kavur, soğuyunca kabaca kıy.",
+     "en": "Toast the walnuts in a dry pan for 5 minutes, then chop them roughly once cool."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Közlenmiş biberleri süzüp kağıt havlu ile kurula.",
+     "en": "Drain the roasted peppers and pat them dry with kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Blenderde biberleri, cevizi, galeta ununu, biber salçasını, sarımsağı ve nar ekşisini birlikte çek.",
+     "en": "Blend the peppers, walnuts, breadcrumbs, pepper paste, garlic and pomegranate molasses together."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağının yarısını yavaş yavaş ekleyip pürüzlü ama kremsi bir kıvam al.",
+     "en": "Add half the olive oil slowly while blending, to a coarse but creamy texture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kimyon, pul biber ve tuzla tatlandır; kalan zeytinyağını üzerine gezdir.",
+     "en": "Season with cumin, chilli flakes and salt, then drizzle over the rest of the olive oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Servisten önce 30 dakika buzdolabında beklet, lezzetler oturur.",
+     "en": "Chill for 30 minutes before serving so the flavours settle."
+    },
+    "timerSeconds": 1800
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Meze",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "64ff86c4-16c8-4164-af0a-481cd48996c8",
+  "slug": "atom",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Atom",
+   "en": "Atom (yoghurt with chillies)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Süzme yoğurdun sarımsaklı tereyağı ve pul biberle buluştuğu, ekmekle yenen hızlı bir meze.",
+   "en": "Strained yoghurt with garlic, and a warm butter and chilli topping. A quick meze that is eaten with bread."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 2,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Süzme yoğurdu kaseye al, ezilmiş sarımsak ve bir tutam tuzla iyice çırp.",
+     "en": "Put the strained yoghurt in a bowl and whisk it well with the crushed garlic and a pinch of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pürüzsüz ve kremsi bir kıvam alana kadar çırpmaya devam et.",
+     "en": "Keep whisking until it is smooth and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını küçük bir tavada orta ateşte 1 dakika eritip pul biberi ekle.",
+     "en": "Melt the butter in a small pan over a medium heat for 1 minute, then stir in the chilli flakes."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kızgın yağı yoğurdun üzerine dök, kuru naneyi ekleyip hafifçe karıştır.",
+     "en": "Pour the hot butter over the yoghurt, add the dried mint and stir lightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında ekmekle servis et.",
+     "en": "Serve at room temperature with bread."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "budget",
+   "quick",
+   "Kolay",
+   "Vejetaryen",
+   "Yoğurtlu",
+   "Meze",
+   "Hızlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "89f7cfe2-e807-4d7d-bb18-44dc418c2882",
+  "slug": "tarator",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Akdeniz",
+  "title": {
+   "tr": "Tarator",
+   "en": "Tarator (walnut and garlic sauce)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Cevizin, sarımsağın ve bayat ekmeğin sirkeyle yumuşatılıp zeytinyağıyla kıvamlandığı, kızarmış sebzelerin yanında servis edilen bir sos.",
+   "en": "Walnuts, garlic and stale bread softened with vinegar and thickened with olive oil. Served alongside fried vegetables."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 3,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 2,
+    "unit": "dilim",
+    "note": {
+     "tr": "kabuğu alınmış",
+     "en": "crusts removed"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ekmek dilimlerini suya batırıp sık, suyunu al.",
+     "en": "Soak the bread slices in water, then squeeze out the excess."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Cevizi kuru tavada 3 dakika kavurup kabaca dövdükten sonra blendere al.",
+     "en": "Toast the walnuts in a dry pan for 3 minutes, roughly crush them and put them in a blender."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Blendere ekmeği, sarımsağı, sirkeyi ve tuzu ekle; 150 ml suyu azar azar ilave ederek çek.",
+     "en": "Add the bread, garlic, vinegar and salt to the blender, then blend in the 150 ml water little by little."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını ince bir akışla ekleyip kremsi, akışkan bir sos kıvamı al.",
+     "en": "Pour in the olive oil in a thin stream until you have a creamy, pourable sauce."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu kaseye al, ince kıyılmış dereotunu serpip 10 dakika dinlendir.",
+     "en": "Transfer the sauce to a bowl, scatter over the dill and rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kızartılmış patlıcan ya da kabakla birlikte servis et.",
+     "en": "Serve with fried aubergine or courgette."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Meze",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "56186ca5-41da-4174-b418-d3535d726797",
+  "slug": "borulce-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Börülce salatası",
+   "en": "Black-eyed pea salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yaz başında taze börülcenin haşlanıp domates, biber ve soğanla zeytinyağlı limonla buluşturulduğu hafif bir salata.",
+   "en": "Fresh black-eyed peas boiled and tossed with tomato, pepper and onion in lemon and olive oil. A light summer salad."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze börülce",
+     "en": "Fresh black-eyed peas"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "uçları ayıklanmış",
+     "en": "topped and tailed"
+    },
+    "pantryKey": "fresh-black-eyed-pea",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil biber",
+     "en": "Green pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Börülcelerin uçlarını ayırıp yıka, tuzlu suda 15 dakika haşla.",
+     "en": "Rinse the black-eyed peas and boil them in salted water for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Haşlanan börülceleri süzüp soğuk suyla çalkala, iri olanları ikiye kes.",
+     "en": "Drain the peas, rinse them under cold water and halve any large ones."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ve yeşil biberi küp küp doğra; kırmızı soğanı ince doğra.",
+     "en": "Dice the tomatoes and green pepper, and finely chop the red onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Maydanozu ince kıy; börülce, sebze ve maydanozu geniş bir kaseye al.",
+     "en": "Finely chop the parsley, then put the peas, vegetables and parsley in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı, limon suyu, tuz ve pul biberi çırpıp salatanın üzerine dök ve nazikçe karıştır.",
+     "en": "Whisk the olive oil, lemon juice, salt and chilli flakes, pour over the salad and toss gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında 15 dakika dinlendirip servis et.",
+     "en": "Rest at room temperature for 15 minutes before serving."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Zeytinyağlı",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a30070bb-6a76-4e65-9ac5-dc1af5bbd402",
+  "slug": "nohut-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Nohut salatası",
+   "en": "Chickpea salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Konserve nohudun salatalık, domates ve soğanla zeytinyağı ve limonda buluşturulduğu, on beş dakikada hazır olan hafif bir salata.",
+   "en": "Canned chickpeas tossed with cucumber, tomato and onion in olive oil and lemon. Ready in fifteen minutes and light enough for a summer lunch."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Konserve nohut",
+     "en": "Canned chickpeas"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "chickpea-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Nohudu süzüp akan suyun altında yıka ve iyice kurulat.",
+     "en": "Drain the chickpeas, rinse them under running water and let them dry well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salatalık ve domatesi nohutla aynı boyda küp küp doğra.",
+     "en": "Dice the cucumber and tomato to the same size as the chickpeas."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince doğrayıp 5 dakika soğuk suda bekletip süzüyoruz.",
+     "en": "Finely chop the red onion, soak it in cold water for 5 minutes, then drain."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Maydanozu ince kıy ve nohut, sebzeler ve maydanozu geniş bir kaseye al.",
+     "en": "Finely chop the parsley and add it to the chickpeas, vegetables and onion in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı, limon suyu, tuz ve karabiberi çırpıp salatanın üzerine gezdir, nazikçe karıştır.",
+     "en": "Whisk the olive oil, lemon juice, salt and black pepper, drizzle over the salad and toss gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "15 dakika dinlendirip servis et.",
+     "en": "Rest for 15 minutes, then serve."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "quick",
+   "Vejetaryen",
+   "Bakliyat",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "48f42eeb-ee10-4a85-afc1-0bfc6c0ed78e",
+  "slug": "yesil-mercimek-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Yeşil mercimek salatası",
+   "en": "Green lentil salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yeşil mercimeğin dağılmayacak kadar pişirilip havuç, soğan ve maydanozla zeytinyağı ve limonda dinlendirildiği doyurucu bir salata.",
+   "en": "Green lentils cooked until just tender, then mixed with carrot, onion and parsley and dressed in olive oil and lemon. A filling salad."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 25,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yeşil mercimek",
+     "en": "Green lentils"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "green-lentil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 750,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mercimeği yıka, 750 ml su ve defne yaprağıyla birlikte tencereye al.",
+     "en": "Rinse the lentils and put them in a pan with the 750 ml water and the bay leaf."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaynayınca altını kısıp 25 dakika pişir; mercimekler dağılmamalı.",
+     "en": "Once boiling, lower the heat and simmer for 25 minutes. The lentils should hold their shape."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Pişen mercimeği süzüp soğumaya bırak; defne yaprağını ayır.",
+     "en": "Drain the lentils, leave them to cool and discard the bay leaf."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havucu ince rendeleyip mercimeğe ekle.",
+     "en": "Grate the carrot finely and add it to the lentils."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince doğrayıp maydanozla birlikte mercimeğe ekle.",
+     "en": "Finely chop the red onion and add it to the lentils with the parsley."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı, limon suyu, pul biber ve tuzla tatlandırıp karıştır; 20 dakika dinlendir.",
+     "en": "Season with olive oil, lemon juice, chilli flakes and salt, toss, then rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Kolay",
+   "Vejetaryen",
+   "Bakliyat",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "65e68fde-d621-4802-beee-c3b5aab36fba",
+  "slug": "barbunya-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Barbunya salatası",
+   "en": "Borlotti bean salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuru barbunyanın soğanlı suda pişirilip zeytinyağı ve limonla dinlendirildiği, soğuk servis edilen klasik bir bakliyat salatası.",
+   "en": "Dried borlotti beans cooked with onion, then dressed with olive oil and lemon and served cold. A classic bean salad."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 65,
+  "waitMinutes": 740,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuru barbunya",
+     "en": "Dried borlotti beans"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "akşamdan ıslatılmış",
+     "en": "soaked overnight"
+    },
+    "pantryKey": "dried-borlotti-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yarım bırakılmış",
+     "en": "halved"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Barbunyaları yıkayıp akşamdan bol suda beklet.",
+     "en": "Rinse the borlotti beans and soak them in plenty of water overnight."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ertesi gün süzüp yıka, 1 litre taze suyla birlikte soğanı ve defne yaprağını ekleyip kaynat.",
+     "en": "The next day, drain and rinse the beans, then bring them to the boil in 1 litre of fresh water with the onion and bay leaf."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 1 saat pişir; barbunyalar yumuşayıp dağılmamalı.",
+     "en": "Simmer gently for 1 hour until the beans are soft but still holding their shape."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Barbunyaları süzüp defne yaprağını ayır ve soğumaya bırak.",
+     "en": "Drain the beans, remove the bay leaf and leave them to cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince doğrayıp maydanozu kıy.",
+     "en": "Finely chop the red onion and the parsley."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Barbunyaları kaseye al; zeytinyağı, limon suyu, tuz ve soğan-maydanozu ekleyip karıştır, 20 dakika dinlendir.",
+     "en": "Put the beans in a bowl, add the olive oil, lemon juice, salt, onion and parsley, toss and rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Barbunyaları akşamdan suda beklet.",
+     "en": "Soak the borlotti beans in water the night before."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "budget",
+   "Vejetaryen",
+   "Bakliyat",
+   "Zeytinyağlı",
+   "Akşamdan ıslat"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
