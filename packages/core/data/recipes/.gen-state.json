@@ -1484,12 +1484,23 @@
     "zeytinyagli-kabak",
     "zeytinyagli-patlican"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "zeytinyagli-domates-dolmasi",
+    "zeytinyagli-barbunya",
+    "zeytinyagli-bakla",
+    "zeytinyagli-kereviz",
+    "zeytinyagli-lahana",
+    "zeytinyagli-bamya",
+    "zeytinyagli-ayse-kadin",
+    "zeytinyagli-borulce",
+    "zeytinyagli-kabak",
+    "zeytinyagli-patlican"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 89227,
    "startedAt": "2026-10-15T20:06:28.665Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:09:14.785Z"
   },
   {
    "id": "g047",
@@ -1758,11 +1769,11 @@
     "kaygana",
     "kuymak"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:07:48.304Z",
    "finishedAt": null
   },
   {
