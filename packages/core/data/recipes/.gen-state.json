@@ -3391,11 +3391,11 @@
     "ispanakli-yumurta",
     "peynirli-omlet"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:58:22.271Z",
    "finishedAt": null
   },
   {
@@ -3419,12 +3419,28 @@
     "brokoli-corbasi",
     "kabak-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "mercimek-corbasi",
+    "ezogelin-corbasi",
+    "tarhana-corbasi",
+    "yayla-corbasi",
+    "domates-corbasi",
+    "tavuk-suyu-corba",
+    "sehriye-corbasi",
+    "dugun-corbasi",
+    "sebze-corbasi",
+    "mantar-corbasi",
+    "yesil-mercimek-corbasi",
+    "toyga-corbasi",
+    "patates-corbasi",
+    "brokoli-corbasi",
+    "kabak-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 51545,
    "startedAt": "2026-10-15T22:58:13.701Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:59:07.628Z"
   },
   {
    "id": "f004",
@@ -3446,11 +3462,11 @@
     "havuc-tarator",
     "saksuka"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:58:22.271Z",
    "finishedAt": null
   },
   {
