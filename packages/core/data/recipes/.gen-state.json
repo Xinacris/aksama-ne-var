@@ -2431,12 +2431,17 @@
     "sopa-de-ajo",
     "ajo-blanco"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gazpacho",
+    "salmorejo",
+    "sopa-de-ajo",
+    "ajo-blanco"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 75020,
    "startedAt": "2026-10-15T22:36:48.883Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:38:58.890Z"
   },
   {
    "id": "g076",
@@ -2470,11 +2475,11 @@
     "boquerones-en-vinagre",
     "calamares-a-la-romana"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:38:52.211Z",
    "finishedAt": null
   },
   {
