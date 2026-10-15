@@ -82,7 +82,7 @@ for (const mode of ["system-dark", "chosen-dark", "chosen-light-on-dark-system",
     await expect(page).toHaveURL(/\/bugun/);
     if (mode.startsWith("chosen")) {
       await page.goto("/ayarlar");
-      await page.getByRole("button", { name: mode === "chosen-dark" ? "Koyu" : "Açık" }).click();
+      await page.getByRole("group", { name: "Tema" }).getByRole("button", { name: mode === "chosen-dark" ? "Koyu" : "Açık" }).click();
     }
     const scheme = mode === "system-light" || mode === "chosen-light-on-dark-system" ? "light" : "dark";
 

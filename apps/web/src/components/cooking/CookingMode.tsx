@@ -17,9 +17,9 @@ import s from "./CookingMode.module.css";
 
 export interface CookingExtras {
   /** Timer buttons for the current step (R8). */
-  stepActions?: (args: { session: CookingSession; recipe: Recipe; step: number }) => ReactNode;
-  /** Sticky bar above the step navigation (running timers). */
-  bar?: (session: CookingSession, recipes: Recipe[]) => ReactNode;
+  stepActions?: (args: { session: CookingSession; recipes: Recipe[]; recipe: Recipe; step: number }) => ReactNode;
+  /** Above the step navigation: the alarm banner and the other steps' timers. */
+  bar?: (args: { session: CookingSession; recipes: Recipe[]; recipe: Recipe; step: number }) => ReactNode;
   /** "Afiyet olsun" screen. */
   finish?: (session: CookingSession, recipes: Recipe[], target: CookTarget) => ReactNode;
 }
@@ -349,11 +349,11 @@ function StepsScreen({ session, recipes, extras }: { session: CookingSession; re
             {tr("cook.step", { n: step + 1, total: recipe.steps.length })}
           </h1>
           <p className={s.stepText}>{recipe.steps[step]}</p>
-          {extras.stepActions?.({ session, recipe, step })}
+          {extras.stepActions?.({ session, recipes, recipe, step })}
         </div>
       </section>
 
-      {extras.bar?.(session, recipes)}
+      {extras.bar?.({ session, recipes, recipe, step })}
 
       <div className={s.nav}>
         <Button variant="secondary" size="xl" className={s.navBtn} onClick={() => go(-1)} disabled={step === 0}>

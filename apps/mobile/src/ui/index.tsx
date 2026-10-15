@@ -71,6 +71,7 @@ export function Button({
   style,
   accessibilityLabel,
   testID,
+  singleLine,
 }: {
   title: string;
   onPress?: () => void;
@@ -82,6 +83,8 @@ export function Button({
   style?: StyleProp<ViewStyle>;
   accessibilityLabel?: string;
   testID?: string;
+  /** One line with an ellipsis, for buttons in a fixed-width column. */
+  singleLine?: boolean;
 }) {
   const { colors } = useTheme();
   const bg = { primary: colors.tomato, secondary: colors.surface, soft: colors.surface2, ghost: "transparent" }[variant];
@@ -114,7 +117,7 @@ export function Button({
       ]}
     >
       {busy ? <ActivityIndicator color={fg} /> : icon ? <Icon name={icon} size={18} color={fg} /> : null}
-      <Text variant={size === "sm" ? "bodySmall" : "body"} weight="bold" color={fg}>
+      <Text variant={size === "sm" ? "bodySmall" : "body"} weight="bold" color={fg} numberOfLines={singleLine ? 1 : undefined}>
         {title}
       </Text>
     </Pressable>

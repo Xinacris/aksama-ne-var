@@ -40,11 +40,13 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
   // Köfte: start the 20-minute timer, it survives a reload
   await ali.getByRole("tab", { name: /İzmir köfte/ }).click();
   await ali.getByRole("button", { name: /^Zamanlayıcı başlat · 20 dk/ }).click();
-  const bar = ali.getByRole("region", { name: "Zamanlayıcılar" });
-  await expect(bar).toContainText("İzmir köfte");
+  // the countdown takes the button's place under the step, labelled by step; no strip for it
+  const step = ali.locator("#pisir-adim");
+  await expect(step.getByRole("button", { name: "İzmir köfte · Adım 1: duraklat" })).toBeVisible();
+  await expect(ali.getByRole("region", { name: "Diğer zamanlayıcılar" })).toHaveCount(0);
   await ali.clock.fastForward("05:00");
   await ali.reload();
-  await expect(ali.getByRole("region", { name: "Zamanlayıcılar" })).toContainText(/1[45]:\d\d/);
+  await expect(step).toContainText(/1[45]:\d\d/);
 
   // 15 more minutes: it rings with a visible banner
   await ali.clock.fastForward("15:05");

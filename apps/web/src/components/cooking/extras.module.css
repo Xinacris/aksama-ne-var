@@ -6,18 +6,83 @@
 .startBtn {
   min-height: 56px;
 }
+/* A running timer under its step. Fixed widths and tabular figures: nothing moves on a tick. */
 .running {
-  min-height: 56px;
-  display: inline-flex;
-  align-items: center;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
-  padding: 0 18px;
+  padding: 12px;
   border-radius: 16px;
   background: var(--olive-soft);
   color: var(--ink);
+  border: 2px solid transparent;
+}
+.runningDone {
+  background: var(--tomato-soft);
+  border-color: var(--tomato);
+}
+.runningTime {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.runningTime svg {
+  flex: none;
+  color: var(--olive);
+}
+.runningDone .runningTime svg {
+  color: var(--tomato);
+}
+.runningDigits {
+  flex: none;
+  min-width: 6.5ch;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 28px;
+  line-height: 1.2;
   font-variant-numeric: tabular-nums;
+}
+.runningWord {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  color: var(--ink2);
+}
+.runningActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.action {
+  min-height: 44px;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.action svg {
+  flex: none;
+}
+.action:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 .alerts {
   display: flex;
@@ -74,11 +139,36 @@
   background: var(--tomato);
   color: var(--on-tomato);
 }
+.timerOpen {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.timerOpen:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 999px;
+}
 .timerLabel {
   font-weight: 600;
   font-size: 14.5px;
+  max-width: 14em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .timerLeft {
+  min-width: 4.5ch;
+  text-align: right;
   font-weight: 700;
   font-size: 17px;
   font-variant-numeric: tabular-nums;
@@ -171,25 +261,6 @@
 }
 .stopBtn {
   min-width: 112px;
-}
-.plus {
-  min-width: 44px;
-  height: 36px;
-  border-radius: 999px;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-}
-.plus:hover {
-  background: color-mix(in srgb, currentColor 14%, transparent);
-}
-.plus:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
 }
 .timer.paused {
   background: var(--ink2);

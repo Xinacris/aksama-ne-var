@@ -3,7 +3,7 @@
 import { listJoin, t as tr } from "@anv/core/i18n";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { CookingSession, CookingTimer, Recipe } from "@anv/core/data/models";
-import { addTimerTime, isPaused, newTimer, pauseTimer, remainingSeconds, restartTimer, resumeTimer, stepTimers, visibleTimers, type CookTarget } from "@anv/core/domain/cooking";
+import { addTimerTime, isPaused, newTimer, otherTimers, pauseTimer, remainingSeconds, restartTimer, resumeTimer, stepTimerSlots, timerStepLabel, type CookTarget, type TimerSlot } from "@anv/core/domain/cooking";
 import { dismissDue, dueTimers, initialAlarm, silenceAlarm, stepAlarm, type AlarmState } from "@anv/core/domain/timerAlarm";
 import { formatCountdown, formatTimerLength } from "@anv/core/domain/durations";
 import { eveningLeftover } from "@anv/core/domain/leftovers";
@@ -68,45 +68,89 @@ export function useWakeLock() {
   }, []);
 }
 
-/** Timer buttons under a step ("Zamanlayıcı başlat · 20 dk"); a running one shows its countdown. */
-function StepTimerButtons({ session, recipe, step }: { session: CookingSession; recipe: Recipe; step: number }) {
+/** Timer buttons under a step ("Zamanlayıcı başlat · 20 dk"); a started one becomes its countdown with its controls, in place. */
+function StepTimerButtons({ session, recipe, step, multi }: { session: CookingSession; recipe: Recipe; step: number; multi: boolean }) {
   const updateCooking = useApp((x) => x.updateCooking);
   const setNotice = useApp((x) => x.setNotice);
-  const found = stepTimers(recipe.steps[step]);
-  const running = session.timers.filter((t) => t.recipeId === recipe.id && t.step === step && !t.dismissed);
-  const t = useTick(running.length > 0);
-  if (!found.length) return null;
+  const slots = stepTimerSlots(session.timers, recipe, step);
+  const t = useTick(slots.some((x) => x.timer));
+  if (!slots.length) return null;
+  const label = timerStepLabel({ recipeId: recipe.id, step }, recipe, multi);
+  const change = (id: string, fn: (x: CookingTimer) => CookingTimer) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === id ? fn(x) : x)) });
 
-  async function start(seconds: number) {
+  async function start(slot: TimerSlot) {
     // This tap is what lets the page make sound later.
     unlockAlarmAudio();
-    await updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds, now: now() })] });
+    await updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds: slot.duration.seconds, now: now(), slot: slot.slot })] });
     const permission = await askNotificationPermission();
     if (permission === "denied" && preferences.takeAlarmHint()) setNotice({ kind: "info", text: tr("alarm.deniedWeb") });
   }
 
   return (
     <div className={s.stepTimers}>
-      {found.map((d) => {
-        const r = running.find((x) => x.seconds === d.seconds);
-        if (r) {
-          const left = remainingSeconds(r, t);
+      {slots.map((slot) => {
+        if (!slot.timer) {
           return (
-            <span key={d.index} className={s.running}>
+            <Button key={slot.slot} variant="soft" size="lg" className={s.startBtn} onClick={() => void start(slot)}>
               <IconClock size={20} />
-              {isPaused(r) ? tr("cook.pausedLeft", { time: formatCountdown(left) }) : left > 0 ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUp")}
-            </span>
+              {tr("cook.startTimer", { length: formatTimerLength(slot.duration.seconds) })}
+            </Button>
           );
         }
+        const x = slot.timer;
+        const left = remainingSeconds(x, t);
+        const paused = isPaused(x);
+        const done = left === 0 && !paused;
         return (
-          <Button key={d.index} variant="soft" size="lg" className={s.startBtn} onClick={() => void start(d.seconds)}>
-            <IconClock size={20} />
-            {tr("cook.startTimer", { length: formatTimerLength(d.seconds) })}
-          </Button>
+          <div key={slot.slot} className={[s.running, done && s.runningDone].filter(Boolean).join(" ")}>
+            <span className={s.runningTime} aria-label={`${label}: ${spokenLeft(x, left)}`}>
+              <IconClock size={20} />
+              <span className={s.runningDigits}>{formatCountdown(left)}</span>
+              <span className={s.runningWord}>{statusWord(x, left)}</span>
+            </span>
+            <span className={s.runningActions}>
+              {done ? (
+                <button type="button" className={s.action} onClick={() => change(x.id, (y) => restartTimer(y, now()))} aria-label={tr("cook.restartTimer", { label })}>
+                  <IconRestart size={16} />
+                  {tr("cook.restart")}
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className={s.action}
+                  onClick={() => change(x.id, (y) => (paused ? resumeTimer(y, now()) : pauseTimer(y, now())))}
+                  aria-label={tr(paused ? "cook.resumeTimer" : "cook.pauseTimer", { label })}
+                >
+                  {paused ? <IconPlay size={16} /> : <IconPause size={16} />}
+                  {paused ? tr("cook.resume") : tr("cook.pause")}
+                </button>
+              )}
+              <button type="button" className={s.action} onClick={() => change(x.id, (y) => addTimerTime(y, 60, now()))} aria-label={tr("cook.addMinute", { label })}>
+                {tr("cook.plusMinute")}
+              </button>
+              <button type="button" className={s.action} onClick={() => change(x.id, (y) => ({ ...y, dismissed: true }))} aria-label={tr("cook.closeTimer", { label })}>
+                <IconClose size={16} />
+                {tr("common.close")}
+              </button>
+            </span>
+          </div>
         );
       })}
     </div>
   );
+}
+
+function statusWord(x: CookingTimer, left: number): string {
+  if (isPaused(x)) return tr("cook.paused");
+  if (left === 0) return tr("cook.timeUpLower");
+  return tr("cook.leftWord");
+}
+
+function spokenLeft(x: CookingTimer, left: number): string {
+  const time = formatCountdown(left);
+  if (isPaused(x)) return tr("cook.pausedLeft", { time });
+  if (left === 0) return tr("cook.timeUpLower");
+  return tr("cook.left", { time });
 }
 
 /**
@@ -139,17 +183,25 @@ function useTimerAlarm(session: CookingSession, t: Date) {
   return { silence: () => setAlarm((a) => silenceAlarm(a)) };
 }
 
-/** Sticky list of timers (dish + time left, pause / +1 dk / restart / close) and the "Süre doldu" banner with Durdur. */
-function TimerBar({ session }: { session: CookingSession }) {
+/**
+ * The "Süre doldu" banner with Durdur, and a compact strip of the timers not under the current
+ * step ("Adım 2 · 0:20", tap to go there, × to close). No strip while only this step has timers.
+ */
+function TimerBar({ session, recipes, recipe, step }: { session: CookingSession; recipes: Recipe[]; recipe: Recipe; step: number }) {
   const updateCooking = useApp((x) => x.updateCooking);
   const active = session.timers.some((x) => !x.dismissed);
   const t = useTick(active);
   const { silence } = useTimerAlarm(session, t);
   const due = dueTimers(session.timers, t);
 
-  const list = visibleTimers(session.timers, t);
-  const change = (id: string, fn: (x: CookingTimer) => CookingTimer) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === id ? fn(x) : x)) });
-  const dismiss = (id: string) => change(id, (x) => ({ ...x, dismissed: true }));
+  const list = otherTimers(session.timers, recipe, step, t);
+  const byId = new Map(recipes.map((r) => [r.id, r]));
+  const multi = recipes.length > 1;
+  const dismiss = (id: string) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === id ? { ...x, dismissed: true } : x)) });
+  const open = (x: CookingTimer) => {
+    const i = recipes.findIndex((r) => r.id === x.recipeId);
+    if (i >= 0) void updateCooking(session.id, { dishIndex: i, positions: { ...session.positions, [x.recipeId]: x.step } });
+  };
   // Stop: silence here and mark the finished timers dismissed, which every tab/device sync reaches sees.
   const stop = () => {
     silence();
@@ -172,37 +224,19 @@ function TimerBar({ session }: { session: CookingSession }) {
         )}
       </div>
       {list.length > 0 && (
-        <section className={s.bar} aria-label={tr("cook.timers")}>
+        <section className={s.bar} aria-label={tr("cook.otherTimers")}>
           <ul className={s.timers}>
             {list.map((x) => {
               const left = remainingSeconds(x, t);
               const paused = isPaused(x);
+              const label = timerStepLabel(x, byId.get(x.recipeId), multi);
               return (
                 <li key={x.id} className={[s.timer, left === 0 && !paused && s.done, paused && s.paused].filter(Boolean).join(" ")}>
-                  <span className={s.timerLabel}>{x.label.split(" · ")[0]}</span>
-                  <span
-                    className={s.timerLeft}
-                    aria-label={paused ? tr("cook.pausedLeft", { time: formatCountdown(left) }) : left ? tr("cook.left", { time: formatCountdown(left) }) : tr("cook.timeUpLower")}
-                  >
-                    {left || paused ? formatCountdown(left) : tr("cook.done")}
-                  </span>
-                  {left > 0 && (
-                    <button
-                      type="button"
-                      className={s.cancel}
-                      onClick={() => change(x.id, (y) => (paused ? resumeTimer(y, now()) : pauseTimer(y, now())))}
-                      aria-label={tr(paused ? "cook.resumeTimer" : "cook.pauseTimer", { label: x.label })}
-                    >
-                      {paused ? <IconPlay size={16} /> : <IconPause size={16} />}
-                    </button>
-                  )}
-                  <button type="button" className={s.plus} onClick={() => change(x.id, (y) => addTimerTime(y, 60, now()))} aria-label={tr("cook.addMinute", { label: x.label })}>
-                    {tr("cook.plusMinute")}
+                  <button type="button" className={s.timerOpen} onClick={() => open(x)} aria-label={`${label}: ${spokenLeft(x, left)}. ${tr("cook.goToStep")}`}>
+                    <span className={s.timerLabel}>{label}</span>
+                    <span className={s.timerLeft}>{left || paused ? formatCountdown(left) : tr("cook.done")}</span>
                   </button>
-                  <button type="button" className={s.cancel} onClick={() => change(x.id, (y) => restartTimer(y, now()))} aria-label={tr("cook.restartTimer", { label: x.label })}>
-                    <IconRestart size={16} />
-                  </button>
-                  <button type="button" className={s.cancel} onClick={() => dismiss(x.id)} aria-label={tr("cook.closeTimer", { label: x.label })}>
+                  <button type="button" className={s.cancel} onClick={() => dismiss(x.id)} aria-label={tr("cook.closeTimer", { label })}>
                     <IconClose size={16} />
                   </button>
                 </li>
@@ -291,7 +325,7 @@ function FinishScreen({ session, target }: { session: CookingSession; target: Co
 
 /** Wires timers, wake lock and the finish screen into `CookingMode`. */
 export const cookingExtras: CookingExtras = {
-  stepActions: (args) => <StepTimerButtons {...args} />,
-  bar: (session) => <TimerBar session={session} />,
+  stepActions: ({ session, recipes, recipe, step }) => <StepTimerButtons session={session} recipe={recipe} step={step} multi={recipes.length > 1} />,
+  bar: (args) => <TimerBar {...args} />,
   finish: (session, _recipes, target) => <FinishScreen session={session} target={target} />,
 };

@@ -1,6 +1,7 @@
 import type { CookingSession, CookingTimer, Ingredient, PantryItem, PlanItem, PrepTask, Recipe, Slot } from "../data/models";
 import { findDurations, formatTimerLength, type FoundDuration } from "./durations";
 import { formatIngredientQuantity, ingredientStatus, recipeLabel, type ListRow } from "./shopping";
+import { t } from "../i18n";
 
 /**
  * Cooking mode, pure parts: what to cook, the merged "Hazırlık" list, step
@@ -150,11 +151,12 @@ export function stepTimers(text: string): FoundDuration[] {
 
 // ───────────────────────── timers ─────────────────────────
 
-export function newTimer(args: { id: string; recipe: Recipe; step: number; seconds: number; now: Date }): CookingTimer {
+export function newTimer(args: { id: string; recipe: Recipe; step: number; seconds: number; now: Date; slot?: number }): CookingTimer {
   return {
     id: args.id,
     recipeId: args.recipe.id,
     step: args.step,
+    ...(args.slot != null ? { slot: args.slot } : {}),
     label: `${recipeLabel(args.recipe)} · ${formatTimerLength(args.seconds)}`,
     seconds: args.seconds,
     endsAt: new Date(args.now.getTime() + args.seconds * 1000).toISOString(),
@@ -208,6 +210,49 @@ export function visibleTimers(timers: CookingTimer[], now: Date): CookingTimer[]
   return timers
     .filter((t) => !t.dismissed)
     .sort((a, b) => Number(isFinished(a, now)) - Number(isFinished(b, now)) || a.endsAt.localeCompare(b.endsAt));
+}
+
+export interface TimerSlot {
+  duration: FoundDuration;
+  /** 0 or 1: the button's place under the step. */
+  slot: number;
+  /** The timer this button started, while it isn't closed. */
+  timer: CookingTimer | null;
+}
+
+/**
+ * The step's timer buttons, each with the timer it started. Matched by `slot`, not by length:
+ * +1 dk changes `seconds`, and the countdown must stay where it was. Older timers without
+ * a slot fall back to the length, then to the first free button.
+ */
+export function stepTimerSlots(timers: CookingTimer[], recipe: Recipe, step: number): TimerSlot[] {
+  const found = stepTimers(recipe.steps[step] ?? "");
+  const mine = timers.filter((t) => t.recipeId === recipe.id && t.step === step && !t.dismissed);
+  const used = new Set<string>();
+  const take = (pred: (t: CookingTimer) => boolean) => {
+    const t = mine.find((x) => !used.has(x.id) && pred(x)) ?? null;
+    if (t) used.add(t.id);
+    return t;
+  };
+  const slots = found.map((duration, slot) => ({ duration, slot, timer: take((t) => t.slot === slot) }));
+  for (const s of slots) s.timer ??= take((t) => t.slot == null && t.seconds === s.duration.seconds);
+  for (const s of slots) s.timer ??= take((t) => t.slot == null);
+  return slots;
+}
+
+/** Timers not shown under the current step (other steps, other dishes): the compact strip. */
+export function otherTimers(timers: CookingTimer[], recipe: Recipe, step: number, now: Date): CookingTimer[] {
+  const inline = new Set(stepTimerSlots(timers, recipe, step).flatMap((s) => (s.timer ? [s.timer.id] : [])));
+  return visibleTimers(timers, now).filter((t) => !inline.has(t.id));
+}
+
+/**
+ * What a timer is called in cooking mode: its step ("Adım 2"), with the dish in front when the
+ * menu has several ("Pilav · Adım 2"). The recipe name alone made rows wrap and said nothing.
+ */
+export function timerStepLabel(timer: Pick<CookingTimer, "step" | "recipeId">, dish: Recipe | null | undefined, withDish: boolean): string {
+  const step = t("cook.timerStep", { n: timer.step + 1 });
+  return withDish && dish ? `${recipeLabel(dish)} · ${step}` : step;
 }
 
 /** Timers that just finished and still need the banner. */

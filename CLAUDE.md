@@ -1,4 +1,4 @@
-All work happens on `main`. Every push to `main` deploys production — push only with all checks green. Before any work, read PROGRESS.md and continue from its last section (currently "Handoff after Round 3.1"); also read DECISIONS.md. Latest spec: PROMPT-v3.1.md (done).
+All work happens on `main`. Every push to `main` deploys production — push only with all checks green. Before any work, read PROGRESS.md and continue from its last section (currently "Round 3.2"); also read DECISIONS.md. Latest spec: PROMPT-v3.2.md (in progress). Round 3.1 spec: PROMPT-v3.1.md (done).
 
 Round 3 spec is in PROMPT-v3.md (done).
 

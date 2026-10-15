@@ -5,7 +5,9 @@ import {
   mergedIngredients,
   missingForCooking,
   moveStep,
+  addTimerTime,
   newTimer,
+  otherTimers,
   overallProgress,
   parseCookTarget,
   pendingPrep,
@@ -13,6 +15,8 @@ import {
   ringingTimers,
   stepOf,
   stepTimers,
+  stepTimerSlots,
+  timerStepLabel,
   visibleTimers,
 } from "@/domain/cooking";
 import type { PantryItem, PrepTask, Recipe, ShoppingCheck } from "@/data/models";
@@ -111,6 +115,45 @@ describe("timers", () => {
     expect(visibleTimers([lentils, rest, short], later).map((t) => t.id)).toEqual(["b", "a", "c"]);
     expect(ringingTimers([lentils, rest, short], later).map((t) => t.id)).toEqual(["c"]);
     expect(ringingTimers([lentils, rest, { ...short, dismissed: true }], later)).toEqual([]);
+  });
+});
+
+describe("timers under the step", () => {
+  const now = new Date("2026-10-12T19:00:00Z");
+  const two: Recipe = { ...R("İzmir köfte"), id: "two", steps: ["Suyu kaynat.", "10 dakika haşla, sonra 1 saat pişir."] };
+  const pilav = R("Tereyağlı pirinç pilavı");
+
+  it("each button keeps its timer, also after +1 dk changes the length", () => {
+    const a = newTimer({ id: "a", recipe: two, step: 1, seconds: 600, now, slot: 0 });
+    const b = newTimer({ id: "b", recipe: two, step: 1, seconds: 3600, now, slot: 1 });
+    const longer = addTimerTime(a, 60, now);
+    expect(longer.seconds).toBe(660);
+    const slots = stepTimerSlots([b, longer], two, 1);
+    expect(slots.map((x) => [x.duration.seconds, x.timer?.id])).toEqual([
+      [600, "a"],
+      [3600, "b"],
+    ]);
+    expect(otherTimers([b, longer], two, 1, now)).toEqual([]);
+  });
+
+  it("closed timers free their button; other steps and dishes go to the strip", () => {
+    const a = { ...newTimer({ id: "a", recipe: two, step: 1, seconds: 600, now, slot: 0 }), dismissed: true };
+    const elsewhere = newTimer({ id: "c", recipe: two, step: 0, seconds: 300, now, slot: 0 });
+    const rice = newTimer({ id: "d", recipe: pilav, step: 2, seconds: 900, now, slot: 0 });
+    expect(stepTimerSlots([a, elsewhere, rice], two, 1).map((x) => x.timer)).toEqual([null, null]);
+    expect(otherTimers([a, elsewhere, rice], two, 1, now).map((x) => x.id)).toEqual(["c", "d"]);
+  });
+
+  it("timers from before slots match by length, then the first free button", () => {
+    const { slot: _s, ...old } = newTimer({ id: "old", recipe: two, step: 1, seconds: 3600, now, slot: 1 });
+    const { slot: _t, ...extended } = addTimerTime(newTimer({ id: "ext", recipe: two, step: 1, seconds: 600, now, slot: 0 }), 60, now);
+    expect(stepTimerSlots([old, extended], two, 1).map((x) => x.timer?.id)).toEqual(["ext", "old"]);
+  });
+
+  it("is labelled by step, with the dish only when the menu has several", () => {
+    const rice = newTimer({ id: "d", recipe: pilav, step: 2, seconds: 900, now });
+    expect(timerStepLabel(rice, pilav, false)).toBe("Adım 3");
+    expect(timerStepLabel(rice, pilav, true)).toBe(`${pilav.shortName ?? pilav.name} · Adım 3`);
   });
 });
 

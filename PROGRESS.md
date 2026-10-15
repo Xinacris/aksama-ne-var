@@ -206,3 +206,21 @@ Spec: `PROMPT-v3.1.md`. All work on `main`.
 - APK build: `npm run apk` (scripts/build-apk.mjs).
 - docs/MOBILE.md: the four ABIs, low-RAM build, release key and backup, the adb install error table (debugging "App not installed"), and the timer alarm.
 - Decisions: DECISIONS.md (APK diagnosis, alarm behaviour).
+
+## Round 3.2
+
+Spec: `PROMPT-v3.2.md` (with the owner's four answers at the end). All work on `main`. No changes to the APK build pipeline.
+
+**Where I found it (2026-10-15):** clean tree except an untracked root `tsconfig.json` (`extends: expo/tsconfig.base`, created 05:14 today, probably by an `expo` command run at the root; not touched). Much of section 2 already exists from Round 3.1 R3: timers are `endsAt`-based in core, notifications are scheduled and reconciled on every pause/+1/close, and the sound is already registered in the `expo-notifications` plugin (`sounds`). The iOS "Custom sound 'timer_alarm.wav' not found in native app" log comes from a binary built without that config (Expo Go, or a dev build older than R3). The fix is a new dev build, not code.
+
+- [x] R0. Where things stand (note above; spec + answers saved in `PROMPT-v3.2.md`).
+- [x] R1. Cooking-mode timer UI: one inline timer under the step (time + pause / +1 dk / close), "other timers" strip only for other steps' timers, tabular figures + fixed widths (zero layout shift), labels by step ("Adım 2 · 0:20"). Web kept consistent. Tests.
+  - Also fixed: after +1 dk the inline countdown vanished, because timers were matched to their button by length. They now carry `slot`. Core `stepTimerSlots` / `otherTimers` / `timerStepLabel`; mobile `components/CookTimers.tsx`; the web `extras.tsx` uses the same model.
+  - Zero layout shift is verified on the web (`e2e/timer-layout.spec.ts`, 360×640 / 390×844 / 1440×900, fails when the fixed width is removed). Native: the props are asserted in jest; no simulator here, so the owner checks it visually.
+  - Pre-existing e2e failure fixed: `selects.spec.ts` clicked "Açık", which since Round 3.1 also matches the Zamanlayıcı sesi switch. It's now scoped to the Tema group.
+  - Checks: lint, typecheck, core 375 / mobile 39 / web 198, build, full e2e (69) green.
+- [ ] R2. Background timers: Android channel at max importance, foreground recompute, sound/dev-build docs, "Zamanlayıcı türü" setting.
+- [ ] R3. Android "Telefonun saatinde kur" (opt-in, ACTION_SET_TIMER via expo-intent-launcher, SET_ALARM; cancels that timer's app notification).
+- [ ] R4. iOS AlarmKit local module (`apps/mobile/modules`), gated by `EXPO_PUBLIC_ENABLE_ALARMKIT` (default off, not linked when off), fallback to the notification.
+- [ ] R5. Import: `AI_PROVIDER` (anthropic | gemini | none; unset = today's chain), Instagram tokenless oEmbed as a public/private check, YouTube check, share-sheet intake (mobile), "Ekran görüntüsünden oku" (on-device OCR, mobile).
+- [ ] R6. README: what needs a dev build, env vars, provider costs. Checks green → push.
