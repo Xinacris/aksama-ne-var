@@ -1484,11 +1484,11 @@
     "zeytinyagli-kabak",
     "zeytinyagli-patlican"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:06:28.665Z",
    "finishedAt": null
   },
   {
@@ -1917,12 +1917,21 @@
     "tost",
     "karisik-tost"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "biberli-dana-sote",
+    "sahanda-yumurta",
+    "patatesli-omlet",
+    "mantarli-omlet",
+    "otlu-omlet",
+    "yumurtali-ekmek",
+    "tost",
+    "karisik-tost"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 79045,
    "startedAt": "2026-10-15T20:04:47.849Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:07:17.294Z"
   },
   {
    "id": "g064",
