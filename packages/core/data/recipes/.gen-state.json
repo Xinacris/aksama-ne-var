@@ -2975,12 +2975,20 @@
     "potage-parmentier",
     "creme-du-barry"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "fransiz-sogan-corbasi",
+    "vichyssoise",
+    "soupe-au-pistou",
+    "bouillabaisse",
+    "veloute-de-champignons",
+    "potage-parmentier",
+    "creme-du-barry"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 78387,
    "startedAt": "2026-10-15T22:48:25.789Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:50:49.041Z"
   },
   {
    "id": "g097",
