@@ -188,11 +188,11 @@
     "galdirik-corbasi",
     "ebegumeci-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:42:54.194Z",
    "finishedAt": null
   },
   {
@@ -410,12 +410,23 @@
     "dil-corbasi",
     "nohutlu-ispanak-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "lahana-tursulu-corba",
+    "keledos",
+    "sutlu-pirinc-corbasi",
+    "etli-nohut-corbasi",
+    "bulgurlu-pazi-corbasi",
+    "kofteli-domates-corbasi",
+    "patlicanli-yogurt-corbasi",
+    "ordekli-bulgur-corbasi",
+    "dil-corbasi",
+    "nohutlu-ispanak-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 90751,
    "startedAt": "2026-10-15T19:40:01.666Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:43:12.979Z"
   },
   {
    "id": "g015",
