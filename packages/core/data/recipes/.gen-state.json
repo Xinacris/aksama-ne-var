@@ -120,11 +120,11 @@
     "kemik-suyu-corbasi",
     "balik-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:36:20.104Z",
    "finishedAt": null
   },
   {
@@ -320,12 +320,23 @@
     "kremali-kabak-cicegi-corbasi",
     "kozlenmis-domates-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "terbiyeli-kuzu-corbasi",
+    "terbiyeli-sebze-corbasi",
+    "sutlu-misir-corbasi",
+    "sutlu-kabak-corbasi",
+    "kremali-brokoli-ve-karnabahar-corbasi",
+    "kremali-bezelye-corbasi",
+    "kremali-havuc-zencefil-corbasi",
+    "kremali-kestane-mantar-corbasi",
+    "kremali-kabak-cicegi-corbasi",
+    "kozlenmis-domates-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 93740,
    "startedAt": "2026-10-15T19:33:05.233Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:36:38.565Z"
   },
   {
    "id": "g013",
