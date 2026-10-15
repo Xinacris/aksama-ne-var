@@ -256,11 +256,11 @@
     "tavuklu-eriste-corbasi",
     "tavuklu-mantar-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:49:30.914Z",
    "finishedAt": null
   },
   {
@@ -1086,12 +1086,23 @@
     "kuzu-kapama",
     "kuzu-guvec"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "adana-kebap",
+    "urfa-kebap",
+    "iskender-kebap",
+    "beyti-kebap",
+    "ali-nazik-kebabi",
+    "testi-kebabi",
+    "kuzu-tandir",
+    "kuzu-incik",
+    "kuzu-kapama",
+    "kuzu-guvec"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 84761,
    "startedAt": "2026-10-15T19:48:10.991Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:50:53.572Z"
   },
   {
    "id": "g037",
