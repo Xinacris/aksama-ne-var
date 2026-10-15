@@ -1323,11 +1323,11 @@
    "slugs": [
     "dana-rosto"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:04:26.646Z",
    "finishedAt": null
   },
   {
@@ -1861,12 +1861,23 @@
     "firinda-kuzu-kaburga",
     "sebzeli-dana-sote"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "fellah-koftesi",
+    "bulgur-pilavli-tavuk",
+    "domatesli-tavuk",
+    "firinda-patlicanli-tavuk",
+    "tavuk-kapama",
+    "tavuklu-tirit",
+    "mantar-kavurma",
+    "patlican-kavurma",
+    "firinda-kuzu-kaburga",
+    "sebzeli-dana-sote"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 105287,
    "startedAt": "2026-10-15T20:00:40.427Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:04:44.638Z"
   },
   {
    "id": "g063",
