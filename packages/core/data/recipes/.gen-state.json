@@ -1253,11 +1253,11 @@
     "kremali-mantarli-tavuk",
     "cerkez-tavugu"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:57:53.589Z",
    "finishedAt": null
   },
   {
@@ -1313,12 +1313,23 @@
     "sac-kavurma",
     "kusbasili-guvec"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "dana-haslama",
+    "dana-yahni",
+    "dana-incik",
+    "dana-dil",
+    "dana-ciger-tava",
+    "kuzu-ciger-tava",
+    "ciger-sarma",
+    "kavurma",
+    "sac-kavurma",
+    "kusbasili-guvec"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 85832,
    "startedAt": "2026-10-15T19:55:04.959Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:58:03.159Z"
   },
   {
    "id": "g043",
