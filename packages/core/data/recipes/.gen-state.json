@@ -1347,12 +1347,23 @@
     "etli-patates-yemegi",
     "etli-lahana-yemegi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "etli-turlu",
+    "etli-kuru-fasulye",
+    "etli-barbunya",
+    "etli-taze-fasulye",
+    "etli-yesil-mercimek",
+    "etli-kereviz",
+    "etli-pirasa",
+    "etli-enginar",
+    "etli-patates-yemegi",
+    "etli-lahana-yemegi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 79908,
    "startedAt": "2026-10-15T19:58:04.481Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:00:28.180Z"
   },
   {
    "id": "g044",
@@ -1588,11 +1599,11 @@
     "balik-pilaki",
     "ahtapot-izgara"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:58:32.489Z",
    "finishedAt": null
   },
   {
