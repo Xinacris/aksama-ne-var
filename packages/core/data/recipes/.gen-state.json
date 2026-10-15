@@ -2730,12 +2730,23 @@
     "sloppy-joe",
     "kofte-ekmek"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "klasik-hamburger",
+    "tavuk-burger",
+    "barbeku-soslu-tavuk-kanat",
+    "buffalo-kanat",
+    "kizarmis-tavuk",
+    "mac-and-cheese",
+    "chili-con-carne",
+    "sebzeli-chili",
+    "sloppy-joe",
+    "kofte-ekmek"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91676,
    "startedAt": "2026-10-15T22:44:03.780Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:47:08.866Z"
   },
   {
    "id": "g087",
@@ -2851,11 +2862,11 @@
     "balkabagi-turtasi",
     "havuclu-kek"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:46:10.570Z",
    "finishedAt": null
   },
   {
