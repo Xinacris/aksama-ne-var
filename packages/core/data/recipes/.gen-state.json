@@ -399,11 +399,11 @@
     "dil-corbasi",
     "nohutlu-ispanak-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:40:01.666Z",
    "finishedAt": null
   },
   {
@@ -815,12 +815,14 @@
    "slugs": [
     "arpa-sehriye-pilavi"
    ],
-   "status": "pending",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "arpa-sehriye-pilavi"
+   ],
    "failed": [],
-   "tokens": null,
-   "startedAt": null,
-   "finishedAt": null
+   "tokens": 51866,
+   "startedAt": "2026-10-15T19:40:01.666Z",
+   "finishedAt": "2026-10-15T19:40:49.514Z"
   },
   {
    "id": "g030",

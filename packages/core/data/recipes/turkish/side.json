@@ -10691,5 +10691,167 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "174d2425-36bb-49df-9314-1c3960caae06",
+  "slug": "arpa-sehriye-pilavi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Arpa şehriye pilavı",
+   "en": "Orzo pilaf"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağında kavrulmuş arpa şehriyenin tavuk suyunda pişmesiyle hazırlanan, hafif ve ekonomik bir yan yemek. Hemen hemen her ana yemeğin yanında rahatça sofraya gelir.",
+   "en": "Orzo toasted in butter, then cooked in chicken stock until each grain is tender and separate. A light, inexpensive side that goes with almost any main course."
+  },
+  "servings": 4,
+  "prepMinutes": 5,
+  "cookMinutes": 18,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Arpa şehriye",
+     "en": "Orzo"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "orzo",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Neutral oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Geniş bir tencerede tereyağı ile sıvı yağı orta ateşte eritip arpa şehriyeyi ekle. Sürekli karıştırarak 4 dakika, altın rengi alana kadar kavur.",
+     "en": "Melt the butter with the oil in a wide pan over a medium heat, then add the orzo. Stir constantly for 4 minutes, until it turns golden."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Sıcak tavuk suyunu yavaş yavaş ilave et, tuz ve karabiberi ekleyip karıştır.",
+     "en": "Pour in the hot chicken stock gradually, then add the salt and pepper and stir well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Suyu kaynatıp kapağını kapat, ateşi kısarak 12 dakika pişir.",
+     "en": "Bring it to the boil, cover, lower the heat and cook for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp kapağı kapalı halde 10 dakika dinlendir. Bu sırada su tamamen çekilir ve şehriye yumuşar.",
+     "en": "Turn off the heat and leave the pan covered for 10 minutes. The liquid will be absorbed and the orzo will soften further."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Maydanozu serpip çatalla karıştırarak kabart, sıcak servis et.",
+     "en": "Scatter over the parsley, fluff with a fork and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Pilav",
+   "Tencere",
+   "Kolay",
+   "budget"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
