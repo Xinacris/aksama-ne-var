@@ -18,12 +18,23 @@
     "sakala-carpan-corbasi",
     "mahluta-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kelle-paca-corbasi",
+    "eksili-kofte-corbasi",
+    "anali-kizli-corbasi",
+    "lebeniye-corbasi",
+    "beyran-corbasi",
+    "kesme-corbasi",
+    "arabasi-corbasi",
+    "bamya-corbasi",
+    "sakala-carpan-corbasi",
+    "mahluta-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 95166,
    "startedAt": "2026-10-15T19:26:23.099Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:29:58.720Z"
   },
   {
    "id": "g002",
@@ -442,11 +453,11 @@
     "yesil-mercimek-salatasi",
     "barbunya-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:29:26.501Z",
    "finishedAt": null
   },
   {
