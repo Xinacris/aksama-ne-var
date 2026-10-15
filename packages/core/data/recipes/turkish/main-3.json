@@ -2320,5 +2320,2317 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "99351715-deea-4486-9e92-1233d8fc134d",
+  "slug": "somon-firin",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Somon fırın",
+   "en": "Baked salmon"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Somon filetosunu ince patates dilimlerinin üzerinde, sarımsak, kekik ve limonla fırında pişirdiğimiz tek tepsilik sade bir akşam yemeği. Balık kurumadan çıkarılınca yumuşacık kalır.",
+   "en": "Salmon fillets baked over thin potato slices with garlic, thyme and lemon, all on one tray. Taken out before it dries, the fish stays soft and moist."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Somon fileto",
+     "en": "Salmon fillets"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "derisi alınmış",
+     "en": "skinless"
+    },
+    "pantryKey": "salmon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yarısı dilim dilim, yarısının suyu sıkılacak",
+     "en": "half sliced, half squeezed for juice"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp",
+     "en": "diced"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ayarla, fırın tepsisine yağlı kağıt ser.",
+     "en": "Heat the oven to 200°C and line a baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patates dilimlerini tuz ve 1 yemek kaşığı zeytinyağıyla karıştırıp tepsiye tek kat olacak şekilde yay.",
+     "en": "Toss the potato slices with salt and a tablespoon of olive oil, then spread them over the tray in a single layer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri fırının orta rafında 15 dakika ön pişir.",
+     "en": "Pre-bake the potatoes on the middle shelf for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş sarımsağı kalan zeytinyağı, kekik, tuz ve karabiberle karıştır; somonların iki yüzüne sür.",
+     "en": "Mix the crushed garlic with the remaining oil, thyme, salt and pepper, and rub it over both sides of the salmon."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Somonları patateslerin üzerine yerleştir, limon dilimlerini ve tereyağı parçalarını aralara koy.",
+     "en": "Lay the salmon over the potatoes, tucking the lemon slices and butter pieces around them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Somonları fırında 12 dakika pişir; çatalla kolayca ayrılmaya başlayınca çıkar.",
+     "en": "Bake the salmon for 12 minutes, until it flakes easily with a fork."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Limonun suyunu üzerine sıkıp dereotu serpiştir, sıcak servis et.",
+     "en": "Squeeze the lemon juice over, scatter the dill and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "glutenFree",
+   "Fırında",
+   "Balık",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3709219b-e9a0-43df-870b-ee9a802b3c3c",
+  "slug": "alabalik-tava",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Alabalık tava",
+   "en": "Pan-fried trout"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz'in taze alabalıklarının mısır ununa bulanıp sıcak yağda kızartılmış hali. Dışı çıtır, içi yumuşak olur ve limonla en iyi bu şekilde yenir.",
+   "en": "Fresh trout dusted in cornmeal and fried in hot oil, a Black Sea favourite. The skin turns crisp while the flesh stays soft, best eaten with lemon."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 12,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Alabalık",
+     "en": "Trout"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "pulları ve iç organları temizlenmiş",
+     "en": "scaled and cleaned"
+    },
+    "pantryKey": "trout",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mısır unu",
+     "en": "Cornmeal"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "servis öncesi eritilmiş",
+     "en": "melted before serving"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka",
+     "en": "thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Alabalıkların iç organlarını ve pulunu kontrol edip soğuk suyla yıka, kağıt havluyla iyice kurula.",
+     "en": "Check the trout for any remaining scales or guts, rinse under cold water and pat dry with kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "İki yüzüne tuz ve karabiber serp, ardından mısır ununa bulayıp fazlasını silkele.",
+     "en": "Season both sides with salt and pepper, then dredge them in cornmeal and shake off the excess."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada ayçiçek yağını orta-yüksek ateşte ısıt.",
+     "en": "Heat the sunflower oil in a wide frying pan over medium-high heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Alabalıkları tavaya al ve bir yüzü kızarana kadar 4 dakika pişir.",
+     "en": "Lay the trout in the pan and fry for 4 minutes, until one side is golden."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Ters çevirip diğer yüzünü 4 dakika daha pişir, kağıt havlu serili tabağa al.",
+     "en": "Turn them over and cook the other side for another 4 minutes, then move to a plate lined with kitchen paper."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Tavadaki yağı dök, tereyağını aynı tavada eritip alabalıkların üzerine gezdir.",
+     "en": "Pour off the frying oil, melt the butter in the same pan and spoon it over the trout."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı, maydanozu ve limon dilimlerini yanına koyup sıcak servis et.",
+     "en": "Serve warm with the red onion, parsley and lemon slices alongside."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tavada",
+   "Kolay",
+   "quick",
+   "glutenFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b7be4e5a-e21b-4346-a86e-1fdbabfccc97",
+  "slug": "alabalik-bugulama",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Alabalık buğulama",
+   "en": "Steamed trout"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Alabalık filetosunu soğan, havuç ve biberle birlikte az suda ve az yağla pişirdiğimiz hafif bir yemek. Sebzeler balığın suyunu içine çeker, tadı temiz kalır.",
+   "en": "Trout fillets cooked gently on a bed of onion, carrot and pepper with a little water and oil. Light and clean-tasting, the vegetables soak up the fish juices."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Alabalık fileto",
+     "en": "Trout fillets"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "derisi alınmış",
+     "en": "skinless"
+    },
+    "pantryKey": "trout",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilim",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılacak",
+     "en": "juice to be squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğan ve havucu halka ya da ince dilim, domatesleri dilim dilim, biberi halka halka kes.",
+     "en": "Slice the onion and carrot thinly, the tomatoes into rounds and the peppers into rings."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerenin dibine soğan, havuç ve biberi yay, üzerine 3 yemek kaşığı zeytinyağı gezdir.",
+     "en": "Spread the onion, carrot and peppers over the base of a wide pot and drizzle over 3 tablespoons of olive oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı domatesle birlikte sebzelerin üzerine ekle.",
+     "en": "Add the garlic and tomato over the vegetables."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Alabalık filetolarını tuz ve karabiberle tatlandır, sebzelerin üzerine yerleştir.",
+     "en": "Season the trout fillets with salt and pepper and lay them on top of the vegetables."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limonun suyunu ve 150 ml suyu tencereye dök, kapağını kapatıp kısık ateşte 15 dakika buğulat.",
+     "en": "Pour the lemon juice and 150 ml water into the pot, cover and steam over low heat for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kapağı aç, maydanozu serpip 3 dakika daha pişir.",
+     "en": "Remove the lid, scatter over the parsley and cook for 3 minutes more."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kalan zeytinyağını gezdirip sıcak servis et.",
+     "en": "Drizzle over the remaining olive oil and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tencere",
+   "Zeytinyağlı",
+   "Hafif",
+   "Kolay",
+   "onePot",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "15614fa2-fdf4-44ed-bf40-91d9cbcc88b6",
+  "slug": "uskumru-dolmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Marmara",
+  "title": {
+   "tr": "Uskumru dolması",
+   "en": "Stuffed mackerel"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Temizlenmiş uskumrunun içine soğan, maydanoz, çam fıstığı ve kuş üzümünden bir harç konur; domates yatağının üzerinde zeytinyağında yavaşça pişer. Hafif ve ferah bir balık yemeği.",
+   "en": "Cleaned mackerel filled with onion, parsley, pine nuts and currants, then gently braised in olive oil on a bed of tomato. Light and fresh, with the richness of the fish held in check."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Uskumru",
+     "en": "Mackerel"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "temizlenmiş, başı alınmış",
+     "en": "cleaned, heads removed"
+    },
+    "pantryKey": "mackerel",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık fıstık",
+     "en": "Pine nuts"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hafifçe kavrulmuş",
+     "en": "lightly toasted"
+    },
+    "pantryKey": "pine-nut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuş üzümü",
+     "en": "Currants"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ılık suda bekletilip süzülmüş",
+     "en": "soaked in warm water and drained"
+    },
+    "pantryKey": "currant",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "pişirmek için",
+     "en": "for cooking"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Uskumruların iç organlarını çıkarıp içini soğuk suyla yıka, kağıt havluyla kurula.",
+     "en": "Remove the guts from the mackerel, rinse the cavities under cold water and pat dry with kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve maydanozu ince ince kıy, kuş üzümünü ılık suda bekletip süz.",
+     "en": "Finely chop the onion and parsley, and soak the currants in warm water before draining them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı 2 yemek kaşığı zeytinyağında yumuşayana kadar soteleyip dolmalık fıstık ve kuş üzümünü ekle.",
+     "en": "Soften the onion in 2 tablespoons of olive oil, then add the pine nuts and currants."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, maydanozu ve tuz, karabiberi ekleyip karıştır; harcı uskumruların içine doldur.",
+     "en": "Take the pan off the heat, stir in the parsley, salt and pepper, and fill the mackerel with the mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerenin dibine domates dilimlerini yay, uskumruları üzerine dizip kalan 2 yemek kaşığı zeytinyağı ve 100 ml suyu ekle.",
+     "en": "Lay the tomato slices over the base of a pot, arrange the mackerel on top, then add the remaining 2 tablespoons of olive oil and 100 ml water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp kısık ateşte 20 dakika pişir.",
+     "en": "Cover and cook over low heat for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Üzerine limonun suyunu sıkıp ılık ya da soğuk servis et.",
+     "en": "Squeeze the lemon juice over and serve warm or cold."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tencere",
+   "Zeytinyağlı",
+   "Dolma",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3dbc0384-e7ce-4b22-8eff-b3be2213efd2",
+  "slug": "sardalya-izgara",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Ege",
+  "title": {
+   "tr": "Sardalya ızgara",
+   "en": "Grilled sardines"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze sardalyaları sarımsaklı zeytinyağı ve kekikle kısa süre marine edip ızgarada pişirdiğimiz sade bir Ege lezzeti. Yanına domates ve soğan salatası iyi gider.",
+   "en": "Fresh sardines marinated briefly in garlicky olive oil and oregano, then grilled until the skin is crisp. A simple Aegean classic, best with a tomato and onion salad."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 8,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Sardalya",
+     "en": "Sardines"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "sardine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rounds"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilim",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sardalyaların başını ve iç organlarını çıkar, iyice yıka ve kağıt havluyla kurula.",
+     "en": "Remove the heads and guts from the sardines, rinse well and pat dry with kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı, zeytinyağını, kekiği, tuz ve karabiberi bir kapta karıştır.",
+     "en": "In a bowl, mix the garlic, olive oil, oregano, salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sardalyaları bu karışımın içinde iki yüzüne sürüp 20 dakika dinlendir.",
+     "en": "Coat the sardines in the mixture on both sides and let them rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Izgarayı iyice kızdır ve sardalyaları bir yüzü pişene kadar 3 dakika ızgarada pişir.",
+     "en": "Heat the grill until very hot and cook the sardines for 3 minutes, until one side is cooked through."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Sardalyaları çevirip diğer yüzünü 3 dakika daha pişir.",
+     "en": "Turn the sardines and grill the other side for another 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates ve kırmızı soğanı kesip tuz ve maydanozla karıştırarak yanında salata yap.",
+     "en": "Slice the tomatoes and red onion, then toss them with salt and parsley to make a side salad."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sardalyaları limon dilimleriyle birlikte sıcak servis et.",
+     "en": "Serve the sardines warm with the lemon slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Izgara",
+   "Hafif",
+   "Kolay",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c2b85893-d7ec-4b3d-a454-21ceb2e2b317",
+  "slug": "istavrit-tava",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "İstavrit tava",
+   "en": "Fried horse mackerel"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz'de bol ve ucuz bulunan istavritin mısır ununa bulanıp tavada kızartılmış hali. Kısa sürede hazır olur, dışı çıtır ve limonla çok yakışır.",
+   "en": "Horse mackerel, a cheap and plentiful Black Sea fish, coated in cornmeal and shallow-fried until crisp. Ready quickly and best with lemon and raw onion."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 8,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İstavrit",
+     "en": "Horse mackerel"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "horse-mackerel",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mısır unu",
+     "en": "Cornmeal"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka",
+     "en": "thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "İstavritlerin başını ve iç organlarını çıkar, soğuk suda yıka ve kağıt havluyla kurula.",
+     "en": "Remove the heads and guts from the horse mackerel, rinse in cold water and pat dry."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "İki yüzüne tuz ve karabiber serp, ardından mısır ununa bulayıp fazlasını silkele.",
+     "en": "Season both sides with salt and pepper, then dredge them in cornmeal and shake off the excess."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada ayçiçek yağını orta-yüksek ateşte ısıt.",
+     "en": "Heat the sunflower oil in a wide frying pan over medium-high heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Balıkları tavaya al ve bir yüzü altın rengi olana kadar 3 dakika kızart.",
+     "en": "Lay the fish in the pan and fry for 3 minutes, until one side is golden."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Çevirip diğer yüzünü 3 dakika pişir, kağıt havlu serili tabağa al.",
+     "en": "Turn them over, cook the other side for 3 minutes and move to a plate lined with kitchen paper."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince halka doğra, maydanozu ince kıy.",
+     "en": "Slice the red onion into thin rings and finely chop the parsley."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Balıkları limon dilimleri, soğan ve maydanozla birlikte sıcak servis et.",
+     "en": "Serve the fish warm with the lemon slices, onion and parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tavada",
+   "Kolay",
+   "quick",
+   "budget",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d6e9b5d5-a879-4971-81c8-11d0ab150cb1",
+  "slug": "mezgit-tava",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Marmara",
+  "title": {
+   "tr": "Mezgit tava",
+   "en": "Fried whiting"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mezgit filetosunun un ve çırpılmış yumurtaya bulanıp tavada kızartılması. Yumuşak etli, hafif tatlı bir balık ve sade bir ev yemeği.",
+   "en": "Whiting fillets dipped in egg and flour and pan-fried until golden. Mild and soft-fleshed, an easy home-cooked dish that children tend to enjoy."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mezgit fileto",
+     "en": "Whiting fillets"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "whiting",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mezgit filetolarını yıka, kağıt havluyla kurulayıp tuz ve karabiber serp; 10 dakika dinlendir.",
+     "en": "Rinse the whiting fillets, pat dry, season with salt and pepper and let them rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı bir kaba kırıp çırp, ayrı bir tabağa unu koy.",
+     "en": "Beat the egg in a bowl and put the flour on a separate plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Filetoları önce unda, sonra yumurtada geçirip tekrar unla kapla ve fazlasını silkele.",
+     "en": "Dip the fillets in flour, then in the beaten egg, then in flour again, and shake off the excess."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada ayçiçek yağını orta ateşte ısıt.",
+     "en": "Heat the sunflower oil in a wide pan over medium heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Filetoları tavaya al ve bir yüzü altın rengi alana kadar kızart.",
+     "en": "Lay the fillets in the pan and fry until one side is golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çevirip diğer yüzünü 3 dakika kızart ve kağıt havluya al.",
+     "en": "Turn them over, fry the other side for 3 minutes and drain on kitchen paper."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Maydanozu serpip limon dilimleriyle sıcak servis et.",
+     "en": "Scatter over the parsley and serve warm with the lemon slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tavada",
+   "Kolay",
+   "budget",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e13b75c0-1abb-4a46-bca3-ab111de97c9c",
+  "slug": "balik-guvec",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Balık güveç",
+   "en": "Fish güveç"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Balık parçalarının patates, soğan ve biberle birlikte güveçte fırınlandığı bir yemek. Domates ve salçanın tatlılığı balığın hafifliğine denge kurar.",
+   "en": "Fish baked in a clay casserole with potatoes, onion, peppers and tomato. The sweetness of tomato and paste balances the lightness of the fish."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz balık fileto",
+     "en": "White fish fillets"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "parçalar halinde",
+     "en": "cut into pieces"
+    },
+    "pantryKey": "white-fish-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil biber",
+     "en": "Green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Balığı parçalara ayırıp tuz ve karabiberle tatlandır, 15 dakika dinlendir.",
+     "en": "Season the fish pieces with salt and pepper and let them rest for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Patatesleri, soğanı ve biberi dilimleyerek, domatesleri de dilim dilim hazırla.",
+     "en": "Slice the potatoes, onion and peppers, and cut the tomatoes into rounds."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Güveç kabının dibine zeytinyağı gezdirip patates ve soğanları yay.",
+     "en": "Drizzle the bottom of the casserole with olive oil and spread the potatoes and onion over it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine biber, domates, ezilmiş sarımsak ve salçayı ekle; 200 ml suyu dökerek hafifçe karıştır.",
+     "en": "Add the peppers, tomato, crushed garlic and paste on top, then pour in 200 ml water and stir gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Balık parçalarını sebzelerin üzerine yerleştir, kapağını kapatıp 180 derecelik fırında 25 dakika pişir.",
+     "en": "Lay the fish pieces over the vegetables, cover, and bake in a 180°C oven for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Üzerine maydanoz serpip limon dilimleriyle sıcak servis et.",
+     "en": "Scatter over the parsley and serve hot with the lemon slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Fırında",
+   "Tencere",
+   "onePot",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cadf3dbe-1ffa-40ac-9480-a9954efdcc25",
+  "slug": "balik-pilaki",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Balık pilaki",
+   "en": "Fish pilaki (fish in olive oil with vegetables)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Çipura ve sebzelerin zeytinyağında yavaş yavaş pişip soğuk servis edildiği Ege klasiği. Yağ ve limonun dengesi sebzeleri ve balığı birbirine bağlar.",
+   "en": "A classic from the Aegean kitchen: sea bream and vegetables cooked slowly in olive oil and served cold. The balance of oil and lemon ties the fish and vegetables together."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 35,
+  "waitMinutes": 130,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Çipura",
+     "en": "Sea bream"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "parçalara ayrılmış",
+     "en": "cut into pieces"
+    },
+    "pantryKey": "sea-bream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "kalın dilim",
+     "en": "thickly sliced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince dilim",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Balık parçalarına tuz serp ve 10 dakika dinlendir.",
+     "en": "Salt the fish pieces and let them rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Soğanları halka halka, havuç ve patatesleri dilim dilim kes; domatesleri küp küp doğra.",
+     "en": "Slice the onions into rings, the carrots and potatoes into rounds, and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte yumuşayana kadar soteleyerek.",
+     "en": "Warm the olive oil in a wide pot and soften the onion and garlic over low heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havuç, patates, domates ve defne yapraklarını ekle, 200 ml suyu da katıp karıştır.",
+     "en": "Add the carrots, potatoes, tomatoes and bay leaves, then stir in the 200 ml water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp sebzeleri kısık ateşte 20 dakika pişir.",
+     "en": "Cover and simmer the vegetables over low heat for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Balık parçalarını sebzelerin üzerine dizip kapağını kapatarak 15 dakika daha pişir.",
+     "en": "Lay the fish pieces over the vegetables, cover and cook for 15 minutes more."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp oda sıcaklığına gelene kadar soğut, sonra buzdolabında 2 saat dinlendir.",
+     "en": "Take the pot off the heat, let it cool to room temperature, then rest it in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Soğuk servis ederken limon dilimleri ve maydanozla süsle.",
+     "en": "Garnish with the lemon slices and parsley when serving cold."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Zeytinyağlı",
+   "Tencere",
+   "makeAhead",
+   "onePot",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5616b72d-6e2d-4058-95b9-127780c8ab98",
+  "slug": "ahtapot-izgara",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Ege",
+  "title": {
+   "tr": "Ahtapot ızgara",
+   "en": "Grilled octopus"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ahtapotun önce yumuşayana kadar haşlanıp, sonra zeytinyağı ve limonlu sosta marine edilip ızgarada tatlandırılması. Ege meyhanelerinin bilinen lezzetlerinden biridir.",
+   "en": "Octopus boiled until tender, then marinated in olive oil and lemon and finished on the grill. One of the best-known dishes of the Aegean taverna tradition."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 55,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ahtapot",
+     "en": "Octopus"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "octopus",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kabaca doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "haşlama suyu için",
+     "en": "for the cooking water"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 2,
+    "unit": "l",
+    "note": {
+     "tr": "haşlamak için",
+     "en": "for boiling"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış, dilimleri servis için ayrılmış",
+     "en": "juiced, with slices kept for serving"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ahtapotun gözlerini, ağzını ve iç kısmını çıkarıp bol suyla yıka.",
+     "en": "Remove the eyes, beak and innards from the octopus and rinse it well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede 2 litre suyu kaynat; soğanı, defne yapraklarını ve sirkeyi ekle.",
+     "en": "Bring 2 litres of water to the boil in a large pot and add the onion, bay leaves and vinegar."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ahtapotu suya üç kez daldırıp çıkar, sonra tamamen suya koyup kapağını kapatarak kısık ateşte 50 dakika haşla.",
+     "en": "Dip the octopus into the water three times and lift it out each time, then submerge it fully, cover and simmer gently for 50 minutes."
+    },
+    "timerSeconds": 3000
+   },
+   {
+    "text": {
+     "tr": "Ahtapot yumuşayınca suyundan çıkar, soğumaya bırak ve bacaklarını 3 cm parçalar halinde kes.",
+     "en": "When the octopus is tender, lift it out, let it cool and cut the tentacles into 3 cm pieces."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı, ezilmiş sarımsak, kekik, tuz ve karabiberi limon suyuyla karıştır; ahtapot parçalarını bu sosa bulayıp 20 dakika bekle.",
+     "en": "Whisk the olive oil, crushed garlic, oregano, salt and pepper with the lemon juice, toss the octopus pieces in it and leave them for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Izgarayı iyice kızdır, ahtapot parçalarını dizip 3 dakika pişir, sonra çevirip kenarları da kızart.",
+     "en": "Heat the grill until very hot, lay the octopus pieces on it and cook for 3 minutes, then turn them and char the edges."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Maydanozu serpip limon dilimleriyle sıcak servis et.",
+     "en": "Scatter over the parsley and serve warm with the lemon slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Izgara",
+   "Haşlama",
+   "Marine",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

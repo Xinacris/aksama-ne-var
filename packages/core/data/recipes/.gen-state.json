@@ -1298,11 +1298,11 @@
     "ordek-kapama",
     "bildircin-kizartmasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:01:00.696Z",
    "finishedAt": null
   },
   {
@@ -1621,12 +1621,23 @@
     "balik-pilaki",
     "ahtapot-izgara"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "somon-firin",
+    "alabalik-tava",
+    "alabalik-bugulama",
+    "uskumru-dolmasi",
+    "sardalya-izgara",
+    "istavrit-tava",
+    "mezgit-tava",
+    "balik-guvec",
+    "balik-pilaki",
+    "ahtapot-izgara"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 97023,
    "startedAt": "2026-10-15T19:58:32.489Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:02:10.465Z"
   },
   {
    "id": "g054",
