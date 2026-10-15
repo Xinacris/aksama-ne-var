@@ -2804,11 +2804,11 @@
     "hash-brown-ve-yumurta",
     "biftek"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:50:33.724Z",
    "finishedAt": null
   },
   {
@@ -3007,12 +3007,14 @@
    "slugs": [
     "gratin-dauphinois"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gratin-dauphinois"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 51715,
    "startedAt": "2026-10-15T22:50:04.588Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:50:47.694Z"
   },
   {
    "id": "g099",
