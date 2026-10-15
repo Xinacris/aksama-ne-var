@@ -2764,11 +2764,11 @@
     "balik-taco",
     "jambalaya"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:47:10.215Z",
    "finishedAt": null
   },
   {
@@ -2843,12 +2843,18 @@
     "firinda-misir",
     "deviled-eggs"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "firinda-patates",
+    "sogan-halkasi",
+    "firinda-fasulye",
+    "firinda-misir",
+    "deviled-eggs"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 77617,
    "startedAt": "2026-10-15T22:45:39.632Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:47:57.359Z"
   },
   {
    "id": "g092",
