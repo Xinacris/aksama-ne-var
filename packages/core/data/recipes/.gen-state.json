@@ -264,12 +264,23 @@
     "tavuklu-misir-corbasi",
     "tavuklu-pirinc-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "mercimekli-ispanak-corbasi",
+    "mercimekli-pazi-corbasi",
+    "nohutlu-tarhana-corbasi",
+    "kiymali-tarhana-corbasi",
+    "kara-bugday-corbasi",
+    "eksili-pancar-corbasi",
+    "lahanali-kuru-fasulye-corbasi",
+    "tavuklu-sebze-corbasi",
+    "tavuklu-misir-corbasi",
+    "tavuklu-pirinc-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 98758,
    "startedAt": "2026-10-15T19:29:15.684Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:33:03.801Z"
   },
   {
    "id": "g012",
@@ -487,11 +498,11 @@
     "kalamar-salatasi",
     "karides-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:32:17.735Z",
    "finishedAt": null
   },
   {
