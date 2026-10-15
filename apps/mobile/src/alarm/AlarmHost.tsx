@@ -1,17 +1,18 @@
 import * as Notifications from "expo-notifications";
 import { router } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
-import { AppState, View } from "react-native";
+import { AppState, Platform, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
-import { dismissDue, finishKey, initialAlarm, silenceAlarm, stepAlarm, type AlarmState } from "@anv/core/domain/timerAlarm";
+import { dismissDue, finishKey, initialAlarm, nextHandoffs, silenceAlarm, stepAlarm, type AlarmState } from "@anv/core/domain/timerAlarm";
 import { listJoin } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import { useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Icon, Text } from "@/ui";
-import { clearPresentedTimerNotifications, setForegroundHandler, syncTimerNotifications } from "./notifications";
-import { useTimerSound } from "./prefs";
+import { syncAlarmKit } from "./alarmKit";
+import { clearPresentedTimerNotifications, inAlarmQueue, setForegroundHandler, syncTimerNotifications } from "./notifications";
+import { useHandoffs, useTimerKind, useTimerSound } from "./prefs";
 import { startRinging, stopRinging } from "./sound";
 
 /** Re-render every second while a timer counts down or rings, and on return to the foreground. */
@@ -43,13 +44,18 @@ export function AlarmHost() {
   const sessions = useApp((x) => x.cookingSessions);
   const updateCooking = useApp((x) => x.updateCooking);
   const [sound] = useTimerSound();
+  const [kind] = useTimerKind();
+  const [handoffs, setHandoffs] = useHandoffs();
   const open = useMemo(() => sessions.filter((s) => s.phase !== "done"), [sessions]);
   const timers = useMemo(() => open.flatMap((s) => s.timers), [open]);
   const clock = useAlarmClock(timers.some((x) => !x.dismissed));
+  // Finishes the phone's own alarm rings for (Clock app, AlarmKit) don't ring in the app too.
+  const handedOff = useMemo(() => new Set(handoffs), [handoffs]);
+  const ours = useMemo(() => timers.filter((x) => !handedOff.has(finishKey(x))), [timers, handedOff]);
 
   // Derived state adjusted during render (stepAlarm returns the same object when nothing changed).
   const [alarm, setAlarm] = useState<AlarmState>(initialAlarm);
-  const next = stepAlarm(alarm, timers, clock);
+  const next = stepAlarm(alarm, ours, clock);
   if (next !== alarm) setAlarm(next);
   const ringingKeys = new Set(next.ringing);
   const ringing = timers.filter((x) => ringingKeys.has(finishKey(x)));
@@ -62,10 +68,20 @@ export function AlarmHost() {
     return stopRinging;
   }, [isRinging, next.since, sound]);
 
-  // Background notifications follow every change to the timers (and the sound choice).
+  // Every change to the timers (and the sound / type choice): first the phone's own alarm
+  // (AlarmKit on iOS; on Android the Clock app keeps what it was handed), then the app's
+  // notifications for the rest.
   useEffect(() => {
-    void syncTimerNotifications(open, now(), sound);
-  }, [open, sound]);
+    const at = now();
+    void inAlarmQueue(async () => {
+      const native = Platform.OS === "ios" ? await syncAlarmKit(open, at, { enabled: kind === "phoneClock", sound }) : handedOff;
+      const nextKeys = nextHandoffs(handedOff, open, at, native);
+      setHandoffs(nextKeys);
+      return new Set(nextKeys);
+    }).then((covered) => syncTimerNotifications(open, at, sound, covered));
+    // `handedOff` changes when a timer is handed to the Clock app; setHandoffs ignores no-op writes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, sound, kind, handoffs.join()]);
 
   useEffect(() => {
     setForegroundHandler();

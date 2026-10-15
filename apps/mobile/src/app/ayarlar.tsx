@@ -8,7 +8,7 @@ import { importUsageText } from "@anv/core/domain/import/usage";
 import { getLocale, listJoin, LOCALES } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import type { ThemePreference } from "@anv/core/lib/theme";
-import { useTimerSound } from "@/alarm/prefs";
+import { useTimerKind, useTimerSound } from "@/alarm/prefs";
 import { useMobileData } from "@/boot";
 import { usePeople } from "@/hooks/usePeople";
 import { useSetLanguage } from "@/i18n";
@@ -29,6 +29,8 @@ export default function Settings() {
   const setLanguage = useSetLanguage(data?.store ?? null);
   const st = useApp();
   const [timerSound, setTimerSound] = useTimerSound();
+  // Only a choice where the phone has its own alarm for apps (iOS 26+ with AlarmKit in the build).
+  const [timerKind, setTimerKind, timerKindChoice] = useTimerKind();
   const { me, household, members, importLog } = st;
   const { people } = usePeople();
   const [name, setName] = useState(me?.name ?? "");
@@ -177,6 +179,16 @@ export default function Settings() {
           <Chip label={t("ayarlar.off")} selected={!timerSound} onPress={() => setTimerSound(false)} />
         </Row>
         <Text variant="small">{t("ayarlar.timerSoundNote")}</Text>
+        {timerKindChoice && (
+          <>
+            <Text weight="semibold">{t("ayarlar.timerKind")}</Text>
+            <Row>
+              <Chip label={t("ayarlar.timerKindPhoneClock")} selected={timerKind === "phoneClock"} onPress={() => setTimerKind("phoneClock")} />
+              <Chip label={t("ayarlar.timerKindNotification")} selected={timerKind === "notification"} onPress={() => setTimerKind("notification")} />
+            </Row>
+            <Text variant="small">{t("ayarlar.timerKindNote")}</Text>
+          </>
+        )}
       </Card>
 
       <Card>

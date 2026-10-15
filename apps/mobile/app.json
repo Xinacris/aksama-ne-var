@@ -35,6 +35,9 @@
         "android.permission.RECORD_AUDIO",
         "android.permission.SCHEDULE_EXACT_ALARM",
         "android.permission.USE_EXACT_ALARM"
+      ],
+      "permissions": [
+        "com.android.alarm.permission.SET_ALARM"
       ]
     },
     "plugins": [
@@ -53,6 +56,7 @@
         }
       ],
       "./plugins/withReleaseSigning",
+      "./plugins/withAlarmKit",
       [
         "expo-audio",
         {

@@ -219,8 +219,12 @@ Spec: `PROMPT-v3.2.md` (with the owner's four answers at the end). All work on `
   - Zero layout shift is verified on the web (`e2e/timer-layout.spec.ts`, 360×640 / 390×844 / 1440×900, fails when the fixed width is removed). Native: the props are asserted in jest; no simulator here, so the owner checks it visually.
   - Pre-existing e2e failure fixed: `selects.spec.ts` clicked "Açık", which since Round 3.1 also matches the Zamanlayıcı sesi switch. It's now scoped to the Tema group.
   - Checks: lint, typecheck, core 375 / mobile 39 / web 198, build, full e2e (69) green.
-- [ ] R2. Background timers: Android channel at max importance, foreground recompute, sound/dev-build docs, "Zamanlayıcı türü" setting.
-- [ ] R3. Android "Telefonun saatinde kur" (opt-in, ACTION_SET_TIMER via expo-intent-launcher, SET_ALARM; cancels that timer's app notification).
-- [ ] R4. iOS AlarmKit local module (`apps/mobile/modules`), gated by `EXPO_PUBLIC_ENABLE_ALARMKIT` (default off, not linked when off), fallback to the notification.
+- [x] R2. Background timers: Android channel at max importance, foreground recompute, sound/dev-build docs, "Zamanlayıcı türü" setting.
+  - Foreground recompute, persistence and reschedule-on-change already existed (3.1). New: channel `timers-alarm` at MAX (the old `timers` is deleted; an app can't raise an existing channel's importance), a device hand-off list (core `nextHandoffs`) so a finish the phone's alarm rings for gets no app notification or in-app ring, and "Zamanlayıcı türü" in Ayarlar only where AlarmKit is available. The sound warning means a native build without the file, documented in docs/MOBILE.md.
+- [x] R3. Android "Telefonun saatinde kur" (opt-in, ACTION_SET_TIMER via expo-intent-launcher, SET_ALARM; cancels that timer's app notification).
+  - `src/alarm/phoneClock.ts`. LENGTH arrives as an `Int` (checked in the launcher's Kotlin). Tested: intent extras, the notification drops, no in-app ring, +1 dk brings the notification back, no-Clock-app error, not on iOS.
+- [x] R4. iOS AlarmKit local module (`apps/mobile/modules`), gated by `EXPO_PUBLIC_ENABLE_ALARMKIT` (default off, not linked when off), fallback to the notification.
+  - `modules/anv-alarmkit` (Swift + podspec), `plugins/withAlarmKit.js` (writes or deletes the untracked `expo-module.config.json`; checked with `expo-modules-autolinking resolve`), `src/alarm/alarmKit.ts`. JS tested against an in-memory module (schedule, +1 dk moves, close cancels, refused → notification, type switch, sound off, flag off, iOS < 26). **The Swift has never been compiled:** no Xcode here. The owner's first flag-on dev build is the test.
+  - Also: expo patch updates (57.0.29 etc.) that expo-doctor asked for, expo-intent-launcher added.
 - [ ] R5. Import: `AI_PROVIDER` (anthropic | gemini | none; unset = today's chain), Instagram tokenless oEmbed as a public/private check, YouTube check, share-sheet intake (mobile), "Ekran görüntüsünden oku" (on-device OCR, mobile).
 - [ ] R6. README: what needs a dev build, env vars, provider costs. Checks green → push.

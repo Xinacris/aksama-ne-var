@@ -1,4 +1,4 @@
 {
-  "ios": { "CFBundleDisplayName": "Akşama ne var?", "CFBundleName": "Akşama ne var?" },
+  "ios": { "CFBundleDisplayName": "Akşama ne var?", "CFBundleName": "Akşama ne var?", "NSAlarmKitUsageDescription": "Pişirme zamanlayıcıların süre dolunca telefonun alarmı gibi çalsın diye; sessiz modda ve kilit ekranında da." },
   "android": { "app_name": "Akşama ne var?" }
 }

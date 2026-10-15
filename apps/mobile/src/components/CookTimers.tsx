@@ -2,6 +2,7 @@ import { Pressable, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import type { CookingTimer, Recipe } from "@anv/core/data/models";
 import { isPaused, remainingSeconds, timerStepLabel, type TimerSlot } from "@anv/core/domain/cooking";
+import { finishKey } from "@anv/core/domain/timerAlarm";
 import { formatCountdown, formatTimerLength } from "@anv/core/domain/durations";
 import { touchTarget } from "@anv/core/design/tokens";
 import { useTheme } from "@/theme";
@@ -24,6 +25,8 @@ export interface TimerActions {
   addMinute: TimerAction;
   restart: TimerAction;
   close: TimerAction;
+  /** Android: hand the timer to the phone's Clock app (absent where there's none). */
+  phoneClock?: TimerAction;
 }
 
 function statusWord(t: (k: string) => string, timer: CookingTimer, left: number): string {
@@ -40,7 +43,7 @@ function spokenTime(t: (k: string, o?: Record<string, unknown>) => string, timer
 }
 
 /** The step's timer buttons; a started one becomes its countdown with pause / +1 dk / close, in place. */
-export function StepTimers({ slots, label, now, actions }: { slots: TimerSlot[]; label: string; now: Date; actions: TimerActions }) {
+export function StepTimers({ slots, label, now, actions, handedOff }: { slots: TimerSlot[]; label: string; now: Date; actions: TimerActions; handedOff: ReadonlySet<string> }) {
   const { t } = useTranslation();
   return (
     <View style={{ gap: 10 }}>
@@ -56,13 +59,13 @@ export function StepTimers({ slots, label, now, actions }: { slots: TimerSlot[];
             />
           );
         }
-        return <InlineTimer key={slot.slot} timer={slot.timer} label={label} now={now} actions={actions} />;
+        return <InlineTimer key={slot.slot} timer={slot.timer} label={label} now={now} actions={actions} onPhoneClock={handedOff.has(finishKey(slot.timer))} />;
       })}
     </View>
   );
 }
 
-function InlineTimer({ timer, label, now, actions }: { timer: CookingTimer; label: string; now: Date; actions: TimerActions }) {
+function InlineTimer({ timer, label, now, actions, onPhoneClock }: { timer: CookingTimer; label: string; now: Date; actions: TimerActions; onPhoneClock: boolean }) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const left = remainingSeconds(timer, now);
@@ -99,8 +102,24 @@ function InlineTimer({ timer, label, now, actions }: { timer: CookingTimer; labe
         <Button title={t("cook.plusMinute")} size="sm" variant="secondary" singleLine style={{ flex: 1 }} accessibilityLabel={t("cook.addMinute", { label })} onPress={() => actions.addMinute(timer.id)} />
         <Button title={t("common.close")} size="sm" variant="secondary" singleLine style={{ flex: 1 }} accessibilityLabel={t("cook.closeTimer", { label })} onPress={() => actions.close(timer.id)} />
       </View>
+      <PhoneClockRow timer={timer} label={label} running={!paused && left > 0} onPhoneClock={onPhoneClock} action={actions.phoneClock} />
     </View>
   );
+}
+
+/** Android only: "Telefonun saatinde kur" while it runs; once handed off, a note that changes don't reach it. */
+function PhoneClockRow({ timer, label, running, onPhoneClock, action }: { timer: CookingTimer; label: string; running: boolean; onPhoneClock: boolean; action?: TimerAction }) {
+  const { t } = useTranslation();
+  if (!action) return null;
+  if (onPhoneClock) {
+    return (
+      <Text variant="meta" numberOfLines={2}>
+        {t("alarm.phoneClockSet")}
+      </Text>
+    );
+  }
+  if (!running) return null;
+  return <Button title={t("alarm.phoneClock")} icon="clock" size="sm" variant="ghost" singleLine accessibilityLabel={t("alarm.phoneClockLabel", { label })} onPress={() => action(timer.id)} />;
 }
 
 /**

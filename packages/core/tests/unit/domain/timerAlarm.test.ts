@@ -9,7 +9,10 @@ import {
   dismissDue,
   dueTimers,
   finishKey,
+  finishUuid,
   initialAlarm,
+  liveFinishKeys,
+  nextHandoffs,
   reconcileSchedule,
   silenceAlarm,
   stepAlarm,
@@ -209,5 +212,45 @@ describe("tone", () => {
     expect(ALARM_TONE_MS).toBeLessThan(2000);
     expect(ALARM_TONE.at(-1)!.freq).toBe(0);
     expect(ALARM_TONE.filter((p) => p.freq).every((p) => p.freq >= 400 && p.freq <= 2000)).toBe(true);
+  });
+});
+
+describe("hand-offs (phone clock, AlarmKit)", () => {
+  const session = (timers: CookingTimer[], phase: "steps" | "done" = "steps") => ({ key: "2026-10-14", phase, timers });
+  it("a finish handed to the phone gets no notification; +1 dk (a new end) takes it back", () => {
+    const a = timer("a", 600);
+    const b = timer("b", 900);
+    expect(alarmSchedule([session([a, b])], START, new Set([finishKey(a)])).map((w) => w.timerId)).toEqual(["b"]);
+    const longer = addTimerTime(a, 60, at(10));
+    expect(alarmSchedule([session([longer, b])], at(10), new Set([finishKey(a)])).map((w) => w.timerId)).toEqual(["a", "b"]);
+  });
+
+  it("live keys leave out closed timers and finished sessions", () => {
+    const a = timer("a", 600);
+    const closed = { ...timer("c", 60), dismissed: true };
+    expect([...liveFinishKeys([session([a, closed]), session([timer("x", 60)], "done")])]).toEqual([finishKey(a)]);
+  });
+
+  it("past finishes stay handed off, future ones follow what the native alarm covers now, closed ones are forgotten", () => {
+    const a = timer("a", 60);
+    const b = timer("b", 600);
+    const c = timer("c", 900);
+    const stored = [finishKey(a), finishKey(b), finishKey(c)];
+    // 2 minutes on: a has finished (its phone alarm rang), b is still covered, c no longer is
+    const later = at(120);
+    expect(nextHandoffs(stored, [session([a, b, c])], later, [finishKey(b)])).toEqual([finishKey(a), finishKey(b)].sort());
+    // closing a forgets it; a paused timer has no future finish to hand off
+    expect(nextHandoffs(stored, [session([{ ...a, dismissed: true }, pauseTimer(b, later), c])], later, [])).toEqual([]);
+    // keys of other timers are ignored
+    expect(nextHandoffs([], [session([b])], later, ["x@2026-10-14T18:30:00.000Z"])).toEqual([]);
+  });
+
+  it("each finish has its own stable UUID", () => {
+    const a = timer("a", 600);
+    const u = finishUuid(finishKey(a));
+    expect(u).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-8[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+    expect(finishUuid(finishKey(a))).toBe(u);
+    expect(finishUuid(finishKey(addTimerTime(a, 60, START)))).not.toBe(u);
+    expect(finishUuid(finishKey(timer("b", 600)))).not.toBe(u);
   });
 });

@@ -52,6 +52,9 @@ jest.mock("expo-audio", () => {
   return { __player: player, createAudioPlayer: jest.fn(() => player), setAudioModeAsync: jest.fn(() => Promise.resolve()) };
 });
 
+// expo-intent-launcher: records the intents (Android "Telefonun saatinde kur").
+jest.mock("expo-intent-launcher", () => ({ startActivityAsync: jest.fn(async () => ({ resultCode: 0 })) }));
+
 // expo-notifications: an in-memory schedule; permission is granted unless a test changes `__state`.
 jest.mock("expo-notifications", () => {
   const state = { granted: true, canAskAgain: true, scheduled: [] as { identifier: string; content: unknown; trigger: unknown }[], last: null as unknown };
@@ -67,6 +70,7 @@ jest.mock("expo-notifications", () => {
     getPermissionsAsync: jest.fn(async () => perm()),
     requestPermissionsAsync: jest.fn(async () => perm()),
     setNotificationChannelAsync: jest.fn(async () => null),
+    deleteNotificationChannelAsync: jest.fn(async () => {}),
     setNotificationHandler: jest.fn(),
     getAllScheduledNotificationsAsync: jest.fn(async () => state.scheduled.map((s) => ({ ...s }))),
     scheduleNotificationAsync: jest.fn(async (req: { identifier: string; content: unknown; trigger: unknown }) => {
