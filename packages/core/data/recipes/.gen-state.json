@@ -86,11 +86,11 @@
     "ovmac-corbasi",
     "un-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:33:13.239Z",
    "finishedAt": null
   },
   {
@@ -656,12 +656,23 @@
     "karides-guvec",
     "firinda-mantar"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "cig-borek",
+    "puf-boregi",
+    "muska-boregi",
+    "kumpir",
+    "arnavut-cigeri",
+    "midye-dolma",
+    "midye-tava",
+    "kalamar-tava",
+    "karides-guvec",
+    "firinda-mantar"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 95227,
    "startedAt": "2026-10-15T19:30:22.851Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:33:52.683Z"
   },
   {
    "id": "g027",
