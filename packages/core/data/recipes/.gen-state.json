@@ -1620,12 +1620,23 @@
     "kayseri-mantisi",
     "tatar-boregi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kasarli-pide",
+    "kusbasili-pide",
+    "sucuklu-pide",
+    "karisik-pide",
+    "yumurtali-pide",
+    "lahmacun",
+    "etli-ekmek",
+    "bafra-pidesi",
+    "kayseri-mantisi",
+    "tatar-boregi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 84384,
    "startedAt": "2026-10-15T22:32:12.458Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:34:44.427Z"
   },
   {
    "id": "g051",
@@ -2181,11 +2192,11 @@
     "kremali-somon-tagliatelle",
     "firinda-kuzu-italyan-usulu"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:33:33.848Z",
    "finishedAt": null
   },
   {
