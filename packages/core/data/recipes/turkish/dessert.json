@@ -8335,5 +8335,1865 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "2275764b-3a32-4e24-a7ef-9fb1b4d7e628",
+  "slug": "laz-boregi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Laz böreği",
+   "en": "Laz böreği (custard filo pie)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz'in Laz mutfağından, yufkaların tereyağıyla kat kat dizilip sütlü muhallebiyle fırınlandığı bir tatlı. Üstü kıtır, içi yumuşak kalır.",
+   "en": "A Black Sea dessert from the Laz kitchen: buttered yufka sheets layered with a thick milk custard and baked until the top is crisp and the middle stays soft."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 10,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 800,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağının yarısını küçük bir tencerede eritip unu ekleyerek 2 dakika kavur.",
+     "en": "Melt half the butter in a small pan, add the flour and cook for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Sütü azar azar ekleyip topak kalmayana kadar sürekli çırpa çırpa karıştır.",
+     "en": "Add the milk little by little, whisking constantly until there are no lumps."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şekeri ve vanilyayı ekleyip kısık ateşte 8 dakika karıştırarak koyulaştır.",
+     "en": "Stir in the sugar and vanilla and thicken over a low heat for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Muhallebiyi ocaktan alıp biraz soğut, çırpılmış yumurtaları yavaşça karıştır.",
+     "en": "Take the custard off the heat, let it cool a little, then slowly stir in the beaten eggs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Tepsinin tabanını ve kenarlarını yağla, yufkaların yarısını eritilmiş tereyağıyla fırçalayarak teker teker diz.",
+     "en": "Heat the oven to 180 C. Grease the tin, then lay half the yufka sheets one by one, brushing each with melted butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Muhallebinin yarısını yufkaların üzerine yay, kalan yufkaları da yağlayarak kat kat dizip kalan muhallebiyi dök ve 35 dakika pişir.",
+     "en": "Spread half the custard over the sheets, layer the remaining buttered sheets on top, pour over the rest of the custard and bake for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan böreği 15 dakika dinlendir, ardından dilimleyip ılık servis et.",
+     "en": "Rest the börek out of the oven for 15 minutes, then cut into slices and serve warm."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d46c0947-37b5-40aa-88d1-84c08c50fec9",
+  "slug": "hasuda",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Hasuda",
+   "en": "Hasuda (grape molasses pudding)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karadeniz'de yapılan, kavrulmuş un ve tereyağının üzüm pekmeziyle pişirildiği koyu kıvamlı bir muhallebi. Üzerine ceviz serpilerek servis edilir.",
+   "en": "A dark, spoon-thick pudding from the Black Sea coast, made by cooking roasted flour and butter with grape molasses. It is finished with walnuts."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 17,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Üzüm pekmezi",
+     "en": "Grape molasses"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pekmez",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını geniş bir tencerede eritip unu ekle ve 5 dakika sürekli karıştırarak kavur.",
+     "en": "Melt the butter in a wide pan, add the flour and cook for 5 minutes, stirring all the time."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pekmezi suyla ayrı bir tencerede karıştırıp kaynatın.",
+     "en": "In a separate pan, stir the molasses into the water and bring it to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pekmezli suyu unlu tereyağına azar azar ekleyip çırpma teliyle topak kalmayana kadar karıştır.",
+     "en": "Add the molasses water to the buttery flour a little at a time, whisking until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tuzu ekleyip kısık ateşte 12 dakika, kıvamı tutana kadar pişir.",
+     "en": "Add a pinch of salt and cook over a low heat for 12 minutes, until it holds its shape."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Hasudayı kaselere paylaştırıp ceviz içlerini serp, 10 dakika dinlendir ve ılık servis et.",
+     "en": "Divide the hasuda between bowls, scatter the walnuts over, rest for 10 minutes and serve warm."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Tencere",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "bda03c5f-3f3c-4792-955c-d604683d198c",
+  "slug": "pekmezli-irmik-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "İç Anadolu",
+  "title": {
+   "tr": "Pekmezli irmik tatlısı",
+   "en": "Semolina pudding with pekmez"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağında kavrulan irmiğin sütle pişirildiği, pekmezle servis edilen sade bir tatlı. Pekmezin ekşimsi tadı yumuşak irmiği dengeler.",
+   "en": "A simple Anatolian semolina dessert: semolina toasted in butter, cooked with milk and served with grape molasses, whose tangy sweetness balances the soft, creamy pudding."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 15,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Fine semolina"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 750,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pekmez",
+     "en": "Grape molasses"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "pekmez",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını orta boy tencerede eritip irmiği ekle, sık sık karıştırarak 5 dakika kavur.",
+     "en": "Melt the butter in a medium pan, add the semolina and toast it for 5 minutes, stirring often."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sütü azar azar ekleyip topak kalmaması için sürekli karıştır.",
+     "en": "Add the milk gradually, stirring constantly so no lumps form."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şekeri ekleyip kısık ateşte 10 dakika, kıvam alana kadar pişir.",
+     "en": "Stir in the sugar and cook over a low heat for 10 minutes, until thick."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp kapağını kapatarak 5 dakika dinlendir.",
+     "en": "Take off the heat, cover, and rest for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kaselere paylaştır, pekmezi gezdirip cevizleri ve tarçını serp, ılık servis et.",
+     "en": "Spoon into bowls, drizzle over the pekmez, scatter the walnuts and cinnamon, and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Tencere",
+   "Vejetaryen",
+   "Sütlü",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c437c59f-b159-4969-9a0f-a3b68b5d7ae8",
+  "slug": "visneli-ekmek-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Vişneli ekmek tatlısı",
+   "en": "Sour cherry bread pudding"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bayat ekmeğin tereyağında kurutulup ekşi vişne şerbetiyle ıslatıldığı eski bir ev tatlısı. Kaymakla servis edildiğinde vişnenin ekşiliği yumuşar.",
+   "en": "An old home dessert in which dried bread cubes soak up a tart sour cherry syrup. Served with kaymak, the sharpness of the cherries softens nicely."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vişne",
+     "en": "Sour cherries"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdekleri ayrılmış",
+     "en": "stoned"
+    },
+    "pantryKey": "sour-cherry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaymak",
+     "en": "Clotted cream"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "kaymak",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Ekmek küplerini tereyağıyla karıştırıp tepsiye yay ve 10 dakika kurut.",
+     "en": "Heat the oven to 180 C. Toss the bread cubes with the butter, spread them on a tray and dry them for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Şekeri ve suyu tencerede kaynatıp vişneleri ekle, 10 dakika pişir.",
+     "en": "Bring the sugar and water to the boil in a pan, add the cherries and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Nişastayı biraz soğuk suda eritip vişneli şerbete ekle, koyulaşınca ocaktan al.",
+     "en": "Dissolve the cornflour in a little cold water, stir it into the cherry syrup and take off the heat once it thickens."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kurutulmuş ekmeklerin üzerine sıcak şerbeti dök ve 20 dakika dinlendir.",
+     "en": "Pour the hot cherry syrup over the dried bread and let it rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Kaymakla birlikte ılık ya da oda sıcaklığında servis et.",
+     "en": "Serve warm or at room temperature with the kaymak."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Şerbetli",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "4bed506a-d4ea-4190-b421-98013f39887e",
+  "slug": "gul-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Gül tatlısı",
+   "en": "Gül tatlısı (rose-shaped cakes in syrup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Gül şeklindeki kalıplarda pişen yumuşak irmikli kekler, pişince sıcak haliyle limonlu şerbete bırakılır. Şerbet hamurun içine kadar işler.",
+   "en": "Soft semolina cakes baked in rose-shaped moulds, then soaked in a lemony sugar syrup while still warm so the syrup reaches the centre."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 35,
+  "waitMinutes": 40,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Fine semolina"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "hamur için",
+     "en": "for the batter"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kesme şeker",
+     "en": "Sugar cubes"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar-cubes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurta ve toz şekeri 3 dakika çırp, yağlı ve kabarık bir karışım elde et.",
+     "en": "Whisk the eggs and sugar for 3 minutes until pale and fluffy."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Yoğurt ve sıvı yağı ekleyip karıştır; irmik, un ve kabartma tozunu ekleyerek 10 dakika dinlendir.",
+     "en": "Stir in the yoghurt and oil, then the semolina, flour and baking powder, and rest the batter for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yağladığın gül şeklindeki silikon kalıplara hamuru doldur.",
+     "en": "Fill greased rose-shaped silicone moulds with the batter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıtıp kalıpları 25 dakika pişir.",
+     "en": "Heat the oven to 180 C and bake the moulds for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Kesme şeker ve suyu kaynatıp 10 dakika pişir, limon suyunu ekleyip soğumaya bırak.",
+     "en": "Boil the sugar cubes with the water for 10 minutes, add the lemon juice and let the syrup cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Pişen tatlıları sıcakken soğuk şerbete daldır ve 30 dakika beklet.",
+     "en": "Dip the hot cakes into the cold syrup and leave them to soak for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında ya da soğuk olarak servis et.",
+     "en": "Serve at room temperature or chilled."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Şerbetli",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "84c618e9-d584-4cdf-9f88-24bd84c7f6af",
+  "slug": "kemalpasa-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Marmara",
+  "title": {
+   "tr": "Kemalpaşa tatlısı",
+   "en": "Kemalpaşa (cheese dumplings in syrup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Peynirli hamurdan yapılan küçük topların kızartılıp limonlu şerbete bırakıldığı bir tatlı. Dış kısmı çıtır, içi peynirli ve yumuşaktır.",
+   "en": "Small cheese dough balls, fried until golden and then soaked in lemon syrup. They are crisp outside and soft and cheesy inside."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
+  "waitMinutes": 20,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Lor peyniri",
+     "en": "Lor cheese"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "well drained"
+    },
+    "pantryKey": "lor-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ayçiçek yağı",
+     "en": "Sunflower oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "sunflower-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kesme şeker",
+     "en": "Sugar cubes"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar-cubes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Lor peynirini, yumurtayı ve tuzu çatalla ezip iyice karıştır.",
+     "en": "Mash the lor cheese, egg and salt together with a fork until well mixed."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu ve kabartma tozunu ekleyip 5 dakika yoğur, yumuşak ama yapışmayan bir hamur elde et.",
+     "en": "Add the flour and baking powder and knead for 5 minutes until you have a soft dough that does not stick."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru ceviz büyüklüğünde parçalara ayırıp avuçlarında yuvarla.",
+     "en": "Divide the dough into walnut-sized pieces and roll them into balls between your palms."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kesme şeker, su ve limon suyunu kaynatıp 10 dakika pişir, şerbeti ılık tut.",
+     "en": "Boil the sugar cubes, water and lemon juice together for 10 minutes, then keep the syrup warm."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada yağı kızdır, topları her yüzü altın rengi olana kadar kızart.",
+     "en": "Heat the oil in a wide pan and fry the balls, turning them, until golden on all sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kızarmış topları ılık şerbete al, 20 dakika beklet ve servis et.",
+     "en": "Lift the fried balls into the warm syrup, leave them to soak for 20 minutes and serve."
+    },
+    "timerSeconds": 1200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Şerbetli",
+   "Hamur işi",
+   "Kızartma"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6ad4fbb9-3a6f-404e-9cf8-715af593356f",
+  "slug": "sutlu-nuriye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Sütlü nuriye",
+   "en": "Sütlü nuriye (milk-syrup baklava)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağlı yufka katlarının cevizle arası doldurulup fırınlandıktan sonra sütlü şerbetle ıslatıldığı bir hamur tatlısı. Baklavaya göre daha yumuşak ve hafiftir.",
+   "en": "A layered pastry of buttered baklava sheets with walnuts, baked until golden and then soaked in a milk-thickened syrup. It is softer and lighter than classic baklava."
+  },
+  "servings": 8,
+  "prepMinutes": 30,
+  "cookMinutes": 40,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Baklavalık yufka",
+     "en": "Baklava pastry sheets"
+    },
+    "amount": 12,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "baklava-yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 750,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt ve tepsiyi yağla.",
+     "en": "Heat the oven to 180 C and grease the tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yufkaları tek tek eritilmiş tereyağıyla fırçalayarak tepsiye diz; her üç katın arasına ceviz serp.",
+     "en": "Lay the sheets in the tray one by one, brushing each with melted butter, and scatter walnuts between every third layer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan yufkaları da aynı şekilde ekleyip üstünü bol tereyağıyla yağla, tatlıyı dilimleri kesin.",
+     "en": "Add the remaining sheets in the same way, brush the top generously with butter, and cut the pastry into portions."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 30 dakika altın rengi olana kadar pişir.",
+     "en": "Bake for 30 minutes until golden."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Sütü, şekeri ve nişastayı tencerede karıştırıp kısık ateşte 10 dakika pişir, vanilyayı ekle.",
+     "en": "Stir the milk, sugar and cornflour in a pan, cook over a low heat for 10 minutes and add the vanilla."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan tatlının üzerine ılık şerbeti dök ve 60 dakika dinlendir.",
+     "en": "Pour the warm syrup over the hot pastry and let it rest for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Antep fıstığını serpip dilimleri ayırarak servis et.",
+     "en": "Scatter over the pistachios, cut through the portions and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü",
+   "Şerbetli",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d3807ac6-4067-4c3d-8fca-70171e738141",
+  "slug": "kadayif-dolmasi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Kadayıf dolması",
+   "en": "Kadayıf dolması (walnut-filled kadayıf rolls)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tel kadayıfın içine ceviz konarak sarıldığı, fırınlanıp soğuk şerbetle ıslatılan geleneksel bir tatlı. Kıtır dış yüzey cevizli içle buluşur.",
+   "en": "A traditional dessert in which shredded kadayıf is wrapped around a walnut filling, baked, then soaked in cold syrup. The crisp outside meets the nutty centre."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tel kadayıf",
+     "en": "Shredded kadayıf pastry"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "kadayif",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ince kırılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "cevize karıştırmak için",
+     "en": "to mix into the walnuts"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Şeker, su ve limon suyunu kaynatıp 10 dakika pişir, soğumaya bırak.",
+     "en": "Boil the sugar, water and lemon juice for 10 minutes, then leave the syrup to cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Cevizleri tarçınla karıştır.",
+     "en": "Mix the walnuts with the cinnamon."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tel kadayıfı avuçlarınla ufalayıp eritilmiş tereyağının yarısıyla iyice karıştır.",
+     "en": "Loosen the kadayıf with your hands and toss it well with half the melted butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kadayıftan bir avuç alıp yassılaştır, ortasına ceviz koyarak sarıp dolma şeklini ver ve tepsiye diz.",
+     "en": "Take a handful of kadayıf, flatten it, put a spoonful of walnuts in the middle, roll it into a fat parcel and place it in the tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağını dolmaların üzerine gezdir ve 180 derecede 25 dakika altın rengi olana kadar pişir.",
+     "en": "Drizzle the remaining butter over the rolls and bake at 180 C for 25 minutes, until golden."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan dolmaların üzerine soğuk şerbeti dök ve 30 dakika beklet.",
+     "en": "Spoon the cold syrup over the hot rolls and leave them to soak for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında ya da soğuk olarak servis et.",
+     "en": "Serve at room temperature or cold."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Şerbetli",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cbb19b0d-de0e-44d6-848c-7987b79813b2",
+  "slug": "firin-irmik-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Fırın irmik tatlısı",
+   "en": "Baked semolina pudding"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağında kavrulan irmiğin yoğurt ve sütle karıştırılıp fırınlandığı, ardından şerbetle ıslatılan sade bir tatlı. Kabuğu hafif çıtır, içi yumuşaktır.",
+   "en": "Semolina toasted in butter, mixed with yoghurt and milk, baked until golden and then soaked in a light syrup. The top stays slightly crisp and the middle soft."
+  },
+  "servings": 8,
+  "prepMinutes": 15,
+  "cookMinutes": 45,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Şeker ve suyu tencerede kaynatıp 10 dakika pişir, soğumaya bırak.",
+     "en": "Boil the sugar and water for 10 minutes, then leave the syrup to cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Eritilmiş tereyağını irmikle karıştırıp orta ateşte 5 dakika kavur.",
+     "en": "Stir the melted butter into the semolina and toast over a medium heat for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp yoğurt, sütü ve kabartma tozunu ekleyerek pürüzsüz bir hamur yap.",
+     "en": "Take the pan off the heat and stir in the yoghurt, milk and baking powder to make a smooth batter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağlı tepsiye yay, cevizleri serp ve 180 derece fırında 30 dakika pişir.",
+     "en": "Spread the batter in a greased tin, scatter the walnuts over and bake at 180 C for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Sıcak tatlının üzerine soğumuş şerbeti dök ve 60 dakika dinlendir.",
+     "en": "Pour the cooled syrup over the hot pudding and let it rest for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip servis et.",
+     "en": "Cut into portions and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Şerbetli",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "388ed59a-17d9-43a3-befa-845769d15b9a",
+  "slug": "irmikli-portakal-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "İrmikli portakal tatlısı",
+   "en": "Orange semolina cake"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yoğurtlu ve irmikli, portakal aromalı nemli bir kek tatlısı; kesme şekerden hazırlanan şerbetle ıslatılır. Portakalın kabuğu ve suyu hamura ferah bir tat katar.",
+   "en": "A moist semolina cake with yoghurt and orange, soaked in a light sugar syrup. Orange zest and juice give the crumb a fresh, bright flavour."
+  },
+  "servings": 8,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Portakal",
+     "en": "Orange"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendesi ve suyu",
+     "en": "zest and juice"
+    },
+    "pantryKey": "orange",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kesme şeker",
+     "en": "Sugar cubes"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "sugar-cubes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt ve kare kalıbı yağla.",
+     "en": "Heat the oven to 180 C and grease a square tin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta ve toz şekeri 3 dakika çırp, yağlı ve kabarık bir karışım elde et.",
+     "en": "Whisk the eggs and sugar for 3 minutes until pale and fluffy."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Yoğurt, sıvı yağ, portakalın rendesini ve suyunu ekleyip karıştır.",
+     "en": "Stir in the yoghurt, oil, orange zest and juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "İrmik, un ve kabartma tozunu ekleyip topaksız bir hamur elde et, kalıba dök.",
+     "en": "Fold in the semolina, flour and baking powder until smooth, then pour into the tin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 35 dakika pişir; üstü altın rengi olunca fırından çıkar.",
+     "en": "Bake for 35 minutes, until the top is golden, then take it out of the oven."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Kesme şekeri suyla ve limon suyuyla 5 dakika kaynat, şerbeti hazırla.",
+     "en": "Boil the sugar cubes with the water and lemon juice for 5 minutes to make the syrup."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pişen keki sıcakken şerbetle ıslat, 30 dakika dinlendirip dilimle.",
+     "en": "Pour the syrup over the hot cake, let it rest for 30 minutes, then cut into slices."
+    },
+    "timerSeconds": 1800
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Şerbetli",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
