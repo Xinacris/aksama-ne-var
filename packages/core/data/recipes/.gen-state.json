@@ -1586,12 +1586,23 @@
     "balik-kofte",
     "kiymali-pide"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "terbiyeli-kofte",
+    "arpacik-soganli-kofte",
+    "patatesli-kofte",
+    "bezelyeli-kofte",
+    "firinda-sebzeli-kofte",
+    "yumurtali-kofte",
+    "kuru-kofte",
+    "tavuk-kofte",
+    "balik-kofte",
+    "kiymali-pide"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 96021,
    "startedAt": "2026-10-15T22:28:54.486Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:32:11.111Z"
   },
   {
    "id": "g050",
@@ -2295,11 +2306,11 @@
     "arroz-con-pollo",
     "dana-estofado"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:31:58.204Z",
    "finishedAt": null
   },
   {
