@@ -19942,5 +19942,2214 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "d90101d9-608e-432a-ab1b-4df366b76495",
+  "slug": "etli-durum",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Etli dürüm",
+   "en": "Beef dürüm wrap"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce şeritlenmiş dana eti, soğan ve biberle hazırlanıp lavaşa sarılan pratik bir öğün. Eti yüksek ateşte kavurmak suyunu salmasını önler.",
+   "en": "Thin strips of beef seared hot with onion and peppers, then rolled up in warm lavash. Searing hot keeps the meat juicy rather than stewed."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 12,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana bonfile",
+     "en": "Beef sirloin"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "ince şeritler halinde",
+     "en": "cut into thin strips"
+    },
+    "pantryKey": "beef-steak",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka",
+     "en": "thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kesilmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıvırcık",
+     "en": "Curly lettuce"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yıkanıp süzülmüş",
+     "en": "washed and drained"
+    },
+    "pantryKey": "curly-lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Lavaş",
+     "en": "Lavash"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "lavash",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Dana bonfileyi ince şeritler halinde kes. Kırmızı soğanı ince halka, biberi ince kesip domatesi küp doğra.",
+     "en": "Cut the beef sirloin into thin strips. Slice the red onion into rings, thinly slice the peppers and dice the tomato."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Eti bir kasede zeytinyağı, tuz, karabiber, pul biber ve kimyonla karıştır.",
+     "en": "Toss the beef in a bowl with the olive oil, salt, black pepper, chilli flakes and cumin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavayı iyice kızdır, eti partiler halinde 4 dakika yüksek ateşte kavur. Suyunu çekip rengi tutunca kenara al.",
+     "en": "Heat a wide pan until very hot and sear the beef in batches over high heat for 4 minutes. Once the juices have evaporated and the meat browns, set it aside."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Aynı tavada soğanı ve biberi 3 dakika soteleyip eti geri ekle, domatesi de ilave edip bir kez karıştır.",
+     "en": "In the same pan, soften the onion and peppers for 3 minutes, return the beef and add the tomato, stirring once."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Lavaşları kuru tavada iki yüzünü hafifçe ısıtıp yumuşat.",
+     "en": "Warm the lavash in a dry pan on both sides until soft and pliable."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Lavaşın ortasına etli harcı ve kıvırcığı koyup sıkıca sar. Kağıda sarıp sıcak servis et.",
+     "en": "Spoon the beef mixture and lettuce into the middle of each lavash, roll tightly and serve hot, wrapped in paper."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Etli",
+   "Tavada",
+   "Hızlı",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d96b2759-d552-469d-b598-8c79b49edb5b",
+  "slug": "cokertme-kebabi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Ege",
+  "title": {
+   "tr": "Çökertme kebabı",
+   "en": "Çökertme kebab (beef on straw potatoes)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ege'nin klasik etli yemeklerinden; kızarmış patateslerin üzerine sebzeli dana eti ve domates sosu konarak servis edilir. Patatesi ayrıca kızartmak çıtır kalmasını sağlar.",
+   "en": "An Aegean classic: beef cooked with peppers and tomato, served over crisp fried potatoes. The potatoes are fried separately so they stay crisp under the sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kuşbaşı",
+     "en": "Diced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kalın kuşbaşı",
+     "en": "cut into thick cubes"
+    },
+    "pantryKey": "diced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "uzun çubuk şeklinde dilimlenmiş",
+     "en": "cut into long sticks"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green pepper"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halinde",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "patates kızartmak için",
+     "en": "for frying the potatoes"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri soyup uzun çubuklar halinde kes, suda bekletip iyice kurula.",
+     "en": "Peel the potatoes, cut them into long sticks, leave them in water briefly and dry them well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıvı yağı kızdırıp patatesleri altın sarısı olana kadar kızart. Süzgece alıp tuzla.",
+     "en": "Heat the oil and fry the potatoes until golden. Lift them onto a sieve and salt them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını geniş tavada eritip dana etini tuz ve karabiberle partiler halinde renk alana kadar kavur.",
+     "en": "Melt the butter in a wide pan and brown the beef in batches, seasoning with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğan ve sarımsağı ekleyip 4 dakika soteleyin.",
+     "en": "Add the onion and garlic and cook for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Biberi halka, domatesi küp doğrayıp tavaya ekle. Kekiği serpip kısık ateşte 15 dakika pişir.",
+     "en": "Add the sliced peppers and diced tomatoes, sprinkle over the thyme and simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kızarmış patatesleri servis tabağına yay, üzerine sıcak etli sosu gezdirerek servis et.",
+     "en": "Spread the fried potatoes on a serving plate, spoon the hot beef and sauce over them and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "96c0daca-330f-4b7b-8222-148cc78080b5",
+  "slug": "tavuk-sinitzel",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk şinitzel",
+   "en": "Chicken schnitzel"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce açılmış tavuk göğsünün galeta unuyla kızartılmış hali; çıtır kabuğu ve yumuşak içiyle çocukların da sevdiği bir ana yemek. Yağın iyice ısınması kabuğun yağ çekmesini önler.",
+   "en": "Thin chicken breast coated in breadcrumbs and fried until crisp, with a tender centre that children tend to love. A properly hot pan keeps the coating from soaking up oil."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 12,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "yatay ikiye ayrılmış",
+     "en": "butterflied in half"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for shallow frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "Rocket"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk göğsünü yatay ikiye ayır, streç filmin arasında oklavayla yaklaşık yarım santimetre kalınlığa incelt. Tuz ve karabiberle tatlandır.",
+     "en": "Split the chicken breasts in half horizontally, then beat them between cling film with a rolling pin to about half a centimetre thick. Season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üç derin tabak hazırla: birinde un, birinde çırpılmış yumurta, birinde galeta unu olsun. Eti sırasıyla una, yumurtaya ve galeta ununa bula.",
+     "en": "Set out three shallow dishes with flour, beaten egg and breadcrumbs. Dredge each piece in flour, then egg, then breadcrumbs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaplanmış etleri tabakta kapağı açık 10 dakika dinlendir ki galeta unu tutunsun.",
+     "en": "Rest the coated pieces uncovered on a plate for 10 minutes so the breadcrumbs set."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yağı orta-yüksek ateşte ısıt, eti ekleyip bir yüzünü 3 dakika kızart, çevirip diğer yüzünü de kızart.",
+     "en": "Heat the oil over medium-high heat, add the chicken and fry one side for 3 minutes, then turn and fry the other side until golden."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kızaran etleri kağıt havlu serili tabağa al, fazla yağı alsın.",
+     "en": "Lift the schnitzels onto a plate lined with kitchen paper to drain off excess oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limonu dilimleyip rokayla birlikte servis et.",
+     "en": "Serve with lemon wedges and rocket on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Kızartma",
+   "kidFriendly",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "fc14ecd8-947c-41c9-8edd-578f4fd4dec6",
+  "slug": "tavuk-gogsu-izgara",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk göğsü ızgara",
+   "en": "Grilled chicken breast"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Limon, sarımsak ve kekikli zeytinyağı marinesinde bekletilen tavuk göğsü ızgarada hızlıca pişer. İki saat marine edilmesi eti kuru bırakmadan lezzetlendirir.",
+   "en": "Chicken breast marinated in lemon, garlic and oregano oil, then grilled quickly. Two hours in the marinade seasons the meat through without drying it out."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "yaklaşık 3 adet, yatay ikiye bölünmüş",
+     "en": "about 3 breasts, split in half horizontally"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kurutulmuş kekik",
+     "en": "Dried oregano"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "oregano",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çeri domates",
+     "en": "Cherry tomatoes"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "servis için, ikiye bölünmüş",
+     "en": "to serve, halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "Rocket"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sarımsağı ezip zeytinyağı, limon suyu, kurutulmuş kekik, toz kırmızı biber, tuz ve karabiberle karıştır.",
+     "en": "Crush the garlic and mix it with the olive oil, lemon juice, dried oregano, paprika, salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuk göğsünü marinadın içine koy, iyice bulaştırıp buzdolabında 2 saat beklet.",
+     "en": "Coat the chicken in the marinade and leave it in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Izgarayı orta-yüksek ateşte ısıt, tavukları ızgaraya diz ve her yüzünü 6 dakika pişir.",
+     "en": "Heat the grill to medium-high, lay the chicken on it and cook each side for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Pişen tavukları folyoya sarmadan 5 dakika dinlendir.",
+     "en": "Rest the cooked chicken uncovered for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tavukları dilimleyip roka, çeri domates ve limon dilimleriyle servis et.",
+     "en": "Slice the chicken and serve with rocket, cherry tomatoes and lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Tavuğu sabah marine edip buzdolabında bekletebilirsin.",
+     "en": "You can marinate the chicken in the morning and leave it in the fridge."
+    },
+    "when": "morning"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Tavuklu",
+   "Marine",
+   "Hafif",
+   "makeAhead",
+   "glutenFree",
+   "dairyFree",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b46e8349-8aeb-403a-abe2-068fbe16c90a",
+  "slug": "tavuk-sarma",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk sarma",
+   "en": "Stuffed rolled chicken breast"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Açılmış tavuk göğsünün içine ıspanak ve kaşar koyularak sarılıp fırında pişirilen bir ana yemek. Dilimlenince yeşil iç harcı görünür ve sos tavuğun suyuyla hafif kalır.",
+   "en": "Flattened chicken breast rolled around a spinach and kasar filling, then baked with tomato and stock. Sliced, it shows the green filling and the juices stay light."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "2 büyük göğüs",
+     "en": "2 large breasts"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "washed"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kasar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kurutulmuş kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk göğsünü yatay ikiye ayır, streç film arasında oklavayla yassılaştır. Tuz ve karabiberle tatlandır.",
+     "en": "Split the chicken breasts horizontally and flatten them between cling film with a rolling pin. Season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ispanağı ince doğra. Tereyağında soğan ve sarımsağı soteleyip ıspanağı ekle, 3 dakika çevirerek soldur.",
+     "en": "Chop the spinach finely. Soften the onion and garlic in the butter, add the spinach and toss for 3 minutes until wilted."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Ispanağın suyu çekilince kaşarı rendele, kekikle birlikte karıştırıp iç harcı hazırla.",
+     "en": "Once the spinach has released its water, stir in the grated kasar and thyme to make the filling."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuk göğsünün üzerine harcı yay, sıkıca sar ve kürdan ya da mutfak ipiyle bağla.",
+     "en": "Spread the filling over each flattened breast, roll tightly and secure with toothpicks or kitchen string."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırın tepsisine diz, üzerine doğranmış domatesi ve tavuk suyunu ekle. 200 derece fırında 25 dakika pişir.",
+     "en": "Place the rolls in a baking dish, add the diced tomato and chicken stock, and bake at 200 degrees for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan sarmaların iplerini al, 5 dakika dinlendirip dilimleyerek servis et.",
+     "en": "Remove the string, rest the rolls for 5 minutes, then slice and serve."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Fırında",
+   "guest"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c31d4332-25c8-4704-9eaa-3b7469a9f847",
+  "slug": "tavuklu-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuklu pide",
+   "en": "Chicken pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mayalı pide hamurunun üzerine baharatlı tavuk harcı ve kaşar konup fırında pişirilen bir hamur işi. Hamurun uzun süre kabarması pidenin yumuşak olmasını sağlar.",
+   "en": "A yeasted pide dough topped with a spiced chicken and kasar filling and baked until golden. A long rise keeps the base soft and light."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 30,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": {
+     "tr": "yaklaşık 7 g",
+     "en": "about 7 g"
+    },
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kasar cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "sarısı için çırpılmış",
+     "en": "beaten, for brushing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, mayayı, şekeri ve tuzu karıştır; ılık suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast, sugar and salt, add the lukewarm water and olive oil, and knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru üzerini örterek 1 saat ılık bir yerde kabarmaya bırak.",
+     "en": "Cover the dough and leave it in a warm place for 1 hour to rise."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Tereyağını tavada eritip soğanı soteleyerek ekle, tavuğu 8 dakika kavur. Pul biber, tuz ve karabiberle tatlandırıp soğutmaya bırak.",
+     "en": "Melt the butter in a pan, soften the onion, then add the chicken and cook for 8 minutes. Season with chilli flakes, salt and black pepper, and let it cool."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 eşit parçaya böl, her birini 1 cm kalınlıkta uzunca oval kayık şeklinde aç. Ortasına tavuk harcı ve rendelenmiş kaşarı yerleştir.",
+     "en": "Divide the dough into 4 equal pieces and roll each into a 1 cm thick oval boat shape. Spread the chicken filling and grated kasar down the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarlarını kıvırıp üst kısmı açık bırak, çırpılmış yumurtayla kenarlarına sür.",
+     "en": "Fold the sides inward, leaving the top open, and brush the edges with beaten egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "220 derece fırında 12 dakika pişir, çıkınca tereyağı gezdirip hemen servis et.",
+     "en": "Bake at 220 degrees for 12 minutes, then brush with butter straight from the oven and serve at once."
+    },
+    "timerSeconds": 720
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Hamur işi",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "815a9dd1-f944-47e2-ab35-60cba6d81918",
+  "slug": "tavuklu-borek",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuklu börek",
+   "en": "Chicken börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış tavuk göğsü, soğan ve beyaz peynirle hazırlanan, yufka katları arasında sütlü yumurtayla fırınlanan bir tepsi böreği. Her yufkaya ince tereyağı sürmek hamuru çıtır yapar.",
+   "en": "A tray börek of shredded boiled chicken, onion and white cheese, layered in buttered yufka and baked in a milk and egg custard. Brushing each sheet with butter keeps the layers crisp."
+  },
+  "servings": 6,
+  "prepMinutes": 35,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "haşlanmış ve lifine göre ayrılmış",
+     "en": "boiled and shredded along the grain"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk göğsünü tuzlu suda 20 dakika haşla, soğuyunca lifine göre parçala.",
+     "en": "Simmer the chicken breast in salted water for 20 minutes, then let it cool and shred it along the grain."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğrayıp tereyağında 5 dakika soteleyin. Tavuğu ekleyip tuz ve karabiberle tatlandır, soğutmaya bırak.",
+     "en": "Chop the onion finely, soften it in butter for 5 minutes, then add the chicken, season with salt and black pepper and let it cool."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Beyaz peyniri ufalayıp tavuk harcına karıştır.",
+     "en": "Crumble the white cheese into the chicken filling and mix well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü ve yumurtaları çırpıp bir kenara koy. Kalan tereyağını eritip ayır.",
+     "en": "Whisk the milk and eggs together and set aside. Keep the melted butter nearby."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırın kabının dibine bir yufka serip fırça ile tereyağı sür. Bu şekilde 4 yaprak yufkayı üst üste kat.",
+     "en": "Lay a yufka sheet in the base of the dish, brush it with butter, and layer 4 sheets this way."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Katların üzerine tavuk harcını yay, kalan yufkaları aynı şekilde tereyağlayarak üst üste kat ve sütlü yumurtayı dök.",
+     "en": "Spread the chicken filling over the layers, continue with the remaining sheets brushed with butter, then pour over the milk and egg mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "200 derece fırında 35 dakika pişir.",
+     "en": "Bake at 200 degrees for 35 minutes."
+    },
+    "timerSeconds": 2100
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Hamur işi",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8a6cd198-7f1a-47d5-9777-edd5b0ac5ce2",
+  "slug": "mantar-dolmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Mantar dolması",
+   "en": "Stuffed mushrooms"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze mantar şapkaları, galeta unu ve kaşarlı maydanozlu harçla doldurulup fırınlanır; sıcak ya da ılık servis edilen hafif bir meze.",
+   "en": "Button mushroom caps filled with a breadcrumb, parsley and kasar stuffing and baked until bubbling. Served warm or at room temperature as a light meze."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Button mushrooms"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "büyük boy, sapları ayrılmış",
+     "en": "large, stems removed and chopped"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kasar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için dilimlenmiş",
+     "en": "cut into wedges to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mantarların sapını çevirerek çıkar. Şapkaları temizleyip sapları ince doğra.",
+     "en": "Twist out the mushroom stems and wipe the caps clean. Chop the stems finely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağında soğan ve sarımsağı soteleyip doğranmış mantar saplarını ekle, 5 dakika pişir.",
+     "en": "Soften the onion and garlic in the olive oil, add the chopped stems and cook for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Karışıma galeta unu, maydanoz, tuz ve karabiberi ekleyip karıştır. Soğumaya bırak.",
+     "en": "Stir in the breadcrumbs, parsley, salt and black pepper, then let the mixture cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mantar şapklarının içini tuzla hafifçe tatlandır ve iç harcı kaşıkla doldur.",
+     "en": "Lightly salt the inside of each cap and spoon in the stuffing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine rendelenmiş kaşarı serp, yağ sürülmüş tepsiye diz.",
+     "en": "Sprinkle the grated kasar over the caps and arrange them in an oiled baking tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "180 derece fırında 15 dakika pişir ve limon dilimleriyle sıcak servis et.",
+     "en": "Bake at 180 degrees for 15 minutes and serve warm with lemon wedges."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Fırında",
+   "Meze",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "997a3fec-292a-4ad6-836d-753890b892bd",
+  "slug": "bulgurlu-biber-dolmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Bulgurlu biber dolması",
+   "en": "Peppers stuffed with bulgur"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dolmalık biberin içine kavrulmuş soğan, domates ve naneli bulgur harcı doldurulup zeytinyağıyla pişirilir. Ilık ya da soğuk yenen, hafif bir Güneydoğu sebze yemeği.",
+   "en": "Green peppers filled with coarse bulgur, onion, tomato and dried mint, then cooked slowly in olive oil. Served warm or cold, it is a light vegetable main from the south-east."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell peppers"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "iç kısmı temizlenmiş",
+     "en": "cored and seeded"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pilavlık bulgur",
+     "en": "Coarse bulgur"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "coarse-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "bulgur ve pişirme için",
+     "en": "for the bulgur and for cooking"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Biberlerin kapaklarını kesip tohumlarını temizle, ağız kısmını hafifçe kırp.",
+     "en": "Cut the caps from the peppers, remove the seeds and trim the openings slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bulguru kaynar suyla karıştırıp 15 dakika kapağı kapalı demlendir.",
+     "en": "Pour boiling water over the bulgur, cover and let it soak for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Soğanı 2 yemek kaşığı zeytinyağında soteleyip salça ve biber salçasını ekle, 3 dakika kavur.",
+     "en": "Soften the onion in 2 tablespoons of the olive oil, add both pastes and fry for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bulgurun üzerine kavrulmuş soğanı, rendelenmiş domatesi, maydanozu, kuru naneyi ve tuzu ekleyip karıştır.",
+     "en": "Stir the fried onion, grated tomato, parsley, dried mint and salt into the bulgur."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Biberlerin içini harçla doldur, kapaklarını yerleştir. Tencereye sıkıca diz, kalan zeytinyağı ve suyu ekle; kapağını kapatıp kısık ateşte 35 dakika pişir.",
+     "en": "Fill the peppers with the mixture and replace the caps. Pack them tightly into a pot, add the remaining olive oil and water, cover and simmer gently for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Tencerede 10 dakika dinlendirip ılık ya da soğuk servis et.",
+     "en": "Rest in the pot for 10 minutes, then serve warm or cold."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "Vejetaryen",
+   "Zeytinyağlı",
+   "Dolma"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0230fbe4-be36-4c74-887f-8dc672e67766",
+  "slug": "bulgurlu-lahana-sarmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Bulgurlu lahana sarması",
+   "en": "Cabbage rolls with bulgur"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış lahana yapraklarına zeytinyağlı, naneli bulgur harcı sarılıp limonlu suda pişirilen bir zeytinyağlı yemek. Ilık ya da soğuk yenir.",
+   "en": "Cabbage leaves wrapped around a spiced bulgur filling and simmered in lemon and olive oil, eaten warm or cold. The bulgur swells as it cooks, so the rolls feel full without meat."
+  },
+  "servings": 4,
+  "prepMinutes": 50,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz lahana",
+     "en": "White cabbage"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük boy",
+     "en": "small head"
+    },
+    "pantryKey": "white-cabbage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pilavlık bulgur",
+     "en": "Coarse bulgur"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "coarse-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "bulgur ve pişirme için",
+     "en": "for the bulgur and for cooking"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Lahananın gövdesini oyup tuzlu kaynar suda 10 dakika haşla. Yaprakları yumuşayınca tek tek ayır.",
+     "en": "Cut out the core, simmer the cabbage in salted boiling water for 10 minutes, then separate the softened leaves one by one."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Bulguru 300 ml kaynar suyla karıştır, 15 dakika kapağı kapalı bekletip suyunu çekmesini sağla.",
+     "en": "Stir the bulgur into 300 ml boiling water and leave it covered for 15 minutes until the water is absorbed."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Soğanı zeytinyağında 4 dakika soteleyip salçayı ekle, bir süre daha kavur.",
+     "en": "Soften the onion in olive oil for 4 minutes, add the tomato paste and fry briefly."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Kavrulmuş soğanı, bulguru, maydanozu, kuru naneyi, pul biberi ve tuzu karıştırıp harcı hazırla.",
+     "en": "Combine the fried onion, bulgur, parsley, dried mint, chilli flakes and salt to make the filling."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Lahana yapraklarının kalın damarlarını hafifçe kırp, her birine bir kaşık harç koyup içe doğru sıkıca rulo yap.",
+     "en": "Trim the thick veins of the leaves lightly, place a spoonful of filling on each and roll tightly, tucking in the sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarmaları tencereye sıkıca diz, limon suyu ve kalan 200 ml sıcak suyu ekle, üzerine zeytinyağı gezdir. Kapağını kapatıp kısık ateşte 30 dakika pişir.",
+     "en": "Pack the rolls tightly into a pot, add the lemon juice and the remaining 200 ml hot water, and drizzle over a little olive oil. Cover and simmer gently for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Ilık ya da soğuk servis et, yanına limon dilimi koy.",
+     "en": "Serve warm or cold with a wedge of lemon on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "Vejetaryen",
+   "Zeytinyağlı",
+   "Sarma"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
