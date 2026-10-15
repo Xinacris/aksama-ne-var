@@ -3270,12 +3270,16 @@
     "scone",
     "trifle"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "sticky-toffee-pudding",
+    "scone",
+    "trifle"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 67122,
    "startedAt": "2026-10-15T22:56:36.148Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:58:19.581Z"
   },
   {
    "id": "r001",
@@ -3389,11 +3393,11 @@
     "brokoli-corbasi",
     "kabak-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:58:13.701Z",
    "finishedAt": null
   },
   {
