@@ -10706,5 +10706,2022 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "910fcdb1-7980-4ab8-8a38-cf16c9fd9ac4",
+  "slug": "kabak-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Kabak salatası",
+   "en": "Grilled courgette salad with yoghurt"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Izgarada hafif renk almış kabak dilimleri, sarımsaklı süzme yoğurdun üzerine serilir ve nane yağıyla tamamlanır. Sıcak akşamlarda hafif bir başlangıç ya da yanına eşlik eden bir salata olarak iyi gider.",
+   "en": "Lightly charred courgette slices laid over garlicky strained yoghurt and finished with warm mint and chilli oil. A light starter on a hot evening, or a side to something grilled."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "boyuna yarım santim kalınlığında dilimlenmiş",
+     "en": "sliced lengthways, half a centimetre thick"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları boyuna yarım santim kalınlıkta dilimle, bir tutam tuz serp ve 10 dakika bekle.",
+     "en": "Slice the courgettes lengthways about half a centimetre thick, sprinkle with a pinch of salt and leave for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Izgara tavasını iyice ısıt, kabak dilimlerini her iki yüzünde çizgi izleri oluşana kadar ızgara et.",
+     "en": "Heat a griddle pan until very hot and grill the courgette slices until they have char lines on both sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ezip süzme yoğurtla, zeytinyağının yarısıyla ve bir tutam tuzla karıştır.",
+     "en": "Stir the crushed garlic into the strained yoghurt with half the olive oil and a pinch of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurtlu karışımı geniş bir tabağa yay, ızgara kabakları üstüne diz ve biraz ılımaya bırak.",
+     "en": "Spread the yoghurt over a wide plate, arrange the grilled courgette on top and let it cool slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan zeytinyağını bir tavada kuru nane ve pul biberle birlikte kısa süre ısıt, sıcak yağı kabakların üzerine gezdir.",
+     "en": "Warm the remaining olive oil with the dried mint and chilli flakes for a few seconds, then drizzle the warm oil over the courgette."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dereotunu, limon suyunu ve karabiberi üzerine serp, hemen servis et.",
+     "en": "Scatter over the dill, add the lemon juice and black pepper, and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "Yoğurtlu",
+   "Vejetaryen",
+   "Izgara",
+   "Hafif",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "127fc06c-da4e-44b3-8987-5d95ff0611b8",
+  "slug": "kabak-tarator",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Kabak tarator",
+   "en": "Courgette tarator"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kızartılmış kabak dilimlerinin üzerine ceviz, sarımsak ve yoğurtla hazırlanan tarator sosu gelir. Sos ekmekle yapıldığı için kıvamlıdır ve kabağın yağlı tadını dengeler.",
+   "en": "Fried courgette slices served over a walnut, garlic and yoghurt tarator sauce. The bread in the sauce gives it body and balances the richness of the fried courgette."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "boyuna ince dilimlenmiş",
+     "en": "sliced lengthways thinly"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 2,
+    "unit": "dilim",
+    "note": {
+     "tr": "kabukları alınmış, suda ıslatılıp sıkılmış",
+     "en": "crusts removed, soaked in water and squeezed out"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": null,
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Üzüm sirkesi",
+     "en": "Grape vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "grape-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "sosun için",
+     "en": "for the sauce"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları tuzla serpip 15 dakika bir kâğıt havlu üzerinde süzülmeleri için bekle.",
+     "en": "Salt the courgette slices and leave them on kitchen paper for 15 minutes to drain."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Bayat ekmeği suda 5 dakika ıslat, iyice sık ve parçala.",
+     "en": "Soak the stale bread in water for 5 minutes, squeeze it dry and break it up."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Cevizi, sarımsağı, ekmeği, sirkeyi ve sosun için ayırdığın zeytinyağının yarısını blenderdan geçirip pürüzlü bir kıvam ver.",
+     "en": "Blitz the walnuts, garlic, bread, vinegar and half the olive oil to a coarse paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ekleyip karıştır, tuz ayarla ve sosu buzdolabına kaldır.",
+     "en": "Stir in the yoghurt, adjust the salt and chill the sauce."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada sıvı yağı ısıt, kabakları iki partide altın sarısı olana kadar kızart ve kâğıt havluya al.",
+     "en": "Heat the vegetable oil in a wide pan and fry the courgette in two batches until golden. Drain on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu geniş bir servis tabağına yay, kızarmış kabakları sıra sıra diz, maydanoz ve pul biber serp.",
+     "en": "Spread the sauce on a serving plate, lay the fried courgette in neat rows over it, and scatter with parsley and chilli flakes."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "makeAhead",
+   "Kızartma",
+   "Vejetaryen",
+   "Sebzeli",
+   "Yoğurtlu"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0c919ce2-3780-43fc-b46f-2fe91015f2a6",
+  "slug": "yogurtlu-patlican",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Yoğurtlu patlıcan",
+   "en": "Fried aubergine with yoghurt"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kızartılmış patlıcan dilimleri sarımsaklı süzme yoğurdun üzerine dizilir, tereyağında kavrulmuş pul biberli sosla tamamlanır. Yoğurdun serinliği ile patlıcanın yumuşak tadı iyi bir denge kurar.",
+   "en": "Fried aubergine slices on garlicky strained yoghurt, finished with a butter sauce of pepper paste and chilli. The coolness of the yoghurt balances the soft, rich aubergine."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergines"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "boyuna 1 santim kalınlıkta dilimlenmiş",
+     "en": "sliced lengthways, 1 centimetre thick"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcan dilimlerini tuzlu suda 10 dakika bekletip süz ve bir bezle kurula.",
+     "en": "Soak the aubergine slices in salted water for 10 minutes, then drain and pat dry."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır, kenara al.",
+     "en": "Mix the yoghurt with the crushed garlic and a pinch of salt, and set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı orta ateşte ısıt, patlıcan dilimlerini partiler halinde her iki yüzünde altın renk alana kadar kızart ve kâğıt havluya al.",
+     "en": "Heat the oil over a medium heat and fry the aubergine in batches until golden on both sides. Drain on kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını küçük bir tavada eritip biber salçası ve pul biberi ekle, 1 dakika kadar kavur.",
+     "en": "Melt the butter in a small pan, add the pepper paste and chilli flakes, and stir for about 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sarımsaklı yoğurdu bir servis tabağına yay, kızarmış patlıcanları üzerine diz.",
+     "en": "Spread the garlic yoghurt on a serving plate and arrange the fried aubergine on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağlı biber sosunu patlıcanların üzerine gezdir, dereotuyla süsle ve sıcak ya da ılık servis et.",
+     "en": "Drizzle the butter pepper sauce over the aubergine, scatter with dill, and serve warm or at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Kızartma",
+   "Yoğurtlu",
+   "Vejetaryen",
+   "Sebzeli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d0837c05-be14-4963-922e-b67d91de39e3",
+  "slug": "yogurtlu-pazi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Yoğurtlu pazı",
+   "en": "Chard with garlic yoghurt"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pazı, Karadeniz sofrasında sık görülen sade bir sebze yemeğidir. Soğanla kavrulmuş pazının üzerine sarımsaklı yoğurt ve pul biberli tereyağı gelir, sumakla biter.",
+   "en": "Chard is a plain, everyday vegetable on Black Sea tables. Here the onion-fried chard sits under garlic yoghurt and chilli butter, finished with sumac."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pazı",
+     "en": "Chard"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "sap ve yapraklar ayrılmış, iyice yıkanmış",
+     "en": "stalks and leaves separated, well washed"
+    },
+    "pantryKey": "chard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sumak",
+     "en": "Sumac"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sumac",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pazı saplarını doğrayıp tuzlu kaynar suda 5 dakika haşla.",
+     "en": "Chop the chard stalks and boil them in salted water for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yaprakları ekleyip 3 dakika daha haşla, iyice süz ve elinle sıkıp kaba kıy.",
+     "en": "Add the leaves and boil for 3 more minutes. Drain well, squeeze out the water and chop coarsely."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır.",
+     "en": "Stir the crushed garlic and a pinch of salt into the yoghurt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını bir tavada ısıt, soğanı pembeleşene kadar kavur.",
+     "en": "Heat the olive oil in a pan and cook the onion until it turns pink at the edges."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pazıları ekleyip 5 dakika kavur, tuzunu ayarla.",
+     "en": "Add the chard and fry for 5 minutes. Adjust the salt."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tereyağını küçük bir tencerede pul biberle birlikte eritip kenara al.",
+     "en": "Melt the butter with the chilli flakes in a small pan and set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pazıyı tabağa al, üzerine sarımsaklı yoğurdu yay, tereyağlı pul biberi gezdir ve sumak serpip servis et.",
+     "en": "Transfer the chard to a plate, spoon the garlic yoghurt over it, drizzle with the chilli butter, and dust with sumac to serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Yoğurtlu",
+   "Sebzeli",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "80de3ea4-f5c4-4af7-9542-31cac9d40a3b",
+  "slug": "yogurtlu-ispanak",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Yoğurtlu ıspanak",
+   "en": "Spinach with yoghurt"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Soğanla kısık ateşte pişmiş ıspanak, sarımsaklı süzme yoğurtla servis edilir. Üzerine gelen kuru nanalı pul biberli tereyağı, sebzenin tadını yumuşatır.",
+   "en": "Spinach cooked slowly with onion and served with garlic strained yoghurt. A spoonful of dried mint and chilli butter on top softens the flavour of the greens."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "iyice yıkanmış, sapları ayrılmış",
+     "en": "well washed, stalks removed"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ispanağı kaba doğra ve suyunun kalması için yıkandıktan sonra süzgeçte bekletmeden hazırla.",
+     "en": "Chop the spinach coarsely while it is still damp from washing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı zeytinyağında 5 dakika kavur.",
+     "en": "Fry the onion in the olive oil for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ispanakları ekle, kapağını kapatıp kısık ateşte 5 dakika pişir.",
+     "en": "Add the spinach, cover, and cook over a low heat for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Suyunu çekene kadar açık tavada kavur, tuzunu ayarla ve sıkça karıştır.",
+     "en": "Cook uncovered, stirring often, until the liquid has evaporated. Adjust the salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır.",
+     "en": "Stir the crushed garlic and a pinch of salt into the yoghurt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ispanağı servis tabağına al, yoğurdu yanına ya da üstüne ekle. Tereyağını pul biber ve kuru naneyle eritip üzerine gezdir.",
+     "en": "Transfer the spinach to a serving dish, spoon the yoghurt alongside or on top, and pour over the butter melted with the chilli flakes and dried mint."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Yoğurtlu",
+   "Sebzeli",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "13d4183b-886e-4f57-be69-26e8f289a7ca",
+  "slug": "yogurtlu-kabak",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Yoğurtlu kabak",
+   "en": "Courgette with yoghurt"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Soğan ve domatesle zeytinyağında pişirilmiş kabak, oda sıcaklığında soğutulup üzerine sarımsaklı yoğurt eklenerek servis edilir. Sıcak mevsimde zeytinyağlı sebze ile yoğurdun bir arada olduğu sade bir meze.",
+   "en": "Courgette cooked in olive oil with onion and tomato, cooled to room temperature and served under garlic yoghurt. A simple summer meze that brings together olive oil vegetables and yoghurt."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "yarım ay şeklinde doğranmış",
+     "en": "cut into half moons"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı zeytinyağında yumuşayana kadar kavur.",
+     "en": "Cook the onion in the olive oil until soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabakları ekle, kısık ateşte 8 dakika kavur.",
+     "en": "Add the courgette and fry over a low heat for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekle, tuz ve karabiberle tatlandır, kapağını kapatıp 10 dakika pişir.",
+     "en": "Add the tomato, season with salt and black pepper, cover, and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kabaklar yumuşayınca ocaktan al ve oda sıcaklığında soğumaya bırak.",
+     "en": "When the courgette is soft, take the pan off the heat and let it cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır.",
+     "en": "Stir the crushed garlic and a pinch of salt into the yoghurt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabakları servis tabağına al, yoğurdu üzerine yay, kuru nane ve dereotu serp.",
+     "en": "Transfer the courgette to a serving plate, spread the yoghurt over, and scatter with dried mint and dill."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Zeytinyağlı",
+   "Yoğurtlu",
+   "Sebzeli",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "4a7f1e26-0ed6-4f1f-a782-62cba98077f4",
+  "slug": "yogurtlu-havuc",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Yoğurtlu havuç",
+   "en": "Carrot and yoghurt meze"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış havuç halkaları, sarımsaklı yoğurdun üzerine dizilir ve kimyonlu zeytinyağı ile cevizle tamamlanır. Tatlı havucun kimyonla birlikte yoğurtta hafif ve doyurucu bir meze olur.",
+   "en": "Boiled carrot rounds laid over garlic yoghurt, finished with cumin oil and walnuts. The sweetness of the carrot, cumin and cool yoghurt make a light, filling meze."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, 1 santim kalınlıkta halka halinde",
+     "en": "peeled and cut into 1 cm rounds"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Ground cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Havuç halkalarını tuzlu kaynar suda 12 dakika haşla, süz.",
+     "en": "Boil the carrot rounds in salted water for 12 minutes, then drain."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Havuçları tamamen soğumaya bırak.",
+     "en": "Leave the carrot to cool completely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır, servis tabağına yay.",
+     "en": "Mix the yoghurt with the crushed garlic and a pinch of salt, then spread it on a serving plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havuç halkalarını yoğurdun üzerine düzgünce diz.",
+     "en": "Arrange the carrot rounds neatly over the yoghurt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını kimyonla küçük bir tavada 1 dakika ısıt.",
+     "en": "Warm the olive oil with the cumin in a small pan for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kimyonlu yağı havuçların üzerine gezdir, cevizi ve dereotunu serpip servis et.",
+     "en": "Drizzle the cumin oil over the carrot, scatter with walnuts and dill, and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Yoğurtlu",
+   "Sebzeli",
+   "Vejetaryen",
+   "Hafif",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "1336b812-e023-46f7-b687-fb04fea15a73",
+  "slug": "yogurtlu-bakla",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Yoğurtlu bakla",
+   "en": "Broad beans with yoghurt and dill"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze baklalar soğan ve zeytinyağında az suyla pişirilir, oda sıcaklığında soğutulup sarımsaklı yoğurtla servis edilir. Bakla mevsiminde Ege sofralarının hafif ve bol dereotlu bir meze.",
+   "en": "Fresh broad beans cooked with onion in olive oil and a little water, cooled and served with garlic yoghurt. A light, dill-heavy meze for broad bean season on the Aegean table."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze bakla",
+     "en": "Fresh broad beans"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kabukları ayıklanmış",
+     "en": "shelled"
+    },
+    "pantryKey": "fresh-broad-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Baklaların dış kabuğunu soyup kabukları ayıkla, iyice yıka.",
+     "en": "Pod the broad beans and rinse them well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı zeytinyağında 5 dakika kavur.",
+     "en": "Fry the onion in the olive oil for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Baklaları ekleyip 2 dakika karıştırarak kavur.",
+     "en": "Add the broad beans and stir-fry for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Suyu ve bir tutam tuzu ekle, kapağını kapatıp kısık ateşte 20 dakika pişir.",
+     "en": "Add the water and a pinch of salt, cover, and simmer gently for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Suyu neredeyse çekince ocaktan al ve oda sıcaklığında soğumaya bırak.",
+     "en": "When most of the liquid has been absorbed, take the pan off the heat and let it cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu ezilmiş sarımsak ve bir tutam tuzla karıştır.",
+     "en": "Stir the crushed garlic and a pinch of salt into the yoghurt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Baklaları tabağa al, yoğurdu yanına koy ve üzerine dereotu serp.",
+     "en": "Transfer the broad beans to a plate, serve the yoghurt alongside, and top with dill."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Zeytinyağlı",
+   "Yoğurtlu",
+   "Sebzeli",
+   "Vejetaryen",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ce838967-da1c-4a3a-994d-65c80d7d06ec",
+  "slug": "deniz-borulcesi-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Deniz börülcesi salatası",
+   "en": "Samphire-style green bean salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış taze fasulye, kırmızı soğan ve sarımsaklı limonlu zeytinyağı sosuyla hazırlanır. Samphire'ın tuzlu ve taze tadını hatırlatan, ekşi ve hafif bir Ege salatası.",
+   "en": "Blanched green beans with red onion and a garlicky lemon and olive oil dressing. It is a sharp, fresh Aegean salad that brings to mind the briny freshness of samphire."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 6,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze fasulye",
+     "en": "Green beans"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "uçları alınmış, 4 parçaya bölünmüş",
+     "en": "trimmed and cut into four pieces"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka doğranmış",
+     "en": "thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tuzlu kaynar suda fasulyeleri 6 dakika haşla, süzüp soğuk suya al.",
+     "en": "Boil the green beans in salted water for 6 minutes, drain, and refresh in cold water."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı soğuk suda 10 dakika beklet, sonra iyice süz.",
+     "en": "Leave the red onion in cold water for 10 minutes, then drain it well."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı limon suyu, zeytinyağı, tuz ve karabiberle çırparak sos yap.",
+     "en": "Whisk the garlic with the lemon juice, olive oil, salt and black pepper to make the dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fasulyeleri iyice süzüp sosla karıştır.",
+     "en": "Drain the beans thoroughly and toss them in the dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ekleyip 15 dakika dinlendir, dereotuyla süsleyip servis et.",
+     "en": "Add the onion, let the salad rest for 15 minutes, then scatter with dill and serve."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "quick",
+   "Zeytinyağlı",
+   "Sebzeli",
+   "Hafif",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3574f353-3e1c-4546-9329-b4586d931629",
+  "slug": "sevketibostan-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Ege",
+  "title": {
+   "tr": "Şevketibostan salatası",
+   "en": "Wild artichoke thistle salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Şevketibostan bulunmadığında taze enginarla hazırlanan, limonlu zeytinyağı sosuna yatırılmış bir Ege salatası. Enginarın kalbi ve dilimleri, sarımsak ve dereotuyla birlikte sade ve ferah bir tat verir.",
+   "en": "An Aegean salad of artichoke in a lemon and olive oil dressing. Where the wild thistle, şevketibostan, is not to be had, fresh artichoke makes a good stand-in. The hearts and slices take on the garlic and dill cleanly."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Enginar",
+     "en": "Artichokes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "dış yaprakları ayıklanmış, kalbi çıkarılmış",
+     "en": "outer leaves removed, chokes scooped out"
+    },
+    "pantryKey": "artichoke",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yarısı suyu sıkılmış, yarısı dilim",
+     "en": "half squeezed, half cut into slices"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "sos için",
+     "en": "for the dressing"
+    },
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil soğan",
+     "en": "Spring onions"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely sliced"
+    },
+    "pantryKey": "spring-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Enginarları yarısı sıkılmış limonun dilimleri ve bir kaşık limon suyuyla birlikte suya at, kararmaması için bekletme.",
+     "en": "Drop the artichokes into water with the lemon slices and a spoonful of the juice so they do not discolour."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Enginarları limonlu kaynar suda 20 dakika haşla, yumuşayınca süz.",
+     "en": "Boil the artichokes in lemony water for 20 minutes until tender, then drain."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Enginarlar soğuyunca ince dilimle.",
+     "en": "When the artichokes are cool, slice them thinly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı limon suyu, zeytinyağı, tuz ve karabiberle çırparak sos yap.",
+     "en": "Whisk the garlic with the lemon juice, olive oil, salt and black pepper to make the dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Enginar dilimlerini sosa ekleyip 10 dakika dinlendir, yeşil soğan ve dereotuyla süsle.",
+     "en": "Toss the artichoke slices in the dressing, leave for 10 minutes, then scatter with spring onion and dill."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Sebzeli",
+   "Hafif",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
