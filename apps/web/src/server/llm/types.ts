@@ -9,6 +9,8 @@ export interface ProviderInput {
   platform: SourcePlatform | null;
   /** Language the draft is written in (the user's). Not personal data: a language code. */
   locale?: "tr" | "en";
+  /** The text was read from screenshots (OCR): Turkish letters may be missing. */
+  ocr?: boolean;
 }
 
 type JsonSchema = { [k: string]: unknown };

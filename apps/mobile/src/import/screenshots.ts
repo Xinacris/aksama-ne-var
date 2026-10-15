@@ -1,12 +1,15 @@
 import { requireOptionalNativeModule } from "expo";
+import { Platform } from "react-native";
 import { launchImageLibraryAsync } from "expo-image-picker";
 import { captionFromScreenshots } from "@anv/core/domain/import/screenshot";
 
 /**
  * "Ekran görüntüsünden oku": the cook picks screenshots of a caption (several for a long one) and
  * the phone reads the text on the device: iOS Vision / Android ML Kit via expo-text-extractor.
- * Free, nothing is uploaded; only the text goes to the import, as if pasted. The module is looked
- * up optionally (the package's own import throws where it isn't built in: Expo Go).
+ * Free, nothing is uploaded; only the text goes to the import, marked as OCR so the server puts
+ * Turkish letters back. On iOS the local module anv-text-recognition is used first (Vision with
+ * Turkish; expo-text-extractor's iOS reader is English-only); Android's ML Kit reads Turkish. The
+ * modules are looked up optionally (the package's own import throws where it isn't built in: Expo Go).
  */
 interface TextExtractor {
   isSupported: boolean;
@@ -16,6 +19,8 @@ interface TextExtractor {
 export const MAX_SCREENSHOTS = 6;
 
 function extractor(): TextExtractor | null {
+  const turkish = Platform.OS === "ios" ? requireOptionalNativeModule<TextExtractor>("AnvTextRecognition") : null;
+  if (turkish?.isSupported) return turkish;
   const m = requireOptionalNativeModule<TextExtractor>("ExpoTextExtractor");
   return m?.isSupported ? m : null;
 }

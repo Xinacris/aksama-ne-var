@@ -10,3 +10,4 @@ expo-env.d.ts
 
 # Written by plugins/withAlarmKit.js only when EXPO_PUBLIC_ENABLE_ALARMKIT=1 (links the module)
 /modules/anv-alarmkit/expo-module.config.json
+/modules/anv-text-recognition/expo-module.config.json

@@ -1,5 +1,6 @@
 import { PLATFORM_LABEL, type SourcePlatform } from "../../data/models";
 import { ADAPTERS, emptySource, SourceUnavailableError, type AdapterContext } from "./adapters";
+import { restoreDiacritics } from "./diacritics";
 import { detectPlatform, extractUrl, normalizeUrl } from "./detect";
 import { webAdapter } from "./adapters/web";
 import { isBoilerplateLine, stripBoilerplate } from "./boilerplate";
@@ -14,7 +15,7 @@ import { t } from "../../i18n";
  */
 export type Structurer = (
   text: string,
-  meta: { title: string | null; platform: SourcePlatform | null },
+  meta: { title: string | null; platform: SourcePlatform | null; ocr?: boolean },
 ) => Promise<{ draft: ImportedRecipe; provider: ImportProvider }>;
 
 export interface ImportDeps extends AdapterContext {
@@ -26,6 +27,8 @@ export interface ImportDeps extends AdapterContext {
 export interface ImportInput {
   url?: string;
   text?: string;
+  /** "ocr": pasted text came from screenshots (Turkish letters may be missing). */
+  textOrigin?: "paste" | "ocr";
 }
 
 /** What the server logs/counts: never the caption, only the provider and platform. */
@@ -193,12 +196,15 @@ export async function runImport(input: ImportInput, deps: ImportDeps): Promise<I
     draft = structured;
     provider = "web";
   } else if (text) {
-    const meta = { title: pasted ? null : source?.title ?? null, platform: source?.platform ?? null };
+    const ocr = !!pasted && input.textOrigin === "ocr";
+    const meta = { title: pasted ? null : source?.title ?? null, platform: source?.platform ?? null, ...(ocr ? { ocr } : {}) };
     const out = deps.structure ? await deps.structure(text, meta).catch(() => null) : null;
+    // The rule parser gets screenshot text with its Turkish letters put back (the LLMs are told instead).
+    const ruleText = ocr ? restoreDiacritics(text) : text;
     if (out) ({ draft, provider } = out);
-    else if (looksTurkish(text)) ({ draft, provider } = { draft: parseRecipeText(text, meta.title), provider: "rules" as const });
+    else if (looksTurkish(ruleText)) ({ draft, provider } = { draft: parseRecipeText(ruleText, meta.title), provider: "rules" as const });
     else {
-      draft = pasteDraft(text, meta.title);
+      draft = pasteDraft(ruleText, meta.title);
       provider = "rules";
       notParsed = true;
     }

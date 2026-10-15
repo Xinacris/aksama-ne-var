@@ -92,7 +92,7 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   const parsed = importRequestSchema.safeParse(body);
   const tr = i18n.getFixedT(parsed.success ? parsed.data.locale : requestLocale(req));
   if (!parsed.success) return jsonResponse({ error: tr("import.msg.tooLong") }, 400);
-  const { url, text, householdId, locale } = parsed.data;
+  const { url, text, householdId, locale, textOrigin } = parsed.data;
   if (!url.trim() && !text.trim()) return jsonResponse({ error: tr("import.msg.needInput") }, 400);
 
   const deadline = Date.now() + IMPORT_TIMEOUT_MS;
@@ -118,7 +118,7 @@ export async function handleImport(req: Request, deps: HandlerDeps): Promise<Res
   }) as typeof fetch;
 
   try {
-    const { result, counted } = await runImport({ url, text }, { fetch: routedFetch, env: { YOUTUBE_API_KEY: deps.env.YOUTUBE_API_KEY }, signal, structure, t: tr });
+    const { result, counted } = await runImport({ url, text, textOrigin }, { fetch: routedFetch, env: { YOUTUBE_API_KEY: deps.env.YOUTUBE_API_KEY }, signal, structure, t: tr });
     const message = limited && !result.message ? tr("import.msg.limited") : result.message;
     // `fallbacks`: which providers gave up and why (status codes only) — the same facts as the log line.
     return jsonResponse({ ...result, message, counted, llmAvailable: providers.length > 0, fallbacks });

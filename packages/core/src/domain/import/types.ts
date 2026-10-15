@@ -102,6 +102,8 @@ export const importRequestSchema = z.object({
   householdId: z.string().max(100).optional().default(""),
   /** The user's language: the draft is written in it. */
   locale: z.enum(["tr", "en"]).optional().default("tr"),
+  /** "ocr": the text was read from screenshots on the phone and may have lost Turkish letters. */
+  textOrigin: z.enum(["paste", "ocr"]).optional().default("paste"),
 });
 
 export { sourcePlatformSchema };
