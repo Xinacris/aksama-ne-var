@@ -2868,12 +2868,19 @@
     "balkabagi-turtasi",
     "havuclu-kek"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "cheesecake",
+    "brownie",
+    "elmali-turta",
+    "cikolatali-kurabiye",
+    "balkabagi-turtasi",
+    "havuclu-kek"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 76886,
    "startedAt": "2026-10-15T22:46:10.570Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:48:24.462Z"
   },
   {
    "id": "g093",
@@ -2891,11 +2898,11 @@
     "steak-frites",
     "steak-au-poivre"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:47:58.699Z",
    "finishedAt": null
   },
   {
