@@ -539,11 +539,11 @@
     "tavuklu-domates-corbasi",
     "kuskuslu-tavuk-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:53:13.052Z",
    "finishedAt": null
   },
   {
@@ -1050,12 +1050,23 @@
     "hosaf",
     "komposto"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "elmali-kurabiye",
+    "un-kurabiyesi",
+    "cevizli-kurabiye",
+    "tahinli-kurabiye",
+    "sakizli-muhallebi",
+    "su-muhallebisi",
+    "paluze",
+    "pelte",
+    "hosaf",
+    "komposto"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 79956,
    "startedAt": "2026-10-15T19:51:05.325Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:53:34.815Z"
   },
   {
    "id": "g034",
