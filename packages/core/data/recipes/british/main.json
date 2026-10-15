@@ -250,5 +250,2564 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "d667fa26-dc59-4be0-b57f-62ea843e0e64",
+  "slug": "coban-turtasi",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Çoban turtası (shepherd's pie)",
+   "en": "Shepherd's pie"
+  },
+  "shortTitle": {
+   "tr": "Çoban turtası",
+   "en": "Shepherd's pie"
+  },
+  "description": {
+   "tr": "Soslu kuzu kıymanın üzerine tereyağlı patates püresi serilip fırında kızartılan İngiliz klasiği. Tek kapta servis edilir ve doyurucudur.",
+   "en": "A British classic: savoury minced lamb under a layer of buttery mashed potato, baked until golden. It comes to the table in one dish and fills everyone up."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kıyma",
+     "en": "Minced lamb"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small dice"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato purée"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, parçalanmış",
+     "en": "peeled and quartered"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 80,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "warm"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri tuzlu suda yumuşayana kadar 20 dakika haşla.",
+     "en": "Boil the potatoes in salted water for 20 minutes, until soft."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Patatesleri süz, tereyağının yarısı ve ılık sütle ezerek pürüzsüz bir püre yap. Tuzla tatlandır.",
+     "en": "Drain the potatoes and mash them smooth with half the butter and the warm milk. Season with salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağında soğanı ve havucu 8 dakika kavur.",
+     "en": "Fry the onion and carrot in the olive oil for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ekleyip 1 dakika kavur.",
+     "en": "Add the garlic and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekle, dağılıp rengi değişene kadar kavur. Salça, kekik ve tuzu karıştır.",
+     "en": "Add the mince and break it up as it browns. Stir in the tomato purée, thyme and salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Et suyu ve Worcestershire sosunu ekle, kısık ateşte 20 dakika pişir.",
+     "en": "Pour in the stock and Worcestershire sauce, then simmer gently for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Kıymalı harcı fırın kabına yay.",
+     "en": "Heat the oven to 200 degrees. Spread the mince mixture in an ovenproof dish."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Püreyi kıymanın üzerine eşit yay, çatalla desen ver ve kalan tereyağını sür.",
+     "en": "Spread the mash evenly over the mince, rough it up with a fork and dot with the rest of the butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 25 dakika üstü altın rengi olana kadar pişir.",
+     "en": "Bake for 25 minutes, until the top is golden."
+    },
+    "timerSeconds": 1500
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7d080001-9c8e-4042-8d74-428a561fc001",
+  "slug": "cottage-pie",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Cottage pie",
+   "en": "Cottage pie"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dana kıymanın koyu soslu tabanı ve üzerindeki yumuşak patates püresiyle hazırlanan, sade ve sıcak bir İngiliz ev yemeği. Bezelyeyle hafif tatlı bir denge kurar.",
+   "en": "A plain, warming British home dish: beef mince in a dark, rich gravy under soft mashed potato, with peas for a little sweetness. The filling is deep and the topping crisp."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 65,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kıyma",
+     "en": "Beef mince"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small dice"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato purée"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, parçalanmış",
+     "en": "peeled and quartered"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 80,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "warm"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri tuzlu suda 20 dakika haşla.",
+     "en": "Boil the potatoes in salted water for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Patatesleri süz, tereyağı ve ılık sütle iyice ez. Tuz ve karabiberle tatlandır.",
+     "en": "Drain the potatoes and mash well with the butter and warm milk. Season with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağında soğanı ve havucu 8 dakika kavur.",
+     "en": "Fry the onion and carrot in the olive oil for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekleyip dağılana ve rengi değişene kadar kavur.",
+     "en": "Add the mince and fry until it is broken up and no longer pink."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salça, defne yaprağı ve Worcestershire sosunu ekleyip 1 dakika karıştır.",
+     "en": "Stir in the tomato purée, bay leaf and Worcestershire sauce, and cook for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Et suyunu ekle, kısık ateşte sos koyulaşana kadar 25 dakika pişir.",
+     "en": "Add the stock and simmer gently for 25 minutes, until the gravy has thickened."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Bezelyeyi ekleyip 3 dakika daha pişir. Defne yaprağını çıkar.",
+     "en": "Stir in the peas and cook for 3 more minutes. Remove the bay leaf."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Harcı fırın kabına yay, püreyi üstüne yayıp çatalla desen ver.",
+     "en": "Heat the oven to 200 degrees. Spread the filling in an ovenproof dish, top with the mash and rough it up with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 25 dakika üstü altın rengi olana kadar pişir.",
+     "en": "Bake for 25 minutes, until the top is golden."
+    },
+    "timerSeconds": 1500
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Kolay",
+   "freezable"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d1154607-8812-4a98-8aaa-c303a453f7e3",
+  "slug": "dana-ve-mantarli-turta",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Dana ve mantarlı turta",
+   "en": "Steak and mushroom pie"
+  },
+  "shortTitle": {
+   "tr": "Dana mantarlı turta",
+   "en": "Steak and mushroom"
+  },
+  "description": {
+   "tr": "Yavaş pişmiş dana etinin ve mantarın koyu sosla buluştuğu, milföy kapaklı bir turta. Soğuk havalarda sofrada en çok sevilen yemeklerden biridir.",
+   "en": "Slow-cooked beef and mushrooms in a thick, dark gravy under a flaky puff pastry lid. It is the sort of pie people ask for on cold weekends."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 120,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana gulaşlık",
+     "en": "Beef stew meat"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "beef-stew-meat",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato purée"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Milföy hamuru",
+     "en": "Puff pastry"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": {
+     "tr": "hazır, buzdolabından yeni çıkmış",
+     "en": "ready-made, straight from the fridge"
+    },
+    "pantryKey": "puff-pastry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kapak için çırpılmış",
+     "en": "beaten, for glazing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Dana etlerini tuz ve karabiberle tatlandır. Zeytinyağında partiler halinde, her tarafı kızarana kadar kavur.",
+     "en": "Season the beef with salt and pepper. Brown it in the olive oil in batches, turning until every side is coloured."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tencereye tereyağını ekle, soğan ve havucu 8 dakika kavur.",
+     "en": "Add the butter to the same pan and fry the onion and carrot for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Mantarları ekleyip 10 dakika, suyunu salıp çekene kadar pişir.",
+     "en": "Add the mushrooms and cook for 10 minutes, until they have released and reabsorbed their liquid."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Unu ve salçayı ekleyip 1 dakika karıştırarak kavur.",
+     "en": "Stir in the flour and tomato purée and cook for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Et suyu, Worcestershire sosu ve etleri tencereye ekle. Kaynayınca kısık ateşte 90 dakika pişir.",
+     "en": "Return the beef to the pan with the stock and Worcestershire sauce. Once bubbling, simmer gently for 90 minutes."
+    },
+    "timerSeconds": 5400
+   },
+   {
+    "text": {
+     "tr": "Sosun kıvamını ve tuzunu kontrol et, ardından tamamen soğumaya bırak.",
+     "en": "Check the seasoning and consistency of the gravy, then leave it to cool completely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Harcı fırın kabına aktar, milföy hamurunu üstüne ört, kenarlarını bastırarak yapıştır ve çırpılmış yumurtayı sür.",
+     "en": "Heat the oven to 200 degrees. Transfer the filling to a pie dish, lay the pastry on top, press the edges to seal and brush with the beaten egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 25 dakika üstü altın rengi olana kadar pişir.",
+     "en": "Bake for 25 minutes, until the pastry is golden."
+    },
+    "timerSeconds": 1500
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "59310039-04f9-4a5b-8a96-4d11e1758760",
+  "slug": "sunday-roast",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Sunday roast (dana)",
+   "en": "Sunday roast beef with Yorkshire pudding"
+  },
+  "shortTitle": {
+   "tr": "Dana rosto",
+   "en": "Roast beef"
+  },
+  "description": {
+   "tr": "Pazar öğlenlerinin klasiği: kızarmış dana eti, fırın patatesi, şişmiş Yorkshire pudding ve bol sosla servis edilen bir ana yemek.",
+   "en": "The traditional Sunday lunch: roast beef, crisp roast potatoes, a puffed Yorkshire pudding and a rich onion gravy. It is built for sharing around the table."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 80,
+  "waitMinutes": 50,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana bonfile",
+     "en": "Beef fillet"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "bağı alınmış",
+     "en": "trimmed"
+    },
+    "pantryKey": "beef-steak",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "soyulmuş, 4 parçaya bölünmüş",
+     "en": "peeled and cut into 4 pieces"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "Yorkshire hamuru için",
+     "en": "for the Yorkshire batter"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "Yorkshire hamuru için",
+     "en": "for the Yorkshire batter"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kızartma ve tepsi için",
+     "en": "for roasting and the tins"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yorkshire hamurunu hazırla: yumurta, süt, un ve bir tutam tuzu pürüzsüz olana kadar çırp. Hamuru buzdolabında 30 dakika dinlendir.",
+     "en": "Make the Yorkshire batter: whisk the eggs, milk, flour and a pinch of salt until smooth. Rest it in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Patatesleri tuzlu kaynar suda 5 dakika haşla, süz ve yağla kaplayıp fırın tepsisine al.",
+     "en": "Parboil the potatoes in boiling salted water for 5 minutes, drain, toss in oil and put them in a roasting tin."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt. Bonfileyi tuz ve karabiberle tatlandır, yağda tavada her tarafını mühürle.",
+     "en": "Heat the oven to 220 degrees. Season the fillet with salt and pepper and seal it in hot oil on all sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Eti patateslerle birlikte tepsiye koy ve 220 derecede 20 dakika pişir.",
+     "en": "Put the beef in the tin with the potatoes and roast at 220 degrees for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye düşür ve 40 dakika daha pişir.",
+     "en": "Lower the oven to 180 degrees and cook for 40 minutes more."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Eti folyoya sarıp 20 dakika dinlenmeye bırak.",
+     "en": "Wrap the beef in foil and let it rest for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye çıkar. Muffin kalıplarına yağ koyup kızdır, hamuru döküp 20 dakika şişip altın rengi olana kadar pişir.",
+     "en": "Turn the oven up to 220 degrees. Heat oil in a muffin tin, pour in the batter and bake for 20 minutes, until puffed and golden."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Tepsideki suları ve soğanı tencereye al, 5 dakika kavur. Tereyağını ve sıcak et suyunu ekleyip sosu kaynat.",
+     "en": "Pour the pan juices into a saucepan with the onion and fry for 5 minutes. Add the butter and hot stock and bring the gravy to the boil."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Misafir",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d63680ce-f481-4b73-b333-d08def41a51a",
+  "slug": "roast-chicken",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Roast chicken (İngiliz usulü)",
+   "en": "British roast chicken dinner"
+  },
+  "shortTitle": {
+   "tr": "İngiliz roast tavuk",
+   "en": "Roast chicken"
+  },
+  "description": {
+   "tr": "Limonlu tereyağıyla kokulandırılmış, derisi çıtır bütün tavuk. Yanında fırın patates ve kendi suyuyla yapılan sos servis edilir.",
+   "en": "A whole chicken rubbed with lemon and garlic butter, its skin crisp and its juices turned into a simple gravy. Roast potatoes go in the same tin."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 90,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bütün tavuk",
+     "en": "Whole chicken"
+    },
+    "amount": 1500,
+    "unit": "g",
+    "note": {
+     "tr": "içi temizlenmiş",
+     "en": "cleaned, giblets removed"
+    },
+    "pantryKey": "whole-chicken",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "softened"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kabuğu rendelenmiş, yarısı ayrılmış",
+     "en": "zest grated, half reserved"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çeyrek doğranmış",
+     "en": "quartered"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, orta boy parçalar",
+     "en": "peeled and cut into medium chunks"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Tavuğu kağıt havluyla kurulayıp tuz ve karabiberle içinden dışından tatlandır.",
+     "en": "Heat the oven to 200 degrees. Pat the chicken dry and season it inside and out with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını, sarımsağı, kekiği ve limonun kabuğunu karıştır. Bu karışımı derinin altına ve üzerine sür.",
+     "en": "Mix the butter, garlic, thyme and lemon zest. Work it under the skin and over the outside of the bird."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limonun yarısını ve çeyrek soğanı tavuğun içine yerleştir.",
+     "en": "Put the reserved lemon half and the onion quarters inside the cavity."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri zeytinyağı ve tuzla kaplayıp tavuğun etrafına diz, tavuğu fırın tepsisine al.",
+     "en": "Toss the potatoes in the olive oil and salt, arrange them around the chicken and set the bird in the tin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuğu 200 derecede 75 dakika pişir.",
+     "en": "Roast the chicken at 200 degrees for 75 minutes."
+    },
+    "timerSeconds": 4500
+   },
+   {
+    "text": {
+     "tr": "Tavuğu folyoyla gevşekçe sarıp 15 dakika dinlendir.",
+     "en": "Cover the chicken loosely with foil and rest it for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tepsideki suyu bir tavaya al, unu serpip çırparak 2 dakika kaynat.",
+     "en": "Pour the pan juices into a frying pan, sprinkle over the flour and whisk over the heat for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Sıcak tavuk suyunu yavaş yavaş ekleyip sosu tuzla tatlandır. Tavuğu dilimleyip patateslerle servis et.",
+     "en": "Whisk in the hot chicken stock a little at a time and season the gravy. Carve the chicken and serve with the potatoes."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Tavuklu",
+   "Kolay",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c7f0a4b2-f081-4f2b-8f19-b193fd66d9e6",
+  "slug": "bangers-and-mash",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Bangers and mash (dana sosis)",
+   "en": "Beef bangers and mash"
+  },
+  "shortTitle": {
+   "tr": "Bangers and mash",
+   "en": "Bangers and mash"
+  },
+  "description": {
+   "tr": "Tavada kızartılan dana sosisler, tereyağlı patates püresi ve soğanlı et sosuyla hazırlanan, hızlı ve doyurucu bir İngiliz akşam yemeği.",
+   "en": "Beef sausages fried until well browned, served on buttery mashed potato with an onion gravy. It is quick, filling and simple to make on a weeknight."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana sosis",
+     "en": "Beef sausages"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "beef-sausage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, kabaca doğranmış",
+     "en": "peeled and roughly chopped"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "warm"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka dilimlenmiş",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tam taneli hardal",
+     "en": "Wholegrain mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri tuzlu suda 20 dakika haşla.",
+     "en": "Boil the potatoes in salted water for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Patatesleri süz, tereyağı ve ılık sütle ezerek pürüzsüz bir püre yap. Tuz ve karabiberle tatlandır.",
+     "en": "Drain the potatoes and mash them smooth with the butter and warm milk. Season with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosisleri yağda orta ateşte 15 dakika, sık sık çevirerek kızart.",
+     "en": "Fry the sausages in the oil over a medium heat for 15 minutes, turning them often."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ayrı bir tavada soğanı 10 dakika, yumuşayıp kararana kadar kavur.",
+     "en": "In a separate pan, fry the onion for 10 minutes until soft and deep golden."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Unu serpip 1 dakika karıştır.",
+     "en": "Sprinkle over the flour and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Et suyu ve hardalı ekleyip sos koyulaşana kadar 5 dakika kaynat.",
+     "en": "Add the stock and mustard and simmer for 5 minutes, until the gravy thickens."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sosisleri püreyle birlikte servis tabağına al, soğan sosunu üzerine dök ve maydanozla süsle.",
+     "en": "Serve the sausages on the mash, spoon the onion gravy over the top and scatter with parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavada",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "13694652-32ee-4a34-bc7c-27d4f98da988",
+  "slug": "toad-in-the-hole",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Toad in the hole (dana sosis)",
+   "en": "Toad in the hole with beef sausages"
+  },
+  "shortTitle": {
+   "tr": "Toad in the hole",
+   "en": "Toad in the hole"
+  },
+  "description": {
+   "tr": "Dana sosislerin sıcak yağda şişip kızaran yumurtalı hamurun içinde pişirildiği, kabarık ve çıtır bir İngiliz ev yemeği. Soğan sosuyla servis edilir.",
+   "en": "Beef sausages baked in a hot tin under a light egg batter until it puffs up crisp and golden. It is served with an onion gravy."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana sosis",
+     "en": "Beef sausages"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "beef-sausage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "fırın kabı için",
+     "en": "for the tin"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hardal",
+     "en": "Mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "mustard",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu tuz ve karabiberle karıştır, yumurta ve sütü ekleyip pürüzsüz bir hamur elde et. Hamuru 30 dakika dinlendir.",
+     "en": "Mix the flour with salt and pepper, then beat in the eggs and milk to a smooth batter. Let it rest for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt. Yağı 20 cm'lik fırın kabına koyup fırında 10 dakika kızdır.",
+     "en": "Heat the oven to 220 degrees. Put the oil in a 20 cm tin and heat it in the oven for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sosisleri kızgın yağın içine yerleştir ve 5 dakika fırında kısmen pişir.",
+     "en": "Lay the sausages in the hot fat and bake them for 5 minutes to start colouring."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru sosislerin üzerine döküp 25 dakika şişip altın rengi alana kadar pişir.",
+     "en": "Pour the batter over the sausages and bake for 25 minutes, until risen and golden."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tereyağında soğanı 8 dakika kavur.",
+     "en": "Fry the onion in the butter for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Et suyu ve hardalı ekleyip sos koyulaşana kadar kaynat.",
+     "en": "Add the stock and mustard and simmer until the gravy thickens."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Toad in the hole'u kesip soğan sosuyla servis et.",
+     "en": "Cut the toad in the hole into portions and serve with the onion gravy."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d8699ddc-6d6e-4f87-8d8c-ef05696bdbab",
+  "slug": "beef-wellington",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Beef Wellington",
+   "en": "Beef Wellington"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dana bonfilenin mantar ezmesi ve füme hindi dilimleriyle sarılıp milföy içinde fırınlandığı, hazırlığı zaman isteyen özel bir ana yemek.",
+   "en": "Beef fillet wrapped in mushroom duxelles and thin smoked turkey, then baked in puff pastry. It takes planning, but it is a showpiece for guests."
+  },
+  "servings": 6,
+  "prepMinutes": 45,
+  "cookMinutes": 35,
+  "waitMinutes": 40,
+  "timeNote": null,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana bonfile",
+     "en": "Beef fillet"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "tek parça",
+     "en": "in one piece"
+    },
+    "pantryKey": "beef-steak",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Milföy hamuru",
+     "en": "Puff pastry"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": {
+     "tr": "hazır, soğuk",
+     "en": "ready-made, chilled"
+    },
+    "pantryKey": "puff-pastry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "çok ince doğranmış",
+     "en": "very finely chopped"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Shallots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çok ince doğranmış",
+     "en": "very finely chopped"
+    },
+    "pantryKey": "shallot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Füme hindi",
+     "en": "Smoked turkey"
+    },
+    "amount": 6,
+    "unit": "dilim",
+    "note": {
+     "tr": "çok ince dilimlenmiş",
+     "en": "very thinly sliced"
+    },
+    "pantryKey": "smoked-turkey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kapak için çırpılmış",
+     "en": "beaten, for glazing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kekik",
+     "en": "Fresh thyme"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ayrılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Bonfileyi tuz ve karabiberle tatlandır, zeytinyağında yüksek ateşte her tarafını kısa sürede mühürle.",
+     "en": "Heat the oven to 200 degrees. Season the fillet with salt and pepper and quickly sear it in hot olive oil on every side."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Eti dijon hardalıyla kaplayıp bir kenara al, soğumaya bırak.",
+     "en": "Brush the fillet all over with the Dijon mustard and set it aside to cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mantarı, arpacık soğanı ve kekiği tereyağında 10 dakika kavur.",
+     "en": "Fry the mushrooms, shallots and thyme in the butter for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Karışımı tuz ve karabiberle tatlandır, tamamen soğumaya bırak.",
+     "en": "Season the mushroom mixture with salt and pepper and let it cool completely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Plastik sargının üzerine füme hindi dilimlerini yan yana diz, üzerine mantar karışımını yay ve bonfileyi ortasına koy.",
+     "en": "On a sheet of cling film, lay the smoked turkey slices side by side, spread the mushroom mixture over them and set the fillet in the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Plastik sargıyla eti sıkıca sar ve buzdolabında 30 dakika dinlendir.",
+     "en": "Wrap the beef tightly in the cling film and chill it for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Milföy hamurunu unlu tezgahta ince açıp sarılmış eti tamamen sar. Kenarlarını bastırarak kapat ve yumurta sür.",
+     "en": "Roll out the puff pastry on a floured surface, wrap it around the chilled fillet, press the seams shut and brush with beaten egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sürülmüş hamuru fırın tepsisine koy ve 200 derecede 25 dakika pişir.",
+     "en": "Put the wrapped beef on a baking tray and bake at 200 degrees for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Dilimlemeden önce 10 dakika dinlendir.",
+     "en": "Rest for 10 minutes before slicing."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi",
+   "guest",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "aca6c176-94a5-4098-8942-a0282fac8968",
+  "slug": "lancashire-hotpot",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Lancashire hotpot",
+   "en": "Lancashire hotpot"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu eti, soğan ve havucun yavaş fırınlandığı, üstü yan yana dizilmiş patates dilimleriyle kızarmış bir güveç. Kışın en çok sevilen fırın yemeklerinden biridir.",
+   "en": "Lamb, onion and carrot baked slowly in a deep dish, topped with overlapping potato slices that turn crisp and golden. A winter favourite from the north of England."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 120,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu gerdan",
+     "en": "Lamb neck"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "büyük parçalar halinde kesilmiş",
+     "en": "cut into large pieces"
+    },
+    "pantryKey": "lamb-neck",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş, ince dilimlenmiş",
+     "en": "peeled and thinly sliced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onions"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka kesilmiş",
+     "en": "cut into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yuvarlak dilimlenmiş",
+     "en": "sliced into rounds"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt. Kuzu gerdanı tuz ve karabiberle tatlandır, unla hafifçe bula.",
+     "en": "Heat the oven to 170 degrees. Season the lamb with salt and pepper and dust it lightly with flour."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı kızdırıp etleri partiler halinde her tarafı kızarana kadar kavur, bir kenara al.",
+     "en": "Heat the oil and brown the lamb in batches on all sides, then set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğan ve havucu hazırla; soğanı halka halka, havucu yuvarlak dilimle.",
+     "en": "Prepare the vegetables: slice the onions into rings and the carrots into rounds."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Güveç kabının dibine soğan ve havucu koy, üzerine etleri yerleştir. Defne yaprağı ve kekiği arasına serp.",
+     "en": "Layer the onion and carrot in the bottom of a deep casserole, add the lamb and tuck in the bay leaves and thyme."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Et suyunu Worcestershire sosuyla karıştırıp kaba dök; etlerin yarısına kadar gelsin.",
+     "en": "Stir the Worcestershire sauce into the stock and pour it in until it reaches halfway up the lamb."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patates dilimlerini üst üste dizip eritilmiş tereyağı sür, kapağını kapatıp 90 dakika pişir.",
+     "en": "Arrange the potato slices overlapping on top, brush with melted butter, cover and cook for 90 minutes."
+    },
+    "timerSeconds": 5400
+   },
+   {
+    "text": {
+     "tr": "Kapağı aç ve patatesler altın rengi olana kadar 30 dakika daha pişir.",
+     "en": "Uncover and bake for a further 30 minutes, until the potatoes are golden."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Sıcak servis et.",
+     "en": "Serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c1cc517b-19c1-44f0-b452-edaa59234f40",
+  "slug": "kedgeree",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kedgeree",
+   "en": "Kedgeree"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pirinç, füme balık, yumurta ve köri tadıyla hazırlanan, Hint kökenli bir İngiliz kahvaltısı. Sıcak servis edildiğinde doyurucu bir öğün olur.",
+   "en": "Rice, smoked fish and boiled egg lifted with curry spice, a dish of colonial India that became a British breakfast. Served warm, it makes a satisfying lunch too."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Basmati pirinç",
+     "en": "Basmati rice"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "basmati-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Füme balık fileto",
+     "en": "Smoked fish fillet"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "füme morina ya da mezgit, derisi alınmış",
+     "en": "smoked cod or whiting, skinned"
+    },
+    "pantryKey": "white-fish-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış",
+     "en": "hard-boiled"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köri tozu",
+     "en": "Curry powder"
+    },
+    "amount": 2,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "curry-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "balığı pişirmek ve pirinç için",
+     "en": "to poach the fish and cook the rice"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş, servis için",
+     "en": "cut into wedges, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurtaları 9 dakika haşla, soğuk suda soy ve dörde böl.",
+     "en": "Boil the eggs for 9 minutes, cool them in cold water, peel and quarter them."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Balığı 500 ml suda 5 dakika pişir, süz; pişirme suyunu sakla ve balığı pulla.",
+     "en": "Poach the fish in the 500 ml of water for 5 minutes, then drain, keeping the liquid, and flake the fish."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tereyağında soğanı 8 dakika kavur.",
+     "en": "Fry the onion in the butter for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Köri ve zerdeçalı ekleyip pirinci de katarak 1 dakika karıştır.",
+     "en": "Stir in the curry powder, turmeric and rice, and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Balık pişirme suyunu ekle, kaynayınca kapağını kapatıp kısık ateşte 15 dakika pişir.",
+     "en": "Pour in the reserved fish water, bring to the boil, then cover and simmer on low for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Pişen pirinci çatalla kabartıp balığı, yumurtayı ve maydanozu ekle, tuz ve karabiberle tatlandır.",
+     "en": "Fluff the rice with a fork, then fold in the fish, eggs and parsley. Season with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limon dilimleriyle sıcak servis et.",
+     "en": "Serve warm with the lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Pilav",
+   "Balık"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
