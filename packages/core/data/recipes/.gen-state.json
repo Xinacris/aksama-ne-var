@@ -188,12 +188,23 @@
     "galdirik-corbasi",
     "ebegumeci-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "borulce-corbasi",
+    "barbunya-corbasi",
+    "bakla-corbasi",
+    "mas-fasulyesi-corbasi",
+    "hindi-corbasi",
+    "ciger-corbasi",
+    "alaca-corbasi",
+    "siyez-bulguru-corbasi",
+    "galdirik-corbasi",
+    "ebegumeci-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91778,
    "startedAt": "2026-10-15T19:42:54.194Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:46:23.863Z"
   },
   {
    "id": "g007",
@@ -709,11 +720,11 @@
     "misirli-salata",
     "fasulye-piyazi-antalya-usulu"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:44:46.676Z",
    "finishedAt": null
   },
   {
