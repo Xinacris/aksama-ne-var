@@ -120,12 +120,23 @@
     "kemik-suyu-corbasi",
     "balik-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "koz-patlican-corbasi",
+    "kozlenmis-kirmizi-biber-corbasi",
+    "mancar-corbasi",
+    "pazi-corbasi",
+    "gendime-corbasi",
+    "dovme-corbasi",
+    "firik-corbasi",
+    "etli-sebze-corbasi",
+    "kemik-suyu-corbasi",
+    "balik-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91483,
    "startedAt": "2026-10-15T19:36:20.104Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:39:31.684Z"
   },
   {
    "id": "g005",
@@ -599,11 +610,11 @@
     "deniz-borulcesi-salatasi",
     "sevketibostan-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:38:43.385Z",
    "finishedAt": null
   },
   {
