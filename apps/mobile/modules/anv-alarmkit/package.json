@@ -1,0 +1,9 @@
+{
+  "name": "anv-alarmkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cooking timers as iOS 26 system alarms (AlarmKit). Linked only with EXPO_PUBLIC_ENABLE_ALARMKIT=1.",
+  "license": "UNLICENSED",
+  "author": "Akşama ne var?",
+  "homepage": "https://aksama-ne-var.vercel.app"
+}

@@ -1,4 +1,4 @@
 {
-  "ios": { "CFBundleDisplayName": "What’s for dinner?", "CFBundleName": "What’s for dinner?" },
+  "ios": { "CFBundleDisplayName": "What’s for dinner?", "CFBundleName": "What’s for dinner?", "NSAlarmKitUsageDescription": "So your cooking timers ring like the phone’s own alarm when time is up, also in silent mode and on the lock screen." },
   "android": { "app_name": "What’s for dinner?" }
 }

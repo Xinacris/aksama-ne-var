@@ -93,8 +93,10 @@ export interface ScheduledAlarm {
  * Local notifications a device should have scheduled for `now`: one per
  * running timer that ends in the future, in unfinished sessions. Paused,
  * dismissed, finished or deleted timers have none — reconcile against this.
+ * `handedOff`: finish keys another alarm on this device takes care of (the
+ * phone's Clock app, AlarmKit), so the same finish doesn't ring twice.
  */
-export function alarmSchedule(sessions: Pick<CookingSession, "key" | "phase" | "timers">[], now: Date): ScheduledAlarm[] {
+export function alarmSchedule(sessions: Pick<CookingSession, "key" | "phase" | "timers">[], now: Date, handedOff: ReadonlySet<string> = new Set()): ScheduledAlarm[] {
   const out: ScheduledAlarm[] = [];
   for (const s of sessions) {
     if (s.phase === "done") continue;
@@ -102,6 +104,7 @@ export function alarmSchedule(sessions: Pick<CookingSession, "key" | "phase" | "
       if (t.dismissed || t.pausedLeft != null) continue;
       const at = Date.parse(t.endsAt);
       if (at <= now.getTime()) continue;
+      if (handedOff.has(finishKey(t))) continue;
       out.push({ id: `timer-${finishKey(t)}`, sessionKey: s.key, timerId: t.id, label: t.label, fireAt: new Date(at) });
     }
   }
@@ -113,6 +116,49 @@ export function reconcileSchedule(scheduled: string[], wanted: ScheduledAlarm[])
   const want = new Set(wanted.map((w) => w.id));
   const have = new Set(scheduled);
   return { cancel: scheduled.filter((id) => id.startsWith("timer-") && !want.has(id)), schedule: wanted.filter((w) => !have.has(w.id)) };
+}
+
+/** Finish keys of every timer that still exists, for forgetting old hand-offs. */
+export function liveFinishKeys(sessions: Pick<CookingSession, "phase" | "timers">[]): Set<string> {
+  return new Set(sessions.filter((s) => s.phase !== "done").flatMap((s) => s.timers.filter((t) => !t.dismissed).map(finishKey)));
+}
+
+/**
+ * The finishes another alarm on this device answers for, after a change. Finishes already past
+ * stay handed off (the phone's alarm rang for them; the app must not ring again on reopening).
+ * Future ones are exactly what the native side covers now (`nativeFuture`): a timer it no
+ * longer covers (permission withdrawn, sound off, type switched) goes back to the notification.
+ * Keys of closed or deleted timers are forgotten.
+ */
+export function nextHandoffs(stored: Iterable<string>, sessions: Pick<CookingSession, "phase" | "timers">[], now: Date, nativeFuture: Iterable<string>): string[] {
+  const running = sessions.filter((s) => s.phase !== "done").flatMap((s) => s.timers.filter((t) => !t.dismissed && t.pausedLeft == null));
+  const past = new Set(running.filter((t) => Date.parse(t.endsAt) <= now.getTime()).map(finishKey));
+  const future = new Set(running.filter((t) => Date.parse(t.endsAt) > now.getTime()).map(finishKey));
+  const out = new Set([...stored].filter((k) => past.has(k)));
+  for (const k of nativeFuture) if (future.has(k)) out.add(k);
+  return [...out].sort();
+}
+
+/**
+ * A stable UUID for one finish (`id@endsAt`), so a native alarm (AlarmKit) can be found and
+ * cancelled from the timer alone, with nothing stored. Four 32-bit FNV-1a hashes with different
+ * seeds (32-bit maths: the web targets ES2017, no BigInt); the version and variant bits are set
+ * so the result parses as a UUID everywhere.
+ */
+export function finishUuid(key: string): string {
+  const fnv = (seed: number) => {
+    let h = seed >>> 0;
+    for (let i = 0; i < key.length; i++) {
+      h ^= key.charCodeAt(i);
+      h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h.toString(16).padStart(8, "0");
+  };
+  const hex = [0x811c9dc5, 0x050c5d1f, 0x9e3779b9, 0x2545f491].map(fnv).join("").split("");
+  hex[12] = "8"; // version 8: custom
+  hex[16] = ((parseInt(hex[16], 16) & 0x3) | 0x8).toString(16); // RFC 4122 variant
+  const h = hex.join("");
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
 }
 
 export { ALARM_TONE, ALARM_TONE_MS, ALARM_VIBRATION } from "./alarmTone";

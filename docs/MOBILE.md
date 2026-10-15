@@ -66,17 +66,42 @@ To use a local web server instead: `EXPO_PUBLIC_API_URL=http://<computer-ip>:300
   `packages/core/src/domain/alarmTone.ts`; the web plays the same beeps) loops with vibration until
   Stop, for at most 2 minutes. Two timers ending together share one banner and one sound. On iOS it
   rings even with the silent switch on.
+- **In cooking mode** the running timer sits under its step (big time, Duraklat / +1 dk / Kapat).
+  Timers of other steps or dishes show in a one-line strip ("Adım 2 … 4:12"); tap it to go back to
+  that step. Nothing moves while the time counts down.
 - **App in the background / phone locked:** a local notification with the same sound at the
-  timer's end time, on the Android channel "Zamanlayıcılar / Timers" (high importance; "Timers
-  (silent)" when Ayarlar › Zamanlayıcı sesi is off). Pause, +1 dk, restart, close, finish and Stop
+  timer's end time, on the Android channel "Zamanlayıcılar / Timers" (id `timers-alarm`, max
+  importance; it replaced the old high-importance `timers` channel, which is deleted, because
+  Android never lets an app raise a channel's importance). "Timers (silent)" is used when
+  Ayarlar › Zamanlayıcı sesi is off. Pause, +1 dk, restart, close, finish and Stop
   cancel or move it. Tapping it opens the cooking session and counts as Stop. There is no
   exact-alarm permission, so some phones (battery savers) deliver it a few seconds late.
 - **Permission** is asked the first time a timer starts. If it's refused, the in-app alarm still
   works and a one-line hint appears once.
 - A timer that ended more than 10 minutes before the app was opened is only shown as finished,
   without sound.
-- Expo Go plays notifications with the default sound. The custom tone in notifications needs the
-  APK (`npm run apk`), because the sound file is bundled into the native build.
+- **The custom sound needs a native build.** Expo Go plays notifications with the default sound,
+  and a development build made before Round 3.1 doesn't have the file either. Then expo-notifications
+  logs "Custom sound 'timer_alarm.wav' not found in native app" (iOS) or the same for the channel
+  (Android). The file is registered in `app.json` (the `expo-notifications` plugin's `sounds`). Make a
+  new development build (`eas build --profile development`, or `npx expo run:ios` on a Mac) or the APK
+  (`npm run apk`). iOS limits notification sounds to 30 s (.wav/.caf/.aiff); ours is about 4 s.
+- **Android: "Telefonun saatinde kur / Set on phone clock"** under a running timer hands it to the
+  phone's Clock app (`AlarmClock.ACTION_SET_TIMER` via expo-intent-launcher, skipping the Clock UI;
+  permission `com.android.alarm.permission.SET_ALARM`, a normal permission with no prompt). The app
+  then drops its own notification and in-app ring for that finish, so it doesn't ring twice. Android
+  has no way to pause, extend or cancel a timer in the Clock app, so the row says so. After +1 dk the
+  app rings for the new end again, and the Clock app still rings at the old one. It's a per-timer
+  choice, not a setting. No Clock app: an error line, and the app keeps the timer.
+- **iOS 26+: "Telefonun saati" (AlarmKit)**, off by default. With it, each running timer is a system
+  alarm that rings in silent mode and over the lock screen even if the app was killed, with
+  `timer_alarm.wav`. Pause / +1 dk / close cancel or move it. Ayarlar › Zamanlayıcı türü (Telefonun
+  saati / Uygulama bildirimi; shown only where it is available) switches back. Alarm permission is
+  asked on the first timer. If it's refused, there's one hint and the notification takes over. With
+  Zamanlayıcı sesi off it isn't used (AlarmKit can't ring silently). It's a local module
+  (`modules/anv-alarmkit`), linked **only** in builds made with `EXPO_PUBLIC_ENABLE_ALARMKIT=1` (see
+  README), so the default build never compiles its Swift. Not built or tested on a device yet. No
+  countdown on the lock screen: that needs a widget extension (Live Activity), which is a later step.
 
 ## Checks (no device needed)
 

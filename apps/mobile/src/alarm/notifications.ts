@@ -10,18 +10,26 @@ import { getLocale, t } from "@anv/core/i18n";
  * after every change — pause, +1 min, restart, close, finish and Stop all cancel or move it.
  * No exact-alarm permission: Android may deliver a few seconds late.
  */
-export const CHANNEL = "timers";
+// "timers-alarm" replaced "timers" (Round 3.2) to get max importance: Android never lets an app
+// raise an existing channel's importance, so it needs a new id; the old channel is deleted.
+export const CHANNEL = "timers-alarm";
 export const CHANNEL_SILENT = "timers-silent";
+const OLD_CHANNELS = ["timers"];
 export const SOUND = "timer_alarm.wav";
 
 let channelsFor: string | null = null;
 
-/** Android channels "Zamanlayıcılar" (alarm sound, high importance) and a silent one for "Zamanlayıcı sesi: Kapalı". */
+/**
+ * Android channels "Zamanlayıcılar" (the alarm sound, max importance: heads-up, sound) and a
+ * silent one for "Zamanlayıcı sesi: Kapalı". The custom sound plays only in a build that has
+ * `timer_alarm.wav` in its resources (a development or release build, not Expo Go).
+ */
 export async function ensureChannels(): Promise<void> {
   if (Platform.OS !== "android" || channelsFor === getLocale()) return;
   channelsFor = getLocale();
+  for (const id of OLD_CHANNELS) await Notifications.deleteNotificationChannelAsync(id).catch(() => {});
   const common = {
-    importance: Notifications.AndroidImportance.HIGH,
+    importance: Notifications.AndroidImportance.MAX,
     vibrationPattern: ALARM_VIBRATION,
     lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
   };
@@ -61,17 +69,31 @@ type Sessions = Pick<CookingSession, "key" | "phase" | "timers">[];
 
 let chain: Promise<void> = Promise.resolve();
 
-/** Bring the scheduled notifications in line with the sessions (serialized, so quick taps can't race). */
-export function syncTimerNotifications(sessions: Sessions, now: Date, sound: boolean): Promise<void> {
-  chain = chain.then(() => reconcile(sessions, now, sound)).catch((e) => console.warn("[alarm]", e));
+/**
+ * Bring the scheduled notifications in line with the sessions (serialized, so quick taps can't
+ * race). `handedOff`: finishes the phone's own alarm rings for (Clock app, AlarmKit): none here.
+ */
+export function syncTimerNotifications(sessions: Sessions, now: Date, sound: boolean, handedOff: ReadonlySet<string> = new Set()): Promise<void> {
+  chain = chain.then(() => reconcile(sessions, now, sound, handedOff)).catch((e) => console.warn("[alarm]", e));
   return chain;
 }
 
-async function reconcile(sessions: Sessions, now: Date, sound: boolean): Promise<void> {
+/** Run after the notifications in the same queue (AlarmKit first, then what it didn't cover). */
+export function inAlarmQueue<T>(job: () => Promise<T>): Promise<T> {
+  const run = chain.then(job);
+  chain = run.then(
+    () => undefined,
+    (e: unknown) => console.warn("[alarm]", e),
+  );
+  return run;
+}
+
+async function reconcile(sessions: Sessions, now: Date, sound: boolean, handedOff: ReadonlySet<string>): Promise<void> {
   if (!(await Notifications.getPermissionsAsync()).granted) return;
   await ensureChannels();
-  // The sound choice is part of the id, so turning "Zamanlayıcı sesi" off moves pending ones to the silent channel.
-  const wanted = alarmSchedule(sessions, now).map((w) => ({ ...w, id: `${w.id}:${sound ? "s" : "m"}` }));
+  // The sound choice and the channel are part of the id, so turning "Zamanlayıcı sesi" off moves
+  // pending ones to the silent channel, and ones from the old "timers" channel are rescheduled.
+  const wanted = alarmSchedule(sessions, now, handedOff).map((w) => ({ ...w, id: `${w.id}:${sound ? "a" : "m"}` }));
   const scheduled = (await Notifications.getAllScheduledNotificationsAsync()).map((r) => r.identifier);
   const { cancel, schedule } = reconcileSchedule(scheduled, wanted);
   for (const id of cancel) await Notifications.cancelScheduledNotificationAsync(id);

@@ -39,6 +39,22 @@ beforeEach(() => {
 });
 
 describe("background notifications follow the timers", () => {
+  it("Android: the alarm channel has max importance and the alarm sound; the old 'timers' channel is deleted", async () => {
+    const { Platform } = jest.requireActual("react-native") as typeof import("react-native");
+    const os = Platform.OS;
+    Object.defineProperty(Platform, "OS", { configurable: true, get: () => "android" });
+    try {
+      const n = jest.requireMock("expo-notifications") as { setNotificationChannelAsync: jest.Mock; deleteNotificationChannelAsync: jest.Mock };
+      const s = await sessionWith(600);
+      await syncTimerNotifications([s], T0, true);
+      expect(n.deleteNotificationChannelAsync).toHaveBeenCalledWith("timers");
+      expect(n.setNotificationChannelAsync).toHaveBeenCalledWith(CHANNEL, expect.objectContaining({ importance: 5, sound: SOUND, name: "Zamanlayıcılar" }));
+      expect(CHANNEL).not.toBe("timers");
+    } finally {
+      Object.defineProperty(Platform, "OS", { configurable: true, get: () => os });
+    }
+  });
+
   it("one per running timer at endsAt, with the alarm sound on the Timers channel and the session's link", async () => {
     const s = await sessionWith(600);
     await syncTimerNotifications([s], T0, true);

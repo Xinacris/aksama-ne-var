@@ -1058,7 +1058,11 @@
     "timerSound": "Timer sound",
     "timerSoundNote": "When a timer ends an alarm rings until you tap Stop, for up to 2 minutes. When off, the banner and vibration stay.",
     "on": "On",
-    "off": "Off"
+    "off": "Off",
+    "timerKind": "Timer type",
+    "timerKindNotification": "App notification",
+    "timerKindPhoneClock": "Phone clock",
+    "timerKindNote": "Phone clock: when time is up it rings like the phone’s own alarm, also in silent mode and on the lock screen."
   },
   "language": {
     "tr": "Türkçe",
@@ -1309,6 +1313,11 @@
     "channel": "Timers",
     "channelSilent": "Timers (silent)",
     "deniedPhone": "Notifications are off: the alarm won’t sound while the phone is locked; it rings while the app is open.",
-    "deniedWeb": "Notifications are off: while the tab is in the background only its title blinks."
+    "deniedWeb": "Notifications are off: while the tab is in the background only its title blinks.",
+    "phoneClock": "Set on phone clock",
+    "phoneClockLabel": "Set {{label}} on the phone clock",
+    "phoneClockSet": "Set on the phone clock. Pause and +1 min don’t reach it.",
+    "phoneClockFailed": "Couldn’t open the phone clock; the timer keeps running in the app.",
+    "alarmKitDenied": "Alarms aren’t allowed: timers ring through the app’s notification instead."
   }
 }

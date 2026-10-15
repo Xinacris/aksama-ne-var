@@ -55,6 +55,34 @@ Root scripts run across the workspaces (`npm run <script> -w @anv/web` etc. for 
 | `npm run test:e2e` | Playwright at 390×844 and 1440×900: two-member journey, board drag-and-drop, import, leftovers, cooking mode with timers, axe on every screen (builds and starts the app on port 3100) |
 | `npm run screenshots` | Every screen at 390/1440 × light/dark into `apps/web/screenshots/` (`SHOTS=bugun,liste` to limit) |
 
+## Phone app: what needs a native build
+
+Expo Go (`npm run mobile`) runs everything except the parts below. They need a **development
+build** (`eas build --profile development`, or `npx expo run:ios` / `run:android` on a machine with
+Xcode / Android Studio) or the local APK (`npm run apk`). Details: [docs/MOBILE.md](docs/MOBILE.md).
+
+| Feature | Expo Go | Native build |
+|---|---|---|
+| Timer tone in notifications (`timer_alarm.wav`) | default sound (expo-notifications logs "Custom sound … not found") | the app's tone |
+| Android "Telefonun saatinde kur" (Clock app timer) | works | works |
+| iOS 26+ "Telefonun saati" (AlarmKit) | — | only with `EXPO_PUBLIC_ENABLE_ALARMKIT=1` (below) |
+
+### iOS: "Telefonun saati" / AlarmKit (off by default)
+
+The local module `apps/mobile/modules/anv-alarmkit` is **not linked** unless the build is made with
+`EXPO_PUBLIC_ENABLE_ALARMKIT=1`, so a default build never compiles its Swift. It has not been
+compiled yet (it was written on Linux). For the first test build:
+
+1. Xcode 26 or newer (the iOS 26 SDK), and an iPhone on iOS 26+ (the simulator has limited AlarmKit support).
+2. Build with the flag, e.g. `EXPO_PUBLIC_ENABLE_ALARMKIT=1 npx expo run:ios --device` on a Mac, or
+   on EAS set `"env": { "EXPO_PUBLIC_ENABLE_ALARMKIT": "1" }` in the development profile of `eas.json`
+   (the variable must be present at prebuild time *and* in the JS bundle).
+3. In the app: start a timer in cooking mode → iOS asks "allow alarms" → lock the phone with the
+   silent switch on → it should ring with the app's tone. Ayarlar › Zamanlayıcı türü switches back
+   to the app notification.
+4. If the iOS build fails in `AnvAlarmKitModule.swift`, build without the flag (everything else works)
+   and send the Xcode error.
+
 ## Try it with two people in one browser
 
 1. Open the app → **Hesap oluştur** → pick a few dishes → **Devam et** → copy the invite link →

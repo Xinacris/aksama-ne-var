@@ -33,8 +33,11 @@ import { listJoin } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import { newId } from "@anv/core/lib/id";
 import { touchTarget } from "@anv/core/design/tokens";
+import { finishKey } from "@anv/core/domain/timerAlarm";
+import { ensureAlarmKitPermission } from "@/alarm/alarmKit";
 import { ensureNotificationPermission } from "@/alarm/notifications";
-import { useTakeAlarmHint } from "@/alarm/prefs";
+import { phoneClockAvailable, setOnPhoneClock } from "@/alarm/phoneClock";
+import { useHandoffs, useTakeAlarmHint, useTimerKind } from "@/alarm/prefs";
 import { OtherTimersStrip, StepTimers, type TimerActions } from "@/components/CookTimers";
 import { LeftoverChoices } from "@/components/LeftoverChoices";
 import { recipesMap, selectList, useApp, type AppState } from "@/store";
@@ -202,15 +205,30 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
   const byId = useMemo(() => new Map(recipes.map((r) => [r.id, r])), [recipes]);
   const setNotice = useApp((x) => x.setNotice);
   const takeAlarmHint = useTakeAlarmHint();
+  const [kind, , alarmKit] = useTimerKind();
+  const [handoffs, setHandoffs] = useHandoffs();
+  const handedOff = useMemo(() => new Set(handoffs), [handoffs]);
 
   const change = (tid: string, fn: (x: CookingTimer) => CookingTimer) => updateCooking(session.id, { timers: session.timers.map((x) => (x.id === tid ? fn(x) : x)) });
   const dismiss = (tid: string) => change(tid, (x) => ({ ...x, dismissed: true }));
   // Finished timers ring from the AlarmHost above every screen ("Süre doldu" + Durdur).
   async function start(slot: TimerSlot) {
     await updateCooking(session.id, { timers: [...session.timers, newTimer({ id: newId(), recipe, step, seconds: slot.duration.seconds, now: now(), slot: slot.slot })] });
-    // Asked on the first timer, never on launch; without it the alarm rings only while the app is open.
+    // Asked on the first timer, never on launch. "Telefonun saati" (iOS 26+) asks for alarms first;
+    // without it (or refused) the app's notification rings; without that, only while the app is open.
+    if (alarmKit && kind === "phoneClock") {
+      const alarms = await ensureAlarmKitPermission();
+      if (alarms.granted) return;
+      if (alarms.denied && takeAlarmHint()) setNotice({ kind: "info", text: t("alarm.alarmKitDenied") });
+    }
     const { denied } = await ensureNotificationPermission();
     if (denied && takeAlarmHint()) setNotice({ kind: "info", text: t("alarm.deniedPhone") });
+  }
+  async function toPhoneClock(tid: string) {
+    const x = session.timers.find((y) => y.id === tid);
+    if (!x) return;
+    if (await setOnPhoneClock(x, now())) setHandoffs([...handoffs, finishKey(x)]);
+    else setNotice({ kind: "error", text: t("alarm.phoneClockFailed") });
   }
   const actions: TimerActions = {
     start: (slot) => void start(slot),
@@ -218,6 +236,7 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
     addMinute: (tid) => change(tid, (y) => addTimerTime(y, 60, now())),
     restart: (tid) => change(tid, (y) => restartTimer(y, now())),
     close: dismiss,
+    ...(phoneClockAvailable() ? { phoneClock: (tid: string) => void toPhoneClock(tid) } : {}),
   };
   // A timer in the strip opens its step (and dish), where its controls are.
   const openTimerStep = (x: CookingTimer) => {
@@ -256,7 +275,7 @@ function StepsScreen({ session, recipes }: { session: CookingSession; recipes: R
         <Text style={{ fontSize: 22, lineHeight: 31 }} accessibilityLiveRegion="polite">
           {recipe.steps[step]}
         </Text>
-        <StepTimers slots={slots} label={timerStepLabel({ recipeId: recipe.id, step }, recipe, recipes.length > 1)} now={tick} actions={actions} />
+        <StepTimers slots={slots} label={timerStepLabel({ recipeId: recipe.id, step }, recipe, recipes.length > 1)} now={tick} actions={actions} handedOff={handedOff} />
         <OtherTimersStrip timers={others} byId={byId} withDish={recipes.length > 1} now={tick} onOpen={openTimerStep} onClose={dismiss} />
       </ScrollView>
       <View style={{ flexDirection: "row", gap: 10, padding: 16, paddingBottom: 28, borderTopWidth: 1, borderTopColor: colors.line, backgroundColor: colors.surface }}>

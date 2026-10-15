@@ -1058,7 +1058,11 @@
     "timerSound": "Zamanlayıcı sesi",
     "timerSoundNote": "Süre dolunca alarm çalar: Durdur’a basana kadar, en çok 2 dakika. Kapalıyken uyarı ve titreşim kalır.",
     "on": "Açık",
-    "off": "Kapalı"
+    "off": "Kapalı",
+    "timerKind": "Zamanlayıcı türü",
+    "timerKindNotification": "Uygulama bildirimi",
+    "timerKindPhoneClock": "Telefonun saati",
+    "timerKindNote": "Telefonun saati: süre dolunca sessiz modda ve kilit ekranında da telefonun alarmı gibi çalar."
   },
   "language": {
     "tr": "Türkçe",
@@ -1309,6 +1313,11 @@
     "channel": "Zamanlayıcılar",
     "channelSilent": "Zamanlayıcılar (sessiz)",
     "deniedPhone": "Bildirim izni kapalı: telefon kilitliyken alarm çalmaz, uygulama açıkken çalar.",
-    "deniedWeb": "Bildirim izni kapalı: sekme arkadayken yalnızca sekme başlığı yanıp söner."
+    "deniedWeb": "Bildirim izni kapalı: sekme arkadayken yalnızca sekme başlığı yanıp söner.",
+    "phoneClock": "Telefonun saatinde kur",
+    "phoneClockLabel": "{{label}}: telefonun saatinde kur",
+    "phoneClockSet": "Telefonun saatinde kuruldu. Duraklat ve +1 dk oraya gitmez.",
+    "phoneClockFailed": "Telefonun saati açılamadı; zamanlayıcı uygulamada çalmaya devam ediyor.",
+    "alarmKitDenied": "Alarm izni kapalı: zamanlayıcılar uygulamanın bildirimiyle çalar."
   }
 }
