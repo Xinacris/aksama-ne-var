@@ -1403,12 +1403,23 @@
     "etli-domates-dolmasi",
     "etli-yaprak-sarma"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "etli-kabak",
+    "etli-patlican",
+    "etli-karnabahar",
+    "etli-ayva",
+    "etli-erik",
+    "etli-kayisi-yahni",
+    "etli-kabak-dolmasi",
+    "etli-patlican-dolmasi",
+    "etli-domates-dolmasi",
+    "etli-yaprak-sarma"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 85882,
    "startedAt": "2026-10-15T20:00:31.719Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:03:24.701Z"
   },
   {
    "id": "g045",
@@ -1655,11 +1666,11 @@
     "firinda-kiymali-eriste",
     "etli-pilav"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:02:13.627Z",
    "finishedAt": null
   },
   {
