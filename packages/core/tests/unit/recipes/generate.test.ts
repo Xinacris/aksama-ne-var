@@ -36,12 +36,16 @@ const draft = {
       },
     },
     { name: { tr: "Mantar", en: "Mushrooms" }, amount: 250, unit: "g", note: null, pantryKey: "mushroom", substitute: null },
+    { name: { tr: "Arpacık soğan", en: "Shallots" }, amount: 8, unit: "adet", note: null, pantryKey: "shallot", substitute: null },
+    { name: { tr: "Tereyağı", en: "Butter" }, amount: 2, unit: "yemek kaşığı", note: null, pantryKey: "butter", substitute: null },
     { name: { tr: "Tuz", en: "Salt" }, amount: null, unit: null, note: null, pantryKey: "salt", substitute: null },
   ],
   steps: [
     { text: { tr: "Eti kızgın tencerede parti parti mühürle.", en: "Brown the beef in batches in a hot pot." }, timerSeconds: null },
     { text: { tr: "Şarabı (ya da yerine kullandığın karışımı) ekleyip 2 dakika kaynat.", en: "Add the wine (or the mix you use instead) and boil for 2 minutes." }, timerSeconds: 120 },
-    { text: { tr: "Kapağını kapatıp kısık ateşte 2 saat pişir, mantarı ekleyip 20 dakika daha pişir.", en: "Cover and cook on low heat for 2 hours, add the mushrooms and cook 20 minutes more." }, timerSeconds: 7200 },
+    { text: { tr: "Kapağını kapatıp kısık ateşte 2 saat pişir.", en: "Cover and simmer gently for 2 hours." }, timerSeconds: 7200 },
+    { text: { tr: "Arpacık soğanları ve mantarı tereyağında 10 dakika çevir.", en: "Fry the shallots and mushrooms in the butter for 10 minutes." }, timerSeconds: 600 },
+    { text: { tr: "Sebzeleri yahniye ekleyip 20 dakika daha pişir, tuzunu ayarla.", en: "Stir the vegetables into the stew, cook 20 minutes more and season." }, timerSeconds: 1200 },
   ],
   freezerItem: null,
   tags: ["Tencere", "Etli", "containsAlcohol", "guest"],
@@ -75,6 +79,19 @@ describe("generator", () => {
     expect(wine.substitute).toMatchObject({ name: "Et suyu", quantity: 400, unit: "ml", note: expect.stringMatching(/^Şarap kullanmak istemezseniz/) });
     expect(app.translations?.en?.substituteNotes?.["Kırmızı şarap"]).toMatch(/^If you prefer not to use wine/);
     expect(app).toMatchObject({ id: "boeuf-bourguignon", course: "ana", cuisine: "french", category: "main", leftoverPolicy: "none", leftoverLikelihood: "medium" });
+  });
+
+  it("quality rules: too short, a timer the text doesn't state, cup measures and Kolay with difficulty 3 are sent back", () => {
+    const bad = structuredClone(draft) as typeof draft;
+    bad.steps = bad.steps.slice(0, 3).map((x, i) => (i === 0 ? { ...x, timerSeconds: 300 } : x));
+    bad.ingredients[2] = { ...bad.ingredients[2], unit: "su bardağı", amount: 1 } as never;
+    bad.tags = [...bad.tags, "Kolay"];
+    bad.difficulty = 3;
+    const problems = draftToRecipe(bad, bourguignon).problems.join("\n");
+    expect(problems).toMatch(/steps: 3, expected 5–9/);
+    expect(problems).toMatch(/steps\.0: timer 300s but the text states no time/);
+    expect(problems).toMatch(/cup measures/);
+    expect(problems).toMatch(/"Kolay" with difficulty 3/);
   });
 
   it("answers parse with or without a code fence; prompts carry the rules and the dishes", () => {

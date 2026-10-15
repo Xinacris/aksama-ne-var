@@ -6,6 +6,8 @@
  *   npm run recipes:generate -- --only cacik,piyaz   # these slugs
  *   npm run recipes:generate -- --cuisine italian --category dessert
  *   npm run recipes:generate -- --fill               # converted built-ins: write the missing descriptions
+ *   npm run recipes:generate -- --only a,b --force   # rewrite these generated recipes (never built-ins)
+ *   npm run recipes:generate -- --batch 2            # dishes per Gemini request (default 5; GEN_BATCH)
  *   GEN_PROVIDER=anthropic npm run recipes:generate  # Claude Haiku 5.5 through the Message Batches API
  *
  * Env: GEMINI_API_KEY (or GOOGLE_API_KEY), GEN_MODEL (default gemini-3.1-flash-lite), GEN_DELAY_MS
@@ -41,8 +43,10 @@ const only = opt("only")?.split(",").map((s) => s.trim());
 const cuisine = opt("cuisine");
 const category = opt("category");
 const skipFailed = flag("skip-failed");
+/** Regenerate dishes that already have a generated recipe (e.g. to compare prompt versions); built-ins are never touched. */
+const force = flag("force");
 const MAX_ATTEMPTS = 3; // the first try + 2 retries
-const PER_REQUEST = fill ? 20 : 5;
+const PER_REQUEST = fill ? 20 : Math.max(1, Number(opt("batch") ?? process.env.GEN_BATCH ?? 5));
 const GEMINI_MODEL = process.env.GEN_MODEL ?? "gemini-3.1-flash-lite";
 const CLAUDE_MODEL = process.env.GEN_MODEL ?? "claude-haiku-5-5";
 const DELAY_MS = Number(process.env.GEN_DELAY_MS ?? 6000);
@@ -63,7 +67,7 @@ function todo(): Dish[] {
   return dishes
     .filter((d) => (only ? only.includes(d.slug) : true))
     .filter((d) => (cuisine ? d.cuisine === cuisine : true) && (category ? d.category === category : true))
-    .filter((d) => (fill ? d.existing && haveRecipe.has(d.id) && !haveRecipe.get(d.id)!.description : !d.existing && !haveRecipe.has(d.id)))
+    .filter((d) => (fill ? d.existing && haveRecipe.has(d.id) && !haveRecipe.get(d.id)!.description : !d.existing && (force || !haveRecipe.has(d.id))))
     .filter((d) => !(skipFailed && failed.has(d.slug)))
     .slice(0, limit);
 }
@@ -114,13 +118,31 @@ const promptFor = (group: Dish[], feedback?: Map<string, string[]>) =>
 
 class QuotaExhausted extends Error {}
 
+/** What the run cost, from Gemini's own usage numbers (usageMetadata), printed per request and in total. */
+const usage = { requests: 0, prompt: 0, output: 0, thoughts: 0, waits: 0, badAnswers: 0, started: Date.now() };
+type UsageMetadata = { promptTokenCount?: number; candidatesTokenCount?: number; thoughtsTokenCount?: number; totalTokenCount?: number };
+
+function recordUsage(u: UsageMetadata | undefined) {
+  usage.requests++;
+  usage.prompt += u?.promptTokenCount ?? 0;
+  usage.output += u?.candidatesTokenCount ?? 0;
+  usage.thoughts += u?.thoughtsTokenCount ?? 0;
+  console.log(`  request ${usage.requests}: ${u?.promptTokenCount ?? "?"} in, ${u?.candidatesTokenCount ?? "?"} out${u?.thoughtsTokenCount ? `, ${u.thoughtsTokenCount} thinking` : ""}`);
+}
+
+function usageSummary(): string {
+  const secs = Math.round((Date.now() - usage.started) / 1000);
+  return `${usage.requests} requests, ${usage.prompt} input + ${usage.output} output${usage.thoughts ? ` + ${usage.thoughts} thinking` : ""} tokens, ${usage.waits} rate-limit waits, ${usage.badAnswers} unusable answers, ${secs} s`;
+}
+
 async function gemini(prompt: string): Promise<string> {
   const key = process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY;
   if (!key) throw new Error("GEMINI_API_KEY is not set (apps/web/.env.local or the environment)");
   const body = {
     systemInstruction: { parts: [{ text: systemPrompt() }] },
     contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig: { responseMimeType: "application/json", temperature: 0.7, maxOutputTokens: 32768 },
+    // Thinking models count their reasoning toward the cap: leave room for it.
+    generationConfig: { responseMimeType: "application/json", temperature: 0.7, maxOutputTokens: 65536 },
   };
   for (let attempt = 0; ; attempt++) {
     const base = process.env.GEN_GEMINI_BASE ?? "https://generativelanguage.googleapis.com/v1beta";
@@ -130,7 +152,8 @@ async function gemini(prompt: string): Promise<string> {
       body: JSON.stringify(body),
     });
     if (res.ok) {
-      const data = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+      const data = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[]; usageMetadata?: UsageMetadata };
+      recordUsage(data.usageMetadata);
       const text = data.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
       if (!text) throw new Error("empty answer");
       return text;
@@ -140,6 +163,7 @@ async function gemini(prompt: string): Promise<string> {
     if (res.status === 429 && /per ?day|PerDay|daily/i.test(detail)) throw new QuotaExhausted(detail.slice(0, 300));
     if ((res.status === 429 || res.status >= 500) && attempt < 6) {
       const wait = Math.min(600_000, 15_000 * 2 ** attempt);
+      usage.waits++;
       console.log(`  Gemini ${res.status}; waiting ${Math.round(wait / 1000)} s (attempt ${attempt + 1})`);
       await sleep(wait);
       continue;
@@ -159,6 +183,7 @@ async function runGemini(list: Dish[]) {
         items = parseAnswer(await gemini(promptFor(pending, feedback)));
       } catch (e) {
         if (e instanceof QuotaExhausted) throw e;
+        usage.badAnswers++;
         console.log(`  request failed (${(e as Error).message.slice(0, 120)})`);
         for (const d of pending) feedback.set(d.slug, [`the whole answer failed: ${(e as Error).message.slice(0, 120)}`]);
         await sleep(DELAY_MS);
@@ -313,9 +338,11 @@ async function main() {
   try {
     const done = provider === "anthropic" ? await runAnthropic() : await runGemini(list);
     console.log(`done: ${done} written, ${failed.size} in failed.json. Validate with: npm run recipes:validate -- --partial`);
+    if (provider !== "anthropic") console.log(`usage (${GEMINI_MODEL}, ${PER_REQUEST} per request): ${usageSummary()}`);
   } catch (e) {
     if (e instanceof QuotaExhausted) {
       console.log("Gemini's daily free quota is used up. Everything written so far is saved; run the same command again tomorrow.");
+      console.log(`usage so far: ${usageSummary()}`);
       return;
     }
     throw e;
