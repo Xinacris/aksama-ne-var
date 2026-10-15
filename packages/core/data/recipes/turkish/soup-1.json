@@ -20377,5 +20377,949 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "29528bee-b14b-41e8-819c-1917b3c8bd92",
+  "slug": "kaburga-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": "Doğu Anadolu",
+  "title": {
+   "tr": "Kaburga çorbası",
+   "en": "Lamb rib broth with vegetables"
+  },
+  "shortTitle": {
+   "en": "Lamb rib broth"
+  },
+  "description": {
+   "tr": "Kuzu kaburgasını uzun süre ağır ağır kaynatarak berrak ve doyurucu bir et suyu elde edilir. Patates ve havuç çorbayı tek kaseyle doyuran bir yemeğe çevirir.",
+   "en": "Lamb ribs simmered slowly give a clear, rich broth, and the potatoes and carrots turn it into a filling meal in one bowl."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 125,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kaburga",
+     "en": "Lamb ribs"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "tek tek kesilmiş",
+     "en": "cut into single ribs"
+    },
+    "pantryKey": "lamb-ribs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yarım ay doğranmış",
+     "en": "sliced into half-moons"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 2,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim kesilmiş, servis için",
+     "en": "cut into wedges, for serving"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kaburgaları soğuk suda yıkayıp yüzeyindeki fazla yağı ve kanı temizle. Büyük bir tencereye alıp üzerini suyla kapat.",
+     "en": "Rinse the ribs in cold water and trim off any loose fat and blood. Put them in a large pot and cover with the water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencereyi ocağa al, kaynamaya başlayınca çıkan köpüğü kepçeyle al. Ateşi kıs ve 1 saat 30 dakika ağır ağır kaynat.",
+     "en": "Bring to the boil and skim off the foam as it rises. Lower the heat and simmer gently for 1 hour 30 minutes."
+    },
+    "timerSeconds": 5400
+   },
+   {
+    "text": {
+     "tr": "Ayrı bir tavada tereyağını eritip soğan ve havucu ekle. Soğan yumuşayıp şeffaflaşana kadar kavur.",
+     "en": "Melt the butter in a frying pan and add the onion and carrot. Cook until the onion is soft and translucent."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salçayı tavaya ekleyip karıştır, ardından hepsini tencereye aktar. Patatesleri ve kekiği ekle.",
+     "en": "Stir the tomato paste into the pan, then tip everything into the pot. Add the potatoes and the thyme."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaburgaları tencereden çıkarıp etlerini kemiklerinden ayır.",
+     "en": "Lift the ribs out of the pot and pull the meat away from the bones."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Etleri çorbaya geri koyup patatesler yumuşayana kadar 25 dakika daha kısık ateşte pişir.",
+     "en": "Return the meat to the broth and simmer gently for another 25 minutes, until the potatoes are tender."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tadını ayarla. Maydanozu serpip limon dilimleriyle birlikte sıcak servis et.",
+     "en": "Season with salt and black pepper to taste. Scatter over the parsley and serve hot with the lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "onePot",
+   "Tencere",
+   "Etli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "804e6fc9-c92c-4c0b-a6b6-43623ef9210d",
+  "slug": "somon-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Somon çorbası",
+   "en": "Salmon soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Somonu hafif bir sebze suyunda, tereyağlı unla kıvam verilmiş bir çorbada pişirilir. Limon ve dereotu tadı canlandırır.",
+   "en": "Salmon cooked gently in a light vegetable broth, thickened with a butter and flour base. Lemon and dill keep the flavour fresh."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Somon",
+     "en": "Salmon"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, küp doğranmış",
+     "en": "skinless, cut into cubes"
+    },
+    "pantryKey": "salmon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1.5,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Somonun derisini ayırıp küp küp doğra. Patates ve havucu aynı boyda küp doğra, soğanı ince kıy.",
+     "en": "Skin the salmon and cut it into cubes. Dice the potato and carrot to the same size and finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede zeytinyağını ısıt, soğanı ekleyip yumuşayana kadar kavur. Ardından havucu ve patatesi ekle.",
+     "en": "Heat the olive oil in a wide pot, add the onion and cook until soft. Then add the carrot and potato."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sebze suyunu ekleyip kaynat, ardından ateşi kıs ve sebzeler yumuşayana kadar 15 dakika pişir.",
+     "en": "Pour in the vegetable stock, bring to the boil, then lower the heat and cook for 15 minutes until the vegetables are soft."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tencerede tereyağını eritip unu ekle, pürüzsüz bir karışım oluşana kadar karıştır. Bunu çorbadan bir kepçe sıcak sıvıyla çözüp çorbaya aktar.",
+     "en": "Melt the butter in a small pan, stir in the flour and cook until smooth. Loosen it with a ladle of the hot soup, then stir it back into the pot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Somon küplerini ekleyip ateşi kısık tutarak 6 dakika pişir.",
+     "en": "Add the salmon cubes and simmer gently for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Limon suyunu ve dereotunu ekle, tuz ve karabiberle tadını ayarla. Hemen sıcak servis et.",
+     "en": "Stir in the lemon juice and dill, season with salt and black pepper to taste, and serve hot straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Tencere",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "386eb462-86f5-4a04-9659-837d83f542d3",
+  "slug": "kalamar-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": "Ege",
+  "title": {
+   "tr": "Kalamar çorbası",
+   "en": "Squid and tomato soup"
+  },
+  "shortTitle": {
+   "en": "Squid soup"
+  },
+  "description": {
+   "tr": "Kalamarı domates ve pul biberle hafifçe ekşi bir çorbada, pirinçle birlikte pişirilir. Ege sofralarında sıcak ve hafif bir öğün olarak yapılır.",
+   "en": "Squid cooked with tomato, chilli and rice in a light, slightly tangy broth, the way it is often made along the Aegean coast."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kalamar",
+     "en": "Squid"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş, halka halinde kesilmiş",
+     "en": "cleaned, cut into rings"
+    },
+    "pantryKey": "squid",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pirinç",
+     "en": "Rice"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "isteğe göre",
+     "en": "to taste"
+    },
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kalamar halkalarını süzgeçte yıkayıp süzülmeye bırak. Bu sırada soğanı ince doğra, sarımsakları ez.",
+     "en": "Rinse the squid rings in a colander and leave them to drain. Meanwhile, finely chop the onion and crush the garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede zeytinyağını ısıt, soğanı ekleyip yumuşayana kadar kavur. Sarımsağı ekleyip kokusu çıkana kadar çevir.",
+     "en": "Heat the olive oil in a wide pot, add the onion and cook until soft. Add the garlic and stir until fragrant."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Rendelenmiş domatesi ve pul biberi ekle. Domates suyunu salıp sosu koyulaştıracak kadar karıştırarak pişir.",
+     "en": "Add the grated tomato and chilli flakes. Cook, stirring, until the juices have reduced and the sauce thickens slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Suyu ekleyip kaynat, pirinci ilave et ve kısık ateşte 15 dakika pişir.",
+     "en": "Add the water and bring to the boil, stir in the rice and simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kalamar halkalarını ekleyip ateşi kıs, 5 dakika pişir.",
+     "en": "Add the squid rings, lower the heat and cook for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tadını ayarla, maydanozu ve limon suyunu ekle. Sıcak servis et.",
+     "en": "Season with salt and black pepper to taste, then stir in the parsley and lemon juice. Serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tencere",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "09dc91f7-c838-4469-8099-2626d6cda076",
+  "slug": "levrek-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "region": "Ege",
+  "title": {
+   "tr": "Levrek çorbası",
+   "en": "Sea bass soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Levrek parçalarını pirinçli bir sebze çorbasında pişirip yumurta ve limonla bağlanan, Ege usulü hafif bir çorba. Dereotuyla servis edilir.",
+   "en": "Sea bass pieces cooked in a rice broth and bound with egg and lemon, a light Aegean-style soup finished with dill."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Levrek",
+     "en": "Sea bass"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "fileto, kılçıkları ayıklanmış",
+     "en": "fillets, pin-boned"
+    },
+    "pantryKey": "sea-bass",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pirinç",
+     "en": "Rice"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1.5,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Levrek filetolarının kalan kılçıklarını cımbızla ayıkla, iri parçalara kes. Havucu küp küp doğra.",
+     "en": "Pull out any remaining pin bones from the sea bass fillets with tweezers and cut the fish into large chunks. Dice the carrot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede zeytinyağını ısıt, soğan ve havucu ekleyip yumuşayana kadar kavur.",
+     "en": "Heat the olive oil in a pot, add the onion and carrot and cook until soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Suyu ekle, kaynamaya başlayınca pirinci ilave et ve kısık ateşte 15 dakika pişir.",
+     "en": "Add the water, and once it is boiling stir in the rice. Simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Levrek parçalarını çorbaya ekleyip 5 dakika pişir.",
+     "en": "Add the sea bass pieces to the soup and cook for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları limon suyuyla köpürene kadar çırp. Çorbadan bir kepçe sıcak sıvıyı yumurtaya ekleyip karıştır, sonra karışımı tencereye geri dök.",
+     "en": "Whisk the eggs with the lemon juice until frothy. Whisk in a ladle of the hot broth, then pour the mixture back into the pot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp çorbayı kaynatmadan karıştır. Tuz ve karabiberle tadını ayarla, dereotu serpip hemen servis et.",
+     "en": "Take the pot off the heat and stir gently without letting it boil again. Season with salt and black pepper, scatter over the dill and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tencere",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

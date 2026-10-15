@@ -284,12 +284,17 @@
     "kalamar-corbasi",
     "levrek-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kaburga-corbasi",
+    "somon-corbasi",
+    "kalamar-corbasi",
+    "levrek-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 69585,
    "startedAt": "2026-10-15T19:53:00.670Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:55:03.598Z"
   },
   {
    "id": "g010",
@@ -1198,11 +1203,11 @@
     "et-tantuni",
     "hunkar-tavuk"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:54:01.298Z",
    "finishedAt": null
   },
   {
