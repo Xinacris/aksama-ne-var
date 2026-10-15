@@ -158,7 +158,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanıp soğanlı ve salçalı sosta yavaşça pişirilen beyaz fasulye yemeği, genellikle pilavla servis edilir. Fasulyenin kremsi kıvamı ve sosun derinliği yemeğe ağır basan bir karakter verir.",
+   "en": "White beans simmered slowly with beef, onion and pastes, usually served with rice. The creamy texture of the beans and the depth of the sauce give it its character."
+  }
  },
  {
   "id": "7b832775-fadb-4387-883e-1464cf597a48",
@@ -338,7 +342,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Baharatlı kıymadan yapılan uzun köfteler, patates, domates ve biberle fırında pişirilen bir İzmir klasiği. Köftelerin sulu, patateslerin hafif kızarmış kıvamı tepsiyi dengeli kılar.",
+   "en": "Spiced minced beef meatballs baked in a tray with potatoes, tomatoes and peppers, a classic from İzmir. The juicy meatballs and lightly browned potatoes balance each other well."
+  }
  },
  {
   "id": "75acf353-ef69-4704-b911-0a64fd2016de",
@@ -516,7 +524,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kızartılmış patlıcanın içine soğanlı, biberli kıymalı harç doldurulup fırında pişirilen bir yemek. Patlıcanın yumuşak dokusu ile kıymanın tuzlu ve baharatlı tadı iyi bir denge kurar.",
+   "en": "Fried aubergines split and filled with a mixture of onion, pepper and minced beef, then baked. The soft aubergine and the savoury, spiced mince work well together."
+  }
  },
  {
   "id": "ea6b0b8a-a336-4306-bb7f-2fceb38d729b",
@@ -679,7 +691,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Bol zeytinyağında pişirilen patlıcanın içine soğan, domates ve sarımsaktan oluşan harç konularak hazırlanan soğuk ya da ılık bir zeytinyağlı yemek. Yağın ve domatesin tatlı dengesi, patlıcanın yumuşaklığını öne çıkarır.",
+   "en": "Aubergines cooked in plenty of olive oil and stuffed with a filling of onion, tomato and garlic, served warm or cold. The balance of oil and sweet tomato brings out the softness of the aubergine."
+  }
  },
  {
   "id": "6545d8f7-afe5-4c63-9978-62d25b406c7b",
@@ -837,7 +853,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış nohut ile dana etinin salçalı sosta uzun süre pişirilmesiyle hazırlanan, pilavın yanında servis edilen bir et yemeği. Nohutun kremsi dokusu ile etin suyu birbirini tamamlar.",
+   "en": "Chickpeas and beef cooked together for a long time in a tomato and pepper paste sauce, served with rice. The creamy chickpeas and the juices from the meat complement each other."
+  }
  },
  {
   "id": "782adff6-ee49-44d7-a3ef-512bd9c5cd12",
@@ -964,7 +984,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Taze yeşil fasulyenin soğan, domates ve zeytinyağıyla yavaşça pişirilmesiyle yapılan, soğuk ya da ılık servis edilen bir zeytinyağlı sebze yemeği. Fasulyenin parlak yeşil rengi ve hafif tatlı sos yemeğin en belirgin özelliğidir.",
+   "en": "Fresh green beans slowly cooked with onion, tomato and olive oil, served warm or cold. The bright green colour of the beans and the lightly sweet sauce are its most distinctive features."
+  }
  },
  {
   "id": "6d9c9415-8719-4db8-bf3e-212bc99b1c55",
@@ -1144,7 +1168,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuk parçalarının yüksek ateşte sotelenip biber, mantar ve domatesle pişirilmesiyle hazırlanan hızlı bir yemek. Etin hafif kızarmış yüzeyi ve sebzelerin suyunun azalması, tavuk sotenin tadını belirler.",
+   "en": "Chicken pieces seared over high heat and then cooked with peppers, mushrooms and tomato. The lightly browned surface of the chicken and the reduced vegetable juices define its flavour."
+  }
  },
  {
   "id": "eef6602d-5027-4162-ab21-d4ba0a65aa5a",
@@ -1298,7 +1326,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kızartılmış patates dilimlerinin üzerine kıymalı harç konularak domates ve biberle fırında pişirilen bir yemek. Patateslerin kenarları çıtır kalır, üst kısmı ise salçalı sosla yumuşar.",
+   "en": "Fried potato slices topped with a spoonful of spiced mince, tomato and pepper, then baked. The edges of the potatoes stay crisp while the top softens in the tomato sauce."
+  }
  },
  {
   "id": "00b89368-aec9-427c-afba-9cd2005fff34",
@@ -1440,7 +1472,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "İnce hamurdan yapılmış küçük mantıların üzerine sarımsaklı yoğurt ve tereyağlı salçalı sos gezdirilerek servis edilen bir yemek. Kuru nane ile sıcak sosun birleşimi, yoğurdun serinliğiyle dengelenir.",
+   "en": "Small pasta dumplings served with a garlic yoghurt and a sauce of butter and tomato paste, finished with dried mint. The warm sauce is balanced by the coolness of the yoghurt."
+  }
  },
  {
   "id": "07b11130-dc63-4e10-8c7a-fd02dee8c579",
@@ -1571,7 +1607,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Penne makarnasının süt, yumurta ve peynirle hazırlanan bir sosla karıştırılıp fırında altın rengi alana kadar pişirilen bir yemek. Kaşar ve beyaz peynirin tuzluluğu sütlü ve yumuşak dokuyu dengeler.",
+   "en": "Penne pasta tossed in a custard of milk, egg and cheese, then baked until golden. The saltiness of the kaşar and white cheese balances the soft, creamy texture."
+  }
  },
  {
   "id": "95f05bf8-9539-41c1-9864-199f626175fd",
@@ -1738,7 +1778,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Dana etiyle birlikte patlıcan, kabak, patates, fasulye ve biberin katmanlar halinde pişirildiği sebzeli bir güveç. Sebzeler kendi sularında yavaşça yumuşar ve her biri tadını yemeğe katar.",
+   "en": "A mixed vegetable stew of beef with aubergine, courgette, potato, green beans and peppers, layered and cooked slowly. The vegetables soften in their own juices and each adds its own flavour."
+  }
  },
  {
   "id": "2efe3c3e-bf83-4e60-bd22-c562f18cf193",
@@ -1912,7 +1956,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kuzu etinin domatesli sosta pişirilip közlenmiş patlıcanlı bir beşamel püresinin üzerine servis edildiği bir yemek. Közün dumanlı tadı ile kaşarlı püre, etin sosuyla güzel bir uyum yakalar.",
+   "en": "Lamb stewed in a tomato sauce and served on a purée of smoked aubergine and béchamel. The smoky flavour of the aubergine and the cheesy purée go well with the rich sauce of the meat."
+  }
  },
  {
   "id": "ad5aed08-2c8c-496c-9a3f-939e18ed832a",
@@ -2073,7 +2121,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuk budu ve iri doğranmış patateslerin domates salçası, zeytinyağı ve baharatlı bir sosta fırında pişirildiği bir yemek. Sos patateslere ve etin suyuna işlerken üst yüzey kızarır.",
+   "en": "Chicken drumsticks and chunky potatoes marinated in a sauce of tomato paste, olive oil and spices, then roasted. The sauce soaks into the potatoes and the juices of the chicken while the top turns golden."
+  }
  },
  {
   "id": "8ef77a64-35b8-4ab3-ac66-7c5730893df0",
@@ -2231,7 +2283,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pirinç, kıyma ve baharatın karıştırılıp yassı oval köfteler halinde şekillendirilerek yağda kızartıldığı bir yemek. Dışı çıtır, içi yumuşak olan köfteler, pirincin dokusu sayesinde hafif kalır.",
+   "en": "Rice and minced beef mixed with spices, shaped into flat ovals and fried. The outside is crisp and the inside soft, and the rice keeps the croquettes light."
+  }
  },
  {
   "id": "3d406f45-9809-4c53-afab-fdccd49fbb79",
@@ -2398,7 +2454,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pirinçli kıyma köftelerin patates, havuç ve salçalı bir suda pişirilip limonlu yumurta sosuyla bağlandığı bir çorba yemeği. Limonun ekşiliği ve yumurtanın kremsi yapısı suya hafif ve dengeli bir tat verir.",
+   "en": "Rice and beef meatballs cooked in a tomato broth with potatoes and carrots, then thickened with a lemon and egg sauce. The sharpness of the lemon and the silky egg give the broth a light, balanced taste."
+  }
  },
  {
   "id": "196d4bff-0f98-40d1-9849-f5c4bd2857eb",
@@ -2566,7 +2626,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Biberlerin pirinçli ve kıymalı harçla doldurulup salçalı bir suda pişirildiği bir yemek, yoğurtla servis edilir. Biberlerin hafif tatlılığı ile naneli yoğurdun serinliği birbirini tamamlar.",
+   "en": "Peppers filled with a mixture of rice, minced beef and herbs, then cooked in a tomato broth and served with yoghurt. The mild sweetness of the peppers and the cool mint yoghurt complement each other."
+  }
  },
  {
   "id": "b1a104f3-796c-44f8-80b9-27f7a4498456",
@@ -2712,7 +2776,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış lahana yapraklarının pirinçli kıymalı harçla sarılıp limonlu salçalı sosta pişirildiği bir yemek. Lahananın hafif ekşiliği ve limonun canlılığı, etin tadını hafifletir.",
+   "en": "Blanched cabbage leaves rolled around a rice and minced beef filling and cooked in a lemony tomato sauce. The slight sourness of the cabbage and the lemon lighten the richness of the meat."
+  }
  },
  {
   "id": "b6fd3e51-2032-468b-aad2-463cfa5d7c1d",
@@ -2857,7 +2925,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Ispanağın kıyma, soğan ve pirinçle birlikte pişirilip yoğurtla servis edildiği sade bir yemek. Ispanağın toprak tadı ile yoğurdun ekşiliği, kıymanın tuzlu lezzetini dengeler.",
+   "en": "Spinach cooked with minced beef, onion and rice, served with yoghurt. The earthy taste of the spinach and the sourness of the yoghurt balance the savoury mince."
+  }
  },
  {
   "id": "7a2cdd55-38e8-4b99-8a9d-0da31307866b",
@@ -2988,7 +3060,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pırasanın havuç, pirinç ve zeytinyağıyla yavaşça pişirilip limonla tatlandırıldığı soğuk servis edilen bir yemek. Pırasanın yumuşak tadı ile limonun canlılığı, yemeğe ferah bir karakter verir.",
+   "en": "Leeks cooked slowly with carrot, rice and olive oil, finished with lemon and served cold. The gentle flavour of the leeks and the freshness of the lemon give it a clean character."
+  }
  },
  {
   "id": "2e24b50a-de9b-41c2-b5a1-6744b94a072a",
@@ -3128,7 +3204,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Dana etinin soğan, salça, patates ve havuçla birlikte bezelye eklenerek pişirildiği bir sebzeli et yemeği. Bezelyenin tatlılığı ile etin suyu, sade bir tencere yemeğinde iyi bir denge sağlar.",
+   "en": "Beef cooked with onion, tomato paste, potato and carrot, with peas added. The sweetness of the peas and the juices of the meat make a well-balanced, simple stew."
+  }
  },
  {
   "id": "fd34450e-dbb9-4e18-81db-33ab1d95105e",
@@ -3296,7 +3376,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kuru barbunya fasulyesinin zeytinyağı, havuç, patates ve soğanla pişirilip soğuk servis edilen bir yemek. Hafif tatlı sosu ve maydanozu ile sade bir yaz sofrası yemeği olarak öne çıkar.",
+   "en": "Dried borlotti beans cooked in olive oil with carrot, potato and onion, served cold. Its lightly sweet sauce and parsley make it a simple dish for the summer table."
+  }
  },
  {
   "id": "7ed42962-dd78-4c28-b555-282f6e187582",
@@ -3447,7 +3531,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Yeşil mercimeğin kalın bulgur ve soğanlı salçalı sosla pişirilip koyu bir kıvama getirildiği bir yemek, yoğurtla servis edilir. Mercimeğin toprak tadı ile pul biberin hafif acılığı yemeğe yoğun bir karakter verir.",
+   "en": "Green lentils cooked with coarse bulgur and a sauce of onion, garlic and pastes until thick, served with yoghurt. The earthy lentils and the mild heat of the chilli flakes give it a robust character."
+  }
  },
  {
   "id": "93e5e4ab-d331-4764-8797-499e726719f1",
@@ -3604,7 +3692,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kızartılmış patlıcanın kıyma ve domatesle katman katman dizilip salçalı suyla fırınlandığı bir yemek. Patlıcanın yumuşak dokusu ile kıymanın sosu birlikte iyi bir kıvam oluşturur.",
+   "en": "Fried aubergine layered with minced beef and tomato, with a tomato paste sauce poured over, then baked. The soft aubergine and the saucy mince set into a good consistency together."
+  }
  },
  {
   "id": "794b94eb-7366-4f5b-965b-fc453ff1e8c1",
@@ -3743,7 +3835,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Dana etinin kendi suyunda kapak altında yavaşça pişirilip tereyağı, soğan ve domatesle tatlandırıldığı bir yemek. Et uzun pişirme sonunda lifleri çözülür ve sos yoğun bir tat kazanır.",
+   "en": "Beef slowly simmered under a lid in its own juices, then flavoured with butter, onion and tomato. The long cooking breaks down the meat until it is very tender and the sauce becomes rich."
+  }
  },
  {
   "id": "84b119e3-c8a2-40e5-a011-4eb22cfaaafa",
@@ -3877,7 +3973,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Dana etinin geniş bir tavada yüksek ateşte sotelenip soğan ve biberle tamamlandığı hızlı bir yemek. Etin kendi suyunda pişip kızarması ve domatesin sosa dönüşmesi, yemeğin temel tadını oluşturur.",
+   "en": "Beef sautéed over high heat in a wide pan, then finished with onion, peppers and tomato. The meat cooks in its own juices and browns, and the tomato reduces into a sauce that gives the dish its base flavour."
+  }
  },
  {
   "id": "2bc40c1a-8703-4d99-be3a-7a65fefaea99",
