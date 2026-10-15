@@ -1,1 +1,161 @@
-[]
+[
+ {
+  "id": "1143b67f-7f1e-4267-b90c-9470e3e689d6",
+  "slug": "tiramisu",
+  "cuisine": "italian",
+  "category": "dessert",
+  "title": {
+   "tr": "Tiramisu",
+   "en": "Tiramisu"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İtalyan usulü kahve aromalı, mascarpone peynirli hafif bir tatlı.",
+   "en": "Italian-style coffee-flavored light dessert with mascarpone cheese."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "waitMinutes": 240,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kedidili bisküvi",
+     "en": "Ladyfingers"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "ladyfingers"
+   },
+   {
+    "name": {
+     "tr": "Mascarpone peyniri",
+     "en": "Mascarpone"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "mascarpone"
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "sarısı ve beyazı ayrılmış",
+     "en": "separated"
+    },
+    "pantryKey": "egg"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "Türk kahvesi",
+     "en": "Turkish coffee"
+    },
+    "amount": 2,
+    "unit": "su bardağı",
+    "note": {
+     "tr": "hazırlanmış ve soğutulmuş",
+     "en": "brewed and cooled"
+    },
+    "pantryKey": "turkish-coffee"
+   },
+   {
+    "name": {
+     "tr": "Kakao",
+     "en": "Cocoa powder"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cocoa"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurta sarılarını şekerle birlikte krema kıvamına gelene kadar çırp.",
+     "en": "Whisk egg yolks with sugar until creamy."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Mascarpone peynirini ekleyip pürüzsüz olana kadar karıştır.",
+     "en": "Add mascarpone cheese and mix until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta beyazlarını ayrı bir kapta kar beyazı olana kadar çırp ve peynirli karışıma spatula ile yedir.",
+     "en": "Beat egg whites in a separate bowl until stiff peaks form and fold into the cheese mixture."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kedidili bisküvileri soğuk kahveye batırıp çıkar ve bir borcama diz.",
+     "en": "Dip ladyfingers into cold coffee and arrange in a dish."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hazırladığın peynirli kremanın yarısını bisküvilerin üzerine yay.",
+     "en": "Spread half of the cheese cream over the ladyfingers."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan bisküvileri diz ve üzerine geri kalan kremayı dök.",
+     "en": "Arrange the remaining ladyfingers and pour the rest of the cream on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Buzdolabında soğumaya bırak.",
+     "en": "Leave to chill in the fridge."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Servis etmeden önce üzerine kakao serp.",
+     "en": "Sprinkle with cocoa powder before serving."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

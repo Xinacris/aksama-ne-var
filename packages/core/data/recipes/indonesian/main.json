@@ -1,1 +1,128 @@
-[]
+[
+ {
+  "id": "ad9fa715-f0a0-4efd-9423-ab431541ea50",
+  "slug": "nasi-goreng",
+  "cuisine": "indonesian",
+  "category": "main",
+  "title": {
+   "tr": "Nasi goreng",
+   "en": "Nasi goreng (fried rice)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Endonezya usulü aromatik kızarmış pilav.",
+   "en": "Indonesian style aromatic fried rice."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 2,
+    "unit": "su bardağı",
+    "note": {
+     "tr": "pişmiş ve soğumuş",
+     "en": "cooked and cooled"
+    },
+    "pantryKey": "baldo-rice"
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg"
+   },
+   {
+    "name": {
+     "tr": "Soya sosu",
+     "en": "Soy sauce"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "tuz dengesi için",
+     "en": "for salt balance"
+    },
+    "pantryKey": "soy-sauce"
+   },
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "chicken-breast"
+   },
+   {
+    "name": {
+     "tr": "Yeşil soğan",
+     "en": "Spring onion"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "spring-onion"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavukları küçük parçalar halinde tavada sotele.",
+     "en": "Sauté the chicken pieces in a pan."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları ekleyip hızlıca karıştırarak pişir.",
+     "en": "Add eggs and scramble quickly."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Haşlanmış pilavı tavaya ekle ve soya sosu ile harmanla.",
+     "en": "Add the cooked rice to the pan and mix with soy sauce."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yeşil soğanları ekleyip birkaç dakika daha çevir.",
+     "en": "Add spring onions and stir for a few more minutes."
+    },
+    "timerSeconds": 120
+   }
+  ],
+  "tags": [
+   "Tavuklu",
+   "Tavada",
+   "Tek tabak"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

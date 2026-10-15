@@ -585,5 +585,147 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "d7e6ffab-fadd-4f93-bfe2-d39e5a01bffb",
+  "slug": "baklava",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "Baklava",
+   "en": "Baklava"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kat kat incecik yufka ve bol cevizli geleneksel tatlı.",
+   "en": "Traditional dessert with thin layers of pastry and plenty of walnuts."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 45,
+  "waitMinutes": 60,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Baklavalık yufka",
+     "en": "Baklava pastry"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "baklava-yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnut"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "dövülmüş",
+     "en": "crushed"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 3,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 3,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Şerbet için şeker ve suyu tencerede 15 dakika kaynat.",
+     "en": "Boil the sugar and water in a pot for 15 minutes for the syrup."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Yufkaları tepsiye aralarını yağlayarak diz.",
+     "en": "Layer the pastry sheets in the tray, brushing them with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Orta katlara cevizleri serp.",
+     "en": "Sprinkle walnuts between the middle layers."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Baklavayı dilimle ve kalan yağı üzerine gezdir.",
+     "en": "Slice the baklava and drizzle the remaining butter over it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "180 derece fırında 30 dakika pişir.",
+     "en": "Bake in a 180-degree oven for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca soğuk şerbeti üzerine dök ve 60 dakika çekmesini bekle.",
+     "en": "Pour cold syrup over the hot baklava and wait 60 minutes for it to absorb."
+    },
+    "timerSeconds": 3600
+   }
+  ],
+  "tags": [
+   "Şerbetli",
+   "Misafir",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

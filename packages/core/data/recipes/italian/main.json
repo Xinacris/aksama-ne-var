@@ -1,1 +1,134 @@
-[]
+[
+ {
+  "id": "3ef76a3b-1c2e-4400-abfd-e04563e26c87",
+  "slug": "spagetti-bolonez",
+  "cuisine": "italian",
+  "category": "main",
+  "title": {
+   "tr": "Spagetti bolonez",
+   "en": "Spaghetti bolognese"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kıymalı ve domatesli doyurucu bir makarna.",
+   "en": "A hearty pasta with minced meat and tomato sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Spagetti",
+     "en": "Spaghetti"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "spaghetti",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yemeklik doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Makarnayı bol tuzlu suda 10 dakika haşla.",
+     "en": "Boil the pasta in plenty of salted water for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tavada soğanları yağda pembeleşene kadar kavur.",
+     "en": "Sauté the onions in oil in a pan until translucent."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekle ve suyunu çekene kadar kavur.",
+     "en": "Add the minced meat and cook until the juices evaporate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domates püresini ekle ve 10 dakika pişir.",
+     "en": "Add the passata and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Süzülen makarnayı sosla birleştir.",
+     "en": "Combine the drained pasta with the sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Tencere",
+   "Kıymalı",
+   "Hızlı"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
