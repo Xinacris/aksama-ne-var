@@ -1,1 +1,833 @@
-[]
+[
+ {
+  "id": "54d50c26-2938-479e-ab8c-197f9f4fd1bb",
+  "slug": "gazpacho",
+  "cuisine": "spanish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Gazpacho",
+   "en": "Gazpacho"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Endülüs'ten gelen, sarımsak ve sirkeyle canlandırılmış soğuk bir domates çorbası. Pişirmeden hazırlanır ve iyice soğuyunca tadı derinleşir.",
+   "en": "A chilled tomato soup from Andalusia, sharpened with garlic and vinegar. It needs no cooking, and it tastes better once it has rested well chilled."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Olgun domates",
+     "en": "Ripe tomato"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "iri doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapya biber",
+     "en": "Red pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çekirdekleri alınmış, doğranmış",
+     "en": "seeded and chopped"
+    },
+    "pantryKey": "red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulmuş, doğranmış",
+     "en": "peeled and chopped"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": null,
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu alınmış",
+     "en": "crusts removed"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma sirkesi",
+     "en": "Cider vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "apple-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 80,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil biber",
+     "en": "Green pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için ince doğranmış",
+     "en": "finely diced, to serve"
+    },
+    "pantryKey": "green-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Domatesleri, kapya biberi, salatalığı ve soğanı kabaca doğra. Sarımsağı soyup bir kenara al.",
+     "en": "Chop the tomatoes, red pepper, cucumber and onion roughly. Peel the garlic and set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bayat ekmeğin kabuğunu al, parçalayıp bir kâse suya batır ve 5 dakika bekletip iyice sık.",
+     "en": "Remove the crusts from the bread, tear it into pieces, soak them in a bowl of water for 5 minutes, then squeeze dry."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Doğranmış sebzeleri, sarımsağı, ıslattığın ekmeği, sirkeyi, zeytinyağını, tuzu ve suyu blendere koyup pürüzsüz olana kadar çevir.",
+     "en": "Put the vegetables, garlic, soaked bread, vinegar, olive oil, salt and water in a blender and blitz until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kıvamı kontrol et; fazla kalınsa biraz soğuk su ekle ve tuzunu tadına bakarak ayarla.",
+     "en": "Check the consistency; if it is too thick, add a splash of cold water. Adjust the salt to taste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı bir kaba al, üzerini kapatıp buzdolabında 4 saat dinlendir.",
+     "en": "Pour the soup into a container, cover it, and chill in the fridge for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Servis etmeden önce yeşil biberi ince doğrayıp üzerine serp ve bir tur zeytinyağı gezdir.",
+     "en": "Just before serving, scatter over the finely diced green pepper and drizzle with a little olive oil."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Gazpacho'yu bir gün önceden yapıp buzdolabında saklayabilirsin.",
+     "en": "You can make the gazpacho a day ahead and keep it chilled in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "makeAhead",
+   "Pişirmeden",
+   "Sebzeli",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "4a1dc854-49be-492f-a7e8-6a3e5ef6219a",
+  "slug": "salmorejo",
+  "cuisine": "spanish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Salmorejo",
+   "en": "Salmorejo"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Córdoba'dan gelen, ekmek ve domatesle koyulaştırılmış kadifemsi soğuk bir çorba. Üzerine haşlanmış yumurta ve jamon yerine füme hindi konur.",
+   "en": "A velvety cold soup from Córdoba, thickened with bread and ripe tomato. It is topped with boiled egg and smoked turkey in place of the classic cured ham."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 10,
+  "waitMinutes": 180,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Salçalık domates",
+     "en": "Plum tomato"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "ikiye bölünmüş, sapı çıkarılmış",
+     "en": "halved and cored"
+    },
+    "pantryKey": "plum-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu alınmış, parçalanmış",
+     "en": "crusts removed and torn"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": null,
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma sirkesi",
+     "en": "Cider vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "apple-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "sızma, servis için biraz daha",
+     "en": "extra-virgin, plus a little more to serve"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış, ince doğranmış",
+     "en": "boiled and finely chopped"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Füme hindi",
+     "en": "Smoked turkey"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş (jamon yerine)",
+     "en": "thinly sliced, in place of cured ham"
+    },
+    "pantryKey": "smoked-turkey",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Domatesleri blendere al, ekmeğin kabuğunu ayırıp parçalayarak yanına ekle.",
+     "en": "Put the tomatoes in a blender, then remove the crusts from the bread, tear it up and add it alongside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı, sirkeyi ve tuzu ekle, 2 dakika yüksek devirde karıştır.",
+     "en": "Add the garlic, vinegar and salt, then blend on high for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını yavaş yavaş akıtarak ekle; kremsi, pürüzsüz bir kıvam alana kadar çevirmeye devam et.",
+     "en": "Pour in the olive oil slowly while blending, until the soup is smooth and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı ince elekten geçir, tuzunu ayarla ve bir kaba koyup buzdolabında 3 saat soğut.",
+     "en": "Pass the soup through a fine sieve, adjust the salt and chill it in the fridge for 3 hours."
+    },
+    "timerSeconds": 10800
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı 10 dakika haşla, soğuyunca kabuğunu soyup ince doğra.",
+     "en": "Boil the egg for 10 minutes, then cool it, peel it and finely chop it."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Soğuk çorbayı kâselere koy; üzerine doğranmış yumurtayı ve füme hindi dilimlerini diz, bir tur zeytinyağı gezdir.",
+     "en": "Ladle the cold soup into bowls, top with the chopped egg and smoked turkey slices, and drizzle over a little olive oil."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Salmorejoyu bir gün önceden yapıp soğukta saklayabilirsin; yumurtayı servisten önce haşla.",
+     "en": "You can make the salmorejo a day ahead and keep it cold; boil the egg just before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "dairyFree",
+   "makeAhead",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "abc9ceac-d73d-4857-addf-8119f544be77",
+  "slug": "sopa-de-ajo",
+  "cuisine": "spanish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Sopa de ajo",
+   "en": "Sopa de ajo (garlic soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kastilya'nın sade ve sıcak bir çorbası: bol sarımsak, kurutulmuş ekmek ve füme pimentonla tatlandırılmış, sonunda yumurta akıtılan bir çorba.",
+   "en": "A simple, warming soup from Castile: plenty of garlic, dried bread and smoked paprika, finished with beaten egg. The bread gives it body, and the garlic gives it character."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 8,
+    "unit": "diş",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "1 cm küp doğranmış",
+     "en": "cut into 1 cm cubes"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İsli kırmızı biber (pimentón)",
+     "en": "Smoked paprika (pimentón)"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "smoked-paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Füme hindi",
+     "en": "Smoked turkey"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "küçük küp doğranmış (jamon yerine)",
+     "en": "diced small, in place of cured ham"
+    },
+    "pantryKey": "smoked-turkey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sarımsakları ince dilimle, ekmeği küp doğra ve bir kenara koy.",
+     "en": "Thinly slice the garlic, cut the bread into cubes and set both aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede zeytinyağını orta ateşte ısıt, sarımsakları ekleyip 2 dakika kavur.",
+     "en": "Warm the olive oil in a wide pan over a medium heat, add the garlic and fry for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Pimentonu ekle ve 30 saniye hızlıca çevir.",
+     "en": "Add the paprika and stir quickly for 30 seconds."
+    },
+    "timerSeconds": 30
+   },
+   {
+    "text": {
+     "tr": "Tavuk suyunu ve ekmek küplerini ekle, kaynamaya bırak; 15 dakika kısık ateşte pişir.",
+     "en": "Add the chicken stock and bread cubes, bring to the boil, then simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları bir kapta çırpıp çorbanın içine yavaşça dök; ocağın altını kıs ve yumurta pişene kadar karıştır.",
+     "en": "Beat the eggs in a bowl and pour them slowly into the soup, stirring until they set in soft strands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tavada füme hindi küplerini 2 dakika kızart.",
+     "en": "Fry the smoked turkey cubes in a small pan for 2 minutes until crisp."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tuzunu tadına bakarak ayarla, maydanozu ekleyip kâselere al. Üzerine kızarmış füme hindiyi koyup sıcak servis et.",
+     "en": "Taste and adjust the salt, stir in the parsley and ladle into bowls. Top with the crisp smoked turkey and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "budget",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "59f23c01-50cf-41e0-afd6-b2f671d8d2ef",
+  "slug": "ajo-blanco",
+  "cuisine": "spanish",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Ajo blanco",
+   "en": "Ajo blanco (chilled almond and garlic soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Malaga'dan gelen, bademli ve sarımsaklı beyaz soğuk bir çorba. Üzerine serpilen yeşil üzümler tatlı ile ekşiyi bir arada dengeler.",
+   "en": "A white, chilled soup from Málaga made from ground almonds, bread and garlic. Scattered with green grapes, it balances sweet and sharp in one bowl."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almond"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kabuksuz, ince öğütülmüş",
+     "en": "skinned and finely ground"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu alınmış",
+     "en": "crusts removed"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "sızma",
+     "en": "extra-virgin"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Üzüm sirkesi",
+     "en": "Grape vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "grape-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil üzüm",
+     "en": "Green grapes"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş, çekirdekleri çıkarılmış",
+     "en": "halved and seeded"
+    },
+    "pantryKey": "grape",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ekmeğin kabuğunu al, parçalayıp bir kâse suya koy ve 5 dakika bekletip iyice sık.",
+     "en": "Remove the crusts from the bread, soak the pieces in a bowl of water for 5 minutes, then squeeze dry."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Bademleri, sarımsakları, sıktığın ekmeği ve sirkeyi blendere koy; kısa kısa çevirerek kabaca ez.",
+     "en": "Put the almonds, garlic, squeezed bread and vinegar in a blender and pulse to a rough paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını, suyu ve tuzu ince bir akışla ekleyip 3 dakika pürüzsüz olana kadar karıştır.",
+     "en": "Trickle in the olive oil, water and salt with the blender running, then blend for 3 minutes until very smooth."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Karışımı süzgeçten geçir, tuzunu ve sirkeyi tadına bakarak ayarla.",
+     "en": "Strain the soup, then adjust the salt and vinegar to taste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı kapaklı bir kaba al ve buzdolabında en az 4 saat soğut.",
+     "en": "Transfer the soup to a covered container and chill in the fridge for at least 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Kâselere al, üzerine yeşil üzümleri dağıt ve bir tur zeytinyağı gezdir.",
+     "en": "Ladle into bowls, scatter over the grapes and finish with a drizzle of olive oil."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "makeAhead",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
