@@ -9,7 +9,8 @@
  *   GEN_PROVIDER=anthropic npm run recipes:generate  # Claude Haiku 5.5 through the Message Batches API
  *
  * Env: GEMINI_API_KEY (or GOOGLE_API_KEY), GEN_MODEL (default gemini-3.1-flash-lite), GEN_DELAY_MS
- * (pause between Gemini requests, default 6000); ANTHROPIC_API_KEY for anthropic.
+ * (pause between Gemini requests, default 6000), GEN_GEMINI_BASE (another endpoint: a proxy, or a
+ * local mock for testing the pipeline); ANTHROPIC_API_KEY for anthropic.
  *
  * Resumable: dishes that already have a valid recipe are skipped, every valid recipe is written to
  * its file as soon as it arrives, so it is safe to stop (Ctrl-C) and rerun, also days later. A dish
@@ -122,7 +123,8 @@ async function gemini(prompt: string): Promise<string> {
     generationConfig: { responseMimeType: "application/json", temperature: 0.7, maxOutputTokens: 32768 },
   };
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
+    const base = process.env.GEN_GEMINI_BASE ?? "https://generativelanguage.googleapis.com/v1beta";
+    const res = await fetch(`${base}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
       method: "POST",
       headers: { "content-type": "application/json", "x-goog-api-key": key },
       body: JSON.stringify(body),
@@ -303,6 +305,11 @@ async function main() {
   const list = todo();
   console.log(`${provider}${fill ? " (fill descriptions)" : ""}: ${list.length} dishes to write; ${haveRecipe.size} recipes exist`);
   if (!list.length && !(provider === "anthropic" && readJson(".anthropic-batch.json", null))) return;
+  const keyName = provider === "anthropic" ? "ANTHROPIC_API_KEY" : process.env.GOOGLE_API_KEY ? "GOOGLE_API_KEY" : "GEMINI_API_KEY";
+  if (!process.env[keyName]) {
+    console.error(`${keyName} is not set. Put it in apps/web/.env.local (or export it) and run again; nothing was written.`);
+    process.exit(1);
+  }
   try {
     const done = provider === "anthropic" ? await runAnthropic() : await runGemini(list);
     console.log(`done: ${done} written, ${failed.size} in failed.json. Validate with: npm run recipes:validate -- --partial`);

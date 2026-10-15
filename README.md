@@ -92,6 +92,28 @@ compiled yet (it was written on Linux). For the first test build:
 4. If the iOS build fails in `AnvAlarmKitModule.swift`, build without the flag (everything else works)
    and send the Xcode error.
 
+## Recipe catalog (1,000 recipes)
+
+The built-in recipes come from a curated catalog in `packages/core/data/recipes/`: `dish-list.json` (1,000 dishes in an exact cuisine × category matrix, the app's original 100 marked `existing`) and one JSON file per cuisine/category (≤ 100 recipes each). Schema: `packages/core/src/recipes/schema.ts`. The app works with however many recipes exist; the rest are written by an LLM through a script you run:
+
+```bash
+# 1. Key: GEMINI_API_KEY in apps/web/.env.local (the script reads it), or export it.
+npm run recipes:generate -- --limit 10        # try 10 dishes first, read them, then:
+npm run recipes:generate                      # every dish without a recipe (Gemini, 5 per request)
+npm run recipes:generate -- --fill            # descriptions for the 100 converted built-ins
+npm run recipes:validate -- --partial         # check what exists (no args: the full 1,000 must be there)
+npm run recipes:export                        # Supabase seed: packages/core/data/recipes/export/seed.sql + CSVs
+```
+
+- **Resume:** stop any time (Ctrl-C) and run the same command again, also days later. Written recipes are kept, and dishes that already have one are skipped. When Gemini's free daily quota runs out, the script says so and stops; run it again the next day.
+- **Failures:** a recipe that fails validation is retried twice with the validator's messages, then listed in `packages/core/data/recipes/failed.json`. A rerun tries those again (`--skip-failed` to leave them). An unknown ingredient means the ingredient catalog needs it: add it to `packages/core/src/data/seed/pantry.ts` with its aisle, then rerun.
+- **Narrow it down:** `--only slug1,slug2`, `--cuisine italian`, `--category dessert`, `--limit N`.
+- **Provider:** `GEN_PROVIDER=gemini` (default; `GEN_MODEL` to pick another Gemini model, `GEN_DELAY_MS` between requests, default 6000) or `GEN_PROVIDER=anthropic` (needs `ANTHROPIC_API_KEY`). Anthropic sends every remaining dish as one Message Batch to `claude-haiku-5-5`, polls every minute (most batches finish within an hour), writes the results, and retries failures in a smaller batch. The batch id is saved, so if you stop while it's processing, rerunning picks the same batch up again.
+- **Expected cost:**
+  - Gemini free tier: **$0**. About 180 requests; usually one day within the free quota. Free-tier inputs may be used by Google, and the limits are unpublished.
+  - Claude Haiku 5.5 batch: about **$0.60–0.90** for the 900 new recipes. That's ≈ 2.5k output tokens each at $0.50/M with the 50 % batch discount, and the cached style guide keeps input cheap. Descriptions for the 100 built-ins cost under a cent.
+- **Rules every recipe follows** (the generator's style guide, checked by the validator): Turkish primary with a faithful English text; original wording; practical metric quantities; no pork; alcohol kept with an alcohol-free substitute shown under it (tag `containsAlcohol`); known pantry keys only (each has an aisle); leftover defaults by category.
+
 ## Try it with two people in one browser
 
 1. Open the app → **Hesap oluştur** → pick a few dishes → **Devam et** → copy the invite link →
