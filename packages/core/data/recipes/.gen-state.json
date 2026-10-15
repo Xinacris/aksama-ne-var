@@ -52,12 +52,23 @@
     "havuc-corbasi",
     "bal-kabagi-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kara-lahana-corbasi",
+    "misir-corbasi",
+    "hamsi-corbasi",
+    "kuzukulagi-corbasi",
+    "isirgan-corbasi",
+    "pancar-corbasi",
+    "kereviz-corbasi",
+    "pirasa-corbasi",
+    "havuc-corbasi",
+    "bal-kabagi-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87538,
    "startedAt": "2026-10-15T19:30:00.162Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:33:11.815Z"
   },
   {
    "id": "g003",
@@ -298,11 +309,11 @@
     "kremali-kabak-cicegi-corbasi",
     "kozlenmis-domates-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:33:05.233Z",
    "finishedAt": null
   },
   {
