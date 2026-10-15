@@ -1552,12 +1552,23 @@
     "kalem-kofte",
     "misket-kofte"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "firinda-kofte-patates",
+    "dalyan-kofte",
+    "tekirdag-koftesi",
+    "inegol-koftesi",
+    "akcaabat-koftesi",
+    "sultanahmet-koftesi",
+    "kasap-kofte",
+    "hasanpasa-koftesi",
+    "kalem-kofte",
+    "misket-kofte"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87023,
    "startedAt": "2026-10-15T22:26:09.371Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:28:53.144Z"
   },
   {
    "id": "g049",
@@ -2230,11 +2241,11 @@
     "biscotti",
     "semifreddo"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:28:34.444Z",
    "finishedAt": null
   },
   {
