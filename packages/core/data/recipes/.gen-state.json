@@ -52,11 +52,11 @@
     "havuc-corbasi",
     "bal-kabagi-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:30:00.162Z",
    "finishedAt": null
   },
   {
@@ -589,12 +589,23 @@
     "patlicanli-borek",
     "tepsi-boregi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kabak-mucveri",
+    "patates-koftesi",
+    "pacanga-boregi",
+    "kol-boregi",
+    "kiymali-borek",
+    "peynirli-borek",
+    "pirasali-borek",
+    "kabakli-borek",
+    "patlicanli-borek",
+    "tepsi-boregi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 94823,
    "startedAt": "2026-10-15T19:26:23.099Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:30:21.407Z"
   },
   {
    "id": "g026",

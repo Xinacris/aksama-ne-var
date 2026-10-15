@@ -2050,5 +2050,2186 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "460df767-1025-4acf-b11c-d5154fb608eb",
+  "slug": "kabak-mucveri",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Kabak mücveri",
+   "en": "Courgette fritters"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Rendelenmiş kabağın dereotu, nane ve beyaz peynirle yoğrulup yağda kızartıldığı, dışı çıtır içi yumuşak bir meze. Peynirin tuzluluğu sebzenin tatlılığını dengeler.",
+   "en": "Grated courgette bound with dill, mint and crumbled white cheese, then shallow-fried until crisp outside and soft inside. The salty cheese balances the sweetness of the courgette."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kaba rendelenmiş, suyu sıkılmış",
+     "en": "coarsely grated, squeezed dry"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze nane",
+     "en": "Fresh mint"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklarından ayrılmış, ince kıyılmış",
+     "en": "leaves picked off and finely chopped"
+    },
+    "pantryKey": "fresh-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları rendeleyip bir kaşık tuz serp, 10 dakika bekletip elinle sıkarak suyunu al.",
+     "en": "Grate the courgettes, sprinkle with a spoonful of salt, leave for 10 minutes, then squeeze out the water with your hands."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları bir kasede çırpıp ufalanmış beyaz peynir, dereotu, nane, rendelenmiş soğan ve ezilmiş sarımsakla karıştır.",
+     "en": "Beat the eggs in a bowl and mix in the crumbled white cheese, dill, mint, grated onion and crushed garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Un, kabartma tozu ve karabiberi ekle, sıktığın kabakları da katıp yumuşak ama dökülmeyecek bir hamur olana kadar karıştır.",
+     "en": "Add the flour, baking powder and black pepper, then the squeezed courgette, and stir into a soft batter that holds its shape when spooned."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada yağı orta-yüksek ateşte ısıt. Kaşıkla hamurdan parçalar alıp yassılaştırarak yağa koy, bir yüzü kızarınca çevir.",
+     "en": "Heat the oil in a frying pan over medium-high heat. Spoon in flattened rounds of batter and turn once the underside is golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kızaran mücverleri kağıt havlu üzerine al, yağlarını süzdürüp sıcak servis et.",
+     "en": "Transfer the fritters to kitchen paper to drain, and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Tavada",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e3f60607-a571-402c-98e4-f126939c7f50",
+  "slug": "patates-koftesi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Patates köftesi",
+   "en": "Potato croquettes"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Haşlanmış patatesin kaşar, maydanoz ve kuru naneyle yoğrulup galeta ununa bulanarak kızartıldığı bir atıştırmalık. Dışı çıtır, içi yumuşak kalır.",
+   "en": "Boiled potato kneaded with kashar cheese, parsley and dried mint, rolled in breadcrumbs and fried. The outside is crisp and the inside stays soft."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 700,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklarıyla haşlanıp soyulmuş",
+     "en": "boiled in their skins, then peeled"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kashar cheese"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri kabuklarıyla tuzlu suda 25 dakika haşla, yumuşayınca süzüp soy.",
+     "en": "Boil the potatoes in their skins in salted water for 25 minutes until tender, then drain and peel."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Patatesleri sıcakken ez. Rendelenmiş soğanı avuçla sıkıp suyunu alarak patateslere ekle.",
+     "en": "Mash the potatoes while they are still hot. Squeeze the grated onion in your hand to drain it and add it to the potato."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Maydanoz, kuru nane, kaşar, yumurta, un, tuz ve karabiberi ekleyip homojen bir hamur yoğur.",
+     "en": "Add the parsley, dried mint, cheese, egg, flour, salt and pepper and knead into a smooth dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 15 dakika buzdolabında dinlendir, sonra ceviz büyüklüğünde parçalara ayırıp oval köfte şekli ver.",
+     "en": "Rest the dough in the fridge for 15 minutes, then pinch off walnut-sized pieces and shape them into ovals."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Köfteleri galeta ununa bulayıp tabağa diz.",
+     "en": "Roll the croquettes in breadcrumbs and set them on a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı orta ateşte ısıt, köfteleri her yüzünü 3 dakika kızart.",
+     "en": "Heat the oil over medium heat and fry the croquettes for 3 minutes on each side."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kağıt havlu üzerinde yağını süzdürüp sıcak ya da ılık servis et.",
+     "en": "Drain on kitchen paper and serve warm or at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Tavada",
+   "Vejetaryen",
+   "Kolay",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d49a6adf-fb18-4159-9446-44be8d6009f5",
+  "slug": "pacanga-boregi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Marmara",
+  "title": {
+   "tr": "Paçanga böreği",
+   "en": "Paçanga (pastırma and cheese pastries)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İstanbul'da sık yapılan bir atıştırmalık: pastırma ve kaşarın yufkaya sarılıp yağda kızartılması. Pastırmanın baharatı kaşarın yağlılığıyla dengelenir.",
+   "en": "A snack popular in Istanbul: pastırma and kashar cheese rolled in yufka and fried. The spice of the pastırma is balanced by the richness of the cheese."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "büyük boy",
+     "en": "large sheets"
+    },
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pastırma",
+     "en": "Pastırma"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "pastirma",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kashar cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Susam",
+     "en": "Sesame seeds"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sesame",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "gerekirse; pastırma zaten tuzlu",
+     "en": "only if needed, as pastırma is already salty"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Eritilmiş tereyağını bir fırça ile yufkaların üzerine sür, her yufkayı ikiye kes.",
+     "en": "Brush the melted butter over the sheets with a pastry brush, then cut each sheet in half."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her yufkanın üstüne pastırma ve kaşar dilimlerini yay, karabiber serp ve sıkıca sarıp rulo yap.",
+     "en": "Lay pastırma and cheese slices on each piece, add black pepper, and roll tightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ruloların üstünü çırpılmış yumurtayla fırçala ve susam serp.",
+     "en": "Brush the rolls with the beaten egg and sprinkle with sesame."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada yağı orta-yüksek ateşte ısıt, ruloları ekleyip her yüzünü 2 dakika kızart.",
+     "en": "Heat the oil in a pan over medium-high heat and fry the rolls for 2 minutes on each side."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Kağıt havlu üzerine al, yağını süzdürüp dilimleyerek sıcak servis et.",
+     "en": "Drain on kitchen paper, slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kızartma",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c2bc882b-b17b-4535-8542-59a9d97f9b2a",
+  "slug": "kol-boregi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Kol böreği",
+   "en": "Kol böreği (coiled filo pie)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yufkanın arasına beyaz peynirli harcın sarıldığı, kol şeklinde kıvrılıp fırınlanan bir börek. Tereyağı her katı çıtır yapar.",
+   "en": "Layers of yufka wrapped around a white cheese and parsley filling, coiled into a spiral and baked. The butter between the layers makes each one crisp."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 30,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 10,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "çatalla ezilmiş",
+     "en": "mashed with a fork"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "harç için",
+     "en": "for the filling"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "üzerine sürmek için",
+     "en": "for brushing the top"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Susam",
+     "en": "Sesame seeds"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sesame",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "az; peynir tuzlu olduğu için",
+     "en": "a little, as the cheese is salty"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye önceden ısıt, tereyağını eritip hafif soğumaya bırak.",
+     "en": "Preheat the oven to 180°C and melt the butter, then let it cool slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Beyaz peyniri çatalla ez, yumurta, maydanoz ve karabiberle karıştır; tuzu peynire göre ayarla.",
+     "en": "Mash the white cheese with a fork and mix in the egg, parsley and black pepper. Add salt to taste, as the cheese varies."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yufkaları ikişer ikişer üst üste koy, her katın üstüne tereyağı sür. Harcı yufkanın kısa kenarına uzun bir şerit halinde yay.",
+     "en": "Stack the yufka two sheets at a time, brushing butter between each pair. Spread a strip of the filling along one short edge."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yufkayı sıkıca sararak uzun bir rulo yap, sonra kol şeklinde kıvırıp tepsiye yerleştir.",
+     "en": "Roll the sheets up tightly into a long log, then coil it into a spiral and place it in the tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağını ve sütü üzerine sür, susam serp ve 180 derecede 30 dakika pişir.",
+     "en": "Brush the remaining butter and the milk over the top, sprinkle with sesame, and bake at 180°C for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 5 dakika dinlendir, sonra dilimleyerek servis et.",
+     "en": "Take it out and rest for 5 minutes, then slice and serve."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f14becb1-fff7-4791-9ad8-3f6771ed439c",
+  "slug": "kiymali-borek",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Kıymalı börek",
+   "en": "Minced beef börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Soğanlı, pul biberli dana kıymayla doldurulmuş yufkaların sarılıp fırınlandığı bir börek. Dışı çıtır, içi suludur.",
+   "en": "Yufka rolls filled with onion and minced beef seasoned with chilli flakes, then baked. The outside is crisp and the filling stays juicy."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "yağı az dana kıyma",
+     "en": "lean minced beef"
+    },
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "sürmek için çırpılmış",
+     "en": "beaten, for brushing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "üzerine sürmek için",
+     "en": "for brushing the top"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı ince doğra.",
+     "en": "Finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tavada orta ateşte ısıt, soğanı 4 dakika kavur.",
+     "en": "Heat the oil in a pan over medium heat and fry the onion for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekleyip suyunu çekene kadar kavur; tuz, karabiber ve pul biberi ilave et.",
+     "en": "Add the mince and brown it until the liquid has evaporated. Season with salt, black pepper and chilli flakes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp maydanozla karıştır ve soğumaya bırak.",
+     "en": "Take off the heat, stir in the parsley and leave to cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yufkaları ikiye kes; her birinin kısa kenarına bir kaşık harç koyup sıkıca sararak rulo yap, üstlerine eritilmiş tereyağı sür.",
+     "en": "Cut the sheets in half. Put a spoonful of filling on the short edge of each piece, roll tightly and brush the rolls with melted butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ruloları tepsiye yan yana diz, çırpılmış yumurta ve sütü üstüne sür.",
+     "en": "Arrange the rolls side by side in a tray and brush with the beaten egg and milk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye önceden ısıt ve börekleri 25 dakika pişir.",
+     "en": "Preheat the oven to 200°C and bake the börek for 25 minutes."
+    },
+    "timerSeconds": 1500
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Kıymalı",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f86978aa-a8a3-4e89-ab39-721eea777cd7",
+  "slug": "peynirli-borek",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Peynirli börek",
+   "en": "Cheese börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce yufkanın arasında beyaz peynir ve maydanozla pişen, kahvaltıda da öğünlerde de yapılan klasik bir börek.",
+   "en": "A classic börek of thin yufka rolled around white cheese and parsley. It is served at breakfast as well as at other meals."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 30,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi harca, 1 tanesi üstüne",
+     "en": "one for the filling, one for the top"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "üstüne sürmek için",
+     "en": "for brushing the top"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını eritip hafif soğumaya bırak. Fırını 200 dereceye ısıt.",
+     "en": "Melt the butter and leave it to cool slightly. Preheat the oven to 200°C."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Beyaz peyniri ufala; maydanoz, 1 yumurta ve karabiberle karıştır. Tuzu peynire göre ayarla.",
+     "en": "Crumble the white cheese and mix in the parsley, one egg and black pepper. Add salt to taste, depending on the cheese."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her yufkanın uzun kenarına bir kaşık harç koy, tereyağıyla fırçala ve sararak uzun rulo yap.",
+     "en": "Put a spoonful of filling along the long edge of each sheet, brush with butter and roll up into a long log."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ruloları tepsiye yan yana diz. Kalan yumurtayı sütle çırpıp üzerlerine sür.",
+     "en": "Arrange the rolls side by side in the tray. Beat the remaining egg with the milk and brush over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "200 derecede 25 dakika pişir.",
+     "en": "Bake at 200°C for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Dilimlemeden önce 5 dakika dinlendir.",
+     "en": "Rest for 5 minutes before slicing."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sıcak ya da ılık servis et.",
+     "en": "Serve warm or lukewarm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Vejetaryen",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7eea2436-fbdb-4dc9-85f6-7eec3d7b43e5",
+  "slug": "pirasali-borek",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Pırasalı börek",
+   "en": "Leek börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Zeytinyağında yumuşatılmış pırasa ve dereotunun peynirli harçla birleştiği, yufkalı bir tepsi böreği. Pırasanın tatlılığı tuzlu peyniri dengeler.",
+   "en": "A yufka tray bake with leeks softened in olive oil and dill, mixed with a white cheese filling. The sweetness of the leek balances the salty cheese."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Pırasa",
+     "en": "Leeks"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka kesilmiş, iyice yıkanmış",
+     "en": "sliced into thin rings and washed well"
+    },
+    "pantryKey": "leek",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi harca, 1 tanesi üstüne",
+     "en": "one for the filling, one for the top"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "üstüne sürmek için yumurtayla",
+     "en": "for brushing the top, with the egg"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Zeytinyağında soğanı 3 dakika kavur.",
+     "en": "Fry the onion in the olive oil for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Pırasaları ekleyip 8 dakika soteleyerek suyunu çektir. Ocaktan al ve soğumaya bırak.",
+     "en": "Add the leeks and cook for 8 minutes until they soften and the liquid has gone. Take off the heat and let cool."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Soğuyan pırasaya ufalanmış peyniri, dereotunu, 1 yumurtayı, karabiberi ve tuzu ekleyip karıştır. Tuzu tadına bakarak ayarla.",
+     "en": "Stir the crumbled cheese, dill, one egg, black pepper and salt into the cooled leeks. Taste and adjust the salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Tepsinin dibini tereyağıyla yağla, yufkaların yarısını tek tek serip her birinin üzerine tereyağı sür.",
+     "en": "Preheat the oven to 200°C. Grease the base of a tray with butter and lay half of the yufka in it, one sheet at a time, brushing each with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pırasalı harcı yufkaların üzerine yay, kalan yufkaları kapatıp üstüne tereyağı sür.",
+     "en": "Spread the leek filling over the layered sheets, cover with the remaining sheets and brush with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan yumurtayı sütle çırpıp üstüne sür, 35 dakika pişir.",
+     "en": "Beat the remaining egg with the milk, brush over the top and bake for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip sıcak servis et.",
+     "en": "Slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Zeytinyağlı",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "17da27d4-e065-4c8a-b447-0101937b6f17",
+  "slug": "kabakli-borek",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": "Ege",
+  "title": {
+   "tr": "Kabaklı börek",
+   "en": "Courgette börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ege mutfağında sık yapılan, rendelenmiş kabağın dereotu ve beyaz peynirle yufkaya sarıldığı tepsi böreği. Kabak pişince yumuşak ve hafif bir dokuya sahip olur.",
+   "en": "An Aegean tray börek of grated courgette, dill and white cheese layered between yufka. Once baked, the courgette turns soft and light."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş, sıkılmış",
+     "en": "grated and squeezed"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi harca, 1 tanesi üstüne",
+     "en": "one for the filling, one for the top"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları rendele, tuzla ve 10 dakika beklet, sonra elinle sıkarak suyunu al.",
+     "en": "Grate the courgettes, salt them and leave for 10 minutes, then squeeze out the water by hand."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğrayıp zeytinyağında 3 dakika kavur.",
+     "en": "Finely chop the onion and fry it in the olive oil for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Sıkılmış kabakları ekleyip 5 dakika kavur, ocaktan al ve soğumaya bırak.",
+     "en": "Add the squeezed courgette and cook for 5 minutes. Take off the heat and let cool."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Soğuyunca beyaz peyniri, dereotunu, 1 yumurtayı ve karabiberi karıştır. Tuzu tadına bakarak ayarla.",
+     "en": "Once cool, mix in the white cheese, dill, one egg and black pepper. Taste and adjust the salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Tepsiyi tereyağıyla yağla; yufkaların yarısını tek tek serip her birinin üzerine tereyağı sür.",
+     "en": "Preheat the oven to 200°C. Grease the tray with butter and lay half the yufka in it, one sheet at a time, brushing each with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Harcı yufkaların üzerine yay, kalan yufkaları kapatıp üstüne tereyağı sür.",
+     "en": "Spread the filling over the sheets, cover with the rest of the yufka and brush with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üstüne kalan yumurtayı çırpıp sür ve 30 dakika pişir.",
+     "en": "Beat the remaining egg, brush it over the top and bake for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip sıcak servis et.",
+     "en": "Slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Zeytinyağlı",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "77bb679c-0225-4432-b66c-a42f3bc2b22c",
+  "slug": "patlicanli-borek",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Patlıcanlı börek",
+   "en": "Aubergine börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kızartılmış patlıcanın domates ve kaşarla birlikte yufkaya sarılıp pişirildiği bir tepsi böreği. Patlıcanın dokusu yumuşak kalır.",
+   "en": "A tray börek of fried aubergine, tomato and kashar cheese layered in yufka. The aubergine stays soft and silky."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 50,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy",
+     "en": "medium"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kashar cheese"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "patlıcanları kızartmak için",
+     "en": "for frying the aubergine"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi harca, 1 tanesi üstüne",
+     "en": "one for the filling, one for the top"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanları soyup halka kes, tuzlu suda 10 dakika beklet, sonra süzüp kurula.",
+     "en": "Peel and slice the aubergines into rounds, leave them in salted water for 10 minutes, then drain and pat dry."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sıvı yağda patlıcanları iki yüzü altın renk alana kadar kızart, kağıt havluya al.",
+     "en": "Fry the aubergine slices in the oil until golden on both sides, then transfer to kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağında soğanı ve sarımsağı 4 dakika kavur.",
+     "en": "Fry the onion and garlic in the butter for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekleyip suyunu çekene kadar 8 dakika pişir, karabiber ve tuzla tatlandır.",
+     "en": "Add the tomatoes and cook for 8 minutes until the juices have reduced. Season with black pepper and salt."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp soğutarak kaşar peyniri ve 1 yumurtayla karıştır.",
+     "en": "Take off the heat, let it cool, then stir in the grated cheese and one egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 190 dereceye ısıt. Tepsiye yufkaların yarısını yerleştir, her birine tereyağı sür; üstüne patlıcanı ve harcı yay.",
+     "en": "Preheat the oven to 190°C. Lay half of the yufka in a tray, brushing each sheet with butter, then spread the aubergine and the tomato mixture on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan yufkaları kapat, üstüne tereyağı ve çırpılmış kalan yumurtayı sür, 35 dakika pişir.",
+     "en": "Cover with the remaining yufka, brush the top with butter and the beaten egg, and bake for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip sıcak servis et.",
+     "en": "Slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Vejetaryen",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f8ae4313-1171-4d2f-a7d3-a6234fb50fa4",
+  "slug": "tepsi-boregi",
+  "cuisine": "turkish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Tepsi böreği",
+   "en": "Tray börek"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tepsiye kat kat serilen yufkanın arasına peynir ve sütlü yoğurt karışımının konduğu, dilimleri kolay paylaşılan bir börek.",
+   "en": "Layers of yufka in a tray with crumbled white cheese and a milk and yoghurt mixture poured between them. It is baked in slices that are easy to share."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yufka",
+     "en": "Yufka sheets"
+    },
+    "amount": 10,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "yufka",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını eritip hafif soğumaya bırak. Fırını 190 dereceye ısıt.",
+     "en": "Melt the butter and let it cool slightly. Preheat the oven to 190°C."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yoğurt, süt, yumurta ve tuzu bir kapta çırpıp pürüzsüz bir karışım hazırla.",
+     "en": "Whisk the yoghurt, milk, eggs and salt in a bowl until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tepsinin dibini tereyağıyla yağla; yufkaların yarısını tek tek serip her birinin üzerine tereyağı sür.",
+     "en": "Grease the base of the tray with butter and lay half of the yufka in it, one sheet at a time, brushing each with butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ufalanmış beyaz peyniri yufkaların üstüne yay, yoğurtlu karışımın yarısını dök.",
+     "en": "Scatter the crumbled white cheese over the sheets and pour half of the yoghurt mixture over it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan yufkaları üst üste kat, her birine tereyağı sür ve kalan karışımı dök.",
+     "en": "Layer the remaining sheets on top, brushing each with butter, and pour over the rest of the mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "190 derecede 35 dakika pişir; üzeri kızarınca çıkar.",
+     "en": "Bake at 190°C for 35 minutes, until the top is golden."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Dilimleyip sıcak ya da ılık servis et.",
+     "en": "Slice and serve warm or lukewarm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Vejetaryen",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
