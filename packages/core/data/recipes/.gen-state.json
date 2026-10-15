@@ -489,11 +489,11 @@
     "kabakli-nohut-corbasi",
     "bezelyeli-havuc-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:46:33.182Z",
    "finishedAt": null
   },
   {
@@ -940,12 +940,23 @@
     "hurma-tatlisi",
     "saray-sarmasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "zerde",
+    "firin-sutlac",
+    "ayva-tatlisi",
+    "elma-tatlisi",
+    "incir-tatlisi",
+    "kayisi-tatlisi",
+    "ekmek-kadayifi",
+    "kalburabasti",
+    "hurma-tatlisi",
+    "saray-sarmasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91631,
    "startedAt": "2026-10-15T19:44:20.675Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:47:34.170Z"
   },
   {
    "id": "g032",
