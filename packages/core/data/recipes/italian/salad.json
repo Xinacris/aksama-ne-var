@@ -1,1 +1,1165 @@
-[]
+[
+ {
+  "id": "122fd50b-c4f4-4706-aa88-b63b47b553aa",
+  "slug": "caprese-salatasi",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Caprese salatası",
+   "en": "Caprese salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze mozzarella, olgun domates ve fesleğenden oluşan, yalnızca iyi zeytinyağı ve tuzla tamamlanan yaz salatası. Malzemenin kalitesi tarifin her şeyidir.",
+   "en": "Fresh mozzarella, ripe tomatoes and basil, dressed with good olive oil and a little salt. With a salad this simple, the quality of the ingredients does all the work."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Olgun domates",
+     "en": "ripe tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm kalınlığında dilimlenmiş",
+     "en": "sliced 1 cm thick"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze mozzarella",
+     "en": "fresh mozzarella"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş, 1 cm kalınlığında dilimlenmiş",
+     "en": "drained, sliced 1 cm thick"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "fresh basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları koparılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "yeni çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Domatesleri yıkayıp yaklaşık 1 cm kalınlığında dilimle.",
+     "en": "Wash the tomatoes and slice them about 1 cm thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mozzarella dilimlerini domateslerle dönüşümlü olarak büyük bir tabağa diz.",
+     "en": "Arrange the mozzarella slices alternately with the tomato on a large platter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fesleğen yapraklarını aralara serpiştir.",
+     "en": "Tuck the basil leaves in between the slices."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine zeytinyağını gezdir, bir tutam tuz ve taze çekilmiş karabiber ekle.",
+     "en": "Drizzle over the olive oil, then season with a pinch of salt and freshly ground pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salatayı 10 dakika oda sıcaklığında dinlendir ki domates kendi suyunu salsın, sonra servis et.",
+     "en": "Let the salad stand at room temperature for 10 minutes so the tomatoes release their juice, then serve."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "quick",
+   "Vejetaryen",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "96840464-547e-468e-8118-edce63d40c2d",
+  "slug": "panzanella",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Panzanella",
+   "en": "Panzanella (bread salad)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bayat ekmeğin domates suyu ve sirkeyle yumuşayıp lezzet kazandığı Toskana usulü bir ekmek salatası. Yaz ortasında hem hafif hem doyurucu.",
+   "en": "A Tuscan bread salad in which stale bread softens in tomato juice and vinegar and soaks up the flavour. Light, filling and best in the middle of summer."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 5,
+  "waitMinutes": 25,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "stale bread"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "2 cm'lik küpler halinde doğranmış",
+     "en": "cut into 2 cm cubes"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Olgun domates",
+     "en": "ripe tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "cucumber"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "tohumları ayıklanıp doğranmış",
+     "en": "seeded and diced"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely sliced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "fresh basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları kabaca yırtılmış",
+     "en": "leaves torn roughly"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "elma ya da beyaz sirke",
+     "en": "apple or white wine vinegar"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Ekmek küplerini 2 yemek kaşığı zeytinyağıyla tavada orta ateşte 5 dakika kavurup altın rengi ve gevrek hale getir.",
+     "en": "Toast the bread cubes in a pan with 2 tablespoons of the olive oil over a medium heat for 5 minutes, until golden and crisp."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domates, salatalık ve soğanı geniş bir kaseye al, tuz serp ve 10 dakika bekletip sularını salmasını sağla.",
+     "en": "Put the tomatoes, cucumber and onion in a large bowl, salt them and leave for 10 minutes so they release their juices."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kasedeki suyun bir kısmını ayrı bir kaseye süz, kalan zeytinyağı ve sirkeyle karıştırıp sos yap.",
+     "en": "Pour some of the juice off into a separate bowl and whisk it with the remaining olive oil and the vinegar to make a dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ekmek küplerini bu sosun içine at ve 15 dakika bekleterek ekmeğin sosu emip yumuşamasını sağla.",
+     "en": "Add the bread cubes to the dressing and leave for 15 minutes, so the bread soaks it up and softens."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Sebzeleri ve fesleğeni ekleyip karıştır, tuz ve karabiberle tatlandır, hemen servis et.",
+     "en": "Add the vegetables and basil, toss, season with salt and pepper, and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "budget",
+   "Vejetaryen",
+   "Hafif",
+   "Ekşili"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9c3b7398-4192-4c4e-8d81-5b4f02a7261b",
+  "slug": "roka-parmesan-salatasi",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Roka parmesan salatası",
+   "en": "Rocket and parmesan salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze roka, ince parmesan talaşı ve limonlu zeytinyağı sosundan oluşan çok hızlı bir İtalyan salatası. Ana yemeğin yanında küçük bir tabak olarak en iyi gidenidir.",
+   "en": "A very quick Italian salad of peppery rocket, shaved parmesan and a lemon and olive oil dressing. It works best as a small side plate next to a main course."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 0,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "rocket"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kaba sapları ayıklanmış",
+     "en": "tough stalks removed"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "parmesan"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "ince talaş halinde",
+     "en": "shaved into thin curls"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kiraz domates",
+     "en": "cherry tomatoes"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": {
+     "tr": "ikiye kesilmiş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kabuğu rendelenmiş, suyu sıkılmış",
+     "en": "zest grated, juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Roka yapraklarını soğuk suda yıka, iyice kurula ve sert sapları ayıkla.",
+     "en": "Wash the rocket in cold water, dry it well and pull off any tough stalks."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kiraz domatesleri ikiye kes ve bir tutam tuz serpip kenara al.",
+     "en": "Halve the cherry tomatoes and set them aside with a pinch of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limonun kabuğunu rendele, suyunu sık; zeytinyağı, tuz ve karabiberle çırparak sos yap.",
+     "en": "Grate the lemon zest, squeeze in the juice and whisk with the olive oil, salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Rokayı geniş bir kaseye al, sosun yarısını gezdirip hafifçe karıştır.",
+     "en": "Put the rocket in a wide bowl, dress it with half the sauce and toss gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekle, parmesan talaşlarını üzerine serpip kalan sosu gezdir ve hemen servis et.",
+     "en": "Add the tomatoes, scatter the parmesan over the top and drizzle with the rest of the sauce. Serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "quick",
+   "Vejetaryen",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "35727948-b655-46f5-89b3-e9541e57554f",
+  "slug": "italyan-makarna-salatasi",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "İtalyan makarna salatası",
+   "en": "Italian pasta salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Burgu makarna, çeri domates, minik mozzarella ve zeytinle, elma sirkeli bir sosla hazırlanan soğuk bir makarna salatası. Pikniğe ve öğle yemeğine uygun, bir gece önceden de hazırlanabilir.",
+   "en": "Fusilli tossed with cherry tomatoes, baby mozzarella and olives in a sharp apple vinegar dressing, served cold. It travels well to picnics and packed lunches, and holds its shape overnight in the fridge."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 12,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Burgu makarna",
+     "en": "fusilli"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "tuzlu suda al dente haşlanmış",
+     "en": "cooked al dente in salted water"
+    },
+    "pantryKey": "fusilli",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çeri domates",
+     "en": "cherry tomatoes"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Minik mozzarella",
+     "en": "baby mozzarella"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş, ikiye bölünmüş",
+     "en": "drained and halved"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "black olives"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz, ikiye bölünmüş",
+     "en": "pitted and halved"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "fresh basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklar elle parçalanmış",
+     "en": "leaves torn by hand"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma sirkesi",
+     "en": "apple cider vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "apple-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Büyük bir tencerede bol tuzlu suyu kaynat, burgu makarnayı ekleyip 10 dakika haşla.",
+     "en": "Bring a large pan of well salted water to the boil, add the fusilli and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Makarnayı süzüp soğuk suyun altında hızlıca yıka, iyice süz ve yağlı bir tabağa yayarak soğumaya bırak.",
+     "en": "Drain the pasta, rinse quickly under cold water, drain well and spread it on an oiled tray to cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için zeytinyağını, elma sirkesini, hardalı, tuzu ve karabiberi küçük bir kapta çırp.",
+     "en": "To make the dressing, whisk the olive oil, apple cider vinegar, mustard, salt and pepper in a small bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çeri domatesleri, mozzarellayı, soğanı ve zeytinleri makarnanın üzerine ekle, sosu gezdirip iyice karıştır.",
+     "en": "Add the cherry tomatoes, mozzarella, onion and olives to the pasta, pour over the dressing and toss well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fesleğeni ekleyip kapağını kapat ve 2 saat buzdolabında beklet ki tatlar birbirine karışsın.",
+     "en": "Stir in the basil, cover the bowl and chill for 2 hours so the flavours come together."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Servis etmeden önce tuzunu ve sirkesini kontrol et, gerekirse biraz zeytinyağı ekleyip servis et.",
+     "en": "Before serving, check the salt and vinegar, add a little more olive oil if it looks dry, and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "makeAhead",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "15e29c2e-02fe-45c9-b7b1-c16d59fd8e92",
+  "slug": "fasulyeli-ton-baligi-salatasi",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Fasulyeli ton balığı salatası",
+   "en": "Tuscan tuna and bean salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Toskana mutfağından, haşlanmış beyaz fasulye ile ton balığının limonlu zeytinyağı sosuyla buluştuğu hafif bir salata. Kutulardan çıkıp yaklaşık 15 dakikada hazır olur.",
+   "en": "A light salad from Tuscany in which white beans meet tuna in a lemony olive oil dressing. It comes together from the tins in about fifteen minutes."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Haşlanmış kuru fasulye",
+     "en": "cooked white beans"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş ve yıkanmış",
+     "en": "drained and rinsed"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı konserve",
+     "en": "tinned tuna"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "yağı süzülmüş, çatalla parçalanmış",
+     "en": "drained of oil and flaked with a fork"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely sliced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince doğrayıp 10 dakika soğuk suda beklet, ardından süzüp kurula.",
+     "en": "Finely slice the red onion, leave it in cold water for 10 minutes to take the bite out, then drain and pat dry."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Fasulyeleri süzüp yıka ve geniş bir kaseye al.",
+     "en": "Drain and rinse the beans, then tip them into a wide bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ton balığını yağından süzüp çatalla kabaca ezerek fasulyelerin üzerine ekle.",
+     "en": "Drain the tuna and flake it roughly with a fork over the beans."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limonun suyunu, zeytinyağını, tuz ve karabiberi küçük bir kapta çırpıp sosu hazırla.",
+     "en": "Whisk the lemon juice, olive oil, salt and pepper in a small bowl to make the dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı, maydanozu ve sosu kaseye ekleyip nazikçe karıştır, tadına bakıp tuz ve limonla ayarla, hemen servis et.",
+     "en": "Add the onion, parsley and dressing to the bowl and toss gently. Taste, adjust with salt and lemon, and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "glutenFree",
+   "dairyFree",
+   "quick",
+   "budget",
+   "kidFriendly",
+   "Balık",
+   "Zeytinyağlı",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "bc273a3b-5587-47be-8f0c-27ab95dd323e",
+  "slug": "antipasto-salatasi",
+  "cuisine": "italian",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Antipasto salatası",
+   "en": "Antipasto salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İtalyan antipasto tabağından esinlenen bir salata: dana salam, mozzarella, közlenmiş biber ve zeytinler roka yatağının üzerinde sunulur. Akşam yemeğine hızlı bir başlangıç.",
+   "en": "A salad inspired by the Italian antipasto plate: beef salami, mozzarella, roasted peppers and olives laid over a bed of rocket. A quick way to start a dinner."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "rocket"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanıp kurulanmış",
+     "en": "washed and dried"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana salam",
+     "en": "beef salami"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "beef-salami",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "mozzarella"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "1 cm'lik küpler halinde",
+     "en": "cut into 1 cm cubes"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Közlenmiş kırmızı biber",
+     "en": "roasted red peppers"
+    },
+    "amount": 1,
+    "unit": "kavanoz",
+    "note": {
+     "tr": "şeritler halinde kesilmiş",
+     "en": "cut into strips"
+    },
+    "pantryKey": "roasted-red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil zeytin",
+     "en": "green olives"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz",
+     "en": "pitted"
+    },
+    "pantryKey": "olive-green",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "black olives"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz",
+     "en": "pitted"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapari",
+     "en": "capers"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "capers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Balzamik sirke",
+     "en": "balsamic vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "balsamic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Roka yapraklarını geniş bir servis tabağının dibine yay.",
+     "en": "Spread the rocket leaves over the base of a wide serving platter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dana salam dilimlerini ikiye katlayıp rokanın üzerine dağınık şekilde diz.",
+     "en": "Fold the salami slices in half and arrange them loosely over the rocket."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mozzarella küplerini, közlenmiş biber şeritlerini ve zeytinleri salamın aralarına yerleştir.",
+     "en": "Tuck the mozzarella cubes, roasted pepper strips and olives in among the salami."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaparileri üzerine serpiştir.",
+     "en": "Scatter the capers over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı ve balzamik sirkeyi çırpıp tuz ve karabiberle tatlandır, tabağın üzerine gezdir ve hemen servis et.",
+     "en": "Whisk the olive oil and balsamic vinegar with salt and pepper, drizzle over the platter and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "glutenFree",
+   "quick",
+   "guest",
+   "Etli",
+   "Pişirmeden",
+   "Meze"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

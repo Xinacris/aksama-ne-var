@@ -1518,11 +1518,11 @@
     "zeytinyagli-mantar",
     "eksili-kofte"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:23:37.291Z",
    "finishedAt": null
   },
   {
@@ -1803,11 +1803,11 @@
     "kuru-borulce-yemegi",
     "nohut-yemegi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:23:37.292Z",
    "finishedAt": null
   },
   {
@@ -2016,11 +2016,11 @@
     "tavuklu-kremali-fettuccine",
     "ton-balikli-penne"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:23:37.292Z",
    "finishedAt": null
   },
   {
@@ -2135,12 +2135,19 @@
     "fasulyeli-ton-baligi-salatasi",
     "antipasto-salatasi"
    ],
-   "status": "pending",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "caprese-salatasi",
+    "panzanella",
+    "roka-parmesan-salatasi",
+    "italyan-makarna-salatasi",
+    "fasulyeli-ton-baligi-salatasi",
+    "antipasto-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
-   "startedAt": null,
-   "finishedAt": null
+   "tokens": 72473,
+   "startedAt": "2026-10-15T22:23:37.292Z",
+   "finishedAt": "2026-10-15T22:25:43.284Z"
   },
   {
    "id": "g071",
