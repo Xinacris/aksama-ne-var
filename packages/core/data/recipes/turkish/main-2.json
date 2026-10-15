@@ -18344,5 +18344,2319 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "e810016c-ce7d-4e7a-9ef1-96ff1f81ded6",
+  "slug": "kasarli-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kaşarlı pide",
+   "en": "Kaşarlı pide (cheese pide)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yumuşak, hafif kabarık pide hamurunun içine bol kaşar konur. Kenarları çıtır, içi tam erir; en iyisi fırından çıkar çıkmaz yenmesidir.",
+   "en": "A soft, lightly risen pide dough filled generously with melting kaşar cheese. The edges crisp up while the middle stays gooey, best eaten straight from the oven."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 15,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kenarları fırçalamak için çırpılmış",
+     "en": "beaten, for brushing the edges"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya, şekeri ve tuzu karıştır. Ilık suyu ve zeytinyağını ekleyip yumuşak bir hamur oluşana kadar 10 dakika yoğur.",
+     "en": "Mix the flour, yeast, sugar and salt. Add the lukewarm water and olive oil, then knead for 10 minutes until you have a soft dough."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalanmaya bırak.",
+     "en": "Cover the dough and leave it to rise in a warm spot for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 eşit parçaya böl, her parçayı oval bir kayık şekline getir. Kenarları biraz kalın bırak.",
+     "en": "Divide the dough into 4 equal pieces and shape each into an oval boat, leaving the edges a little thicker."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ortasına kaşarı yay, kenarları içe doğru kıvırıp kapat ve yüzeyini çırpılmış yumurtayla fırçala.",
+     "en": "Pile the cheese into the middle, fold the edges inwards and brush the surface with the beaten egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 240 dereceye ısıt ve pideleri 15 dakika pişir.",
+     "en": "Heat the oven to 240°C and bake the pides for 15 minutes, until the crust is golden and the cheese bubbles."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca üzerine eritilmiş tereyağını sürüp sıcak servis et.",
+     "en": "Take them out, brush with the melted butter and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "Fırında",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5aee384d-058d-41c3-81f9-447d21e2153e",
+  "slug": "kusbasili-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kuşbaşılı pide",
+   "en": "Diced beef pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuşbaşı etin domates, biber ve salçayla kısık ateşte pişirilmiş harcı, ince pide hamurunun üzerinde fırınlanır. Hafif baharatlı ve doyurucu bir akşam yemeğidir.",
+   "en": "Diced beef cooked slowly with tomato, peppers and paste, then baked on a thin pide dough. A mildly spiced and filling dinner."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 35,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "2 yemek kaşığı hamura, 1 yemek kaşığı harca",
+     "en": "2 tbsp for the dough, 1 tbsp for the filling"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuşbaşı dana eti",
+     "en": "Diced beef"
+    },
+    "amount": 350,
+    "unit": "g",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "diced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya ve tuzu karıştır. Suyu ve 2 yemek kaşığı zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast and salt. Add the water and 2 tablespoons of olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalandır.",
+     "en": "Cover the dough and let it rise in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada kalan yağı kızdır, kuşbaşı eti yüksek ateşte 5 dakika kavur. Soğanı ekleyip yumuşayana kadar pişir.",
+     "en": "Heat the oil in a wide pan and brown the diced beef over high heat for 5 minutes. Add the onion and cook until soft."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Biberi, domatesi, salçayı, paprikayı ve karabiberi ekleyip 20 dakika kısık ateşte pişir. Harcı soğumaya bırak.",
+     "en": "Add the peppers, tomato, paste, paprika and black pepper, then simmer on low for 20 minutes. Leave the filling to cool."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl, kayık şeklinde aç. Harcı ortaya yay, kenarları kıvırarak kapat.",
+     "en": "Divide the dough into 4 pieces and stretch each into a boat shape. Spread the filling in the middle and fold the edges over."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 240 dereceye ısıt ve pideleri 12 dakika pişir.",
+     "en": "Heat the oven to 240°C and bake the pides for 12 minutes."
+    },
+    "timerSeconds": 720
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7bdd985e-4445-4dcc-be23-bcefab187707",
+  "slug": "sucuklu-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Sucuklu pide",
+   "en": "Sucuk pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dilim dilim kızartılmış sucuk ve bol kaşarla hazırlanan, kenarları çıtır bir pide. Kahvaltıdan akşam yemeğine kadar her zaman tutar.",
+   "en": "A crisp-edged pide topped with sliced sucuk and plenty of kaşar. It suits a weekend breakfast just as well as a quick supper."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 17,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sucuk",
+     "en": "Sucuk (Turkish beef sausage)"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "sucuk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kenarları fırçalamak için çırpılmış",
+     "en": "beaten, for brushing the edges"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya ve tuzu karıştır. Suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast and salt. Add the water and olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalandır.",
+     "en": "Cover the dough and let it rise in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Sucuk dilimlerini kuru tavada 2 dakika kızart, fazla yağını kağıt havlu üzerine al.",
+     "en": "Fry the sucuk slices in a dry pan for 2 minutes, then drain the excess fat on kitchen paper."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl, kayık şeklinde aç. Ortasına kaşarı ve sucuk dilimlerini yerleştir.",
+     "en": "Divide the dough into 4 pieces and stretch each into a boat shape. Layer the cheese and sucuk slices in the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarları kıvırıp kapat, yüzeyini çırpılmış yumurtayla fırçala.",
+     "en": "Fold the edges over and brush the surface with the beaten egg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 240 dereceye ısıt ve pideleri 15 dakika pişir.",
+     "en": "Heat the oven to 240°C and bake the pides for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Çıkınca üzerine eritilmiş tereyağı sür ve hemen servis et.",
+     "en": "Brush with the melted butter as soon as they come out and serve at once."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "kidFriendly",
+   "Fırında",
+   "Hamur işi",
+   "Etli"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "970859f4-427f-46e6-8b69-2b816bbe696e",
+  "slug": "karisik-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Karışık pide",
+   "en": "Mixed pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sucuk, pastırma ve kaşarı bir arada taşıyan, ortasına yumurta kırılarak pişirilen zengin bir pide. Paylaşmak için ideal bir sofra yemeğidir.",
+   "en": "A rich pide that combines sucuk, pastırma and kaşar, with an egg cracked into the middle before baking. Ideal for sharing at the table."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 19,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sucuk",
+     "en": "Sucuk (Turkish beef sausage)"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "sucuk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pastırma",
+     "en": "Pastırma (cured beef)"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "pastirma",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "her pideye bir tane",
+     "en": "one for each pide"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya ve tuzu karıştır. Suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast and salt. Add the water and olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalandır.",
+     "en": "Cover the dough and let it rise in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Pastırma dilimlerini kuru tavada 2 dakika kızart, sucukları da ekleyip birlikte kısa bir süre ısıt.",
+     "en": "Crisp the pastırma slices in a dry pan for 2 minutes, then add the sucuk and warm them through together."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl, kayık şeklinde aç. Kenarları biraz kalın bırakıp ortasına kaşarı yay.",
+     "en": "Divide the dough into 4 pieces and stretch each into a boat shape, keeping the edges a little thick. Spread the cheese in the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaşarın üzerine sucuk ve pastırmayı diz, ortasına bir yumurta kır ve karabiber serp.",
+     "en": "Arrange the sucuk and pastırma over the cheese, crack an egg into the middle and season with black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 240 dereceye ısıt ve pideleri 15 dakika pişir.",
+     "en": "Heat the oven to 240°C and bake the pides for 15 minutes, until the egg white is set."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkınca sıcak servis et.",
+     "en": "Serve hot from the oven."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "457a4050-a172-4c60-94ca-ae6426c94f29",
+  "slug": "yumurtali-pide",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Yumurtalı pide",
+   "en": "Egg and cheese pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Beyaz peynir ve kaşarın üzerine kırılan yumurtayla hazırlanan, Karadeniz sofralarının sade ama doyurucu pidesi. Kahvaltıda da akşamda da yakışır.",
+   "en": "A simple but filling pide from the Black Sea tables, with white cheese and kaşar and an egg cracked over the top. Works for breakfast or supper."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 15,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ufalanmış",
+     "en": "crumbled"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "her pideye bir tane",
+     "en": "one for each pide"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya, şeker ve tuzu karıştır. Ilık suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast, sugar and salt. Add the lukewarm water and olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalandır.",
+     "en": "Cover the dough and let it rise in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl, her parçayı oval bir kayık şekline getir. Ortayı biraz inceltip kenarları kalın bırak.",
+     "en": "Divide the dough into 4 pieces and shape each into an oval boat. Thin the middle a little and keep the edges thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ufalanmış beyaz peyniri ve rendelenmiş kaşarı ortaya yay.",
+     "en": "Spread the crumbled white cheese and grated kaşar in the middle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ortasında peynir kalacak şekilde bir yumurta kır, karabiber serp ve kenarları kıvırarak kapat.",
+     "en": "Crack an egg into the cheese in each pide, season with black pepper and fold the edges over."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 240 dereceye ısıt ve pideleri 15 dakika pişir.",
+     "en": "Heat the oven to 240°C and bake the pides for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Çıkınca üzerine eritilmiş tereyağı gezdirip sıcak servis et.",
+     "en": "Drizzle with the melted butter as they come out and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "Fırında",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a7ff0171-8e7a-4e74-90ad-96e865e28f4a",
+  "slug": "lahmacun",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Lahmacun",
+   "en": "Lahmacun"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce açılmış hamurun üzerine baharatlı kıyma harcı yayılıp kısa sürede pişirilir. Limon sıkılıp maydanozla sarılarak yenir.",
+   "en": "A thin dough base spread with a spiced minced meat topping and baked quickly. It is rolled up with parsley and a squeeze of lemon."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 8,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hamur ve harç için",
+     "en": "for the dough and the topping"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "az yağlı",
+     "en": "lean"
+    },
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapya biber",
+     "en": "Red pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çok ince doğranmış",
+     "en": "very finely chopped"
+    },
+    "pantryKey": "red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için dilim dilim",
+     "en": "cut into wedges for serving"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, tuzu, zeytinyağını ve ılık suyu yoğurup 8 dakika pürüzsüz bir hamur elde et.",
+     "en": "Knead the flour, salt, olive oil and lukewarm water for 8 minutes into a smooth dough."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 30 dakika dinlendir.",
+     "en": "Cover the dough and rest it for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Harç için kıymayı, rendelenmiş soğan ve domatesi, kapya biberi, salçayı, kimyonu, karabiberi ve tuzu ekleyip 5 dakika iyice yoğur.",
+     "en": "For the topping, combine the mince, grated onion and tomato, red pepper, paste, cumin, black pepper and salt, then knead for 5 minutes until well mixed."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru 8 topa böl. Her topu ince, yuvarlak bir yufka gibi aç ve harcı ince bir tabaka halinde yay.",
+     "en": "Divide the dough into 8 balls. Roll each into a thin round and spread the topping evenly over it in a thin layer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 250 dereceye ısıt, lahmacunları tek kat halinde 8 dakika pişir.",
+     "en": "Heat the oven to 250°C and bake the lahmacun in a single layer for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Maydanoz ve limonla birlikte, sararak hemen servis et.",
+     "en": "Serve straight away, rolled up with parsley and a squeeze of lemon."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kıymalı",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "4be4c008-2cbb-4afc-b68b-d752fab3d2d6",
+  "slug": "etli-ekmek",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "İç Anadolu",
+  "title": {
+   "tr": "Etli ekmek",
+   "en": "Etli ekmek (flat meat bread)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Lahmacuna benzer ama daha kalın ve yumuşak bir hamurun üzerinde kıymalı harçla pişen bir ekmek. Sıcakken dilimlenip zeytinyağı gezdirilerek yenir.",
+   "en": "Similar to lahmacun but on a thicker, softer dough, baked with a minced meat topping. Sliced while warm and finished with a drizzle of olive oil."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 15,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "hamur ve son gezdirme için",
+     "en": "for the dough and to finish"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "az yağlı",
+     "en": "lean"
+    },
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, maya ve tuzu karıştır. Ilık suyu ve 1 yemek kaşığı zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yeast and salt. Add the lukewarm water and 1 tablespoon of olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde mayalandır.",
+     "en": "Cover the dough and let it rise in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Kıymayı, rendelenmiş soğanı, salçayı, paprikayı, tuzu ve karabiberi 5 dakika yoğurarak harcı hazırla.",
+     "en": "Make the topping by kneading the mince, grated onion, paste, paprika, salt and black pepper together for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru 2 parçaya böl, her parçayı yaklaşık 1 cm kalınlığında yuvarlak aç. Harcı yay, üzerine sivri biber ve maydanozu serp.",
+     "en": "Divide the dough into 2 pieces and roll each into a round about 1 cm thick. Spread the topping on top and scatter the peppers and parsley over it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 230 dereceye ısıt ve etli ekmekleri 15 dakika pişir.",
+     "en": "Heat the oven to 230°C and bake the etli ekmek for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Pişince üzerine zeytinyağı gezdir, dilimleyip sıcak servis et.",
+     "en": "When baked, drizzle with olive oil, slice and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kıymalı",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c6a736af-f0bf-4b97-8617-d9e1d8a0e988",
+  "slug": "bafra-pidesi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Bafra pidesi",
+   "en": "Bafra pide"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yoğurtlu ve yumuşak bir hamurla hazırlanan, beyaz peynir ve maydanozlu iç harcı olan Samsun usulü pide. Tereyağıyla fırçalanınca kenarı yumuşacık olur.",
+   "en": "A pide from Samsun made with a yoghurt dough and a filling of white cheese and parsley. Brushed with butter, the edges stay soft and tender."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 15,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "hamur için",
+     "en": "for the dough"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Instant maya",
+     "en": "Instant yeast"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "instant-yeast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "ılık",
+     "en": "lukewarm"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz peynir",
+     "en": "White cheese"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "mashed"
+    },
+    "pantryKey": "white-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kaşar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Un, yoğurt, maya ve tuzu karıştır. Suyu ve zeytinyağını ekleyip 10 dakika yoğur.",
+     "en": "Mix the flour, yoghurt, yeast and salt. Add the water and olive oil, then knead for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 1 saat ılık bir yerde dinlendir.",
+     "en": "Cover the dough and rest it in a warm place for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş beyaz peyniri, rendelenmiş kaşarı, maydanozu ve karabiberi karıştırarak iç harcı hazırla.",
+     "en": "Make the filling by mixing the mashed white cheese, grated kaşar, parsley and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 parçaya böl, her parçayı yayvan bir pide şekline getir ve kenarlarını biraz kalınlaştır.",
+     "en": "Divide the dough into 4 pieces and shape each into a flat pide, keeping the edges a little thicker."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Harcı ortaya yay, kenarlarını kapat ve yüzeyini eritilmiş tereyağıyla fırçala.",
+     "en": "Spread the filling in the middle, pinch the edges closed and brush the surface with melted butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 230 dereceye ısıt ve pideleri 15 dakika pişir.",
+     "en": "Heat the oven to 230°C and bake the pides for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Çıkınca üzerine biraz daha tereyağı gezdirip sıcak servis et.",
+     "en": "Brush with a little more butter as they come out and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "32006886-304c-4dd7-a1a9-7b46b8f7153f",
+  "slug": "kayseri-mantisi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "İç Anadolu",
+  "title": {
+   "tr": "Kayseri mantısı",
+   "en": "Kayseri mantı"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Küçük kare hamurların içinde kıyma, yoğurtlu sarımsaklı sosla servis edilen Kayseri usulü mantı. Üzerine tereyağında kavrulmuş pul biber ve kuru nane gezdirilir.",
+   "en": "Small square dumplings filled with minced beef and served with a garlicky yoghurt sauce, in the Kayseri way. Finished with butter fried with chilli flakes and dried mint."
+  },
+  "servings": 4,
+  "prepMinutes": 60,
+  "cookMinutes": 12,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "az yağlı",
+     "en": "lean"
+    },
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, yumurtayı, tuzu ve suyu yoğurarak sert ama pürüzsüz bir hamur yap. 10 dakika iyice yoğur.",
+     "en": "Mix the flour, egg, salt and water into a firm but smooth dough, then knead well for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Hamuru streç filmle sarıp 30 dakika dinlendir.",
+     "en": "Wrap the dough in cling film and rest it for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kıymayı, rendelenmiş soğanı, tuzu ve karabiberi elle iyice yoğurarak iç harcı hazırla.",
+     "en": "Make the filling by kneading the mince, grated onion, salt and black pepper together by hand until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru çok ince aç, 2 cm kare kesimler yap. Her kareye bir tutam harç koyup köşeleri birleştirerek küçük mantılar şekillendir.",
+     "en": "Roll the dough very thin and cut 2 cm squares. Place a small pinch of filling on each and pinch the corners together to shape small dumplings."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede tuzlu suyu kaynat, mantıları ekleyip 10 dakika pişir.",
+     "en": "Bring a large pan of salted water to the boil, add the dumplings and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu tuz ve ezilmiş sarımsakla karıştır. Tereyağını küçük tavada 2 dakika kavur, pul biber ve kuru naneyi ekleyip ocaktan al.",
+     "en": "Stir the salt and crushed garlic into the yoghurt. Fry the butter in a small pan for 2 minutes, then add the chilli flakes and dried mint and take it off the heat."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Mantıları süzüp yoğurtlu sosun üzerine koy, tereyağlı pul biber sosunu gezdirerek sıcak servis et.",
+     "en": "Drain the dumplings, arrange them over the garlic yoghurt, drizzle with the spiced butter and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kıymalı",
+   "Haşlama",
+   "Hamur işi",
+   "Yoğurtlu",
+   "freezable"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5b18e2b1-4ef6-4faf-99fb-c11695f76e33",
+  "slug": "tatar-boregi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "İç Anadolu",
+  "title": {
+   "tr": "Tatar böreği",
+   "en": "Tatar böreği (large dumplings with yoghurt)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İç Anadolu'nun yoğurtlu hamur işi: haşlanmış kıymalı büyük börekler, sarımsaklı yoğurdun ve tereyağlı paprikanın altında servis edilir.",
+   "en": "A central Anatolian dough dish: large boiled dumplings filled with minced beef, served under garlicky yoghurt and paprika butter."
+  },
+  "servings": 4,
+  "prepMinutes": 50,
+  "cookMinutes": 12,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "az yağlı",
+     "en": "lean"
+    },
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, yumurtayı, tuzu, suyu ve zeytinyağını yoğurup 8 dakika pürüzsüz bir hamur elde et.",
+     "en": "Mix the flour, egg, salt, water and olive oil, then knead for 8 minutes into a smooth dough."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru örtüp 30 dakika dinlendir.",
+     "en": "Cover the dough and rest it for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kıymayı, rendelenmiş soğanı, karabiberi ve tuzu elde iyice yoğurarak harcı hazırla.",
+     "en": "Make the filling by kneading the mince, grated onion, black pepper and salt well by hand."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ince aç, 6 cm karelere kes. Her karenin ortasına bir kaşık harç koyup kenarlarını üçgen şeklinde birleştir.",
+     "en": "Roll the dough thin, cut 6 cm squares and place a spoonful of filling in the middle of each. Pinch the edges together into a triangle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede tuzlu suyu kaynat, böreklerin hepsini ekleyip 10 dakika haşla.",
+     "en": "Bring a large pan of salted water to the boil, add all the börek and boil for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yoğurdu tuz ve ezilmiş sarımsakla çırpıp haşlanmış böreklerin üzerine dök.",
+     "en": "Whisk the yoghurt with salt and crushed garlic, then spoon it over the boiled dumplings."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını tavada 2 dakika kavur, paprikayı ekleyip hemen ocaktan al ve böreklerin üzerine gezdirerek servis et.",
+     "en": "Fry the butter in a pan for 2 minutes, stir in the paprika, take it off the heat and drizzle over the dumplings to serve."
+    },
+    "timerSeconds": 120
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kıymalı",
+   "Hamur işi",
+   "Haşlama",
+   "Yoğurtlu"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
