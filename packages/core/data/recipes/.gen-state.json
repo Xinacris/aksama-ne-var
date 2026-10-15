@@ -1654,11 +1654,11 @@
     "tepsi-kebabi",
     "kiremitte-kofte"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:34:45.774Z",
    "finishedAt": null
   },
   {
@@ -2339,12 +2339,23 @@
     "arroz-con-pollo",
     "dana-estofado"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "tavuklu-paella",
+    "deniz-urunlu-paella",
+    "sebzeli-paella",
+    "ispanyol-omleti",
+    "pollo-al-ajillo",
+    "pollo-a-la-cerveza",
+    "alb-ndigas",
+    "fideua",
+    "arroz-con-pollo",
+    "dana-estofado"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 95083,
    "startedAt": "2026-10-15T22:31:58.204Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:35:20.230Z"
   },
   {
    "id": "g074",
