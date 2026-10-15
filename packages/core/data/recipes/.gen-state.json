@@ -2562,12 +2562,23 @@
     "dal-makhani",
     "chana-masala"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "butter-chicken",
+    "tavuk-korma",
+    "tavuk-biryani",
+    "kuzu-biryani",
+    "kuzu-rogan-josh",
+    "kuzu-korma",
+    "keema-matar",
+    "dal-tadka",
+    "dal-makhani",
+    "chana-masala"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 99881,
    "startedAt": "2026-10-15T22:39:14.678Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:42:56.514Z"
   },
   {
    "id": "g081",
@@ -2665,11 +2676,11 @@
     "gajar-halwa",
     "kulfi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:42:41.673Z",
    "finishedAt": null
   },
   {
