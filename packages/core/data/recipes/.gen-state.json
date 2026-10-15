@@ -1654,12 +1654,23 @@
     "tepsi-kebabi",
     "kiremitte-kofte"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "hingel",
+    "firin-manti",
+    "kiymali-gozleme",
+    "ispanakli-gozleme",
+    "patatesli-gozleme",
+    "arnavut-boregi",
+    "talas-boregi",
+    "sac-boregi",
+    "tepsi-kebabi",
+    "kiremitte-kofte"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91756,
    "startedAt": "2026-10-15T22:34:45.774Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:37:50.119Z"
   },
   {
    "id": "g052",
@@ -1983,11 +1994,11 @@
     "bulgurlu-biber-dolmasi",
     "bulgurlu-lahana-sarmasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:37:21.440Z",
    "finishedAt": null
   },
   {
