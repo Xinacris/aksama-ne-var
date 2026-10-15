@@ -103,7 +103,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pirinci tereyağında hafifçe kavurup az suyla pişirilen, taneleri ayrı duran klasik bir pilav. Pirinci önceden ılık tuzlu suda bekletmek tanelerin dağılmasını sağlar.",
+   "en": "A classic pilaf of rice fried in butter and cooked in a measured amount of water, so the grains stay separate. Soaking the rice beforehand in warm salted water keeps them light."
+  }
  },
  {
   "id": "60266458-b6a4-4cbf-8c78-e484582a57d8",
@@ -227,7 +231,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pilavlık bulgurun soğan, biber ve domates salçasıyla birlikte pişirildiği, yoğun tadı olan sade bir yemek. Bulgur ocaktan alındıktan sonra demlenince daha dolgun olur.",
+   "en": "Coarse bulgur cooked with onion, peppers, tomato paste and grated tomato, giving a deep, savoury flavour with little effort. Letting it rest after cooking makes it fuller."
+  }
  },
  {
   "id": "78496613-1d90-4ecf-bd6f-999f5d9275af",
@@ -334,7 +342,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Arpa şehriyenin tereyağında altın rengi alana kadar kavrulmasıyla hazırlanan, hafif fındıksı bir tada sahip pilav. Pirincin şehriyeyle birlikte yumuşak bir doku vermesi bu pilavı ayıran özelliktir.",
+   "en": "Rice cooked with orzo that has been toasted in butter until golden, which gives it a mild nutty flavour. The soft, slightly chewy texture of the orzo sets it apart from plain rice."
+  }
  },
  {
   "id": "49556e99-73df-4892-b8ab-5d7f9b718bf3",
@@ -435,7 +447,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Makarnanın tereyağıyla harmanlanıp üzerine ufalanmış beyaz peynir serpilerek servis edilen, hızlı ve sade bir yemek. Sıcakken harmanlanması yağın makarnaya iyice işlemesini sağlar.",
+   "en": "Pasta tossed in butter while still hot and finished with crumbled white cheese, a quick and simple dish. Tossing it hot lets the butter coat each strand evenly."
+  }
  },
  {
   "id": "79bb1384-ed22-4898-b987-27b9a6ba5670",
@@ -522,7 +538,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patateslerin iki kez kızartılmasıyla dış kısmı çıtır, içi yumuşak olan kızartma. Kızartmadan önce soğuk suda bekletilmesi nişastanın bir kısmını alır ve daha az yağ çeker.",
+   "en": "Potatoes fried twice, first at a lower heat to cook them through and then hotter to crisp the outside, so they are crunchy outside and soft inside. Soaking them in cold water first draws out starch and reduces oil absorption."
+  }
  },
  {
   "id": "21674b4a-4111-46dc-bdde-07a65296083d",
@@ -628,7 +648,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Pirincin tereyağında kavrulup haşlanmış nohutla birlikte pişirildiği, doyurucu bir pilav. Nohudun pilava tatlımsı bir tat ve dolgun bir doku katmasıyla ana yemeğin yanında iyi gider.",
+   "en": "Rice fried in butter and cooked with boiled chickpeas, making a filling side that goes well with a main course. The chickpeas add a slightly sweet flavour and a firm, satisfying texture."
+  }
  },
  {
   "id": "64cb3ea2-730d-43e5-94ab-7f5e73ee4fa6",
@@ -780,7 +804,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Çam fıstığı ve kuş üzümüyle birlikte yenibahar ve tarçınla tatlandırılan, dereotu serpilerek servis edilen geleneksel bir pilav. Fıstıkların tereyağında kavrulması pilava belirgin bir aroma verir.",
+   "en": "A traditional rice dish spiced with allspice and cinnamon and studded with pine nuts and currants, finished with dill. Toasting the pine nuts in butter first gives the rice a distinct, nutty aroma."
+  }
  },
  {
   "id": "52559fc1-060d-4907-880e-4528a24b75c1",
@@ -905,7 +933,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Soğan, havuç, kapya biber ve bezelyenin eklendiği, renkli ve besleyici bir bulgur pilavı. Sebzelerin tereyağında sotelenmesi tatlarını ortaya çıkarır ve pilava hafif bir tatlılık verir.",
+   "en": "A colourful and nourishing bulgur pilaf with onion, carrot, red pepper and peas. Sautéing the vegetables in butter first brings out their sweetness and gives the pilaf a light, fresh flavour."
+  }
  },
  {
   "id": "20b0829b-7a49-40eb-8f51-0040823fc406",
@@ -1028,7 +1060,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış yufkaların süt ve yumurtalı sosla katlanıp arasına beyaz peynirli maydanozlu harç konularak fırında pişirilen bir börek. Yufkaların yumuşak dokusu ve sosun emilmesi bu böreğin ayırt edici özelliğidir.",
+   "en": "Boiled yufka sheets layered with an egg and milk sauce and a filling of white cheese and parsley, then baked. The soft, custardy layers, where the sauce soaks into the pastry, are what make this börek distinctive."
+  }
  },
  {
   "id": "a798dea7-afad-414b-b00e-d107732783f8",
@@ -1133,7 +1169,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Üçgen dilimlenmiş yufkaya beyaz peynir ve maydanozlu harç konarak sıkıca sarılan, kızgın yağda kızartılan ince börek çeşidi. Kızartma sırasında yufkanın çıtır olması ve içindeki peynirin erimemesi iyi bir sigara böreğinin ölçütüdür.",
+   "en": "Triangles of yufka wrapped around a filling of white cheese and parsley and fried until golden. A good sigara böreği is crisp and blistered on the outside while the cheese inside stays soft."
+  }
  },
  {
   "id": "c166da6d-ff29-451c-a970-8b6b6f74886d",
@@ -1272,7 +1312,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanıp ezilmiş patates, soğan ve baharatlarla doldurulan yufkaların rulo halinde sarılıp fırında pişirildiği bir börek. Sos sürülmüş yufkalar fırında hem çıtır hem de yumuşak kalır.",
+   "en": "Yufka sheets rolled around a filling of mashed potato, fried onion and spices, then baked. The sauce brushed over the sheets keeps the pastry soft in the middle and golden on top."
+  }
  },
  {
   "id": "a61050c9-55c9-4650-aac1-c5ba1d32571e",
@@ -1411,7 +1455,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Soğanla birlikte söndürülmüş ıspanak ve beyaz peynir harcının yufkalar arasına katlandığı, fırında pişirilen bir börek. Yoğurtlu sos sayesinde yufkalar nemli ve yumuşak kalır.",
+   "en": "Spinach cooked down with onion and mixed with white cheese, layered between sheets of yufka and baked. The yoghurt in the egg mixture keeps the pastry moist and tender."
+  }
  },
  {
   "id": "cc18666e-df83-43a2-ab9e-e720429872a8",
@@ -1516,7 +1564,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış patateslerin sıcakken ezilip ılık süt ve tereyağıyla pürüzsüz hale getirildiği basit bir garnitür. Patatesin sıcakken ezilmesi ve sütün ılık olması dokusunun yapışkan olmasını önler.",
+   "en": "Boiled potatoes mashed while hot and beaten with warm milk and butter until smooth, a simple side dish. Mashing them hot and using warm milk stops the texture from turning gluey."
+  }
  },
  {
   "id": "9754a20a-5805-483c-92c5-ae90a3e7af63",
@@ -1614,7 +1666,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Haşlanmış erişteye tereyağında kavrulmuş ceviz eklenerek hazırlanan, sade ve hızlı bir yemek. Cevizin tereyağında hafifçe kavrulması erişteye fındıksı bir tat verir.",
+   "en": "Boiled egg noodles tossed with butter and toasted walnuts, a simple and quick dish. Lightly toasting the walnuts in the butter gives the noodles a nutty flavour."
+  }
  },
  {
   "id": "6f657213-c6de-4c00-892d-35cec4fb02c9",
@@ -1729,7 +1785,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kabuklu patateslerin zeytinyağı, sarımsak ve kekikle harmanlanıp fırında kızartıldığı sade bir garnitür. Patateslerin tek kat halinde yayılması dış kısmının çıtır olmasını sağlar.",
+   "en": "Unpeeled potato wedges tossed in olive oil, garlic and herbs, then roasted until crisp. Spreading them in a single layer is what gives them a crisp edge rather than steaming them."
+  }
  },
  {
   "id": "4d11ae94-d895-41ae-ad07-053b45fcaa33",
@@ -1919,7 +1979,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kırmızı mercimek ve köftelik bulgurun salça, soğan ve baharatlarla yoğrulup elde şekillendirildiği, marul ve limonla servis edilen bir meze. Bulgurun mercimeğin suyunu çekmesi için bekletilmesi kıvamı ayarlar.",
+   "en": "Red lentils and fine bulgur kneaded with pastes, onion and spices, shaped by hand and served with lettuce and lemon. Leaving the bulgur to swell in the lentils is what sets the texture of the mixture."
+  }
  },
  {
   "id": "33e61f76-2f2d-43f0-83c8-0b6599c2faad",
@@ -2049,7 +2113,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Mayalanmış hamurdan elle yassılaştırılıp ortası delinerek kızgın yağda kızartılan, kahvaltıda sıcak servis edilen bir hamur işi. Hamurun iyi mayalanması pişilerin hafif ve kabarık olmasını sağlar.",
+   "en": "Yeasted dough shaped into flat rings by hand and fried in hot oil, usually served warm at breakfast. A well-risen dough is what makes the pişi light and puffy inside."
+  }
  },
  {
   "id": "460df767-1025-4acf-b11c-d5154fb608eb",

@@ -3532,12 +3532,30 @@
     "mercimek-koftesi",
     "pisi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "tereyagli-pirinc-pilavi",
+    "bulgur-pilavi",
+    "sehriyeli-pilav",
+    "makarna",
+    "patates-kizartmasi",
+    "nohutlu-pilav",
+    "ic-pilav",
+    "sebzeli-bulgur-pilavi",
+    "su-boregi",
+    "sigara-boregi",
+    "patatesli-rulo-borek",
+    "ispanakli-borek",
+    "patates-puresi",
+    "eriste",
+    "firinda-baharatli-patates",
+    "mercimek-koftesi",
+    "pisi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 56057,
    "startedAt": "2026-10-15T22:59:08.964Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:59:52.404Z"
   },
   {
    "id": "f006",
