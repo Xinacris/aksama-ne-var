@@ -1814,12 +1814,23 @@
     "kuru-borulce-yemegi",
     "nohut-yemegi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "pazi-kavurma",
+    "karalahana-kavurma",
+    "kara-lahana-sarmasi",
+    "taze-fasulye-kavurma",
+    "kabak-oturtma",
+    "patlicanli-pilav",
+    "patlican-mihlama",
+    "yesil-mercimekli-bulgur",
+    "kuru-borulce-yemegi",
+    "nohut-yemegi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 107249,
    "startedAt": "2026-10-15T22:23:37.292Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:27:46.330Z"
   },
   {
    "id": "g058",
@@ -2061,11 +2072,11 @@
     "focaccia",
     "parmigiana-di-melanzane"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:26:33.136Z",
    "finishedAt": null
   },
   {
