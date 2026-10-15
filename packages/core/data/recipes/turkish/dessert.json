@@ -6475,5 +6475,1865 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "2193ae36-0794-4dc6-843e-cc77cca39c4c",
+  "slug": "elmali-kurabiye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Elmalı kurabiye",
+   "en": "Apple-filled cookies"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tarçınlı elma harcı konan, tereyağlı ve ufak boy bir kurabiye. Çayın yanında sade ama doyurucu bir tatlı.",
+   "en": "Small buttery cookies sandwiching a cinnamon apple filling. A plain but satisfying tea-time sweet."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 26,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında yumuşamış",
+     "en": "softened at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma",
+     "en": "Apple"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulup küp küp doğranmış",
+     "en": "peeled and diced"
+    },
+    "pantryKey": "apple",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "üzerine serpmek için",
+     "en": "for dusting"
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını toz şekerle birlikte kremsi bir kıvam alana kadar iyice çırp.",
+     "en": "Beat the butter with the caster sugar until creamy and smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı ve vanilyayı ekleyip iyice karıştır.",
+     "en": "Add the egg and vanilla and mix well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu ve tuzu karıştırıp yavaş yavaş ekle; yumuşak, elde yapışmayan bir hamur yoğur.",
+     "en": "Stir in the flour, baking powder and salt a little at a time, then knead into a soft dough that does not stick to your hands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru streç film ile sarıp buzdolabında 30 dakika dinlendir.",
+     "en": "Wrap the dough in cling film and rest it in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Elmaları 2 yemek kaşığı şeker ve tarçınla tavada 8 dakika pişir; suyunu çekip harç kıvamına gelsin.",
+     "en": "Cook the apple with 2 tablespoons of the sugar and the cinnamon in a pan for 8 minutes, until the juices have reduced to a thick filling."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru ikiye bölüp 3 mm kalınlığında aç, daire kesicilerle kes. Yarısının üzerine bir tatlı kaşığı elma harcı koy, üstüne ikinci parçayı kapatıp kenarlarını parmakla bastır.",
+     "en": "Divide the dough in two and roll one half to 3 mm thick. Cut rounds, put a teaspoon of apple filling on half of them, top with the rest and press the edges together."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Kurabiyeleri tepsiye diz ve 18 dakika kenarları hafif altınlaşana kadar pişir.",
+     "en": "Heat the oven to 180 degrees. Arrange the cookies on a tray and bake for 18 minutes, until the edges are lightly golden."
+    },
+    "timerSeconds": 1080
+   },
+   {
+    "text": {
+     "tr": "Kurabiyeleri tamamen soğutup üzerlerine pudra şekeri serp.",
+     "en": "Let the cookies cool completely, then dust with icing sugar."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Hamur işi",
+   "Fırında",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "37b3093b-7c94-4744-a0ce-a75b61c2eb58",
+  "slug": "un-kurabiyesi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Un kurabiyesi",
+   "en": "Shortbread cookies"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pudra şekeriyle hazırlanan, ağızda dağılan yumuşak bir kurabiye. Üzeri Antep fıstığıyla süslenir.",
+   "en": "A soft shortbread made with icing sugar that melts in the mouth, topped with pistachio."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachio"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını pudra şekeriyle açık renk alana kadar kremsi olana kadar çırp.",
+     "en": "Beat the butter with the icing sugar until pale and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı, vanilyayı ve tuzu ekleyip karıştır.",
+     "en": "Add the egg, vanilla and salt and stir."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, nişastayı ve kabartma tozunu eleyerek ekle; yumuşak bir hamur yoğur.",
+     "en": "Sift in the flour, cornflour and baking powder and knead into a soft dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru streç film ile sarıp buzdolabında 1 saat dinlendir.",
+     "en": "Wrap the dough and chill it in the fridge for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Hamuru 1 cm kalınlığında açıp kurabiye kalıplarıyla kes ya da ceviz büyüklüğünde parçalara ayırıp yassıla.",
+     "en": "Roll the dough to 1 cm thick and cut with cookie cutters, or shape walnut-sized pieces and flatten them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kurabiyelerin üzerine kıyılmış Antep fıstığını serp.",
+     "en": "Scatter the chopped pistachio over the cookies."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt ve kurabiyeleri kenarları hafif sarılana kadar 15 dakika pişir.",
+     "en": "Heat the oven to 170 degrees and bake the cookies for 15 minutes, until the edges are just golden."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tepside 10 dakika dinlendirip ardından tele al ve tamamen soğut.",
+     "en": "Rest them on the tray for 10 minutes, then move to a rack to cool completely."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "372ab41b-7321-4d7c-94c1-596004f7da5f",
+  "slug": "cevizli-kurabiye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Cevizli kurabiye",
+   "en": "Walnut cookies"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bol cevizli, hafif tarçınlı ve kumlu bir kurabiye. Bir bardak sütün yanında çok yakışır.",
+   "en": "A crumbly cookie full of walnut and lightly spiced with cinnamon. Good with a glass of milk."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnut halves"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağı ve şekeri açık renk alana kadar kremsi olana kadar çırp.",
+     "en": "Beat the butter and sugar until pale and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı, sütü ve vanilyayı ekleyip iyice karıştır.",
+     "en": "Beat in the egg, milk and vanilla."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu, tarçını ve tuzu karıştırıp ekle; yumuşak bir hamur yoğur.",
+     "en": "Add the flour, baking powder, cinnamon and salt and knead to a soft dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Cevizleri hamura ekleyip eşit dağılana kadar yoğurmaya devam et.",
+     "en": "Work the walnuts into the dough until evenly spread."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ceviz büyüklüğünde parçalara ayır, avuçlarında yuvarla ve hafifçe bastırarak tepsiye diz.",
+     "en": "Pinch off walnut-sized pieces, roll them in your palms and flatten slightly onto a tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt ve kurabiyeleri 15 dakika pişir.",
+     "en": "Heat the oven to 180 degrees and bake the cookies for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğuyunca kavanoza koy.",
+     "en": "Once fully cooled, store in a jar."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a2f97598-db0a-471f-b85f-41aee43a1d0b",
+  "slug": "tahinli-kurabiye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Tahinli kurabiye",
+   "en": "Tahini cookies"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tahinin ve susamın kokusunun öne çıktığı, yağlı ve kumlu bir kurabiye. Kahvenin yanına çok yakışır.",
+   "en": "A crumbly, nutty biscuit where tahini and sesame lead the flavour. Lovely alongside coffee."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 14,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tahin",
+     "en": "Tahini"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "iyice karıştırılmış",
+     "en": "well stirred"
+    },
+    "pantryKey": "tahini",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": null,
+    "pantryKey": "vanilla",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Susam",
+     "en": "Sesame seeds"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "sesame",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tahin, şeker ve sıvı yağı pürüzsüz bir karışım olana kadar iyice karıştır.",
+     "en": "Mix the tahini, sugar and oil until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı ve vanilyayı ekleyip karıştırmaya devam et.",
+     "en": "Stir in the egg and vanilla."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu ve tuzu ekleyip elde yapışmayan yumuşak bir hamur yoğur.",
+     "en": "Add the flour, baking powder and salt and knead to a soft dough that does not stick to your hands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ceviz büyüklüğünde toparla ve avuçlarında yuvarla.",
+     "en": "Shape the dough into walnut-sized balls in your palms."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Topları susamın içinde yuvarlayıp tepsiye aralıklı olarak diz.",
+     "en": "Roll the balls in the sesame and space them out on a tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt ve kurabiyeleri 14 dakika pişir.",
+     "en": "Heat the oven to 170 degrees and bake the cookies for 14 minutes."
+    },
+    "timerSeconds": 840
+   },
+   {
+    "text": {
+     "tr": "Tepside 10 dakika dinlendirip servis yap.",
+     "en": "Rest them on the tray for 10 minutes before serving."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Hamur işi",
+   "Fırında",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3bf0ec45-a6b1-45b8-8833-0a8faaee8313",
+  "slug": "sakizli-muhallebi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Ege",
+  "title": {
+   "tr": "Sakızlı muhallebi",
+   "en": "Mastic milk pudding"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ege'de sık yapılan, damla sakızıyla tatlandırılmış hafif bir süt muhallebisi. Sakızın temiz ve hafif reçineli kokusu muhallebiye ayrı bir tat verir.",
+   "en": "A light milk pudding from the Aegean, flavoured with mastic resin. The resin gives it a clean, faintly piney fragrance."
+  },
+  "servings": 6,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Damla sakızı",
+     "en": "Mastic resin"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "1 tutam şekerle havanda ezilmiş",
+     "en": "ground in a mortar with a pinch of sugar"
+    },
+    "pantryKey": "mastic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "nişastayı eritmek için",
+     "en": "to dissolve the cornflour"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "üzeri için",
+     "en": "for topping"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachio"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Damla sakızını 1 tutam şekerle havanda iyice ezip toz haline getir.",
+     "en": "Grind the mastic in a mortar with a pinch of sugar until it becomes a fine powder."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nişastayı 100 ml soğuk suda eritip topaksız bir karışım hazırla.",
+     "en": "Dissolve the cornflour in the 100 ml cold water until smooth and lump-free."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü kalan şekerle birlikte geniş bir tencereye al ve kaynamaya bırak.",
+     "en": "Put the milk and remaining sugar in a wide pan and bring to a simmer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nişasta karışımını sütün içine ince bir akışla dökerek sürekli karıştır, ardından ocağı kısıp 15 dakika karıştırarak pişir.",
+     "en": "Pour the cornflour mixture into the milk in a thin stream, stirring constantly, then reduce the heat and cook for 15 minutes, stirring."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş sakızı ekleyip 2 dakika daha karıştırarak pişir.",
+     "en": "Stir in the ground mastic and cook for 2 minutes more, stirring."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Muhallebiyi servis kaplarına paylaştır ve oda sıcaklığında soğuduktan sonra 4 saat buzdolabında beklet.",
+     "en": "Spoon the pudding into serving dishes and, once it has cooled to room temperature, chill it in the fridge for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Servisten önce üzerine tarçın ve kıyılmış Antep fıstığı serp.",
+     "en": "Before serving, dust with cinnamon and scatter over the chopped pistachio."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "makeAhead",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "81f3553d-d0d0-42de-ba99-577f45aacd2b",
+  "slug": "su-muhallebisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Su muhallebisi",
+   "en": "Su muhallebisi (water pudding with rosewater)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sütsüz, gül suyu kokulu ve hafif bir muhallebi. Soğuk servis edildiğinde sıcak yaz akşamlarına çok iyi gider.",
+   "en": "A milkless pudding scented with rosewater. Light and served cold, it suits warm summer evenings."
+  },
+  "servings": 6,
+  "prepMinutes": 10,
+  "cookMinutes": 10,
+  "waitMinutes": 180,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gül suyu",
+     "en": "Rosewater"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "rose-water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "üzeri için",
+     "en": "for topping"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachio"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Nişastayı 200 ml soğuk suda eritip topaksız bir karışım hazırla.",
+     "en": "Dissolve the cornflour in 200 ml of the cold water until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan suyu şekerle birlikte bir tencereye al ve şeker eriyene kadar kaynat.",
+     "en": "Bring the rest of the water and the sugar to the boil in a pan until the sugar dissolves."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nişasta karışımını kaynayan şerbetin içine ince ince dökerek sürekli karıştır.",
+     "en": "Pour the cornflour mixture into the boiling syrup in a thin stream, stirring all the time."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 10 dakika, kıvam alana kadar karıştırarak pişir.",
+     "en": "Cook over a low heat for 10 minutes, stirring, until it thickens."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp gül suyunu ekle, kaplara paylaştır.",
+     "en": "Take off the heat, stir in the rosewater and divide among dishes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında soğuduktan sonra 3 saat buzdolabında beklet.",
+     "en": "Once cooled to room temperature, chill in the fridge for 3 hours."
+    },
+    "timerSeconds": 10800
+   },
+   {
+    "text": {
+     "tr": "Üzerine tarçın ve kıyılmış Antep fıstığı serpip servis yap.",
+     "en": "Dust with cinnamon, scatter over the pistachio and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "makeAhead",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8f6444e2-ab56-4f0d-b276-614a8f4435df",
+  "slug": "paluze",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Doğu Anadolu",
+  "title": {
+   "tr": "Paluze",
+   "en": "Paluze (starch pudding with grape juice)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Doğu Anadolu'da üzüm suyu ve nişastayla yapılan, sütsüz ve hafif kıvamlı bir tatlı. Üzerine ceviz ve tarçın serpilince sade ama çok dengeli olur.",
+   "en": "A milkless starch pudding from eastern Anatolia, set with grape juice. Finished with walnut and cinnamon, it is plain and well balanced."
+  },
+  "servings": 6,
+  "prepMinutes": 10,
+  "cookMinutes": 15,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Üzüm suyu",
+     "en": "Grape juice"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "grape-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "nişastayı eritmek için",
+     "en": "to dissolve the cornflour"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnut halves"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "üzeri için",
+     "en": "for topping"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Cevizleri kuru tavada 3 dakika hafifçe kavur, ardından iri kır.",
+     "en": "Toast the walnuts in a dry pan for 3 minutes, then roughly chop them."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Nişastayı 200 ml suyla pürüzsüz bir karışım haline getir ve şekeri ekle.",
+     "en": "Mix the cornflour with the 200 ml water until smooth, then stir in the sugar."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzüm suyunu bir tencereye al ve kaynat.",
+     "en": "Bring the grape juice to the boil in a pan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nişasta karışımını kaynayan üzüm suyunun içine ince bir akışla ekleyip sürekli karıştır.",
+     "en": "Pour the cornflour mixture into the boiling grape juice in a thin stream, stirring constantly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte, kıvam alana kadar 12 dakika karıştırarak pişir.",
+     "en": "Cook over a low heat, stirring, for 12 minutes until it sets to a thick pudding."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Kaplara paylaştır, oda sıcaklığında soğuduktan sonra 2 saat buzdolabında beklet.",
+     "en": "Divide into dishes and, once cooled to room temperature, chill for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Üzerine ceviz ve tarçın serpip servis yap.",
+     "en": "Top with the walnut and cinnamon and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "makeAhead",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "73c7cb19-0901-403c-9834-d25440bffbbe",
+  "slug": "pelte",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Pelte",
+   "en": "Pelte (fruit-juice starch jelly)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Vişne suyu ve nişastayla yapılan, yumuşak kıvamlı bir meyve jölesi. Ekşimsi tadı ve canlı rengiyle tatlı kaşığında hafif bir ferahlık bırakır.",
+   "en": "A soft fruit jelly made with sour cherry juice and cornflour. Its gentle tartness and bright colour make it a refreshing end to a meal."
+  },
+  "servings": 6,
+  "prepMinutes": 10,
+  "cookMinutes": 10,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Vişne suyu",
+     "en": "Sour cherry juice"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "sour-cherry-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "nişastayı eritmek için",
+     "en": "to dissolve the cornflour"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnut halves"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kırılmış",
+     "en": "broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Nişastayı 200 ml suyla pürüzsüz bir karışım haline getir.",
+     "en": "Mix the cornflour with the 200 ml water until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Vişne suyunu şekerle birlikte tencereye al ve kaynamaya bırak.",
+     "en": "Put the sour cherry juice and sugar in a pan and bring to a simmer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Nişasta karışımını ince bir akışla ekleyip sürekli karıştır.",
+     "en": "Add the cornflour mixture in a thin stream, stirring constantly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 8 dakika, koyulaşıp kaşığın ardında iz bırakana kadar pişir.",
+     "en": "Cook over a low heat for 8 minutes, until thick enough to coat the back of a spoon."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Limon suyunu ekleyip ocaktan al.",
+     "en": "Stir in the lemon juice and take off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaplara dök ve jelleşene kadar 4 saat buzdolabında beklet.",
+     "en": "Pour into dishes and chill for 4 hours, until set."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Üzerine kırılmış cevizleri serpip servis yap.",
+     "en": "Scatter over the broken walnuts and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6a6d10df-107b-4286-9ee6-18750a470cd4",
+  "slug": "hosaf",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Hoşaf",
+   "en": "Hoşaf (dried fruit compote)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuru kayısı, erik, incir ve üzümün hafif şerbette yavaşça pişirilmesiyle yapılan sade bir tatlı. Kış sofralarının vazgeçilmezi.",
+   "en": "Dried apricots, prunes, figs and raisins simmered gently in a light syrup. A winter staple on Turkish tables."
+  },
+  "servings": 6,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuru kayısı",
+     "en": "Dried apricots"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "dried-apricot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru erik",
+     "en": "Prunes"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "prune",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru incir",
+     "en": "Dried figs"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "dried-fig",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru üzüm",
+     "en": "Raisins"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "raisin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1.5,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kuru meyveleri bol soğuk suda ıslat, üzerini kapatıp gece boyunca beklet.",
+     "en": "Soak the dried fruit in plenty of cold water, cover and leave overnight."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ertesi gün meyveleri süzgeçte iki kez yıkayıp suyunu süz.",
+     "en": "The next day, drain the fruit in a sieve and rinse it twice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencereye 1,5 litre su ve şekeri al, şeker eriyene kadar kaynat.",
+     "en": "Put the 1.5 litres of water and the sugar in a pan and boil until the sugar dissolves."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuru meyveleri ekleyip kısık ateşte 25 dakika pişir.",
+     "en": "Add the dried fruit and simmer gently for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tarçını ekleyip ocaktan al.",
+     "en": "Stir in the cinnamon and take off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Oda sıcaklığında soğuduktan sonra 1 saat buzdolabında dinlendir.",
+     "en": "Once cooled to room temperature, rest it in the fridge for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Meyveleri kaselere al, şerbetiyle birlikte servis yap.",
+     "en": "Spoon the fruit into bowls with plenty of syrup and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kuru meyveleri akşamdan soğuk suya koyup beklet.",
+     "en": "Put the dried fruit in cold water the evening before."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "Akşamdan ıslat",
+   "Kolay",
+   "Ekonomik"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e5bbd7c2-d7e2-467a-8767-838676244730",
+  "slug": "komposto",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Komposto",
+   "en": "Fresh fruit compote"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze elma ve armudun şekerli suda hafifçe pişirilip soğutulmasıyla hazırlanan, çok hafif bir tatlı. Meyveler mevsime göre değiştirilebilir.",
+   "en": "Fresh apple and pear poached gently in a sugar syrup and chilled. Very light, and easy to change with the season's fruit."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Elma",
+     "en": "Apple"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulup dörde bölünmüş",
+     "en": "peeled and quartered"
+    },
+    "pantryKey": "apple",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Armut",
+     "en": "Pear"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulup dörde bölünmüş",
+     "en": "peeled and quartered"
+    },
+    "pantryKey": "pear",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karanfil",
+     "en": "Clove"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "clove",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Elmaları ve armutları soyup çekirdeklerini çıkar, dörde bölüp dilimle.",
+     "en": "Peel the apples and pears, core them and cut each into quarters."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencereye suyu, şekeri, karanfili ve tarçını al, kaynat.",
+     "en": "Put the water, sugar, cloves and cinnamon in a pan and bring to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şeker eridikten sonra meyveleri ve limon suyunu ekle.",
+     "en": "Once the sugar has dissolved, add the fruit and lemon juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 20 dakika, meyveler yumuşayana kadar pişir.",
+     "en": "Simmer gently for 20 minutes, until the fruit is soft."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alıp oda sıcaklığında soğumaya bırak.",
+     "en": "Take off the heat and leave to cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Buzdolabında 2 saat dinlendirip soğuk servis yap.",
+     "en": "Chill in the fridge for 2 hours and serve cold."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "makeAhead",
+   "Kolay",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
