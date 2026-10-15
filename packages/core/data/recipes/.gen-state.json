@@ -222,11 +222,11 @@
     "eriste-corbasi",
     "kuzu-etli-bulgur-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:46:25.168Z",
    "finishedAt": null
   },
   {
@@ -455,12 +455,23 @@
     "eksili-yumurtali-sogan-corbasi",
     "tavuklu-nohut-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "yogurtlu-arpa-corbasi",
+    "arpa-sehriyeli-tavuk-corbasi",
+    "pancarli-lahana-corbasi",
+    "havuclu-kereviz-corbasi",
+    "kirmizi-mercimekli-sebze-corbasi",
+    "mantarli-arpa-corbasi",
+    "alabalik-corbasi",
+    "mezgit-corbasi",
+    "eksili-yumurtali-sogan-corbasi",
+    "tavuklu-nohut-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 92561,
    "startedAt": "2026-10-15T19:43:16.322Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:46:31.866Z"
   },
   {
    "id": "g016",
