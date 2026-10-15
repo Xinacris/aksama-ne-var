@@ -2778,12 +2778,15 @@
     "clam-chowder",
     "tavuklu-noodle-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "clam-chowder",
+    "tavuklu-noodle-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 59227,
    "startedAt": "2026-10-15T22:44:26.095Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:45:38.280Z"
   },
   {
    "id": "g090",
@@ -2795,11 +2798,11 @@
     "coleslaw",
     "waldorf-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:44:32.418Z",
    "finishedAt": null
   },
   {
