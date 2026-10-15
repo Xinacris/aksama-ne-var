@@ -10195,5 +10195,2048 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "e13c9bc6-bb90-4ff7-88b1-f53aba73ae6f",
+  "slug": "findikli-kurabiye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Fındıklı kurabiye",
+   "en": "Hazelnut cookies"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bol fındıklı, kenarları çıtır ortası yumuşak tereyağlı kurabiyeler. Pudra şekeri serpilince sade ama doyurucu bir çay kurabiyesi olur.",
+   "en": "Butter cookies packed with hazelnut, crisp at the edges and soft in the middle. A dusting of icing sugar makes them a simple, satisfying tea-time biscuit."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 23,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında, yumuşak",
+     "en": "softened, at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "bir kısmı üstüne serpmek için ayır",
+     "en": "keep some back for dusting"
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fındık",
+     "en": "Hazelnuts"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "kavrulmuş ve kabaca kırılmış",
+     "en": "toasted and roughly chopped"
+    },
+    "pantryKey": "hazelnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "tutam",
+     "en": "a pinch"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fındıkları kuru tavada orta ateşte 5 dakika kavur, soğuyunca iri parçalar kalacak şekilde kabaca kır.",
+     "en": "Toast the hazelnuts in a dry pan over a medium heat for 5 minutes, then let them cool and roughly chop them, leaving some larger pieces."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yumuşamış tereyağını pudra şekeriyle mikserde 3 dakika açık renk ve kabarık olana kadar çırp.",
+     "en": "Beat the softened butter and icing sugar in a mixer for 3 minutes, until pale and fluffy."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı ve vanilyayı ekleyip karıştır. Unu kabartma tozuyla eleyip ekle, tutam tuz ve fındıkların çoğunu da katarak yumuşak bir hamur yoğur.",
+     "en": "Beat in the egg and vanilla, then sift in the flour and baking powder, add the salt and most of the hazelnuts, and knead into a soft dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru streç filmle sarıp buzdolabında 30 dakika dinlendir.",
+     "en": "Wrap the dough in cling film and rest it in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Hamurdan ceviz büyüklüğünde parçalar koparıp avuçlarında yuvarla, yağlı kağıt serili tepsiye aralarında boşluk kalacak şekilde diz.",
+     "en": "Pinch off walnut-sized pieces, roll them into balls and set them on a parchment-lined tray, leaving space between them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 170°C'ye ısıt ve kurabiyeleri 18 dakika pişir.",
+     "en": "Heat the oven to 170°C and bake the cookies for 18 minutes, until pale golden at the edges."
+    },
+    "timerSeconds": 1080
+   },
+   {
+    "text": {
+     "tr": "Kurabiyeler ılınınca üzerlerine kalan pudra şekerini serpip servis et.",
+     "en": "Once the cookies are warm rather than hot, dust them with the reserved icing sugar and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "Fırında",
+   "Hamur işi",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "13d8cf8d-229c-4fed-bdc8-46326bbc836a",
+  "slug": "muzlu-rulo-pasta",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Muzlu rulo pasta",
+   "en": "Banana roll cake"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce bir sünger hamurun içine krem şanti ve muz dilimleri sarılan, dilimlendiğinde spirali görünen bir pasta. Üzerindeki çikolata gezdirmesi ile masaya yakışır.",
+   "en": "A thin sponge rolled around whipped cream and sliced banana, so the spiral shows when it is cut. A drizzle of chocolate on top makes it look the part on the table."
+  },
+  "servings": 8,
+  "prepMinutes": 35,
+  "cookMinutes": 12,
+  "waitMinutes": 135,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ılık",
+     "en": "warm"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "tutam",
+     "en": "a pinch"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "chilled"
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muz",
+     "en": "Bananas"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "olgun, ince dilimlenmiş",
+     "en": "ripe, thinly sliced"
+    },
+    "pantryKey": "banana",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sütlü çikolata",
+     "en": "Milk chocolate"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "üstü için eritilmiş",
+     "en": "melted, for the top"
+    },
+    "pantryKey": "milk-chocolate",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180°C'ye ısıt, 25x35 cm'lik fırın tepsisini yağlı kağıtla kapla.",
+     "en": "Heat the oven to 180°C and line a 25x35 cm baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları şekerle birlikte 8 dakika kalın ve köpüklü olana kadar çırp.",
+     "en": "Whisk the eggs and sugar together for 8 minutes, until thick and foamy."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Unu kabartma tozu ve tutam tuzla eleyip karışıma yavaşça katla. Ilık sütü de ekleyip hamuru hafifçe karıştır.",
+     "en": "Sift the flour, baking powder and a pinch of salt into the mix and fold in gently. Add the warm milk and stir the batter lightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru tepsiye yay ve önceden ısınmış fırında 12 dakika pişir.",
+     "en": "Spread the batter over the tray and bake in the preheated oven for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Pişen keki çıkarıp kağıdıyla birlikte temiz bir bezin üzerine ters çevir, kağıdı çıkarıp bezle birlikte sıkıca sar ve 15 dakika dinlendir.",
+     "en": "Turn the hot sponge out onto a clean tea towel, peel off the baking paper, roll it up with the towel and let it rest for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Krem şantiyi pudra şekeri ve vanilyayla sert köpük olana kadar çırp.",
+     "en": "Whip the cream with the icing sugar and vanilla until it holds firm peaks."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Keki açıp kremanın yarısını yay, muz dilimlerini sıralayıp üzerine diz.",
+     "en": "Unroll the sponge, spread half the cream over it and lay the banana slices across the surface."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarından başlayarak keki yavaşça tekrar sar ve kalan kremayla yüzeyini ve yanlarını kapla.",
+     "en": "Roll the sponge back up from one short end, then spread the rest of the cream over the top and sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çikolatayı su banyosunda eritip pastanın üzerine gezdir, 2 saat buzdolabında beklet.",
+     "en": "Melt the chocolate over a water bath, drizzle it over the cake and chill it in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "Fırında",
+   "Hamur işi",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8307a1d8-1047-4bcf-86fb-758bfd7caafb",
+  "slug": "cikolatali-sufle",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Çikolatalı sufle",
+   "en": "Chocolate soufflé cake"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dışı hafif çıtır, içi akışkana yakın yumuşak bir çikolatalı kek. Yanına hafif çırpılmış krem şanti koyulunca tatlı sofralarının favorisi olur.",
+   "en": "A chocolate cake with a lightly set crust and a soft, almost molten centre. Served with softly whipped cream, it is a favourite at any dessert table."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "%60 kakao ve üzeri",
+     "en": "60% cocoa or above"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "kalıp için biraz ayır",
+     "en": "keep a little for greasing the tin"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "sarı ve beyazı ayrılmış",
+     "en": "separated into yolks and whites"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakao",
+     "en": "Cocoa powder"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kalıbı kaplamak için de",
+     "en": "also to coat the tin"
+    },
+    "pantryKey": "cocoa",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "tutam",
+     "en": "a pinch"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kremanın içine",
+     "en": "to sweeten the cream"
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 190°C'ye ısıt. Kalıbın içini tereyağıyla yağla ve kakao serperek her yerini kaplat.",
+     "en": "Heat the oven to 190°C. Butter the inside of a 20 cm round tin and dust it all over with cocoa."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çikolata ile kalan tereyağını su banyosunda birlikte eritip biraz soğumaya bırak.",
+     "en": "Melt the chocolate with the remaining butter over a water bath, then leave it to cool a little."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını şekerle 3 dakika kırmızımsı ve kabarık olana kadar çırp.",
+     "en": "Whisk the egg yolks with the sugar for 3 minutes, until pale and thick."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Erimiş çikolatayı sarılı karışıma ekle, ardından elediğin unu ve tutam tuzu katıp karıştır.",
+     "en": "Stir the melted chocolate into the yolk mixture, then fold in the sifted flour and a pinch of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta aklarını sert köpük olana kadar çırp ve üç parça halinde çikolatalı karışıma yavaşça katla.",
+     "en": "Whisk the egg whites to firm peaks, then fold them into the chocolate mixture in three batches, gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı kalıba doldur ve fırında 20 dakika pişir.",
+     "en": "Pour the mixture into the tin and bake for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Ortası hafif titrek kalmalı. Keki 10 dakika kalıpta bekletip sonra tel kafeste soğut.",
+     "en": "The centre should still wobble slightly. Let the cake rest in the tin for 10 minutes, then cool it on a wire rack."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Krem şantiyi pudra şekeriyle hafif sertleşene kadar çırp.",
+     "en": "Whip the cream with the icing sugar until it just holds its shape."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Keki dilimleyip yanına krem şanti koyarak servis et.",
+     "en": "Slice the cake and serve it with a spoonful of the whipped cream."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cddc8045-775f-4e95-80e9-31e0b0db6fad",
+  "slug": "profiterol",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Profiterol",
+   "en": "Profiterol (choux buns with chocolate)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Hafif, içi boş choux hamurdan kabuklara krem şanti doldurulup sıcak çikolata sosu ile servis edilen bir tatlı. Kabuklar tam soğuyunca doldurulursa çıtırlığını korur.",
+   "en": "Light, hollow choux pastry shells filled with whipped cream and served with warm chocolate sauce. Fill them only once the shells are fully cool so they stay crisp."
+  },
+  "servings": 6,
+  "prepMinutes": 40,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 140,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "tutam",
+     "en": "a pinch"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 450,
+    "unit": "ml",
+    "note": {
+     "tr": "300 ml dolgu, 150 ml sos için",
+     "en": "300 ml for the filling, 150 ml for the sauce"
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "parçalanmış",
+     "en": "broken into pieces"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200°C'ye ısıt ve fırın tepsisini yağlı kağıtla kapla.",
+     "en": "Heat the oven to 200°C and line a baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Suyu, tereyağını ve tutam tuzu geniş bir tencerede kaynat, ocaktan al.",
+     "en": "Bring the water, butter and a pinch of salt to the boil in a wide pan, then take it off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu tek seferde ekleyip ahşap kaşıkla hamur topağı oluşana kadar 2 dakika hızlıca karıştır.",
+     "en": "Tip in all the flour at once and beat with a wooden spoon for 2 minutes, until the dough comes away from the sides of the pan."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Hamur ılınınca yumurtaları birer birer ekleyip pürüzsüz ve parlak bir hamur elde et.",
+     "en": "Once the dough has cooled a little, beat in the eggs one at a time until you have a smooth, glossy paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru sıkma torbasıyla tepsiye ceviz büyüklüğünde yuvarlak olarak sık, aralarında boşluk bırak.",
+     "en": "Pipe the dough onto the tray in walnut-sized rounds, leaving space between them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 30 dakika pişir ve kabuklar sararıp sertleşene kadar fırını kapatmadan bekle.",
+     "en": "Bake for 30 minutes, until the shells are golden and firm."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kremanın 300 ml'sini pudra şekeri ve vanilyayla sert köpük olana kadar çırp, kabuklar tamamen soğuyunca içlerini doldur.",
+     "en": "Whip 300 ml of the cream with the icing sugar and vanilla until firm, then fill the shells once they are completely cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan 150 ml kremayı çikolatayla birlikte su banyosunda eritip pürüzsüz bir sos hazırla.",
+     "en": "Melt the chocolate with the remaining 150 ml of cream over a water bath to make a smooth sauce."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Profiterolleri üst üste dizip çikolata sosunu gezdir ve hemen servis et.",
+     "en": "Stack the profiteroles on a plate, spoon the chocolate sauce over them and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "daeed9e5-ea25-48a7-a0d5-3451dc26e1f2",
+  "slug": "trilece",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Trileçe",
+   "en": "Trileçe (three-milk cake)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Hafif bir sünger kekin üç çeşit sütlü karışımda emdirilmesiyle hazırlanan, krem şanti ile kaplı klasik bir tatlı. En iyisi bir gece önceden yapılıp soğutulunca çıkar.",
+   "en": "A light sponge soaked in a mixture of three kinds of milk and topped with whipped cream, a classic Turkish dessert. It tastes best when made the day before and left to chill."
+  },
+  "servings": 12,
+  "prepMinutes": 30,
+  "cookMinutes": 25,
+  "waitMinutes": 360,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Şekerli yoğunlaştırılmış süt",
+     "en": "Sweetened condensed milk"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": null,
+    "pantryKey": "condensed-milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğunlaştırılmış süt",
+     "en": "Evaporated milk"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": null,
+    "pantryKey": "evaporated-milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "chilled"
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180°C'ye ısıt, kare kalıbı yağlı kağıtla kapla.",
+     "en": "Heat the oven to 180°C and line a square tin with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta ve şekeri 6 dakika kabarana kadar çırp, vanilyayı ekle.",
+     "en": "Whisk the eggs, sugar and vanilla for 6 minutes, until light and airy."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Unu kabartma tozuyla eleyip karışıma yavaşça katla, hamur topaklanmadan düzgün olsun.",
+     "en": "Sift the flour with the baking powder and fold it into the mixture gently, so there are no lumps."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru kalıba yay ve fırında 25 dakika pişir.",
+     "en": "Pour the batter into the tin and bake for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Pişen keki çıkarıp tüm yüzeyine çatalla delikler aç.",
+     "en": "Take the cake out and prick the whole surface all over with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü, iki kutu sütü iyice karıştırıp kekin üzerine yavaş yavaş dök ve 2 saat dinlenmeye bırak.",
+     "en": "Stir the milk and both tins of milk together and pour it slowly over the cake, then leave it to soak for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Krem şantiyi sert köpük olana kadar çırp ve kekin üzerine yay.",
+     "en": "Whip the cream until it holds firm peaks and spread it over the cake."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine fıstığı serp ve buzdolabında 4 saat bekletip servis et.",
+     "en": "Scatter the pistachios over the top, chill in the fridge for 4 hours and serve."
+    },
+    "timerSeconds": 14400
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Sütlü",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "75c2bd86-1211-40d3-a57f-2eb3d802f5de",
+  "slug": "lor-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Ege",
+  "title": {
+   "tr": "Lor tatlısı",
+   "en": "Lor cheese cake in syrup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Lor peyniri ve irmikle yapılan, fırından çıkınca soğuk şerbeti emen yumuşak bir tatlı. Üzerine kaymak konunca Ege sofralarının sade ama sevilen tatlısı olur.",
+   "en": "A soft cake of lor cheese and semolina that drinks up cold syrup as it comes out of the oven. Spooned with kaymak, it is a simple, much-loved dessert from the Aegean table."
+  },
+  "servings": 8,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Lor peyniri",
+     "en": "Lor cheese"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "lor-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 450,
+    "unit": "g",
+    "note": {
+     "tr": "150 g hamur, 300 g şerbet için",
+     "en": "150 g for the cake, 300 g for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu ve kabuğu rendelenmiş",
+     "en": "juiced, with a little zest grated"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaymak",
+     "en": "Clotted cream"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "kaymak",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180°C'ye ısıt, 24 cm'lik yuvarlak kalıbı tereyağıyla yağlayıp yağlı kağıtla kapla.",
+     "en": "Heat the oven to 180°C and grease a 24 cm round tin with butter, lining the base with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "300 g şekeri suyla kaynat, limonun suyunu ve rendelenmiş kabuğunu ekleyip 10 dakika kaynat ve soğumaya bırak.",
+     "en": "Boil the 300 g of sugar with the water, add the lemon juice and grated zest, simmer for 10 minutes and leave to cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Lor peynirini çatalla ez, yumurta, kalan 150 g şeker, eritilmiş tereyağı ve sütle pürüzsüz olana kadar karıştır.",
+     "en": "Mash the lor cheese with a fork, then beat in the eggs, the remaining 150 g of sugar, the melted butter and the milk until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "İrmik, un ve kabartma tozunu ekleyip karışımı 5 dakika dinlendir, hamur yumuşak ve kıvamlı olmalı.",
+     "en": "Stir in the semolina, flour and baking powder, then rest the mixture for 5 minutes until it is soft and thick."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Hamuru kalıba dök, üstünü düzleyip fırında 35 dakika pişir.",
+     "en": "Spoon the mixture into the tin, level the top and bake for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Sıcak tatlının üzerine soğumuş şerbeti gezdirip 30 dakika emmesini bekle.",
+     "en": "Pour the cooled syrup over the hot cake and let it soak in for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Tatlıyı dilimleyip her dilimin üzerine bir kaşık kaymak koy ve servis et.",
+     "en": "Cut the cake into slices, top each one with a spoonful of kaymak and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "32b068da-23c2-4d6b-8779-a728efbf0919",
+  "slug": "cezerye",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Akdeniz",
+  "title": {
+   "tr": "Cezerye",
+   "en": "Cezerye (carrot and nut sweet)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Rendelenmiş havucun sütte yavaşça pişirilip hindistan cevizi ve fıstıkla tatlandırılan, soğuyunca dilimlenen geleneksel bir tatlı. Kış aylarında en çok yapılan tatlılardan biridir.",
+   "en": "Grated carrot cooked slowly in milk and sweetened with coconut and pistachio, then cooled and cut into slices. It is one of the traditional sweets made most often in winter."
+  },
+  "servings": 8,
+  "prepMinutes": 20,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "ince rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hindistan cevizi",
+     "en": "Desiccated coconut"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "coconut-desiccated",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Havucu ince rendeden rendele.",
+     "en": "Grate the carrots finely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede tereyağını eritip rendelenmiş havucu ekle ve kısık ateşte 5 dakika soteleyerek kokusu çıksın.",
+     "en": "Melt the butter in a wide pan, add the grated carrot and cook gently for 5 minutes, until it smells sweet and toasted."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sütü ekleyip orta kısık ateşte 25 dakika pişir, yarı kıvam alana kadar sık sık karıştır.",
+     "en": "Pour in the milk and cook over a gentle heat for 25 minutes, stirring often, until it is half-thickened."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Şekeri ekleyip karışım tencere kenarından ayrılana kadar 15 dakika daha karıştırarak pişir.",
+     "en": "Add the sugar and keep stirring for another 15 minutes, until the mixture pulls away from the sides of the pan."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Hindistan cevizi ve vanilyayı ekleyip iyice karıştır, ocaktan al.",
+     "en": "Stir in the coconut and vanilla, then take the pan off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı yağlanmış bir kaba yay, düzleştirip üzerine fıstıkları serp.",
+     "en": "Spread the mixture into a greased dish, level it out and scatter the pistachios over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğuyunca buzdolabında iyice soğut, dilimleyip servis et.",
+     "en": "Once it has cooled, chill it well in the fridge, then slice and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7c702a84-4434-4f6b-a3a1-b3b3798cb7ac",
+  "slug": "tel-kadayif-muhallebili",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Tel kadayıf muhallebili",
+   "en": "Kadayıf with milk pudding"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağıyla kavrulup şerbetle ıslatılmış tel kadayıfın yanında, nişastalı sütlü muhallebiyle servis edilen bir tatlı. Üzerine kırık fıstık serpilince sofraya yakışır.",
+   "en": "Shredded pastry fried in butter and soaked in syrup, served beside a silky cornflour milk pudding. Scattered with crushed pistachios, it is a dessert for a proper family table."
+  },
+  "servings": 8,
+  "prepMinutes": 30,
+  "cookMinutes": 45,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tel kadayıf",
+     "en": "Shredded kadayıf pastry"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "kadayif",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "biraz sütle açılmış",
+     "en": "loosened with a little of the milk"
+    },
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 450,
+    "unit": "g",
+    "note": {
+     "tr": "150 g muhallebi, 300 g şerbet için",
+     "en": "150 g for the pudding, 300 g for the syrup"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "kırılmış, üstü için",
+     "en": "crushed, for the top"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180°C'ye ısıt.",
+     "en": "Heat the oven to 180°C."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şerbet için 300 g şekeri suyla kaynat, limon dilimlerini ekleyip 10 dakika kaynat ve soğumaya bırak.",
+     "en": "Boil the 300 g of sugar with the water, add the lemon slices, simmer for 10 minutes and leave to cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tel kadayıfı ayırıp eritilmiş tereyağıyla iyice gezdir, bir tepsiye yay ve fırında 25 dakika altın renk alana kadar pişir.",
+     "en": "Loosen the kadayıf strands, toss them thoroughly in the melted butter, spread them on a tray and bake for 25 minutes, until golden."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Muhallebi için sütü 150 g şekerle ısıt, nişastayı açtığın karışımı ekleyip kısık ateşte sürekli karıştırarak 8 dakika kıvam alana kadar pişir.",
+     "en": "For the pudding, heat the milk with 150 g of the sugar, stir in the loosened cornflour and cook over a low heat, stirring constantly, for 8 minutes until thick."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Muhallebiyi vanilyayla tatlandır, bir kaba alıp yüzeyine film gererek soğumaya bırak.",
+     "en": "Flavour the pudding with the vanilla, pour it into a bowl, press cling film onto the surface and leave it to cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan kadayıfın üzerine soğuk şerbeti dökerek 15 dakika emmesini bekle.",
+     "en": "Pour the cold syrup over the hot kadayıf and let it soak in for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kadayıfı servis tabağına al, yanına muhallebiyi koy ve üzerine kırık fıstık serp.",
+     "en": "Lift the kadayıf onto a serving plate, spoon the pudding alongside and scatter crushed pistachios over the top."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Sütlü",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "91b13343-f867-4b3b-8ab3-0e5ecb342690",
+  "slug": "misir-unlu-helva",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": "Karadeniz",
+  "title": {
+   "tr": "Mısır unlu helva",
+   "en": "Cornmeal halva"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mısır unu tereyağında kavrulup şerbetle pişirilen, hafif kumlu dokulu bir Karadeniz helvası. Üzerine tarçın ve ceviz serpilince kış sofralarının tatlısı olur.",
+   "en": "A Black Sea halva made by toasting cornmeal in butter and cooking it with syrup, giving a lightly grainy texture. Finished with cinnamon and walnut, it is a winter table favourite."
+  },
+  "servings": 8,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mısır unu",
+     "en": "Cornmeal"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "üstü için",
+     "en": "for the top"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Şerbet için 250 g şekeri suyla birlikte 5 dakika kaynat, ocaktan alıp sıcak tut.",
+     "en": "Boil the sugar with the water for 5 minutes to make a syrup, then take it off the heat and keep it warm."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Cevizleri kuru tavada 3 dakika kavur ve bir kenara al.",
+     "en": "Toast the walnuts in a dry pan for 3 minutes and set them aside."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Tereyağını geniş bir tencerede eritip mısır ununu ekle, sürekli karıştırarak açık altın rengi olana kadar 10 dakika kavur.",
+     "en": "Melt the butter in a wide pan, add the cornmeal and stir constantly for 10 minutes, until it turns a light golden colour."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sıcak şerbeti kavrulan unun üzerine yavaş yavaş dök, hızlıca karıştırarak 2 dakika daha pişir.",
+     "en": "Pour the hot syrup into the toasted cornmeal slowly, stirring quickly, and cook for 2 more minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Karışımı yağlı bir kaba yay, üzerine cevizleri ve tarçını serp.",
+     "en": "Spread the mixture into a greased dish and scatter the walnuts and cinnamon over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğuyunca kesip servis et.",
+     "en": "Once completely cool, cut it into portions and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b492d38c-3668-495e-a59f-a010fbbb1e2b",
+  "slug": "acibadem-kurabiyesi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Acıbadem kurabiyesi",
+   "en": "Acıbadem (almond macaroons)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Badem unu, pudra şekeri ve yumurta akıyla yapılan, dışı çıtır içi yumuşak küçük badem kurabiyeleri. Un ve tereyağı kullanılmadığı için hafif bir atıştırmalık.",
+   "en": "Small almond cookies made from ground almond, icing sugar and egg white, crisp outside and soft inside. With no flour or butter, they are a light treat."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Badem unu",
+     "en": "Ground almonds"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "ground-almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "sadece aklar kullanılacak",
+     "en": "whites only"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "her kurabiyenin üstüne koymak için",
+     "en": "to place on top of each cookie"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "tutam",
+     "en": "a pinch"
+    },
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 160°C'ye ısıt, tepsiyi yağlı kağıtla kapla.",
+     "en": "Heat the oven to 160°C and line a tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta aklarını tutam tuzla birlikte sert köpük olana kadar 4 dakika çırp.",
+     "en": "Whisk the egg whites with a pinch of salt for 4 minutes, until they form stiff foam."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Pudra şekerini, badem unu ve vanilyayı ekleyip spatulayla yavaşça katla, yapışkan ama toplanabilen bir hamur elde et.",
+     "en": "Fold in the icing sugar, ground almonds and vanilla with a spatula until you have a sticky dough that holds together."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağlı kağıdın üzerine ceviz büyüklüğünde toplar halinde sık, aralarında boşluk bırak.",
+     "en": "Pipe or spoon the mixture onto the paper in walnut-sized mounds, leaving gaps between them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her topun ortasına bir parça badem yerleştir.",
+     "en": "Press a piece of almond into the centre of each mound."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 15 dakika pişir, kenarları hafif altın rengi olunca çıkar.",
+     "en": "Bake for 15 minutes, until the edges are lightly golden."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğuyunca tepsiden kaldır ve kavanoza koy.",
+     "en": "Once completely cool, lift them off the tray and store them in a jar."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "dairyFree",
+   "Fırında",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

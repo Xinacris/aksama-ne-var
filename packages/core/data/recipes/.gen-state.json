@@ -1128,12 +1128,23 @@
     "misir-unlu-helva",
     "acibadem-kurabiyesi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "findikli-kurabiye",
+    "muzlu-rulo-pasta",
+    "cikolatali-sufle",
+    "profiterol",
+    "trilece",
+    "lor-tatlisi",
+    "cezerye",
+    "tel-kadayif-muhallebili",
+    "misir-unlu-helva",
+    "acibadem-kurabiyesi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 89798,
    "startedAt": "2026-10-15T19:57:24.799Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:00:39.111Z"
   },
   {
    "id": "g036",
@@ -1381,11 +1392,11 @@
     "etli-domates-dolmasi",
     "etli-yaprak-sarma"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:00:31.719Z",
    "finishedAt": null
   },
   {
