@@ -1,1 +1,2380 @@
-[]
+[
+ {
+  "id": "51a1d6cd-b21a-4762-95a3-cb7beb478765",
+  "slug": "coq-au-vin",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Coq au vin",
+   "en": "Coq au vin"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Burgonya usulü, kırmızı şarapta yavaş pişmiş tavuk. Sosu koyu ve dolgun, tadı mantar ve füme etle derinleşir.",
+   "en": "Chicken braised slowly in red wine, the Burgundy way, with bacon and mushrooms. The sauce is dark and full, and the smoky bacon gives it depth."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 70,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "kemikli, 8 parça",
+     "en": "bone-in, cut into 8 pieces"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Beef bacon"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı şarap",
+     "en": "Red wine"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kaliteli, kuru bir şarap",
+     "en": "a good dry red"
+    },
+    "pantryKey": "red-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu",
+      "en": "Chicken stock"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "dörde bölünmüş",
+     "en": "quartered"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını tuz ve karabiberle tatlandır. Geniş tencerede tereyağının yarısını eritip butları her yüzü renk alana kadar kavur, bir tabağa al.",
+     "en": "Season the thighs with salt and pepper. Melt half the butter in a wide casserole and brown the thighs on all sides, then transfer them to a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tencereye dana füme etini ekleyip 3 dakika kavur, yağını bıraksın.",
+     "en": "Add the beef bacon to the same pot and fry it for 3 minutes, until it has released its fat."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Soğan ve mantarları ekleyip 5 dakika kavur.",
+     "en": "Add the onion and mushrooms and cook for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ekle, unu serpip 1 dakika karıştır.",
+     "en": "Stir in the garlic, sprinkle over the flour and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) yavaşça dök, dibindekileri kazıyarak 2 dakika kaynat.",
+     "en": "Pour in the wine (or the mixture you are using instead), scrape up the browned bits from the base and simmer for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tavuğu ve birikenleri tencereye geri koy, tavuk suyu, defne yaprağı ve kekiği ekle. Kapağını kapatıp kısık ateşte 45 dakika pişir.",
+     "en": "Return the chicken and any juices to the pot and add the stock, bay leaves and thyme. Cover and simmer gently for 45 minutes."
+    },
+    "timerSeconds": 2700
+   },
+   {
+    "text": {
+     "tr": "Defne yaprağını çıkar, maydanozu ince doğrayıp üzerine serp ve sıcak servis yap.",
+     "en": "Remove the bay leaves, scatter over the chopped parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Tencere",
+   "onePot",
+   "containsAlcohol",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "66d846ae-7597-484c-920d-5d883982462b",
+  "slug": "boeuf-bourguignon",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Boeuf bourguignon",
+   "en": "Boeuf bourguignon"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dana etinin kırmızı şarapta saatlerce pişirilmesiyle hazırlanan Fransız yahnisi. Et yumuşak, sos koyu ve tatlıdır.",
+   "en": "A French beef stew cooked for hours in red wine, with bacon, onion and mushrooms. The meat turns tender and the sauce dark and rich."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 150,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kuşbaşı",
+     "en": "Diced beef"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "biftek ya da gulaş etinden",
+     "en": "from shin or chuck"
+    },
+    "pantryKey": "diced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Beef bacon"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "kısa kısa doğranmış",
+     "en": "cut into short strips"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı şarap",
+     "en": "Red wine"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kuru, kaliteli bir şarap",
+     "en": "a dry, good-quality red"
+    },
+    "pantryKey": "red-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu",
+      "en": "Chicken stock"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "iri doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rondelle doğranmış",
+     "en": "cut into rounds"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "dörde bölünmüş",
+     "en": "quartered"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Et suyu",
+     "en": "Beef stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Dana kuşbaşını kağıt havluyla kurulayıp tuzla. Geniş tencerede zeytinyağını ısıt, etleri partiler halinde her yüzü kızarana kadar kavur ve bir kenara al.",
+     "en": "Pat the beef dry and season with salt. Heat the oil in a wide casserole and brown the meat in batches on every side, then set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tencerede dana füme etini 3 dakika kavur.",
+     "en": "In the same pot, fry the beef bacon for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Soğan, havuç ve mantarları ekleyip 8 dakika kavur.",
+     "en": "Add the onion, carrots and mushrooms and cook for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ekleyip unu serp, 1 dakika karıştır.",
+     "en": "Add the garlic, sprinkle over the flour and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) yavaşça dök, dibini kazıyarak 2 dakika kaynat.",
+     "en": "Pour in the wine (or the mixture you are using instead), scrape the base and simmer for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Etleri tencereye geri koy, et suyu, defne yaprağı ve kekiği ekle. Kapağı kapalı, kısık ateşte 2 saat pişir.",
+     "en": "Return the meat to the pot and add the stock, bay leaves and thyme. Cover and simmer gently for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Defne yaprağını çıkar, maydanozu ince doğrayıp serpip sıcak servis yap.",
+     "en": "Remove the bay leaves, scatter over the chopped parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Yemeği bir gün önceden pişirip buzdolabında sakla; servisten önce yavaşça ısıt.",
+     "en": "Cook the stew a day ahead, keep it in the fridge and reheat gently before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Tencere",
+   "onePot",
+   "containsAlcohol",
+   "guest",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f6536b17-f76b-4af8-8acc-8d5e1e470402",
+  "slug": "ratatouille",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Ratatouille",
+   "en": "Ratatouille"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patlıcan, kabak, biber ve domatesin zeytinyağında yavaşça pişirildiği Provence sebze yemeği. Sıcak da ılık da yenir.",
+   "en": "A Provençal vegetable stew of aubergine, courgette, pepper and tomato, cooked slowly in olive oil. Eat it warm or at room temperature."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm halka dilimlenmiş",
+     "en": "sliced into 1 cm rounds"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm halka dilimlenmiş",
+     "en": "sliced into 1 cm rounds"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell pepper"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fesleğen",
+     "en": "Basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to finish"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcan ve kabakları tuzla serpip 15 dakika süzgeçte bekletip suyunu çek.",
+     "en": "Salt the aubergine and courgettes and leave them in a colander for 15 minutes to draw out their water."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Soğan ve biberi küp küp doğra, sarımsağı ince kıy, domatesleri de küçük küp doğra.",
+     "en": "Dice the onion, pepper and tomatoes small, and finely chop the garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede zeytinyağının yarısını ısıt, soğan ve biberi 6 dakika yumuşayana kadar kavur.",
+     "en": "Heat half the oil in a wide pan and cook the onion and pepper for 6 minutes, until soft."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve domatesi ekle, kekik ve defne yaprağıyla birlikte 10 dakika pişir.",
+     "en": "Add the garlic and tomatoes, with the thyme and bay leaf, and cook for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kalan yağda patlıcan ve kabakları ayrı bir tavada 3 dakika çevirip hafifçe renklendir.",
+     "en": "In a separate pan with the remaining oil, turn the aubergine and courgettes for 3 minutes until lightly coloured."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Patlıcan ve kabakları tencereye ekle, tuz ve karabiberle tatlandır. Kapağı kapalı, kısık ateşte 20 dakika pişir.",
+     "en": "Add the aubergine and courgettes to the pan, season with salt and pepper, and cook covered over low heat for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Defne yaprağını çıkar, fesleğeni ince doğrayıp karıştır. Ilık ya da sıcak servis et.",
+     "en": "Remove the bay leaf, tear in the basil and stir through. Serve warm or at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Yemeği bir gün önceden yapıp buzdolabında sakla; bir gün dinlenince lezzeti daha iyi oturur.",
+     "en": "Make it a day ahead and keep it in the fridge; the flavours settle and improve overnight."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "onePot",
+   "makeAhead",
+   "Vejetaryen",
+   "Sebzeli",
+   "Tencere",
+   "Zeytinyağlı"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9061cfc6-972d-4670-a67e-2a95bbc1947d",
+  "slug": "quiche-lorraine",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Quiche lorraine (dana füme)",
+   "en": "Quiche lorraine with smoked beef"
+  },
+  "shortTitle": {
+   "tr": "Quiche lorraine",
+   "en": "Quiche lorraine"
+  },
+  "description": {
+   "tr": "Dana füme etli, soğanlı ve gravyer peynirli kremalı Fransız tartı. Dilimlendiğinde kıvamı yumuşak kalır, üstü hafif altın rengi olur.",
+   "en": "A custardy French tart with smoked beef, onion and gruyere. Sliced when just set, it stays soft and the top turns a light golden colour."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 55,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tart hamuru",
+     "en": "Shortcrust tart shell"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "24 cm, hazır",
+     "en": "24 cm, ready-made"
+    },
+    "pantryKey": "tart-shell",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Smoked beef"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gravyer peyniri",
+     "en": "Gruyère"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "gruyere",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Tart hamurunu kalıba yerleştirip kenarlarını bastır, tabanını çatalla delik delik et. Üzerine kağıt ve ağırlık koyup 15 dakika kuru pişir.",
+     "en": "Heat the oven to 180°C. Line the tart tin with the pastry, press into the edges and prick the base with a fork. Cover with baking paper and weights and blind bake for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tereyağını tavada eritip dana füme etini ve soğanı 5 dakika kavur.",
+     "en": "Melt the butter in a pan and fry the smoked beef and onion for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yumurta, krema ve sütü bir kapta çırpıp tuz, karabiber ve muskatı ekle.",
+     "en": "Whisk the eggs, cream and milk in a bowl and season with salt, pepper and nutmeg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dana füme ve soğan karışımını hamurun dibine yay, gravyer peynirinin yarısını üzerine serp.",
+     "en": "Spread the beef and onion mixture over the base of the pastry and scatter over half the gruyère."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtalı karışımı dök, kalan peyniri üstüne serp.",
+     "en": "Pour over the egg mixture and scatter the rest of the gruyère on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalıbı fırına koy ve üstü altın rengi olana kadar 35 dakika pişir.",
+     "en": "Put the tin in the oven and bake for 35 minutes, until the top is golden."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan quicheyi 10 dakika dinlendirip dilimle.",
+     "en": "Rest the quiche for 10 minutes after it comes out, then slice."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Hamur işi",
+   "Etli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "727a6ce6-eb41-458b-9e92-faa68db6ca82",
+  "slug": "ispanakli-kis",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Ispanaklı kiş",
+   "en": "Spinach quiche"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ispanak, kaşar ve kremayla hazırlanan yumuşacık bir kiş. Hafif bir akşam yemeği ya da öğle için uygun.",
+   "en": "A creamy quiche with spinach and kasar cheese, light enough for a weeknight supper or a packed lunch."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 50,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tart hamuru",
+     "en": "Shortcrust tart shell"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "24 cm, hazır",
+     "en": "24 cm, ready-made"
+    },
+    "pantryKey": "tart-shell",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaşar peyniri",
+     "en": "Kasar cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "kasar-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Tart hamurunu kalıba yerleştirip tabanını çatalla delik delik et, üzerine ağırlık koyarak 12 dakika kuru pişir.",
+     "en": "Heat the oven to 180°C. Line the tart tin with the pastry, prick the base with a fork, weight it and blind bake for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Ispanakları iyice yıkayıp süz, kabaca doğra.",
+     "en": "Wash the spinach well, drain it and roughly chop."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağında ince doğranmış soğan ve sarımsağı 4 dakika soteleyip yumuşat.",
+     "en": "Sweat the onion and garlic in the butter for 4 minutes, until soft."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Ispanakları ekleyip suyunu çekene kadar karıştır, ocaktan alıp soğumaya bırak.",
+     "en": "Add the spinach and stir until it has wilted and given up its water. Take off the heat and let it cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta, krema ve sütü tuz, karabiber ve muskatla birlikte bir kapta çırp.",
+     "en": "Whisk the eggs, cream and milk with the salt, pepper and nutmeg in a bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ispanağı hamurun dibine yay, rendelenmiş kaşarın yarısını serp ve yumurtalı karışımı üzerine dök.",
+     "en": "Spread the spinach over the pastry base, scatter over half the kasar and pour the egg mixture on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan kaşarı üstüne serp, fırında üstü altın rengi olana kadar 35 dakika pişir.",
+     "en": "Sprinkle the rest of the cheese on top and bake for 35 minutes, until golden."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan kişi 10 dakika dinlendirip dilimle.",
+     "en": "Let the quiche rest for 10 minutes out of the oven, then slice."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Vejetaryen",
+   "Fırında",
+   "Hamur işi",
+   "vegetarian"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "518eb817-99a7-4356-8e0b-5e1920b122c4",
+  "slug": "croque-monsieur",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Croque monsieur (hindi füme)",
+   "en": "Croque monsieur with smoked turkey"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Hindi füme, hardallı beşamel ve gravyer peyniriyle hazırlanan, üstü fırında gratine edilmiş Fransız tostu. Sıcak ve çıtır yenir.",
+   "en": "A French toastie of smoked turkey and mustard béchamel, topped with cheese and baked until golden. Best eaten hot and crisp."
+  },
+  "servings": 2,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tost ekmeği",
+     "en": "Sandwich bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": null,
+    "pantryKey": "sandwich-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hindi füme",
+     "en": "Smoked turkey"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "smoked-turkey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gravyer peyniri",
+     "en": "Gruyère"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "gruyere",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Tereyağını küçük tencerede eritip unu ekle ve 2 dakika karıştır.",
+     "en": "Heat the oven to 200°C. Melt the butter in a small pan, add the flour and stir for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Sütü azar azar ekleyip sürekli karıştırarak 5 dakika koyulaşana kadar pişir.",
+     "en": "Add the milk a little at a time, stirring constantly, and cook for 5 minutes until thick."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, hardal, tuz, karabiber ve muskadı karıştır. Gravyer peynirinin yarısını rendeleyip ekle.",
+     "en": "Take off the heat and stir in the mustard, salt, pepper and nutmeg. Add half of the grated gruyère."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ekmek dilimlerinin bir yüzüne sosun yarısını sür, ikişer dilimin arasına hindi füme yerleştirip sandviçleri kapat.",
+     "en": "Spread half the sauce on one side of each slice of bread, then layer the smoked turkey between pairs of slices to make two sandwiches."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sandviçlerin üstüne kalan sosu yay ve kalan peyniri serp.",
+     "en": "Spread the rest of the sauce over the top of the sandwiches and scatter over the remaining cheese."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırın tepsisine diz, üstü altın rengi kabarana kadar 10 dakika pişir.",
+     "en": "Place on a baking tray and bake for 10 minutes, until bubbling and golden."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli"
+  ],
+  "mealSlots": [
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "91ac3eea-3137-44ef-adec-86344b1cb39a",
+  "slug": "tavuk-fricassee",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk fricassée",
+   "en": "Chicken fricassée"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mantar, limon ve kremayla hazırlanan beyaz sosta yumuşacık bir tavuk yemeği. Pilav ya da ekmekle servis edilir.",
+   "en": "Chicken simmered in a white sauce of stock, mushrooms and cream, finished with egg yolk and lemon. Serve with rice or bread."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 55,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "kemikli, derili",
+     "en": "bone-in, skin on"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yalnızca sarıları",
+     "en": "yolks only"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını tuz ve karabiberle tatlandırıp bir kenara al.",
+     "en": "Season the chicken thighs with salt and pepper and set aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede tereyağını eritip tavuk butlarını her yüzü hafif renk alana kadar kavur, bir tabağa al.",
+     "en": "Melt the butter in a wide pot and brown the thighs lightly on all sides, then move them to a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tencerede soğan ve mantarları ekleyip 6 dakika kavur.",
+     "en": "In the same pot, cook the onion and mushrooms for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Unu serpip 1 dakika karıştır.",
+     "en": "Sprinkle over the flour and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Tavuk suyunu yavaş yavaş ekleyip karıştır. Tavukları ve defne yaprağını geri koy, kapağı kapalı 35 dakika kısık ateşte pişir.",
+     "en": "Add the stock gradually, stirring. Return the chicken and bay leaf to the pot, cover and simmer gently for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını kremayla çırpıp sosun içine ekle; kaynamaması için ocağı kısıp 2 dakika karıştır.",
+     "en": "Whisk the yolks with the cream, stir into the sauce and keep it just below the boil for 2 minutes, stirring, so it thickens without curdling."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Limonun suyunu sık, maydanozu ekleyip defne yaprağını çıkararak sıcak servis yap.",
+     "en": "Squeeze in the lemon juice, add the parsley, remove the bay leaf and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Tencere",
+   "guest"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "e0be8140-267b-4e18-89d4-6d33e65386af",
+  "slug": "hardalli-tavuk",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Hardallı tavuk",
+   "en": "Chicken in Dijon mustard sauce"
+  },
+  "shortTitle": {
+   "tr": "Hardallı tavuk",
+   "en": "Dijon chicken"
+  },
+  "description": {
+   "tr": "Dijon hardalı ve kremalı sosta pişen tavuk butları. Sos hafif ekşi, hafif acı ve pürüzsüzdür.",
+   "en": "Chicken thighs braised in a sauce of Dijon mustard and cream. The sauce is tangy, lightly sharp and smooth."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "derili",
+     "en": "skin on"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını tuz ve karabiberle tatlandır.",
+     "en": "Season the chicken thighs with salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada zeytinyağını ısıt, butları derisi aşağı gelecek şekilde kızarana kadar kavur. Çevirip diğer yüzünü de kavur ve tabağa al.",
+     "en": "Heat the oil in a pan and fry the thighs skin side down until golden. Turn them over, brown the other side and transfer to a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı tavada ince doğranmış soğan ve ezilmiş sarımsağı 3 dakika yumuşayana kadar kavur.",
+     "en": "In the same pan, cook the onion and garlic for 3 minutes, until soft."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Tavuk suyunu ekleyip tavanın dibini kazıyarak 2 dakika kaynat.",
+     "en": "Add the stock, scrape the base of the pan and simmer for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Dijon hardalını, krema ve kekiği ekleyip karıştır. Tavukları sosun içine geri koy, kapağı kapalı 20 dakika kısık ateşte pişir.",
+     "en": "Stir in the mustard, cream and thyme. Return the chicken to the sauce, cover and cook over low heat for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Maydanozu ince doğrayıp üzerine serp ve sosuyla birlikte sıcak servis yap.",
+     "en": "Scatter over the chopped parsley and serve hot with the sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavada",
+   "Tavuklu"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "609845d6-8114-4a0a-ad83-270f393dc6dd",
+  "slug": "steak-frites",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Steak frites",
+   "en": "Steak frites"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sarımsaklı maydanozlu tereyağı sosuyla servis edilen dana biftek ve çıtır patates kızartması. Bistro klasiği.",
+   "en": "Pan-seared beef steak with garlic and parsley butter, served with crisp fried potatoes. A classic bistro plate."
+  },
+  "servings": 2,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana antrikot",
+     "en": "Beef entrecôte"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yaklaşık 250 g, 2 cm kalınlıkta",
+     "en": "about 250 g each, 2 cm thick"
+    },
+    "pantryKey": "beef-entrecote",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "çubuk halinde kesilmiş",
+     "en": "cut into batons"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri soyup 1 cm kalınlığında çubuklara kes, soğuk suda 15 dakika bekletip nişastasını al.",
+     "en": "Peel the potatoes and cut them into 1 cm batons. Soak them in cold water for 15 minutes to draw out the starch."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kalın tabanlı tencerede yağı 160 dereceye getir; patatesleri süzüp kağıt havluyla kurulayarak 5 dakika kızart.",
+     "en": "Heat the oil in a deep heavy pan to 160°C. Drain and dry the potatoes, then fry them for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Yağı 180 dereceye çıkarıp patatesleri 3 dakika ya da altın rengi olana kadar ikinci kez kızart; süzgece al ve tuz serp.",
+     "en": "Raise the oil to 180°C and fry the potatoes a second time for 3 minutes, or until golden. Drain and salt them."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bifteğin iki yüzüne tuz ve karabiber serp, oda sıcaklığında 30 dakika beklet.",
+     "en": "Season both sides of the steak with salt and pepper and leave at room temperature for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kalın tabanlı tavayı iyice ısıt, yağında bifteği her yüzü 3 dakika kavur.",
+     "en": "Heat a heavy pan until very hot, then sear the steak in a little oil for 3 minutes per side."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bifteği tabağa al, 5 dakika dinlendir. Tavaya tereyağı ve ezilmiş sarımsağı koy, maydanozu ekleyip biftek üzerine gezdir.",
+     "en": "Move the steak to a plate and rest it for 5 minutes. Add the butter and crushed garlic to the pan, stir in the parsley and spoon over the steak."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Patates kızartmasıyla birlikte sıcak servis yap.",
+     "en": "Serve hot with the fries."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Kızartma",
+   "Etli",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "46a21cf3-673e-4ec3-84bd-edb0387540f7",
+  "slug": "steak-au-poivre",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Steak au poivre",
+   "en": "Steak au poivre"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İri kırılmış karabiberle kaplanan dana bifteği, konyaklı ve kremalı sosla. Sos biftekle birlikte servis edilir.",
+   "en": "Beef steak crusted with coarsely crushed peppercorns and finished with a brandy and cream sauce."
+  },
+  "servings": 2,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana bonfile",
+     "en": "Beef fillet steak"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "yaklaşık 300 g, 3 cm kalınlıkta",
+     "en": "about 300 g each, 3 cm thick"
+    },
+    "pantryKey": "beef-steak",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": 2,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "iri kırılmış",
+     "en": "coarsely crushed"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Konyak",
+     "en": "Cognac"
+    },
+    "amount": 50,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cognac",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu",
+      "en": "Chicken stock"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana suyu",
+     "en": "Beef stock"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "beef-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Karabiberi bıçağın tabanıyla iri kırıp bifteklerin iki yüzüne bastır, tuzu da serp.",
+     "en": "Press the coarsely crushed peppercorns into both sides of the steaks and season with salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavayı iyice ısıt, zeytinyağında bifteği her yüzü 3 dakika kavur.",
+     "en": "Heat a heavy pan until very hot and sear the steaks in the oil, 3 minutes per side."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bifteği tabağa al ve folyoyla örtüp 5 dakika dinlendir.",
+     "en": "Move the steaks to a plate, cover loosely with foil and rest for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tavaya tereyağını ekle, eridiğinde konyağı (ya da yerine kullandığın karışımı) dök ve dibini kazıyarak 1 dakika kaynat.",
+     "en": "Add the butter to the pan and, once melted, pour in the cognac (or the mixture you are using instead). Scrape the base and simmer for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Et suyu ve kremayı ekleyip karıştır, sos yarı yarıya koyulaşana kadar 4 dakika kaynat.",
+     "en": "Stir in the stock and cream and simmer for 4 minutes, until the sauce has reduced by half."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Biftekleri ve birikenleri sosa geri koy, 1 dakika ısıtıp sıcak servis yap.",
+     "en": "Return the steaks and any juices to the sauce, warm for 1 minute and serve at once."
+    },
+    "timerSeconds": 60
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Tavada",
+   "containsAlcohol",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
