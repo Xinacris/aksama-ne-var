@@ -731,12 +731,21 @@
     "misirli-salata",
     "fasulye-piyazi-antalya-usulu"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "firik-salatasi",
+    "pirinc-salatasi",
+    "tavuklu-sezar-salatasi",
+    "elmali-kereviz-salatasi",
+    "portakalli-rezene-salatasi",
+    "mantar-salatasi",
+    "misirli-salata",
+    "fasulye-piyazi-antalya-usulu"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 92079,
    "startedAt": "2026-10-15T19:44:46.676Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:48:09.669Z"
   },
   {
    "id": "g025",
@@ -974,11 +983,11 @@
     "portakalli-kek",
     "havuclu-tarcinli-kek"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:47:37.391Z",
    "finishedAt": null
   },
   {
