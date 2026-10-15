@@ -1868,5 +1868,250 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "b4f824c7-b44a-4bfc-a6b3-6a2574666ba2",
+  "slug": "patlican-piyazi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "region": "Akdeniz",
+  "title": {
+   "tr": "Patlıcan piyazı",
+   "en": "Aubergine piyaz"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Közlenmiş patlıcanın ferahlatıcı bir salata hali.",
+   "en": "A refreshing salad made with roasted aubergine."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kemer patlıcan",
+     "en": "Long aubergine"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "long-aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil biber",
+     "en": "Green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanları ocak üzerinde veya fırında 20 dakika közle.",
+     "en": "Roast the aubergines on the stove or in the oven for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Közlenen patlıcanların kabuklarını soy ve içini irice doğra.",
+     "en": "Peel the roasted aubergines and chop the flesh coarsely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Derin bir kasede patlıcan, domates ve biberi karıştır.",
+     "en": "Mix the aubergine, tomato, and peppers in a deep bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı ve sirkeyi ekleyip harmanla.",
+     "en": "Add olive oil and vinegar, then toss."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Vejetaryen",
+   "Közleme",
+   "Zeytinyağlı",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "634d5e91-612a-4c1f-b787-95958de523be",
+  "slug": "roka-salatasi",
+  "cuisine": "turkish",
+  "category": "salad",
+  "title": {
+   "tr": "Roka salatası",
+   "en": "Rocket salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Basit ve vazgeçilmez bir eşlikçi.",
+   "en": "A simple and indispensable side dish."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 0,
+  "waitMinutes": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Roka",
+     "en": "Rocket"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "washed"
+    },
+    "pantryKey": "rocket",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çeri domates",
+     "en": "Cherry tomato"
+    },
+    "amount": 10,
+    "unit": "adet",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Rokaları yıka ve süz, büyükse elinle parçala.",
+     "en": "Wash and drain the rocket, tear them if they are too large."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domatesleri ekle.",
+     "en": "Add the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı ve limon suyunu bir kapta çırpıp salatanın üzerine gezdir.",
+     "en": "Whisk olive oil and lemon juice in a small bowl and drizzle over the salad."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Vejetaryen",
+   "Hafif",
+   "Pişirmeden"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

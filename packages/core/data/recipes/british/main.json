@@ -1,1 +1,120 @@
-[]
+[
+ {
+  "id": "a04b1233-db6d-49bb-9b67-403474e8c9f9",
+  "slug": "fish-and-chips",
+  "cuisine": "british",
+  "category": "main",
+  "title": {
+   "tr": "Fish and chips",
+   "en": "Fish and chips"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Çıtır kaplamalı balık ve kızarmış patates.",
+   "en": "Crispy battered fish and fried potatoes."
+  },
+  "servings": 2,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz balık fileto",
+     "en": "White fish fillet"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "white-fish-fillet"
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "flour"
+   },
+   {
+    "name": {
+     "tr": "Maden suyu",
+     "en": "Mineral water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "cold"
+    },
+    "pantryKey": "mineral-water"
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "parmak doğranmış",
+     "en": "cut into strips"
+    },
+    "pantryKey": "potato"
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartma için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri parmak şeklinde doğra ve kızgın yağda pişir.",
+     "en": "Cut potatoes into strips and fry in hot oil."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Un ve maden suyunu pürüzsüz bir hamur olana kadar çırp.",
+     "en": "Whisk flour and mineral water until a smooth batter forms."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Balıkları bu karışıma batırıp kızgın yağda altın rengi alana kadar kızart.",
+     "en": "Dip fish into the batter and fry in hot oil until golden."
+    },
+    "timerSeconds": 480
+   }
+  ],
+  "tags": [
+   "Balık",
+   "Kızartma"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

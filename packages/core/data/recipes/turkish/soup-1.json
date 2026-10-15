@@ -2138,5 +2138,151 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "67124f17-3f4d-4250-b769-72e807637a23",
+  "slug": "iskembe-corbasi",
+  "cuisine": "turkish",
+  "category": "soup",
+  "title": {
+   "tr": "İşkembe çorbası",
+   "en": "Tripe soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sarımsaklı ve sirkeli terbiyesiyle klasik bir başlangıç.",
+   "en": "A classic starter with a garlic and vinegar dressing."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İşkembe",
+     "en": "Tripe"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "tripe",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta sarısı",
+     "en": "Egg yolk"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "İşkembeyi bol suda 45 dakika haşla.",
+     "en": "Boil the tripe in plenty of water for 45 minutes."
+    },
+    "timerSeconds": 2700
+   },
+   {
+    "text": {
+     "tr": "Haşlanan işkembeyi küçük küpler halinde doğra.",
+     "en": "Chop the boiled tripe into small cubes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Un, yumurta sarısı ve limon suyunu bir kasede çırp.",
+     "en": "Whisk the flour, egg yolk, and lemon juice in a bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorba suyundan bir kepçe alıp terbiyeye ekle ve ılıştır.",
+     "en": "Take a ladle of soup stock, add it to the dressing, and temper it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Terbiyeyi tencereye yavaşça ekle ve 15 dakika daha pişir.",
+     "en": "Slowly add the dressing to the pot and cook for another 15 minutes."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "tags": [
+   "Tencere",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

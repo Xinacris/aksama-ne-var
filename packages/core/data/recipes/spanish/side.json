@@ -1,1 +1,116 @@
-[]
+[
+ {
+  "id": "e97d144b-3e31-451d-8d29-ac64249a41f2",
+  "slug": "patatas-bravas",
+  "cuisine": "spanish",
+  "category": "side",
+  "title": {
+   "tr": "Patatas bravas",
+   "en": "Patatas bravas"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İspanyol usulü çıtır patates ve acılı domates sosu.",
+   "en": "Spanish style crispy potatoes with spicy tomato sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "cubed"
+    },
+    "pantryKey": "potato"
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste"
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "vegetable-oil"
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "yoğun acı",
+     "en": "spicy"
+    },
+    "pantryKey": "chilli-flakes"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri küp küp doğra ve kızgın yağda altın sarısı olana kadar kızart.",
+     "en": "Cube the potatoes and fry in hot oil until golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ayrı bir tavada salçayı, pul biberi ve az miktarda suyu karıştırarak sosu hazırla.",
+     "en": "In a separate pan, prepare the sauce by mixing tomato paste, chilli flakes, and a little water."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kızaran patatesleri havlu kağıt üzerine al.",
+     "en": "Transfer fried potatoes to paper towels."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri servis tabağına al ve üzerine hazırladığın sosu gezdir.",
+     "en": "Place potatoes on a serving plate and drizzle with the prepared sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "tags": [
+   "Kızartma",
+   "Vejetaryen",
+   "Acılı",
+   "Ekonomik"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

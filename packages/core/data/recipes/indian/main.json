@@ -1,1 +1,118 @@
-[]
+[
+ {
+  "id": "f697f5cc-a725-484e-8f1f-3e2eb26da1ce",
+  "slug": "tavuk-tikka-masala",
+  "cuisine": "indian",
+  "category": "main",
+  "title": {
+   "tr": "Tavuk tikka masala",
+   "en": "Chicken tikka masala"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Baharatlı yoğurt sosunda marine edilmiş tavuk parçaları.",
+   "en": "Chicken pieces marinated in a spiced yoghurt sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": 60,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "kuşbaşı doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "chicken-breast"
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "note": null,
+    "pantryKey": "yoghurt"
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata"
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic"
+   },
+   {
+    "name": {
+     "tr": "Köri",
+     "en": "Curry powder"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "curry-powder"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavukları yoğurt, sarımsak ve baharatlarla harmanlayıp buzdolabında beklet.",
+     "en": "Mix chicken with yoghurt, garlic, and spices, then let rest in the fridge."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Tavukları tavada yüksek ateşte renk alana kadar pişir.",
+     "en": "Cook the chicken in a pan over high heat until browned."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Domates püresini ekle ve sos kıvam alana kadar pişir.",
+     "en": "Add passata and cook until the sauce thickens."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "tags": [
+   "Tavuklu",
+   "Tencere",
+   "Acılı"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
