@@ -2517,11 +2517,11 @@
     "pulpo-a-la-gallega",
     "escalivada"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:42:32.269Z",
    "finishedAt": null
   },
   {
@@ -2621,12 +2621,16 @@
     "domates-rasam",
     "mercimek-shorba"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "mulligatawny",
+    "domates-rasam",
+    "mercimek-shorba"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 65417,
    "startedAt": "2026-10-15T22:41:01.280Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:42:40.294Z"
   },
   {
    "id": "g084",
