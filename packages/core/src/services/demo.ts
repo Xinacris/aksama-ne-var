@@ -1,6 +1,6 @@
 import type { PlanItem, Slot } from "../data/models";
 import type { Repos } from "../data/repos";
-import { builtinRecipes } from "../data/seed/recipes";
+import { catalogRecipes as builtinRecipes } from "../recipes/catalog";
 import { addDays, fromIsoDate } from "../domain/dates";
 import { ingredientKey } from "../domain/shopping";
 import { hashPassword, randomSalt } from "../lib/crypto";

@@ -194,6 +194,13 @@ export const INGREDIENT_CATALOG: CatalogEntry[] = [
   ...MORE_INGREDIENTS,
 ];
 
+/**
+ * The entries from before the catalog (Round 3.4). The import's free-text matcher uses only these:
+ * the additions include everyday words ("Su", "Tavuk suyu", "Ayçiçek yağı") that would otherwise
+ * swallow a caption's wording ("Sıcak su") or split lists that merge today ("Sıvı yağ").
+ */
+export const BASE_CATALOG: CatalogEntry[] = INGREDIENT_CATALOG.filter((c) => c.name in PANTRY_KEYS);
+
 const byName = new Map(INGREDIENT_CATALOG.map((c) => [c.name, c]));
 const byKey = new Map(INGREDIENT_CATALOG.map((c) => [c.key, c]));
 

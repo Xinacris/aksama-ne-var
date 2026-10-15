@@ -8,6 +8,9 @@
    "tr": "Sütlaç",
    "en": "Sütlaç (rice pudding)"
   },
+  "shortTitle": {
+   "en": "Rice pudding"
+  },
   "servings": 6,
   "prepMinutes": 10,
   "cookMinutes": 40,
@@ -126,6 +129,9 @@
    "tr": "İrmik helvası",
    "en": "İrmik helvası (semolina halva)"
   },
+  "shortTitle": {
+   "en": "Semolina halva"
+  },
   "servings": 6,
   "prepMinutes": 5,
   "cookMinutes": 25,
@@ -228,6 +234,9 @@
   "title": {
    "tr": "Revani",
    "en": "Revani (semolina cake in syrup)"
+  },
+  "shortTitle": {
+   "en": "Revani"
   },
   "servings": 8,
   "prepMinutes": 15,
@@ -374,6 +383,9 @@
    "tr": "Kabak tatlısı",
    "en": "Kabak tatlısı (candied pumpkin)"
   },
+  "shortTitle": {
+   "en": "Pumpkin dessert"
+  },
   "servings": 6,
   "prepMinutes": 15,
   "cookMinutes": 60,
@@ -467,6 +479,9 @@
   "title": {
    "tr": "Muhallebi",
    "en": "Muhallebi (milk pudding)"
+  },
+  "shortTitle": {
+   "en": "Muhallebi"
   },
   "servings": 6,
   "prepMinutes": 5,

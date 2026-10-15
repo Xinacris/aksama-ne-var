@@ -142,8 +142,12 @@ export const catalogRecipeSchema = z
     category: z.enum(CATEGORIES),
     region: z.enum(REGIONS).nullable().optional(),
     title: bilingual,
-    /** Shorter label for chips ("Pirinç pilavı"); optional. */
-    shortTitle: bilingual.nullable().optional(),
+    /** Shorter label for chips ("Pirinç pilavı"), per language; either may be missing. */
+    shortTitle: z
+      .object({ tr: z.string().trim().min(1).optional(), en: z.string().trim().min(1).optional() })
+      .strict()
+      .nullable()
+      .optional(),
     /** Required in the finished catalog; converted built-ins get theirs from the generator (`--fill`). */
     description: bilingual.optional(),
     servings: z.number().int().min(1).max(20),

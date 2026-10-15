@@ -26,6 +26,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
     "@types/node": "^24.19.2",
     "eslint": "^9",
     "tsx": "^4.23.15",

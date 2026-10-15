@@ -114,6 +114,9 @@
    "tr": "Bulgur pilavı",
    "en": "Bulgur pilavı (bulgur pilaf)"
   },
+  "shortTitle": {
+   "en": "Bulgur pilaf"
+  },
   "servings": 4,
   "prepMinutes": 10,
   "cookMinutes": 20,
@@ -235,6 +238,9 @@
    "tr": "Şehriyeli pilav",
    "en": "Şehriyeli pilav (rice with orzo)"
   },
+  "shortTitle": {
+   "en": "Rice with orzo"
+  },
   "servings": 4,
   "prepMinutes": 5,
   "cookMinutes": 20,
@@ -339,6 +345,9 @@
    "tr": "Makarna",
    "en": "Makarna (buttered pasta)"
   },
+  "shortTitle": {
+   "en": "Pasta"
+  },
   "servings": 4,
   "prepMinutes": 5,
   "cookMinutes": 12,
@@ -437,6 +446,9 @@
    "tr": "Patates kızartması",
    "en": "Patates kızartması (chips)"
   },
+  "shortTitle": {
+   "en": "Chips"
+  },
   "servings": 4,
   "prepMinutes": 15,
   "cookMinutes": 20,
@@ -520,6 +532,9 @@
   "title": {
    "tr": "Nohutlu pilav",
    "en": "Nohutlu pilav (rice with chickpeas)"
+  },
+  "shortTitle": {
+   "en": "Chickpea rice"
   },
   "servings": 4,
   "prepMinutes": 5,
@@ -623,6 +638,9 @@
   "title": {
    "tr": "İç pilav",
    "en": "İç pilav (spiced rice with pine nuts and currants)"
+  },
+  "shortTitle": {
+   "en": "İç pilav"
   },
   "servings": 4,
   "prepMinutes": 15,
@@ -773,6 +791,9 @@
    "tr": "Sebzeli bulgur pilavı",
    "en": "Sebzeli bulgur pilavı (bulgur pilaf with vegetables)"
   },
+  "shortTitle": {
+   "en": "Vegetable bulgur"
+  },
   "servings": 4,
   "prepMinutes": 10,
   "cookMinutes": 20,
@@ -895,6 +916,9 @@
    "tr": "Su böreği",
    "en": "Su böreği (boiled-pastry cheese börek)"
   },
+  "shortTitle": {
+   "en": "Su böreği"
+  },
   "servings": 6,
   "prepMinutes": 40,
   "cookMinutes": 40,
@@ -1015,6 +1039,9 @@
    "tr": "Sigara böreği",
    "en": "Sigara böreği (cheese pastry rolls)"
   },
+  "shortTitle": {
+   "en": "Sigara böreği"
+  },
   "servings": 4,
   "prepMinutes": 25,
   "cookMinutes": 15,
@@ -1116,6 +1143,9 @@
   "title": {
    "tr": "Patatesli rulo börek",
    "en": "Patatesli rulo börek (potato börek rolls)"
+  },
+  "shortTitle": {
+   "en": "Potato börek"
   },
   "servings": 6,
   "prepMinutes": 30,
@@ -1253,6 +1283,9 @@
    "tr": "Ispanaklı börek",
    "en": "Ispanaklı börek (spinach börek)"
   },
+  "shortTitle": {
+   "en": "Spinach börek"
+  },
   "servings": 6,
   "prepMinutes": 30,
   "cookMinutes": 40,
@@ -1389,6 +1422,9 @@
    "tr": "Patates püresi",
    "en": "Patates püresi (mashed potatoes)"
   },
+  "shortTitle": {
+   "en": "Mash"
+  },
   "servings": 4,
   "prepMinutes": 10,
   "cookMinutes": 20,
@@ -1491,6 +1527,9 @@
    "tr": "Erişte",
    "en": "Erişte (egg noodles with walnuts)"
   },
+  "shortTitle": {
+   "en": "Erişte"
+  },
   "servings": 4,
   "prepMinutes": 5,
   "cookMinutes": 15,
@@ -1585,6 +1624,9 @@
   "title": {
    "tr": "Fırında baharatlı patates",
    "en": "Fırında baharatlı patates (spiced roast potatoes)"
+  },
+  "shortTitle": {
+   "en": "Roast potatoes"
   },
   "servings": 4,
   "prepMinutes": 10,
@@ -1697,6 +1739,9 @@
   "title": {
    "tr": "Mercimek köftesi",
    "en": "Mercimek köftesi (red lentil and bulgur patties)"
+  },
+  "shortTitle": {
+   "en": "Lentil köfte"
   },
   "servings": 6,
   "prepMinutes": 30,
@@ -1884,6 +1929,9 @@
   "title": {
    "tr": "Pişi",
    "en": "Pişi (fried dough)"
+  },
+  "shortTitle": {
+   "en": "Pişi"
   },
   "servings": 4,
   "prepMinutes": 70,
