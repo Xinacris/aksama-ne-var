@@ -154,12 +154,23 @@
     "manti-corbasi",
     "yuksuk-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "midye-corbasi",
+    "karides-corbasi",
+    "kestane-corbasi",
+    "yer-elmasi-corbasi",
+    "arpa-corbasi",
+    "yulaf-corbasi",
+    "sarimsak-corbasi",
+    "beyaz-lahana-corbasi",
+    "manti-corbasi",
+    "yuksuk-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 94113,
    "startedAt": "2026-10-15T19:39:33.005Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:42:52.794Z"
   },
   {
    "id": "g006",
@@ -655,11 +666,11 @@
     "kozlenmis-kirmizi-biber-ezmesi",
     "kirmizi-mercimek-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:41:35.150Z",
    "finishedAt": null
   },
   {
