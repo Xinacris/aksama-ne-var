@@ -1,1 +1,1409 @@
-[]
+[
+ {
+  "id": "614f77b1-ad13-4827-a2d4-f0d063eda897",
+  "slug": "pasta-e-fagioli",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Pasta e fagioli",
+   "en": "Pasta e fagioli (pasta and bean soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Fasulyelerin yarısını ezerek kremalaştırdığımız, makarnalı ve domates aromalı bir çorba. Ucuz malzemelerle kısa sürede hazırlanır.",
+   "en": "A bean and pasta soup in which half the beans are mashed for a creamy body. Tomato and rosemary give it flavour, and it costs very little to make."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru biberiye",
+     "en": "Dried rosemary"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "rosemary-dried",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Tomato passata"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Haşlanmış kuru fasulye",
+     "en": "Cooked white beans"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kalem makarna",
+     "en": "Penne"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye kırılmış",
+     "en": "broken in half"
+    },
+    "pantryKey": "penne",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yağı geniş bir tencerede orta ateşte ısıt. Soğan, havuç ve kerevizi küçük küp doğra, 8 dakika yumuşayana kadar soteleyin.",
+     "en": "Warm the oil in a wide pot over a medium heat. Dice the onion, carrot and celery small and soften them for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve kuru biberiyeyi ekleyip 1 dakika çevir.",
+     "en": "Add the garlic and dried rosemary and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Salçayı ekle ve 2 dakika karıştırarak pişir.",
+     "en": "Stir in the tomato paste and cook it for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Domates püresi ve sebze suyunu ekle. Fasulyelerin yarısını süzüp tencereye koy, kalan yarısını çatalla hafifçe ez ve geri ekle.",
+     "en": "Pour in the passata and the vegetable stock. Add half the beans whole, mash the rest with a fork and stir them back in."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi kıs, kapağı yarı açık 20 dakika pişir.",
+     "en": "Lower the heat and simmer, lid partly on, for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Kalem makarnayı ekle ve makarna yumuşayana kadar 10 dakika pişir. Dibi tutmaması için ara ara karıştır.",
+     "en": "Add the penne and cook for 10 minutes until tender, stirring now and then so it does not stick."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandır. Servis ederken rendelenmiş parmesanı serp.",
+     "en": "Season with salt and black pepper. Serve with the grated parmesan on top."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "budget",
+   "onePot",
+   "Tencere",
+   "Vejetaryen",
+   "Bakliyat",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3c8f111f-ac4a-4d06-af02-6e115bfce8eb",
+  "slug": "ribollita",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Ribollita",
+   "en": "Ribollita (Tuscan bread and bean soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Toskana'nın ekmekli fasulye çorbası. Kara lahana ve fasulye, bayat ekmekle koyulaştırılır. Bir gün önceden yapılınca daha lezzetlidir.",
+   "en": "The Tuscan bread and bean soup: black cabbage and beans thickened with stale bread. It tastes best when made a day ahead."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "bir de servis için",
+     "en": "plus extra to finish"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kara lahana",
+     "en": "Black cabbage"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "sapları çıkarılmış, ince doğranmış",
+     "en": "stalks removed and finely shredded"
+    },
+    "pantryKey": "black-cabbage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Konserve domates",
+     "en": "Canned tomatoes"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca ezilmiş",
+     "en": "roughly crushed"
+    },
+    "pantryKey": "canned-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Haşlanmış kuru fasulye",
+     "en": "Cooked white beans"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "dilim dilim doğranmış",
+     "en": "cut into slices"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Geniş bir tencerede 3 yemek kaşığı zeytinyağını orta ateşte ısıt. Soğan, havuç ve kerevizi küçük küp doğra, 10 dakika yağda soteleyip yumuşat.",
+     "en": "Warm 3 tablespoons of the olive oil in a wide pot over a medium heat. Dice the onion, carrot and celery small and soften them in the oil for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve kara lahanayı ekleyip lahana solana kadar birkaç dakika soteleyin.",
+     "en": "Add the garlic and the black cabbage and cook them until the cabbage has wilted."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Konserve domatesi, fasulyelerin yarısını, kekik ve defne yaprağını ekle. Sebze suyunu döküp kaynatın.",
+     "en": "Add the tomatoes, half the beans, the thyme and the bay leaf. Pour in the stock and bring it to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi kıs, kapağı yarı açık 40 dakika pişir.",
+     "en": "Lower the heat and simmer, lid partly on, for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Kalan fasulyeleri çatalla ezip çorbaya karıştır.",
+     "en": "Mash the remaining beans with a fork and stir them into the soup."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bayat ekmek dilimlerini çorbaya ekle ve kıvam alana kadar 15 dakika kısık ateşte pişir.",
+     "en": "Add the bread slices and simmer on a low heat for 15 minutes, until the soup is thick."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandır. Kâselere al, üzerine bol zeytinyağı gezdirip ılık servis et.",
+     "en": "Season with salt and black pepper. Ladle into bowls, drizzle generously with olive oil and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Çorbayı bir gün önceden pişirip buzdolabında beklet; ertesi gün ısıtıp ekmeği o zaman ekle.",
+     "en": "Cook the soup a day ahead and keep it in the fridge. The next day, reheat it and add the bread then."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "budget",
+   "onePot",
+   "makeAhead",
+   "Tencere",
+   "Vejetaryen",
+   "Bakliyat",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "eb0918c0-73b4-4901-b33b-c313734f53e9",
+  "slug": "stracciatella",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Stracciatella",
+   "en": "Stracciatella (egg drop soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Roma usulü, tavuk suyuna ince bir akış halinde dökülen yumurta ve parmesanla hazırlanan hafif bir çorba. Yarım saatten kısa sürede hazır olur.",
+   "en": "A light Roman soup in which beaten egg and parmesan are poured into hot chicken stock and set into soft threads. Ready in under half an hour."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "semolina",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "taze rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk suyunu geniş bir tencerede orta ateşte kaynama noktasına getir.",
+     "en": "Bring the chicken stock to the boil in a wide pot over a medium heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları bir kaseye kır; rendelenmiş parmesanın yarısı, irmik, muskat, tuz ve karabiberle birlikte iyice çırp.",
+     "en": "Crack the eggs into a bowl and beat them well with half the parmesan, the semolina, nutmeg, salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi kıs. Yumurta karışımını kepçeyle karıştırarak ince bir akış halinde suya dök.",
+     "en": "Turn the heat down. Pour the egg mixture into the stock in a thin stream, stirring gently with a ladle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta telleri oluşana kadar 1 dakika daha yavaşça karıştır.",
+     "en": "Keep stirring gently for 1 minute, until fine strands of egg have formed."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan parmesanı ve ince kıyılmış maydanozu serpip sıcak sıcak servis et.",
+     "en": "Take off the heat, scatter over the rest of the parmesan and the parsley, and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Tencere",
+   "Tavuklu",
+   "Kolay",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b8889914-3ee2-498d-a5d3-43402aeb7c46",
+  "slug": "pappa-al-pomodoro",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Pappa al pomodoro",
+   "en": "Pappa al pomodoro (tomato bread soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bayat ekmek, domates ve fesleğenle yapılan Toskana çorbası. Sade malzemelerle hazırlanır ve ekmeği değerlendirmek için ideal bir yoldur.",
+   "en": "A Tuscan soup of stale bread, tomatoes and basil. Made from plain ingredients, it is a good way to use bread that is past its best."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş ya da çok ince doğranmış",
+     "en": "grated or very finely chopped"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu alınmış, parçalanmış",
+     "en": "crusts removed and torn into pieces"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1000,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "Fresh basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": null,
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "domatesin asitliğini dengelemek için",
+     "en": "to balance the acidity of the tomatoes"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Zeytinyağını geniş bir tencerede orta ateşte ısıt, sarımsağı ekle ve 1 dakika kokusu çıkana kadar çevir.",
+     "en": "Warm the olive oil in a wide pot over a medium heat, add the garlic and stir for 1 minute, until fragrant."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domatesleri tencereye ekle, pul biber ve şekeri de at. Orta ateşte 15 dakika pişir.",
+     "en": "Add the tomatoes with the chilli flakes and sugar. Cook over a medium heat for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Parçaladığın ekmeği ve sebze suyunu ekleyip iyice karıştır.",
+     "en": "Add the torn bread and the vegetable stock and stir well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi kıs, kapağı kapalı 10 dakika pişir; ekmek tamamen dağılsın.",
+     "en": "Lower the heat and simmer, lid on, for 10 minutes, until the bread has broken down."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, üzerini kapatıp 10 dakika dinlendir.",
+     "en": "Take off the heat, cover, and let it rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Fesleğen yapraklarını elinle koparıp ekle; tuz ve karabiberle tatlandır, bol zeytinyağı gezdirip ılık servis et.",
+     "en": "Tear in the basil leaves, season with salt and black pepper, drizzle with plenty of olive oil and serve warm."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "dairyFree",
+   "budget",
+   "Tencere",
+   "Vejetaryen",
+   "Sebzeli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "1cd64dbd-d198-48f8-8240-2a74eb7c6b64",
+  "slug": "tortellini-in-brodo",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Tortellini in brodo",
+   "en": "Tortellini in broth"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Berrak tavuk suyunda pişirilen peynirli ya da etli tortellini. Hafta içi akşamlar için hızlı bir çorba.",
+   "en": "Cheese or meat tortellini cooked in a clear chicken broth. A quick soup for weeknight evenings."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hazır taze tortellini",
+     "en": "Fresh ready-made tortellini"
+    },
+    "amount": 350,
+    "unit": "g",
+    "note": {
+     "tr": "peynirli ya da etli",
+     "en": "cheese or meat filled"
+    },
+    "pantryKey": "ready-made-manti",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk suyunu, ince dilimlenmiş havuç ve kerevizi geniş tencereye koy; orta ateşte 10 dakika kaynat.",
+     "en": "Put the chicken stock, sliced carrot and celery into a wide pot and simmer over a medium heat for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tuz, karabiber ve bir tutam muskatla tatlandır.",
+     "en": "Season with salt, black pepper and a pinch of nutmeg."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tortellinileri ekle ve kaynamaya yakın ateşte 4 dakika pişir.",
+     "en": "Add the tortellini and cook them at a gentle simmer for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatmadan önce rendelenmiş parmesanın yarısını karıştır.",
+     "en": "Before turning off the heat, stir in half the parmesan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kâselere al, kalan parmesan ve ince kıyılmış maydanozla servis et.",
+     "en": "Ladle into bowls and serve with the rest of the parmesan and the chopped parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Tencere",
+   "Tavuklu",
+   "Kolay",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d1629661-9e1c-45ee-a9b4-af4b08c5b9b2",
+  "slug": "zuppa-di-lenticchie",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Zuppa di lenticchie",
+   "en": "Italian lentil soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yeşil mercimek, havuç ve kereviz ile yapılan kıvamlı bir çorba. Limonla tamamlanır, ucuz ve doyurucudur.",
+   "en": "A thick soup of green lentils with carrot and celery, finished with lemon. Cheap and filling."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil mercimek",
+     "en": "Green lentils"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış ve süzülmüş",
+     "en": "rinsed and drained"
+    },
+    "pantryKey": "green-lentil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tencerede yağı ısıt. Soğan, havuç ve kerevizi küçük küp doğra, 8 dakika yumuşayana kadar soteleyin.",
+     "en": "Warm the oil in a pot. Dice the onion, carrot and celery small and soften them for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve salçayı ekleyip 2 dakika karıştırarak pişir.",
+     "en": "Add the garlic and tomato paste and cook, stirring, for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Mercimekleri, defne yaprağını ve kekiği ekle. Sebze suyunu döküp kaynatın.",
+     "en": "Add the lentils, bay leaf and thyme. Pour in the stock and bring to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ateşi kısıp kapağı yarı açık 30 dakika pişir, mercimekler yumuşayıp kıvam alsın.",
+     "en": "Lower the heat and simmer, lid partly on, for 30 minutes, until the lentils are soft and the soup has thickened."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Defne yaprağını çıkar. Çorbanın bir kısmını blenderdan geçir ya da çatalla hafifçe ezerek kıvamlandır; tuz ve karabiberle tatlandır.",
+     "en": "Remove the bay leaf. Blend part of the soup, or mash it lightly with a fork, to thicken it; season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limon suyunu ve ince kıyılmış maydanozu karıştır, sıcak servis et.",
+     "en": "Stir in the lemon juice and chopped parsley, and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegan",
+   "dairyFree",
+   "glutenFree",
+   "budget",
+   "onePot",
+   "Tencere",
+   "Vejetaryen",
+   "Bakliyat",
+   "Sebzeli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

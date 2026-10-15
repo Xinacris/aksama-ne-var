@@ -2102,12 +2102,26 @@
     "tortellini-in-brodo",
     "zuppa-di-lenticchie"
    ],
-   "status": "pending",
-   "passed": [],
-   "failed": [],
-   "tokens": null,
+   "status": "partial",
+   "passed": [
+    "pasta-e-fagioli",
+    "ribollita",
+    "stracciatella",
+    "pappa-al-pomodoro",
+    "tortellini-in-brodo",
+    "zuppa-di-lenticchie"
+   ],
+   "failed": [
+    {
+     "slug": "minestrone",
+     "problems": [
+      "ingredients: 15, expected 6–14"
+     ]
+    }
+   ],
+   "tokens": 0,
    "startedAt": null,
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:23:35.954Z"
   },
   {
    "id": "g070",
