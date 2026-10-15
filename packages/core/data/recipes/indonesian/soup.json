@@ -1,1 +1,839 @@
-[]
+[
+ {
+  "id": "a6b47cc7-f3cb-4e2a-b4e2-0371a37910a0",
+  "slug": "soto-ayam",
+  "cuisine": "indonesian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Soto ayam",
+   "en": "Soto ayam (turmeric chicken soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Zerdeçal ve limon otu kokulu, altın renkli bir Endonezya tavuk çorbası. Bihun, yumurta ve misket limonuyla servis edilir.",
+   "en": "A golden Indonesian chicken soup scented with turmeric and lemongrass. It is served with rice noodles, egg and lime."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 75,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bütün tavuk",
+     "en": "Whole chicken"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Parçalara ayrılmış, yaklaşık 1,2 kg",
+     "en": "Cut into pieces, about 1.2 kg"
+    },
+    "pantryKey": "whole-chicken",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 2,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kişniş",
+     "en": "Ground coriander"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "coriander-ground",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon otu",
+     "en": "Lemongrass"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Dış yaprakları ayıklanıp ezilmiş",
+     "en": "Outer leaves removed and bruised"
+    },
+    "pantryKey": "lemongrass",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zencefil",
+     "en": "Ginger"
+    },
+    "amount": 2,
+    "unit": "dilim",
+    "note": {
+     "tr": "İnce dilimlenmiş",
+     "en": "Thinly sliced"
+    },
+    "pantryKey": "ginger",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Shallots"
+    },
+    "amount": 5,
+    "unit": "adet",
+    "note": {
+     "tr": "Soyulmuş, kabaca doğranmış",
+     "en": "Peeled and roughly chopped"
+    },
+    "pantryKey": "shallot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "Soyulmuş",
+     "en": "Peeled"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bihun (pirinç eriştesi)",
+     "en": "Rice vermicelli"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "rice-noodles",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "Haşlanmış",
+     "en": "Boiled"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil soğan",
+     "en": "Spring onions"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "İnce doğranmış",
+     "en": "Finely sliced"
+    },
+    "pantryKey": "spring-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Misket limonu",
+     "en": "Lime"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Yarıya kesilmiş",
+     "en": "Halved"
+    },
+    "pantryKey": "lime",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Arpacık soğan, sarımsak, zencefil, zerdeçal ve toz kişnişi blenderda pürüzsüz bir macun haline getir.",
+     "en": "Blend the shallots, garlic, ginger, turmeric and ground coriander into a smooth paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tencerede ısıt, macunu ekleyip 3 dakika kavur.",
+     "en": "Heat the oil in a pot, add the paste and fry for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Tavuğu, suyu, ezilmiş limon otunu ve tuzu ekleyip kaynamaya bırak; çıkan köpüğü al.",
+     "en": "Add the chicken, water, bruised lemongrass and salt, bring to the boil and skim off the foam."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 60 dakika pişir.",
+     "en": "Simmer gently for 60 minutes."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Tavuğu çıkarıp kemiklerinden ayır; suyu süzüp tadına bak.",
+     "en": "Lift out the chicken and pull the meat off the bones; strain the broth and taste it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları 9 dakika haşla, soyup ikiye kes.",
+     "en": "Boil the eggs for 9 minutes, then peel and halve them."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Bihunu sıcak suda 5 dakika bekletip süz.",
+     "en": "Soak the rice vermicelli in hot water for 5 minutes and drain."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kaselere bihunu, tavuğu ve yumurtayı koy; sıcak suyu üzerine dök, yeşil soğan ve limonla servis et.",
+     "en": "Divide the noodles, chicken and egg between bowls, pour over the hot broth, and serve with spring onion and lime."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Tencere",
+   "kidFriendly",
+   "dairyFree",
+   "glutenFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ff82f10f-bc76-463f-8017-ca8ee0ac733b",
+  "slug": "sayur-asem",
+  "cuisine": "indonesian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Sayur asem",
+   "en": "Sayur asem (tamarind vegetable soup)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Demirhindi ile ekşitilmiş, taze fasulye, mısır ve kabaklı hafif bir Endonezya sebze çorbası. Sade ama ferahlatıcı bir akşam yemeği seçeneği.",
+   "en": "A light Indonesian vegetable soup soured with tamarind, with green beans, sweetcorn and courgette. A simple, refreshing choice for dinner."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1.5,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Demirhindi ezmesi",
+     "en": "Tamarind paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Sıcak suyla karıştırılıp süzülmüş",
+     "en": "Mixed with hot water and strained"
+    },
+    "pantryKey": "tamarind",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Shallots"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "İnce doğranmış",
+     "en": "Finely chopped"
+    },
+    "pantryKey": "shallot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "Soyulmuş",
+     "en": "Peeled"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı acı biber",
+     "en": "Red chilli"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Dilimlenmiş",
+     "en": "Sliced"
+    },
+    "pantryKey": "red-chilli",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon otu",
+     "en": "Lemongrass"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Ezilmiş",
+     "en": "Bruised"
+    },
+    "pantryKey": "lemongrass",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fasulye",
+     "en": "Green beans"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "Uçları alınıp kabaca kesilmiş",
+     "en": "Trimmed and roughly cut"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Kalın dilimlenmiş",
+     "en": "Cut into thick slices"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mısır (koçan)",
+     "en": "Sweetcorn cob"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Dört parçaya bölünmüş",
+     "en": "Cut into four pieces"
+    },
+    "pantryKey": "sweetcorn",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Kabaca doğranmış",
+     "en": "Roughly chopped"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Arpacık soğanı, sarımsağı ve kırmızı biberi bir havanda ya da blenderda kaba bir ezme haline getir.",
+     "en": "Pound or blend the shallots, garlic and chilli into a rough paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı tencerede ısıt, ezmeyi, limon otunu ve defne yapraklarını ekleyip 2 dakika kavur.",
+     "en": "Heat the oil in a pot, add the paste, lemongrass and bay leaves, and fry for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Suyu ve demirhindi macununu ekleyip kaynat.",
+     "en": "Add the water and tamarind liquid and bring to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Taze fasulyeyi ekleyip 5 dakika pişir.",
+     "en": "Add the green beans and cook for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kabak, mısır ve domatesi ekleyip 8 dakika daha pişir.",
+     "en": "Add the courgette, sweetcorn and tomato and cook for 8 more minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Şekeri ve tuzu ekleyip tadına bak; limon otunu ve defne yapraklarını çıkarıp sıcak servis et.",
+     "en": "Add the sugar and salt and taste; remove the lemongrass and bay leaves, and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "onePot",
+   "budget",
+   "Tencere",
+   "Sebzeli",
+   "Ekşili",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f7a191fc-9486-49ef-8eea-2dd9a4ad081c",
+  "slug": "sop-buntut",
+  "cuisine": "indonesian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Sop buntut (dana kuyruk)",
+   "en": "Oxtail-style beef soup"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dana etinin kemikten ayrılana kadar uzun pişirilmesiyle elde edilen koyu ve aromatik bir çorba. Hafta sonu öğle yemeği için idealdir.",
+   "en": "A dark, aromatic soup made by cooking beef slowly until the meat falls from the bone. It suits a weekend lunch."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 160,
+  "waitMinutes": null,
+  "timeNote": {
+   "tr": "Düdüklü tencerede yaklaşık 45 dakika pişer; etin yumuşaklığını kontrol edin.",
+   "en": "In a pressure cooker it takes about 45 minutes; check the meat for tenderness."
+  },
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kuyruk",
+     "en": "Beef oxtail"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "Kemikli parçalar halinde; yoksa kemikli dana incik kullanın",
+     "en": "Bone-in pieces; or use bone-in beef shank"
+    },
+    "pantryKey": "beef-shank",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 3,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "İri doğranmış",
+     "en": "Coarsely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "Ezilmiş",
+     "en": "Crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Kalın doğranmış",
+     "en": "Cut into thick chunks"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Kalın doğranmış",
+     "en": "Cut into thick chunks"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Kalın doğranmış",
+     "en": "Cut into thick chunks"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Dörde bölünmüş",
+     "en": "Quartered"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın çubuğu",
+     "en": "Cinnamon stick"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil soğan",
+     "en": "Spring onions"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "İnce doğranmış",
+     "en": "Finely sliced"
+    },
+    "pantryKey": "spring-onion",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Dana kuyruğu büyük bir tencerede kaynar suda 10 dakika haşla, suyunu döküp etleri durulayın.",
+     "en": "Blanch the oxtail in boiling water for 10 minutes, then drain and rinse the pieces."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tencereyi temizleyip yağı ısıt, soğan ve sarımsağı ekleyip 5 dakika kavur.",
+     "en": "Wipe out the pot, heat the oil, add the onion and garlic and fry for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Eti, suyu, tarçını ve defne yapraklarını ekleyip kaynamaya bırak; köpüğünü al.",
+     "en": "Add the meat, water, cinnamon and bay leaves, bring to the boil and skim off the foam."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 2 saat pişir.",
+     "en": "Simmer gently for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Havuç, kereviz, patates ve domatesi ekleyip 20 dakika daha pişir.",
+     "en": "Add the carrot, celery, potato and tomato and cook for 20 more minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandır; tarçını ve defne yapraklarını çıkar.",
+     "en": "Season with salt and black pepper, and remove the cinnamon and bay leaves."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı kaselere al, üzerine yeşil soğan serperek sıcak servis et.",
+     "en": "Ladle the soup into bowls, scatter over the spring onion and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Çorbayı bir gece önceden pişirip soğutun; sabah yüzeyde katılaşan yağı alıp ısıtın.",
+     "en": "Cook the soup the night before and chill it; in the morning, lift off the fat that has set on top and reheat."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Etli",
+   "Tencere",
+   "makeAhead",
+   "guest",
+   "dairyFree",
+   "glutenFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
