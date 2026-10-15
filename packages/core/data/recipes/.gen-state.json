@@ -1518,12 +1518,23 @@
     "zeytinyagli-mantar",
     "eksili-kofte"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "zeytinyagli-karnabahar",
+    "zeytinyagli-ispanak",
+    "zeytinyagli-havuc",
+    "zeytinyagli-bezelye",
+    "zeytinyagli-brokoli",
+    "zeytinyagli-pazi",
+    "zeytinyagli-yer-elmasi",
+    "zeytinyagli-kuskonmaz",
+    "zeytinyagli-mantar",
+    "eksili-kofte"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 82923,
    "startedAt": "2026-10-15T22:23:37.291Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:26:08.025Z"
   },
   {
    "id": "g048",
@@ -2165,11 +2176,11 @@
     "mantar-trifolati",
     "suppl"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:25:44.629Z",
    "finishedAt": null
   },
   {
