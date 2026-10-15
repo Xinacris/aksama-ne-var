@@ -1859,12 +1859,23 @@
     "kabak-musakka",
     "karnabahar-musakka"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kuru-fasulye-pilaki",
+    "nohut-pilaki",
+    "bakla-yemegi",
+    "mercimek-yemegi",
+    "ispanak-yemegi",
+    "pirasa-yemegi",
+    "patates-yemegi",
+    "patates-musakka",
+    "kabak-musakka",
+    "karnabahar-musakka"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87956,
    "startedAt": "2026-10-15T22:27:47.677Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:30:32.822Z"
   },
   {
    "id": "g059",
@@ -2117,11 +2128,11 @@
     "firinda-levrek-italyan-usulu",
     "midye-marinara"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:30:11.146Z",
    "finishedAt": null
   },
   {
