@@ -365,12 +365,23 @@
     "taze-bakla-corbasi",
     "icli-kofte-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "firinda-kok-sebze-corbasi",
+    "ekmek-asi-corbasi",
+    "kesme-makarnali-tavuk-corbasi",
+    "yayla-usulu-yogurtlu-kesme-corbasi",
+    "antep-yuvalama-corbasi",
+    "misirli-karalahana-corbasi",
+    "misir-unlu-pirasa-corbasi",
+    "kestaneli-tavuk-corbasi",
+    "taze-bakla-corbasi",
+    "icli-kofte-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 92740,
    "startedAt": "2026-10-15T19:36:39.894Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:39:58.519Z"
   },
   {
    "id": "g014",
