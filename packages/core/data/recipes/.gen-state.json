@@ -2960,12 +2960,23 @@
     "cassoulet",
     "blanquette-de-veau"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "moules-marinieres",
+    "sole-meuniere",
+    "balik-en-papillote",
+    "kuzu-navarin",
+    "hachis-parmentier",
+    "tavuk-chasseur",
+    "tuzlu-krep",
+    "galette",
+    "cassoulet",
+    "blanquette-de-veau"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 100571,
    "startedAt": "2026-10-15T22:51:44.962Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:55:37.832Z"
   },
   {
    "id": "g095",
@@ -3215,11 +3226,11 @@
     "yorkshire-pudding",
     "mushy-peas"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:55:20.773Z",
    "finishedAt": null
   },
   {
