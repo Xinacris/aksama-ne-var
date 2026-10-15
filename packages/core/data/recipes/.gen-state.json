@@ -2986,12 +2986,15 @@
     "tavuk-provencal",
     "omlet-aux-fines-herbes"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "tavuk-provencal",
+    "omlet-aux-fines-herbes"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 62515,
    "startedAt": "2026-10-15T22:55:39.171Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:56:59.830Z"
   },
   {
    "id": "g096",
@@ -3245,11 +3248,11 @@
     "scone",
     "trifle"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:56:36.148Z",
    "finishedAt": null
   }
  ]

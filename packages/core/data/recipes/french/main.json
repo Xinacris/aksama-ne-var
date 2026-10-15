@@ -4820,5 +4820,506 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "7efeb614-ef8d-44d1-adfa-dccb1a3569a1",
+  "slug": "tavuk-provencal",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuk Provençal",
+   "en": "Chicken Provençal"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Provence'ta sık yapılan bu tavuk yemeği domates, sarımsak, zeytin ve kekikle tencerede pişer. Sosu ekmeğe banarak yenince tarifin asıl tadı ortaya çıkar.",
+   "en": "A home-style chicken dish from Provence, braised in a pot with tomato, garlic, black olives and thyme. The sauce is the point, so serve it with bread to soak it up."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 60,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "kemikli ve derili",
+     "en": "bone-in, skin on"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 4,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz şarap",
+     "en": "White wine"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "white-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu ve üzüm sirkesi",
+      "en": "Chicken stock and grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz",
+     "en": "pitted"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "kuru",
+     "en": "dried"
+    },
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaves"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış, servis için",
+     "en": "finely chopped, for serving"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını tuz ve karabiberle iyice tatlandır.",
+     "en": "Season the chicken thighs well with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede zeytinyağını ısıt. Tavukları derisi aşağı gelecek şekilde koy ve her tarafı altın rengi alana kadar kavur. Tabağa al.",
+     "en": "Heat the olive oil in a wide pot. Lay the thighs skin side down and brown all over until golden. Lift them onto a plate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Aynı yağda soğanı ve sarımsağı ekle, soğan yumuşayıncaya kadar 5 dakika kavur.",
+     "en": "Add the onion and garlic to the same oil and fry for 5 minutes, until the onion softens."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Doğranmış domatesleri, kekiği ve defne yapraklarını ekleyip 3 dakika pişir.",
+     "en": "Stir in the diced tomatoes, thyme and bay leaves and cook for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) ekleyip 2 dakika kaynat.",
+     "en": "Pour in the wine (or the stock and vinegar mix instead) and simmer for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tavukları ve zeytinleri sosun içine koy, kapağını kapatıp kısık ateşte 35 dakika pişir.",
+     "en": "Return the chicken and olives to the pan, cover and simmer gently for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Kapağını aç ve sos biraz koyulaşana kadar 10 dakika daha pişir.",
+     "en": "Remove the lid and cook for another 10 minutes, until the sauce thickens a little."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tavuğu sıcak servis et; üzerine ince kıyılmış maydanozu serpip sosu kaşıkla gezdir.",
+     "en": "Serve hot, scattered with the chopped parsley and spooned with the sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "dairyFree",
+   "glutenFree",
+   "onePot",
+   "Tencere",
+   "Tavuklu"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6dec50ae-55e5-480d-b53b-a3a1b863a9cc",
+  "slug": "omlet-aux-fines-herbes",
+  "cuisine": "french",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Omlet aux fines herbes",
+   "en": "French herb omelette"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yumurta, tereyağı ve taze otlarla yapılan sade bir Fransız omleti. Dışı açık sarı, içi yumuşak kalmalı; bunun için tavada fazla bekletmemek gerekir.",
+   "en": "A plain French omelette made with eggs, butter and a handful of fresh herbs. The outside should stay pale and the inside soft, which means not leaving it in the pan too long."
+  },
+  "servings": 2,
+  "prepMinutes": 10,
+  "cookMinutes": 5,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "divided in two"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Frenk soğanı",
+     "en": "Chives"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "chives",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarhun",
+     "en": "Tarragon"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ince kıyılmış",
+     "en": "leaves finely chopped"
+    },
+    "pantryKey": "tarragon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıvırcık marul",
+     "en": "Curly lettuce"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış ve kurutulmuş",
+     "en": "washed and dried"
+    },
+    "pantryKey": "curly-lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kiraz domates",
+     "en": "Cherry tomatoes"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ekmek",
+     "en": "Bread"
+    },
+    "amount": 2,
+    "unit": "dilim",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "bread",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurtaları bir kasede çatalla iyice çırp, tuz ve karabiber ekle.",
+     "en": "Beat the eggs in a bowl with a fork until smooth, then season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Maydanozu, frenk soğanını ve tarhunu ince kıyıp yumurtaların içine ekle, karıştır.",
+     "en": "Finely chop the parsley, chives and tarragon, and stir them into the eggs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yapışmaz bir tavada tereyağının yarısını orta-yüksek ateşte köpürene kadar ısıt.",
+     "en": "Melt half the butter in a non-stick pan over medium-high heat until it foams."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları dök. Tavayı hafifçe sallayarak spatulayla kenarları ortaya doğru çek; üst kısım hâlâ hafif akıcıyken dur.",
+     "en": "Pour in the eggs. Shake the pan gently and draw the set edges into the middle with a spatula, stopping while the top is still slightly runny."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kenarlar oturduğunda 1 dakika daha pişir, sonra bir kenarını ortaya doğru katla.",
+     "en": "Once the edges have set, cook for 1 more minute, then fold one side over the middle."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Omleti kayarak sıcak bir tabağa al ve kalan tereyağını üzerine sür.",
+     "en": "Slide the omelette onto a warm plate and rub the remaining butter over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kiraz domatesleri ikiye kes, kıvırcık marulu yıkayıp kurut.",
+     "en": "Halve the cherry tomatoes, and wash and dry the curly lettuce."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Omleti ikiye kesip kıvırcık marul, kiraz domates ve dilim ekmekle servis et.",
+     "en": "Cut the omelette in half and serve with the lettuce, cherry tomatoes and sliced bread."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "quick",
+   "Vejetaryen",
+   "Hızlı"
+  ],
+  "mealSlots": [
+   "breakfast",
+   "lunch"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
