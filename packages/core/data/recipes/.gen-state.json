@@ -2596,11 +2596,11 @@
     "tavuk-vindaloo",
     "balik-kori"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:42:57.853Z",
    "finishedAt": null
   },
   {
@@ -2659,12 +2659,23 @@
     "raita",
     "bhindi-masala"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "samosa",
+    "pakora",
+    "sogan-bhaji",
+    "naan",
+    "sarimsakli-naan",
+    "paratha",
+    "aloo-paratha",
+    "jeera-rice",
+    "raita",
+    "bhindi-masala"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 88257,
    "startedAt": "2026-10-15T22:41:07.938Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:44:02.428Z"
   },
   {
    "id": "g085",
