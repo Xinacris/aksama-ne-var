@@ -18,11 +18,11 @@
     "sakala-carpan-corbasi",
     "mahluta-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:26:23.099Z",
    "finishedAt": null
   },
   {
@@ -219,12 +219,23 @@
     "kirmizi-fasulye-corbasi",
     "sari-mercimek-corbasi"
    ],
-   "status": "pending",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "ceviz-corbasi",
+    "soguk-yogurt-corbasi",
+    "soguk-domates-corbasi",
+    "yogurtlu-ispanak-corbasi",
+    "dereotlu-patates-corbasi",
+    "patatesli-pirasa-corbasi",
+    "domatesli-bulgur-corbasi",
+    "pirincli-domates-corbasi",
+    "kirmizi-fasulye-corbasi",
+    "sari-mercimek-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
-   "startedAt": null,
-   "finishedAt": null
+   "tokens": 83687,
+   "startedAt": "2026-10-15T19:26:23.099Z",
+   "finishedAt": "2026-10-15T19:29:14.246Z"
   },
   {
    "id": "g011",
@@ -397,11 +408,11 @@
     "kozlenmis-biber-salatasi",
     "koz-patlican-ve-biber-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:26:23.099Z",
    "finishedAt": null
   },
   {
@@ -556,11 +567,11 @@
     "patlicanli-borek",
     "tepsi-boregi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:26:23.099Z",
    "finishedAt": null
   },
   {
