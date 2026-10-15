@@ -132,7 +132,7 @@ function recordUsage(u: UsageMetadata | undefined) {
 
 function usageSummary(): string {
   const secs = Math.round((Date.now() - usage.started) / 1000);
-  return `${usage.requests} requests, ${usage.prompt} input + ${usage.output} output${usage.thoughts ? ` + ${usage.thoughts} thinking` : ""} tokens, ${usage.waits} rate-limit waits, ${usage.badAnswers} unusable answers, ${secs} s`;
+  return `${usage.requests} requests, ${usage.prompt} input + ${usage.output} output${usage.thoughts ? ` + ${usage.thoughts} thinking` : ""} tokens, ${usage.waits} retry waits (429/5xx/network), ${usage.badAnswers} unusable answers, ${secs} s`;
 }
 
 async function gemini(prompt: string): Promise<string> {
@@ -146,11 +146,22 @@ async function gemini(prompt: string): Promise<string> {
   };
   for (let attempt = 0; ; attempt++) {
     const base = process.env.GEN_GEMINI_BASE ?? "https://generativelanguage.googleapis.com/v1beta";
-    const res = await fetch(`${base}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-goog-api-key": key },
-      body: JSON.stringify(body),
-    });
+    let res: Response;
+    try {
+      res = await fetch(`${base}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-goog-api-key": key },
+        body: JSON.stringify(body),
+      });
+    } catch (e) {
+      // A dropped connection is as temporary as a 503: same backoff.
+      if (attempt >= 6) throw e;
+      const wait = Math.min(600_000, 15_000 * 2 ** attempt);
+      usage.waits++;
+      console.log(`  network error (${(e as Error).message}); waiting ${Math.round(wait / 1000)} s (attempt ${attempt + 1})`);
+      await sleep(wait);
+      continue;
+    }
     if (res.ok) {
       const data = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[]; usageMetadata?: UsageMetadata };
       recordUsage(data.usageMetadata);
