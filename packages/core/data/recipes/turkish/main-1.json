@@ -4102,7 +4102,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patates, kıyma ve biberin salçalı sosta yavaşça pişirildiği, sade ve doyurucu bir sebzeli yemek. Patatesler sosu emerek yumuşar ve tatlı bir kıvam verir.",
+   "en": "A simple, filling stew of potatoes, minced beef and peppers cooked slowly in a tomato-paste sauce. The potatoes soak up the sauce and turn soft and creamy."
+  }
  },
  {
   "id": "72891e09-f6af-4cfb-be0c-b48e96b75a4f",
@@ -4233,7 +4237,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Bamyanın limonlu suda hafifçe asitlenerek, dana eti ve domatesle uzun süre pişirildiği klasik bir Ege ve Akdeniz yemeği. Bamyalar dağılmadan kıvamını korur ve sosu hafif ekşimsi bir tada bürünür.",
+   "en": "A classic stew in which okra, soaked briefly in lemony water, is cooked long and slow with beef and tomato. The okra keeps its shape and the sauce takes on a gentle sourness."
+  }
  },
  {
   "id": "3f72e185-6e92-4aa5-8af5-da0833f213f2",
@@ -4392,7 +4400,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Enginarların havuç, patates ve bezelyeyle doldurulup zeytinyağında, limon ve şekerle dengelenerek pişirildiği soğuk servis edilen bir yemek. Hafif tatlı ve ekşimsi tadı, zeytinyağlı sebze yemeklerinin en iyi örneklerinden biridir.",
+   "en": "Artichokes filled with carrot, potato and peas and cooked in olive oil, balanced with lemon and sugar, then served cold. Its light sweet-sour flavour is one of the best examples of the olive oil vegetable dishes."
+  }
  },
  {
   "id": "40321daf-693e-4caa-9df7-3d7d3b0c65c3",
@@ -4516,7 +4528,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Temizlenmiş taze hamsinin mısır ununa bulanıp kızgın yağda kısa sürede kızartıldığı, Karadeniz'in en bilinen balıklarından biri. Çıtır dış yüzeyi ve yumuşak etiyle, soğan ve roka eşliğinde sade ama lezzetli bir yemektir.",
+   "en": "Cleaned fresh anchovies coated in cornmeal and fried quickly in hot oil, one of the best-known fish of the Black Sea coast. The crisp coating and soft flesh make it simple but very satisfying, especially with onion and rocket."
+  }
  },
  {
   "id": "09241381-be98-40c0-8a1d-589607332d38",
@@ -4650,7 +4666,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Levreğin soğan ve domates yatağı üzerinde, zeytinyağı, limon ve sarımsaklı bir sosla fırında pişirildiği hafif bir balık yemeği. Balık kendi suyunda nemli kalır ve sebzeler sosu lezzetlendirir.",
+   "en": "Sea bass baked on a bed of onion and tomato, with a sauce of olive oil, lemon and garlic. The fish stays moist in its own juices, and the vegetables take on the flavour of the sauce."
+  }
  },
  {
   "id": "66781d39-bbee-4c15-8011-5883cfc5bd3b",
@@ -4827,7 +4847,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kıymanın soğan, ekmek içi ve baharatla yoğrulup dinlendirildikten sonra yassı köfteler halinde ızgarada pişirildiği klasik bir sofra yemeği. Dinlendirme aşaması harcın dağılmadan dokusunu toparlamasını sağlar ve köfteleri yumuşak tutar.",
+   "en": "Minced beef kneaded with grated onion, bread crumb and spices, rested, then shaped into flat patties and grilled. The resting step lets the mixture firm up, so the köfte stay tender and hold their shape."
+  }
  },
  {
   "id": "5b91dd27-8e09-45c2-b65c-ece5599f08fb",
@@ -4996,7 +5020,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuk göğsünün yoğurt, salça ve sarımsaklı bir marinde bekletilip biber ve soğanla şişlendiği, fırında pişen bir yemek. Marinasyon eti yumuşatır ve baharatlı, hafif renkli bir yüzey oluşturur.",
+   "en": "Chicken breast marinated in yoghurt, tomato paste and garlic, then threaded with pepper and onion and roasted in the oven. The marinade keeps the meat tender and gives it a lightly coloured, spiced crust."
+  }
  },
  {
   "id": "10878698-b6b2-4db6-8844-d564f6a51574",
@@ -5134,7 +5162,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Yarım ay dilimlenmiş kabakların kıymalı, pirinçli ve domates soslu bir karışımda kısık ateşte pişirildiği sade bir sebze yemeği. Kabakların tatlılığı ile pirinç ve kıymanın doyurucu tadı birbirini tamamlar; yoğurt ve dereotuyla servis edilir.",
+   "en": "Courgettes cut into half-moons and cooked over low heat with minced beef, rice and tomato sauce. The sweetness of the courgettes balances the rice and mince, and it is served with dill and yoghurt."
+  }
  },
  {
   "id": "5ab8a4f8-a8f2-4249-ad09-ffcf91d62cd8",
@@ -5269,7 +5301,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Mantarların tereyağında yüksek ateşte, suyunu salıp çekene kadar sotelendiği hızlı bir garnitür. Mantarın doğal aroması yoğunlaşır, kekik ve soğanla birlikte sade ve dengeli bir tat elde edilir.",
+   "en": "Mushrooms sautéed in butter over high heat until their liquid comes out and cooks off, a quick side dish. The natural flavour of the mushrooms concentrates, and thyme and onion keep it simple and balanced."
+  }
  },
  {
   "id": "6b608e14-89a1-4905-adf6-5b2caac89060",
@@ -5399,7 +5435,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuğun suda haşlanıp, süzülen suyuyla pirincin pişirildiği ve üzerine didiklenmiş etin konduğu doyurucu bir yemek. Pirinç tavuk suyunun aromasını çekerek hafif ve yumuşak bir kıvam kazanır.",
+   "en": "A filling dish in which the rice is cooked in the stock from boiling the chicken, and the shredded meat is set on top. The rice absorbs the flavour of the stock and ends up light and tender."
+  }
  },
  {
   "id": "41e8a949-ab2f-4d6a-9be8-0b0ce15841ad",
@@ -5541,7 +5581,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuk şeritlerinin sotelendiği, soğan, biber ve mantarla birlikte köri ve kremalı bir sosta koyulaştırıldığı hızlı bir yemek. Köri baharatının kokusu sos boyunca yayılır ve pilavla birlikte doyurucu bir öğün oluşturur.",
+   "en": "Chicken strips sautéed with onion, pepper and mushrooms, then thickened in a cream and curry sauce. The fragrance of the curry powder carries through the sauce, and it makes a filling meal with rice pilaf."
+  }
  },
  {
   "id": "7c193185-ef47-4bf4-a7d7-98c9aad6e134",
@@ -5685,7 +5729,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kuzu etinin kendi suyunda kavrulup, salça ve defne yaprağıyla uzun süre pişirildiği, havuç, patates ve bezelyenin eklendiği bir güveç yemeği. Ağır ama dengeli bir yemektir ve sebzeler eti yavaşça lezzetlendirir.",
+   "en": "Diced lamb browned in its own juices, then cooked for a long time with tomato paste and bay leaf, with carrot, potato and peas added later. It is a rich but balanced dish, and the vegetables take on the flavour of the meat."
+  }
  },
  {
   "id": "b2c6a1b9-77a2-4cc7-9bb8-0062c5375603",
@@ -5835,7 +5883,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Patlıcan halkaları, kimyonlu köfteler, domates ve biberle katmanlanıp salçalı suyla fırında pişirilen bir fırın yemeği. Patlıcan yumuşar ve köftelerin suyunu alarak zengin bir tat kazanır.",
+   "en": "Aubergine rounds, cumin-spiced meatballs, tomato and peppers layered in a baking dish and baked in tomato-paste water. The aubergine turns soft and soaks up the juices from the meatballs, taking on a rich flavour."
+  }
  },
  {
   "id": "ad77d373-8a93-4cce-9d8e-2e60230d5ab7",
@@ -5976,7 +6028,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Lahananın ince doğranıp kıyma, pirinç ve iki çeşit salçayla kısık ateşte pişirildiği, pul biberle servis edilen sade bir yemek. Lahananın hafif tatlılığı salçanın ekşimsi tadıyla dengelenir.",
+   "en": "Finely shredded cabbage cooked over low heat with minced beef, rice and two kinds of paste, served with chilli flakes. The mild sweetness of the cabbage is balanced by the slightly sharp flavour of the pastes."
+  }
  },
  {
   "id": "973896b0-2ba5-4cca-b3fb-0b73496d368f",
@@ -6145,7 +6201,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Tavuk but etinin patates, kabak, havuç ve biberle büyük parçalar halinde salçalı sosta fırında pişirildiği bir güveç. Kapağı kapalı pişirildikten sonra açılıp kısaca kızartılması yüzeyine renk verir.",
+   "en": "Chicken thigh with potato, courgette, carrot and pepper, cut in large chunks and baked in a tomato-paste sauce. It is cooked covered, then uncovered at the end so the top browns."
+  }
  },
  {
   "id": "06308d26-984e-4ebd-b2e7-c6a3c516f84d",
@@ -6261,7 +6321,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Biber ve domatesin tereyağında hafifçe pişirilip üzerine yumurtaların kırıldığı, kahvaltının vazgeçilmez tariflerinden biri. Yumurtaların kıvamı sevilen şekilde ayarlanabilir ve sebzelerin taze tadı öne çıkar.",
+   "en": "Peppers and tomatoes cooked in butter, with eggs broken over them, one of the essential breakfast dishes. The eggs can be cooked to the texture you prefer, and the fresh taste of the vegetables comes through."
+  }
  },
  {
   "id": "55b88e2e-4d1d-433a-a868-b5323c16bff2",
@@ -6350,7 +6414,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Dilimlenmiş sucuğun yağsız tavada kendi yağında kızartılıp yumurtaların aralarına kırıldığı hızlı bir kahvaltı. Sucuğun baharatlı yağı yumurtaya işler ve tavada doğrudan servis edilir.",
+   "en": "Sliced sucuk fried in its own fat in a dry pan, with eggs cracked between the pieces. The spiced fat from the sausage soaks into the eggs, and it is served straight from the pan."
+  }
  },
  {
   "id": "b690ae66-9dc2-4bb1-bb1c-bce17e9e985d",
@@ -6476,7 +6544,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Sarımsaklı süzme yoğurdun üzerine poşe yumurtaların konulup, pul biberli tereyağı gezdirilerek servis edildiği bir kahvaltı tarifi. Yoğurdun serinliği, yumurtanın yumuşaklığı ve tereyağının sıcaklığı dengeli bir kombinasyon oluşturur.",
+   "en": "Poached eggs served on garlicky strained yoghurt and finished with chilli butter. The coolness of the yoghurt, the softness of the egg and the warmth of the butter make a well-balanced combination."
+  }
  },
  {
   "id": "adf328e5-5ad4-4f51-a09a-d5f4d25f729b",
@@ -6573,7 +6645,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "İnce yufkanın ıspanak ve beyaz peynir karışımıyla doldurulup tavada iki yüzü tereyağıyla kızartıldığı geleneksel bir hamur işi. Yufkanın çıtırlığı ve iç harcın tuzlu lezzeti kolay bir öğün için idealdir.",
+   "en": "Thin yufka filled with spinach and white cheese, then cooked in a pan on both sides with butter. The crispness of the dough and the salty filling make it an easy, traditional meal."
+  }
  },
  {
   "id": "96eaa3b8-2f4f-4d71-9fb2-e8488ec9aac5",
@@ -6689,7 +6765,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Küp doğranmış patateslerin yağda yumuşatılıp soğanla kızartıldığı ve üzerine yumurtanın kırıldığı doyurucu bir kahvaltı. Patateslerin kenarları çıtırlaşır, yumurta ise yemeğe hafif bir kıvam verir.",
+   "en": "Diced potatoes softened in oil, fried with onion, then topped with cracked eggs. The edges of the potatoes turn crisp, and the eggs give the dish a light, creamy texture."
+  }
  },
  {
   "id": "7975cdf5-3df6-41bf-962e-32100a1dfdbc",
@@ -6785,7 +6865,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Mısır ununun tereyağında kavrulup sıcak su ve kaşar peynirle uzayana kadar pişirildiği, Karadeniz'e ait sıcak bir kahvaltı. Peynirin erimesiyle oluşan çekme dokusu ve mısırın hafif tatlı aroması yemeği özel kılar.",
+   "en": "Cornmeal toasted in butter, then cooked with hot water and kaşar cheese until it is stretchy. It is a warm breakfast from the Black Sea region, with a pull that comes from the melted cheese and the gentle sweetness of the cornmeal."
+  }
  },
  {
   "id": "3be13463-ced0-455b-a4a5-cb77f34e5a38",
@@ -6900,7 +6984,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Kıymanın soğan ve domatesle pişirilip üzerine yumurtaların kırıldığı, tavada servis edilen doyurucu bir kahvaltı. Kıymanın tuzlu lezzeti ve domatesin tatlılığı yumurtanın yumuşaklığıyla dengelenir.",
+   "en": "Minced beef cooked with onion and tomato, with eggs cracked on top, served in the pan as a hearty breakfast. The salty flavour of the mince and the sweetness of the tomato are balanced by the soft eggs."
+  }
  },
  {
   "id": "a1a28599-f768-43fb-bfb0-1324fdd3c671",
@@ -7020,7 +7108,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Ispanağın zeytinyağında soğanla sönene kadar pişirilip içinde yuvalar açılarak yumurtaların kırıldığı hafif bir yemek. Ispanağın yeşil tadı ve yoğurdun serinliği, yumurtanın zenginliğine denge getirir.",
+   "en": "Spinach wilted in olive oil with onion, with wells made in it for the eggs. The fresh green taste of the spinach and the coolness of the yoghurt balance the richness of the eggs."
+  }
  },
  {
   "id": "b56c9be6-8bcc-480c-9d0f-3aec105a8f96",
@@ -7128,7 +7220,11 @@
    "reheatable": true
   },
   "source": "curated-v1",
-  "version": 1
+  "version": 1,
+  "description": {
+   "tr": "Çırpılmış yumurtanın tereyağında kısa sürede pişirilip beyaz peynir ve maydanozla katlandığı hızlı bir öğün. Peynirin tuzlu tadı ve karabiberin sıcaklığı omletin yumuşak dokusunu tamamlar.",
+   "en": "Whisked eggs cooked quickly in butter, then folded over feta and parsley. The salty cheese and the warmth of black pepper complement the soft texture of the omelette."
+  }
  },
  {
   "id": "3e888bfc-5965-4ebf-a3d0-9ed4de336c19",

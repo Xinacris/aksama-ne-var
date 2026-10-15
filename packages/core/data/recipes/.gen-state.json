@@ -3391,12 +3391,37 @@
     "ispanakli-yumurta",
     "peynirli-omlet"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kiymali-patates-yemegi",
+    "etli-bamya",
+    "zeytinyagli-enginar",
+    "hamsi-tava",
+    "firinda-levrek",
+    "izgara-kofte",
+    "tavuk-sis",
+    "kabak-yemegi",
+    "mantar-sote",
+    "tavuklu-pilav",
+    "kori-soslu-tavuk",
+    "orman-kebabi",
+    "patlican-kebabi",
+    "kapuska",
+    "sebzeli-tavuk-guvec",
+    "menemen",
+    "sucuklu-yumurta",
+    "cilbir",
+    "gozleme",
+    "patatesli-yumurta",
+    "mihlama",
+    "kiymali-yumurta",
+    "ispanakli-yumurta",
+    "peynirli-omlet"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 53807,
    "startedAt": "2026-10-15T22:58:22.271Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:59:28.898Z"
   },
   {
    "id": "f003",
@@ -3525,11 +3550,11 @@
     "kabak-tatlisi",
     "muhallebi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:59:15.045Z",
    "finishedAt": null
   }
  ]
