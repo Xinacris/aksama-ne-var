@@ -1128,11 +1128,11 @@
     "misir-unlu-helva",
     "acibadem-kurabiyesi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:57:24.799Z",
    "finishedAt": null
   },
   {
@@ -1219,12 +1219,23 @@
     "et-tantuni",
     "hunkar-tavuk"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "comlek-kebabi",
+    "tavuk-kanat",
+    "tavuk-pirzola",
+    "tavuk-cop-sis",
+    "tavuk-durum",
+    "tavuk-doner",
+    "et-doner",
+    "tavuk-tantuni",
+    "et-tantuni",
+    "hunkar-tavuk"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 102286,
    "startedAt": "2026-10-15T19:54:01.298Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:57:52.278Z"
   },
   {
    "id": "g039",
