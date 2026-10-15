@@ -2452,12 +2452,16 @@
     "pipirrana",
     "ensaladilla-rusa"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "ensalada-mixta",
+    "pipirrana",
+    "ensaladilla-rusa"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 62363,
    "startedAt": "2026-10-15T22:37:51.475Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:39:13.342Z"
   },
   {
    "id": "g077",
@@ -2508,11 +2512,11 @@
     "flan",
     "arroz-con-leche"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:39:00.216Z",
    "finishedAt": null
   },
   {
