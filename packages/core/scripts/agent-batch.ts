@@ -221,6 +221,7 @@ function run(batchId: string, stagedPath: string) {
       passed.push(slug);
       continue;
     }
+    normalizeNulls(item);
     const problems = identityProblems(item, dish);
     const { recipe, problems: base } = recipeProblems(item);
     problems.push(...base);
@@ -244,6 +245,18 @@ function run(batchId: string, stagedPath: string) {
   atomicWrite(path.join(RESULTS, `${batchId}.json`), `${JSON.stringify({ batch: batchId, passed, failed, at: now() }, null, 1)}\n`);
   console.log(`${batchId}: ${passed.length} passed, ${failed.length} failed`);
   for (const f of failed) console.log(`  ✗ ${f.slug}\n${f.problems.map((p) => `      ${p}`).join("\n")}`);
+}
+
+/** Agents often write `prepAhead: null` or `shortTitle: { en: null }` for "none": drop those nulls instead of failing a round. */
+function normalizeNulls(item: unknown) {
+  const r = item as Record<string, unknown> | null;
+  if (!r || typeof r !== "object") return;
+  if (r.prepAhead === null) delete r.prepAhead;
+  const st = r.shortTitle as Record<string, unknown> | null | undefined;
+  if (st && typeof st === "object") {
+    for (const k of ["tr", "en"]) if (st[k] === null) delete st[k];
+    if (!Object.keys(st).length) r.shortTitle = null;
+  }
 }
 
 function identityProblems(item: unknown, dish: Dish): string[] {
