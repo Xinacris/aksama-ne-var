@@ -3236,11 +3236,11 @@
     "welsh-rarebit",
     "cornish-pasty"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:58:06.678Z",
    "finishedAt": null
   },
   {
@@ -3284,12 +3284,14 @@
    "slugs": [
     "minestrone"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "minestrone"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 53313,
    "startedAt": "2026-10-15T22:57:20.469Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:58:12.365Z"
   },
   {
    "id": "f001",

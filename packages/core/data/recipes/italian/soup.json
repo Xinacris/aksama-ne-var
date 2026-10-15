@@ -1,5 +1,282 @@
 [
  {
+  "id": "b51189b9-c5e3-45a0-8961-358fe8944c8c",
+  "slug": "minestrone",
+  "cuisine": "italian",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Minestrone",
+   "en": "Minestrone"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mevsim sebzeleriyle hazırlanan İtalyan sebze çorbası. Kıvamını fasulye ve patates verir, üstüne parmesan ile servis edilir.",
+   "en": "An Italian vegetable soup built on whatever the season offers, thickened by beans and potato and finished with parmesan."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgette"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm küp doğranmış",
+     "en": "cut into 1 cm dice"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm küp doğranmış",
+     "en": "cut into 1 cm dice"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fasulye",
+     "en": "Green beans"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "uçları ayıklanmış, ikiye kesilmiş",
+     "en": "trimmed and halved"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Haşlanmış kuru fasulye",
+     "en": "Cooked white beans"
+    },
+    "amount": 1,
+    "unit": "kavanoz",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1.5,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş, servis için",
+     "en": "finely grated, to serve"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı, havucu ve kerevizi küp doğra. Kabağı ve patatesi 1 cm küp doğra, taze fasulyenin uçlarını ayıklayıp ikiye kes. Sarımsakları ince kıy.",
+     "en": "Dice the onion, carrot and celery. Cut the courgette and potato into 1 cm dice, trim the green beans and halve them. Finely chop the garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tencerede zeytinyağını orta ateşte ısıt. Soğan, havuç ve kerevizi ekleyip 8 dakika karıştırarak yumuşayana kadar kavur.",
+     "en": "Warm the olive oil in a wide pan over a medium heat. Add the onion, carrot and celery and cook for 8 minutes, stirring, until softened."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ekle, kokusu çıkana kadar karıştır. Ardından patatesi, kabağı ve taze fasulyeyi ekleyip yağla iyice buluştur.",
+     "en": "Add the garlic and stir until fragrant. Then add the potato, courgette and green beans and toss them through the oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domates püresini ve sebze suyunu ekleyip karıştır. Kaynamaya başlayınca ateşi kısarak 25 dakika kısık ateşte pişir.",
+     "en": "Stir in the passata and the vegetable stock. Once it starts to boil, lower the heat and simmer gently for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Haşlanmış kuru fasulyeyi süzüp tencereye ekle. Çorba 10 dakika daha kısık ateşte pişmeye devam etsin.",
+     "en": "Drain the cooked white beans and add them to the pot. Let the soup simmer for 10 more minutes over a low heat."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandır, patates ve kabağın yumuşadığını kontrol et. Gerekirse birkaç dakika daha pişir.",
+     "en": "Season with salt and black pepper, and check that the potato and courgette are tender. Cook a little longer if needed."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çorbayı sıcak kaselere al, üzerine rendelenmiş parmesan serp ve birkaç damla zeytinyağı gezdirip servis yap.",
+     "en": "Ladle the soup into warm bowls, scatter over the grated parmesan and finish with a trickle of olive oil."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "onePot",
+   "budget",
+   "Tencere",
+   "Vejetaryen",
+   "Bakliyat",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
   "id": "614f77b1-ad13-4827-a2d4-f0d063eda897",
   "slug": "pasta-e-fagioli",
   "cuisine": "italian",
