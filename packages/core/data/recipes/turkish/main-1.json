@@ -9461,5 +9461,2393 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "e88a2e34-beb0-4623-acbc-29fbd9480a3a",
+  "slug": "kuzu-pirzola",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kuzu pirzola",
+   "en": "Grilled lamb chops"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sarımsaklı, kekikli zeytinyağı marinesiyle hazırlanan kuzu pirzolası kısa sürede ızgarada pişer. Dışı kızarır, içi suyunu korur.",
+   "en": "Lamb chops marinated in garlic, thyme and rosemary olive oil, then grilled hot and fast. The outside caramelises while the centre stays juicy."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu pirzola",
+     "en": "Lamb chops"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": {
+     "tr": "kemikli, yaklaşık 1 cm kalınlıkta",
+     "en": "bone-in, about 1 cm thick"
+    },
+    "pantryKey": "lamb-chop",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru biberiye",
+     "en": "Dried rosemary"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "rosemary-dried",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için dilimlenmiş",
+     "en": "cut into wedges for serving"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sarımsağı ezip zeytinyağı, kuru biberiye, kekik, pul biber ve biraz karabiberle karıştır.",
+     "en": "Crush the garlic into the olive oil with the dried rosemary, thyme, chilli flakes and a little black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirzolaları tuzla tatlandır, marinayı iki yüzüne de sür ve 2 saat buzdolabında beklet.",
+     "en": "Season the chops with salt, rub the marinade on both sides and leave them in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Izgarayı ya da geniş tavayı iyice kızdır.",
+     "en": "Heat the grill or a wide pan until very hot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirzolaları her yüzü 3 dakika olacak şekilde yüksek ateşte pişir.",
+     "en": "Cook the chops over high heat, 3 minutes on each side."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Pirzolaları tabağa al ve dinlenmeleri için kısa bir süre bekletip sonra servis et.",
+     "en": "Move the chops to a plate and let them rest briefly before serving."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limon dilimleriyle birlikte sıcak servis yap.",
+     "en": "Serve hot with the lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Etli",
+   "Marine",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "08515d16-960a-4522-9869-ef77db680bc7",
+  "slug": "kuzu-kol-firin",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kuzu kol fırın",
+   "en": "Oven-roasted lamb shoulder"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu kolu, patates ve soğanla birlikte fırında yavaş yavaş pişer. Et kemikten kolayca ayrılacak kadar yumuşar, sebzeler de sosun tadını çeker.",
+   "en": "Lamb shoulder roasted slowly with potatoes and onions until the meat pulls away from the bone. The vegetables soak up the pan juices."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 150,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kol",
+     "en": "Lamb shoulder"
+    },
+    "amount": 1.2,
+    "unit": "kg",
+    "note": {
+     "tr": "kemikli",
+     "en": "bone-in"
+    },
+    "pantryKey": "lamb-shoulder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "kalın dilimlenmiş",
+     "en": "cut into thick slices"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış",
+     "en": "cut into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 6,
+    "unit": "diş",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt.",
+     "en": "Heat the oven to 180 degrees."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuzu kolun yüzeyine tuz, karabiber, paprika ve kekik serp, sarımsak dilimlerini etin yarıklarına yerleştir.",
+     "en": "Season the shoulder with salt, pepper, paprika and thyme, and tuck the garlic slices into the cuts in the meat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri, soğan halkalarını ve domates dilimlerini fırın tepsisine yay, arasına kuzu kolu yerleştir.",
+     "en": "Spread the potatoes, onion rings and tomato slices in a roasting tin and sit the lamb shoulder among them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salçayı zeytinyağı ve suyla iyice karıştırıp tepsinin kenarından dök, folyoyla sıkıca kapatıp fırına ver. 1 saat 30 dakika pişir.",
+     "en": "Mix the tomato paste with the olive oil and water, pour it around the edge of the tin, cover tightly with foil and roast for 1 hour 30 minutes."
+    },
+    "timerSeconds": 5400
+   },
+   {
+    "text": {
+     "tr": "Folyoyu aç, etin üzerine tepsideki sosu kaşıkla gezdir ve 30 dakika daha pişir.",
+     "en": "Uncover the tin, spoon the juices over the meat and roast for another 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Üstü kızarınca fırından çıkar, 10 dakika dinlendir.",
+     "en": "When the top is golden, take it out and let it rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sebzelerle birlikte dilimleyip sıcak servis et.",
+     "en": "Carve and serve hot with the vegetables."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "caedcec2-7c2f-4bb4-85c9-6aa79f0ebfff",
+  "slug": "kuzu-kaburga-dolmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Kuzu kaburga dolması",
+   "en": "Stuffed lamb ribs"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu kaburga etinin üzerine baharatlı pirinçli kıyma harcı yayılıp sarılır, sonra fırında pişirilir. Pirinç harcın suyunu çekerek yumuşak bir dolgu olur.",
+   "en": "A rack of lamb ribs is spread with a spiced rice and minced lamb filling, rolled up and roasted. The rice soaks up the juices and becomes a soft, savoury stuffing."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 120,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kaburga",
+     "en": "Lamb ribs"
+    },
+    "amount": 1.2,
+    "unit": "kg",
+    "note": {
+     "tr": "etli yüzü açılmış",
+     "en": "meat side opened up"
+    },
+    "pantryKey": "lamb-ribs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuzu kıyma",
+     "en": "Minced lamb"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık fıstık",
+     "en": "Pine nuts"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pine-nut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuş üzümü",
+     "en": "Currants"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "currant",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "300 ml harç için, 200 ml tepsi için",
+     "en": "300 ml for the filling, 200 ml for the tin"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci yıkayıp ılık suda 15 dakika beklet, sonra süzgece alıp akıt.",
+     "en": "Rinse the rice, leave it in lukewarm water for 15 minutes, then drain it in a sieve."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tereyağını tavada eritip soğanı 5 dakika kavur.",
+     "en": "Melt the butter in a pan and fry the onion for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekleyip suyunu çekene kadar 5 dakika daha kavur.",
+     "en": "Add the mince and fry for another 5 minutes until its juices have gone."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci, fıstığı, kuş üzümünü, kuru naneyi, kimyonu, pul biberi, tuz ve karabiberi ekleyip 2-3 dakika çevir.",
+     "en": "Stir in the rice, pine nuts, currants, dried mint, cumin, chilli flakes, salt and pepper and toss for a few minutes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "300 ml suyu ekle ve pirinç suyunu iyice çekene kadar kısık ateşte pişir.",
+     "en": "Pour in the 300 ml water and simmer gently until the rice has absorbed it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Harcı tabağa alıp soğumaya bırak, sonra kaburgaların etli yüzüne yay ve sarıp mutfak ipiyle bağla.",
+     "en": "Spread the filling on a plate to cool, then spread it over the meaty side of the ribs, roll them up and tie with kitchen string."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt, kaburga dolmalarını tepsiye koy, kalan 200 ml suyu dökün ve folyoyla kapatıp 1 saat 30 dakika pişir.",
+     "en": "Heat the oven to 180 degrees, put the rolls in a tin, pour over the remaining 200 ml water, cover with foil and bake for 1 hour 30 minutes."
+    },
+    "timerSeconds": 5400
+   },
+   {
+    "text": {
+     "tr": "Folyoyu aç, üstü kızarana kadar 15 dakika daha pişir.",
+     "en": "Uncover and bake for another 15 minutes until the tops are browned."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "İpleri çıkarıp dilimleyerek sıcak servis yap.",
+     "en": "Remove the string, slice and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Dolma",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "78eb3602-118a-410f-974c-a35b79fd8613",
+  "slug": "cop-sis",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Ege",
+  "title": {
+   "tr": "Çöp şiş",
+   "en": "Çöp şiş (small lamb skewers)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Küçük kuzu parçalarının soğan, sarımsak ve limonlu zeytinyağında bir gece bekletilmesiyle hazırlanan Ege usulü şiş. Izgarada hızla pişer ve domatesle servis edilir.",
+   "en": "Small pieces of lamb marinated with grated onion, garlic, lemon and olive oil, then threaded on skewers. They cook quickly on the grill and are served with tomato."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 10,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kuşbaşı",
+     "en": "Diced lamb"
+    },
+    "amount": 700,
+    "unit": "g",
+    "note": {
+     "tr": "küçük parçalar halinde",
+     "en": "in small cubes"
+    },
+    "pantryKey": "diced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için dilimlenmiş",
+     "en": "sliced for serving"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı rendele, sarımsağı ezip limonun suyu ve zeytinyağıyla bir kaseye al.",
+     "en": "Grate the onion, crush the garlic and put both in a bowl with the lemon juice and olive oil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuzu kuşbaşı etleri kasedeki harca ekle, kimyon, paprika, pul biber, tuz ve karabiberle iyice yoğur.",
+     "en": "Add the diced lamb to the bowl and work in the cumin, paprika, chilli flakes, salt and pepper until every piece is coated."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp buzdolabında 4 saat beklet.",
+     "en": "Cover and leave in the fridge for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Etleri 4-5 parçalık şişlere sırayla diz.",
+     "en": "Thread the meat onto short skewers, four or five pieces each."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Izgarayı iyice kızdır, şişleri kızarana kadar sık sık çevirerek 10 dakika pişir.",
+     "en": "Heat the grill until very hot and cook the skewers for 10 minutes, turning them often until browned."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Domates dilimleri ve maydanozla sıcak servis yap.",
+     "en": "Serve hot with the tomato slices and parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Etli",
+   "Marine",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a2cd509c-64be-4055-8ef3-4b74f6e4997f",
+  "slug": "kuzu-sis",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kuzu şiş",
+   "en": "Lamb skewers"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu kuşbaşının soğanlı, limonlu ve baharatlı bir marinede bekletilip biber ve domatesle şişe dizildiği klasik bir mangal yemeği. Hazırlığı kolaydır, ızgarada hızla pişer.",
+   "en": "Cubes of lamb marinated with grated onion, lemon and spices, then threaded with pepper and tomato. A classic grill dish that is easy to prepare and cooks quickly."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 12,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kuşbaşı",
+     "en": "Diced lamb"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "bütün etten kesilmiş",
+     "en": "cut from the leg"
+    },
+    "pantryKey": "diced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell peppers"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "3 cm'lik parçalara kesilmiş",
+     "en": "cut into 3 cm pieces"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "iri parçalara kesilmiş",
+     "en": "cut into large chunks"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı rendele, sarımsağı ezip yağ, limon suyu, paprika, kimyon ve kekikle bir kaseye al.",
+     "en": "Grate the onion, crush the garlic and combine them in a bowl with the oil, lemon juice, paprika, cumin and thyme."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuzu etlerini ekle, tuz ve karabiberle iyice karıştır.",
+     "en": "Add the lamb, season with salt and pepper and mix well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp buzdolabında 2 saat beklet.",
+     "en": "Cover and leave in the fridge for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Biberleri ve domatesleri iri parçalara kesip hazırla.",
+     "en": "Cut the peppers and tomatoes into large chunks."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Etleri, biberleri ve domatesleri şişlere sırayla diz.",
+     "en": "Thread the lamb, peppers and tomatoes onto skewers in turn."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Izgarayı kızdır ve şişleri kızarana kadar çevirerek 12 dakika pişir.",
+     "en": "Heat the grill and cook the skewers for 12 minutes, turning until the meat is browned on all sides."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Pilav ya da bulgurla sıcak servis yap.",
+     "en": "Serve hot with rice or bulgur."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Etli",
+   "Marine",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2c1f55e6-d192-4518-ba64-9e2f79139ad7",
+  "slug": "patlicanli-kebap",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Patlıcanlı kebap",
+   "en": "Aubergine and lamb kebab"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kıymalı domates soslu harcın üzerine kızartılmış patlıcan ve sivri biber dizilip fırında pişirilir. Yoğurtla servis edilen, doyurucu bir tepsi yemeği.",
+   "en": "Aubergine and long peppers are laid over a tomato sauce made with minced lamb, then baked in the oven. A filling tray dish, served with yoghurt."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 50,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kıyma",
+     "en": "Minced lamb"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergines"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "uzunlamasına dilimlenmiş",
+     "en": "sliced lengthwise"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green peppers"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanları tuzlu suda 10 dakika beklet, sonra süzüp kurula.",
+     "en": "Soak the aubergine slices in salted water for 10 minutes, then drain and pat dry."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yağın yarısında patlıcanları iki yüzü de kızarana kadar kızart, süzgece al.",
+     "en": "Fry the aubergine slices in half the oil until golden on both sides, then lift onto a rack."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan yağda soğanı kavur, kıymayı ekle ve suyunu çekene kadar 8 dakika pişir.",
+     "en": "In the remaining oil, fry the onion, add the mince and cook for 8 minutes until the juices have gone."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Domates salçası, biber salçası, pul biber, doğranmış domates, tuz ve karabiberi ekleyip 10 dakika pişir.",
+     "en": "Stir in the tomato paste, pepper paste, chilli flakes, chopped tomatoes, salt and pepper and simmer for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sivri biberleri kıyma sosunun üzerine serpip tencerede bir kez çevir.",
+     "en": "Scatter the long peppers over the mince sauce and turn them once in the pan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kıymalı harcı fırın kabına yay, patlıcanları üstüne diz ve 180 derecede fırında 20 dakika pişir.",
+     "en": "Spread the mince in an oven dish, lay the aubergine slices on top and bake at 180 degrees for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Yoğurt ve maydanozla birlikte sıcak servis yap.",
+     "en": "Serve hot with yoghurt and parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Kıymalı",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0c9e52a9-e119-4ca7-bcef-cbd3728fc6b9",
+  "slug": "simit-kebabi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Simit kebabı",
+   "en": "Simit kebab (bulgur-mince kebab)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kıymanın köftelik bulgur ve salçalarla yoğrulup halka şekline getirildiği, ızgarada pişen bir kebap. Simit gibi halka biçimi vermesi adını buradan alır.",
+   "en": "Minced beef kneaded with fine bulgur and pastes, shaped into small rings and grilled. The ring shape is what gives it the name simit."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 15,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Köftelik bulgur",
+     "en": "Fine bulgur"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "fine-bulgur",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "bulgur için kaynar",
+     "en": "boiling, for the bulgur"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pide ekmeği",
+     "en": "Pide bread"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "pita",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Bulguru bir kaseye alıp kaynar 150 ml suyla kapla ve 15 dakika şişmeye bırak.",
+     "en": "Put the bulgur in a bowl, cover it with the 150 ml boiling water and leave it to swell for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Soğanı rendele ve suyunu iyice sık.",
+     "en": "Grate the onion and squeeze out its liquid."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şişen bulguru, kıymayı, soğanı, salçaları, kimyonu, tuz ve karabiberi ekleyip 5 dakika yoğur.",
+     "en": "Add the swollen bulgur, mince, onion, pastes, cumin, salt and pepper and knead for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Harçtan ceviz büyüklüğünde parçalar alıp ağızları küçük simit şekli verecek biçimde halka yap.",
+     "en": "Take walnut-sized pieces of the mixture and shape each into a small ring, like a simit."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Izgarayı ya da tavayı kızdır, halkaları zeytinyağı sürerek her yüzü kızarana kadar pişir.",
+     "en": "Heat the grill or a pan, brush the rings with oil and cook until browned on each side."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pide ekmeğini ısıtıp ikiye böl.",
+     "en": "Warm the pide bread and split each in half."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Simit kebapları pidenin arasına yerleştir, domates dilimleri ve maydanozla servis yap.",
+     "en": "Tuck the simit kebabs into the bread with the tomato slices and parsley and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Etli",
+   "Kıymalı"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c15d1689-8094-4314-b292-1cbd6b292f47",
+  "slug": "fistikli-kebap",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Fıstıklı kebap",
+   "en": "Pistachio kebab"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu kıymaya Antep fıstığı katılarak hazırlanan, ızgarada pişen kebap. Fıstık, etin suyunu tutar ve kebaba hafif bir çıtırlık verir.",
+   "en": "Minced lamb mixed with chopped pistachios and grilled on skewers. The nuts keep the meat moist and add a light crunch."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 10,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kıyma",
+     "en": "Minced lamb"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "yağı orta olan",
+     "en": "medium fat"
+    },
+    "pantryKey": "minced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çok ince doğranmış",
+     "en": "very finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sumak",
+     "en": "Sumac"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "soğan salatası için",
+     "en": "for the onion salad"
+    },
+    "pantryKey": "sumac",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fıstıkları kuru tavada 3 dakika kavur, soğuyunca kabaca kıy.",
+     "en": "Dry-fry the pistachios in a pan for 3 minutes, then chop them roughly once they have cooled."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Soğanı, sarımsağı ve maydanozu çok ince doğra.",
+     "en": "Chop the onion and parsley very finely and crush the garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kıymayı soğan, sarımsak, maydanoz, kimyon, paprika, pul biber, tuz ve karabiberle iyice yoğur.",
+     "en": "Knead the mince with the onion, garlic, parsley, cumin, paprika, chilli flakes, salt and pepper until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fıstıkların yarısını harca ekleyip homojen olana kadar karıştır.",
+     "en": "Mix half of the pistachios into the mince until evenly combined."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Harcı kapaklı bir kapta 1 saat buzdolabında dinlendir.",
+     "en": "Rest the mixture in a covered container in the fridge for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Harcı şişe ya da kebap şekli vererek sarıp ızgarada 10 dakika pişir.",
+     "en": "Shape the mixture onto skewers or into kebab shapes and grill for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kalan fıstık ve sumakla serpilmiş yoğurt, domates dilimleri ve kebapla servis yap.",
+     "en": "Serve with the remaining pistachios, a sprinkle of sumac, the yoghurt and sliced tomatoes."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Izgara",
+   "Etli",
+   "Kıymalı",
+   "makeAhead"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "95f4747f-71d6-4601-8c97-5fae40b5a357",
+  "slug": "sogan-kebabi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Güneydoğu",
+  "title": {
+   "tr": "Soğan kebabı",
+   "en": "Shallot and meatball kebab"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Küçük köfteler ve tereyağında kavrulmuş arpacık soğanlar, salçalı sosta birlikte pişirilir. Soğanlar tatlanır, sos kıvamını bulur.",
+   "en": "Small meatballs and butter-fried shallots are simmered together in a tomato and pepper paste sauce. The shallots turn sweet and the sauce thickens."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana kıyma",
+     "en": "Minced beef"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Shallots"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": {
+     "tr": "soyulmuş",
+     "en": "peeled"
+    },
+    "pantryKey": "shallot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Biber salçası",
+     "en": "Pepper paste"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "pepper-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sos için",
+     "en": "for the sauce"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pide ekmeği",
+     "en": "Pide bread"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "pita",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını tavada eritip arpacık soğanları 8 dakika kavur.",
+     "en": "Melt the butter in a pan and fry the shallots for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kıymaya yumurta, kimyon, tuz ve karabiberi ekleyip iyice yoğur, ceviz büyüklüğünde köfteler yap.",
+     "en": "Mix the mince with the egg, cumin, salt and pepper, then shape walnut-sized meatballs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köfteleri kızgın tavada her yüzü kızarana kadar çevirerek pişir.",
+     "en": "Fry the meatballs in a hot pan, turning them until browned on all sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salçaları 300 ml suda eritip arpacıkların üzerine dök.",
+     "en": "Dissolve the pastes in the 300 ml water and pour over the shallots."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Köfteleri sosa ekleyip kapağını kapatarak kısık ateşte 25 dakika pişir.",
+     "en": "Add the meatballs to the sauce, cover and simmer on low heat for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Kapağı açıp sosun kıvamlanması için 5 dakika daha pişir.",
+     "en": "Uncover and cook for another 5 minutes until the sauce thickens."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Maydanozu serpip ısıtılmış pideyle servis yap.",
+     "en": "Scatter over the parsley and serve with warmed pide bread."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tencere",
+   "Etli",
+   "Kıymalı"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a2c0140c-6ebc-472f-87f9-92f5aa33eea2",
+  "slug": "kagit-kebabi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "İç Anadolu",
+  "title": {
+   "tr": "Kağıt kebabı",
+   "en": "Paper-wrapped lamb kebab"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzu eti, patates ve sebzeler pişirme kağıdına sarılıp kendi suyunda fırında pişirilir. Paket açıldığında etin ve sebzelerin aroması dağılır.",
+   "en": "Lamb, potatoes and vegetables are sealed in baking paper and roasted in their own juices. Opening the parcels releases the aroma of the meat and vegetables."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 60,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu kuşbaşı",
+     "en": "Diced lamb"
+    },
+    "amount": 700,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "diced-lamb",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kalın dilimlenmiş",
+     "en": "cut into thick slices"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "halka halka doğranmış",
+     "en": "cut into rings"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dolmalık biber",
+     "en": "Bell peppers"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "şeritler halinde",
+     "en": "cut into strips"
+    },
+    "pantryKey": "bell-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı kırmızı biber",
+     "en": "Paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kekik",
+     "en": "Thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt.",
+     "en": "Heat the oven to 200 degrees."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuzu etini tuz, karabiber, paprika, kekik, ezilmiş sarımsak ve zeytinyağıyla karıştırıp 30 dakika marine et.",
+     "en": "Toss the lamb with salt, pepper, paprika, thyme, crushed garlic and olive oil, then marinate for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Patatesleri tuzla ve yağla karıştır, soğanı ve biberleri ayrıca hazırla.",
+     "en": "Season the potato slices with salt and a little oil, and prepare the onion and pepper strips separately."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pişirme kağıdını dört parçaya kes, her birine bir porsiyon et, patates, soğan, biber ve domates koyup kağıdı sıkıca kapat.",
+     "en": "Cut the baking paper into four sheets, put a portion of lamb, potato, onion, pepper and tomato on each, and seal the parcels tightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Paketleri fırın tepsisine diz ve 200 derecede 1 saat pişir.",
+     "en": "Lay the parcels on a baking tray and bake at 200 degrees for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Paketleri dikkatlice aç, buharını çekmesi için bir dakika bekle.",
+     "en": "Open the parcels carefully and let the steam escape for a minute."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kağıt kebabını sıcak sıcak paketinden servis et.",
+     "en": "Serve the paper-wrapped kebabs hot, straight from the parcels."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Marine"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
