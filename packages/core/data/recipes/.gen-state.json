@@ -1084,11 +1084,11 @@
     "firin-irmik-tatlisi",
     "irmikli-portakal-tatlisi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:53:36.136Z",
    "finishedAt": null
   },
   {
@@ -1164,12 +1164,23 @@
     "sogan-kebabi",
     "kagit-kebabi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kuzu-pirzola",
+    "kuzu-kol-firin",
+    "kuzu-kaburga-dolmasi",
+    "cop-sis",
+    "kuzu-sis",
+    "patlicanli-kebap",
+    "simit-kebabi",
+    "fistikli-kebap",
+    "sogan-kebabi",
+    "kagit-kebabi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 84666,
    "startedAt": "2026-10-15T19:50:54.900Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:53:57.977Z"
   },
   {
    "id": "g038",
