@@ -2917,12 +2917,23 @@
     "steak-frites",
     "steak-au-poivre"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "coq-au-vin",
+    "boeuf-bourguignon",
+    "ratatouille",
+    "quiche-lorraine",
+    "ispanakli-kis",
+    "croque-monsieur",
+    "tavuk-fricassee",
+    "hardalli-tavuk",
+    "steak-frites",
+    "steak-au-poivre"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 100631,
    "startedAt": "2026-10-15T22:47:58.699Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:51:43.616Z"
   },
   {
    "id": "g094",
@@ -3038,11 +3049,11 @@
     "ile-flottante",
     "tarte-au-citron"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:50:50.367Z",
    "finishedAt": null
   },
   {
@@ -3061,11 +3072,11 @@
     "ikan-bakar",
     "udang-balado"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:50:50.367Z",
    "finishedAt": null
   },
   {
