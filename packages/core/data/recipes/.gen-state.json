@@ -3124,11 +3124,11 @@
     "perkedel-ve-tavuk",
     "semur-daging"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:54:17.951Z",
    "finishedAt": null
   },
   {
@@ -3154,12 +3154,14 @@
    "slugs": [
     "gado-gado"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gado-gado"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 58993,
    "startedAt": "2026-10-15T22:53:58.716Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:54:56.765Z"
   },
   {
    "id": "g104",
