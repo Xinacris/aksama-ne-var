@@ -222,12 +222,23 @@
     "eriste-corbasi",
     "kuzu-etli-bulgur-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "semizotu-corbasi",
+    "kabakli-yogurt-corbasi",
+    "badem-corbasi",
+    "findik-corbasi",
+    "misir-unlu-corba",
+    "kiymali-sebze-corbasi",
+    "kuzu-incik-corbasi",
+    "kesmeli-yesil-mercimek-corbasi",
+    "eriste-corbasi",
+    "kuzu-etli-bulgur-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 85989,
    "startedAt": "2026-10-15T19:46:25.168Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:49:29.610Z"
   },
   {
    "id": "g008",
@@ -1075,11 +1086,11 @@
     "kuzu-kapama",
     "kuzu-guvec"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:48:10.991Z",
    "finishedAt": null
   },
   {
