@@ -1,1 +1,1608 @@
-[]
+[
+ {
+  "id": "ba919bc9-4bed-49de-9214-a05dbc09f8fc",
+  "slug": "creme-br-lee",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Crème brûlée",
+   "en": "Crème brûlée"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Vanilyalı, kadifemsi bir krema ve üzerinde ince, çıtır bir karamel tabakası. Soğuk servis edilir ve kaşıkla kırılarak yenir.",
+   "en": "A silky vanilla custard under a thin, crackling layer of caramelised sugar. It is served chilled and cracked open with a spoon."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta sarısı",
+     "en": "Egg yolks"
+    },
+    "amount": 5,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece sarıları kullan.",
+     "en": "Yolks only."
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": {
+     "tr": "Krema için.",
+     "en": "For the custard."
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 4,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "Üst kısım için, ince bir tabaka halinde.",
+     "en": "For the topping, in a fine even layer."
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Hot water"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "Su banyosu için, sıcak.",
+     "en": "For the water bath, hot."
+    },
+    "pantryKey": "water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 150 dereceye ısıt. Ramekinleri derin bir fırın tepsisine diz.",
+     "en": "Heat the oven to 150°C. Set the ramekins in a deep baking tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kremayı ve sütü orta ateşte kaynamaya yakın ısıya gelene kadar ısıt. Vanilya özütünü ekleyip ocaktan al.",
+     "en": "Warm the cream and milk over a medium heat until just below boiling. Stir in the vanilla extract and take off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını ve şekeri pürüzsüz olana kadar çırp. Sıcak krema karışımını yavaş yavaş ekleyip sürekli karıştır.",
+     "en": "Whisk the yolks and sugar until smooth. Add the hot cream mixture slowly, whisking all the time."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı süzgeçten geçirip ramekinlere paylaştır. Tepsiye sıcak su koyup ramekinleri su banyosuna yerleştir.",
+     "en": "Pass the custard through a sieve and divide it between the ramekins. Pour hot water into the tray and set the ramekins in the water bath."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ramekinleri fırında 35 dakika pişir. Ortaları hafifçe titremeli.",
+     "en": "Bake the ramekins for 35 minutes. The centres should still wobble slightly."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Ramekinleri su banyosundan çıkarıp oda sıcaklığında soğumaya bırak, sonra 4 saat buzdolabında beklet.",
+     "en": "Lift the ramekins out of the water bath, let them cool to room temperature, then chill them for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Üstlerine 4 tatlı kaşık şekeri eşit şekilde serp ve mutfak meşalesiyle şeker koyu altın rengi olana kadar karamelize et.",
+     "en": "Sprinkle the 4 teaspoons of sugar evenly over the tops and caramelise them with a kitchen blowtorch until golden brown."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karamel sertleşince hemen servis yap.",
+     "en": "Serve as soon as the caramel has set."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kremayı bir gün önceden pişirip buzdolabında soğut; servisten önce üstünü şekerle kapla.",
+     "en": "Bake the custards a day ahead and chill them; sugar and caramelise the tops just before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "514d1b3d-8253-4b31-9304-8dd20d523850",
+  "slug": "cikolatali-mousse",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Çikolatalı mousse",
+   "en": "Chocolate mousse"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bitter çikolatanın yoğun tadı ile havadar bir krem dokusu bir arada. Kaşıkla kaseye alınıp soğuk servis edilir.",
+   "en": "Dark chocolate with a light, airy texture from whisked egg whites and cream. It is spooned into small dishes and served cold."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 5,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "%60 kakaolu, kırılmış.",
+     "en": "60% cocoa, broken into pieces."
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 25,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "Sarıları ve akları ayrılmış.",
+     "en": "Separated into yolks and whites."
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "Akları çırpmak için.",
+     "en": "For whisking the whites."
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek",
+     "en": "Strawberries"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "Süslemek için, dilimlenmiş.",
+     "en": "For decoration, sliced."
+    },
+    "pantryKey": "strawberry",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Çikolatayı ve tereyağını su banyosunda yavaşça eritip ılımaya bırak.",
+     "en": "Melt the chocolate and butter gently over a bain-marie, then let them cool slightly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını vanilya özütüyle birlikte çırp, ardından erimiş çikolatayı ekleyip pürüzsüz bir karışım elde et.",
+     "en": "Beat the yolks with the vanilla extract, then add the melted chocolate and mix to a smooth paste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta aklarını tutam tuzla kar gibi olana kadar çırp; şekerini azar azar ekleyip sert ve parlak bir köpük yap.",
+     "en": "Whisk the whites with a pinch of salt until frothy, then add the sugar a little at a time until stiff and glossy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Krem şantiyi yarı sert olana kadar çırp.",
+     "en": "Whip the cream until it holds a soft shape."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çikolatalı karışımın üzerine önce kremanın üçte birini, sonra aklarını ekleyip spatulayla alttan üste doğru nazikçe kat.",
+     "en": "Fold a third of the cream into the chocolate, then fold in the whites and the rest of the cream, lifting from the bottom gently so the air stays in."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mousse'u küçük kaselere paylaştır, üzerini kapatıp en az 4 saat buzdolabında soğut.",
+     "en": "Divide the mousse between small serving dishes, cover and chill for at least 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Çilekleri dilimleyip mousse'un üzerine serperek servis et.",
+     "en": "Slice the strawberries and scatter them over the mousse before serving."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Mousse'u servisten bir gün önce hazırlayıp kapalı kaplarda buzdolabında sakla.",
+     "en": "Make the mousse up to a day ahead and keep it covered in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5594f1ab-79b5-4653-8c55-79dee5af1272",
+  "slug": "tarte-tatin",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Tarte tatin",
+   "en": "Tarte tatin"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karamelize elmaların üzerine ters çevrilen, tereyağlı hamurla kaplı klasik Fransız elmalı tatlısı. Ilık servis edilmesi en iyisidir.",
+   "en": "A classic French apple tart, with the apples caramelised in butter and sugar in the pan and the pastry laid over before baking. It is turned out upside down and is best served warm."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Elma",
+     "en": "Apples"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "Soyulmuş, çekirdekleri çıkarılmış, dörde bölünmüş.",
+     "en": "Peeled, cored and quartered."
+    },
+    "pantryKey": "apple",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Milföy hamuru",
+     "en": "Puff pastry"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "note": {
+     "tr": "Tavanın çapına göre yuvarlak kesilmiş.",
+     "en": "Cut into a round to fit the pan."
+    },
+    "pantryKey": "puff-pastry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "Servis için yarı sert çırpılmış.",
+     "en": "Whipped to a soft texture for serving."
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Elmaları soy, çekirdeklerini çıkar ve dörde böl.",
+     "en": "Heat the oven to 200°C. Peel the apples, core them and cut each into quarters."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş, fırına dayanıklı bir tavada şekeri orta ateşte kendi halinde eritip koyu altın rengi bir karamel yap.",
+     "en": "In a wide, ovenproof pan, melt the sugar over a medium heat without stirring until it becomes a deep golden caramel."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını ve vanilyayı karamelin içine ekleyip karıştır; elma dilimlerini kenardan ortaya doğru sıkı sıkıya dizmeye başla.",
+     "en": "Stir in the butter and vanilla, then start packing the apple quarters tightly into the caramel, working from the edge towards the centre."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Elmaları orta ateşte 10 dakika pişirip suyunu çektir.",
+     "en": "Cook the apples over a medium heat for 10 minutes until their juices have reduced."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Milföy hamurunu elmaların üzerine ört ve kenarlarını tavanın içine doğru hafifçe bastır.",
+     "en": "Lay the puff pastry over the apples and tuck the edges gently down around the inside of the pan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavayı fırına ver ve 25 dakika, hamur kabarıp üstü altın renk alana kadar pişir.",
+     "en": "Bake for 25 minutes, until the pastry has puffed and turned golden on top."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tavayı fırından çıkarıp 5 dakika dinlendir; ardından servis tabağını üzerine kapatıp hızlıca ters çevir.",
+     "en": "Take the pan out of the oven and rest it for 5 minutes. Then cover it with a serving plate and turn it over quickly."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Ilık servis et; yarı sert çırpılmış krem şantiyi yanında ikram et.",
+     "en": "Serve warm, with the softly whipped cream on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f7c76e80-26d7-46eb-8b8b-6827dca63e96",
+  "slug": "clafoutis",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Clafoutis",
+   "en": "Cherry clafoutis"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kirazın üzerine dökülen, yumurtalı ve unlu bir hamurla hazırlanan Fransız tatlısı. Fırından çıkınca hafifçe kabarır, sonra çöker.",
+   "en": "A French country dessert of cherries baked in a thick, eggy batter. It puffs up in the oven and settles as it cools."
+  },
+  "servings": 6,
+  "prepMinutes": 15,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kiraz",
+     "en": "Cherries"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "Çekirdekleri çıkarılmış.",
+     "en": "Pitted."
+    },
+    "pantryKey": "cherry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 15,
+    "unit": "g",
+    "note": {
+     "tr": "Kalıbı yağlamak için.",
+     "en": "To grease the dish."
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Servis için üzerine serpmek üzere.",
+     "en": "To dust over before serving."
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Fırına dayanıklı kalıbın içini tereyağıyla yağla ve kirazları tabana eşit şekilde yay.",
+     "en": "Heat the oven to 180°C. Grease an ovenproof dish with the butter and spread the cherries evenly over the base."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları şeker ve tutam tuzla açık renkli olana kadar çırp.",
+     "en": "Whisk the eggs with the sugar and a pinch of salt until pale and light."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü ve vanilya özütünü ekleyip karıştır.",
+     "en": "Stir in the milk and vanilla extract."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu azar azar ekleyip topaksız, akıcı bir hamur elde et.",
+     "en": "Add the flour a spoonful at a time, whisking until you have a smooth, pourable batter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru kirazların üzerine yavaşça dök.",
+     "en": "Pour the batter slowly over the cherries."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Clafoutisi fırında 40 dakika pişir; ortası sıkı ve üstü altın rengi olmalı.",
+     "en": "Bake for 40 minutes, until the centre is set and the top is golden."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Ilık ya da oda sıcaklığında servis et; üzerine pudra şekeri serp.",
+     "en": "Serve warm or at room temperature, dusted with icing sugar."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "kidFriendly",
+   "Fırında",
+   "Mevsiminde",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8557f7ca-01a9-4aae-a04d-8df1020488d6",
+  "slug": "madeleine",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Madeleine",
+   "en": "Madeleines"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Limon kabuklu, tereyağlı ve hafif bir kek hamuru. Kabuğu çıtır, içi yumuşacık olan küçük kabuklu kekler çayın yanında iyi gider.",
+   "en": "Light, buttery little sponge cakes flavoured with lemon zest and a touch of honey. They have a crisp golden edge and a soft centre, and go well with tea."
+  },
+  "servings": 12,
+  "prepMinutes": 20,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "Kalıbı unlamak için biraz fazla ayır.",
+     "en": "Set a little extra aside for dusting the moulds."
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "Eritilmiş ve ılıtılmış; kalıp için biraz da ayır.",
+     "en": "Melted and cooled; keep a little aside for greasing."
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bal",
+     "en": "Honey"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "honey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece kabuğu rendelenmiş.",
+     "en": "Zest only, finely grated."
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tereyağını eritip ılımaya bırak. Madlen kalıbının oyuklarını biraz tereyağıyla yağla ve unla hafifçe tozla.",
+     "en": "Melt the butter and let it cool slightly. Grease the madeleine moulds with a little of the butter and dust them lightly with flour."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları şeker ve tutam tuzla kalın, açık renkli bir köpük olana kadar çırp.",
+     "en": "Whisk the eggs with the sugar and a pinch of salt until thick, pale and frothy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Balı, vanilya özütünü ve limon kabuğunu ekleyip karıştır.",
+     "en": "Stir in the honey, vanilla extract and lemon zest."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu kabartma tozuyla birlikte eleyip hamura azar azar ekle, topaklanmadan karıştır.",
+     "en": "Sift the flour with the baking powder and fold it into the batter a spoonful at a time, without lumps."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Erimiş tereyağını ekleyip spatulayla nazikçe karıştır; hamur parlak ve akışkan olmalı.",
+     "en": "Fold in the melted butter gently with a spatula. The batter should be glossy and loose."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru kalıplara paylaştır ve önceden 220 dereceye ısıtılmış fırında 10 dakika pişir.",
+     "en": "Divide the batter between the moulds and bake in a 220°C oven for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kalıplardan çıkarıp tel ızgarada soğumaya bırak.",
+     "en": "Turn them out of the moulds and leave to cool on a wire rack."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "aba3ec9e-b2c5-4234-ad23-3d08884aaecd",
+  "slug": "crepes-suzette",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Crêpes Suzette",
+   "en": "Crêpes Suzette"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce krepler, portakallı tereyağlı bir sosa bulanıp sıcak servis edilir. Klasik tarifte portakal likörü ile alevlendirilir.",
+   "en": "Thin crêpes warmed in an orange and butter sauce and served hot. The classic version is finished with orange liqueur."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "Yarısı hamur, yarısı sos için; eritilmiş.",
+     "en": "Half for the batter, half for the sauce; melted."
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 125,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Hamur ve sos için.",
+     "en": "For the batter and the sauce."
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Portakal",
+     "en": "Oranges"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "Kabuğu rendelenmiş, suyu sıkılmış.",
+     "en": "Zest grated, juice squeezed."
+    },
+    "pantryKey": "orange",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Portakal likörü",
+     "en": "Orange liqueur"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Grand Marnier gibi.",
+     "en": "Such as Grand Marnier."
+    },
+    "pantryKey": "orange-liqueur",
+    "substitute": {
+     "name": {
+      "tr": "Portakal suyu",
+      "en": "Orange juice"
+     },
+     "amount": 3,
+     "unit": "yemek kaşığı",
+     "pantryKey": "orange-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Likör kullanmak istemezseniz: 3 yemek kaşığı portakal suyu + 1 tatlı kaşığı toz şeker kullanın.",
+      "en": "If you prefer not to use liqueur: use 3 tbsp orange juice + 1 tsp caster sugar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, yumurtayı, sütü, tuzu ve eritilmiş tereyağının yarısını pürüzsüz olana kadar çırp.",
+     "en": "Whisk the flour, eggs, milk, salt and half the melted butter until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 30 dakika dinlenmeye bırak.",
+     "en": "Leave the batter to rest for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Portakalların kabuğunu rendele ve suyunu sık.",
+     "en": "Grate the zest from the oranges and squeeze out the juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Orta boy tavayı az yağla yağlayıp orta-yüksek ateşte ince bir kat hamur dök; iki yüzü de hafifçe pişince bir tabağa al. Kalan hamurla aynı şekilde devam et.",
+     "en": "Lightly grease a medium pan and set it over a medium-high heat. Pour in a thin layer of batter, cook both sides until just golden, then stack on a plate. Repeat with the rest of the batter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada kalan tereyağı ve şekeri orta ateşte eritip açık kahverengi karamel yap; portakal suyunu ve rendesini ekleyip 2 dakika kaynat.",
+     "en": "In a wide pan, melt the remaining butter and the sugar over a medium heat to a light caramel. Add the orange juice and zest and simmer for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Likörü (ya da yerine kullandığın karışımı) ekleyip sos kıvam alana kadar hafifçe kaynat.",
+     "en": "Add the liqueur (or the mixture you are using in its place) and simmer gently until the sauce thickens."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Krepleri sosa tek tek bulaştırıp iki kez dörde katla ve sıcak sosla birlikte servis et.",
+     "en": "Dip each crêpe in the sauce, fold it into quarters and serve hot with the sauce spooned over."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "containsAlcohol",
+   "guest",
+   "Tavada",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d60c424d-f0aa-4847-aa70-f0ed4b2b3566",
+  "slug": "ile-flottante",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Île flottante",
+   "en": "Île flottante (floating islands)"
+  },
+  "shortTitle": {
+   "tr": "Île flottante",
+   "en": "Floating islands"
+  },
+  "description": {
+   "tr": "Sıcak sütte pişirilen hafif beze topları, vanilyalı bir krema üzerinde yüzer. Karamel ve kavrulmuş badem ile süslenir.",
+   "en": "Light meringue clouds poached in hot milk and floated on a vanilla custard. They are finished with caramel and toasted almonds."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Whole milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "Sarıları krema, akları beze için ayrılmış.",
+     "en": "Yolks for the custard, whites for the meringue."
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "60 g bezeye, 50 g kremaya, 40 g karamele.",
+     "en": "60 g for the meringue, 50 g for the custard, 40 g for the caramel."
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "Dilimlenmiş ve kuru tavada kavrulmuş.",
+     "en": "Flaked and toasted in a dry pan."
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sütü geniş bir tencerede orta ateşte kaynamaya yakın ısıya getir, vanilya özütünü ekleyip kenara al.",
+     "en": "Bring the milk to just below the boil in a wide pan over a medium heat, stir in the vanilla extract and set aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta aklarını tutam tuzla kar gibi olana kadar çırp; çırparken 60 gram şekeri yavaş yavaş ekleyip sert, parlak bir beze yap.",
+     "en": "Whisk the whites with a pinch of salt until they hold soft peaks, then add 60 g of the sugar gradually until stiff and glossy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bezeleri kaşıkla yuvarlayıp sıcak sütte 1 dakika pişir, çevirip süzgece al.",
+     "en": "Shape the meringue into rounds with a spoon, poach them in the warm milk for 1 minute, then turn them and lift onto a sieve."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını kalan 50 gram şekerle ve nişastayla pürüzsüz olana kadar çırp.",
+     "en": "Whisk the yolks with the remaining 50 g of sugar and the cornflour until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıcak sütü yavaş yavaş yumurta karışımına ekleyip sürekli karıştır; tencereye geri alıp kısık ateşte kaşığın arkasını kaplayana kadar karıştır.",
+     "en": "Pour the hot milk slowly onto the yolk mixture, whisking constantly. Return it to the pan and stir over a low heat until it coats the back of a spoon."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kremayı derin bir tabağa dök ve pişirilmiş bezeleri üzerine diz.",
+     "en": "Pour the custard into a deep dish and arrange the poached meringues on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan 40 gram şekeri ayrı bir tavada eritip açık kahverengi karamel yap; kremanın üzerine gezdir ve kavrulmuş bademlerle süsle.",
+     "en": "Melt the last 40 g of sugar in a separate pan to a light caramel, drizzle it over the custard and scatter over the toasted almonds."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "guest",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2a022f50-14a7-45bc-b487-2fbdfc98e972",
+  "slug": "tarte-au-citron",
+  "cuisine": "french",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Tarte au citron",
+   "en": "Lemon tart"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağlı tart hamurunun içinde, ekşi ve kremsi bir limon dolgusu. Soğuduktan sonra dilim dilim kesilir.",
+   "en": "A crisp shortcrust case filled with a tangy, creamy lemon filling. It is chilled until set and then cut into slices."
+  },
+  "servings": 8,
+  "prepMinutes": 30,
+  "cookMinutes": 35,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tart hamuru",
+     "en": "Shortcrust pastry case"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Hazır, 26 cm'lik tart kalıbına uygun.",
+     "en": "Ready-made, to fit a 26 cm tart tin."
+    },
+    "pantryKey": "tart-shell",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemons"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "Kabuğu rendelenmiş, suyu sıkılmış.",
+     "en": "Zest grated, juice squeezed."
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Servis öncesi üzerine serpmek için.",
+     "en": "To dust over just before serving."
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru fasulye",
+     "en": "Dried white beans"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "Hamuru kör pişirirken ağırlık olarak kullanılır.",
+     "en": "Used as baking weights to bake the case blind."
+    },
+    "pantryKey": "dried-white-bean",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Tart hamurunu kalıba yerleştirip çatalla birkaç yerden delik aç.",
+     "en": "Heat the oven to 180°C. Fit the pastry into the tart tin and prick the base all over with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamurun üzerine yağlı kağıt ve kuru fasulye koyup 15 dakika kör pişir.",
+     "en": "Lay baking paper and dried beans over the pastry and bake blind for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Kağıdı ve fasulyeleri çıkarıp 5 dakika daha pişir.",
+     "en": "Remove the paper and beans and bake for 5 minutes more."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Limonların kabuğunu rendele ve suyunu sık; yumurta ve şekeri bir kasede pürüzsüz olana kadar çırp, limon suyunu ekle.",
+     "en": "Grate the lemon zest and squeeze the juice. Whisk the eggs and sugar in a bowl until smooth, then whisk in the lemon juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Krem şanti ve tereyağını küçük bir tencerede kaynamaya yakın ısıt; sıcak karışımı yavaş yavaş yumurtalı karışıma ekle.",
+     "en": "Heat the cream and butter in a small pan until nearly simmering, then pour them slowly into the egg mixture, whisking."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı tencereye geri alıp kısık ateşte koyulaşana kadar kaşıkla karıştır; rendelenmiş limon kabuğunu ekleyip tart kabına dök.",
+     "en": "Return the mixture to the pan and stir over a low heat until thickened. Stir in the lemon zest and pour into the pastry case."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dolguyu fırında 12 dakika pişir; ortası hafifçe titremeli.",
+     "en": "Bake the filling for 12 minutes; the centre should still wobble slightly."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğuduktan sonra en az 2 saat buzdolabında beklet ve servisten önce pudra şekeri serp.",
+     "en": "Once completely cool, chill for at least 2 hours and dust with icing sugar just before serving."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Tart hamurunu bir gün önceden yapıp buzdolabında dinlendir; ertesi gün kalıba yerleştirip pişir.",
+     "en": "Make the pastry the day before and rest it in the fridge; line the tin and bake it the next day."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "makeAhead",
+   "guest",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
