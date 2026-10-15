@@ -677,12 +677,23 @@
     "kozlenmis-kirmizi-biber-ezmesi",
     "kirmizi-mercimek-salatasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kuskonmaz-salatasi",
+    "enginar-salatasi",
+    "zeytin-salatasi",
+    "domates-salatasi",
+    "salatalik-salatasi",
+    "narli-mor-lahana-salatasi",
+    "ceviz-salatasi",
+    "nar-eksili-patates-salatasi",
+    "kozlenmis-kirmizi-biber-ezmesi",
+    "kirmizi-mercimek-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 91450,
    "startedAt": "2026-10-15T19:41:35.150Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:44:45.356Z"
   },
   {
    "id": "g024",
@@ -907,11 +918,11 @@
     "hurma-tatlisi",
     "saray-sarmasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:44:20.675Z",
    "finishedAt": null
   },
   {
