@@ -11,14 +11,16 @@ const limiter = new DailyLimiter();
 
 /**
  * Recipe import. Works without env vars (rule parser). GEMINI_API_KEY (free
- * tier) and/or ANTHROPIC_API_KEY enable smart reading, Gemini first;
- * YOUTUBE_API_KEY gives full YouTube descriptions.
+ * tier) and/or ANTHROPIC_API_KEY enable smart reading, Gemini first, or only
+ * the one AI_PROVIDER names (anthropic | gemini | none);
+ * YOUTUBE_API_KEY gives full YouTube descriptions. Keys stay on the server.
  */
 export async function POST(req: Request) {
   return handleImport(req, {
     fetch,
     webFetch: guardedFetch(fetch),
     env: {
+      AI_PROVIDER: process.env.AI_PROVIDER,
       GEMINI_API_KEY: process.env.GEMINI_API_KEY,
       GEMINI_MODEL: process.env.GEMINI_MODEL,
       ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,

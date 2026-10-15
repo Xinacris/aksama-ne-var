@@ -70,6 +70,23 @@ describe("provider selection", () => {
     expect(names({ GEMINI_API_KEY: "g", ANTHROPIC_API_KEY: "a" })).toEqual(["gemini", "claude"]);
   });
 
+  it("AI_PROVIDER picks one provider; none = rules; a chosen provider without its key = rules; junk = the default chain", () => {
+    const both = { GEMINI_API_KEY: "g", ANTHROPIC_API_KEY: "a" };
+    expect(names({ ...both, AI_PROVIDER: "anthropic" })).toEqual(["claude"]);
+    expect(names({ ...both, AI_PROVIDER: "Gemini" })).toEqual(["gemini"]);
+    expect(names({ ...both, AI_PROVIDER: "none" })).toEqual([]);
+    expect(names({ GEMINI_API_KEY: "g", AI_PROVIDER: "anthropic" })).toEqual([]);
+    expect(names({ ANTHROPIC_API_KEY: "a", AI_PROVIDER: "gemini" })).toEqual([]);
+    expect(names({ ...both, AI_PROVIDER: "" })).toEqual(["gemini", "claude"]);
+    expect(names({ ...both, AI_PROVIDER: "openai" })).toEqual(["gemini", "claude"]);
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('AI_PROVIDER="openai"'));
+  });
+
+  it("AI_PROVIDER=none: the rule parser answers even with keys set", async () => {
+    const d = deps({ GEMINI_API_KEY: "g", ANTHROPIC_API_KEY: "a", AI_PROVIDER: "none" });
+    expect(await run(d)).toMatchObject({ provider: "rules", path: "rules", llmAvailable: false });
+  });
+
   it("no keys: rules, no LLM call", async () => {
     const d = deps({});
     expect(await run(d)).toMatchObject({ provider: "rules", path: "rules", llmAvailable: false });

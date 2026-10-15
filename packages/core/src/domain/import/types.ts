@@ -15,6 +15,8 @@ export interface ImportSource {
   thumbnailUrl: string | null;
   /** The platform gives no caption (Instagram): the user pastes it. */
   needsPaste: boolean;
+  /** Instagram oEmbed's verdict: "private" = private account, deleted post or wrong link. */
+  availability?: "public" | "private" | null;
   /** Web pages: og:site_name or the host ("Yemek.com"), for the Kaynak field. */
   siteName?: string | null;
   recipe?: ImportedRecipe | null;

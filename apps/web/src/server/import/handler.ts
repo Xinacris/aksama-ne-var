@@ -13,6 +13,8 @@ import { detectLocale, i18n } from "@anv/core/i18n";
 export const IMPORT_TIMEOUT_MS = 25_000;
 
 export interface ImportEnv {
+  /** `anthropic` | `gemini` | `none`; unset (or anything else) = every configured provider, Gemini → Claude. */
+  AI_PROVIDER?: string;
   GEMINI_API_KEY?: string;
   GEMINI_MODEL?: string;
   ANTHROPIC_API_KEY?: string;
@@ -32,11 +34,41 @@ export interface HandlerDeps {
   limiter: DailyLimiter;
 }
 
-/** Configured LLM providers in order of preference: Gemini (free tier) → Claude. Rules always come last. */
+export type AiProvider = "anthropic" | "gemini" | "none";
+
+/** `AI_PROVIDER`, or null when unset or not one of the three (then the default chain). */
+export function aiProvider(env: Pick<ImportEnv, "AI_PROVIDER">): AiProvider | null {
+  const v = env.AI_PROVIDER?.trim().toLowerCase();
+  if (!v) return null;
+  if (v === "anthropic" || v === "gemini" || v === "none") return v;
+  console.warn(`[import] AI_PROVIDER="${env.AI_PROVIDER}" is not anthropic, gemini or none; using every configured provider`);
+  return null;
+}
+
+/**
+ * LLM providers in order of preference; the rule parser always comes last.
+ * `AI_PROVIDER=anthropic` → only Claude, `gemini` → only Gemini, `none` → rules only.
+ * Unset → every configured one, Gemini (free tier) → Claude (today's production setup).
+ * A chosen provider without its key gives rules, with a warning.
+ */
 export function providersFromEnv(env: ImportEnv, deps: Pick<HandlerDeps, "anthropic" | "geminiFetch" | "fetch">): LlmProvider[] {
+  const choice = aiProvider(env);
+  if (choice === "none") return [];
+  const gemini = () => geminiProvider({ apiKey: env.GEMINI_API_KEY!, model: env.GEMINI_MODEL, fetch: deps.geminiFetch ?? deps.fetch });
+  const claude = () => claudeProvider(deps.anthropic(env.ANTHROPIC_API_KEY!));
+  if (choice === "anthropic") {
+    if (env.ANTHROPIC_API_KEY) return [claude()];
+    console.warn("[import] AI_PROVIDER=anthropic but ANTHROPIC_API_KEY is not set; using the rule parser");
+    return [];
+  }
+  if (choice === "gemini") {
+    if (env.GEMINI_API_KEY) return [gemini()];
+    console.warn("[import] AI_PROVIDER=gemini but GEMINI_API_KEY is not set; using the rule parser");
+    return [];
+  }
   const out: LlmProvider[] = [];
-  if (env.GEMINI_API_KEY) out.push(geminiProvider({ apiKey: env.GEMINI_API_KEY, model: env.GEMINI_MODEL, fetch: deps.geminiFetch ?? deps.fetch }));
-  if (env.ANTHROPIC_API_KEY) out.push(claudeProvider(deps.anthropic(env.ANTHROPIC_API_KEY)));
+  if (env.GEMINI_API_KEY) out.push(gemini());
+  if (env.ANTHROPIC_API_KEY) out.push(claude());
   return out;
 }
 

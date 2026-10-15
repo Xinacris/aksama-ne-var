@@ -38,12 +38,19 @@ template in [apps/web/.env.example](apps/web/.env.example)):
 
 | Variable | Optional? | Effect |
 |---|---|---|
-| `GEMINI_API_KEY` | optional (recommended) | Gemini (free tier, `gemini-3.1-flash-lite`) turns a caption into a clean recipe draft; tried first |
+| `AI_PROVIDER` | optional | `anthropic` (Claude only, for production), `gemini` (Gemini only, dev/testing), `none` (rules only); unset = every configured key, Gemini → Claude |
+| `GEMINI_API_KEY` | optional | Gemini (free tier, `gemini-3.1-flash-lite`) turns a caption into a clean recipe draft; tried first. Free-tier inputs may be used by Google and its limits are unpublished: for development and testing |
 | `GEMINI_MODEL` | optional | overrides the Gemini model |
 | `ANTHROPIC_API_KEY` | optional | Claude (Haiku) as the fallback when Gemini is unset, over quota or fails |
 | `YOUTUBE_API_KEY` | optional | reads full YouTube descriptions; without it only the title arrives and the paste box opens |
 
-Without any LLM key a rule-based Turkish parser pre-fills the form.
+Without any LLM key a rule-based Turkish parser pre-fills the form. All keys stay on the server
+(`/api/import`, `/api/translate`); the phone app calls those routes and carries no key.
+
+**Costs:** oEmbed (TikTok, YouTube, Instagram), the YouTube Data API's daily quota, Gemini's free
+tier, the rule parser and on-device screenshot reading are free. Claude Haiku 5.5 is $0.10 / $0.50
+per million input/output tokens: one import is about 2.3k + 600 tokens ≈ $0.0005 (≈ $0.50 per 1 000
+imports, worst case ≈ $0.0015 for a maximum-length caption). Details in docs/IMPORT.md.
 
 Root scripts run across the workspaces (`npm run <script> -w @anv/web` etc. for one):
 
@@ -66,6 +73,8 @@ Xcode / Android Studio) or the local APK (`npm run apk`). Details: [docs/MOBILE.
 | Timer tone in notifications (`timer_alarm.wav`) | default sound (expo-notifications logs "Custom sound … not found") | the app's tone |
 | Android "Telefonun saatinde kur" (Clock app timer) | works | works |
 | iOS 26+ "Telefonun saati" (AlarmKit) | — | only with `EXPO_PUBLIC_ENABLE_ALARMKIT=1` (below) |
+| Share a reel into the app (Instagram / TikTok / YouTube) | — | Android always; iOS Share Extension only with `ANV_IOS_SHARE_EXTENSION=1` |
+| "Ekran görüntüsünden oku" (Instagram caption from screenshots, on-device OCR) | — (paste only) | yes |
 
 ### iOS: "Telefonun saati" / AlarmKit (off by default)
 
@@ -126,8 +135,9 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
 - "Multiplayer" works between tabs/windows of the **same browser profile**; different devices
   don't sync until a backend adapter exists.
 - No photos by design (striped placeholders); the import card shows the platform's own thumbnail only.
-- Instagram does not share captions with third parties, so Instagram imports always use the paste
-  box. iOS Safari has no Web Share Target: on iPhone, paste the link.
+- Instagram's tokenless oEmbed tells a public post from a private one but carries no caption, so
+  Instagram imports use the paste box (on the phone also "Ekran görüntüsünden oku"). iOS Safari has
+  no Web Share Target: on iPhone's browser, paste the link.
 - The daily limit on smart imports (30 per household) lives in server memory until the Supabase move.
 - Reminders show inside the app; there are no push notifications.
 - Households are capped at two people (the product's copy is built around "ikiniz").

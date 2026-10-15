@@ -10,9 +10,12 @@ import { keepSource, sourceCredit, toRecipeDraft } from "@anv/core/services/impo
 import type { RecipeDraft } from "@anv/core/services/recipeForm";
 import { postJson } from "@/api";
 import { RecipeForm } from "@/components/RecipeForm";
+import { readCaptionFromScreenshots, screenshotReadingAvailable } from "@/import/screenshots";
 import { useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Card, Field, Screen, Text } from "@/ui";
+
+const SCREENSHOT_ERRORS = { empty: "import.screenshotEmpty", unavailable: "import.screenshotUnavailable", failed: "import.screenshotFailed" } as const;
 
 type ApiResponse = ImportResult & { error?: string; counted?: { platform: SourcePlatform | null; provider: ImportProvider } | null };
 
@@ -31,21 +34,22 @@ export default function ImportRecipe() {
   const [pasteOpen, setPasteOpen] = useState(!!text);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [note, setNote] = useState<string | null>(null);
   const [result, setResult] = useState<ImportResult | null>(null);
   const [draft, setDraft] = useState<RecipeDraft | null>(null);
   const [attempt, setAttempt] = useState(0);
   const auto = useRef(false);
   const lastTags = useRef("");
 
-  async function run() {
-    if (!url.trim() && !text.trim()) {
+  async function run(caption: string = text) {
+    if (!url.trim() && !caption.trim()) {
       setError(t("import.needLink"));
       return;
     }
     setBusy(true);
     setError(null);
     try {
-      const res = await postJson<ApiResponse>("/api/import", { url: url.trim(), text: text.trim(), householdId: household?.id ?? "", locale: getLocale() });
+      const res = await postJson<ApiResponse>("/api/import", { url: url.trim(), text: caption.trim(), householdId: household?.id ?? "", locale: getLocale() });
       const body = res.body;
       if (!res.ok || body.error) {
         setError(body.error ?? t("import.failed"));
@@ -74,6 +78,24 @@ export default function ImportRecipe() {
       setBusy(false);
     }
   }
+
+  // Instagram gives no caption: besides pasting, read it from screenshots on the phone.
+  async function fromScreenshots() {
+    setError(null);
+    setNote(null);
+    const r = await readCaptionFromScreenshots();
+    if (r.kind === "cancelled") return;
+    if (r.kind !== "text") {
+      setError(t(SCREENSHOT_ERRORS[r.kind]));
+      return;
+    }
+    const caption = text.trim() ? `${text.trim()}\n${r.text}` : r.text;
+    setText(caption);
+    setPasteOpen(true);
+    setNote(t("import.screenshotRead", { count: r.count }));
+    await run(caption);
+  }
+  const offerScreenshots = pasteOpen && result?.source?.platform === "instagram" && screenshotReadingAvailable();
 
   useEffect(() => {
     if (auto.current || !household || (!sharedUrl && !sharedText)) return;
@@ -158,13 +180,24 @@ export default function ImportRecipe() {
         </Text>
       )}
       <Button title={pasteOpen ? t("import.hidePaste") : t("import.showPaste")} variant="ghost" onPress={() => setPasteOpen((v) => !v)} />
-      {pasteOpen && <Field label={t("import.pasteLabel")} hint={t("import.pasteHint")} multiline maxLength={8000} value={text} onChangeText={setText} />}
+      {pasteOpen && <Field label={t("import.pasteLabel")} hint={t("import.pasteHint")} multiline maxLength={20000} value={text} onChangeText={setText} />}
+      {offerScreenshots && (
+        <View style={{ gap: 6 }}>
+          <Button title={t("import.fromScreenshot")} icon="import" variant="secondary" disabled={busy} onPress={() => void fromScreenshots()} />
+          <Text variant="small">{t("import.screenshotHint")}</Text>
+        </View>
+      )}
+      {note && (
+        <Text variant="bodySmall" accessibilityLiveRegion="polite" color={colors.olive}>
+          {note}
+        </Text>
+      )}
       {error && (
         <View accessibilityLiveRegion="assertive" style={{ backgroundColor: colors.tomatoSoft, borderRadius: 14, padding: 12 }}>
           <Text weight="semibold">{error}</Text>
         </View>
       )}
-      <Button title={busy ? t("import.working") : t("import.go")} size="lg" busy={busy} onPress={run} />
+      <Button title={busy ? t("import.working") : t("import.go")} size="lg" busy={busy} onPress={() => void run()} />
       <Text variant="small">{t("import.note")}</Text>
     </Screen>
   );

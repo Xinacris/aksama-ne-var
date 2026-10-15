@@ -50,7 +50,7 @@ Android share sheet ──────┤→ /tarifler/ice-aktar?url=…&text=�
 |---|---|---|
 | TikTok | public oEmbed `https://www.tiktok.com/oembed?url=…` | caption (`title`), author handle, thumbnail |
 | YouTube | with `YOUTUBE_API_KEY`: Data API v3 `videos.list?part=snippet`; without: public oEmbed | full description (key) or title + thumbnail only |
-| Instagram | nothing — Meta's oEmbed no longer returns caption or thumbnail | link card; the paste box opens with a short explanation |
+| Instagram | public oEmbed without a token, `https://graph.facebook.com/v24.0/instagram_oembed?url=…&omitscript=true` (Meta made it tokenless in June 2026) | public vs private/deleted, and nothing else today: tested live on 2026-10-15, the `html` is the embed shell ("View this post on Instagram") with no caption, author or thumbnail. The link card and paste box open (on the phone also "Ekran görüntüsünden oku"); a private/deleted post gets its own message; a caption in the HTML, if Meta ever puts it back, is used |
 | Any other site | the page itself, through a private-network guard | `schema.org/Recipe` JSON-LD if present, otherwise title/og:image |
 
 No HTML scraping of Instagram/TikTok, no video or audio download, no unofficial APIs (terms of
@@ -90,6 +90,11 @@ açıklamada adımlar yok. Yazılı tarifin linki varsa yapıştır ya da adıml
 
 ## Providers — free first
 
+`AI_PROVIDER` picks the provider: `anthropic` (Claude only — the intended production setting),
+`gemini` (Gemini only — development/testing on the free tier), `none` (rule parser only). Unset
+(today's production) → every configured provider in the order below. A chosen provider without
+its key falls back to the rules with a log warning; an unknown value is ignored with a warning.
+
 The caption goes through an ordered chain; the first provider that returns a valid draft wins,
 and the response says which one (`provider: "gemini" | "claude" | "rules"`).
 
@@ -119,6 +124,7 @@ provider answered.
 
 | Variable | Enables | Without it |
 |---|---|---|
+| `AI_PROVIDER` | `anthropic` \| `gemini` \| `none`: one provider only | every configured provider, Gemini → Claude |
 | `GEMINI_API_KEY` | "Akıllı okuma" with Gemini's free tier, tried first | the chain starts with Claude, or uses the rules |
 | `GEMINI_MODEL` | another Gemini model (e.g. a newer flash-lite) | `gemini-3.1-flash-lite` |
 | `ANTHROPIC_API_KEY` | Claude Haiku as the fallback (or the only LLM) | no paid fallback |
@@ -181,11 +187,41 @@ headers. Captions are public posts; still, if that is not acceptable for a deplo
 The saved recipe keeps `sourceUrl`, `sourceAuthor`, `sourcePlatform` and `sourceThumbnailUrl`, and
 the Kaynak text; the recipe page shows "Kaynak: YouTube · Yemek.com" with "Videoyu aç".
 
+## Costs
+
+| Piece | Cost |
+|---|---|
+| TikTok / YouTube / Instagram oEmbed | free, no key (Meta's tokenless oEmbed may have lower rate limits; a 429 shows "Instagram şu an yanıt vermedi" and the paste box) |
+| YouTube Data API v3 (`videos.list`, 1 unit) | free within the default 10 000 units/day quota |
+| Gemini 3.1 Flash-Lite, free tier | free; Google may use free-tier inputs, and its limits are unpublished and change — dev/testing only |
+| Claude Haiku 5.5 (`claude-haiku-5-5`) | $0.10 / 1M input, $0.50 / 1M output tokens (prompts under 100K tokens). One import ≈ 2.3k input (prompt + schema + a typical caption) + ≈ 600 output tokens ≈ **$0.0005**; a maximum 20 000-character caption ≈ $0.0015. About $0.50 per 1 000 imports; the daily limit is 30 smart imports per household |
+| Rule parser, on-device screenshot reading | free |
+
+The prompt stays far under 100k tokens: captions are capped at 20 000 characters (≈ 6–7k tokens).
+Keys exist only on the server (`/api/import`, `/api/translate`); the phone calls those routes and
+has no key in its bundle.
+
 ## Share target
 
 `apps/web/src/app/manifest.ts` registers a Web Share Target (`GET /tarifler/ice-aktar?title&text&url`).
 Android often puts the link inside `text`; the screen extracts it and starts automatically.
 iOS Safari does not support share targets — iOS users paste the link.
+
+**Phone app:** Android's share sheet offers "Akşama ne var?" for text shares (expo-sharing intent
+filter; `src/app/+native-intent.ts` turns the share into `/tarifler/ice-aktar?text=…`). The iOS Share
+Extension is built only with `ANV_IOS_SHARE_EXTENSION=1` (it adds a signed extension target and an
+App Group). Both need a native build.
+
+## Instagram from screenshots (phone)
+
+In the Instagram paste fallback the phone also offers **"Ekran görüntüsünden oku"**: pick up to six
+screenshots of the caption, in order; expo-text-extractor reads them on the device (iOS Vision,
+Android ML Kit through Google Play services — free, nothing uploaded), core `captionFromScreenshots`
+merges the pages (lines repeated where scrolled screenshots overlap are dropped, as are Instagram's
+own interface lines: likes, comments, "devamı", "Çeviriyi gör", times) and the text is imported like
+a pasted caption. Needs a native build; Expo Go shows paste only. iOS Vision runs with its default
+language (English), so a Turkish letter can come back plain (ş → s); the parser and the LLM tolerate
+it, and the review form is there to fix the rest.
 
 ## Adding an LLM provider
 

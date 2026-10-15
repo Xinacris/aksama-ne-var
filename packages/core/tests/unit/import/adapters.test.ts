@@ -90,11 +90,42 @@ describe("source adapters", () => {
     expect(src).toMatchObject({ title: "5 dakikada menemen", text: "5 dakikada menemen", needsPaste: true });
   });
 
-  it("Instagram never fetches", async () => {
-    const fetch = mockFetch({});
+  // Shapes as Meta's tokenless oEmbed answered on 2026-10-15 (trimmed): public posts give only the
+  // embed shell, private/deleted ones a Graph error 24 / 2207045.
+  const IG = "https://graph.facebook.com/v24.0/instagram_oembed";
+  const IG_SHELL = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C7x/?utm_source=ig_embed"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C7x/"> <div style=" display: flex;"></div><div style="padding: 19% 0;"></div> <div style="padding-top: 8px;"> <div style=" color:#3897f0;">View this post on Instagram</div></div></a></div></blockquote>`;
+  const IG_NOT_FOUND = { error: { message: "The requested resource does not exist", type: "OAuthException", code: 24, error_subcode: 2207045, error_user_title: "Media Not Found" } };
+
+  it("Instagram: tokenless oEmbed, public post without a caption in the HTML → paste", async () => {
+    const fetch = mockFetch({ [IG]: () => json({ version: "1.0", provider_name: "Instagram", type: "rich", width: 658, html: IG_SHELL }) });
     const src = await ADAPTERS.instagram.fetchSource("https://www.instagram.com/reel/C7x/", { fetch, env: {} });
-    expect(fetch).not.toHaveBeenCalled();
-    expect(src).toMatchObject({ platform: "instagram", needsPaste: true, text: null });
+    expect(String(fetch.mock.calls[0][0])).toBe(`${IG}?url=${encodeURIComponent("https://www.instagram.com/reel/C7x/")}&omitscript=true`);
+    expect(src).toMatchObject({ platform: "instagram", availability: "public", needsPaste: true, text: null });
+  });
+
+  it("Instagram: a caption in the embed HTML (the old shape) is used", async () => {
+    const withCaption = IG_SHELL.replace(
+      "</a></div></blockquote>",
+      `</a><p style="margin:8px 0 0 0;"><a href="https://www.instagram.com/reel/C7x/">Fırında köfte&#39;nin tarifi:<br>500 gr kıyma<br>1 soğan &amp; tuz</a></p><p style="color:#c9c8cd;">A post shared by Ayşe (@aysemutfakta)</p></div></blockquote>`,
+    );
+    const fetch = mockFetch({ [IG]: () => json({ html: withCaption, author_name: "aysemutfakta", thumbnail_url: "https://scontent.cdninstagram.com/t.jpg" }) });
+    const src = await ADAPTERS.instagram.fetchSource("https://www.instagram.com/reel/C7x/", { fetch, env: {} });
+    expect(src).toMatchObject({ text: "Fırında köfte'nin tarifi:\n500 gr kıyma\n1 soğan & tuz", needsPaste: false, author: "@aysemutfakta", thumbnailUrl: "https://scontent.cdninstagram.com/t.jpg" });
+  });
+
+  it("Instagram: private or deleted → its own calm message; rate limited or down → 'yanıt vermedi'", async () => {
+    const priv = mockFetch({ [IG]: () => json(IG_NOT_FOUND, 400) });
+    expect(await ADAPTERS.instagram.fetchSource("https://www.instagram.com/p/Xyz/", { fetch: priv, env: {} })).toMatchObject({ availability: "private", needsPaste: true, text: null });
+    const { result } = await runImport({ url: "https://www.instagram.com/p/Xyz/" }, { fetch: priv, env: {} });
+    expect(result.message).toMatch(/hesap gizli ya da gönderi kaldırılmış/);
+
+    const limited = mockFetch({ [IG]: () => json({ error: { message: "Application request limit reached", code: 4 } }, 429) });
+    await expect(ADAPTERS.instagram.fetchSource("https://www.instagram.com/p/Xyz/", { fetch: limited, env: {} })).rejects.toBeInstanceOf(SourceUnavailableError);
+    const down = await runImport({ url: "https://www.instagram.com/p/Xyz/" }, { fetch: limited, env: {} });
+    expect(down.result).toMatchObject({ draft: null, needsPaste: true });
+    expect(down.result.message).toBe("Instagram şu an yanıt vermedi. Açıklamayı yapıştırırsan oradan devam ederiz.");
+    const offline = mockFetch({});
+    expect((await runImport({ url: "https://www.instagram.com/p/Xyz/" }, { fetch: offline, env: {} })).result.message).toMatch(/yanıt vermedi/);
   });
 
   it("web reads schema.org data, and falls back to page meta", async () => {
@@ -133,7 +164,7 @@ describe("runImport", () => {
   });
 
   it("Instagram: link card + kind paste message; pasted caption then gives a draft", async () => {
-    const fetch = mockFetch({});
+    const fetch = mockFetch({ "https://graph.facebook.com/v24.0/instagram_oembed": () => json({ html: "<blockquote>View this post on Instagram</blockquote>" }) });
     const first = await runImport({ url: "https://www.instagram.com/reel/C7xYz12AbCd/?igsh=abc" }, { fetch, env: {} });
     expect(first.result).toMatchObject({ draft: null, needsPaste: true, source: { platform: "instagram", url: "https://www.instagram.com/reel/C7xYz12AbCd/" } });
     expect(first.result.message).toMatch(/Instagram/);
