@@ -1264,12 +1264,23 @@
     "kremali-mantarli-tavuk",
     "cerkez-tavugu"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "firinda-tavuk-but",
+    "firinda-butun-tavuk",
+    "tavuk-guvec",
+    "tavuklu-bezelye",
+    "tavuklu-nohut",
+    "tavuklu-patates-yemegi",
+    "tavuk-haslama",
+    "tavuklu-bamya",
+    "kremali-mantarli-tavuk",
+    "cerkez-tavugu"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87812,
    "startedAt": "2026-10-15T19:57:53.589Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:00:59.373Z"
   },
   {
    "id": "g040",
@@ -1817,11 +1828,11 @@
     "firinda-kuzu-kaburga",
     "sebzeli-dana-sote"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:00:40.427Z",
    "finishedAt": null
   },
   {
