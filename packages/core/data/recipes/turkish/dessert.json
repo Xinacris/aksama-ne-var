@@ -1,0 +1,574 @@
+[
+ {
+  "id": "4d5410a1-0914-4cf5-a9d5-9fe105cd173e",
+  "slug": "sutlac",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "Sütlaç",
+   "en": "Sütlaç (rice pudding)"
+  },
+  "servings": 6,
+  "prepMinutes": 10,
+  "cookMinutes": 40,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 1,
+    "unit": "l",
+    "pantryKey": "milk"
+   },
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 0.5,
+    "unit": "su bardağı",
+    "pantryKey": "baldo-rice"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "Pirinç unu",
+     "en": "Rice flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "pantryKey": "rice-flour"
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "pantryKey": "vanilla"
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": null,
+    "unit": null,
+    "pantryKey": "cinnamon"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci bir su bardağı suda yumuşayana kadar haşla.",
+     "en": "Simmer the rice in a cup of water until soft."
+    }
+   },
+   {
+    "text": {
+     "tr": "Sütü ekleyip kaynat.",
+     "en": "Add the milk and bring to the boil."
+    }
+   },
+   {
+    "text": {
+     "tr": "Pirinç ununu yarım su bardağı soğuk sütte açıp tencereye ekle.",
+     "en": "Loosen the rice flour in half a cup of cold milk and add it to the pot."
+    }
+   },
+   {
+    "text": {
+     "tr": "Şekeri ekle, sürekli karıştırarak 20 dakika kısık ateşte pişir.",
+     "en": "Add the sugar and cook over low heat for 20 minutes, stirring all the time."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Vanilyayı ekleyip kaselere paylaştır, soğuyunca tarçınla servis et.",
+     "en": "Stir in the vanilla, pour into bowls and serve cold with cinnamon."
+    }
+   }
+  ],
+  "tags": [
+   "Sütlü",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "64cfea4b-4a0e-435d-b8d7-fcdf511d5409",
+  "slug": "irmik-helvasi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "İrmik helvası",
+   "en": "İrmik helvası (semolina halva)"
+  },
+  "servings": 6,
+  "prepMinutes": 5,
+  "cookMinutes": 25,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 2,
+    "unit": "su bardağı",
+    "pantryKey": "semolina"
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 125,
+    "unit": "g",
+    "pantryKey": "butter"
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 2,
+    "unit": "su bardağı",
+    "pantryKey": "milk"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1.5,
+    "unit": "su bardağı",
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "Dolmalık fıstık",
+     "en": "Pine nuts"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "pantryKey": "pine-nut"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Süt, bir su bardağı su ve şekeri ayrı tencerede ısıt.",
+     "en": "Heat the milk, a cup of water and the sugar in a separate pot."
+    }
+   },
+   {
+    "text": {
+     "tr": "Tereyağında fıstık ve irmiği rengi dönene kadar kısık ateşte kavur.",
+     "en": "Toast the pine nuts and semolina in butter over low heat until they change colour."
+    }
+   },
+   {
+    "text": {
+     "tr": "Sıcak şerbeti dikkatle irmiğe ekle, karıştır.",
+     "en": "Carefully pour the hot syrup into the semolina and stir."
+    }
+   },
+   {
+    "text": {
+     "tr": "Suyunu çekince kapağın altına havlu koyup 10 dakika demlendir.",
+     "en": "When the liquid is absorbed, put a towel under the lid and let it rest for 10 minutes."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "tags": [
+   "Tencere",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c8b7a177-34fc-4dee-82d5-a29a1098e51f",
+  "slug": "revani",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "Revani",
+   "en": "Revani (semolina cake in syrup)"
+  },
+  "servings": 8,
+  "prepMinutes": 15,
+  "cookMinutes": 35,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "pantryKey": "egg"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 3,
+    "unit": "su bardağı",
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "İrmik",
+     "en": "Semolina"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "pantryKey": "semolina"
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Flour"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "pantryKey": "flour"
+   },
+   {
+    "name": {
+     "tr": "Yoğurt",
+     "en": "Yoghurt"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "pantryKey": "yoghurt"
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "pantryKey": "baking-powder"
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemons"
+    },
+    "amount": 0.5,
+    "unit": "adet",
+    "pantryKey": "lemon"
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 0.5,
+    "unit": "su bardağı",
+    "pantryKey": "vegetable-oil"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "İki su bardağı şekeri 2,5 su bardağı su ve limonla kaynatıp soğut.",
+     "en": "Boil two cups of sugar with 2.5 cups of water and the lemon, then let it cool."
+    }
+   },
+   {
+    "text": {
+     "tr": "Yumurta ve kalan şekeri köpürene kadar çırp.",
+     "en": "Whisk the eggs and the rest of the sugar until frothy."
+    }
+   },
+   {
+    "text": {
+     "tr": "Yoğurt ve yağı ekle, ardından irmik, un ve kabartma tozunu karıştır.",
+     "en": "Add the yoghurt and oil, then fold in the semolina, flour and baking powder."
+    }
+   },
+   {
+    "text": {
+     "tr": "Yağlı tepside 180°C fırında 30–35 dakika pişir.",
+     "en": "Bake in an oiled tray at 180°C for 30–35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Sıcak revaniye soğuk şerbeti dök, emmesini bekleyip dilimle.",
+     "en": "Pour the cold syrup over the hot cake, let it soak in and cut into squares."
+    }
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Şerbeti kaynatıp soğumaya bırak",
+     "en": "Boil the syrup and let it cool"
+    },
+    "when": "-120min"
+   }
+  ],
+  "tags": [
+   "Fırında",
+   "Şerbetli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ad5441f6-ecfe-4111-a73a-557afd1e2d52",
+  "slug": "kabak-tatlisi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "Kabak tatlısı",
+   "en": "Kabak tatlısı (candied pumpkin)"
+  },
+  "servings": 6,
+  "prepMinutes": 15,
+  "cookMinutes": 60,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bal kabağı",
+     "en": "Pumpkin"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "pantryKey": "pumpkin"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1.5,
+    "unit": "su bardağı",
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 0.5,
+    "unit": "su bardağı",
+    "pantryKey": "walnut"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabağı soyup iri dilimle, tencereye diz.",
+     "en": "Peel the pumpkin, cut it into large slices and arrange them in a pot."
+    }
+   },
+   {
+    "text": {
+     "tr": "Şekeri üzerine serp, bir gece suyunu salmaya bırak.",
+     "en": "Sprinkle over the sugar and leave overnight to release its juice."
+    }
+   },
+   {
+    "text": {
+     "tr": "Kapağı kapalı kısık ateşte kabak yumuşayana kadar yaklaşık 1 saat pişir.",
+     "en": "Cook covered over low heat for about an hour, until the pumpkin is soft."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Soğuyunca cevizle servis et.",
+     "en": "Let it cool and serve with walnuts."
+    }
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kabağı şekerleyip suyunu salmaya bırak",
+     "en": "Sugar the pumpkin and let it release its juice"
+    },
+    "when": "night-before"
+   }
+  ],
+  "tags": [
+   "Tencere",
+   "Mevsiminde"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0a8ad721-ba7f-4cc1-a76d-767b4a164334",
+  "slug": "muhallebi",
+  "cuisine": "turkish",
+  "category": "dessert",
+  "title": {
+   "tr": "Muhallebi",
+   "en": "Muhallebi (milk pudding)"
+  },
+  "servings": 6,
+  "prepMinutes": 5,
+  "cookMinutes": 20,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 1,
+    "unit": "l",
+    "pantryKey": "milk"
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "su bardağı",
+    "pantryKey": "sugar"
+   },
+   {
+    "name": {
+     "tr": "Pirinç unu",
+     "en": "Rice flour"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "pantryKey": "rice-flour"
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "pantryKey": "cornflour"
+   },
+   {
+    "name": {
+     "tr": "Vanilya",
+     "en": "Vanilla"
+    },
+    "amount": 1,
+    "unit": "paket",
+    "pantryKey": "vanilla"
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": null,
+    "unit": null,
+    "pantryKey": "cinnamon"
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sütün bir bardağını ayırıp pirinç unu ve nişastayı içinde aç.",
+     "en": "Set aside a glass of the milk and loosen the rice flour and cornflour in it."
+    }
+   },
+   {
+    "text": {
+     "tr": "Kalan sütü şekerle kaynamaya bırak.",
+     "en": "Bring the rest of the milk to the boil with the sugar."
+    }
+   },
+   {
+    "text": {
+     "tr": "Açtığın karışımı ekleyip sürekli karıştırarak koyulaşana kadar pişir.",
+     "en": "Add the loosened mixture and cook, stirring all the time, until thick."
+    }
+   },
+   {
+    "text": {
+     "tr": "Vanilyayı ekle, kaselere döküp soğut; tarçınla servis et.",
+     "en": "Stir in the vanilla, pour into bowls and chill; serve with cinnamon."
+    }
+   }
+  ],
+  "tags": [
+   "Sütlü",
+   "Tencere",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
