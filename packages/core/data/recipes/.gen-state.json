@@ -1724,12 +1724,23 @@
     "oruk",
     "nohutlu-kuzu-yahni"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kuzu-etli-pilav",
+    "etli-bulgur-pilavi",
+    "perde-pilavi",
+    "ozbek-pilavi",
+    "keskek",
+    "herise",
+    "tirit",
+    "bulgur-koftesi",
+    "oruk",
+    "nohutlu-kuzu-yahni"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 85835,
    "startedAt": "2026-10-15T20:04:58.244Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T20:07:46.984Z"
   },
   {
    "id": "g056",
@@ -2058,11 +2069,11 @@
     "tortellini-in-brodo",
     "zuppa-di-lenticchie"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T20:07:20.668Z",
    "finishedAt": null
   },
   {
