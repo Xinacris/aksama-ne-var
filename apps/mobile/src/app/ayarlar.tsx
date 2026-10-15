@@ -137,6 +137,12 @@ export default function Settings() {
             </Row>
           )}
           <Text variant="small">{lunchNote}</Text>
+          <Text variant="label">{t("ayarlar.alcoholFree")}</Text>
+          <Row>
+            <Chip label={t("ayarlar.on")} selected={household.alcoholFreeSubstitutes === true} onPress={() => void st.setAlcoholFreeSubstitutes(true)} />
+            <Chip label={t("ayarlar.off")} selected={household.alcoholFreeSubstitutes !== true} onPress={() => void st.setAlcoholFreeSubstitutes(false)} />
+          </Row>
+          <Text variant="small">{t("ayarlar.alcoholFreeNote")}</Text>
           {confirm === "leave" ? (
             <View style={{ gap: 8 }}>
               <Text variant="bodySmall">{t("ayarlar.leaveText")}</Text>

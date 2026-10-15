@@ -1,4 +1,6 @@
 import { getLocale, i18n, t as tx } from "../i18n";
+import { SEED_TIMESTAMP } from "../data/seed/build";
+import { removedRecipes } from "../recipes/filters";
 import { ingredientLabel, localizeRecipe, localizeTask } from "../domain/recipeText";
 import { createStore } from "zustand/vanilla";
 import type { DataContext } from "../data/context";
@@ -182,6 +184,8 @@ export interface AppState extends AppData {
   /** Put a dolapta dish on an evening (shopping list skips it). */
   placeLeftover(args: { fromDate: string; recipeId: string; toDate: string; slot?: Slot }): Promise<void>;
   setLunchAtHome(setting: Pick<Household, "lunchAtHome" | "lunchDays">): Promise<void>;
+  /** "Alkollü malzemelerde alternatifi kullan": the list buys the alcohol-free substitutes. */
+  setAlcoholFreeSubstitutes(on: boolean): Promise<void>;
 
   swipe(recipeId: string, date: string, slot: Slot, decision: Swipe["decision"]): Promise<Match | null>;
 
@@ -488,12 +492,19 @@ export const appStore = createStore<AppState>()((set, get) => {
             repos.cooking.list(hid),
           ]);
         const rawById = new Map(recipes.map((r) => [r.id, r]));
+        // Planned meals whose recipe no longer exists show "Tarif kaldırıldı" instead of vanishing.
+        const removed = removedRecipes(
+          recipes,
+          [...planItems.map((p) => p.recipeId), ...matches.map((m) => m.recipeId), ...cookLog.map((c) => c.recipeId)],
+          tx("recipe.removed"),
+          SEED_TIMESTAMP,
+        );
         set({
           me,
           household,
           members: people.members,
           people: people.users,
-          recipes: recipes.map((r) => localizeRecipe(r)),
+          recipes: [...recipes.map((r) => localizeRecipe(r)), ...removed],
           rawRecipes: recipes,
           favorites,
           planItems,
@@ -715,6 +726,10 @@ export const appStore = createStore<AppState>()((set, get) => {
     async setLunchAtHome(setting) {
       const { household } = requireCtx();
       await run(() => ctx().repos.households.update(household.id, { lunchAtHome: setting.lunchAtHome, lunchDays: [...setting.lunchDays].sort() }));
+    },
+    async setAlcoholFreeSubstitutes(on) {
+      const { household } = requireCtx();
+      await run(() => ctx().repos.households.update(household.id, { alcoholFreeSubstitutes: on }));
     },
 
     // ───────── swipes ─────────
@@ -974,6 +989,17 @@ export const appStore = createStore<AppState>()((set, get) => {
 // ───────────────────────── selectors ─────────────────────────
 
 const recipeMapCache = new WeakMap<Recipe[], Map<string, Recipe>>();
+const browsableCache = new WeakMap<Recipe[], Recipe[]>();
+/** Recipes to browse and pick from: everything except "Tarif kaldırıldı" placeholders. */
+export function browsableRecipes(s: Pick<AppState, "recipes">): Recipe[] {
+  let hit = browsableCache.get(s.recipes);
+  if (!hit) {
+    hit = s.recipes.some((r) => r.removed) ? s.recipes.filter((r) => !r.removed) : s.recipes;
+    browsableCache.set(s.recipes, hit);
+  }
+  return hit;
+}
+
 export function recipesMap(recipes: Recipe[]): Map<string, Recipe> {
   let m = recipeMapCache.get(recipes);
   if (!m) {
@@ -1025,6 +1051,7 @@ export function selectList(s: AppState): ListRow[] {
     manualItems: s.shoppingItems,
     checks: s.checks,
     recipesById: recipesMap(s.recipes),
+    alcoholFree: s.household?.alcoholFreeSubstitutes === true,
   });
   // Display names in the current language; rows still merge and check by the stored name.
   for (const r of rows) {
@@ -1036,7 +1063,7 @@ export function selectList(s: AppState): ListRow[] {
   return rows;
 }
 function listDeps(s: AppState): unknown[] {
-  return [s.planItems, s.planDays, s.matches, s.recipes, s.pantry, s.shoppingItems, s.checks, s.today, getLocale()];
+  return [s.planItems, s.planDays, s.matches, s.recipes, s.pantry, s.shoppingItems, s.checks, s.today, getLocale(), s.household?.alcoholFreeSubstitutes === true];
 }
 
 export function slugForRecipe(name: string) {

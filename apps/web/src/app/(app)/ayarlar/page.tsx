@@ -83,6 +83,30 @@ function LunchSetting() {
   );
 }
 
+/** "Alkollü malzemelerde alternatifi kullan": the shopping list takes the alcohol-free substitutes. */
+function AlcoholFreeSetting() {
+  const household = useApp((x) => x.household);
+  const setAlcoholFree = useApp((x) => x.setAlcoholFreeSubstitutes);
+  if (!household) return null;
+  const on = household.alcoholFreeSubstitutes === true;
+  return (
+    <div className={s.lunch}>
+      <span className={s.label} id="alkol-soru">
+        {t("ayarlar.alcoholFree")}
+      </span>
+      <div className={s.chips} role="group" aria-labelledby="alkol-soru">
+        <DishChip selected={on} onClick={() => void setAlcoholFree(true)}>
+          {t("ayarlar.on")}
+        </DishChip>
+        <DishChip selected={!on} onClick={() => void setAlcoholFree(false)}>
+          {t("ayarlar.off")}
+        </DishChip>
+      </div>
+      <p className={s.note}>{t("ayarlar.alcoholFreeNote")}</p>
+    </div>
+  );
+}
+
 /** "Bu ay 12 tarif içe aktarıldı (11 Gemini, 1 kural)". */
 function ImportUsage({ log }: { log: ImportLog[] }) {
   return (
@@ -233,6 +257,7 @@ export default function AyarlarPage() {
           </Button>
         </form>
         <LunchSetting />
+        <AlcoholFreeSetting />
         {confirm === "leave" ? (
           <div className={s.confirm} role="alert">
             <p>{t("ayarlar.leaveText")}</p>

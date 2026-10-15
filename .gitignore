@@ -58,3 +58,6 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+
+# Supabase seed output (npm run recipes:export), regenerated on demand
+/packages/core/data/recipes/export/

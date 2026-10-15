@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { importHref, quickAddAction, quickAddHint, quickAddIntent, type QuickAdd } from "@anv/core/domain/quickAdd";
-import { useApp } from "@/store/app";
+import { browsableRecipes, useApp } from "@/store/app";
 import { IconArrowRight, IconLink, IconPlus } from "./icons";
 import { Button } from "./ui/Button";
 import { Dialog } from "./ui/Dialog";
@@ -20,7 +20,7 @@ const sameName = (a: string, b: string) => a.toLocaleLowerCase("tr") === b.toLoc
  */
 export function useQuickAdd() {
   const router = useRouter();
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const addStubRecipe = useApp((x) => x.addStubRecipe);
   const [busy, setBusy] = useState(false);
 

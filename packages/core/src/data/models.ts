@@ -209,6 +209,8 @@ export const recipeSchema = z.object({
   category: z.string().optional(),
   description: z.string().optional(),
   difficulty: z.number().int().min(1).max(3).optional(),
+  /** Runtime only: a planned meal points at a recipe that no longer exists ("Tarif kaldırıldı"). Never stored. */
+  removed: z.boolean().optional(),
   /** How likely it is to carry over to the next day: the planner's leftover hint. Never a choice made for the household. */
   leftoverLikelihood: z.enum(["low", "medium", "high"]).optional(),
   createdBy: uuid.nullable(),

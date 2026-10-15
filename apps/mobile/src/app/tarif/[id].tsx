@@ -121,6 +121,7 @@ export default function RecipePage() {
       <View style={{ gap: 6 }}>
         <Eyebrow>{eyebrow}</Eyebrow>
         <Text variant="title">{title}</Text>
+        {recipe.description ? <Text color={colors.ink2}>{recipe.description}</Text> : null}
         <Text variant="meta">{meta}</Text>
         <Text variant="meta">{rotation}</Text>
       </View>
@@ -262,6 +263,11 @@ export default function RecipePage() {
                   </Text>
                   <Pill tone={s.tone} label={s.label} onPress={s.action} accessibilityLabel={s.aria} />
                 </Row>
+                {ing.substitute && (
+                  <Text variant="meta" style={{ marginTop: 4 }}>
+                    {ing.substitute.note}
+                  </Text>
+                )}
               </View>
             );
           })}
