@@ -253,11 +253,11 @@
     "tavuklu-misir-corbasi",
     "tavuklu-pirinc-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:29:15.684Z",
    "finishedAt": null
   },
   {
@@ -408,12 +408,23 @@
     "kozlenmis-biber-salatasi",
     "koz-patlican-ve-biber-salatasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gavurdagi-usulu-nar-eksili-salata",
+    "antep-usulu-yesil-salata",
+    "semizotu-salatasi",
+    "mor-lahana-salatasi",
+    "beyaz-lahana-salatasi",
+    "havuc-salatasi",
+    "pancar-salatasi",
+    "kereviz-salatasi",
+    "kozlenmis-biber-salatasi",
+    "koz-patlican-ve-biber-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 83799,
    "startedAt": "2026-10-15T19:26:23.099Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:29:25.036Z"
   },
   {
    "id": "g019",
