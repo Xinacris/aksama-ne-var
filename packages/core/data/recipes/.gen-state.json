@@ -1848,11 +1848,11 @@
     "kabak-musakka",
     "karnabahar-musakka"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:27:47.677Z",
    "finishedAt": null
   },
   {
@@ -2198,12 +2198,23 @@
     "mantar-trifolati",
     "suppl"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "bruschetta",
+    "sarimsakli-ekmek",
+    "caponata",
+    "firinda-kizarmis-sebze",
+    "fritto-misto-sebze",
+    "polenta-kizartmasi",
+    "firinda-patates-rozmarin",
+    "doldurulmus-kabak-cicegi",
+    "mantar-trifolati",
+    "suppl"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 87738,
    "startedAt": "2026-10-15T22:25:44.629Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:28:33.090Z"
   },
   {
    "id": "g072",
