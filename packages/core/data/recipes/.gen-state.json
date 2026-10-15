@@ -444,11 +444,11 @@
     "eksili-yumurtali-sogan-corbasi",
     "tavuklu-nohut-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:43:16.322Z",
    "finishedAt": null
   },
   {
@@ -873,12 +873,23 @@
     "asure",
     "gullac"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "kadayif",
+    "kunefe",
+    "sekerpare",
+    "tulumba-tatlisi",
+    "lokma",
+    "kazandibi",
+    "keskul",
+    "supangle",
+    "asure",
+    "gullac"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 95863,
    "startedAt": "2026-10-15T19:40:50.841Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:44:19.362Z"
   },
   {
    "id": "g031",
