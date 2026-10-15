@@ -2590,5 +2590,2326 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "60b15e31-cba8-4e28-8280-394a29aa6766",
+  "slug": "kabakli-risotto",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kabaklı risotto",
+   "en": "Courgette risotto"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kremamsı kıvamıyla tatlı kabak ve parmesanın birleştiği, sade ama doyurucu bir sebzeli risotto. Pirinç yavaş yavaş sıcak suyla pişirildiği için kıvamı tam tutturmak önemli.",
+   "en": "A creamy, simple risotto where sweet courgette and parmesan come together. The rice is cooked slowly with hot stock, so the texture needs a little attention."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Risotto pirinci",
+     "en": "Arborio rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "arborio-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "bölünmüş",
+     "en": "divided"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz şarap",
+     "en": "White wine"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "white-wine",
+    "substitute": {
+     "name": {
+      "tr": "Sebze suyu ve üzüm sirkesi",
+      "en": "Vegetable stock and grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "vegetable-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml sebze suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml vegetable stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "sıcak tutulmuş",
+     "en": "kept hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakların yarısını küp küp doğrayın. Soğanı ve sarımsağı ince doğrayın.",
+     "en": "Dice the courgettes. Finely chop the onion and garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sebze suyunu ayrı bir tencerede kaynatıp kısık ateşte sıcak tutun.",
+     "en": "Bring the stock to the boil in a separate pan and keep it hot over low heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tencerede zeytinyağı ve tereyağının yarısını orta ateşte eritin, soğan ve sarımsağı ekleyip 5 dakika yumuşatın.",
+     "en": "Melt half the butter with the olive oil in a wide pan over medium heat. Add the onion and garlic and soften for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip 2 dakika karıştırarak kavurun.",
+     "en": "Add the rice and toast it for 2 minutes, stirring."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) ekleyip pirinç suyunu çekene kadar karıştırın.",
+     "en": "Add the wine (or the mixture you are using instead) and stir until the rice has absorbed it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıcak sebze suyunu bir kepçe bir kepçe ekleyin. Her eklemede suyun çekilmesini bekleyip sık sık karıştırın.",
+     "en": "Add the hot stock a ladleful at a time, stirring often and waiting for each addition to be absorbed."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabak küplerini ekleyip 15 dakika daha pişirin; pirinç dişe hafif sert ama yumuşak olmalı.",
+     "en": "Stir in the courgette cubes and cook for another 15 minutes. The rice should be tender with a slight bite."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ocaktan alın, kalan tereyağını ve parmesanın yarısını katıp 2 dakika dinlendirin.",
+     "en": "Take off the heat, stir in the remaining butter and most of the parmesan, and rest for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandırıp kalan parmesanla servis edin.",
+     "en": "Season with salt and black pepper and serve with the remaining parmesan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "containsAlcohol",
+   "Vejetaryen",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cad704c4-0813-4da5-b8f5-7688a098d9af",
+  "slug": "deniz-urunlu-risotto",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Deniz ürünlü risotto",
+   "en": "Seafood risotto"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Midye ve karidesin tatlı denizden gelen aromasını kremamsı pirinçle buluşturan bir akşam yemeği. Deniz ürünleri en sona yakın eklenir ki dokuları yumuşak kalsın.",
+   "en": "Mussels and prawns bring a sweet sea flavour to a creamy rice dish. The seafood goes in near the end so it stays tender."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Risotto pirinci",
+     "en": "Arborio rice"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "arborio-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karides",
+     "en": "Prawns"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "soyulup temizlenmiş",
+     "en": "peeled and cleaned"
+    },
+    "pantryKey": "shrimp",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Midye",
+     "en": "Mussels"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklu, temizlenmiş",
+     "en": "in shell, cleaned"
+    },
+    "pantryKey": "mussel",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz şarap",
+     "en": "White wine"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "white-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu ve üzüm sirkesi",
+      "en": "Chicken stock and grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "sıcak tutulmuş",
+     "en": "kept hot"
+    },
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "bölünmüş",
+     "en": "divided"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş, servis için",
+     "en": "cut into wedges, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Midyeleri iyice yıkayıp açık olanları atın. Karidesleri kenara alın.",
+     "en": "Rinse the mussels well and discard any that are open. Set the prawns aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuk suyunu ayrı bir tencerede kaynatıp kısık ateşte sıcak tutun.",
+     "en": "Bring the stock to the boil in a separate pan and keep it hot over low heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Midyeleri kapaklı bir tencerede 3 dakika buharda açılana kadar pişirin. Açılanları süzün ve suyunu ayırın.",
+     "en": "Steam the mussels in a covered pan for 3 minutes until they open. Drain them and keep the liquid."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı ve tereyağının yarısını bir tencerede eritip soğan ve sarımsağı 4 dakika yumuşatın.",
+     "en": "Melt half the butter with the olive oil in a pan and soften the onion and garlic for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Pirinci ekleyip 2 dakika kavurun. Şarabı (ya da yerine kullandığın karışımı) ekleyip suyunu çekene kadar karıştırın.",
+     "en": "Add the rice and toast it for 2 minutes. Add the wine (or the mixture you are using instead) and stir until absorbed."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Sıcak tavuk suyunu kepçe kepçe ekleyin, sık sık karıştırın; pirinç dişe hafif sert gelene kadar pişirin.",
+     "en": "Add the hot stock a ladleful at a time, stirring often, until the rice is tender with a slight bite."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karidesleri ve süzdüğünüz midye suyunu ekleyip 3 dakika pişirin.",
+     "en": "Add the prawns and the mussel liquid and cook for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Midyeleri ekleyin, kalan tereyağı ve maydanozu katıp ocaktan alın, 1 dakika dinlendirin.",
+     "en": "Add the mussels, stir in the remaining butter and the parsley, take off the heat and rest for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandırıp limon dilimleriyle sıcak sıcak servis edin.",
+     "en": "Season with salt and black pepper and serve hot with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "Tencere",
+   "Balık",
+   "glutenFree"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "c24fe3c7-2154-44d8-b061-1d57715682ed",
+  "slug": "linguine-alle-vongole",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Linguine alle vongole",
+   "en": "Linguine with clams"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sarımsaklı zeytinyağı, pul biber ve açılmış kum midyelerinin suyuyla hazırlanan, Napoli'den gelen hafif bir makarna. Midyelerin suyu sosun asıl lezzetidir, o yüzden onu atmayın.",
+   "en": "A light pasta from Naples, made with garlicky olive oil, chilli and the juices of freshly opened clams. Those juices are the heart of the sauce, so keep them."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Linguine",
+     "en": "Linguine"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "linguine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kum midyesi",
+     "en": "Clams"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklu, kumu alınmış",
+     "en": "in shell, purged of sand"
+    },
+    "pantryKey": "clam",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz şarap",
+     "en": "White wine"
+    },
+    "amount": 120,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "white-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu ve üzüm sirkesi",
+      "en": "Chicken stock and grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş, servis için",
+     "en": "cut into wedges, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Büyük tencerede bol suyu kaynatın, tuzu ekleyip linguineyi al dente olana kadar haşlayın. Süzmeden önce bir kepçe pişirme suyu ayırın.",
+     "en": "Bring a large pan of water to the boil, salt it and cook the linguine until al dente. Set aside a ladle of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Midyeleri akan suyun altında yıkayın, açık olanları atın.",
+     "en": "Rinse the clams under running water and discard any that stay open."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada zeytinyağı, sarımsak ve pul biberi orta ateşte 1 dakika kokusu çıkana kadar ısıtın.",
+     "en": "In a wide pan over medium heat, warm the olive oil with the garlic and chilli flakes for 1 minute, until fragrant."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) ekleyip 1 dakika kaynatın.",
+     "en": "Add the wine (or the mixture you are using instead) and simmer for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Midyeleri ekleyin, kapağı kapalı olarak 4 dakika pişirin. Açılmayanları atın.",
+     "en": "Add the clams, cover and cook for 4 minutes. Discard any that have not opened."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Makarnayı tavaya alın, pişirme suyundan birkaç kaşık ekleyip 1 dakika karıştırarak sosu bulaştırın.",
+     "en": "Add the pasta to the pan with a few spoonfuls of the cooking water and toss for 1 minute to coat it in the sauce."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Maydanozu ekleyip karıştırın, limon dilimleriyle sıcak sıcak servis edin.",
+     "en": "Stir in the parsley and serve hot with the lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "quick",
+   "Balık",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3badd1cd-49ae-4c06-ab83-1ee62c3f4d0b",
+  "slug": "karidesli-linguine",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Karidesli linguine",
+   "en": "Prawn linguine"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karidesi tereyağı ve zeytinyağında hızla kızartıp çeri domatesle hazırlanan, yarım saatte biten bir makarna. Karides fazla pişince sertleşir, bu yüzden son anda kontrol edin.",
+   "en": "Prawns are quickly seared in butter and olive oil, then tossed with cherry tomatoes for a pasta ready in half an hour. Prawns turn rubbery if overcooked, so watch them closely."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Linguine",
+     "en": "Linguine"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "linguine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karides",
+     "en": "Prawns"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "soyulup temizlenmiş",
+     "en": "peeled and deveined"
+    },
+    "pantryKey": "shrimp",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çeri domates",
+     "en": "Cherry tomatoes"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": {
+     "tr": "bölünmüş",
+     "en": "divided"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Büyük tencerede tuzlu suyu kaynatın, linguineyi al dente olana kadar haşlayın. Süzmeden önce bir kepçe pişirme suyu ayırın.",
+     "en": "Boil the linguine in well-salted water until al dente. Keep a ladle of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karidesleri kurulayıp tuz ve karabiberle hafifçe tatlandırın.",
+     "en": "Pat the prawns dry and season them lightly with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş bir tavada zeytinyağı ve tereyağının yarısını ısıtın, karidesleri tek kat halinde 2 dakika kızartıp alın.",
+     "en": "Heat the olive oil and half the butter in a wide pan. Sear the prawns in a single layer for 2 minutes, then remove them."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Aynı tavada sarımsak ve pul biberi 1 dakika çevirin.",
+     "en": "In the same pan, toss the garlic and chilli flakes for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Çeri domatesleri ekleyip 4 dakika yumuşayana kadar pişirin.",
+     "en": "Add the cherry tomatoes and cook for 4 minutes until they soften."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Makarnayı ve ayırdığın pişirme suyunu tavaya ekleyip kalan tereyağıyla karıştırın.",
+     "en": "Add the pasta and the reserved cooking water to the pan, then toss with the remaining butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karidesleri geri ekleyin, limon suyunu sıkın, maydanozla birlikte servis edin.",
+     "en": "Return the prawns to the pan, squeeze in the lemon juice, and serve with the parsley."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Tavada",
+   "Balık",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5876abeb-5705-4459-af3d-0fb1db4cb33a",
+  "slug": "pesto-soslu-trofie",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Pesto soslu trofie",
+   "en": "Pasta with basil pesto"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Liguria'dan gelen geleneksel bir makarna: taze fesleğen pestosu, patates ve yeşil fasulyeyle servis edilir. Pesto sıcak makarnayla hemen karıştırılınca en güzel kokusunu verir.",
+   "en": "A traditional pasta from Liguria, served with fresh basil pesto, potato and green beans. The pesto smells best when tossed with the hot pasta straight away."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Trofie (ya da burgu makarna)",
+     "en": "Trofie (or fusilli)"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": {
+     "tr": "Trofie bulamazsanız burgu makarna kullanın.",
+     "en": "If you cannot find trofie, use fusilli."
+    },
+    "pantryKey": "fusilli",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "Fresh basil"
+    },
+    "amount": 2,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklarını ayırılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çam fıstığı",
+     "en": "Pine nuts"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pine-nut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": null,
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": {
+     "tr": "sızma",
+     "en": "extra virgin"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fasulye",
+     "en": "Green beans"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "uçları ayıklanmış, parçalanmış",
+     "en": "trimmed and cut into pieces"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fesleğen yapraklarını yıkayıp iyice kurulayın.",
+     "en": "Wash the basil leaves and dry them thoroughly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri küp doğrayın, fasulyeleri uçlarından ayıklayıp parçalara bölün.",
+     "en": "Dice the potato and trim the beans, cutting them into pieces."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük tencerede tuzlu suyu kaynatın, patatesleri ekleyip 5 dakika haşlayın.",
+     "en": "Bring a large pan of salted water to the boil and cook the potato for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Fasulyeleri ekleyip 4 dakika daha haşlayın.",
+     "en": "Add the beans and cook for another 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Trofieyi aynı suya ekleyin, paket üzerindeki süreye göre al dente pişirin. Süzmeden önce bir kepçe pişirme suyu ayırın.",
+     "en": "Add the trofie to the same water and cook until al dente, according to the packet. Set aside a ladle of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mutfak robotunda fesleğen, çam fıstığı, sarımsak ve bir tutam tuzu kabaca çekin. Parmesanı ekleyip zeytinyağını ince akışla ilave ederek karıştırın.",
+     "en": "In a food processor, roughly blitz the basil, pine nuts, garlic and a pinch of salt. Add the parmesan and blend in the olive oil in a thin stream."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Süzdüğünüz makarna ve sebzeleri pişirme suyundan birkaç kaşık ekleyip pestoyla karıştırın.",
+     "en": "Drain the pasta and vegetables, then toss them with the pesto, adding a few spoonfuls of the cooking water to loosen."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine bol parmesan serpip sıcak servis edin.",
+     "en": "Serve hot with plenty of extra parmesan on top."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "b2f19b04-9eda-41bf-91f5-3f6213e5f344",
+  "slug": "penne-alla-vodka",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Penne alla vodka",
+   "en": "Penne alla vodka"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Domates, krema ve az miktarda votkayla hazırlanan, pembe ve kremamsı bir sos. Votka sosun asit dengesini yumuşatır ve aromayı açar.",
+   "en": "A pink, creamy sauce of tomato and cream with a small amount of vodka, which softens the acidity of the tomato and brings out the flavour."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kalem makarna",
+     "en": "Penne"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "penne",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Votka",
+     "en": "Vodka"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "vodka",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu ve limon suyu",
+      "en": "Chicken stock and lemon juice"
+     },
+     "amount": 60,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Votka kullanmak istemezseniz: 60 ml tavuk suyu + 1 tatlı kaşığı limon suyu kullanın.",
+      "en": "If you prefer not to use vodka: use 60 ml chicken stock + 1 tsp lemon juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze fesleğen",
+     "en": "Fresh basil"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklarını ayırılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-basil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğrayın.",
+     "en": "Finely chop the onion and garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada zeytinyağını orta ateşte ısıtın, soğanı 5 dakika yumuşayana kadar kavurun.",
+     "en": "Heat the olive oil in a wide pan over medium heat and fry the onion for 5 minutes until soft."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve pul biberi ekleyip 1 dakika çevirin.",
+     "en": "Add the garlic and chilli flakes and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Votkayı (ya da yerine kullandığın karışımı) ekleyip 1 dakika kaynatarak alkolünü uçurun.",
+     "en": "Add the vodka (or the mixture you are using instead) and simmer for 1 minute to cook off the alcohol."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domates püresini ekleyip kısık ateşte 10 dakika pişirin.",
+     "en": "Stir in the passata and simmer on low heat for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kremayı ekleyip 3 dakika daha kısık ateşte ısıtın, tuz ve karabiberle tatlandırın.",
+     "en": "Stir in the cream, heat gently for 3 minutes more, and season with salt and black pepper."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Penneyi paket süresine göre al dente haşlayıp süzün, sosun içine ekleyin. Bir kepçe pişirme suyuyla gevşetip karıştırın.",
+     "en": "Cook the penne until al dente, drain, and add it to the sauce. Loosen with a ladle of the cooking water and toss."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fesleğen yapraklarını ekleyip parmesanla servis edin.",
+     "en": "Add the basil leaves and serve with the parmesan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "containsAlcohol",
+   "Vejetaryen",
+   "Tencere",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "8cc8d5b5-f8d9-4bd3-a1d0-18452e84ab61",
+  "slug": "spagetti-alla-puttanesca",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Spagetti alla puttanesca",
+   "en": "Spaghetti alla puttanesca"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ançüez, kapari, siyah zeytin ve domatesle hazırlanan, tuzlu ve canlı bir Napoli makarnası. Hazırlığı kısa, ama sos yavaş pişince en iyi halini alır.",
+   "en": "A salty, lively Neapolitan pasta built on anchovies, capers, black olives and tomato. It is quick to prepare, but the sauce is best when it simmers gently."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Spagetti",
+     "en": "Spaghetti"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "spaghetti",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeği alınmış, ikiye bölünmüş",
+     "en": "pitted and halved"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapari",
+     "en": "Capers"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "capers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ançüez",
+     "en": "Anchovy fillets"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "doğranmış",
+     "en": "chopped"
+    },
+    "pantryKey": "anchovy-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sarımsağı ince doğrayın, siyah zeytinleri ikiye bölün.",
+     "en": "Finely chop the garlic and halve the black olives."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada zeytinyağını ısıtın, ançüezleri ekleyip ezerek eritin.",
+     "en": "Warm the olive oil in a wide pan and add the anchovies, mashing them until they melt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve pul biberi ekleyip 1 dakika kokusu çıkana kadar çevirin.",
+     "en": "Add the garlic and chilli flakes and stir for 1 minute, until fragrant."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Domates püresi, zeytin ve kaparileri ekleyip kısık ateşte 15 dakika pişirin.",
+     "en": "Add the passata, olives and capers and simmer gently for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Spagettiyi tuzlu kaynar suda al dente haşlayın. Süzmeden önce biraz pişirme suyu ayırın.",
+     "en": "Cook the spaghetti in boiling salted water until al dente. Keep a little of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Makarnayı sosa ekleyip pişirme suyundan katarak 1 dakika karıştırın.",
+     "en": "Add the pasta to the sauce, loosen with a little cooking water and toss for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Maydanozu serpip hemen servis edin.",
+     "en": "Scatter over the parsley and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "budget",
+   "Kolay",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "90b55b53-3a81-41e3-8c1d-4a4ddbe7f8ec",
+  "slug": "dana-fume-etli-carbonara",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Dana füme etli carbonara",
+   "en": "Carbonara with smoked beef"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Geleneksel domuz pastırması yerine dana füme et kullanılan, yumurta ve parmesanla kremalanan bir carbonara. Yumurta sosu sıcak makarnada hızla karıştırılınca pürüzsüz olur.",
+   "en": "A carbonara made with smoked beef instead of pork, bound with egg and parmesan. The sauce turns silky when the eggs are stirred into the hot pasta quickly."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Spagetti",
+     "en": "Spaghetti"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "spaghetti",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Smoked beef"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "bol, taze çekilmiş",
+     "en": "generous, freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Dana füme eti küçük küpler halinde doğrayın.",
+     "en": "Cut the smoked beef into small cubes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları bir kaseye kırıp rendelenmiş parmesan ve bol karabiberle iyice çırpın.",
+     "en": "Beat the eggs in a bowl with the grated parmesan and plenty of black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada zeytinyağını ısıtın, dana füme eti orta ateşte 4 dakika gevrekleşene kadar kavurun.",
+     "en": "Warm the olive oil in a pan and fry the smoked beef over medium heat for 4 minutes, until crisp at the edges."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Spagettiyi tuzlu kaynar suda al dente haşlayın. Süzmeden önce bir kepçe pişirme suyu ayırın.",
+     "en": "Cook the spaghetti in boiling salted water until al dente. Reserve a ladle of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatın, süzülmüş makarnayı sıcak tavaya alıp dana füme etle iyice karıştırın.",
+     "en": "Turn off the heat, add the drained pasta to the pan and toss well with the smoked beef."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta karışımını ekleyip pişirme suyundan azar azar katarak kremamsı bir sos oluşana kadar hızla karıştırın.",
+     "en": "Add the egg mixture and a little cooking water at a time, tossing quickly until a creamy sauce forms."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bol karabiber serpip sıcak servis edin.",
+     "en": "Finish with plenty of black pepper and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Tavada",
+   "Etli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "23556b49-0cbf-4efe-8758-81dd1f2b128e",
+  "slug": "tavuklu-kremali-fettuccine",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Tavuklu kremalı fettuccine",
+   "en": "Creamy chicken fettuccine"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tavuk göğsü, mantar ve sarımsakla kızartılıp kremalı sosta makarnaya bulandırılan, doyurucu bir ana yemek. Tavuğu kızartırken ocağı çok fazla kısmayın ki renk alsın.",
+   "en": "Chicken breast and mushrooms are browned with garlic, then tossed through fettuccine in a creamy sauce. Keep the heat high enough for the chicken to take on colour."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 20,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Fettuccine",
+     "en": "Fettuccine"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "fettuccine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk göğsü",
+     "en": "Chicken breast"
+    },
+    "amount": 350,
+    "unit": "g",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "chicken-breast",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "bölünmüş, rendelenmiş",
+     "en": "divided, finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk göğsünü küp doğrayıp tuz ve karabiberle tatlandırın. Mantarları dilimleyin.",
+     "en": "Dice the chicken breast and season it with salt and black pepper. Slice the mushrooms."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük tencerede tuzlu suyu kaynatıp fettuccineyi al dente haşlayın. Süzmeden önce biraz pişirme suyu ayırın.",
+     "en": "Cook the fettuccine in boiling salted water until al dente. Reserve a little of the cooking water before draining."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada zeytinyağı ve tereyağının yarısını ısıtıp tavukları 5 dakika kızartın, altın renge dönünce alın.",
+     "en": "Heat the olive oil and half the butter in a wide pan and brown the chicken for 5 minutes, then remove it once golden."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Aynı tavada mantarları ve sarımsağı 4 dakika soteleyin.",
+     "en": "In the same pan, sauté the mushrooms and garlic for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Tavukları geri ekleyip kremayı ilave edin, kısık ateşte 3 dakika kaynatın.",
+     "en": "Return the chicken to the pan, add the cream and simmer gently for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Parmesanın yarısını ekleyip sosu karıştırın. Kıvam alınca tuz ve karabiberle tatlandırın.",
+     "en": "Stir in half the parmesan and adjust the seasoning once the sauce has thickened."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Makarnayı tavaya alıp pişirme suyundan katarak sosla iyice bulaştırın, maydanoz ve kalan parmesanla servis edin.",
+     "en": "Add the pasta to the pan, loosen with cooking water, toss through the sauce, and serve with parsley and the remaining parmesan."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavada",
+   "Tavuklu"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "f54a6b71-91f3-4141-beae-2ed5229576ab",
+  "slug": "ton-balikli-penne",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Ton balıklı penne",
+   "en": "Penne with tuna and tomatoes"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kutu ton balığı ve domates sosuyla hazırlanan, dolabınızdaki malzemelerle kolayca yapılan bir makarna. Kapari sosa tuzlu ve taze bir tat katar.",
+   "en": "A store-cupboard pasta made with canned tuna and tomato sauce. Capers add a salty, fresh note to the sauce."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kalem makarna",
+     "en": "Penne"
+    },
+    "amount": 320,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "penne",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı",
+     "en": "Tuna"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Konserve domates",
+     "en": "Canned tomatoes"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "canned-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapari",
+     "en": "Capers"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "capers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğrayın.",
+     "en": "Finely chop the onion and garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada zeytinyağını ısıtıp soğanı 4 dakika yumuşatın.",
+     "en": "Warm the olive oil in a pan and soften the onion for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve pul biberi ekleyip 1 dakika çevirin.",
+     "en": "Add the garlic and chilli flakes and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş domatesi ekleyip kısık ateşte 10 dakika pişirin.",
+     "en": "Add the crushed tomatoes and simmer on low heat for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ton balığını ve kaparileri ekleyip karabiberle birlikte 3 dakika daha pişirin.",
+     "en": "Stir in the tuna and capers, season with black pepper and cook for 3 minutes more."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Penneyi tuzlu suda al dente haşlayıp süzün, sosla tavada bir dakika karıştırın.",
+     "en": "Cook the penne in salted water until al dente, drain, and toss it in the sauce in the pan for a minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Maydanozu ekleyip sıcak sıcak servis edin.",
+     "en": "Stir in the parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "budget",
+   "Balık",
+   "Tavada",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
