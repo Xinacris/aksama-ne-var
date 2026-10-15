@@ -4,27 +4,29 @@
   "slug": "spagetti-bolonez",
   "cuisine": "italian",
   "category": "main",
+  "region": null,
   "title": {
    "tr": "Spagetti bolonez",
    "en": "Spaghetti bolognese"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Kıymalı ve domatesli doyurucu bir makarna.",
-   "en": "A hearty pasta with minced meat and tomato sauce."
+   "tr": "Bologna'dan gelen klasik ev yemeği: kıyma, havuç ve soğanın domates sosunda yavaşça pişirilip spagettiyle buluşturulduğu bir tabak.",
+   "en": "A home-style Italian classic from Bologna: minced beef, carrot and onion simmered slowly in a tomato sauce and tossed with spaghetti."
   },
   "servings": 4,
-  "prepMinutes": 10,
-  "cookMinutes": 20,
+  "prepMinutes": 20,
+  "cookMinutes": 60,
   "waitMinutes": null,
-  "difficulty": 1,
+  "timeNote": null,
+  "difficulty": 2,
   "ingredients": [
    {
     "name": {
      "tr": "Spagetti",
      "en": "Spaghetti"
     },
-    "amount": 500,
+    "amount": 400,
     "unit": "g",
     "note": null,
     "pantryKey": "spaghetti",
@@ -32,13 +34,69 @@
    },
    {
     "name": {
-     "tr": "Kıyma",
+     "tr": "Dana kıyma",
      "en": "Minced beef"
     },
-    "amount": 300,
+    "amount": 400,
     "unit": "g",
-    "note": null,
+    "note": {
+     "tr": "az yağlı",
+     "en": "lean"
+    },
     "pantryKey": "minced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
     "substitute": null
    },
    {
@@ -46,25 +104,35 @@
      "tr": "Domates püresi",
      "en": "Passata"
     },
-    "amount": 400,
-    "unit": "g",
+    "amount": 500,
+    "unit": "ml",
     "note": null,
     "pantryKey": "passata",
     "substitute": null
    },
    {
     "name": {
-     "tr": "Kuru soğan",
-     "en": "Onion"
+     "tr": "Kırmızı şarap",
+     "en": "Red wine"
     },
-    "amount": 1,
-    "unit": "adet",
-    "note": {
-     "tr": "yemeklik doğranmış",
-     "en": "finely chopped"
-    },
-    "pantryKey": "onion",
-    "substitute": null
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "red-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu",
+      "en": "Chicken stock"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
    },
    {
     "name": {
@@ -76,56 +144,143 @@
     "note": null,
     "pantryKey": "olive-oil",
     "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru kekik",
+     "en": "Dried thyme"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Makarnayı bol tuzlu suda 10 dakika haşla.",
-     "en": "Boil the pasta in plenty of salted water for 10 minutes."
-    },
-    "timerSeconds": 600
-   },
-   {
-    "text": {
-     "tr": "Tavada soğanları yağda pembeleşene kadar kavur.",
-     "en": "Sauté the onions in oil in a pan until translucent."
+     "tr": "Soğanı ince doğra, havucu küp küp kes, sarımsakları ez.",
+     "en": "Chop the onion finely, dice the carrot and crush the garlic."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Kıymayı ekle ve suyunu çekene kadar kavur.",
-     "en": "Add the minced meat and cook until the juices evaporate."
+     "tr": "Geniş tavada zeytinyağını ısıt, soğan ve havucu 8 dakika kavur.",
+     "en": "Heat the olive oil in a wide pan and fry the onion and carrot for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsakları ekleyip 1 dakika çevir.",
+     "en": "Add the garlic and stir for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Kıymayı ekle, suyunu çekene ve rengi açılana kadar ara ara ufalayarak kavur.",
+     "en": "Add the mince and brown it, breaking it up now and then, until the juices have cooked off and the colour has lightened."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Domates püresini ekle ve 10 dakika pişir.",
-     "en": "Add the passata and cook for 10 minutes."
+     "tr": "Salçayı ekleyip 2 dakika kavur.",
+     "en": "Stir in the tomato paste and fry for 2 minutes."
     },
-    "timerSeconds": 600
+    "timerSeconds": 120
    },
    {
     "text": {
-     "tr": "Süzülen makarnayı sosla birleştir.",
-     "en": "Combine the drained pasta with the sauce."
+     "tr": "Şarabı (ya da yerine kullandığın karışımı) ekleyip 2 dakika kaynat.",
+     "en": "Add the wine (or the mix you use instead) and boil for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Domates püresi, kekik ve tuzu ekleyip kapağını aralık bırakarak kısık ateşte 40 dakika pişir.",
+     "en": "Add the passata, thyme and salt, then simmer gently with the lid slightly open for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Spagettiyi bol tuzlu suda paket talimatına göre al dente haşla.",
+     "en": "Cook the spaghetti in plenty of salted water until al dente, following the packet instructions."
     },
     "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Makarnayı süzüp sosla tavada 1 dakika birlikte çevir, parmesanı serperek sıcak servis et.",
+     "en": "Drain the pasta, toss it with the sauce in the pan for 1 minute, then serve hot with the parmesan on top."
+    },
+    "timerSeconds": 60
+   }
+  ],
+  "freezerItem": null,
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Sosu bir gün önceden hazırlayıp buzdolabında sakla; servisten önce yavaşça ısıt.",
+     "en": "Make the sauce a day ahead, keep it in the fridge and warm it gently before serving."
+    },
+    "when": "night-before"
    }
   ],
   "tags": [
    "Tencere",
-   "Kıymalı",
-   "Hızlı"
+   "Etli",
+   "containsAlcohol",
+   "kidFriendly",
+   "freezable"
   ],
   "mealSlots": [
    "dinner"
   ],
   "leftover": {
    "likelihood": "medium",
-   "keepsDays": 2,
+   "keepsDays": 3,
    "reheatable": true
   },
   "source": "curated-v1",

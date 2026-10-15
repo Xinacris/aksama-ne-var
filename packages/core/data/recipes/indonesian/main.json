@@ -4,117 +4,266 @@
   "slug": "nasi-goreng",
   "cuisine": "indonesian",
   "category": "main",
+  "region": null,
   "title": {
    "tr": "Nasi goreng",
    "en": "Nasi goreng (fried rice)"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Endonezya usulü aromatik kızarmış pilav.",
-   "en": "Indonesian style aromatic fried rice."
+   "tr": "Bir önceki günden kalan pirincin arpacık soğan, tavuk, tatlı soya sosu ve samballa tavada sotelendiği, üzeri sahanda yumurtalı Endonezya yemeği.",
+   "en": "Day-old rice stir-fried with shallots, chicken, sweet soy and sambal, topped with a fried egg. A homely Indonesian classic."
   },
   "servings": 4,
-  "prepMinutes": 15,
-  "cookMinutes": 15,
+  "prepMinutes": 25,
+  "cookMinutes": 20,
   "waitMinutes": null,
+  "timeNote": null,
   "difficulty": 1,
   "ingredients": [
    {
     "name": {
-     "tr": "Baldo pirinç",
-     "en": "Baldo rice"
+     "tr": "Yasemin pirinci",
+     "en": "Jasmine rice"
     },
-    "amount": 2,
-    "unit": "su bardağı",
+    "amount": 300,
+    "unit": "g",
     "note": {
-     "tr": "pişmiş ve soğumuş",
-     "en": "cooked and cooled"
+     "tr": "bir gece önceden pişirilip soğutulmuş",
+     "en": "cooked the day before and cooled"
     },
-    "pantryKey": "baldo-rice"
+    "pantryKey": "jasmine-rice",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Yumurta",
-     "en": "Egg"
+     "en": "Eggs"
     },
-    "amount": 2,
+    "amount": 3,
     "unit": "adet",
+    "note": {
+     "tr": "sahanda pişirilecek",
+     "en": "to be fried sunny-side up"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "diced small"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Arpacık soğan",
+     "en": "Shallots"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "shallot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
     "note": null,
-    "pantryKey": "egg"
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tatlı soya sosu",
+     "en": "Sweet soy sauce"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "sweet-soy-sauce",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Soya sosu",
      "en": "Soy sauce"
     },
-    "amount": 3,
+    "amount": 1,
     "unit": "yemek kaşığı",
-    "note": {
-     "tr": "tuz dengesi için",
-     "en": "for salt balance"
-    },
-    "pantryKey": "soy-sauce"
+    "note": null,
+    "pantryKey": "soy-sauce",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Tavuk göğsü",
-     "en": "Chicken breast"
+     "tr": "Sambal",
+     "en": "Sambal"
     },
-    "amount": 200,
-    "unit": "g",
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "acı biber ezmesi",
+     "en": "chilli paste"
+    },
+    "pantryKey": "sambal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
     "note": null,
-    "pantryKey": "chicken-breast"
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim, servis için",
+     "en": "sliced, to serve"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Yeşil soğan",
-     "en": "Spring onion"
+     "en": "Spring onions"
     },
-    "amount": 1,
-    "unit": "demet",
+    "amount": 3,
+    "unit": "adet",
     "note": {
-     "tr": "ince kıyılmış",
-     "en": "finely chopped"
+     "tr": "ince doğranmış",
+     "en": "finely sliced"
     },
-    "pantryKey": "spring-onion"
+    "pantryKey": "spring-onion",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Tavukları küçük parçalar halinde tavada sotele.",
-     "en": "Sauté the chicken pieces in a pan."
+     "tr": "Pirinci bol suda 12 dakika haşla, süzüp tepsiye yay ve tamamen soğumaya bırak.",
+     "en": "Boil the rice in plenty of water for 12 minutes, drain it, spread it on a tray and let it cool completely."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Arpacık soğan ve sarımsağı yağda altın rengi olana kadar kavur.",
+     "en": "Fry the shallots and garlic in the oil until golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavuğu ekleyip çevirerek 5 dakika pişir, iç kısmı da pişmiş olsun.",
+     "en": "Add the chicken and cook, stirring, for 5 minutes until cooked through."
     },
     "timerSeconds": 300
    },
    {
     "text": {
-     "tr": "Yumurtaları ekleyip hızlıca karıştırarak pişir.",
-     "en": "Add eggs and scramble quickly."
+     "tr": "Havucu ekleyip 3 dakika çevir; sambalı ve soya sosunu ekle.",
+     "en": "Add the carrot and stir for 3 minutes; then add the sambal and the plain soy sauce."
     },
-    "timerSeconds": 120
+    "timerSeconds": 180
    },
    {
     "text": {
-     "tr": "Haşlanmış pilavı tavaya ekle ve soya sosu ile harmanla.",
-     "en": "Add the cooked rice to the pan and mix with soy sauce."
+     "tr": "Soğuk pirinci ekleyip yüksek ateşte sürekli karıştırarak ısıt; tatlı soya sosunu gezdirip tuzunu ayarla.",
+     "en": "Add the cold rice and toss over high heat until hot; drizzle in the sweet soy sauce and season with salt."
     },
-    "timerSeconds": 300
+    "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Yeşil soğanları ekleyip birkaç dakika daha çevir.",
-     "en": "Add spring onions and stir for a few more minutes."
+     "tr": "Ayrı bir tavada az yağla yumurtaları sahanda pişir; kenarları çıtır, sarıları akışkan kalsın.",
+     "en": "In a separate pan with a little oil, fry the eggs sunny-side up, crisp at the edges with the yolks still runny."
     },
-    "timerSeconds": 120
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pilavı tabağa al, üzerine sahanda yumurtayı koy; salatalık ve yeşil soğanla servis et.",
+     "en": "Plate the rice, top with a fried egg and serve with the cucumber and spring onions."
+    },
+    "timerSeconds": null
    }
   ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Pirinci bir gece önceden pişirip soğutarak buzdolabında beklet; soğuk pirinç tavada dağılır ve yapışmaz.",
+     "en": "Cook the rice the night before and keep it chilled; cold rice separates in the pan and does not clump."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
   "tags": [
-   "Tavuklu",
+   "spicy",
+   "makeAhead",
+   "dairyFree",
    "Tavada",
+   "Tavuklu",
+   "Pilav",
    "Tek tabak"
   ],
   "mealSlots": [
+   "breakfast",
    "dinner"
   ],
   "leftover": {

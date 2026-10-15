@@ -4,53 +4,47 @@
   "slug": "tavuk-tikka-masala",
   "cuisine": "indian",
   "category": "main",
+  "region": null,
   "title": {
    "tr": "Tavuk tikka masala",
    "en": "Chicken tikka masala"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Baharatlı yoğurt sosunda marine edilmiş tavuk parçaları.",
-   "en": "Chicken pieces marinated in a spiced yoghurt sauce."
+   "tr": "Yoğurt ve baharatlarda marine edilmiş tavuğun kremalı, hafif acılı domates sosunda pişirildiği, ev mutfağına uygun bir köri tarifi.",
+   "en": "Yogurt-marinated chicken simmered in a mildly spiced, creamy tomato sauce, easy enough for a weeknight."
   },
   "servings": 4,
-  "prepMinutes": 20,
-  "cookMinutes": 30,
-  "waitMinutes": 60,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": 240,
+  "timeNote": null,
   "difficulty": 2,
   "ingredients": [
    {
     "name": {
-     "tr": "Tavuk göğsü",
-     "en": "Chicken breast"
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
     },
-    "amount": 600,
+    "amount": 200,
     "unit": "g",
-    "note": {
-     "tr": "kuşbaşı doğranmış",
-     "en": "diced"
-    },
-    "pantryKey": "chicken-breast"
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Yoğurt",
-     "en": "Yoghurt"
+     "tr": "Taze zencefil",
+     "en": "Fresh ginger"
     },
     "amount": 1,
-    "unit": "su bardağı",
-    "note": null,
-    "pantryKey": "yoghurt"
-   },
-   {
-    "name": {
-     "tr": "Domates püresi",
-     "en": "Passata"
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
     },
-    "amount": 400,
-    "unit": "ml",
-    "note": null,
-    "pantryKey": "passata"
+    "pantryKey": "ginger",
+    "substitute": null
    },
    {
     "name": {
@@ -63,53 +57,219 @@
      "tr": "ezilmiş",
      "en": "crushed"
     },
-    "pantryKey": "garlic"
+    "pantryKey": "garlic",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Köri",
-     "en": "Curry powder"
+     "tr": "Garam masala",
+     "en": "Garam masala"
     },
     "amount": 1,
-    "unit": "yemek kaşığı",
+    "unit": "tatlı kaşığı",
     "note": null,
-    "pantryKey": "curry-powder"
+    "pantryKey": "garam-masala",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kimyon",
+     "en": "Ground cumin"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cumin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zerdeçal",
+     "en": "Turmeric"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "turmeric",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 700,
+    "unit": "g",
+    "note": {
+     "tr": "kemiksiz, iri küp doğranmış",
+     "en": "boneless, cut into large cubes"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "yarısı tavuk, yarısı soğan için",
+     "en": "half for the chicken, half for the onion"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates püresi",
+     "en": "Passata"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "passata",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Sweet paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kişniş",
+     "en": "Fresh coriander"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "fresh-coriander",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Tavukları yoğurt, sarımsak ve baharatlarla harmanlayıp buzdolabında beklet.",
-     "en": "Mix chicken with yoghurt, garlic, and spices, then let rest in the fridge."
+     "tr": "Yoğurdu, rendelenmiş zencefil, ezilmiş sarımsak, garam masala ve zerdeçalı bir kapta karıştır; tavuğu ekleyip iyice bulaştır.",
+     "en": "In a bowl, mix the yoghurt, grated ginger, crushed garlic, garam masala and turmeric; add the chicken and coat it well."
     },
-    "timerSeconds": 3600
+    "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Tavukları tavada yüksek ateşte renk alana kadar pişir.",
-     "en": "Cook the chicken in a pan over high heat until browned."
+     "tr": "Kabı kapatıp buzdolabında 4 saat beklet.",
+     "en": "Cover the bowl and leave it in the fridge for 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Tavuğu tavada tereyağının yarısıyla kenarları hafif kızarana kadar çevir, bir kenara al.",
+     "en": "Sear the chicken in half the butter until the edges are lightly browned, then set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğrayıp kalan tereyağında 8 dakika kavur.",
+     "en": "Fry the finely chopped onion in the rest of the butter for 8 minutes."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kimyonu ve toz kırmızı biberi ekleyip kokusu çıkana kadar çevir; domates püresini ve tuzu ekle, 10 dakika kısık ateşte pişir.",
+     "en": "Add the cumin and paprika and stir until fragrant; add the passata and salt and simmer gently for 10 minutes."
     },
     "timerSeconds": 600
    },
    {
     "text": {
-     "tr": "Domates püresini ekle ve sos kıvam alana kadar pişir.",
-     "en": "Add passata and cook until the sauce thickens."
+     "tr": "Tavuğu birikmiş suyuyla birlikte sosa ekle, kremayı gezdir ve 15 dakika kısık ateşte pişir.",
+     "en": "Return the chicken with its juices to the sauce, stir in the cream and simmer gently for 15 minutes."
     },
     "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Tuzunu ayarla, doğranmış kişnişle süsle ve pilav ya da naanla sıcak servis et.",
+     "en": "Adjust the salt, scatter over the chopped coriander and serve hot with rice or naan."
+    },
+    "timerSeconds": null
    }
   ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Tavuğu bir gece önceden marine edip buzdolabında bekletebilirsin.",
+     "en": "Marinate the chicken the night before and keep it chilled."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
   "tags": [
+   "glutenFree",
+   "kidFriendly",
+   "makeAhead",
+   "guest",
    "Tavuklu",
    "Tencere",
-   "Acılı"
+   "Marine"
   ],
   "mealSlots": [
    "dinner"
   ],
   "leftover": {
    "likelihood": "medium",
-   "keepsDays": 2,
+   "keepsDays": 3,
    "reheatable": true
   },
   "source": "curated-v1",
