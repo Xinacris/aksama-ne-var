@@ -1,5 +1,6 @@
 import { pantryEntry } from "../data/seed/ingredients";
 import { fileByDishId } from "./files";
+import { qualityProblems } from "./quality";
 import {
   CATEGORIES,
   CUISINES,
@@ -41,6 +42,8 @@ export interface CatalogReport {
   ok: boolean;
   /** Converted built-ins still waiting for generated fields (description): fine while partial. */
   pendingFill: string[];
+  /** Built-ins that the generated-recipe quality rules would fail: exempt, listed for information. */
+  builtinQuality: RecipeProblem[];
   dishErrors: string[];
   recipeErrors: RecipeProblem[];
   cells: CellCount[];
@@ -115,6 +118,7 @@ export function validateCatalog(input: { dishes: unknown[]; files: Record<string
   const fileOf = fileByDishId(dishes);
   const recipeErrors: RecipeProblem[] = [];
   const pendingFill: string[] = [];
+  const builtinQuality: RecipeProblem[] = [];
   const present = new Map<string, CatalogRecipe>();
   const recipeSeen = new Map<string, string>();
   for (const [file, rows] of Object.entries(input.files)) {
@@ -129,6 +133,10 @@ export function validateCatalog(input: { dishes: unknown[]; files: Record<string
           if (dish.cuisine !== recipe.cuisine || dish.category !== recipe.category)
             problems.push(`${recipe.cuisine}/${recipe.category} ≠ dish list ${dish.cuisine}/${dish.category}`);
           if (fileOf.get(dish.id) !== file) problems.push(`belongs in ${fileOf.get(dish.id)}, found in ${file}`);
+          const quality = qualityProblems(recipe);
+          if (dish.existing) {
+            if (quality.length) builtinQuality.push({ slug: recipe.slug, file, problems: quality });
+          } else problems.push(...quality);
           if (!recipe.description) {
             if (dish.existing && opts.partial) pendingFill.push(recipe.slug);
             else problems.push("description: missing (TR + EN)");
@@ -162,11 +170,11 @@ export function validateCatalog(input: { dishes: unknown[]; files: Record<string
     existing: dishes.filter((d) => d.existing && present.has(d.id)).length,
   };
   const matrixOk = opts.partial || cells.every((c) => c.recipes === c.expected);
-  return { ok: !dishErrors.length && !recipeErrors.length && matrixOk, pendingFill, dishErrors, recipeErrors, cells, totals };
+  return { ok: !dishErrors.length && !recipeErrors.length && matrixOk, pendingFill, builtinQuality, dishErrors, recipeErrors, cells, totals };
 }
 
 /** A readable report: the matrix (expected / dish list / recipes) and every failing recipe. */
-export function formatReport(r: CatalogReport, opts: { partial?: boolean } = {}): string {
+export function formatReport(r: CatalogReport, opts: { partial?: boolean; verbose?: boolean } = {}): string {
   const lines: string[] = [];
   lines.push(`Recipes: ${r.totals.recipes} / ${r.totals.expected} (dish list ${r.totals.dishes}, of which ${r.totals.existing} converted built-ins present)`);
   lines.push("");
@@ -177,6 +185,12 @@ export function formatReport(r: CatalogReport, opts: { partial?: boolean } = {})
     lines.push(`${c.cuisine.padEnd(11)} ${c.category.padEnd(9)} ${String(c.expected).padStart(8)}  ${String(c.dishes).padStart(6)}  ${String(c.recipes).padStart(7)}${flag}`);
   }
   if (r.pendingFill.length) lines.push("", `Converted built-ins waiting for a description (generate-recipes --fill): ${r.pendingFill.length}`);
+  if (r.builtinQuality.length) {
+    const reasons = new Map<string, number>();
+    for (const b of r.builtinQuality) for (const p of b.problems) reasons.set(p.split(":")[0], (reasons.get(p.split(":")[0]) ?? 0) + 1);
+    lines.push(`Built-ins exempt from the generated-recipe quality rules: ${r.builtinQuality.length} would fail (${[...reasons].map(([k, n]) => `${k} ${n}`).join(", ")}); --verbose lists them`);
+    if (opts.verbose) for (const b of r.builtinQuality) lines.push(`  ${b.slug}`, ...b.problems.map((p) => `      ${p}`));
+  }
   if (r.dishErrors.length) {
     lines.push("", "Dish list problems:");
     for (const e of r.dishErrors) lines.push(`  - ${e}`);
