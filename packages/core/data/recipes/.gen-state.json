@@ -2631,11 +2631,11 @@
     "kitchari",
     "tavuk-saag"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:45:52.698Z",
    "finishedAt": null
   },
   {
@@ -2809,12 +2809,17 @@
     "coleslaw",
     "waldorf-salatasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "sezar-salata",
+    "cobb-salata",
+    "coleslaw",
+    "waldorf-salatasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 65989,
    "startedAt": "2026-10-15T22:44:32.418Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:46:09.232Z"
   },
   {
    "id": "g091",

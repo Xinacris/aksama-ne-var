@@ -1,1 +1,926 @@
-[]
+[
+ {
+  "id": "f3c93923-bbee-45b4-91a3-022d7eaa2fe3",
+  "slug": "sezar-salata",
+  "cuisine": "american",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Sezar salata",
+   "en": "Caesar salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Römen marul, çıtır kruton, parmesan ve ançüezli limonlu sosla hazırlanan klasik bir salata. Sos kalın ve dengeli olmalı, salata servis edilmeden hemen önce karıştırılmalı.",
+   "en": "A classic of romaine, crisp croutons and parmesan, dressed with an anchovy and lemon sauce. The dressing should be thick and balanced, and the salad tossed just before it goes to the table."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Römen marul",
+     "en": "Romaine lettuce"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yıkanıp kurulanmış, büyük parçalar halinde doğranmış",
+     "en": "washed, dried and torn into large pieces"
+    },
+    "pantryKey": "lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bayat ekmek",
+     "en": "Stale bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "kabuğu alınıp küp doğranmış",
+     "en": "crusts removed and cut into cubes"
+    },
+    "pantryKey": "stale-bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yalnızca sarısı",
+     "en": "yolk only"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ançüez",
+     "en": "Anchovy fillets"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "yağı süzülmüş, ezilmiş",
+     "en": "drained and mashed"
+    },
+    "pantryKey": "anchovy-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "yarısı rendelenmiş, yarısı servis için",
+     "en": "half finely grated, half for serving"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Ekmek küplerini zeytinyağının 3 yemek kaşığı, ezilmiş sarımsağın yarısı ve bir tutam tuzla karıştırıp fırın tepsisine yay.",
+     "en": "Heat the oven to 180°C. Toss the bread cubes with 3 tablespoons of the oil, half the garlic and a pinch of salt, and spread them on a baking tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kruton küplerini 10 dakika fırında, altın rengi alana kadar kızart.",
+     "en": "Roast the croutons for 10 minutes until golden."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için kalan sarımsağı tuzla bir havan ya da kasede macun haline gelene kadar ez. Yumurta sarısı, ançüez, hardal, Worcestershire sos ve limon suyunu ekleyip çırpıcıyla iyice çırp.",
+     "en": "For the dressing, mash the remaining garlic with salt to a paste. Add the egg yolk, anchovies, mustard, Worcestershire sauce and lemon juice, and whisk well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan zeytinyağını ince bir sızmayla ekleyip sürekli çırparak kalın bir sos elde et. Rendelenmiş parmesanı karıştır, tadına bakıp tuz ve karabiber ile ayarla.",
+     "en": "Trickle in the rest of the oil while whisking constantly until the dressing thickens. Stir in the grated parmesan and adjust the salt and pepper to taste."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marulu büyük kaseye al, sosun yarısını ekleyip yapraklar her tarafa sıvanana kadar elinle ya da maşayla karıştır.",
+     "en": "Put the lettuce in a large bowl, add half the dressing and toss with your hands or tongs until every leaf is coated."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kruton ve servis için ayırdığın parmesanı ekleyip hemen servis et. Kalan sosu masada ayrıca koy.",
+     "en": "Add the croutons and the reserved parmesan, and serve straight away. Keep the rest of the dressing on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Fırında",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "30bee831-6c1b-4f13-89e5-ca2bec4ded90",
+  "slug": "cobb-salata",
+  "cuisine": "american",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Cobb salata",
+   "en": "Cobb salad (with smoked turkey)"
+  },
+  "shortTitle": {
+   "tr": "Cobb salata",
+   "en": "Cobb salad"
+  },
+  "description": {
+   "tr": "Kıvırcık marul üzerine füme hindi, haşlanmış yumurta, avokado, kiraz domates ve keçi peyniri dizilen, her lokmada farklı bir tat sunan doyurucu bir salata. Sirkeli hardallı sosla servis edilir.",
+   "en": "A filling salad of curly lettuce, smoked turkey, boiled egg, avocado, cherry tomatoes and goat's cheese, each arranged in its own strip so that every forkful tastes different. Served with a sharp mustard vinaigrette."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kıvırcık marul",
+     "en": "Curly lettuce"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yıkanıp kurulanmış",
+     "en": "washed and dried"
+    },
+    "pantryKey": "curly-lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Füme hindi",
+     "en": "Smoked turkey"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "smoked-turkey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış, dörde bölünmüş",
+     "en": "boiled, quartered"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Avokado",
+     "en": "Avocado"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "avocado",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kiraz domates",
+     "en": "Cherry tomatoes"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Keçi peyniri",
+     "en": "Goat's cheese"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "mavi peynir yerine, ufalanmış",
+     "en": "crumbled, in place of blue cheese"
+    },
+    "pantryKey": "goat-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Frenk soğanı",
+     "en": "Chives"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely snipped"
+    },
+    "pantryKey": "chives",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kırmızı şarap sirkesi",
+     "en": "red wine vinegar"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurtaları 9 dakika kaynar suda haşla, hemen soğuk suya al, soyup dörde böl.",
+     "en": "Boil the eggs in simmering water for 9 minutes, then move them straight to cold water, peel and quarter them."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için sirke, hardal, bir tutam tuz ve karabiberi bir kasede çırp. Zeytinyağını ince sızmayla ekleyip sürekli çırparak sosu birleştir.",
+     "en": "For the dressing, whisk the vinegar, mustard, a pinch of salt and black pepper in a bowl. Slowly whisk in the olive oil until the dressing comes together."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marulu yıkayıp iyice kurula, geniş bir servis tabağına yay.",
+     "en": "Wash the lettuce, dry it well and spread it over a wide serving platter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Füme hindiyi, domatesi ve avokadoyu marulun üzerinde ayrı şeritler halinde diz. Yumurtaları ve ufalanmış keçi peynirini de aralara yerleştir.",
+     "en": "Arrange the smoked turkey, tomatoes and avocado over the lettuce in separate strips. Tuck the egg quarters and crumbled goat's cheese in between."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Frenk soğanını salatanın üzerine serp.",
+     "en": "Scatter the chives over the salad."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu salatanın üzerine gezdirip hemen servis et. Herkes kendi tabağında karıştırsın.",
+     "en": "Drizzle the dressing over the salad and serve at once, letting everyone toss their own plate."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Etli",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3eb26883-f3f9-413b-b3cf-2086fd73ca7a",
+  "slug": "coleslaw",
+  "cuisine": "american",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Coleslaw",
+   "en": "Coleslaw"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İnce kıyılmış lahana ve havucu hafif tatlı, ekşi bir mayonezli sosla buluşturan, ızgara etlerin yanına çok yakışan bir garnitür. Buzdolabında bir saat dinlenince lahana yumuşar ve tat iyice oturur.",
+   "en": "Finely shredded cabbage and carrot in a lightly sweet, sharp mayonnaise dressing, the classic partner for grilled meat. It is best after an hour in the fridge, when the cabbage softens and the flavours settle."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 0,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz lahana",
+     "en": "White cabbage"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "çok ince kıyılmış",
+     "en": "very finely shredded"
+    },
+    "pantryKey": "white-cabbage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mayonez",
+     "en": "Mayonnaise"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "mayonnaise",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Elma sirkesi",
+     "en": "Apple cider vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "apple-vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Lahanayı çok ince kıyıp büyük bir kaseye al. Üzerine bir tutam tuz serpip ellerinle 2 dakika ovuştur, lahana yumuşayıp suyunu bıraksın.",
+     "en": "Shred the cabbage very finely into a large bowl. Sprinkle over a pinch of salt and massage it with your hands for 2 minutes, until it softens and releases some liquid."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Havucu rendele, kırmızı soğanı ince doğrayıp lahanaya ekle.",
+     "en": "Grate the carrot, finely dice the red onion and add both to the cabbage."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için mayonez, süzme yoğurt, elma sirkesi, şeker, hardal ve karabiberi ayrı bir kasede pürüzsüz olana kadar çırp.",
+     "en": "For the dressing, whisk the mayonnaise, strained yoghurt, cider vinegar, sugar, mustard and black pepper in a separate bowl until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu lahananın üzerine ekleyip iyice karıştır, sosun tüm sebzelere sıvandığından emin ol.",
+     "en": "Pour the dressing over the vegetables and mix thoroughly so every shred is coated."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapatıp 1 saat buzdolabında dinlendir.",
+     "en": "Cover the bowl and chill it in the fridge for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Servisten önce maydanozu serp, tuz ve karabiberle tadını ayarlayıp servis et.",
+     "en": "Just before serving, scatter over the parsley, adjust the salt and pepper to taste, and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "quick",
+   "Pişirmeden",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2835ddd3-3c4d-49e7-96a8-8ee16dc1962e",
+  "slug": "waldorf-salatasi",
+  "cuisine": "american",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Waldorf salatası",
+   "en": "Waldorf salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Elma, kereviz, üzüm ve kavrulmuş cevizin hafif mayonezli bir sosla buluştuğu, tatlı ve çıtır bir salata. Elmaların kararmaması için limon suyuyla doğrayıp hemen karıştırmak gerekir.",
+   "en": "Apple, celery, grapes and toasted walnuts bound in a light mayonnaise dressing, sweet and crunchy. Toss the apple in lemon juice as you cut it so it does not brown, and dress it just before serving."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 3,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Elma",
+     "en": "Apple"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "kabuklu, küp doğranmış",
+     "en": "unpeeled, diced"
+    },
+    "pantryKey": "apple",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnut halves"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çekirdeksiz üzüm",
+     "en": "Seedless grapes"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "grape",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mayonez",
+     "en": "Mayonnaise"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "mayonnaise",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süzme yoğurt",
+     "en": "Strained yoghurt"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "strained-yoghurt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kıvırcık marul",
+     "en": "Curly lettuce"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "servis tabağına yatak olması için",
+     "en": "to line the serving plate"
+    },
+    "pantryKey": "curly-lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Cevizleri kuru tavada orta ateşte 3 dakika, hafif kokusu çıkana kadar kavur. Tabağa al ve soğumaya bırak.",
+     "en": "Toast the walnuts in a dry pan over a medium heat for 3 minutes, until they smell nutty. Tip them out to cool."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Elmaları kabuklu olarak küp doğra ve hemen limon suyuna bulayıp kararmasını önle.",
+     "en": "Dice the apples, skin on, and toss them straight into the lemon juice so they do not brown."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kerevizleri ince dilimle, üzümleri ikiye böl.",
+     "en": "Thinly slice the celery and halve the grapes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için mayonez, süzme yoğurt, bir tutam tuz ve karabiberi bir kasede pürüzsüz olana kadar karıştır.",
+     "en": "For the dressing, stir the mayonnaise, strained yoghurt, a pinch of salt and black pepper in a bowl until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Elma, kereviz, üzüm ve cevizi büyük bir kapta sosla hafifçe karıştır. Elmanın suyunu da ekle, kıvamı yumuşak tutar.",
+     "en": "Gently fold the apple, celery, grapes and walnuts into the dressing. Add the juice from the apple bowl as well, which keeps the dressing loose."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marul yapraklarını servis tabağına yay, salatayı üzerine koy ve hemen servis et.",
+     "en": "Line a serving plate with the lettuce leaves, pile the salad on top and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "quick",
+   "Pişirmeden",
+   "Hafif"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
