@@ -9335,5 +9335,2248 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "5a0f1dbe-60f7-4c48-af1f-f9af534ef354",
+  "slug": "zeytinyagli-domates-dolmasi",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı domates dolması",
+   "en": "Tomatoes stuffed with rice"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Olgun domateslerin içine çam fıstıklı, kuş üzümlü pirinç harcı doldurulup zeytinyağıyla kısık ateşte pişirilir. Oda ısısında ya da soğuk servis edilir.",
+   "en": "Ripe tomatoes filled with a rice mix of pine nuts and currants, then cooked slowly in olive oil. Served at room temperature or cold."
+  },
+  "servings": 4,
+  "prepMinutes": 30,
+  "cookMinutes": 50,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": {
+     "tr": "büyük ve sağlam",
+     "en": "large and firm"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çam fıstığı",
+     "en": "Pine nuts"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "pine-nut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuş üzümü",
+     "en": "Currants"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "currant",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Domateslerin üst kısmını kesip çıkar, içini kaşıkla boşalt ve ters çevirip süzülmeye bırak.",
+     "en": "Cut the tops off the tomatoes, scoop out the insides with a spoon and turn them upside down to drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğra ve 2 yemek kaşığı zeytinyağında kısık ateşte yumuşayana kadar sotele.",
+     "en": "Finely chop the onion and soften it in 2 tablespoons of olive oil over a low heat until tender."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirinci yıkayıp süz, soğanın üzerine ekle; maydanoz, çam fıstığı, kuş üzümü, kuru nane, şeker, tuz ve karabiberle birlikte 2 dakika kavur.",
+     "en": "Rinse and drain the rice, add it to the onion with the parsley, pine nuts, currants, dried mint, sugar, salt and black pepper, and fry for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Harçla domateslerin yaklaşık üçte ikisini doldur, çünkü pirinç şişecek; kapaklarını geri koy.",
+     "en": "Fill the tomatoes about two-thirds full, as the rice will swell, and put their tops back on."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Domatesleri tencereye sıkıca diz, aralarına 200 ml su ve kalan 4 yemek kaşığı zeytinyağını ekle; kapağını kapat ve 40 dakika kısık ateşte pişir.",
+     "en": "Pack the tomatoes snugly into a pot, pour in the 200 ml water and the remaining 4 tablespoons of olive oil, cover and cook over a low heat for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, oda ısısına gelene kadar dinlendir ve servis et.",
+     "en": "Take off the heat, let them cool to room temperature and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "98ba5df2-e22a-4ae7-9ffd-2d765581ae0d",
+  "slug": "zeytinyagli-barbunya",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı barbunya",
+   "en": "Fresh borlotti beans in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze barbunyanın domates ve havuçla yavaş yavaş pişirilip kendi suyunda yumuşatıldığı, soğuk yenen klasik bir zeytinyağlı sebze yemeği.",
+   "en": "Fresh borlotti beans slowly simmered with tomato and carrot until tender in their own juices, a classic cold olive oil dish."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 50,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze barbunya",
+     "en": "Fresh borlotti beans"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "uçları alınmış",
+     "en": "ends snapped off"
+    },
+    "pantryKey": "borlotti-fresh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka kesilmiş",
+     "en": "cut into thin rounds"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıcak su",
+     "en": "Hot water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş, servis için",
+     "en": "sliced, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Barbunyaların uçlarını koparıp yıka, iri olanları ikiye böl.",
+     "en": "Snap off the ends of the beans, rinse them and cut any large ones in half."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğra, havucu ince halka kes, domatesi küp doğra.",
+     "en": "Finely chop the onion and garlic, slice the carrot into thin rounds and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates, havuç, şeker ve tuzu ekleyip 5 dakika daha karıştırarak pişir.",
+     "en": "Add the tomatoes, carrot, sugar and salt and cook, stirring, for 5 more minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Barbunyaları ekle, sıcak suyu da ilave et; kapağını kapat ve 40 dakika kısık ateşte, sular büyük ölçüde çekilene kadar pişir.",
+     "en": "Add the beans and the hot water, cover and simmer gently for 40 minutes, until most of the liquid has been absorbed."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 3 yemek kaşığı zeytinyağını gezdir, maydanozu serp ve oda ısısında soğumaya bırak.",
+     "en": "Take off the heat, drizzle over the remaining 3 tablespoons of olive oil, scatter the parsley and leave to cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Buzdolabında 2 saat dinlendir ve limon dilimleriyle servis et.",
+     "en": "Chill in the fridge for 2 hours and serve with lemon slices."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "makeAhead",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d36d2738-c99a-4834-84cd-9f98b75c4f2c",
+  "slug": "zeytinyagli-bakla",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı bakla",
+   "en": "Broad beans in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Bahar baklasının domates ve dereotuyla zeytinyağında yumuşatıldığı, limon sıkılıp soğuk servis edilen hafif bir yemek.",
+   "en": "Spring broad beans cooked with tomato in olive oil, finished with lemon and dill and served cold. A light dish for the start of summer."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze bakla",
+     "en": "Fresh broad beans"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "kabukları ayıklanmış",
+     "en": "shelled weight"
+    },
+    "pantryKey": "fresh-broad-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Baklaların kabuğunu ayıklayıp yıka; iri olanları ikiye böl.",
+     "en": "Rinse the shelled broad beans and cut any large ones in half."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğra, domatesi küp doğra.",
+     "en": "Finely chop the onion and garlic and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates, şeker ve tuzu ekleyip 2 dakika karıştır; baklaları da ekle.",
+     "en": "Stir in the tomatoes, sugar and salt for 2 minutes, then add the broad beans."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Suyu ekle, kapağını kapat ve 35 dakika kısık ateşte pişir.",
+     "en": "Add the water, cover and cook over a low heat for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan zeytinyağı ve limonun suyunu gezdirip dereotuyla karıştır.",
+     "en": "Take off the heat, stir in the remaining olive oil, the lemon juice and the dill."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Buzdolabında 2 saat dinlendir ve soğuk servis et.",
+     "en": "Chill in the fridge for 2 hours and serve cold."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "makeAhead",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "bbf45d49-2c51-401f-9615-6badda7f6031",
+  "slug": "zeytinyagli-kereviz",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı kereviz",
+   "en": "Celeriac in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kerevizin havuç ve domates salçasıyla zeytinyağında yumuşatıldığı, dereotu ile tamamlanan sade bir sebze yemeği.",
+   "en": "Celeriac braised with carrot and tomato paste in olive oil, finished with dill. A simple vegetable dish that tastes better once it has cooled."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kereviz",
+     "en": "Celeriac"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "soyulmuş",
+     "en": "peeled"
+    },
+    "pantryKey": "celeriac",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çubuk doğranmış",
+     "en": "cut into sticks"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kerevizin kabuğunu soy, kalın çubuklar halinde doğra ve limon suyu sıkılmış bir kase suya at.",
+     "en": "Peel the celeriac, cut it into thick sticks and drop them into a bowl of water with lemon juice squeezed in."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havucu çubuk, soğanı ince doğra.",
+     "en": "Cut the carrot into sticks and finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğanı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Salçayı ekleyip 1 dakika kavur.",
+     "en": "Stir in the tomato paste and fry for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Süzdüğün kereviz ve havucu, şeker, tuz ve suyla birlikte tencereye ekle; kapağını kapat ve 30 dakika kısık ateşte pişir.",
+     "en": "Drain the celeriac and add it to the pot with the carrot, sugar, salt and water; cover and cook over a low heat for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kalan 3 yemek kaşığı zeytinyağını gezdir, ince kıyılmış dereotunu serp ve oda ısısında soğut.",
+     "en": "Drizzle over the remaining 3 tablespoons of olive oil, scatter the chopped dill and leave to cool to room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "0fc112eb-9625-49ab-921c-009b8e87be1b",
+  "slug": "zeytinyagli-lahana",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı lahana",
+   "en": "Cabbage in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Beyaz lahananın havuç ve domatesle zeytinyağında yavaşça pişirilip limon ve dereotuyla tatlandırıldığı, soğuk ya da oda ısısında yenen bir yemek.",
+   "en": "White cabbage cooked slowly with carrot and tomato in olive oil, brightened with lemon and dill. Eaten cold or at room temperature."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Beyaz lahana",
+     "en": "White cabbage"
+    },
+    "amount": 700,
+    "unit": "g",
+    "note": {
+     "tr": "ince şerit doğranmış",
+     "en": "finely shredded"
+    },
+    "pantryKey": "white-cabbage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomato"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Lahananın sert damarını çıkar ve ince şerit doğra.",
+     "en": "Cut out the hard core of the cabbage and shred it finely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Havucu rendele, soğanı ince doğra, sarımsağı ince kıy, domatesi küp doğra.",
+     "en": "Grate the carrot, finely chop the onion and garlic and dice the tomato."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Havuç, domates ve şekeri ekleyip 2 dakika karıştır.",
+     "en": "Add the carrot, tomato and sugar and stir for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Lahanayı, tuzu ve suyu ekleyip iyice karıştır.",
+     "en": "Add the cabbage, salt and water and stir well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapat ve 40 dakika kısık ateşte pişir.",
+     "en": "Cover the pot and cook over a low heat for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 2 yemek kaşığı zeytinyağı, limon suyu ve dereotunu ekle; oda ısısında soğutup servis et.",
+     "en": "Take off the heat, stir in the remaining 2 tablespoons of olive oil, the lemon juice and the dill, then cool to room temperature and serve."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "18637cb0-b69f-496d-bc90-c7da8f30e830",
+  "slug": "zeytinyagli-bamya",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı bamya",
+   "en": "Okra in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze bamyanın sirkeyle ovalanıp domates ve sarımsakla zeytinyağında pişirildiği, limonla servis edilen klasik bir sebze yemeği.",
+   "en": "Fresh okra rubbed with vinegar, then cooked with tomato and garlic in olive oil and served with lemon. A classic summer vegetable dish."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze bamya",
+     "en": "Fresh okra"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "küçük ve taze",
+     "en": "small and fresh"
+    },
+    "pantryKey": "okra",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "bamyayı ovalamak için",
+     "en": "for rubbing the okra"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş, servis için",
+     "en": "sliced, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Bamyaların saplarını kesip yıka; 1 yemek kaşığı sirkeyle karıştırıp ovala ve süz.",
+     "en": "Trim the stalks from the okra, rinse them, then toss and rub them with 1 tablespoon of vinegar and drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğra, domatesi küp doğra.",
+     "en": "Finely chop the onion and garlic and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domatesi ekleyip 3 dakika daha pişir.",
+     "en": "Add the tomatoes and cook for 3 more minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bamyaları, şekeri, tuzu ve suyu ekleyip karıştır.",
+     "en": "Add the okra, sugar, salt and water and stir gently."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağını kapat ve 30 dakika kısık ateşte pişir.",
+     "en": "Cover the pot and cook over a low heat for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 3 yemek kaşığı zeytinyağını gezdir ve limon dilimleriyle oda ısısında servis et.",
+     "en": "Take off the heat, drizzle over the remaining 3 tablespoons of olive oil and serve at room temperature with lemon slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d5a76575-d070-45ba-aa89-f129c5b7d937",
+  "slug": "zeytinyagli-ayse-kadin",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı ayşe kadın",
+   "en": "Runner beans in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ayşe kadın fasulyesinin domates ve sarımsakla zeytinyağında yumuşatıldığı, dereotuyla tamamlanan yaz sebze yemeği.",
+   "en": "Runner beans slowly cooked with tomato and garlic in olive oil and finished with dill, a summer vegetable dish."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ayşe kadın fasulyesi",
+     "en": "Runner beans"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "uçları ve ipliği ayıklanmış",
+     "en": "ends and strings removed"
+    },
+    "pantryKey": "runner-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fasulyelerin uçlarını ve sırtındaki ipliği ayıklayıp parmak boyu parçalara kes, yıka.",
+     "en": "Trim the ends and string from the beans, cut them into finger-length pieces and rinse."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğra, domatesi küp doğra.",
+     "en": "Finely chop the onion and garlic and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates, şeker ve tuzu ekleyip 3 dakika daha pişir.",
+     "en": "Add the tomatoes, sugar and salt and cook for 3 more minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Fasulyeleri ve suyu ekleyip karıştır, kapağını kapat.",
+     "en": "Add the beans and water, stir and cover the pot."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 35 dakika pişir, fasulyeler yumuşayana kadar.",
+     "en": "Cook over a low heat for 35 minutes, until the beans are tender."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 3 yemek kaşığı zeytinyağını gezdirip dereotunu serp; oda ısısında soğut.",
+     "en": "Take off the heat, drizzle over the remaining 3 tablespoons of olive oil, scatter the dill and leave to cool to room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "2821818d-9a06-4aeb-9e1a-8f65c63eae50",
+  "slug": "zeytinyagli-borulce",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": "Ege",
+  "title": {
+   "tr": "Zeytinyağlı börülce",
+   "en": "Fresh black-eyed peas in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Ege mutfağının yaz sebzesi olan taze börülcenin domates ve sarımsakla zeytinyağında pişirilip limonla tamamlandığı hafif bir yemek.",
+   "en": "Fresh black-eyed peas, a summer staple of the Aegean kitchen, cooked with tomato and garlic in olive oil and finished with lemon. A light dish."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Taze börülce",
+     "en": "Fresh black-eyed peas"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "sap uçları koparılmış",
+     "en": "stem ends snapped off"
+    },
+    "pantryKey": "fresh-black-eyed-pea",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Börülcelerin sap uçlarını koparıp yıka ve süz.",
+     "en": "Snap off the stem ends of the black-eyed peas, rinse them and drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ve sarımsağı ince doğra, domatesi küp doğra.",
+     "en": "Finely chop the onion and garlic and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğan ve sarımsağı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion and garlic over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates, şeker ve tuzu ekleyip 4 dakika karıştırarak pişir.",
+     "en": "Add the tomatoes, sugar and salt and cook, stirring, for 4 minutes."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Börülceleri ekleyip suyu koy; kapağını kapat ve 30 dakika kısık ateşte pişir.",
+     "en": "Add the black-eyed peas and water, cover and cook over a low heat for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 3 yemek kaşığı zeytinyağı, limon suyu ve dereotuyla karıştırıp oda ısısında soğut.",
+     "en": "Take off the heat, stir in the remaining 3 tablespoons of olive oil, the lemon juice and the dill, and let it cool to room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "fedbb693-4695-463a-a541-f3eca1cdf7b0",
+  "slug": "zeytinyagli-kabak",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı kabak",
+   "en": "Courgettes in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kabağın havuç ve domatesle zeytinyağında yumuşatılıp dereotuyla tatlandırıldığı, yazın sık yapılan hafif bir sebze yemeği.",
+   "en": "Courgette slices softened with carrot and tomato in olive oil and seasoned with dill. A light, frequently cooked summer vegetable dish."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 800,
+    "unit": "g",
+    "note": {
+     "tr": "kalın dilimlenmiş",
+     "en": "cut into thick slices"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 5,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları yıka, kalın dilimler halinde kes.",
+     "en": "Rinse the courgettes and cut them into thick slices."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğra, havucu küçük küp doğra, domatesi rendele, sarımsağı ince kıy.",
+     "en": "Finely chop the onion, dice the carrot, grate the tomatoes and finely chop the garlic."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğanı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Havuç, sarımsak, domates, şeker ve tuzu ekleyip 2 dakika daha karıştır.",
+     "en": "Add the carrot, garlic, tomatoes, sugar and salt and stir for 2 more minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Kabakları ve suyu ekle, kapağını kapat ve 25 dakika kısık ateşte pişir.",
+     "en": "Add the courgettes and water, cover and cook over a low heat for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 2 yemek kaşığı zeytinyağını gezdirip dereotunu serp ve oda ısısında servis et.",
+     "en": "Take off the heat, drizzle over the remaining 2 tablespoons of olive oil, scatter the dill and serve at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "094e72eb-2e20-4060-b77b-27c2d1726e07",
+  "slug": "zeytinyagli-patlican",
+  "cuisine": "turkish",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Zeytinyağlı patlıcan",
+   "en": "Aubergines in olive oil"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patlıcanın acısı tuzlu suda alınıp biber, domates ve sarımsakla zeytinyağında pişirildiği, maydanozla tamamlanan klasik bir sebze yemeği.",
+   "en": "Aubergine soaked in salted water to remove its bitterness, then cooked with pepper, tomato and garlic in olive oil and finished with parsley."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 35,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergines"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy",
+     "en": "medium"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sivri biber",
+     "en": "Long green peppers"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "halka kesilmiş",
+     "en": "sliced into rings"
+    },
+    "pantryKey": "long-green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 6,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patlıcanların sapını kesip boyuna şeritler halinde soy, sonra tuzlu suda 10 dakika bekletin.",
+     "en": "Trim the stalks, peel the aubergines in long stripes, then leave them in salted water for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Patlıcanları süzüp bir bezle kurula ve 4 parçaya kes.",
+     "en": "Drain the aubergines, pat them dry with a cloth and cut each into 4 pieces."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğanı ince doğra, biberleri halka kes, sarımsağı ince kıy, domatesi küp doğra.",
+     "en": "Finely chop the onion, slice the peppers into rings, chop the garlic and dice the tomatoes."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 3 yemek kaşığı zeytinyağını ısıt, soğanı kısık ateşte 3 dakika sotele.",
+     "en": "Heat 3 tablespoons of olive oil in a pot and sweat the onion over a low heat for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Patlıcan, biber ve sarımsağı ekleyip 5 dakika kavur.",
+     "en": "Add the aubergine, peppers and garlic and fry for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domatesi, şekeri ve tuzu ekle; suyu koyup kapağını kapat ve 25 dakika kısık ateşte pişir.",
+     "en": "Add the tomatoes, sugar and salt, pour in the water, cover and cook over a low heat for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 3 yemek kaşığı zeytinyağını ve maydanozu ekle; oda ısısında servis et.",
+     "en": "Take off the heat, stir in the remaining 3 tablespoons of olive oil and the parsley, and serve at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "Zeytinyağlı",
+   "Vejetaryen",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
