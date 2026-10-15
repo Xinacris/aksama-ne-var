@@ -2219,5 +2219,624 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "dd61cbe3-328f-45d2-94fc-70b573745617",
+  "slug": "empanadillas-de-at-n",
+  "cuisine": "spanish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Empanadillas de atún",
+   "en": "Tuna empanadillas"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İspanya'nın küçük, yarım ay şeklinde hamur işi; ton balığı ve közlenmiş kırmızı biberli dolgusuyla sıcak da, oda sıcaklığında da yenir.",
+   "en": "Small half-moon pastries from Spain, filled with tuna, roasted red pepper and tomato. Good warm or at room temperature."
+  },
+  "servings": 4,
+  "prepMinutes": 35,
+  "cookMinutes": 30,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "hamur için",
+     "en": "for the dough"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 80,
+    "unit": "ml",
+    "note": {
+     "tr": "hamur ve soteleme için",
+     "en": "for the dough and sautéing"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ilık su",
+     "en": "Lukewarm water"
+    },
+    "amount": 120,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Közlenmiş kırmızı biber",
+     "en": "Roasted red pepper"
+    },
+    "amount": 1,
+    "unit": "kavanoz",
+    "note": {
+     "tr": "süzülmüş, küp doğranmış",
+     "en": "drained, diced"
+    },
+    "pantryKey": "roasted-red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates salçası",
+     "en": "Tomato paste"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tomato-paste",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Sweet paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı",
+     "en": "Tuna"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "üzerine sürmek için çırpılmış",
+     "en": "beaten, for brushing"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Büyük bir kaseye unu ve bir tutam tuzu alıp ortasında çukur açın. 60 ml zeytinyağını ve ılık suyu ekleyip yumuşak, ellere yapışmayan bir hamur yoğurun.",
+     "en": "Put the flour and a pinch of salt in a large bowl and make a well in the middle. Add 60 ml of the olive oil and the lukewarm water, and knead into a soft dough that does not stick to your hands."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru folyoya sarıp 30 dakika dinlendirin.",
+     "en": "Wrap the dough in cling film and rest it for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Kalan 20 ml zeytinyağında soğanı ve küp doğranmış kırmızı biberi 8 dakika orta ateşte yumuşayana kadar soteleyin.",
+     "en": "Sauté the onion and diced red pepper in the remaining 20 ml of olive oil over a medium heat for 8 minutes, until soft."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Domates salçasını ve toz kırmızı biberi ekleyip karıştırın. Süzülmüş ton balığını ekleyin, tuz ve karabiberle tatlandırın ve 3 dakika pişirin.",
+     "en": "Stir in the tomato paste and paprika. Add the drained tuna, season with salt and black pepper, and cook for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Dolguyu tamamen soğumaya bırakın. Bu sırada hamuru 3 mm kalınlığında açıp 10 cm çapında daireler kesin.",
+     "en": "Let the filling cool completely. Meanwhile, roll the dough out to 3 mm thick and cut out 10 cm circles."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her daireye bir yemek kaşığı dolgu koyun, yarıya katlayıp kenarlarını çatalla bastırarak kapatın.",
+     "en": "Spoon a tablespoon of filling onto each circle, fold in half and press the edges shut with a fork."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıtın. Hamurların üzerine çırpılmış yumurtayı sürüp 20 dakika, altın renk alana kadar pişirin.",
+     "en": "Heat the oven to 200°C. Brush the pastries with the beaten egg and bake for 20 minutes, until golden."
+    },
+    "timerSeconds": 1200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Hamur işi",
+   "Balık",
+   "Misafir"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "958e8c6c-0154-432a-b051-0df8271a8229",
+  "slug": "pulpo-a-la-gallega",
+  "cuisine": "spanish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Pulpo a la gallega",
+   "en": "Galician octopus"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Galiçya'nın klasik tapası: haşlanmış ahtapot, kabuğunda pişmiş patates, zeytinyağı ve tatlı İsli kırmızı biberle servis edilir.",
+   "en": "Galicia's classic tapa: boiled octopus with potatoes, olive oil and sweet smoked paprika."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 65,
+  "waitMinutes": 5,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Ahtapot",
+     "en": "Octopus"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "cleaned"
+    },
+    "pantryKey": "octopus",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "orta boy",
+     "en": "medium-sized"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": {
+     "tr": "servis için gezdirmek üzere",
+     "en": "for drizzling at the end"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "İsli kırmızı biber (tatlı)",
+     "en": "Sweet smoked paprika"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "pimentón",
+     "en": "pimentón"
+    },
+    "pantryKey": "smoked-paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pişirme suyu",
+     "en": "Cooking water"
+    },
+    "amount": 3,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Büyük bir tencerede 3 litre suyu defne yapraklarıyla birlikte kaynatın ve bir kaşık tuz ekleyin.",
+     "en": "Bring 3 litres of water to the boil in a large pot with the bay leaves and a spoonful of salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ahtapotu kaynayan suya üç kez daldırıp çıkarın; her defasında birkaç saniye bekletin ki bacakları kıvrılsın.",
+     "en": "Dip the octopus into the boiling water three times, lifting it out each time for a few seconds so the legs curl up."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ahtapotu tamamen suya daldırın ve kısık ateşte 45 dakika pişirin. Bir çatal rahatça girdiğinde hazırdır.",
+     "en": "Lower the octopus fully into the water and simmer gently for 45 minutes. It is ready when a fork goes in easily."
+    },
+    "timerSeconds": 2700
+   },
+   {
+    "text": {
+     "tr": "Ahtapotu çıkarıp bir tahtaya alın ve 5 dakika dinlendirin.",
+     "en": "Lift the octopus out onto a board and let it rest for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Patatesleri kabuklarıyla aynı kaynayan suya koyup 20 dakika haşlayın. Soyup 1 cm kalınlığında dilimleyin.",
+     "en": "Boil the potatoes in skin-on in the same water for 20 minutes. Peel them and slice them 1 cm thick."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Ahtapotun dokunaçlarını makasla 1 cm'lik parçalara kesin.",
+     "en": "Snip the octopus tentacles into 1 cm pieces with kitchen scissors."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patates dilimlerini geniş bir tabağa dizin, ahtapotu üstüne yerleştirin, zeytinyağını gezdirin ve tatlı İsli kırmızı biberi serpip hemen servis edin.",
+     "en": "Arrange the potato slices on a wide plate, place the octopus on top, drizzle with olive oil, dust with the sweet smoked paprika and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Haşlama",
+   "Tencere",
+   "Misafir"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "7e341027-74f9-4a15-bb17-8e3d63287ffd",
+  "slug": "escalivada",
+  "cuisine": "spanish",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Escalivada",
+   "en": "Escalivada (roasted vegetables)"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Fırında kavrulmuş patlıcan, kırmızı biber ve soğandan oluşan Katalan garnitürü; sade, zeytinyağlı ve doyurucu.",
+   "en": "A Catalan side of oven-roasted aubergine, red pepper and onion, dressed simply with olive oil and garlic."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": 25,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patlıcan",
+     "en": "Aubergine"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy",
+     "en": "medium-sized"
+    },
+    "pantryKey": "aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kapya biber",
+     "en": "Red pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "kırmızı, iri",
+     "en": "red, large"
+    },
+    "pantryKey": "red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kabuklu, bütün",
+     "en": "whole, skin on"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "olgun",
+     "en": "ripe"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": {
+     "tr": "gezdirmek için",
+     "en": "for dressing"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıtın. Patlıcan, biber, soğan ve domatesleri yıkayıp kabuklarıyla birlikte fırın tepsisine dizin.",
+     "en": "Heat the oven to 220°C. Wash the aubergines, peppers, onions and tomatoes and lay them on a baking tray, skins on."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sebzeleri 40 dakika fırınlayın; kabukları kararıp yumuşamış olmalı.",
+     "en": "Roast the vegetables for 40 minutes, until the skins are charred and the flesh is soft."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Sebzeleri sıcakken bir kaseye alıp kapağını kapatın ya da folyoyla örtün, 10 dakika bekletin.",
+     "en": "Transfer the hot vegetables to a bowl, cover with a lid or foil and leave for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Patlıcan, biber ve soğanın kabuklarını soyun, sapları ve çekirdekleri çıkarın. Sebzeleri 1 cm kalınlığında şeritler halinde kesin. Domateslerin kabuklarını soyup dilimleyin.",
+     "en": "Peel the aubergines, peppers and onions, removing the stalks and seeds. Cut the vegetables into 1 cm strips. Peel the tomatoes and slice them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı zeytinyağı, tuz ve karabiberle karıştırıp sebzelerin üstüne gezdirin. 15 dakika oda sıcaklığında bekletin.",
+     "en": "Mix the garlic with the olive oil, salt and black pepper, spoon it over the vegetables and leave at room temperature for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Sebzeleri katlayarak bir servis tabağına dizin ve oda sıcaklığında servis edin.",
+     "en": "Layer the vegetables on a serving plate and serve at room temperature."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Sebzeleri bir gün önceden fırınlayıp soyun, zeytinyağı ve sarımsakla karıştırıp buzdolabında saklayın.",
+     "en": "Roast and peel the vegetables a day ahead, toss with the olive oil and garlic, and keep in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "glutenFree",
+   "dairyFree",
+   "makeAhead",
+   "Fırında",
+   "Vejetaryen",
+   "Zeytinyağlı",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]

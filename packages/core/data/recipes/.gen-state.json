@@ -2517,12 +2517,16 @@
     "pulpo-a-la-gallega",
     "escalivada"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "empanadillas-de-at-n",
+    "pulpo-a-la-gallega",
+    "escalivada"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 67209,
    "startedAt": "2026-10-15T22:42:32.269Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:44:24.739Z"
   },
   {
    "id": "g079",
@@ -2710,11 +2714,11 @@
     "sloppy-joe",
     "kofte-ekmek"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:44:03.780Z",
    "finishedAt": null
   },
   {
