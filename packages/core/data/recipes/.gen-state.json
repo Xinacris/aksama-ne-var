@@ -2631,12 +2631,20 @@
     "kitchari",
     "tavuk-saag"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "karides-kori",
+    "yumurta-kori",
+    "tavuk-tikka",
+    "kuzu-seekh-kebab",
+    "malai-kofta",
+    "kitchari",
+    "tavuk-saag"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 92099,
    "startedAt": "2026-10-15T22:45:52.698Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:49:00.012Z"
   },
   {
    "id": "g083",
@@ -2956,11 +2964,11 @@
     "potage-parmentier",
     "creme-du-barry"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:48:25.789Z",
    "finishedAt": null
   },
   {
