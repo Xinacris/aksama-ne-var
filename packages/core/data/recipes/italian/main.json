@@ -9544,5 +9544,1589 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "6ee698d7-1a04-472d-ba9a-19e07dd31da4",
+  "slug": "frittata",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Frittata",
+   "en": "Frittata"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kabaklı, parmesanlı ve mozzarellalı İtalyan omleti. Tek tavada pişer, dilimlenip sıcak ya da oda sıcaklığında yenir.",
+   "en": "An Italian omelette set with courgette, parmesan and mozzarella. It cooks in one pan and is good warm or at room temperature."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabak",
+     "en": "Courgettes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince yarım ay dilimlenmiş",
+     "en": "thinly sliced into half-moons"
+    },
+    "pantryKey": "courgette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 125,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Kabakları ince yarım ay dilimlere, soğanı da ince doğra.",
+     "en": "Slice the courgettes into thin half-moons and finely chop the onion."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tavada 2 yemek kaşığı zeytinyağını orta ateşte ısıt, soğanı ekleyip 3 dakika soteleyerek yumuşat.",
+     "en": "Heat the olive oil in a non-stick frying pan over a medium heat, add the onion and soften it for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kabakları ekle, bir tutam tuz ve karabiber serpip kenarları altın rengi olana kadar 8 dakika pişir.",
+     "en": "Add the courgettes, season with a pinch of salt and pepper and cook for 8 minutes until golden at the edges."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları büyük bir kapta çırp; parmesanı, maydanozu, bir tutam tuzu ve karabiberi ekleyip karıştır.",
+     "en": "Beat the eggs in a large bowl, then stir in the parmesan, parsley, a pinch of salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta karışımını tavaya dök, sebzeleri eşit dağıt ve üzerine mozzarella küplerini serp.",
+     "en": "Pour the egg mixture into the pan, spread the vegetables evenly and scatter the mozzarella cubes over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kapağı kapatıp kısık ateşte 10 dakika pişir; ortası sertleşince dilimleyip servis et.",
+     "en": "Cover and cook over a low heat for 10 minutes until set in the middle, then slice and serve."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tavada",
+   "Vejetaryen",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "cc338963-95ef-4a2f-9f79-793599508034",
+  "slug": "polenta-mantar-soslu",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Polenta mantar soslu",
+   "en": "Soft polenta with mushrooms"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Tereyağı ve parmesanla yumuşatılmış kremsi mısır polentası; üzerinde sarımsaklı, kekikli sotelenmiş mantarlarla servis edilir.",
+   "en": "Creamy cornmeal polenta finished with butter and parmesan, served under mushrooms cooked with garlic and thyme."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Polenta (mısır unu)",
+     "en": "Polenta (cornmeal)"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "kaba öğütülmüş",
+     "en": "coarse-ground"
+    },
+    "pantryKey": "cornmeal",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 750,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "divided in two"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş, ikiye bölünmüş",
+     "en": "finely grated, divided in two"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kekik",
+     "en": "Fresh thyme"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ayrılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Mantarları temizleyip dilimle. Sarımsağı ince doğra, kekiğin yapraklarını saplarından ayır.",
+     "en": "Clean and slice the mushrooms. Finely chop the garlic and strip the thyme leaves from the stems."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada 2 yemek kaşığı zeytinyağı ve 20 g tereyağını orta-yüksek ateşte ısıt; mantarları ekleyip suyunu çekene ve kenarları kızarana kadar 8 dakika pişir.",
+     "en": "Heat the olive oil and 20 g of the butter in a wide pan over a medium-high heat. Add the mushrooms and cook for 8 minutes, until their liquid has gone and the edges are browned."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Sarımsak ve kekiği ekleyip 1 dakika daha pişir, tuz ve karabiberle tatlandır, kenara al.",
+     "en": "Add the garlic and thyme and cook for 1 more minute. Season with salt and pepper and set aside."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede suyu, sütü ve bir tutam tuzu kaynama noktasına getir.",
+     "en": "In a large saucepan, bring the water, milk and a pinch of salt to the boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mısırununu kaynayan sıvıya yavaş yavaş serperek ekle, sürekli çırparak topaklanmasını önle; kısık ateşte sık karıştırarak 20 dakika pişir.",
+     "en": "Sprinkle the cornmeal into the boiling liquid slowly, whisking constantly to prevent lumps. Cook over a low heat, stirring often, for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan tereyağını ve parmesanın yarısını ekleyip karıştır; polenta yumuşak ve kremsi olmalı.",
+     "en": "Take off the heat, then stir in the remaining butter and half the parmesan. The polenta should be soft and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Polentayı derin tabaklara kaşıkla al, üzerine mantarları, kalan parmesanı ve kekik yapraklarını serp.",
+     "en": "Spoon the polenta into deep bowls, then top with the mushrooms, the rest of the parmesan and the thyme leaves."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tencere",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "694644b1-bef8-4ffe-913c-f3c8f76a5846",
+  "slug": "arancini",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Arancini",
+   "en": "Arancini (fried risotto balls)"
+  },
+  "shortTitle": {
+   "en": "Arancini"
+  },
+  "description": {
+   "tr": "Sebze suyuyla pişmiş risotto topları; ortasında erimiş mozzarella vardır, dışı galeta ununda çıtır kızartılır.",
+   "en": "Risotto rolled into balls around a melting mozzarella centre, coated in breadcrumbs and fried until crisp. A good way to use up risotto from the day before."
+  },
+  "servings": 4,
+  "prepMinutes": 40,
+  "cookMinutes": 25,
+  "waitMinutes": 60,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Risotto pirinci",
+     "en": "Risotto rice"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "arborio",
+     "en": "Arborio"
+    },
+    "pantryKey": "arborio-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sebze suyu",
+     "en": "Vegetable stock"
+    },
+    "amount": 800,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak",
+     "en": "hot"
+    },
+    "pantryKey": "vegetable-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "divided in two"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çok ince doğranmış",
+     "en": "very finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mozzarella",
+     "en": "Mozzarella"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into small cubes"
+    },
+    "pantryKey": "mozzarella",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış",
+     "en": "beaten"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kaplamak için",
+     "en": "for coating"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Galeta unu",
+     "en": "Breadcrumbs"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "breadcrumbs",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for deep frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Sebze suyunu ayrı bir tencerede kaynat ve kısık ateşte sıcak tut.",
+     "en": "Bring the vegetable stock to the boil in a separate pan and keep it hot over a low heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada 20 g tereyağını eritip soğanı yumuşayana kadar soteleyin, pirinci ekleyip parlayana kadar çevirin.",
+     "en": "Melt 20 g of the butter in a wide pan and soften the onion. Add the rice and stir until the grains look glossy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirinci bir kepçe sıcak suyla ayrı ayrı besleyerek, her kepçe emilince yenisini ekleyip 18 dakika pişir; pirinç dişe hafif sert ama yumuşak olmalı.",
+     "en": "Add the hot stock a ladle at a time, adding the next once each has been absorbed. Cook for 18 minutes until the rice is tender with a slight bite."
+    },
+    "timerSeconds": 1080
+   },
+   {
+    "text": {
+     "tr": "Ocaktan al, kalan 20 g tereyağı ve parmesanı ekleyip karıştır; pilavı geniş bir tabağa yayıp oda sıcaklığına gelene kadar soğut.",
+     "en": "Take off the heat, stir in the remaining 20 g of butter and the parmesan, then spread the risotto on a wide plate to cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğuyan pilavdan ceviz büyüklüğünde toplar yap; her topun ortasına bir parça mozzarella koyup kapat.",
+     "en": "Shape the cooled risotto into walnut-sized balls, pressing a piece of mozzarella into the middle of each one."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları sığ bir kaseye, unu ve galeta ununu ayrı tabaklara koy. Topları sırayla unda, yumurtada ve galeta ununda yuvarla.",
+     "en": "Put the beaten eggs, flour and breadcrumbs in three shallow dishes. Roll each ball in flour, then egg, then breadcrumbs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kızartma yağını orta-yüksek ateşte ısıt; topları gruplar halinde altın rengi olana kadar 4 dakika kızart, kağıt havluya al ve sıcak servis et.",
+     "en": "Heat the oil over a medium-high heat and fry the balls in batches for 4 minutes, until golden. Drain on kitchen paper and serve hot."
+    },
+    "timerSeconds": 240
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Risotto pilavını bir gün önceden pişirip buzdolabında sakla; toplar yapılmadan önce oda sıcaklığına gelmesini bekle.",
+     "en": "Cook the risotto a day ahead and keep it in the fridge; let it come to room temperature before shaping the balls."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "makeAhead",
+   "Kızartma",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3d8e4560-3f28-4a15-a232-bbddb6fa0c0b",
+  "slug": "ravioli-ispanakli",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Ravioli ıspanaklı",
+   "en": "Spinach ravioli"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Taze yumurtalı hamurdan açılan ravioliler; içi ıspanak, ricotta ve parmesanla hazırlanır, adaçayı aromalı tereyağı sosuyla servis edilir.",
+   "en": "Fresh egg pasta filled with spinach, ricotta and parmesan, then tossed in sage-scented brown butter."
+  },
+  "servings": 4,
+  "prepMinutes": 60,
+  "cookMinutes": 15,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 3,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "hamur için",
+     "en": "for the dough"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ispanak",
+     "en": "Spinach"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "taze, sapları ayıklanmış",
+     "en": "fresh, stems removed"
+    },
+    "pantryKey": "spinach",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "well drained"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "taze rendelenmiş",
+     "en": "freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze adaçayı",
+     "en": "Fresh sage"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları",
+     "en": "leaves only"
+    },
+    "pantryKey": "fresh-sage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu tezgaha bir yığın hâlinde koy, ortasına çukur aç, yumurtaları kır ve bir tutam tuzla çatalla çırparak unla yoğurmaya başla.",
+     "en": "Pile the flour on a work surface, make a well in the middle, crack in the eggs and add a pinch of salt. Beat the eggs with a fork, gradually drawing in the flour."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru elle pürüzsüz ve sert bir top olana kadar 8 dakika yoğur.",
+     "en": "Knead the dough by hand for 8 minutes, until smooth and firm."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Hamuru naylonla sarıp 30 dakika oda sıcaklığında dinlendir.",
+     "en": "Wrap the dough in cling film and rest it at room temperature for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Ispanağı kaynar suda 1 dakika haşla, süzgeçte soğutup sıkarak suyunu al ve ince kıy.",
+     "en": "Blanch the spinach in boiling water for 1 minute, cool it in a sieve, squeeze out the water and chop finely."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Ispanağı ricotta, parmesan, muskat, tuz ve karabiberle karıştırıp iç harcı hazırla.",
+     "en": "Mix the spinach with the ricotta, parmesan, nutmeg, salt and pepper to make the filling."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru ince açıp üzerine kaşıkla harçtan aralıklı yığınlar koy, kenarlarını ıslatıp kapat ve bıçak ya da kesiciyle raviolileri kes.",
+     "en": "Roll the dough thinly and spoon small mounds of filling at intervals. Brush the edges with water, fold the dough over and cut out the ravioli."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük tencerede tuzlu suyu kaynat, raviolileri 4 dakika haşla ve süzgece al.",
+     "en": "Bring a large pan of salted water to the boil, cook the ravioli for 4 minutes and lift them out with a slotted spoon."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada tereyağını adaçayı yapraklarıyla kısık ateşte köpürüp kahverengileşene kadar ısıt; raviolileri ekleyip sosta nazikçe gezdir ve sıcak servis et.",
+     "en": "Melt the butter with the sage leaves over a low heat until foaming and turning nutty. Add the ravioli, toss gently in the sauce and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Ravioliyi bir gece önceden hazırlayıp unlu bir tepsiye tek kat olarak diz, üstünü örtüp buzdolabında beklet.",
+     "en": "Make the ravioli the night before, lay them in a single layer on a floured tray, cover and keep in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "makeAhead",
+   "Hamur işi",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a4f5c4ab-b7ce-4944-84c4-56e72b714e1b",
+  "slug": "orecchiette-brokoli",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Orecchiette brokoli",
+   "en": "Orecchiette with broccoli"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kulak şeklindeki makarnanın brokoli, sarımsak ve pul biberli zeytinyağıyla buluştuğu hızlı bir tabak. Parmesan ve limon kabuğuyla tamamlanır.",
+   "en": "Ear-shaped pasta tossed with broccoli, garlic and chilli oil, finished with parmesan and a little lemon zest."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 18,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Orecchiette makarna",
+     "en": "Orecchiette"
+    },
+    "amount": 350,
+    "unit": "g",
+    "note": {
+     "tr": "yoksa dirsek makarna kullanabilirsin",
+     "en": "macaroni works too if you cannot find it"
+    },
+    "pantryKey": "macaroni",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Brokoli",
+     "en": "Broccoli"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "küçük çiçeklere ayrılmış",
+     "en": "broken into small florets"
+    },
+    "pantryKey": "broccoli",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
+    },
+    "amount": 0.5,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "finely grated"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yalnızca kabuğu rendelenmiş",
+     "en": "zest only, finely grated"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Brokolinin çiçeklerini ayır, sapları soyup dilimle. Sarımsağı ince doğra, limonun kabuğunu rendele.",
+     "en": "Separate the broccoli into florets and peel and slice the stems. Finely chop the garlic and grate the lemon zest."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük tencerede bol tuzlu suyu kaynat, brokoliyi 4 dakika haşla ve süzgece al.",
+     "en": "Bring a large pan of well-salted water to the boil, blanch the broccoli for 4 minutes and lift it out with a slotted spoon."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Aynı suya makarnayı ekle; paket süresinden 2 dakika kısa pişir ve süzmeden önce iki kepçe pişirme suyunu ayır.",
+     "en": "Add the pasta to the same water and cook it 2 minutes less than the packet says. Before draining, set aside two ladlefuls of the cooking water."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada zeytinyağı, sarımsak ve pul biberi kısık ateşte 2 dakika ısıt; sarımsak kokusu çıkınca ateşten almadan önce karıştır.",
+     "en": "Warm the olive oil, garlic and chilli flakes together in a wide pan over a low heat for 2 minutes, until the garlic smells sweet."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Brokoliyi tavaya ekle, 3 dakika sotele ve kaşıkla hafifçe ezerek sosla bağla.",
+     "en": "Add the broccoli to the pan, fry for 3 minutes and mash it lightly with a spoon so it coats the oil."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Makarnayı süzüp tavaya al, ayırdığın pişirme suyundan iki kepçe ekleyip iyice karıştır; limon kabuğu rendesini de ekle.",
+     "en": "Drain the pasta into the pan, add the reserved cooking water and toss well. Stir in the lemon zest."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Parmesanı üzerine rendele, tuz ve karabiberle tatlandırıp sıcak servis et.",
+     "en": "Grate the parmesan over the top, season with salt and pepper and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "quick",
+   "budget",
+   "Tencere",
+   "Vejetaryen"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "a60d37da-63ac-4945-ab13-d2660fd55727",
+  "slug": "kremali-somon-tagliatelle",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Kremalı somon tagliatelle",
+   "en": "Salmon tagliatelle"
+  },
+  "shortTitle": {
+   "tr": "Somonlu tagliatelle",
+   "en": "Salmon tagliatelle"
+  },
+  "description": {
+   "tr": "Sarımsaklı tereyağında hafifçe pişen somon ve limonlu krema sosu, tagliatelle ile birleşir. Taze dereotuyla kısa sürede hazırlanır.",
+   "en": "Salmon cooked gently in garlic butter and finished in a lemony cream sauce with tagliatelle. Fresh dill brings it together quickly."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tagliatelle",
+     "en": "Tagliatelle"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "tagliatelle",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Somon",
+     "en": "Salmon"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "kılçıksız, küp doğranmış",
+     "en": "boneless, cut into cubes"
+    },
+    "pantryKey": "salmon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "kabuğu rendelenmiş, suyu sıkılmış",
+     "en": "zest grated, juice squeezed"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dereotu",
+     "en": "Dill"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dill",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş, ikiye bölünmüş",
+     "en": "finely grated, divided in two"
+    },
+    "pantryKey": "parmesan",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Somonu küp doğra ve tuz, karabiberle tatlandır. Sarımsağı ince doğra, limonu rendele ve suyunu sık.",
+     "en": "Cut the salmon into cubes and season with salt and pepper. Finely chop the garlic, grate the lemon and squeeze out its juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük tencerede tuzlu suyu kaynat, tagliatelleyi al dente olana kadar pişir; bir kepçe pişirme suyu ayırıp süz.",
+     "en": "Bring a large pan of salted water to the boil and cook the tagliatelle until al dente. Reserve a ladleful of the cooking water, then drain."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Geniş tavada tereyağını orta ateşte eritip sarımsağı 1 dakika kavur.",
+     "en": "Melt the butter in a wide pan over a medium heat and cook the garlic for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Somon parçalarını ekleyip 2 dakika çevirerek hafifçe pişir; ortası hâlâ yarı pembe kalsın.",
+     "en": "Add the salmon pieces and cook for 2 minutes, turning them gently. The middle should still be slightly pink."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Kremayı ve limon suyunu ekle, kısık ateşte 3 dakika kaynatarak sosu hafifçe koyulaştır.",
+     "en": "Add the cream and lemon juice, then simmer over a low heat for 3 minutes to thicken the sauce slightly."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Makarnayı sosa ekle, ayırdığın pişirme suyundan birkaç kaşık ilave edip parmesanın yarısıyla karıştır.",
+     "en": "Add the pasta to the sauce, loosen with a few spoonfuls of the cooking water and toss with half the parmesan."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dereotu ve kalan parmesanı serp, karabiber ekleyip hemen servis et.",
+     "en": "Scatter over the dill and the rest of the parmesan, add black pepper and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "Balık"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "682649aa-7b05-4c8e-88b9-6d65e176598a",
+  "slug": "firinda-kuzu-italyan-usulu",
+  "cuisine": "italian",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Fırında kuzu İtalyan usulü",
+   "en": "Roast lamb with rosemary and garlic"
+  },
+  "shortTitle": {
+   "tr": "Fırında kuzu",
+   "en": "Roast lamb"
+  },
+  "description": {
+   "tr": "Biberiye ve sarımsakla tatlandırılmış kuzu but, beyaz şarapla fırında yavaş yavaş pişirilir. Tepsideki sular sos olur, altına konan patatesler de onunla lezzetlenir.",
+   "en": "Leg of lamb rubbed with rosemary, garlic and olive oil, then roasted slowly with white wine. The pan juices make the sauce, and the potatoes roast underneath."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 100,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Kuzu but",
+     "en": "Leg of lamb"
+    },
+    "amount": 1.2,
+    "unit": "kg",
+    "note": {
+     "tr": "kemikli, fazla yağı alınmış",
+     "en": "bone-in, excess fat trimmed"
+    },
+    "pantryKey": "lamb-leg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 6,
+    "unit": "diş",
+    "note": {
+     "tr": "yarısı dilimlenmiş, yarısı ince doğranmış",
+     "en": "half sliced into slivers, half finely chopped"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze biberiye",
+     "en": "Fresh rosemary"
+    },
+    "amount": 2,
+    "unit": "demet",
+    "note": {
+     "tr": "yaprakları ayrılmış",
+     "en": "leaves picked"
+    },
+    "pantryKey": "fresh-rosemary",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz şarap",
+     "en": "White wine"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "white-wine",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu",
+      "en": "Chicken stock"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use wine: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "dört parça doğranmış",
+     "en": "cut into quarters"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Kuzu butunun yüzeyini kağıt havluyla kurula.",
+     "en": "Heat the oven to 200 degrees. Pat the lamb leg dry with kitchen paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Etin yüzeyine bıçakla küçük yarıklar aç; yarıklara dilimlenmiş sarımsak ve biberiye yapraklarını yerleştir.",
+     "en": "Make small cuts all over the surface of the lamb with a knife and push slices of garlic and rosemary leaves into them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "2 yemek kaşığı zeytinyağı, ince doğranmış sarımsak, tuz ve karabiberle eti iyice ovala.",
+     "en": "Rub the lamb all over with 2 tablespoons of the olive oil, the finely chopped garlic, salt and pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri tepsiye koy, 1 yemek kaşığı zeytinyağı ve bir tutam tuzla karıştır; ortada eti koyacak yer bırak.",
+     "en": "Put the potatoes in a roasting tin, toss with the last tablespoon of olive oil and a pinch of salt, and leave room in the middle for the lamb."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kuzuyu patateslerin ortasına yerleştir, beyaz şarabı (ya da yerine kullandığın karışımı) tepsiye dök ve fırına ver; 100 dakika pişir.",
+     "en": "Set the lamb in the middle of the potatoes, pour the white wine (or the mixture you use instead) into the tin, and roast for 100 minutes."
+    },
+    "timerSeconds": 6000
+   },
+   {
+    "text": {
+     "tr": "Pişme sırasında tepsideki suyu iki kez kaşıkla etin üzerine gezdir.",
+     "en": "While it cooks, spoon the pan juices over the lamb twice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Eti fırından al, folyoyla gevşekçe örtüp 15 dakika dinlendir; ardından tepsideki suyu süzüp sos olarak kullan ve dilimleyip patateslerle servis et.",
+     "en": "Take the lamb out, cover loosely with foil and rest it for 15 minutes. Strain the pan juices to serve as a sauce, then carve and serve with the potatoes."
+    },
+    "timerSeconds": 900
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kuzu butunu bir gece önceden sarımsak, biberiye, zeytinyağı ve tuzla ovalayıp buzdolabında beklet; pişirmeden önce oda sıcaklığına gelmesini bekle.",
+     "en": "Rub the lamb the night before with the garlic, rosemary, olive oil and salt, and keep it in the fridge. Let it come to room temperature before roasting."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "makeAhead",
+   "guest",
+   "Fırında",
+   "Etli"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
