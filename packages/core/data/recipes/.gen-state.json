@@ -354,11 +354,11 @@
     "taze-bakla-corbasi",
     "icli-kofte-corbasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:36:39.894Z",
    "finishedAt": null
   },
   {
@@ -723,12 +723,23 @@
     "zeytinyagli-biber-dolmasi",
     "zeytinyagli-kabak-dolmasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "icli-kofte",
+    "cig-kofte",
+    "patlican-kizartmasi",
+    "kabak-kizartmasi",
+    "biber-kizartmasi",
+    "karnabahar-kizartmasi",
+    "domates-soslu-patlican",
+    "zeytinyagli-yaprak-sarma",
+    "zeytinyagli-biber-dolmasi",
+    "zeytinyagli-kabak-dolmasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 89192,
    "startedAt": "2026-10-15T19:33:54.103Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:36:55.803Z"
   },
   {
    "id": "g028",
