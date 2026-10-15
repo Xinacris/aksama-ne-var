@@ -1586,11 +1586,11 @@
     "balik-kofte",
     "kiymali-pide"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T22:28:54.486Z",
    "finishedAt": null
   },
   {
@@ -2083,12 +2083,23 @@
     "focaccia",
     "parmigiana-di-melanzane"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "gnocchi-domates-soslu",
+    "gnocchi-sorrentina",
+    "ricotta-gnudi",
+    "pizza-margherita",
+    "sucuklu-pizza",
+    "sebzeli-pizza",
+    "dort-peynirli-pizza",
+    "calzone",
+    "focaccia",
+    "parmigiana-di-melanzane"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 99225,
    "startedAt": "2026-10-15T22:26:33.136Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T22:30:09.810Z"
   },
   {
    "id": "g067",
