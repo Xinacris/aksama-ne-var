@@ -1,1 +1,218 @@
-[]
+[
+ {
+  "id": "961879ba-851a-459a-adf1-2f2c0dc190dd",
+  "slug": "gratin-dauphinois",
+  "cuisine": "french",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Gratin dauphinois",
+   "en": "Gratin dauphinois"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patateslerin krema ve peynirle yavaşça pişip yumuşadığı, üstü kızarmış bir Fransız garnitürü. Dilimler birbirine yapışmadan, katman katman dururlar.",
+   "en": "A French side of potatoes cooked slowly in cream and cheese until soft, with a golden top. The slices hold their layers when you cut into it."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 65,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1000,
+    "unit": "g",
+    "note": {
+     "tr": "Orta boy, unlu tip",
+     "en": "Medium, floury type"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "Kabı ovmak için",
+     "en": "For rubbing the dish"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "Kabı yağlamak için",
+     "en": "For greasing the dish"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Gravyer peyniri",
+     "en": "Gruyère"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "Rendelenmiş",
+     "en": "Grated"
+    },
+    "pantryKey": "gruyere",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Muskat",
+     "en": "Nutmeg"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "Taze rendelenmiş",
+     "en": "Freshly grated"
+    },
+    "pantryKey": "nutmeg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt. Patatesleri soyup 3 mm kalınlığında, yuvarlak dilimler halinde kes.",
+     "en": "Heat the oven to 170°C. Peel the potatoes and slice them into rounds about 3 mm thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sarımsak dişini ikiye kesip fırın kabının iç yüzeyini ovala, ardından tereyağıyla iyice yağla.",
+     "en": "Cut the garlic clove in half and rub the inside of the dish with it, then grease the dish well with the butter."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü, kremayı, muskadı, tuzu ve karabiberi geniş bir tencerede kaynamaya yakın ısıt, sonra ocaktan al.",
+     "en": "Warm the milk, cream, nutmeg, salt and pepper in a wide saucepan until just below the boil, then take it off the heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patates dilimlerinin yarısını kabın dibine kat kat diz, üzerine rendelenmiş peynirin üçte birini serp. Kalan patatesleri aynı şekilde ekle, son katı peynirle bitir.",
+     "en": "Lay half the potato slices in the base of the dish in overlapping layers, scattering over a third of the cheese. Repeat with the rest of the potatoes, finishing with the last of the cheese on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıcak krema karışımını patateslerin üzerine dök, avuçla hafifçe bastırarak sıvının dilimlerin arasına inmesini sağla.",
+     "en": "Pour the warm cream mixture over the potatoes and press gently with your palm so the liquid settles between the slices."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabı folyoyla ört ve 40 dakika pişir.",
+     "en": "Cover the dish with foil and bake for 40 minutes."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Folyoyu aç, üstü altın rengi alana kadar 25 dakika daha pişir.",
+     "en": "Remove the foil and bake for a further 25 minutes, until the top is golden."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 10 dakika dinlendir, sonra dilimleyerek servis yap.",
+     "en": "Take it out of the oven and let it rest for 10 minutes before slicing and serving."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "glutenFree",
+   "guest",
+   "Fırında",
+   "Vejetaryen",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]
