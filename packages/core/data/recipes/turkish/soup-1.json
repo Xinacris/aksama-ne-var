@@ -2144,33 +2144,57 @@
   "slug": "iskembe-corbasi",
   "cuisine": "turkish",
   "category": "soup",
+  "region": null,
   "title": {
    "tr": "İşkembe çorbası",
    "en": "Tripe soup"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Sarımsaklı ve sirkeli terbiyesiyle klasik bir başlangıç.",
-   "en": "A classic starter with a garlic and vinegar dressing."
+   "tr": "Sıcak tereyağı, pul biber ve kuru naneyle servis edilen, sarımsaklı klasik işkembe çorbası.",
+   "en": "A classic tripe soup finished with a sizzling topping of butter, chilli flakes and dried mint, traditionally eaten early in the morning or late at night."
   },
   "servings": 4,
-  "prepMinutes": 15,
-  "cookMinutes": 60,
+  "prepMinutes": 25,
+  "cookMinutes": 150,
   "waitMinutes": null,
-  "difficulty": 3,
+  "timeNote": null,
+  "difficulty": 2,
   "ingredients": [
    {
     "name": {
      "tr": "İşkembe",
      "en": "Tripe"
     },
-    "amount": 500,
+    "amount": 800,
     "unit": "g",
     "note": {
-     "tr": "temizlenmiş",
-     "en": "cleaned"
+     "tr": "temizlenmiş, kuşbaşı doğranmış",
+     "en": "cleaned, cut into small cubes"
     },
     "pantryKey": "tripe",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 2,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
     "substitute": null
    },
    {
@@ -2189,17 +2213,6 @@
    },
    {
     "name": {
-     "tr": "Sirke",
-     "en": "Vinegar"
-    },
-    "amount": 3,
-    "unit": "yemek kaşığı",
-    "note": null,
-    "pantryKey": "vinegar",
-    "substitute": null
-   },
-   {
-    "name": {
      "tr": "Un",
      "en": "Flour"
     },
@@ -2211,23 +2224,59 @@
    },
    {
     "name": {
-     "tr": "Yumurta sarısı",
-     "en": "Egg yolk"
+     "tr": "Tereyağı",
+     "en": "Butter"
     },
-    "amount": 1,
-    "unit": "adet",
+    "amount": 3,
+    "unit": "yemek kaşığı",
     "note": null,
-    "pantryKey": "egg",
+    "pantryKey": "butter",
     "substitute": null
    },
    {
     "name": {
-     "tr": "Limon suyu",
-     "en": "Lemon juice"
+     "tr": "Pul biber",
+     "en": "Chilli flakes"
     },
-    "amount": 2,
-    "unit": "yemek kaşığı",
+    "amount": 1,
+    "unit": "tatlı kaşığı",
     "note": null,
+    "pantryKey": "chilli-flakes",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru nane",
+     "en": "Dried mint"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dried-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "cut into wedges"
+    },
     "pantryKey": "lemon",
     "substitute": null
    }
@@ -2235,51 +2284,66 @@
   "steps": [
    {
     "text": {
-     "tr": "İşkembeyi bol suda 45 dakika haşla.",
-     "en": "Boil the tripe in plenty of water for 45 minutes."
-    },
-    "timerSeconds": 2700
-   },
-   {
-    "text": {
-     "tr": "Haşlanan işkembeyi küçük küpler halinde doğra.",
-     "en": "Chop the boiled tripe into small cubes."
+     "tr": "İşkembeyi bol suyla iyice yıkayıp kuşbaşı büyüklüğünde doğra.",
+     "en": "Rinse the tripe well under plenty of water and cut it into bite-size pieces."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Un, yumurta sarısı ve limon suyunu bir kasede çırp.",
-     "en": "Whisk the flour, egg yolk, and lemon juice in a bowl."
+     "tr": "Tencereye işkembeyi, suyu ve sirkeyi koy; kaynayınca çıkan köpüğü al.",
+     "en": "Put the tripe, water and vinegar in a pot; skim off the foam once it boils."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Çorba suyundan bir kepçe alıp terbiyeye ekle ve ılıştır.",
-     "en": "Take a ladle of soup stock, add it to the dressing, and temper it."
+     "tr": "Ateşi kısıp kapağını aralık bırakarak 2 saat pişir.",
+     "en": "Turn the heat low, leave the lid slightly open and simmer for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Unu bir kaşık soğuk suyla açıp çorbaya ekle; ara ara karıştırarak 10 dakika daha pişir.",
+     "en": "Loosen the flour with a spoon of cold water, stir it into the soup and simmer 10 minutes more, stirring now and then."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sarımsakları çorbaya ekleyip 2 dakika daha kaynat.",
+     "en": "Stir the garlic into the soup and boil 2 minutes more."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Küçük bir tencerede tereyağını eritip pul biber ve kuru naneyi ekle; sıcak yağı çorbanın üzerine gezdir.",
+     "en": "Melt the butter in a small pan, stir in the chilli flakes and dried mint, and drizzle the hot butter over the soup."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Terbiyeyi tencereye yavaşça ekle ve 15 dakika daha pişir.",
-     "en": "Slowly add the dressing to the pot and cook for another 15 minutes."
+     "tr": "Tuzunu ayarla, sıcak servis et ve yanına limon dilimlerini koy.",
+     "en": "Adjust the salt, serve hot and set the lemon wedges on the side."
     },
-    "timerSeconds": 900
+    "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
    "Tencere",
-   "Etli",
-   "Kolay"
+   "Etli"
   ],
   "mealSlots": [
+   "breakfast",
    "dinner"
   ],
   "leftover": {
    "likelihood": "high",
-   "keepsDays": 2,
+   "keepsDays": 3,
    "reheatable": true
   },
   "source": "curated-v1",

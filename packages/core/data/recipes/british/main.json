@@ -4,113 +4,247 @@
   "slug": "fish-and-chips",
   "cuisine": "british",
   "category": "main",
+  "region": null,
   "title": {
    "tr": "Fish and chips",
    "en": "Fish and chips"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Çıtır kaplamalı balık ve kızarmış patates.",
-   "en": "Crispy battered fish and fried potatoes."
+   "tr": "Bira hamurunda kızartılmış çıtır morina fileto ile kalın kesim patates kızartması; yanında ezme bezelye ve sirke.",
+   "en": "Cod fillets in a crisp beer batter with thick-cut chips, served with mushy peas and malt vinegar."
   },
-  "servings": 2,
-  "prepMinutes": 20,
-  "cookMinutes": 20,
-  "waitMinutes": null,
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": 10,
+  "timeNote": null,
   "difficulty": 2,
   "ingredients": [
    {
     "name": {
-     "tr": "Beyaz balık fileto",
-     "en": "White fish fillet"
+     "tr": "Morina fileto",
+     "en": "Cod fillets"
     },
-    "amount": 400,
+    "amount": 600,
     "unit": "g",
-    "note": null,
-    "pantryKey": "white-fish-fillet"
+    "note": {
+     "tr": "kalın fileto ya da parça",
+     "en": "thick fillets or portions"
+    },
+    "pantryKey": "cod",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Un",
-     "en": "Flour"
+     "tr": "Patates",
+     "en": "Potatoes"
     },
     "amount": 1,
-    "unit": "su bardağı",
-    "note": null,
-    "pantryKey": "flour"
+    "unit": "kg",
+    "note": {
+     "tr": "kalın çubuklar halinde kesilmiş",
+     "en": "cut into thick chips"
+    },
+    "pantryKey": "potato",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Maden suyu",
-     "en": "Mineral water"
+     "tr": "Bira",
+     "en": "Beer"
     },
-    "amount": 200,
+    "amount": 250,
     "unit": "ml",
     "note": {
      "tr": "soğuk",
      "en": "cold"
     },
-    "pantryKey": "mineral-water"
+    "pantryKey": "beer",
+    "substitute": {
+     "name": {
+      "tr": "Maden suyu",
+      "en": "Sparkling mineral water"
+     },
+     "amount": 250,
+     "unit": "ml",
+     "pantryKey": "mineral-water",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Bira kullanmak istemezseniz: 250 ml soğuk maden suyu + 1 tatlı kaşığı limon suyu kullanın.",
+      "en": "If you prefer not to use beer: use 250 ml cold sparkling mineral water + 1 teaspoon lemon juice."
+     }
+    }
    },
    {
     "name": {
-     "tr": "Patates",
-     "en": "Potato"
+     "tr": "Un",
+     "en": "Plain flour"
     },
-    "amount": 3,
-    "unit": "adet",
+    "amount": 180,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
     "note": {
-     "tr": "parmak doğranmış",
-     "en": "cut into strips"
+     "tr": "çıtır kaplama için",
+     "en": "for a crisp coating"
     },
-    "pantryKey": "potato"
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Sıvı yağ",
      "en": "Vegetable oil"
     },
-    "amount": 500,
-    "unit": "ml",
+    "amount": 1,
+    "unit": "l",
     "note": {
-     "tr": "kızartma için",
-     "en": "for frying"
+     "tr": "derin kızartma için",
+     "en": "for deep frying"
     },
-    "pantryKey": "vegetable-oil"
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "ezme bezelye için",
+     "en": "for the mushy peas"
+    },
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "servis için",
+     "en": "to serve"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "cut into wedges"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Patatesleri parmak şeklinde doğra ve kızgın yağda pişir.",
-     "en": "Cut potatoes into strips and fry in hot oil."
-    },
-    "timerSeconds": 600
-   },
-   {
-    "text": {
-     "tr": "Un ve maden suyunu pürüzsüz bir hamur olana kadar çırp.",
-     "en": "Whisk flour and mineral water until a smooth batter forms."
+     "tr": "Patatesleri kalın çubuklar halinde kes, suyla yıka ve iyice kurula.",
+     "en": "Cut the potatoes into thick chips, rinse and dry them well."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Balıkları bu karışıma batırıp kızgın yağda altın rengi alana kadar kızart.",
-     "en": "Dip fish into the batter and fry in hot oil until golden."
+     "tr": "Yağı orta-yüksek ateşte ısıt; patatesleri partiler halinde 6 dakika kızart, süzgece al.",
+     "en": "Heat the oil over medium-high heat; fry the chips in batches for 6 minutes and lift them onto a sieve."
     },
-    "timerSeconds": 480
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Unu, nişastayı, kabartma tozunu ve tuzu bir kapta karıştır; birayı yavaş yavaş ekleyip pürüzsüz bir hamur yap ve 10 dakika dinlendir.",
+     "en": "Whisk the flour, cornflour, baking powder and salt in a bowl, slowly add the beer to make a smooth batter, and rest it for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Balık filetolarını kağıt havlu ile kurulayıp hamura batır ve kızgın yağa bırak; 5 dakika altın rengi olana kadar kızart.",
+     "en": "Pat the fillets dry, dip them in the batter and lower them into the hot oil; fry for 5 minutes until golden."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Patatesleri kızgın yağa geri alıp 3 dakika daha kızart, tuzla.",
+     "en": "Return the chips to the hot oil for 3 minutes more until crisp, then salt them."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Bezelyeyi tuzlu suda 5 dakika haşla, kabaca ezip tuzunu ayarla.",
+     "en": "Simmer the peas in salted water for 5 minutes, mash them roughly and adjust the salt."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Balık ve patatesleri limon dilimi, sirke ve ezme bezelye ile sıcak servis et.",
+     "en": "Serve the fish and chips hot with lemon wedges, vinegar and the mushy peas."
+    },
+    "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
+   "containsAlcohol",
    "Balık",
-   "Kızartma"
+   "Kızartma",
+   "kidFriendly",
+   "guest"
   ],
   "mealSlots": [
+   "lunch",
    "dinner"
   ],
   "leftover": {
-   "likelihood": "low",
+   "likelihood": "medium",
    "keepsDays": 1,
    "reheatable": false
   },

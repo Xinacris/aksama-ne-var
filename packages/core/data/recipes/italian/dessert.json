@@ -4,76 +4,118 @@
   "slug": "tiramisu",
   "cuisine": "italian",
   "category": "dessert",
+  "region": null,
   "title": {
    "tr": "Tiramisu",
    "en": "Tiramisu"
   },
   "shortTitle": null,
   "description": {
-   "tr": "İtalyan usulü kahve aromalı, mascarpone peynirli hafif bir tatlı.",
-   "en": "Italian-style coffee-flavored light dessert with mascarpone cheese."
+   "tr": "Mascarponeli krema ile kahveye ve marsalaya batırılmış kedidilinin katman katman dizildiği, soğukta dinlendirilen İtalyan tatlısı.",
+   "en": "Layers of mascarpone cream and coffee-soaked ladyfingers, rested cold until the biscuits soften and the cream sets."
   },
   "servings": 6,
-  "prepMinutes": 20,
+  "prepMinutes": 25,
   "cookMinutes": 0,
-  "waitMinutes": 240,
-  "difficulty": 2,
+  "waitMinutes": 360,
+  "timeNote": null,
+  "difficulty": 1,
   "ingredients": [
    {
     "name": {
-     "tr": "Kedidili bisküvi",
-     "en": "Ladyfingers"
-    },
-    "amount": 1,
-    "unit": "paket",
-    "note": null,
-    "pantryKey": "ladyfingers"
-   },
-   {
-    "name": {
-     "tr": "Mascarpone peyniri",
+     "tr": "Mascarpone",
      "en": "Mascarpone"
     },
     "amount": 500,
     "unit": "g",
     "note": null,
-    "pantryKey": "mascarpone"
+    "pantryKey": "mascarpone",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Yumurta",
-     "en": "Egg"
+     "en": "Eggs"
     },
-    "amount": 3,
+    "amount": 4,
     "unit": "adet",
     "note": {
-     "tr": "sarısı ve beyazı ayrılmış",
-     "en": "separated"
+     "tr": "sarıları ve akları ayrılmış",
+     "en": "yolks and whites separated"
     },
-    "pantryKey": "egg"
+    "pantryKey": "egg",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Toz şeker",
-     "en": "Sugar"
+     "en": "Caster sugar"
     },
-    "amount": 1,
-    "unit": "su bardağı",
+    "amount": 120,
+    "unit": "g",
     "note": null,
-    "pantryKey": "sugar"
+    "pantryKey": "sugar",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Türk kahvesi",
-     "en": "Turkish coffee"
+     "tr": "Espresso ya da güçlü hazır kahve",
+     "en": "Espresso or strong instant coffee"
     },
-    "amount": 2,
-    "unit": "su bardağı",
+    "amount": 300,
+    "unit": "ml",
     "note": {
-     "tr": "hazırlanmış ve soğutulmuş",
-     "en": "brewed and cooled"
+     "tr": "sıcak ve soğumuş",
+     "en": "warm, then cooled"
     },
-    "pantryKey": "turkish-coffee"
+    "pantryKey": "coffee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Marsala şarabı",
+     "en": "Marsala wine"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "marsala",
+    "substitute": {
+     "name": {
+      "tr": "Üzüm suyu",
+      "en": "Grape juice"
+     },
+     "amount": 60,
+     "unit": "ml",
+     "pantryKey": "grape-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 60 ml üzüm suyu kullanın.",
+      "en": "If you prefer not to use wine: use 60 ml grape juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Kedidili",
+     "en": "Ladyfingers"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "ladyfingers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
    },
    {
     "name": {
@@ -82,69 +124,74 @@
     },
     "amount": 2,
     "unit": "yemek kaşığı",
-    "note": null,
-    "pantryKey": "cocoa"
+    "note": {
+     "tr": "üstü için",
+     "en": "for dusting"
+    },
+    "pantryKey": "cocoa",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Yumurta sarılarını şekerle birlikte krema kıvamına gelene kadar çırp.",
-     "en": "Whisk egg yolks with sugar until creamy."
-    },
-    "timerSeconds": 300
-   },
-   {
-    "text": {
-     "tr": "Mascarpone peynirini ekleyip pürüzsüz olana kadar karıştır.",
-     "en": "Add mascarpone cheese and mix until smooth."
+     "tr": "Yumurta sarılarını şekerle açık renk ve kremamsı olana kadar çırp.",
+     "en": "Whisk the egg yolks with the sugar until pale and creamy."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Yumurta beyazlarını ayrı bir kapta kar beyazı olana kadar çırp ve peynirli karışıma spatula ile yedir.",
-     "en": "Beat egg whites in a separate bowl until stiff peaks form and fold into the cheese mixture."
-    },
-    "timerSeconds": 300
-   },
-   {
-    "text": {
-     "tr": "Kedidili bisküvileri soğuk kahveye batırıp çıkar ve bir borcama diz.",
-     "en": "Dip ladyfingers into cold coffee and arrange in a dish."
+     "tr": "Mascarponeyi ekleyip pürüzsüz bir krema elde edene kadar karıştır.",
+     "en": "Add the mascarpone and stir until you have a smooth cream."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Hazırladığın peynirli kremanın yarısını bisküvilerin üzerine yay.",
-     "en": "Spread half of the cheese cream over the ladyfingers."
+     "tr": "Yumurta aklarını sert köpük olana kadar çırpıp kremanın içine yavaşça katla.",
+     "en": "Whisk the egg whites to firm peaks and fold them gently into the cream."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Kalan bisküvileri diz ve üzerine geri kalan kremayı dök.",
-     "en": "Arrange the remaining ladyfingers and pour the rest of the cream on top."
+     "tr": "Kahveyi bir kaseye al, marsalayı (ya da yerine kullandığın karışımı) ve vanilyayı ekleyip karıştır; soğumaya bırak.",
+     "en": "Put the coffee in a bowl, stir in the marsala (or the mix you use instead) and the vanilla, and let it cool."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Buzdolabında soğumaya bırak.",
-     "en": "Leave to chill in the fridge."
+     "tr": "Kedidillerini kahveye hızlıca batırıp kalıbın tabanına bir kat diz; üzerine kremanın yarısını yay.",
+     "en": "Dip the ladyfingers quickly in the coffee and arrange one layer in the dish; spread half the cream over it."
     },
-    "timerSeconds": 14400
+    "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Servis etmeden önce üzerine kakao serp.",
-     "en": "Sprinkle with cocoa powder before serving."
+     "tr": "Kalan kedidillerle ikinci katı kur, kalan kremayı yay, üzerine kakao serp ve 6 saat buzdolabında beklet.",
+     "en": "Make the second layer with the remaining ladyfingers, spread the rest of the cream, dust with cocoa and chill for 6 hours."
     },
-    "timerSeconds": null
+    "timerSeconds": 21600
    }
   ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Tiramisuyu bir gece önceden hazırlayıp buzdolabında bekletmek kıvamını daha iyi oturtur.",
+     "en": "Make it the night before and keep it chilled; it sets better overnight."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
   "tags": [
+   "vegetarian",
+   "containsAlcohol",
+   "makeAhead",
+   "guest",
+   "Pişirmeden",
    "Sütlü"
   ],
   "mealSlots": [

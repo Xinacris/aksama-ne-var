@@ -1881,24 +1881,56 @@
   },
   "shortTitle": null,
   "description": {
-   "tr": "Közlenmiş patlıcanın ferahlatıcı bir salata hali.",
-   "en": "A refreshing salad made with roasted aubergine."
+   "tr": "Közlenmiş patlıcanın tahinli ve limonlu sosla; beyaz fasulye, yumurta, domates ve soğanla karıştırılan Akdeniz usulü piyaz.",
+   "en": "Charred aubergine folded with white beans, egg, tomato and onion in a lemon and tahini dressing, in the Mediterranean style."
   },
   "servings": 4,
-  "prepMinutes": 10,
-  "cookMinutes": 20,
-  "waitMinutes": null,
-  "difficulty": 1,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
   "ingredients": [
    {
     "name": {
      "tr": "Kemer patlıcan",
-     "en": "Long aubergine"
+     "en": "Long aubergines"
     },
     "amount": 3,
     "unit": "adet",
-    "note": null,
+    "note": {
+     "tr": "alev üzerinde közlenecek",
+     "en": "to be charred over a flame"
+    },
     "pantryKey": "long-aubergine",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Beyaz fasulye",
+     "en": "White beans"
+    },
+    "amount": 1,
+    "unit": "kavanoz",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "katı haşlanmış",
+     "en": "hard-boiled"
+    },
+    "pantryKey": "egg",
     "substitute": null
    },
    {
@@ -1906,10 +1938,10 @@
      "tr": "Domates",
      "en": "Tomato"
     },
-    "amount": 2,
+    "amount": 1,
     "unit": "adet",
     "note": {
-     "tr": "küp doğranmış",
+     "tr": "küp küp doğranmış",
      "en": "diced"
     },
     "pantryKey": "tomato",
@@ -1917,16 +1949,55 @@
    },
    {
     "name": {
-     "tr": "Yeşil biber",
-     "en": "Green pepper"
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
     },
-    "amount": 2,
+    "amount": 1,
     "unit": "adet",
     "note": {
-     "tr": "ince doğranmış",
+     "tr": "küçük küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
      "en": "finely chopped"
     },
-    "pantryKey": "green-pepper",
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tahin",
+     "en": "Tahini"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "tahini",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "suyu sıkılmış",
+     "en": "juiced"
+    },
+    "pantryKey": "lemon",
     "substitute": null
    },
    {
@@ -1942,58 +2013,100 @@
    },
    {
     "name": {
-     "tr": "Sirke",
-     "en": "Vinegar"
+     "tr": "Sumak",
+     "en": "Sumac"
     },
     "amount": 1,
-    "unit": "yemek kaşığı",
+    "unit": "çay kaşığı",
     "note": null,
-    "pantryKey": "vinegar",
+    "pantryKey": "sumac",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
     "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Patlıcanları ocak üzerinde veya fırında 20 dakika közle.",
-     "en": "Roast the aubergines on the stove or in the oven for 20 minutes."
-    },
-    "timerSeconds": 1200
-   },
-   {
-    "text": {
-     "tr": "Közlenen patlıcanların kabuklarını soy ve içini irice doğra.",
-     "en": "Peel the roasted aubergines and chop the flesh coarsely."
+     "tr": "Patlıcanları alev üzerinde ya da fırında kabukları kararıp içi yumuşayana kadar közle.",
+     "en": "Char the aubergines over a flame or under the grill until the skins are black and the flesh is soft."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Derin bir kasede patlıcan, domates ve biberi karıştır.",
-     "en": "Mix the aubergine, tomato, and peppers in a deep bowl."
+     "tr": "Patlıcanların kabuklarını soy, etini çatalla ezip süzgeçte 10 dakika süzülmeye bırak.",
+     "en": "Peel the aubergines, mash the flesh with a fork and leave it to drain in a sieve for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları 10 dakika haşla, soğuk suda soyup küp küp doğra.",
+     "en": "Boil the eggs for 10 minutes, peel them under cold water and dice them."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı küçük küp doğrayıp 5 dakika tuzlu suda beklet ve süz; fasulyeyi süzüp yıka.",
+     "en": "Dice the red onion, soak it in salted water for 5 minutes and drain; rinse the beans and drain them too."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Domatesi küp küp doğra, maydanozu ince kıy.",
+     "en": "Dice the tomato and finely chop the parsley."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Zeytinyağı ve sirkeyi ekleyip harmanla.",
-     "en": "Add olive oil and vinegar, then toss."
+     "tr": "Tahini, limon suyu, zeytinyağı ve bir tutam tuzla pürüzsüz bir sos hazırla.",
+     "en": "Whisk the tahini, lemon juice, olive oil and a pinch of salt into a smooth dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ezilmiş patlıcanı, fasulye, yumurta, soğan, domates ve maydanozu sosla karıştır; 30 dakika buzdolabında dinlendir.",
+     "en": "Fold the mashed aubergine, beans, eggs, onion, tomato and parsley into the dressing, then rest it in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Servis tabağına al, üzerine sumağı serp ve bir tur zeytinyağı gezdirerek soğuk servis et.",
+     "en": "Transfer to a serving dish, sprinkle with sumac, drizzle with a little olive oil and serve cold."
     },
     "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
+   "vegetarian",
+   "glutenFree",
+   "makeAhead",
    "Vejetaryen",
-   "Közleme",
    "Zeytinyağlı",
-   "Hafif"
+   "Meze"
   ],
   "mealSlots": [
    "lunch",
    "dinner"
   ],
   "leftover": {
-   "likelihood": "medium",
+   "likelihood": "low",
    "keepsDays": 1,
    "reheatable": false
   },
@@ -2005,19 +2118,21 @@
   "slug": "roka-salatasi",
   "cuisine": "turkish",
   "category": "salad",
+  "region": null,
   "title": {
    "tr": "Roka salatası",
    "en": "Rocket salad"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Basit ve vazgeçilmez bir eşlikçi.",
-   "en": "A simple and indispensable side dish."
+   "tr": "Kiraz domates ve cevizle hazırlanan, limon ve sumakla hafif bir sosu olan, üzerine parmesan talaşı serpilen taze bir salata.",
+   "en": "A fresh rocket salad with cherry tomatoes and walnuts, dressed lightly with lemon and sumac and finished with shaved parmesan."
   },
   "servings": 4,
-  "prepMinutes": 10,
-  "cookMinutes": 0,
-  "waitMinutes": null,
+  "prepMinutes": 15,
+  "cookMinutes": 3,
+  "waitMinutes": 10,
+  "timeNote": null,
   "difficulty": 1,
   "ingredients": [
    {
@@ -2025,27 +2140,69 @@
      "tr": "Roka",
      "en": "Rocket"
     },
-    "amount": 1,
+    "amount": 2,
     "unit": "demet",
     "note": {
-     "tr": "yıkanmış",
-     "en": "washed"
+     "tr": "sapları ayrılmış",
+     "en": "stems trimmed"
     },
     "pantryKey": "rocket",
     "substitute": null
    },
    {
     "name": {
-     "tr": "Çeri domates",
-     "en": "Cherry tomato"
+     "tr": "Kiraz domates",
+     "en": "Cherry tomatoes"
     },
-    "amount": 10,
-    "unit": "adet",
+    "amount": 250,
+    "unit": "g",
     "note": {
      "tr": "ikiye bölünmüş",
      "en": "halved"
     },
     "pantryKey": "cherry-tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Parmesan",
+     "en": "Parmesan"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "talaş",
+     "en": "shaved"
+    },
+    "pantryKey": "parmesan",
     "substitute": null
    },
    {
@@ -2067,40 +2224,106 @@
     "amount": 1,
     "unit": "adet",
     "note": {
-     "tr": "sıkılmış",
+     "tr": "suyu sıkılmış",
      "en": "juiced"
     },
     "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sumak",
+     "en": "Sumac"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "sumac",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
     "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Rokaları yıka ve süz, büyükse elinle parçala.",
-     "en": "Wash and drain the rocket, tear them if they are too large."
+     "tr": "Rokayı soğuk suda yıkayıp sapları ayır, süzgeçte iyice kurulat.",
+     "en": "Rinse the rocket in cold water, pull off the tough stems and dry it well in a colander."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Domatesleri ekle.",
-     "en": "Add the tomatoes."
+     "tr": "Kırmızı soğanı ince halka doğrayıp 10 dakika soğuk suda beklet, sonra süzüp kurula.",
+     "en": "Slice the red onion thinly, soak it in cold water for 10 minutes, then drain and dry it."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kiraz domatesleri ikiye böl.",
+     "en": "Halve the cherry tomatoes."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Zeytinyağı ve limon suyunu bir kapta çırpıp salatanın üzerine gezdir.",
-     "en": "Whisk olive oil and lemon juice in a small bowl and drizzle over the salad."
+     "tr": "Cevizleri kuru tavada 3 dakika hafifçe kavur, soğumaya bırak.",
+     "en": "Toast the walnuts in a dry pan for 3 minutes, then let them cool."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Limon suyu, zeytinyağı, bir tutam tuz ve karabiberi çırparak sosu hazırla, sumağı ekle.",
+     "en": "Whisk the lemon juice, olive oil, a pinch of salt and black pepper into a dressing, then stir in the sumac."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Büyük bir kasede roka, domates, soğan ve cevizi birleştir.",
+     "en": "Toss the rocket, tomatoes, onion and walnuts together in a large bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu üzerine gezdirip karıştır, parmesan talaşlarını serp ve hemen servis et.",
+     "en": "Dress the salad, scatter the shaved parmesan over it and serve straight away."
     },
     "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
+   "vegetarian",
+   "glutenFree",
+   "quick",
+   "Kolay",
    "Vejetaryen",
-   "Hafif",
-   "Pişirmeden"
+   "Zeytinyağlı",
+   "Hafif"
   ],
   "mealSlots": [
    "lunch",

@@ -4,110 +4,211 @@
   "slug": "patatas-bravas",
   "cuisine": "spanish",
   "category": "side",
+  "region": null,
   "title": {
    "tr": "Patatas bravas",
    "en": "Patatas bravas"
   },
   "shortTitle": null,
   "description": {
-   "tr": "İspanyol usulü çıtır patates ve acılı domates sosu.",
-   "en": "Spanish style crispy potatoes with spicy tomato sauce."
+   "tr": "Çıtır kızartılmış patateslerin acı tatlı domates sosu ve sarımsaklı mayonezle servis edildiği İspanyol tapası.",
+   "en": "Crisp fried potatoes served with a spiced tomato sauce and garlic mayonnaise, a classic Spanish tapa."
   },
   "servings": 4,
-  "prepMinutes": 15,
-  "cookMinutes": 25,
+  "prepMinutes": 20,
+  "cookMinutes": 30,
   "waitMinutes": null,
-  "difficulty": 1,
+  "timeNote": null,
+  "difficulty": 2,
   "ingredients": [
    {
     "name": {
      "tr": "Patates",
-     "en": "Potato"
-    },
-    "amount": 4,
-    "unit": "adet",
-    "note": {
-     "tr": "küp doğranmış",
-     "en": "cubed"
-    },
-    "pantryKey": "potato"
-   },
-   {
-    "name": {
-     "tr": "Domates salçası",
-     "en": "Tomato paste"
+     "en": "Potatoes"
     },
     "amount": 1,
-    "unit": "yemek kaşığı",
-    "note": null,
-    "pantryKey": "tomato-paste"
+    "unit": "kg",
+    "note": {
+     "tr": "kalın küp doğranmış",
+     "en": "cut into thick cubes"
+    },
+    "pantryKey": "potato",
+    "substitute": null
    },
    {
     "name": {
      "tr": "Sıvı yağ",
      "en": "Vegetable oil"
     },
-    "amount": 2,
-    "unit": "su bardağı",
-    "note": null,
-    "pantryKey": "vegetable-oil"
+    "amount": 500,
+    "unit": "ml",
+    "note": {
+     "tr": "kızartmak için",
+     "en": "for frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
    },
    {
     "name": {
-     "tr": "Pul biber",
-     "en": "Chilli flakes"
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 3,
+    "unit": "diş",
+    "note": {
+     "tr": "2 diş sosa ezilmiş, 1 diş aliolige ince rendelenmiş",
+     "en": "2 cloves crushed for the sauce, 1 clove finely grated for the aioli"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz kırmızı biber",
+     "en": "Sweet paprika"
     },
     "amount": 1,
     "unit": "tatlı kaşığı",
-    "note": {
-     "tr": "yoğun acı",
-     "en": "spicy"
+    "note": null,
+    "pantryKey": "paprika",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Acı toz biber",
+     "en": "Hot chilli powder"
     },
-    "pantryKey": "chilli-flakes"
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "chilli-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mayonez",
+     "en": "Mayonnaise"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "aioli için",
+     "en": "for the aioli"
+    },
+    "pantryKey": "mayonnaise",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Patatesleri küp küp doğra ve kızgın yağda altın sarısı olana kadar kızart.",
-     "en": "Cube the potatoes and fry in hot oil until golden."
+     "tr": "Patatesleri soyup kalın küpler halinde kes, suyla yıkayıp iyice kurula.",
+     "en": "Peel the potatoes, cut them into thick cubes, rinse and dry them well."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Ayrı bir tavada salçayı, pul biberi ve az miktarda suyu karıştırarak sosu hazırla.",
-     "en": "In a separate pan, prepare the sauce by mixing tomato paste, chilli flakes, and a little water."
-    },
-    "timerSeconds": 300
-   },
-   {
-    "text": {
-     "tr": "Kızaran patatesleri havlu kağıt üzerine al.",
-     "en": "Transfer fried potatoes to paper towels."
+     "tr": "Yağı kızdır; patatesleri partiler halinde altın rengi ve çıtır olana kadar kızart, süzgece al.",
+     "en": "Heat the oil; fry the potatoes in batches until golden and crisp, then lift them onto a sieve."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Patatesleri servis tabağına al ve üzerine hazırladığın sosu gezdir.",
-     "en": "Place potatoes on a serving plate and drizzle with the prepared sauce."
+     "tr": "Tavadan yağın çoğunu dök, kalan yağda rendelenmiş domatesi ve ezilmiş sarımsağı ekleyip 10 dakika kısık ateşte pişir.",
+     "en": "Pour off most of the oil, add the grated tomato and crushed garlic to the pan and simmer gently for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Toz kırmızı biber ve acı toz biberi ekle, kokusu çıkana kadar çevir; sirkeyi ve tuzu ekleyip sos koyulaşınca ocaktan al.",
+     "en": "Stir in the sweet paprika and chilli powder until fragrant, then add the vinegar and salt and take off the heat once the sauce thickens."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mayonezi kalan ince rendelenmiş sarımsak ve ince kıyılmış maydanozun yarısıyla karıştırıp aioli hazırla.",
+     "en": "Mix the mayonnaise with the grated garlic and half of the chopped parsley to make the aioli."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Patatesleri tabağa al, sıcak sosu gezdirip üzerine aliolini koy ve kalan maydanozla servis et.",
+     "en": "Pile the potatoes on a plate, spoon over the hot sauce, add a dollop of aioli and serve with the rest of the parsley."
     },
     "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
+   "vegetarian",
+   "glutenFree",
+   "Tavada",
    "Kızartma",
-   "Vejetaryen",
-   "Acılı",
-   "Ekonomik"
+   "Vejetaryen"
   ],
   "mealSlots": [
+   "lunch",
    "dinner"
   ],
   "leftover": {
-   "likelihood": "low",
-   "keepsDays": 1,
+   "likelihood": "high",
+   "keepsDays": 2,
    "reheatable": true
   },
   "source": "curated-v1",

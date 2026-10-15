@@ -591,44 +591,32 @@
   "slug": "baklava",
   "cuisine": "turkish",
   "category": "dessert",
+  "region": null,
   "title": {
    "tr": "Baklava",
    "en": "Baklava"
   },
   "shortTitle": null,
   "description": {
-   "tr": "Kat kat incecik yufka ve bol cevizli geleneksel tatlı.",
-   "en": "Traditional dessert with thin layers of pastry and plenty of walnuts."
+   "tr": "İnce yufkalar arasında tarçınlı ceviz ve tereyağıyla kat kat pişirilip soğumuş şerbetle tatlandırılan, dinlendikçe lezzeti artan klasik tatlı.",
+   "en": "Layers of buttered yufka with a cinnamon walnut filling, baked until golden and soaked in cooled syrup; it tastes better after it rests."
   },
   "servings": 6,
-  "prepMinutes": 30,
-  "cookMinutes": 45,
-  "waitMinutes": 60,
-  "difficulty": 3,
+  "prepMinutes": 40,
+  "cookMinutes": 40,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
   "ingredients": [
    {
     "name": {
      "tr": "Baklavalık yufka",
-     "en": "Baklava pastry"
+     "en": "Baklava pastry sheets"
     },
-    "amount": 1,
-    "unit": "paket",
+    "amount": 400,
+    "unit": "g",
     "note": null,
     "pantryKey": "baklava-yufka",
-    "substitute": null
-   },
-   {
-    "name": {
-     "tr": "Ceviz içi",
-     "en": "Walnut"
-    },
-    "amount": 300,
-    "unit": "g",
-    "note": {
-     "tr": "dövülmüş",
-     "en": "crushed"
-    },
-    "pantryKey": "walnut",
     "substitute": null
    },
    {
@@ -647,12 +635,54 @@
    },
    {
     "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca doğranmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "garnitür için kırılmış",
+     "en": "crushed, for garnish"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
      "tr": "Toz şeker",
      "en": "Sugar"
     },
-    "amount": 3,
-    "unit": "su bardağı",
-    "note": null,
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
     "pantryKey": "sugar",
     "substitute": null
    },
@@ -661,61 +691,93 @@
      "tr": "Su",
      "en": "Water"
     },
-    "amount": 3,
-    "unit": "su bardağı",
-    "note": null,
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "şerbet için",
+     "en": "for the syrup"
+    },
     "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
     "substitute": null
    }
   ],
   "steps": [
    {
     "text": {
-     "tr": "Şerbet için şeker ve suyu tencerede 15 dakika kaynat.",
-     "en": "Boil the sugar and water in a pot for 15 minutes for the syrup."
-    },
-    "timerSeconds": 900
-   },
-   {
-    "text": {
-     "tr": "Yufkaları tepsiye aralarını yağlayarak diz.",
-     "en": "Layer the pastry sheets in the tray, brushing them with butter."
+     "tr": "Cevizleri kabaca doğra, tarçınla karıştır ve bir kenara ayır.",
+     "en": "Chop the walnuts roughly, mix them with the cinnamon and set aside."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Orta katlara cevizleri serp.",
-     "en": "Sprinkle walnuts between the middle layers."
+     "tr": "Tereyağını kısık ateşte eritip biraz soğumaya bırak; fırını 180 dereceye ısıt.",
+     "en": "Melt the butter over low heat and let it cool a little; heat the oven to 180 degrees."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Baklavayı dilimle ve kalan yağı üzerine gezdir.",
-     "en": "Slice the baklava and drizzle the remaining butter over it."
+     "tr": "Şekeri suyla birlikte tencerede 10 dakika kaynat, limon suyunu ekleyip ocaktan alarak soğumaya bırak.",
+     "en": "Boil the sugar and water together in a pan for 10 minutes, stir in the lemon juice, then take it off the heat and let it cool."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yağlanmış 22x30 cm tepsinin tabanına yufkaların yarısını tek tek tereyağıyla fırçalayarak diz; üzerine ceviz karışımını yay.",
+     "en": "Lay half the pastry sheets in a greased 22 by 30 cm tin, brushing each one with butter; spread the walnut mix over them."
     },
     "timerSeconds": null
    },
    {
     "text": {
-     "tr": "180 derece fırında 30 dakika pişir.",
-     "en": "Bake in a 180-degree oven for 30 minutes."
+     "tr": "Kalan yufkaları da tek tek fırçalayarak üstüne ekle, en üstteki yufkayı tereyağıyla iyice fırçala ve pişmeden önce romb şeklinde dilimle.",
+     "en": "Add the rest of the sheets, brushing each one with butter, brush the top sheet well, and cut diamond shapes through it before baking."
     },
-    "timerSeconds": 1800
+    "timerSeconds": null
    },
    {
     "text": {
-     "tr": "Fırından çıkınca soğuk şerbeti üzerine dök ve 60 dakika çekmesini bekle.",
-     "en": "Pour cold syrup over the hot baklava and wait 60 minutes for it to absorb."
+     "tr": "Fırında 40 dakika pişir, üstü altın rengi olunca çıkar.",
+     "en": "Bake for 40 minutes, until the top is golden."
     },
-    "timerSeconds": 3600
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkan sıcak baklavanın üzerine soğumuş şerbeti yavaşça dök ve oda sıcaklığında en az 4 saat dinlendir.",
+     "en": "Pour the cooled syrup slowly over the hot baklava and let it rest at room temperature for at least 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Üzerine kırılmış fıstıkları serp ve servis et.",
+     "en": "Scatter the crushed pistachios over the top and serve."
+    },
+    "timerSeconds": null
    }
   ],
+  "freezerItem": null,
   "tags": [
+   "vegetarian",
+   "makeAhead",
+   "Fırında",
+   "Hamur işi",
    "Şerbetli",
-   "Misafir",
-   "Fırında"
+   "guest"
   ],
   "mealSlots": [
    "dinner"
