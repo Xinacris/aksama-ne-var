@@ -86,12 +86,23 @@
     "ovmac-corbasi",
     "un-corbasi"
    ],
-   "status": "running",
-   "passed": [],
+   "status": "done",
+   "passed": [
+    "ispanak-corbasi",
+    "karnabahar-corbasi",
+    "nohut-corbasi",
+    "kuru-fasulye-corbasi",
+    "bezelye-corbasi",
+    "ayran-asi-corbasi",
+    "tutmac-corbasi",
+    "ovmac-corbasi",
+    "un-corbasi",
+    "kremali-tavuk-corbasi"
+   ],
    "failed": [],
-   "tokens": null,
+   "tokens": 89252,
    "startedAt": "2026-10-15T19:33:13.239Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-15T19:36:16.705Z"
   },
   {
    "id": "g004",
@@ -543,11 +554,11 @@
     "ispanak-salatasi",
     "ezme-salatasi"
    ],
-   "status": "pending",
+   "status": "running",
    "passed": [],
    "failed": [],
    "tokens": null,
-   "startedAt": null,
+   "startedAt": "2026-10-15T19:35:46.984Z",
    "finishedAt": null
   },
   {
