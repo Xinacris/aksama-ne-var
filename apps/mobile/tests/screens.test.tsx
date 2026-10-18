@@ -50,8 +50,8 @@ describe.each([
 });
 
 describe.each([
-  ["tr", "Tarifler", "100 tarif", "Yeni tarif", "Kaydet", "İmam bayıldı"],
-  ["en", "Recipes", "100 recipes", "New recipe", "Save", "İmam bayıldı (olive-oil stuffed aubergine)"],
+  ["tr", "Tarifler", "1000 tarif", "Yeni tarif", "Kaydet", "İmam bayıldı"],
+  ["en", "Recipes", "1000 recipes", "New recipe", "Save", "İmam bayıldı (olive-oil stuffed aubergine)"],
 ] as const)("Tarifler (%s)", (locale, title, count, newLabel, save, imam) => {
   it("lists, searches, and quick-adds a name with one tap", async () => {
     await freshStore({ demo: true, locale });

@@ -6,14 +6,14 @@ import { catalogRecipes } from "@/recipes/catalog";
 import { formatReport, validateCatalog } from "@/recipes/validate";
 
 describe("the recipe catalog", () => {
-  it("passes the validator (partial: generation is still running), the dish list matches the matrix", () => {
-    const report = validateCatalog({ dishes, files: CATALOG_FILES }, { partial: true });
-    expect(report.ok, formatReport(report, { partial: true })).toBe(true);
+  it("passes the full validator (all 1,000 recipes), the dish list matches the matrix", () => {
+    const report = validateCatalog({ dishes, files: CATALOG_FILES });
+    expect(report.ok, formatReport(report)).toBe(true);
     expect(report.totals.dishes).toBe(1000);
     expect(dishes.filter((d) => d.existing)).toHaveLength(100);
   });
 
-  it("the 100 original built-ins come back from the catalog unchanged for the app", () => {
+  it("the 100 original built-ins come back from the catalog unchanged for the app (plus their new description)", () => {
     const byId = new Map(catalogRecipes.map((r) => [r.id, r]));
     for (const old of builtinRecipes) {
       const now = byId.get(old.id);
@@ -35,7 +35,8 @@ describe("the recipe catalog", () => {
         freezerItem: r.freezerItem,
         leftoverPolicy: r.leftoverPolicy,
         leftoverDays: r.leftoverDays,
-        en: { ...r.translations!.en!, ingredients: undefined },
+        // descriptions were added to the built-ins by the catalog fill pass
+        en: { ...r.translations!.en!, ingredients: undefined, description: undefined },
         lang: r.lang,
       });
       const expected = pick(old);

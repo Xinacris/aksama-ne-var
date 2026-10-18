@@ -20,7 +20,7 @@ test("main journey in English: demo → Today → Recipes (quick add) → List �
   const nav = page.getByRole("navigation", { name: "Main navigation" });
   await nav.getByRole("link", { name: "Recipes" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Recipes" })).toBeVisible();
-  await expect(page.getByText("100 recipes", { exact: true })).toBeVisible();
+  await expect(page.getByText("1000 recipes", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "New recipe" }).click();
   const sheet = page.getByRole("dialog", { name: "New recipe" });
   await sheet.getByLabel("Paste a link or type the dish’s name").fill("Mum’s stuffed peppers");

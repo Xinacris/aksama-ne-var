@@ -88,12 +88,12 @@ describe("Tarif detail", () => {
 });
 
 describe("Tarifler", () => {
-  it("lists all 100, filters by course, tag and search (Turkish casing)", async () => {
+  it("lists all 1,000, filters by course, tag and search (Turkish casing)", async () => {
     await freshStore({ demo: true });
     render(<TariflerPage />);
-    expect(screen.getByRole("status")).toHaveTextContent("100 tarif");
+    expect(screen.getByRole("status")).toHaveTextContent("1000 tarif");
     await userEvent.click(screen.getByRole("button", { name: "Çorba" }));
-    expect(screen.getByRole("status")).toHaveTextContent("15 tarif");
+    expect(screen.getByRole("status")).toHaveTextContent("200 tarif");
     await userEvent.click(screen.getByRole("button", { name: "Tümü" }));
     await userEvent.type(screen.getByLabelText("Tarif ya da malzeme ara"), "İMAM");
     expect(screen.getByRole("link", { name: "İmam bayıldı" })).toBeInTheDocument();
