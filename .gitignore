@@ -65,3 +65,15 @@ expo-env.d.ts
 # Agent catalog workflow: staging and per-batch results are scratch (the state file is committed)
 /packages/core/data/recipes/agent/staging/
 /packages/core/data/recipes/agent/results/
+
+# Generator scratch (npm run recipes:generate): failures and the pending Anthropic batch id
+/packages/core/data/recipes/failed.json
+/packages/core/data/recipes/.anthropic-batch.json
+
+# logs, temp and editor files
+*.log
+*.tmp
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -12,7 +12,7 @@ evening) and a real **cooking mode** (one step per screen, several timers at onc
 Round 3 turned the repo into a monorepo with an **iOS + Android app (Expo)** on the same local-first
 data, and made both apps **Turkish + English**.
 
-**Live:** https://aksama-ne-var.vercel.app · **Morning demo script:** [DEMO.md](DEMO.md)
+**Live:** https://aksama-ne-var.vercel.app · **Morning demo script:** [DEMO.md](docs/DEMO.md)
 
 ## Layout (npm workspaces)
 
@@ -147,7 +147,7 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
 - **Cooking mode** (`/pisir/<date|recipe>`, `apps/web/src/components/cooking`): shared resumable session,
   timers stored as end timestamps, Screen Wake Lock.
 - **Supabase path**: `supabase/schema.sql` (draft, with RLS) and `docs/SUPABASE_MIGRATION.md`.
-- Decisions and reasons: [DECISIONS.md](DECISIONS.md). Build log: [PROGRESS.md](PROGRESS.md).
+- Decisions and reasons: [DECISIONS.md](docs/DECISIONS.md). Build log: [PROGRESS.md](docs/PROGRESS.md).
 
 ## Known limitations
 

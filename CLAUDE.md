@@ -1,14 +1,8 @@
-All work happens on `main`. Every push to `main` deploys production — push only with all checks green. Before any work, read PROGRESS.md and continue from its last section (currently "Round 3.4 (branch round-3.3-catalog)" › "In progress" and "Sabah notu"; the open owner items of 3.2 are in "Handoff after Round 3.2"); also read DECISIONS.md. Latest spec: PROMPT-v3.4.md (in progress, branch round-3.3-catalog). Round 3.3 spec: PROMPT-v3.3.md (done). Round 3.2 spec: PROMPT-v3.2.md (done). Round 3.1 spec: PROMPT-v3.1.md (done).
+All work happens on `main`. Every push to `main` deploys production — push only with all checks green. Before any work, read `docs/PROGRESS.md` (the build log) and continue from its last section ("Round 3.4 — full catalog run" › "Done" and "Sabah notu"; the open owner items of 3.2 are in "Handoff after Round 3.2"); also read `docs/DECISIONS.md`. Backlog: `docs/BACKLOG.md`; demo script: `docs/DEMO.md`.
 
-Round 3 spec is in PROMPT-v3.md (done).
+Round specs live in `docs/prompts/`: `PROMPT-v1.md` (the original spec), `PROMPT-v2.md`, `PROMPT-v2.1.md`, `PROMPT-v2.2.md`, `PROMPT-v3.md`, `PROMPT-v3.1.md` … `PROMPT-v3.4.md` (all done; v3.4 = the 1,000-recipe catalog). **New round prompts go to `docs/prompts/PROMPT-v<round>.md`.**
 
-Round 2.2 spec is in PROMPT-v2.2.md; continue from the first unchecked M-item in PROGRESS.md.
-
-Round 2.1 spec is in PROMPT-v2.1.md; continue from the first unchecked P-item in PROGRESS.md.
-
-Round 2 spec is in PROMPT-v2.md; continue from the first unchecked R-item in PROGRESS.md.
-
-Before any work, read PROGRESS.md and DECISIONS.md and continue from the first unchecked item. The full spec is in PROMPT.md.
+Catalog work (extending or regenerating recipes): the reusable agent workflow and the resume procedure are in `docs/PROGRESS.md` › "Round 3.4 — full catalog run" (`packages/core/scripts/agent-batch.ts`, `packages/core/data/recipes/agent/BRIEF.md`, state file `packages/core/data/recipes/.gen-state.json`).
 
 ## Notes for agents
 - npm workspaces monorepo: `apps/web` (Next.js), `apps/mobile` (Expo), `packages/core` (framework-free shared TS: no React / React Native / Next / Expo imports — ESLint enforces it). Design spec: `design/*.dc.html` (do not delete).
