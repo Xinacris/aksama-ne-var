@@ -3591,6 +3591,22 @@
    "tokens": 43905,
    "startedAt": "2026-10-15T22:59:15.045Z",
    "finishedAt": "2026-10-15T22:59:42.719Z"
+  },
+  {
+   "id": "r002",
+   "kind": "retry",
+   "file": "british/main.json",
+   "slugs": [
+    "full-english"
+   ],
+   "status": "done",
+   "passed": [
+    "full-english"
+   ],
+   "failed": [],
+   "tokens": 51418,
+   "startedAt": "2026-10-18T15:50:13.401Z",
+   "finishedAt": "2026-10-18T15:50:48.576Z"
   }
  ]
 }

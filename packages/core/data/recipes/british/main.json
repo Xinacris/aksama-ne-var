@@ -3079,6 +3079,237 @@
   "version": 1
  },
  {
+  "id": "6c0137da-7786-4023-ae08-c99b829e581c",
+  "slug": "full-english",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Full English (helal)",
+   "en": "Full English breakfast with beef sausage"
+  },
+  "shortTitle": {
+   "tr": "Full English",
+   "en": "Full English"
+  },
+  "description": {
+   "tr": "İngiliz kahvaltısının klasik tabağı, burada dana sosis ve dana füme etle helal hale getirildi. Baharatlı dana sosis, tatlı fasulye ve akışkan yumurta sarısı birlikte güzel bir sabah başlangıcı verir.",
+   "en": "The classic English breakfast plate, made halal with beef sausages and beef bacon. Spiced beef sausage, sweet beans and a runny yolk make a hearty start to the day."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 30,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana sosis",
+     "en": "Beef sausages"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "helal dana sosis",
+     "en": "halal beef sausages"
+    },
+    "pantryKey": "beef-sausage",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Beef bacon"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": null,
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "sahanda pişirilecek",
+     "en": "for frying"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates soslu fasulye",
+     "en": "Baked beans in tomato sauce"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": null,
+    "pantryKey": "canned-white-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mantar",
+     "en": "Mushrooms"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "mushroom",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ikiye bölünmüş",
+     "en": "halved"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ekmek",
+     "en": "Bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "kalın dilimlenmiş",
+     "en": "thick slices"
+    },
+    "pantryKey": "bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Domatesleri kesik yüzleri yukarı bakacak şekilde yağlanmış tepsiye diz, tuz ve karabiber serp.",
+     "en": "Heat the oven to 200°C. Lay the tomato halves cut side up on an oiled tray and season with salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dana sosisleri tepsiye ekleyip 20 dakika fırında pişir.",
+     "en": "Add the beef sausages to the tray and bake for 20 minutes."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Tavada tereyağının yarısını eritip mantarları ekle, 6 dakika suyunu çekene ve kızarana kadar sote et.",
+     "en": "Melt half the butter in a frying pan and cook the mushrooms for 6 minutes, until their liquid has gone and they are browned."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Dana füme etleri kuru bir tavada 4 dakika çevirerek pişir, kağıt havluya al.",
+     "en": "Fry the beef bacon in a dry pan for 4 minutes, turning once, then drain on kitchen paper."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Fasulyeyi küçük bir tencerede kısık ateşte 5 dakika ısıt, ara sıra karıştır.",
+     "en": "Warm the beans in a small pan over a low heat for 5 minutes, stirring now and then."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kalan tereyağı ve yağla tavada yumurtaları sahanda pişir, akları oturunca ocaktan al. Ekmekleri tostta ya da tavada kızart.",
+     "en": "Fry the eggs in the remaining butter and oil until the whites are set but the yolks still run, then toast the bread in a pan or toaster."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dana sosisleri, domatesleri, mantarları, dana füme eti, yumurtaları, fasulyeyi ve ekmekleri tabağa diz, hemen servis et.",
+     "en": "Arrange the beef sausages, tomatoes, mushrooms, beef bacon, eggs, beans and toast on each plate and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Tavada",
+   "Etli",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "breakfast"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
   "id": "5ba0d2ee-b300-43ff-af48-08d5c01b5f6d",
   "slug": "welsh-rarebit",
   "cuisine": "british",
