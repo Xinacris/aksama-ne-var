@@ -3236,12 +3236,23 @@
     "welsh-rarebit",
     "cornish-pasty"
    ],
-   "status": "running",
-   "passed": [],
-   "failed": [],
-   "tokens": null,
+   "status": "partial",
+   "passed": [
+    "fish-pie",
+    "welsh-rarebit",
+    "cornish-pasty"
+   ],
+   "failed": [
+    {
+     "slug": "full-english",
+     "problems": [
+      "steps: mention pork (\"Arrange the sausages, tomatoes, mushroom…\")"
+     ]
+    }
+   ],
+   "tokens": 0,
    "startedAt": "2026-10-15T22:58:06.678Z",
-   "finishedAt": null
+   "finishedAt": "2026-10-18T15:50:04.710Z"
   },
   {
    "id": "g106",

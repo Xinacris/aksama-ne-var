@@ -2809,5 +2809,761 @@
   },
   "source": "curated-v1",
   "version": 1
+ },
+ {
+  "id": "8d3fcb15-e827-4a2e-af49-106df6d63c60",
+  "slug": "fish-pie",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Fish pie",
+   "en": "Fish pie"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pürüzsüz beyaz sosta balık ve karidesin pişirildiği, üstü patates püresiyle kapatılıp fırınlanan İngiliz klasiği. Balığın yumuşaklığı ile peynirli üst kısmın çıtırlığı iyi bir denge kurar.",
+   "en": "A British classic of cod, salmon and prawns in a smooth white sauce, topped with mash and baked until golden. Soft fish and a crisp cheesy top make a good balance."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 45,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Morina fileto",
+     "en": "Cod fillet"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, 3-4 cm küp",
+     "en": "skinless, cut into 3 to 4 cm chunks"
+    },
+    "pantryKey": "cod",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Somon fileto",
+     "en": "Salmon fillet"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "derisi alınmış, küp küp",
+     "en": "skinless, cut into chunks"
+    },
+    "pantryKey": "salmon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karides",
+     "en": "Prawns"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "temizlenmiş",
+     "en": "peeled and deveined"
+    },
+    "pantryKey": "shrimp",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 1,
+    "unit": "kg",
+    "note": {
+     "tr": "soyulmuş, kalın doğranmış, püre için",
+     "en": "peeled and cut into chunks, for the mash"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "püre ve sos için bölünmüş",
+     "en": "divided between the mash and the sauce"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pırasa",
+     "en": "Leek"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yıkanmış, halka halka doğranmış",
+     "en": "washed and sliced into rings"
+    },
+    "pantryKey": "leek",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Cheddar",
+     "en": "Cheddar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "rendelenmiş",
+     "en": "grated"
+    },
+    "pantryKey": "cheddar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri tuzlu suda 20 dakika haşla. Suyunu süz, 40 gram tereyağı ve 100 ml sütle ez, tuz ekle.",
+     "en": "Boil the potatoes in salted water for 20 minutes. Drain, mash with 40 g of the butter and 100 ml of the milk, and season with salt."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Büyük bir tencerede kalan tereyağını eritip soğanı ve pırasayı ekle, yumuşayana kadar kavur.",
+     "en": "Melt the rest of the butter in a large pan and soften the onion and leek over a gentle heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu serpip 1 dakika karıştır. Kalan sütü azar azar ekleyerek pürüzsüz bir sos yap.",
+     "en": "Sprinkle in the flour and stir for 1 minute. Add the remaining milk little by little to make a smooth sauce."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Sosu kısık ateşte 5 dakika pişir, maydanozun yarısını ekle.",
+     "en": "Simmer the sauce gently for 5 minutes, then stir in half of the parsley."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Morina, somon küplerini ve karidesleri sosa ekleyip kısık ateşte 3 dakika pişir.",
+     "en": "Add the cod, salmon and prawns to the sauce and cook gently for 3 minutes."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Balıklı karışımı fırın kabına dök, patates püresiyle kapat ve üstüne rendelenmiş cheddarı serp.",
+     "en": "Heat the oven to 200°C. Spoon the fish mixture into an ovenproof dish, cover with the mash and scatter the grated cheddar over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Önceden ısıtılmış fırında üstü altın renk alana kadar 25 dakika pişir.",
+     "en": "Bake until golden on top, about 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 5 dakika dinlendir, kalan maydanozla servis et.",
+     "en": "Take out of the oven, rest for 5 minutes and serve scattered with the remaining parsley."
+    },
+    "timerSeconds": 300
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Balık",
+   "Misafir"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5ba0d2ee-b300-43ff-af48-08d5c01b5f6d",
+  "slug": "welsh-rarebit",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Welsh rarebit",
+   "en": "Welsh rarebit"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Galler'in ekmek üstü peynirli atıştırmalığı: hardal ve Worcestershire ile tatlandırılmış, biralı cheddar sosu ekmeğin üstünde kabarana kadar ızgarada pişirilir. Hızlı hazırlanır ve sıcak servis edilir.",
+   "en": "A Welsh classic of thick toast topped with a mustard and Worcestershire cheddar sauce, grilled until bubbling. It comes together quickly and is best served hot."
+  },
+  "servings": 2,
+  "prepMinutes": 10,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Cheddar peyniri",
+     "en": "Mature cheddar"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": {
+     "tr": "iri rendelenmiş",
+     "en": "coarsely grated"
+    },
+    "pantryKey": "cheddar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Koyu bira",
+     "en": "Dark beer"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "beer",
+    "substitute": {
+     "name": {
+      "tr": "Tavuk suyu ve üzüm sirkesi",
+      "en": "Chicken stock and grape vinegar"
+     },
+     "amount": 150,
+     "unit": "ml",
+     "pantryKey": "chicken-stock",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Bira kullanmak istemezseniz: 150 ml tavuk suyu + 1 yemek kaşığı üzüm sirkesi kullanın.",
+      "en": "If you prefer not to use beer: use 150 ml chicken stock + 1 tbsp grape vinegar."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 20,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hardal",
+     "en": "Mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Worcestershire sos",
+     "en": "Worcestershire sauce"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "worcestershire",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "sadece sarısı",
+     "en": "yolk only"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kalın dilim ekmek",
+     "en": "Thick slices of bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": null,
+    "pantryKey": "bread",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Küçük bir tencerede tereyağını eritip unu ekle, 1 dakika karıştır.",
+     "en": "Melt the butter in a small pan and stir in the flour for 1 minute."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Birayı (ya da yerine kullandığın karışımı) azar azar ekleyip pürüzsüz bir sos yap, 2 dakika kısık ateşte kaynat.",
+     "en": "Add the beer (or the mixture you are using instead) little by little to make a smooth sauce, then simmer gently for 2 minutes."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Ateşi kısıp rendelenmiş cheddarı, hardalı, Worcestershire sosu, tuz ve karabiberi ekle, peynir tamamen eriyene kadar karıştır.",
+     "en": "Turn the heat down and add the grated cheddar, mustard, Worcestershire sauce, salt and black pepper. Stir until the cheese has fully melted."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu ocaktan alıp biraz soğutun, kıvamlanınca yumurta sarısını çırpıp karıştır.",
+     "en": "Take the sauce off the heat, let it cool a little until it thickens, then beat in the egg yolk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ekmek dilimlerinin bir yüzünü ızgarada ya da tostta hafifçe kızart.",
+     "en": "Toast one side of each bread slice under the grill or in a toaster until lightly golden."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kızarmış olmayan yüzlere sosu eşit yay, fırının ızgarasında 3 dakika kabarıp kızarana kadar pişir.",
+     "en": "Spread the sauce over the untoasted sides and grill for 3 minutes, until bubbling and browned in spots."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Domates dilimleriyle birlikte hemen sıcak servis et.",
+     "en": "Serve straight away, hot, with the tomato slices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "containsAlcohol",
+   "Hızlı",
+   "Kolay",
+   "Tavada"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "3165b144-2c13-4064-98aa-e26f3f1cc390",
+  "slug": "cornish-pasty",
+  "cuisine": "british",
+  "category": "main",
+  "region": null,
+  "title": {
+   "tr": "Cornish pasty",
+   "en": "Cornish pasty"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Cornwall'ın kenar kıvrımlı hamur işi: tereyağlı hamurun içinde dana eti, patates, şalgam ve soğan birlikte pişer. Sıcak ya da ılık yenen, taşınması kolay bir öğün.",
+   "en": "The Cornish hand pie: a buttery shortcrust folded around diced beef, potato, turnip and onion, crimped along the edge and baked. It is easy to carry and good warm or cool."
+  },
+  "servings": 4,
+  "prepMinutes": 45,
+  "cookMinutes": 45,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "hamur için",
+     "en": "for the pastry"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "çok soğuk, küp küp doğranmış",
+     "en": "very cold, cut into cubes"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Soğuk su",
+     "en": "Cold water"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": {
+     "tr": "buz gibi",
+     "en": "ice cold"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çırpılmış, üst yüzeyi için",
+     "en": "beaten, for the glaze"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dana kuşbaşı",
+     "en": "Diced beef"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "diced-beef",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small dice"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Şalgam",
+     "en": "Turnip"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "cut into small dice"
+    },
+    "pantryKey": "turnip",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze kekik",
+     "en": "Fresh thyme"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "yapraklarının sapı ayrılmış",
+     "en": "leaves picked from the stalks"
+    },
+    "pantryKey": "fresh-thyme",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu ve tuzu geniş bir kaseye al, soğuk tereyağını ekleyip parmaklarınla ufalanan kıvama gelene kadar karıştır.",
+     "en": "Put the flour and a pinch of salt in a large bowl and rub in the cold butter with your fingertips until it looks like breadcrumbs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğuk suyu azar azar ekleyip yumuşak bir hamur yoğur, plastik sarıp buzdolabında 30 dakika dinlendir.",
+     "en": "Add the cold water a little at a time and bring together a soft dough. Wrap in cling film and rest in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Dana etini, patatesi, şalgamı ve soğanı küçük küp doğra, tuz, karabiber ve kekik yapraklarıyla karıştır.",
+     "en": "Mix the diced beef, potato, turnip and onion in a bowl with the thyme leaves, salt and black pepper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru 4 eşit parçaya böl, her birini yaklaşık 20 cm çapında ince daireler halinde aç.",
+     "en": "Divide the pastry into 4 equal pieces and roll each into a round about 20 cm across."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Her hamur dairesinin bir yarısına iç harcı yay, kenarlarını ıslatıp ikiye katla ve kenarları parmaklarınla kıvırarak kapat.",
+     "en": "Pile the filling on one half of each round, dampen the edges, fold over and crimp the edge firmly with your fingers to seal."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Pastaların üstünü çırpılmış yumurtayla boya, tepsiye al ve 45 dakika fırında pişir.",
+     "en": "Heat the oven to 200°C. Brush the pasties with the beaten egg, place them on a tray and bake for 45 minutes."
+    },
+    "timerSeconds": 2700
+   },
+   {
+    "text": {
+     "tr": "Fırından çıkarıp 10 dakika dinlendir, sıcak ya da ılık servis et.",
+     "en": "Take out of the oven, rest for 10 minutes and serve warm or lukewarm."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Hamuru bir gece önceden yoğurup buzdolabında bekletebilirsin.",
+     "en": "You can make the pastry the night before and keep it chilled in the fridge."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Fırında",
+   "Etli",
+   "Hamur işi",
+   "makeAhead",
+   "Misafir"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "medium",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
  }
 ]
