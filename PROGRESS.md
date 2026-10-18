@@ -291,10 +291,11 @@ Owner's PRISM (2026-10-15): finish the 1,000 recipes with Haiku subagents (no AP
 
 Workflow (reusable): `packages/core/scripts/agent-batch.ts` + `packages/core/data/recipes/agent/BRIEF.md` (compact style guide + pantry) + the state file `packages/core/data/recipes/.gen-state.json` (committed; written only by the orchestrator). One batch = one agent = one catalog file, ≤ 10 dishes; at most 4 agents at once, never two on the same file. An agent writes its staging file and runs `agent-batch.ts run <batch> <staged>` (places what passes, lists what doesn't); the orchestrator then runs `record <batch> <tokens>`.
 
-## In progress
+## Done (2026-10-18)
 
-**Resume ("devam"):** on branch `round-3.3-catalog`, from `packages/core`:
-1. `npx tsx scripts/agent-batch.ts reset-running` (batches that were running when the session stopped go back to pending; their catalog file only holds recipes that passed).
-2. `npx tsx scripts/agent-batch.ts status`.
-3. Loop: `npx tsx scripts/agent-batch.ts next 4` → one Haiku subagent per printed batch (prompt = brief path + batch line; see the previous agents' prompts in git log), then `record <batch> <tokens>` for each; commit after every batch, push the branch every ~5 batches.
-4. When no generate batches are pending: `plan-retry`, run those; then `plan-fill`, run those (BRIEF-fill.md); then `npm run recipes:validate` (no args) must say 1000/1000; then the full checks; then the merge (PRISM Motion step 7) and the tidy branch (step 8).
+- Catalog complete: `npm run recipes:validate` (no args) → **1000 / 1000**, OK. 115 batches (107 generate, 2 retry, 6 fill), agent tokens **9,340,092** (g105 recovered after the interrupted session; its token count was lost → recorded as 0).
+- Recovery after the accidental stop (2026-10-16): g105 was `running` but its agent had already placed 3/4 (results file present, catalog JSON valid) → recorded instead of reset, committed, pushed (14 unpushed commits went up with it). Its failed dish `full-english` (bare "sausages… bacon" in the last step) passed in retry r002.
+- Tests updated for the full catalog (100 → 1000 recipes, 200 soups; built-ins now have descriptions); expo 57.0.30 / expo-router 57.0.28 (expo-doctor patch drift since 10-15).
+- Checks: lint ✓, typecheck ✓, core 403 / mobile 63 / web 201 ✓, build ✓, Playwright 69 passed / 11 skipped ✓, expo-doctor 21/21 ✓, iOS + Android export ✓.
+
+**Resume procedure (reusable, for future catalog runs):** from `packages/core`: (1) for every `running` batch: if `data/recipes/agent/results/<batch>.json` exists, `record <batch> 0` (its recipes are already placed and valid); otherwise `reset-running`; (2) `npm run recipes:validate -- --partial` must be OK; a broken catalog file → `git checkout -- <file>` and set its batches back to pending; (3) commit + push; (4) `status`, then the `next 4` loop, `plan-retry`, `plan-fill`, full validate, checks.
