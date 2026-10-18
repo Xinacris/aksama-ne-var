@@ -299,3 +299,22 @@ Workflow (reusable): `packages/core/scripts/agent-batch.ts` + `packages/core/dat
 - Checks: lint ✓, typecheck ✓, core 403 / mobile 63 / web 201 ✓, build ✓, Playwright 69 passed / 11 skipped ✓, expo-doctor 21/21 ✓, iOS + Android export ✓.
 
 **Resume procedure (reusable, for future catalog runs):** from `packages/core`: (1) for every `running` batch: if `data/recipes/agent/results/<batch>.json` exists, `record <batch> 0` (its recipes are already placed and valid); otherwise `reset-running`; (2) `npm run recipes:validate -- --partial` must be OK; a broken catalog file → `git checkout -- <file>` and set its batches back to pending; (3) commit + push; (4) `status`, then the `next 4` loop, `plan-retry`, `plan-fill`, full validate, checks.
+
+## Chore: tidy root (branch `chore/tidy-root`, 2026-10-18)
+
+- Nothing tracked had to be untracked: no build output, `node_modules`, `.env*` (only `apps/web/.env.example`), logs, caches, PGlite data or generator scratch was in git. `.gitignore` now also covers `packages/core/data/recipes/failed.json`, `.anthropic-batch.json`, `*.log`, `*.tmp`, editor folders.
+- Moved with `git mv`: `PROMPT.md` → `docs/prompts/PROMPT-v1.md`, `PROMPT-v*.md` → `docs/prompts/`, `PROGRESS.md` / `DECISIONS.md` / `BACKLOG.md` / `DEMO.md` → `docs/`. References updated in `CLAUDE.md`, `README.md`, `apps/web/src/lib/themeBoot.ts`. Older entries in this log still name the files by their old root paths (history, left as written).
+- Kept on purpose (used by code/build or the documented workflow): `design/`, `supabase/`, `apps/mobile/modules/*/ios/` (native module source), `packages/core/data/recipes/agent/BRIEF*.md` + `.gen-state.json` (the reusable catalog workflow).
+- Ambiguous, not touched: `apps/web/AGENTS.md`, `apps/mobile/AGENTS.md` (framework notes for agents), `design/canvas.json`.
+- Checks on the branch: lint ✓, typecheck ✓, core 403 / mobile 63 / web 201 ✓, build ✓, Playwright 69 passed / 11 skipped ✓, expo-doctor 21/21 ✓, iOS + Android export ✓, `recipes:validate` 1000/1000 ✓.
+
+## Sabah notu
+
+Günaydın. Katalog bitti ve yayında.
+
+- **Tarifler:** `npm run recipes:validate` → **1000 / 1000**, OK (900 Haiku ajanlarının yazdığı yeni tarif + açıklaması eklenmiş 100 hazır tarif). 115 parti (107 üretim, 2 tekrar, 6 açıklama), ajanların toplam token kullanımı **9.340.092**.
+- **Kesinti:** Oturum yarıda kapandığında g105 partisi bitmiş ama kaydedilmemişti (3/4 tarif geçerli, dosyada). Yeniden üretmedim, kaydettim; bozuk dosya yoktu. Kalan `full-english` tarifi, son adımdaki çıplak "sausages… bacon" yüzünden domuz kontrolüne takılmıştı. r002'de "dana sosis / dana füme et" olarak düzeltildi. Gönderilmemiş 14 commit de push'landı.
+- **Testler:** Bazı testler hâlâ "100 tarif" bekliyordu. Bunları 1000 tarif ve 200 çorbaya göre güncelledim; hazır tarifler de artık açıklama taşıyor. expo-doctor iki yama sürümü uyarısı verdi, `expo` 57.0.30 ve `expo-router` 57.0.28'e yükselttim.
+- **`main`:** `round-3.3-catalog` birleştirildi (`ba54f0f`), production deploy `success`, site 200. Katalog dalı silindi (yerelde ve GitHub'da).
+- **Kök temizliği (`chore/tidy-root`):** Git'ten çıkarılması gereken dosya yoktu. `.gitignore` biraz genişledi. Prompt'lar `docs/prompts/`'a taşındı (`PROMPT.md` → `PROMPT-v1.md`). PROGRESS / DECISIONS / BACKLOG / DEMO `docs/`'a taşındı. CLAUDE.md ve README güncellendi; yeni round prompt'ları `docs/prompts/`'a gidecek. Tüm kontroller yeşil, `main`'e birleştirildi.
+- **Sana kalan:** `apps/web/AGENTS.md`, `apps/mobile/AGENTS.md` ve `design/canvas.json` dosyalarına dokunmadım. Kalsın mı, sen karar ver. 3.2'den açık kalan maddeler "Handoff after Round 3.2" bölümünde duruyor. iOS OCR modülü (3.3) hâlâ Xcode'da derlenmedi.
