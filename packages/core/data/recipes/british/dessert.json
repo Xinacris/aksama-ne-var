@@ -1,0 +1,688 @@
+[
+ {
+  "id": "37c37b9a-9d23-4400-a2f1-f80e8208eaf7",
+  "slug": "sticky-toffee-pudding",
+  "cuisine": "british",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Sticky toffee pudding",
+   "en": "Sticky toffee pudding"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Hurmalı, nemli bir İngiliz keki; üzerine dökülen karamel sosla servis edilir. Sos sıcakken kekin içine işler ve kek yumuşak kalır.",
+   "en": "A moist British sponge studded with dates and finished with a warm toffee sauce. The sauce soaks in while the cake is still hot, which keeps the crumb soft."
+  },
+  "servings": 8,
+  "prepMinutes": 20,
+  "cookMinutes": 40,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Çekirdeksiz hurma",
+     "en": "Pitted dates"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "date",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kaynar su",
+     "en": "Boiling water"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karbonat",
+     "en": "Bicarbonate of soda"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "baking-soda",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "softened"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Esmer şeker",
+     "en": "Dark brown sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "brown-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı (sos için)",
+     "en": "Butter (for the sauce)"
+    },
+    "amount": 75,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Esmer şeker (sos için)",
+     "en": "Brown sugar (for the sauce)"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "brown-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "sos için",
+     "en": "for the sauce"
+    },
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Hurmaları ince doğra, kaynar suyun içine koy ve karbonatı ekle. 10 dakika beklet.",
+     "en": "Chop the dates finely, put them in the boiling water with the bicarbonate of soda and leave for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yumuşamış tereyağını ve esmer şekeri kremamsı bir kıvam alana kadar çırp, yumurtaları birer birer ekle.",
+     "en": "Beat the softened butter and brown sugar until creamy, then add the eggs one at a time."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu, bir tutam tuzu ve vanilyayı karışıma ekle; hurmalı suyu da katıp pürüzsüz bir hamur elde et.",
+     "en": "Add the flour, baking powder, a pinch of salt and the vanilla, then fold in the date mixture until smooth."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt, kalıbı yağlayıp hamuru dök ve 35 dakika pişir.",
+     "en": "Heat the oven to 180°C, grease a 20 cm tin, pour in the batter and bake for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırlamak için tereyağı, esmer şeker ve kremayı küçük tencerede 5 dakika kaynat.",
+     "en": "For the sauce, simmer the butter, brown sugar and cream in a small pan for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Keki kalıptan çıkarıp sosun yarısını üzerine dök, kalan sosla birlikte sıcak servis yap.",
+     "en": "Turn the cake out of the tin, spoon half the sauce over it and serve warm with the rest of the sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "dde99de7-3e5b-47f3-8c64-cf6a15e22689",
+  "slug": "scone",
+  "cuisine": "british",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Scone",
+   "en": "Scones with jam and cream"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Çayın yanında yenen, dışı hafif çıtır içi yumuşak tereyağlı bir İngiliz çöreği. Reçel ve krema ile servis edilir.",
+   "en": "A small British tea-time bake with a lightly crisp crust and a soft, crumbly middle. Served with jam and cream."
+  },
+  "servings": 6,
+  "prepMinutes": 20,
+  "cookMinutes": 12,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 75,
+    "unit": "g",
+    "note": {
+     "tr": "soğuk, küp doğranmış",
+     "en": "cold, cubed"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 150,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "üst yüzey için çırpılmış",
+     "en": "beaten, for brushing the tops"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema (servis için)",
+     "en": "Double cream, to serve"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "yumuşak kıvamda çırpılmış",
+     "en": "lightly whipped"
+    },
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek reçeli",
+     "en": "Strawberry jam"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "jam",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt ve fırın tepsisine yağlı kağıt ser.",
+     "en": "Heat the oven to 220°C and line a baking tray with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu, şekeri ve tuzu geniş bir kaseye al, soğuk tereyağını parmak uçlarınla ufalayarak kırıntı kıvamına getir.",
+     "en": "Put the flour, baking powder, sugar and salt in a large bowl, then rub in the cold butter with your fingertips until it looks like breadcrumbs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü ekleyip bıçak yardımıyla karıştır; yumuşak, hafif yapışkan bir hamur elde et.",
+     "en": "Add the milk and mix with a knife to a soft, slightly sticky dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru hafifçe unlu tezgâha al, kısaca yoğur ve 2 cm kalınlığa aç.",
+     "en": "Turn the dough onto a lightly floured surface, knead it briefly and roll it out to 2 cm thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bardak ağzıyla 6 daire kes, üzerlerine çırpılmış yumurtayı sür ve 12 dakika fırında pişir.",
+     "en": "Cut out 6 rounds with a glass, brush the tops with the beaten egg and bake for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Sconeları tel ızgarada 10 dakika soğumaya bırak.",
+     "en": "Leave the scones to cool on a wire rack for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sıcak sconeları ikiye kes; kremayı ve reçeli yanına koyup servis yap.",
+     "en": "Split the warm scones in half and serve them with the cream and jam on the side."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "breakfast"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "9a064f3b-9910-4c7a-a609-1543f7f5927a",
+  "slug": "trifle",
+  "cuisine": "british",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Trifle",
+   "en": "Trifle"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Şeriyle ıslatılmış pandispanya, reçel, muhallebi ve krema bir cam kâsede kat kat dizilir. Bir gece dinlenince daha iyi tadar.",
+   "en": "A layered English dessert of sponge soaked in sherry, jam, custard and whipped cream. It tastes better after a night in the fridge."
+  },
+  "servings": 6,
+  "prepMinutes": 35,
+  "cookMinutes": 10,
+  "waitMinutes": 130,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Hazır pandispanya",
+     "en": "Sponge cake"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": {
+     "tr": "küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "sponge-cake",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek reçeli",
+     "en": "Strawberry jam"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "jam",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Şeri",
+     "en": "Sherry"
+    },
+    "amount": 100,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "sherry",
+    "substitute": {
+     "name": {
+      "tr": "Üzüm suyu",
+      "en": "Grape juice"
+     },
+     "amount": 100,
+     "unit": "ml",
+     "pantryKey": "grape-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şeri kullanmak istemezseniz: 100 ml üzüm suyu kullanın.",
+      "en": "If you prefer not to use sherry: use 100 ml grape juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "chilled"
+    },
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek",
+     "en": "Strawberries"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "strawberry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "kavrulmuş pul badem",
+     "en": "toasted flaked almonds"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pandispanyayı cam kasenin dibine yarısını yay ve üzerine reçelin yarısını sür. Kalan pandispanya ve reçelle ikinci katı aynı şekilde oluştur.",
+     "en": "Spread half the sponge cubes over the base of a glass bowl and dot with half the jam. Repeat with the rest of the sponge and jam to make a second layer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Şeriyi (ya da kullandığın karışımı) pandispanyanın üzerine dök ve 10 dakika beklet.",
+     "en": "Pour the sherry (or the mixture you are using instead) over the sponge and leave it to soak for 10 minutes."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Sütü tencerede ısıt. Yumurta, şeker ve nişastayı kasede çırp, sıcak sütü azar azar ekleyip tencereye geri dök ve koyulaşana kadar karıştırarak pişir.",
+     "en": "Warm the milk in a pan. Whisk the eggs, sugar and cornflour in a bowl, pour in the hot milk little by little, then return everything to the pan and cook, stirring, until thick."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Muhallebiyi vanilyayla tatlandır, pandispanyanın üzerine yavaşça dök ve streç filmle kapatıp 2 saat buzdolabında beklet.",
+     "en": "Stir the vanilla into the custard, pour it gently over the sponge, cover with cling film and chill for 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Kremayı yumuşak tepeler oluşana kadar çırp ve muhallebinin üzerine yay.",
+     "en": "Whip the cream to soft peaks and spread it over the custard."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çilek dilimlerini ve kavrulmuş bademi üzerine diz.",
+     "en": "Arrange the strawberry slices and toasted almonds on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hemen servis yap ya da kapağını kapatıp buzdolabında sakla.",
+     "en": "Serve straight away, or cover and keep in the fridge until needed."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Pandispanya, şeri ve muhallebi katmanını bir gece önceden hazırla; kremayı servisten hemen önce ekle.",
+     "en": "Build the sponge, sherry and custard layers the night before, and add the cream just before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "makeAhead",
+   "guest",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

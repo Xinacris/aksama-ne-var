@@ -1,6 +1,7 @@
 import type { Ingredient, PrepTask, Recipe, RecipeTranslation } from "../data/models";
 import { getLocale, t, type Locale } from "../i18n";
 import { slugify } from "../lib/text";
+import { catalogEntry } from "../data/seed/ingredients";
 
 /**
  * Recipes in two languages. A recipe keeps its language-neutral data (times,
@@ -14,7 +15,7 @@ import { slugify } from "../lib/text";
 /** Catalog ingredient in the current language ("Kıyma" → "Minced beef"); unknown names stay as written. */
 export function ingredientLabel(name: string, locale: Locale = getLocale()): string {
   if (locale === "tr") return name;
-  return t(`ing.${slugify(name)}`, { defaultValue: name, lng: locale });
+  return t(`ing.${slugify(name)}`, { defaultValue: catalogEntry(name)?.en ?? name, lng: locale });
 }
 
 export function sourceLang(r: Pick<Recipe, "lang">): Locale {
@@ -38,7 +39,13 @@ export function localizeRecipe(r: Recipe, locale: Locale = getLocale()): Recipe 
   const ingredients: Ingredient[] = r.ingredients.map((ing) => {
     const label = tr?.ingredients?.[ing.name] ?? (sourceLang(r) === locale ? undefined : ingredientLabel(ing.name, locale));
     const note = tr?.notes?.[ing.name] ?? ing.note;
-    return { ...ing, ...(label && label !== ing.name ? { label } : {}), ...(note ? { note } : {}) };
+    const subNote = tr?.substituteNotes?.[ing.name];
+    return {
+      ...ing,
+      ...(label && label !== ing.name ? { label } : {}),
+      ...(note ? { note } : {}),
+      ...(ing.substitute && subNote ? { substitute: { ...ing.substitute, note: subNote } } : {}),
+    };
   });
   if (!tr) return { ...r, ingredients };
   return {
@@ -50,6 +57,7 @@ export function localizeRecipe(r: Recipe, locale: Locale = getLocale()): Recipe 
     steps: tr.steps.length ? tr.steps : r.steps,
     prepItems: r.prepItems.map((p, i) => ({ ...p, label: tr.prepItems?.[i] || p.label })),
     ingredients,
+    ...(tr.description ? { description: tr.description } : {}),
   };
 }
 

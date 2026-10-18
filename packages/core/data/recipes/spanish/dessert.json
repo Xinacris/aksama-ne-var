@@ -1,0 +1,833 @@
+[
+ {
+  "id": "7535e9a5-b366-4279-a0fe-3b1bb66bf693",
+  "slug": "crema-catalana",
+  "cuisine": "spanish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Crema catalana",
+   "en": "Crema catalana"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Limon ve tarçınla kokulandırılmış kalın bir krema, üzerinde ince bir karamel tabakası. Kaşıkla kırılan çıtır üst kabuk ile yumuşak krema arasındaki fark asıl lezzeti verir.",
+   "en": "A thick custard scented with lemon and cinnamon, under a thin layer of caramel. The contrast between the cracking sugar top and the soft cream is what makes it."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 15,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece sarıları",
+     "en": "Yolks only"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Granulated sugar"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": {
+     "tr": "50 g kremaya, kalanı üstüne",
+     "en": "50 g for the custard, the rest for the top"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın çubuğu",
+     "en": "Cinnamon stick"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Sütü aromalandırmak için",
+     "en": "To flavour the milk"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece kabuğu rendelenmiş",
+     "en": "Zest only"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Limonun kabuğunu rendele. Sütü tarçın çubuğu ve limon kabuğuyla birlikte kısık ateşte ısıt; kaynamasına izin verme.",
+     "en": "Finely grate the lemon zest. Warm the milk with the cinnamon stick and lemon zest over a low heat, without letting it boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını 50 g şekerle açık renk alana kadar çırp, nişastayı ve vanilya özütünü ekleyip karıştır.",
+     "en": "Whisk the yolks with 50 g of the sugar until pale, then stir in the cornflour and vanilla extract."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıcak sütü süzgeçten geçirerek yumurtalı karışıma az az ekle, bu sırada sürekli çırp.",
+     "en": "Pour the warm milk through a sieve into the yolks a little at a time, whisking all the while."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı tencereye geri koy, kısık ateşte 8 dakika sürekli karıştırarak krem kıvamına gelene kadar pişir.",
+     "en": "Return the mixture to the pan and cook over a low heat for 8 minutes, stirring constantly, until it thickens to a custard."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kremayı 4 küçük kaba paylaştır, oda sıcaklığında soğumaya bırak, sonra buzdolabında en az 4 saat beklet.",
+     "en": "Divide the custard between 4 small dishes, leave to cool to room temperature, then chill in the fridge for at least 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Servisten hemen önce kalan şekeri her krema yüzeyine ince bir tabaka halinde serp ve mutfak meşalesiyle karamelize et.",
+     "en": "Just before serving, sprinkle the rest of the sugar in a thin layer over each custard and caramelise it with a kitchen blowtorch."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Kremayı bir gün önce hazırlayıp kaplarında buzdolabında bekletebilirsin. Şekeri servisten hemen önce serp.",
+     "en": "The custard can be made a day ahead and kept chilled in its dishes. Sprinkle and caramelise the sugar just before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Sütlü",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "1dd67a05-b493-498c-8e74-ad9f07a51c99",
+  "slug": "churros",
+  "cuisine": "spanish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Churros",
+   "en": "Churros with chocolate"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Dışı çıtır, içi yumuşak kızarmış hamur çubukları; tarçınlı şekere bulanır ve koyu kıvamlı sıcak çikolata sosuyla servis edilir.",
+   "en": "Crisp-skinned fried dough sticks, soft inside and rolled in cinnamon sugar, served with a thick dark chocolate sauce for dipping."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "Elenmiş",
+     "en": "Sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "Kızartmak için",
+     "en": "For deep-frying"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Granulated sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "Kaplamak için",
+     "en": "For coating"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "Kaplamak için",
+     "en": "For coating"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "Kırılmış",
+     "en": "Chopped"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": {
+     "tr": "Çikolata sosu için",
+     "en": "For the chocolate sauce"
+    },
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Çikolata sosunu koyulaştırmak için",
+     "en": "To thicken the chocolate sauce"
+    },
+    "pantryKey": "cornflour",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tencerede suyu, tereyağını ve bir tutam tuzu kaynat; tereyağı eriyince ocaktan al.",
+     "en": "Bring the water, butter and a pinch of salt to the boil in a pan. Take it off the heat once the butter has melted."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu bir seferde ekleyip tahta kaşıkla topaklanmadan karıştır. Ocağı orta ateşe alıp hamur tencerenin kenarından ayrılana kadar 2 dakika karıştırarak pişir.",
+     "en": "Tip in all the flour and beat with a wooden spoon until smooth. Return the pan to a medium heat and stir for 2 minutes, until the dough pulls away from the sides."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Hamur ılınana kadar bekle, sonra yıldız uçlu sıkma torbasına koy.",
+     "en": "Leave the dough to cool until warm, then spoon it into a piping bag fitted with a star nozzle."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sıvı yağı derin bir tencerede orta-yüksek ateşte yaklaşık 180 dereceye ısıt. Yağa bir parça hamur attığında hemen köpürüyorsa hazırdır.",
+     "en": "Heat the oil in a deep pan over a medium-high heat to about 180°C. It is ready when a small piece of dough sizzles and rises straight away."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru yağa 10 cm uzunluğunda sık ve her grubu 3 dakika kadar, altın rengi olana kadar kızart.",
+     "en": "Pipe 10 cm lengths of dough into the oil and fry each batch for 3 minutes, until golden."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kızaran churroları kağıt havluya al, sıcakken şeker ve tarçın karışımına bulayarak her tarafını kapla.",
+     "en": "Lift the churros onto kitchen paper, then roll them in the cinnamon sugar while still hot until coated all over."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Çikolata sosu için sütü ısıt. Nişastayı birkaç kaşık sütle ayrıca karıştırıp ekle, kıvam almaya başlayınca kırılmış çikolatayı at. Kısık ateşte 2 dakika karıştırarak pürüzsüz bir sos elde et.",
+     "en": "For the chocolate sauce, warm the milk. Mix the cornflour with a few spoons of milk in a cup and stir it in, then add the chopped chocolate once the milk begins to thicken. Stir over a low heat for 2 minutes until smooth."
+    },
+    "timerSeconds": 120
+   },
+   {
+    "text": {
+     "tr": "Churroları sıcak çikolata sosuyla birlikte servis et.",
+     "en": "Serve the churros warm with the chocolate sauce."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "kidFriendly",
+   "guest",
+   "Kızartma",
+   "Hamur işi",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "763d1635-565e-4a5d-ad98-e4a885fcf04a",
+  "slug": "flan",
+  "cuisine": "spanish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Flan",
+   "en": "Spanish flan"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Karamel kaplı, yumuşacık ve pürüzsüz sütlü bir tatlı. Önceden yapılıp soğuk servis edildiği için misafirli akşamlar için pratik bir seçimdir.",
+   "en": "A smooth, wobbly custard baked in its own caramel. It is made ahead and served cold, so it suits an evening with guests."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 50,
+  "waitMinutes": 300,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Granulated sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "100 g karamel, 50 g kremaya",
+     "en": "100 g for the caramel, 50 g for the custard"
+    },
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "Karamel için",
+     "en": "For the caramel"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece kabuğu rendelenmiş",
+     "en": "Zest only"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 160 dereceye ısıt. Dört küçük kalıbı (ramekin) derin bir fırın tepsisine yerleştir.",
+     "en": "Heat the oven to 160°C. Set four small ramekins in a deep baking tray."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tencerede 100 g şekeri 3 yemek kaşığı suyla orta ateşte koyu kehribar renge gelene kadar karamelize et, hızlıca kalıplara paylaştır.",
+     "en": "In a pan, cook 100 g of the sugar with the 3 tablespoons of water over a medium heat until dark amber, then quickly divide it between the ramekins."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü, kalan 50 g şekeri ve limon kabuğunu ocakta ılıt. Şeker eriyince ocaktan al ve limon kabuğunu çıkar.",
+     "en": "Warm the milk with the remaining 50 g sugar and the lemon zest until the sugar dissolves. Take it off the heat and discard the zest."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları vanilya özütü ve bir tutam tuzla hafifçe çırp. Ilık sütü ince bir akışla ekleyip karıştır, sonra süzgeçten geçir.",
+     "en": "Whisk the eggs with the vanilla extract and a pinch of salt until just combined. Add the warm milk in a thin stream, whisking, then strain the mixture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Krema karışımını karamelli kalıplara paylaştır. Tepsiye kalıpların yarısına gelecek kadar sıcak su dök.",
+     "en": "Divide the custard between the ramekins. Pour hot water into the tray until it reaches halfway up their sides."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırında 40 dakika pişir; kenarlar oturmuş, ortası hafifçe titreyene kadar bekle.",
+     "en": "Bake for 40 minutes, until set at the edges with just a slight wobble in the middle."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Kalıpları sudan çıkarıp oda sıcaklığına gelene kadar soğut, sonra buzdolabında en az 4 saat beklet.",
+     "en": "Lift the ramekins out of the water and leave them to cool to room temperature, then chill in the fridge for at least 4 hours."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Servisten önce bıçağı kalıbın kenarında gezdirip tabağa ters çevir; karamel sosu üzerinden akarak tabağa yayılsın.",
+     "en": "Before serving, run a knife around the edge of each ramekin and turn it out onto a plate, letting the caramel run over the top."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Flanı bir gün önceden pişirip kalıplarında buzdolabında bekletebilirsin.",
+     "en": "The flan can be baked a day ahead and kept chilled in its ramekins."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "glutenFree",
+   "makeAhead",
+   "guest",
+   "Sütlü",
+   "Fırında"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ec6c9759-11ea-47c7-a7aa-5dfe7d0d6cac",
+  "slug": "arroz-con-leche",
+  "cuisine": "spanish",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Arroz con leche",
+   "en": "Arroz con leche"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Baldo pirinçle yavaşça pişirilen, limon ve tarçın kokulu sütlü pirinç tatlısı. Soğuk ya da oda sıcaklığında servis edilir ve bir gün önceden yapılabilir.",
+   "en": "Short-grain rice simmered slowly in milk with lemon peel and cinnamon. It is served cold or at room temperature and is better made a day ahead."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 55,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Baldo pirinç",
+     "en": "Baldo rice"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "Yıkanmış",
+     "en": "Rinsed"
+    },
+    "pantryKey": "baldo-rice",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 250,
+    "unit": "ml",
+    "note": {
+     "tr": "Pirinci ilk pişirmek için",
+     "en": "To parboil the rice"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Granulated sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "Sadece kabuğu, şerit şerit",
+     "en": "Peel only, in strips"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tarçın",
+     "en": "Cinnamon"
+    },
+    "amount": 1,
+    "unit": "çay kaşığı",
+    "note": {
+     "tr": "Sütü aromalandırmak ve servis için",
+     "en": "To flavour the milk and to serve"
+    },
+    "pantryKey": "cinnamon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Pirinci soğuk suda iki kez yıka ve süzgeçte iyice süz.",
+     "en": "Rinse the rice twice in cold water and drain it well."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirinci 250 ml suyla birlikte orta ateşte 5 dakika kaynat, sonra süzgeçten geçirip suyunu dök.",
+     "en": "Simmer the rice with the 250 ml of water over a medium heat for 5 minutes, then drain off the water."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Pirinci tencereye geri al, sütü, limon kabuğunu ve tarçını ekle. Kısık ateşte 40 dakika, ara ara karıştırarak pişir.",
+     "en": "Return the rice to the pan and add the milk, lemon peel and cinnamon. Simmer over a low heat for 40 minutes, stirring from time to time."
+    },
+    "timerSeconds": 2400
+   },
+   {
+    "text": {
+     "tr": "Şekeri, bir tutam tuzu ve vanilya özütünü ekle; 10 dakika daha karıştırarak pişirmeye devam et.",
+     "en": "Stir in the sugar, a pinch of salt and the vanilla extract, then keep cooking for 10 more minutes, stirring."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Limon kabuğunu çıkar. Kıvam fazla sıkıysa biraz sıcak süt ekleyip gevşet.",
+     "en": "Remove the lemon peel. If the pudding is too thick, loosen it with a little warm milk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Pirinç muhallebisini kaselere paylaştır, oda sıcaklığında soğut ve buzdolabında en az 2 saat beklet.",
+     "en": "Spoon the pudding into bowls, leave to cool to room temperature, then chill in the fridge for at least 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Servis öncesi üzerine biraz tarçın serpip sun.",
+     "en": "Dust with a little cinnamon just before serving."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Pirinç muhallebisini bir gün önceden yapıp buzdolabında saklayabilirsin; servis öncesi tarçın serp.",
+     "en": "The rice pudding can be made a day ahead and kept in the fridge. Dust with cinnamon just before serving."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Vejetaryen",
+   "glutenFree",
+   "makeAhead",
+   "kidFriendly",
+   "budget",
+   "Sütlü",
+   "Tencere"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

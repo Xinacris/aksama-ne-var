@@ -1,5 +1,6 @@
 import type { Aisle, Side, Unit } from "../models";
 import { ingredientLabel } from "../../domain/recipeText";
+import { MORE_INGREDIENTS, PANTRY_KEYS } from "./pantry";
 
 /**
  * Canonical ingredient catalog. Every recipe ingredient must use one of
@@ -12,7 +13,14 @@ import { ingredientLabel } from "../../domain/recipeText";
  * - `staple`: salt, oil, spices — assumed at home, never auto-listed.
  */
 export interface CatalogEntry {
+  /** Pantry key (Round 3.4): the language-neutral id, e.g. "onion", "red-lentil" (seed/pantry.ts). */
+  key: string;
+  /** Turkish canonical name: what recipes and lists use. */
   name: string;
+  /** English name, for entries the i18n `ing.*` table doesn't have. */
+  en?: string;
+  /** Alcoholic drink: recipes must offer an alcohol-free substitute. */
+  alcohol?: boolean;
   side: Side;
   aisle: Aisle;
   base: "g" | "ml" | "adet" | "demet";
@@ -28,8 +36,8 @@ const e = (
   side: Side,
   aisle: Aisle,
   base: CatalogEntry["base"],
-  extra: Omit<CatalogEntry, "name" | "side" | "aisle" | "base"> = {},
-): CatalogEntry => ({ name, side, aisle, base, ...extra });
+  extra: Omit<CatalogEntry, "key" | "name" | "side" | "aisle" | "base"> = {},
+): CatalogEntry => ({ key: "", name, side, aisle, base, ...extra });
 
 const kasap = (name: string, extra: Partial<CatalogEntry> = {}) =>
   e(name, "market", "Kasap", "g", { pack: { size: 250, unit: "g" }, ...extra });
@@ -44,7 +52,7 @@ const sebze = (name: string, extra: Partial<CatalogEntry> = {}) => e(name, "paza
 const sebzeAdet = (name: string, extra: Partial<CatalogEntry> = {}) => e(name, "pazar", "Sebze", "adet", extra);
 const yesil = (name: string) => e(name, "pazar", "Yeşillik", "demet");
 
-export const INGREDIENT_CATALOG: CatalogEntry[] = [
+const ORIGINAL_CATALOG: CatalogEntry[] = [
   // Kasap
   kasap("Kıyma"),
   kasap("Dana kuşbaşı"),
@@ -176,10 +184,33 @@ export const INGREDIENT_CATALOG: CatalogEntry[] = [
   e("Limon", "pazar", "Meyve", "adet", { perPiece: 1 }),
 ];
 
+/** Every ingredient the app knows: the original entries (keys from seed/pantry.ts) and the catalog's additions. */
+export const INGREDIENT_CATALOG: CatalogEntry[] = [
+  ...ORIGINAL_CATALOG.map((c) => {
+    const key = PANTRY_KEYS[c.name];
+    if (!key) throw new Error(`No pantry key for "${c.name}" — add it to seed/pantry.ts`);
+    return { ...c, key };
+  }),
+  ...MORE_INGREDIENTS,
+];
+
+/**
+ * The entries from before the catalog (Round 3.4). The import's free-text matcher uses only these:
+ * the additions include everyday words ("Su", "Tavuk suyu", "Ayçiçek yağı") that would otherwise
+ * swallow a caption's wording ("Sıcak su") or split lists that merge today ("Sıvı yağ").
+ */
+export const BASE_CATALOG: CatalogEntry[] = INGREDIENT_CATALOG.filter((c) => c.name in PANTRY_KEYS);
+
 const byName = new Map(INGREDIENT_CATALOG.map((c) => [c.name, c]));
+const byKey = new Map(INGREDIENT_CATALOG.map((c) => [c.key, c]));
 
 export function catalogEntry(name: string): CatalogEntry | undefined {
   return byName.get(name);
+}
+
+/** The catalog entry for a pantry key ("red-lentil"). */
+export function pantryEntry(key: string): CatalogEntry | undefined {
+  return byKey.get(key);
 }
 
 /** Case/diacritic-insensitive lookup to normalize free-text names (manual list items, custom recipes). */

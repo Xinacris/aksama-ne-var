@@ -1,0 +1,1767 @@
+[
+ {
+  "id": "1143b67f-7f1e-4267-b90c-9470e3e689d6",
+  "slug": "tiramisu",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Tiramisu",
+   "en": "Tiramisu"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Mascarponeli krema ile kahveye ve marsalaya batırılmış kedidilinin katman katman dizildiği, soğukta dinlendirilen İtalyan tatlısı.",
+   "en": "Layers of mascarpone cream and coffee-soaked ladyfingers, rested cold until the biscuits soften and the cream sets."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 0,
+  "waitMinutes": 360,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Mascarpone",
+     "en": "Mascarpone"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "mascarpone",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "sarıları ve akları ayrılmış",
+     "en": "yolks and whites separated"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Espresso ya da güçlü hazır kahve",
+     "en": "Espresso or strong instant coffee"
+    },
+    "amount": 300,
+    "unit": "ml",
+    "note": {
+     "tr": "sıcak ve soğumuş",
+     "en": "warm, then cooled"
+    },
+    "pantryKey": "coffee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Marsala şarabı",
+     "en": "Marsala wine"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "marsala",
+    "substitute": {
+     "name": {
+      "tr": "Üzüm suyu",
+      "en": "Grape juice"
+     },
+     "amount": 60,
+     "unit": "ml",
+     "pantryKey": "grape-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 60 ml üzüm suyu kullanın.",
+      "en": "If you prefer not to use wine: use 60 ml grape juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Kedidili",
+     "en": "Ladyfingers"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "ladyfingers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakao",
+     "en": "Cocoa powder"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "üstü için",
+     "en": "for dusting"
+    },
+    "pantryKey": "cocoa",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurta sarılarını şekerle açık renk ve kremamsı olana kadar çırp.",
+     "en": "Whisk the egg yolks with the sugar until pale and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mascarponeyi ekleyip pürüzsüz bir krema elde edene kadar karıştır.",
+     "en": "Add the mascarpone and stir until you have a smooth cream."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta aklarını sert köpük olana kadar çırpıp kremanın içine yavaşça katla.",
+     "en": "Whisk the egg whites to firm peaks and fold them gently into the cream."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kahveyi bir kaseye al, marsalayı (ya da yerine kullandığın karışımı) ve vanilyayı ekleyip karıştır; soğumaya bırak.",
+     "en": "Put the coffee in a bowl, stir in the marsala (or the mix you use instead) and the vanilla, and let it cool."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kedidillerini kahveye hızlıca batırıp kalıbın tabanına bir kat diz; üzerine kremanın yarısını yay.",
+     "en": "Dip the ladyfingers quickly in the coffee and arrange one layer in the dish; spread half the cream over it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalan kedidillerle ikinci katı kur, kalan kremayı yay, üzerine kakao serp ve 6 saat buzdolabında beklet.",
+     "en": "Make the second layer with the remaining ladyfingers, spread the rest of the cream, dust with cocoa and chill for 6 hours."
+    },
+    "timerSeconds": 21600
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Tiramisuyu bir gece önceden hazırlayıp buzdolabında bekletmek kıvamını daha iyi oturtur.",
+     "en": "Make it the night before and keep it chilled; it sets better overnight."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "containsAlcohol",
+   "makeAhead",
+   "guest",
+   "Pişirmeden",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "93b90d53-5e24-4117-8349-9fadbfaadc99",
+  "slug": "panna-cotta",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Panna cotta",
+   "en": "Panna cotta"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Vanilyalı, titremesi yumuşak bir krema tatlısı. Kalıptan çıkınca dik durmalı, ağızda ise hafifçe erimeli.",
+   "en": "A vanilla-scented cream dessert with a soft wobble. It should hold its shape when turned out yet melt lightly on the tongue."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 8,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Double cream"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz jelatin",
+     "en": "Powdered gelatine"
+    },
+    "amount": 8,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "gelatin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "jelatini bekletmek için soğuk",
+     "en": "cold, to bloom the gelatine"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek",
+     "en": "Strawberries"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "strawberry",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Jelatini soğuk suyun üzerine serpip 10 dakika bekleterek şişmesini sağla.",
+     "en": "Sprinkle the gelatine over the cold water and leave it for 10 minutes to swell."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Kremayı, sütü ve şekeri geniş bir tencerede ısıt. Şeker eriyene kadar karıştır, ama kaynatma.",
+     "en": "Warm the cream, milk and sugar in a wide pan, stirring until the sugar dissolves. Do not let it boil."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ocağı kapatıp şişmiş jelatini ekle, tamamen eriyene kadar karıştır. Vanilya özütünü de ilave et.",
+     "en": "Take the pan off the heat, stir in the swollen gelatine until fully melted, then add the vanilla extract."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı dört küçük kalıba ya da bardağa paylaştır ve oda sıcaklığında biraz soğumaya bırak.",
+     "en": "Divide the mixture between four small moulds or glasses and let them cool to room temperature."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kalıpları üstü kapalı olarak en az 4 saat buzdolabında bekletip donmasını sağla.",
+     "en": "Cover and chill for at least 4 hours until set."
+    },
+    "timerSeconds": 14400
+   },
+   {
+    "text": {
+     "tr": "Çilekleri dilimleyip üzerine ser. Kalıptan çıkaracaksan kalıbı kısa süre sıcak suya batırıp tabağa ters çevir.",
+     "en": "Slice the strawberries and pile them on top. To turn out, dip the mould briefly in hot water and invert it onto a plate."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Gece önceden hazırlayıp kalıplarda buzdolabında bekletebilirsin.",
+     "en": "Make it the night before and keep the moulds chilled."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "makeAhead",
+   "guest",
+   "Sütlü",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "38aabbe2-0f32-49a1-a8d7-3425695d99e5",
+  "slug": "cannoli",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Cannoli",
+   "en": "Cannoli"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sicilya'nın kızarmış hamur kabukları, tatlı ricotta kremasıyla doldurulur. Kabuk gevrek kalmalı, bu yüzden dolgu servisten hemen önce yapılır.",
+   "en": "Sicilian fried pastry tubes filled with sweet ricotta cream. The shell should stay crisp, so fill them just before serving."
+  },
+  "servings": 4,
+  "prepMinutes": 45,
+  "cookMinutes": 15,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "oda sıcaklığında",
+     "en": "at room temperature"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Marsala şarabı",
+     "en": "Marsala wine"
+    },
+    "amount": 60,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "marsala",
+    "substitute": {
+     "name": {
+      "tr": "Üzüm suyu",
+      "en": "Grape juice"
+     },
+     "amount": 60,
+     "unit": "ml",
+     "pantryKey": "grape-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 60 ml üzüm suyu kullanın.",
+      "en": "If you prefer not to use wine: use 60 ml grape juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "gerekirse bir yemek kaşığı daha",
+     "en": "one more tablespoon if needed"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kızartma yağı",
+     "en": "Frying oil"
+    },
+    "amount": 1,
+    "unit": "l",
+    "note": {
+     "tr": "sıvı yağ",
+     "en": "neutral oil"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kıyılmış",
+     "en": "roughly chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, şekeri ve tuzu geniş bir kaseye al. Tereyağını ekleyip parmaklarınla kum kıvamı alana kadar ovala.",
+     "en": "Put the flour, sugar and salt in a wide bowl. Rub in the butter with your fingertips until it looks like sand."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtayı, Marsala şarabını (ya da yerine kullandığın üzüm suyunu) ve suyu ekleyip pürüzsüz bir hamur yoğur. Streçle sarıp 30 dakika dinlendir.",
+     "en": "Add the egg, the Marsala (or the grape juice you are using instead) and the water, and knead into a smooth dough. Wrap in cling film and rest for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Hamuru ince aç ve 10 cm'lik daireler kes. Her daireyi kannoli kalıbının ya da 2 cm çapında metal tüpün etrafına sar, kenarlarını suyla yapıştır.",
+     "en": "Roll the dough thinly and cut 10 cm rounds. Wrap each round around a cannoli tube or 2 cm metal tube and seal the edge with a little water."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yağı derin bir tencerede 180 dereceye getir. Kabukları birer ikişer atıp 3 dakika kızart, sonra kağıt havluya al.",
+     "en": "Heat the oil in a deep pan to 180 degrees. Fry the shells a few at a time for 3 minutes, then drain on kitchen paper."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kalıplar ılık kalınca çıkar ve kabukları tamamen soğumaya bırak.",
+     "en": "When the tubes are warm rather than hot, slide them out and let the shells cool completely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ricottayı, pudra şekerini ve vanilyayı pürüzsüz bir krem olana kadar çırp. Kıyılmış çikolatanın yarısını ekle.",
+     "en": "Beat the ricotta, icing sugar and vanilla until smooth and creamy. Fold in half of the chopped chocolate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dolguyu sıkma torbasıyla kabukların iki ucuna doldur, uçlarını kalan çikolata ve fıstıkla süsle. Hemen servis et.",
+     "en": "Pipe the filling into both ends of each shell, dip the ends in the remaining chocolate and pistachios, and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "vegetarian",
+   "Kızartma",
+   "Hamur işi",
+   "guest",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "ee6e03ba-5996-4b71-b638-23076d147572",
+  "slug": "affogato",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Affogato",
+   "en": "Affogato"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Vanilyalı dondurmanın üzerine sıcak espresso dökülen İtalyan kafe tatlısı. Kahvenin acılığı ile dondurmanın tatlılığı birbirini tamamlar.",
+   "en": "An Italian café dessert of vanilla ice cream drowned in hot espresso. The bitterness of the coffee and the sweetness of the ice cream balance each other."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 8,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Vanilyalı dondurma",
+     "en": "Vanilla ice cream"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "ice-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Hazır kahve",
+     "en": "Instant coffee"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "coffee",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 240,
+    "unit": "ml",
+    "note": {
+     "tr": "çok sıcak",
+     "en": "very hot"
+    },
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "kıyılmış",
+     "en": "chopped"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Fındık",
+     "en": "Hazelnuts"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu soyulmuş, kıyılmış",
+     "en": "skinned and chopped"
+    },
+    "pantryKey": "hazelnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakao",
+     "en": "Cocoa powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "üzerine serpmek için",
+     "en": "to dust over the top"
+    },
+    "pantryKey": "cocoa",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fındıkları kuru tavada 3 dakika kavur. Avuçlarınla ovalayarak kabuklarını çıkar, kabaca kıy.",
+     "en": "Toast the hazelnuts in a dry pan for 3 minutes. Rub off the skins in a towel and chop them roughly."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Dondurmayı dört servis bardağına ya da küçük kaseye ikişer kepçe olacak şekilde paylaştır. Bardakları dondurucuda tut.",
+     "en": "Divide the ice cream between four serving glasses or small bowls, two scoops each. Keep them in the freezer."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hazır kahveyi 240 ml çok sıcak suda iyice çözerek koyu bir espresso kıvamında hazırla.",
+     "en": "Dissolve the instant coffee in the 240 ml of very hot water, making it strong and dark like an espresso."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kahveyi dondurmanın üzerine hemen dök. Dondurma erirken servis et.",
+     "en": "Pour the coffee over the ice cream straight away and serve while the ice cream is still melting."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Üzerine kıyılmış çikolata ile fındıkları serp, son olarak kakao tozu ser.",
+     "en": "Scatter the chopped chocolate and hazelnuts over the top, then finish with a dusting of cocoa."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "vegetarian",
+   "Sütlü",
+   "Pişirmeden",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "14c2b3fb-996d-4ad5-a319-a03906bcef59",
+  "slug": "zabaione",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Zabaione",
+   "en": "Zabaione"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Yumurta sarısı, şeker ve Marsala şarabıyla su banyosunda köpürtülen sıcak bir krema. Kedidili ya da taze meyveyle yenir.",
+   "en": "A warm custard of egg yolk, sugar and Marsala whisked over simmering water until frothy. It is eaten with sponge fingers or fresh fruit."
+  },
+  "servings": 4,
+  "prepMinutes": 10,
+  "cookMinutes": 8,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Yumurta sarısı",
+     "en": "Egg yolks"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Marsala şarabı",
+     "en": "Marsala wine"
+    },
+    "amount": 120,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "marsala",
+    "substitute": {
+     "name": {
+      "tr": "Üzüm suyu",
+      "en": "Grape juice"
+     },
+     "amount": 120,
+     "unit": "ml",
+     "pantryKey": "grape-juice",
+     "reason": "alcoholFree",
+     "note": {
+      "tr": "Şarap kullanmak istemezseniz: 120 ml üzüm suyu kullanın.",
+      "en": "If you prefer not to use wine: use 120 ml grape juice."
+     }
+    }
+   },
+   {
+    "name": {
+     "tr": "Kedidili",
+     "en": "Sponge fingers"
+    },
+    "amount": 8,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "ladyfingers",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çilek",
+     "en": "Strawberries"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "dilimlenmiş",
+     "en": "sliced"
+    },
+    "pantryKey": "strawberry",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kakao",
+     "en": "Cocoa powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "üzerine serpmek için",
+     "en": "to dust over the top"
+    },
+    "pantryKey": "cocoa",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurta sarılarını şekerle birlikte bir kaseye al ve açık renk, kremamsı olana kadar çırp.",
+     "en": "Put the yolks and sugar in a bowl and whisk until pale and creamy."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marsalayı (ya da yerine kullandığın üzüm suyunu) yavaş yavaş ekleyip karıştır.",
+     "en": "Slowly whisk in the Marsala (or the grape juice you are using instead)."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kaseyi hafifçe kaynayan suyun üzerine oturt, kasenin dibi suya değmesin. Sürekli çırparak 8 dakika pişir; krema köpüklü ve kıvamlı olsun.",
+     "en": "Set the bowl over a pan of barely simmering water, making sure the base does not touch the water. Whisk constantly for 8 minutes until frothy and thick."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Kedidilleri sığ kaselere ya da bardaklara yerleştir, sıcak zabaioneyi üzerlerine kaşıkla dök.",
+     "en": "Place the sponge fingers in shallow bowls or glasses and spoon the hot zabaione over them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Dilimlediğin çilekleri ekle, üzerine kakao serpip hemen servis et.",
+     "en": "Add the sliced strawberries, dust with cocoa and serve at once."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "containsAlcohol",
+   "vegetarian",
+   "quick",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "764005ee-395c-4ab5-9f25-0dd7b3896e21",
+  "slug": "ricotta-cheesecake",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Ricotta cheesecake (İtalyan)",
+   "en": "Italian ricotta cheesecake"
+  },
+  "shortTitle": {
+   "tr": "Ricotta cheesecake",
+   "en": "Ricotta cheesecake"
+  },
+  "description": {
+   "tr": "Bisküvi tabanlı, ricottayla yapılan hafif bir pasta. Krem peynirli cheesecake'ten daha dağılgan ve taze bir tadı vardır.",
+   "en": "A light baked cake on a biscuit base, made with ricotta instead of cream cheese. It is more crumbly and fresher in flavour than a New York style cheesecake."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 60,
+  "waitMinutes": 240,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Petibör bisküvi",
+     "en": "Petit beurre biscuits"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "biscuit",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 70,
+    "unit": "g",
+    "note": {
+     "tr": "eritilmiş",
+     "en": "melted"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ricotta",
+     "en": "Ricotta"
+    },
+    "amount": 400,
+    "unit": "g",
+    "note": {
+     "tr": "süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "ricotta",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 120,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "sadece rendesi",
+     "en": "zest only"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": {
+     "tr": "servis öncesi serpmek için",
+     "en": "to dust before serving"
+    },
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt. 22 cm'lik kelepçeli kalıbın tabanını yağlı kağıtla kapla.",
+     "en": "Heat the oven to 170 degrees. Line the base of a 22 cm springform tin with baking paper."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Bisküvileri torbaya koyup oklavayla ufala. Eritilmiş tereyağıyla karıştır ve kalıbın tabanına bastırarak yay.",
+     "en": "Crush the biscuits in a bag with a rolling pin, mix with the melted butter and press firmly into the base of the tin."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kabuğu 10 dakika fırında pişir, sonra fırından çıkarıp bir kenara al.",
+     "en": "Bake the base for 10 minutes, then take it out and set aside."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Ricottayı robotta ya da çırpıcıyla pürüzsüz olana kadar çırp. Şekeri, vanilyayı ve limon rendesini ekle.",
+     "en": "Beat the ricotta until smooth, either in a food processor or with electric beaters. Add the sugar, vanilla and lemon zest."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları birer birer ekle, her birinde karışımı iyice çırp. En son unu serpip kısaca karıştır.",
+     "en": "Add the eggs one at a time, beating well after each. Fold in the flour last, briefly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı kabuğun üzerine dök ve 170 derecede 50 dakika pişir; ortası hafifçe titreyene kadar bekle.",
+     "en": "Pour the filling over the base and bake at 170 degrees for 50 minutes, until the centre just wobbles."
+    },
+    "timerSeconds": 3000
+   },
+   {
+    "text": {
+     "tr": "Fırını kapatıp kapağını aralayarak kekin içinde 1 saat soğumasını bekle.",
+     "en": "Switch off the oven, prop the door slightly open and let the cake cool inside for 1 hour."
+    },
+    "timerSeconds": 3600
+   },
+   {
+    "text": {
+     "tr": "Kalıbı çıkarıp en az 3 saat buzdolabında dinlendir. Servis etmeden önce pudra şekeri serp.",
+     "en": "Remove the tin and chill for at least 3 hours. Dust with icing sugar just before serving."
+    },
+    "timerSeconds": 10800
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Bir gün önce yapıp buzdolabında dinlendirirsen tadı daha oturur.",
+     "en": "Make it a day ahead and chill it overnight for a better flavour."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "makeAhead",
+   "guest",
+   "Fırında",
+   "vegetarian",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d4015d0e-cc37-40e6-baba-0580a123b1ca",
+  "slug": "torta-della-nonna",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Torta della nonna",
+   "en": "Torta della nonna (custard tart with pine nuts)"
+  },
+  "shortTitle": {
+   "tr": "Torta della nonna",
+   "en": "Torta della nonna"
+  },
+  "description": {
+   "tr": "Kısa hamurlu kabuğun içine limonlu, vanilyalı bir krema konur ve üzeri çam fıstığıyla kavrulur. Büyükanne pastası olarak bilinir.",
+   "en": "A shortcrust tart filled with a lemon and vanilla custard and finished with toasted pine nuts. It is known as the grandmother's cake."
+  },
+  "servings": 6,
+  "prepMinutes": 40,
+  "cookMinutes": 44,
+  "waitMinutes": 150,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 125,
+    "unit": "g",
+    "note": {
+     "tr": "soğuk, küp doğranmış",
+     "en": "cold, cut into cubes"
+    },
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Pudra şekeri",
+     "en": "Icing sugar"
+    },
+    "amount": 80,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "powdered-sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "1 tanesi hamur için, 3 tanesinin sarısı krema için",
+     "en": "one for the pastry, the yolks of three for the custard"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "rendesi",
+     "en": "zest"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Nişasta",
+     "en": "Cornflour"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "cornflour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Çam fıstığı",
+     "en": "Pine nuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "pine-nut",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu, pudra şekerini, tuzu ve limon rendesini robotta ya da elinle karıştır. Soğuk tereyağını ve 1 yumurtayı ekleyip pürüzsüz bir hamur yoğur.",
+     "en": "Mix the flour, icing sugar, salt and lemon zest in a food processor or by hand. Add the cold butter and one egg and knead into a smooth dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru yassı bir disk haline getirip streçle sar, 30 dakika buzdolabında dinlendir.",
+     "en": "Flatten the dough into a disc, wrap in cling film and rest it in the fridge for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırını 180 dereceye ısıt. Hamuru 24 cm'lik kalıba aç, kenarlarını düzgünce kıvır ve tabanını çatalla delik delik et. Yağlı kağıt ve ağırlık koyup 15 dakika kör pişir.",
+     "en": "Heat the oven to 180 degrees. Press the dough into a 24 cm tart tin, trim and prick the base with a fork. Line with baking paper, add weights and blind bake for 15 minutes."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Sütü vanilyayla birlikte ısıt, kaynamaya yaklaşınca ocaktan al. Ayrı bir kasede 3 yumurta sarısını, şekeri ve nişastayı pürüzsüz olana kadar çırp, sıcak sütü yavaş yavaş ilave et.",
+     "en": "Warm the milk with the vanilla until it is just below the boil, then take it off the heat. In another bowl whisk the three egg yolks, sugar and cornflour until smooth, then slowly pour in the warm milk."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı tekrar kısık ateşte, sürekli karıştırarak kıvam alana kadar 4 dakika pişir.",
+     "en": "Return the mixture to a low heat and cook, stirring constantly, for 4 minutes until thickened."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Kremayı pişmiş kabuğun içine dök, üzerine çam fıstıklarını serp ve 180 derecede 25 dakika fırında pişir; üst yüzü hafifçe kızarsın.",
+     "en": "Pour the custard into the baked shell, scatter the pine nuts over the top and bake at 180 degrees for 25 minutes, until the surface is lightly golden."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğutup en az 2 saat buzdolabında dinlendir, dilimleyip servis et.",
+     "en": "Let it cool completely, then chill for at least 2 hours before slicing and serving."
+    },
+    "timerSeconds": 7200
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "guest",
+   "Fırında",
+   "Hamur işi",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "fc55f4a1-e503-45a3-a273-a533a2f63c57",
+  "slug": "biscotti",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Biscotti",
+   "en": "Cantucci biscotti"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "İki kez pişirilen, bademli ve sert İtalyan kurabiyesi. Kahve ya da çayla batırılarak yenir ve kavanozda haftalarca dayanır.",
+   "en": "A twice-baked almond biscuit that is hard and crunchy. Dip it in coffee or tea, and it keeps for weeks in a jar."
+  },
+  "servings": 8,
+  "prepMinutes": 25,
+  "cookMinutes": 43,
+  "waitMinutes": 10,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 300,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Egg"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Badem",
+     "en": "Almonds"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "bütün",
+     "en": "whole"
+    },
+    "pantryKey": "almond",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kabartma tozu",
+     "en": "Baking powder"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "baking-powder",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 170 dereceye ısıt. Bademleri fırın tepsisinde 8 dakika kavur, soğuyunca kabaca kır.",
+     "en": "Heat the oven to 170 degrees. Toast the almonds on a tray for 8 minutes, then roughly chop them once cool."
+    },
+    "timerSeconds": 480
+   },
+   {
+    "text": {
+     "tr": "Unu, kabartma tozunu, şekeri ve tuzu bir kasede karıştır. Yumurtaları vanilya özütüyle çırpıp ekle, sert bir hamur yoğur.",
+     "en": "Mix the flour, baking powder, sugar and salt in a bowl. Beat the eggs with the vanilla extract, add them and knead to a firm dough."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kavrulmuş bademleri hamura ekleyip tek parça olana kadar yoğur. Hamuru ikiye bölüp 5 cm genişliğinde, 2 cm yüksekliğinde uzun kütükler şekillendir.",
+     "en": "Knead the toasted almonds into the dough until evenly distributed. Divide into two and shape into long logs about 5 cm wide and 2 cm high."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kütükleri yağlı kağıt serili fırın tepsisine al, aralarında boşluk bırakarak 25 dakika fırınla.",
+     "en": "Place the logs on a lined baking tray, well apart, and bake for 25 minutes."
+    },
+    "timerSeconds": 1500
+   },
+   {
+    "text": {
+     "tr": "Kütükleri fırından çıkarıp 10 dakika ılımaya bırak, sonra keskin bir bıçakla 1 cm'lik dilimlere kes.",
+     "en": "Take the logs out and let them cool for 10 minutes, then slice them into 1 cm pieces with a sharp knife."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Dilimleri kesik yüzleri üste gelecek şekilde tepsiye diz ve 170 derecede 10 dakika daha fırınla; kurusun ama renk almasın.",
+     "en": "Lay the slices cut side up on the tray and bake at 170 degrees for another 10 minutes, until dry but not coloured."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Tamamen soğuyunca kapalı bir kavanozda sakla. Çay ya da kahveyle servis et.",
+     "en": "Once completely cold, store in a sealed jar. Serve with tea or coffee."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "dairyFree",
+   "Fırında",
+   "Hamur işi",
+   "guest"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 4,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "d7ace951-8a47-4561-843c-5bc3d538e579",
+  "slug": "semifreddo",
+  "cuisine": "italian",
+  "category": "dessert",
+  "region": null,
+  "title": {
+   "tr": "Semifreddo",
+   "en": "Semifreddo"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Pişirilmeden hazırlanan, yarı donmuş bir krem tatlısı. Sabayon ve çikolatalı kremanın yumuşak dokusu, dilimlendiğinde kaşıkla yenecek kadar dağılgan kalır.",
+   "en": "A half-frozen cream dessert with no baking needed. A soft sabayon and chocolate cream set in the freezer, and slice into soft, spoonable pieces."
+  },
+  "servings": 6,
+  "prepMinutes": 25,
+  "cookMinutes": 6,
+  "waitMinutes": 360,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Krem şanti",
+     "en": "Whipping cream"
+    },
+    "amount": 400,
+    "unit": "ml",
+    "note": {
+     "tr": "soğuk",
+     "en": "cold"
+    },
+    "pantryKey": "whipping-cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta sarısı",
+     "en": "Egg yolks"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Caster sugar"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Vanilya özütü",
+     "en": "Vanilla extract"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "vanilla-extract",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bitter çikolata",
+     "en": "Dark chocolate"
+    },
+    "amount": 60,
+    "unit": "g",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "dark-chocolate",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Antep fıstığı",
+     "en": "Pistachios"
+    },
+    "amount": 40,
+    "unit": "g",
+    "note": {
+     "tr": "iri kıyılmış",
+     "en": "coarsely chopped"
+    },
+    "pantryKey": "pistachio",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Krem şantiyi soğuk bir kasede yumuşak köpük olana kadar çırp ve buzdolabına kaldır.",
+     "en": "Whip the cold cream in a chilled bowl to soft peaks and put it back in the fridge."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Yumurta sarılarını, şekeri, suyu ve vanilyayı bir kaseye al. Kaseyi kaynayan suyun üzerine oturtup sürekli çırparak 6 dakika koyu sarı ve kıvamlı olana kadar pişir.",
+     "en": "Put the yolks, sugar, water and vanilla in a bowl. Set it over simmering water and whisk constantly for 6 minutes until pale yellow and thick."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Sabayonu ocaktan al ve oda sıcaklığına gelene kadar 5 dakika çırp.",
+     "en": "Take the sabayon off the heat and whisk for 5 minutes until it is at room temperature."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Krem şantiyi sabayona üç seferde, spatulayla alttan üste doğru ekleyip kabarıklığını koru. Kıyılmış çikolatayı ekle.",
+     "en": "Fold the whipped cream into the sabayon in three additions, lifting from the bottom so it stays airy. Fold in the chopped chocolate."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Karışımı yağlı kağıtla kapladığın ekmek kalıbına dök, üzerine Antep fıstığını serp ve en az 6 saat dondurucuda bekletip sertleşmesini sağla.",
+     "en": "Pour the mixture into a loaf tin lined with baking paper, scatter the pistachios on top and freeze for at least 6 hours to firm up."
+    },
+    "timerSeconds": 21600
+   },
+   {
+    "text": {
+     "tr": "Servis etmeden 10 dakika önce kalıbı dondurucudan çıkar, dilimleyip tabağa al.",
+     "en": "Take the tin out of the freezer 10 minutes before serving, then slice and plate."
+    },
+    "timerSeconds": 600
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "makeAhead",
+   "freezable",
+   "guest",
+   "vegetarian",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

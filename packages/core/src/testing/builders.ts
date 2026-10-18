@@ -1,6 +1,6 @@
 /** Builders for tests (core and apps): plan items, days, users… over the built-in recipes. */
 import type { Match, PantryItem, PlanDay, PlanItem, Recipe, ShoppingCheck, Slot, User } from "../data/models";
-import { builtinRecipes } from "../data/seed/recipes";
+import { catalogRecipes as builtinRecipes } from "../recipes/catalog";
 
 export const recipesById = new Map(builtinRecipes.map((r) => [r.id, r]));
 export const R = (name: string): Recipe => {

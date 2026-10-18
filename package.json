@@ -16,7 +16,11 @@
     "screenshots": "npm run screenshots -w @anv/web",
     "mobile": "npm exec -w @anv/mobile -- expo start",
     "apk": "npm run apk -w @anv/mobile --",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "recipes:validate": "npm run recipes:validate -w @anv/core --",
+    "recipes:convert": "npm run recipes:convert -w @anv/core --",
+    "recipes:generate": "npm run recipes:generate -w @anv/core --",
+    "recipes:export": "npm run recipes:export -w @anv/core --"
   },
   "devDependencies": {
     "prettier": "^3.9.10"

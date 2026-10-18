@@ -10,17 +10,19 @@ import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
 import { EmptyState } from "@/components/ui/Misc";
 import { COURSES, COURSE_LABEL, type Course } from "@anv/core/data/models";
+import { byCuisine, cuisinesIn } from "@anv/core/recipes/filters";
+import type { Cuisine } from "@anv/core/recipes/schema";
 import { formatDuration } from "@anv/core/domain/dates";
 import { quickAddIntent } from "@anv/core/domain/quickAdd";
 import { daysSinceCooked, lastCookedMap, rotationShort } from "@anv/core/domain/rotation";
 import { searchKey } from "@anv/core/lib/text";
-import { useApp } from "@/store/app";
+import { browsableRecipes, useApp } from "@/store/app";
 import s from "./page.module.css";
 
 const COURSE_SHORT = labelRecord<Course>("courseShort", COURSES);
 
 export default function TariflerPage() {
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const favorites = useApp((x) => x.favorites);
   const cookLog = useApp((x) => x.cookLog);
   const today = useApp((x) => x.today);
@@ -28,6 +30,8 @@ export default function TariflerPage() {
   const [q, setQ] = useState("");
   const [course, setCourse] = useState<Course | "all" | "fav">("all");
   const [tag, setTag] = useState<string | null>(null);
+  const [cuisine, setCuisine] = useState<Cuisine | "all">("all");
+  const cuisines = useMemo(() => cuisinesIn(recipes), [recipes]);
   const [adding, setAdding] = useState(false);
   const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
@@ -47,6 +51,7 @@ export default function TariflerPage() {
     return recipes
       .filter((r) => (course === "all" ? true : course === "fav" ? fav.has(r.id) : r.course === course))
       .filter((r) => !tag || r.tags.includes(tag))
+      .filter(byCuisine(cuisine))
       .filter(
         (r) =>
           !k ||
@@ -55,7 +60,7 @@ export default function TariflerPage() {
           r.ingredients.some((i) => searchKey(i.name).includes(k)),
       )
       .sort((a, b) => a.name.localeCompare(b.name, "tr"));
-  }, [recipes, q, course, tag, fav]);
+  }, [recipes, q, course, tag, fav, cuisine]);
 
   return (
     <main className={s.page}>
@@ -99,6 +104,19 @@ export default function TariflerPage() {
           </DishChip>
         ))}
       </div>
+
+      {cuisines.length > 1 && (
+        <div className={s.filters} role="group" aria-label={t("recipe.cuisine")}>
+          <DishChip selected={cuisine === "all"} onClick={() => setCuisine("all")}>
+            {t("recipe.allCuisines")}
+          </DishChip>
+          {cuisines.map((c) => (
+            <DishChip key={c} selected={cuisine === c} onClick={() => setCuisine(c)}>
+              {t(`cuisine.${c}`)}
+            </DishChip>
+          ))}
+        </div>
+      )}
 
       <div className={s.tagRow} role="group" aria-label={t("tarifler.byTag")}>
         {tags.map((tg) => (

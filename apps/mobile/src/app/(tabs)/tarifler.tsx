@@ -5,6 +5,8 @@ import { FlatList, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { COURSES, COURSE_LABEL, type Course, type Recipe } from "@anv/core/data/models";
+import { byCuisine, cuisinesIn } from "@anv/core/recipes/filters";
+import type { Cuisine } from "@anv/core/recipes/schema";
 import { formatDuration } from "@anv/core/domain/dates";
 import { quickAddIntent } from "@anv/core/domain/quickAdd";
 import { daysSinceCooked, lastCookedMap, rotationShort } from "@anv/core/domain/rotation";
@@ -12,7 +14,7 @@ import { labelRecord, tagLabel } from "@anv/core/i18n";
 import { searchKey } from "@anv/core/lib/text";
 import { space, touchTarget } from "@anv/core/design/tokens";
 import { QuickAddSheet, useQuickAdd } from "@/components/QuickAdd";
-import { useApp } from "@/store";
+import { browsableRecipes, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Chip, EmptyState, Field, IconButton, Row, Text } from "@/ui";
 import { TabHeader } from "@/ui/more";
@@ -24,7 +26,7 @@ export default function Recipes() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const favorites = useApp((x) => x.favorites);
   const cookLog = useApp((x) => x.cookLog);
   const today = useApp((x) => x.today);
@@ -32,6 +34,8 @@ export default function Recipes() {
   const [q, setQ] = useState("");
   const [course, setCourse] = useState<Course | "all" | "fav">("all");
   const [tag, setTag] = useState<string | null>(null);
+  const [cuisine, setCuisine] = useState<Cuisine | "all">("all");
+  const cuisines = useMemo(() => cuisinesIn(recipes), [recipes]);
   const [adding, setAdding] = useState(false);
   const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
@@ -51,9 +55,10 @@ export default function Recipes() {
     return recipes
       .filter((r) => (course === "all" ? true : course === "fav" ? fav.has(r.id) : r.course === course))
       .filter((r) => !tag || r.tags.includes(tag))
+      .filter(byCuisine(cuisine))
       .filter((r) => !k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k) || r.ingredients.some((i) => searchKey(i.name).includes(k)))
       .sort((a, b) => a.name.localeCompare(b.name, "tr"));
-  }, [recipes, q, course, tag, fav]);
+  }, [recipes, q, course, tag, fav, cuisine]);
 
   const header = (
     <View style={{ gap: space.lg, paddingBottom: space.md }}>
@@ -70,6 +75,14 @@ export default function Recipes() {
           <Chip key={c} label={COURSE_SHORT[c]} selected={course === c} onPress={() => setCourse(c)} />
         ))}
       </ScrollView>
+      {cuisines.length > 1 && (
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} accessibilityLabel={t("recipe.cuisine")}>
+          <Chip label={t("recipe.allCuisines")} selected={cuisine === "all"} onPress={() => setCuisine("all")} />
+          {cuisines.map((c) => (
+            <Chip key={c} label={t(`cuisine.${c}`)} selected={cuisine === c} onPress={() => setCuisine(c)} />
+          ))}
+        </ScrollView>
+      )}
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} accessibilityLabel={t("tarifler.byTag")}>
         {tags.map((tg) => (
           <Chip key={tg} tone="sand" label={tagLabel(tg)} selected={tag === tg} onPress={() => setTag(tag === tg ? null : tg)} />

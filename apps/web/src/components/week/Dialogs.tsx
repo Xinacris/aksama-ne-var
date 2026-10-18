@@ -11,7 +11,7 @@ import { SLOT_COURSES, courseToSlot } from "@anv/core/domain/matching";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
-import { recipesMap, useApp } from "@/store/app";
+import { browsableRecipes, recipesMap, useApp } from "@/store/app";
 import { IconSearch } from "../icons";
 import { Dialog } from "../ui/Dialog";
 import { TextField } from "../ui/Field";
@@ -34,7 +34,7 @@ export function RecipePicker({
   matches: AsideMatch[];
   frequent: Recipe[];
 }) {
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const today = useApp((x) => x.today);
   const addToPlan = useApp((x) => x.addToPlan);
   const [q, setQ] = useState("");
@@ -136,7 +136,7 @@ export function DayPicker({
 }) {
   const today = useApp((x) => x.today);
   const planItems = useApp((x) => x.planItems);
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const addToPlan = useApp((x) => x.addToPlan);
   const placeLeftover = useApp((x) => x.placeLeftover);
   const byId = recipesMap(recipes);

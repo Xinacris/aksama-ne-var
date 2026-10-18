@@ -165,7 +165,8 @@ describe("iOS: AlarmKit (flag on)", () => {
   it("timer sound off: no system alarm (it can't ring silently), the silent notification instead", async () => {
     await freshStore({ demo: true });
     await render(<Settings />);
-    await fireEvent.press((await screen.findAllByRole("button", { name: "Kapalı" }))[0]);
+    // the last "Kapalı" is Zamanlayıcı sesi (the household's alcohol-free toggle comes first)
+    await fireEvent.press((await screen.findAllByRole("button", { name: "Kapalı" })).at(-1)!);
     await screen.unmount();
     await openKuruFasulye();
     await waitFor(() => expect(scheduledFor(timer().id)).toHaveLength(1));

@@ -1069,7 +1069,9 @@
     "timerKind": "Timer type",
     "timerKindNotification": "App notification",
     "timerKindPhoneClock": "Phone clock",
-    "timerKindNote": "Phone clock: when time is up it rings like the phone’s own alarm, also in silent mode and on the lock screen."
+    "timerKindNote": "Phone clock: when time is up it rings like the phone’s own alarm, also in silent mode and on the lock screen.",
+    "alcoholFree": "Use alcohol-free substitutes",
+    "alcoholFreeNote": "When on, the shopping list gets the alcohol-free alternative instead of wine, beer and the like. Recipes keep showing both."
   },
   "language": {
     "tr": "Türkçe",
@@ -1326,5 +1328,29 @@
     "phoneClockSet": "Set on the phone clock. Pause and +1 min don’t reach it.",
     "phoneClockFailed": "Couldn’t open the phone clock; the timer keeps running in the app.",
     "alarmKitDenied": "Alarms aren’t allowed: timers ring through the app’s notification instead."
+  },
+  "recipe": {
+    "removed": "Recipe removed",
+    "cuisine": "Cuisine",
+    "category": "Category",
+    "allCuisines": "All cuisines",
+    "allCategories": "All categories"
+  },
+  "cuisine": {
+    "turkish": "Turkish",
+    "italian": "Italian",
+    "spanish": "Spanish",
+    "indian": "Indian",
+    "american": "American",
+    "french": "French",
+    "indonesian": "Indonesian",
+    "british": "British"
+  },
+  "category": {
+    "main": "Main",
+    "soup": "Soup",
+    "salad": "Salad",
+    "side": "Side / small plate",
+    "dessert": "Dessert"
   }
 }

@@ -58,3 +58,10 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+
+# Supabase seed output (npm run recipes:export), regenerated on demand
+/packages/core/data/recipes/export/
+
+# Agent catalog workflow: staging and per-batch results are scratch (the state file is committed)
+/packages/core/data/recipes/agent/staging/
+/packages/core/data/recipes/agent/results/

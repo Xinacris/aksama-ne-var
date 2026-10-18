@@ -1,0 +1,525 @@
+[
+ {
+  "id": "1ef1a979-b73d-434d-a58f-2e098c55f40a",
+  "slug": "clam-chowder",
+  "cuisine": "american",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Clam chowder",
+   "en": "Clam chowder"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Patates ve midyeyle yapılan, süt ve kremayla kıvamlandırılmış kalın bir Amerikan çorbası. Dana füme et hafif bir duman tadı verir ve çorba sıcak servis edildiğinde en iyisidir.",
+   "en": "A thick American soup of potato and clams, enriched with milk and cream. Smoky beef bacon adds depth, and it is best served hot from the pot."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 35,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Dana füme et",
+     "en": "Beef bacon"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "beef-bacon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potato"
+    },
+    "amount": 600,
+    "unit": "g",
+    "note": {
+     "tr": "küp küp doğranmış",
+     "en": "cut into cubes"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kum midyesi",
+     "en": "Clams"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kabuklu, iyice yıkanmış",
+     "en": "in shell, well scrubbed"
+    },
+    "pantryKey": "clam",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 2,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tavuk suyu",
+     "en": "Chicken stock"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "chicken-stock",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 500,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Krema",
+     "en": "Cream"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "cream",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış, servis için",
+     "en": "finely chopped, to serve"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesi küp küp doğra, soğanı ve kerevizi küçük doğra. Dana füme eti tencerede orta ateşte 5 dakika kavur.",
+     "en": "Cut the potato into cubes and finely chop the onion and celery. Fry the beef bacon in the pot over medium heat for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Tereyağını ekleyip soğan ve kerevizi yumuşayana kadar kavur.",
+     "en": "Add the butter and cook the onion and celery until soft."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Unu serpip 1 dakika karıştır, ardından tavuk suyunu yavaş yavaş ekleyerek pürüzsüz bir sos oluştur.",
+     "en": "Sprinkle in the flour and stir for 1 minute, then add the chicken stock slowly to make a smooth sauce."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Patates küplerini ve defne yaprağını ekle, kısık ateşte 12 dakika pişir.",
+     "en": "Add the potato cubes and bay leaf, and simmer gently for 12 minutes."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Kum midyelerini ayrı bir tencerede, kapağı kapalı olarak açılana kadar pişir. Etlerini ayır, pişme suyunu süzüp çorbaya ekle.",
+     "en": "Cook the clams in a separate pot, covered, until they open. Take the meat out, strain the cooking liquor and add it to the soup."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü ve kremayı ekle, midyeleri de katıp kaynamasına izin vermeden kısık ateşte 5 dakika ısıt.",
+     "en": "Stir in the milk and cream, add the clams, and heat gently for 5 minutes without letting it boil."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Defne yaprağını çıkar, tuz ve karabiberle tatlandır, maydanozu serpip sıcak servis et.",
+     "en": "Remove the bay leaf, season with salt and black pepper, scatter over the parsley and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tencere",
+   "Sütlü"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "09e7d2cc-d19d-442f-8544-0d88094f12fe",
+  "slug": "tavuklu-noodle-corbasi",
+  "cuisine": "american",
+  "category": "soup",
+  "region": null,
+  "title": {
+   "tr": "Tavuklu noodle çorbası",
+   "en": "Chicken noodle soup"
+  },
+  "shortTitle": {
+   "tr": "Noodle çorbası",
+   "en": "Chicken noodle"
+  },
+  "description": {
+   "tr": "Tavuk butundan yavaşça pişirilen berrak bir suyla yapılan hafif bir noodle çorbası. Havuç ve kereviz tatlılık verir, erişte çorbayı doyurucu kılar.",
+   "en": "A light noodle soup made with a clear broth slowly simmered from chicken thighs. Carrot and celery add sweetness, and the egg noodles make it filling."
+  },
+  "servings": 4,
+  "prepMinutes": 20,
+  "cookMinutes": 55,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Tavuk but",
+     "en": "Chicken thighs"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kemikli, derili",
+     "en": "bone-in, skin on"
+    },
+    "pantryKey": "chicken-thigh",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 1800,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Defne yaprağı",
+     "en": "Bay leaf"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "bay-leaf",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuru soğan",
+     "en": "Onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrot"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sap kereviz",
+     "en": "Celery"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "ince dilimlenmiş",
+     "en": "thinly sliced"
+    },
+    "pantryKey": "celery",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 2,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurtalı noodle",
+     "en": "Egg noodles"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "egg-noodles",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Maydanoz",
+     "en": "Parsley"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "parsley",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon",
+     "en": "Lemon"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim, servis için",
+     "en": "cut into wedges, to serve"
+    },
+    "pantryKey": "lemon",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Tavuk butlarını yıkayıp bir tencereye al, suyu ve defne yaprağını ekle. Kaynayınca köpüğünü al ve kısık ateşte 35 dakika pişir.",
+     "en": "Rinse the chicken thighs and put them in a pot with the water and bay leaf. Once it boils, skim off the foam and simmer gently for 35 minutes."
+    },
+    "timerSeconds": 2100
+   },
+   {
+    "text": {
+     "tr": "Tavukları süzgece al ve soğumaya bırak. Suyu süzüp bir kenara ayır.",
+     "en": "Lift the chicken out onto a plate to cool. Strain the stock and set it aside."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağını geniş bir tencerede ısıt, soğan, havuç ve kerevizi ekleyip 6 dakika kısık ateşte soteleyin.",
+     "en": "Heat the olive oil in a wide pot, add the onion, carrot and celery, and sweat them over low heat for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Sarımsağı ekleyip 1 dakika karıştır, ardından ayırdığın suyu ekle ve kaynat.",
+     "en": "Add the garlic and stir for 1 minute, then pour in the reserved stock and bring it to the boil."
+    },
+    "timerSeconds": 60
+   },
+   {
+    "text": {
+     "tr": "Tavukların etini ayır, kemik ve derilerini at. Et parçalarını çorbaya geri koy.",
+     "en": "Pull the meat off the chicken thighs and discard the bones and skin. Return the shredded meat to the soup."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Erişteyi ekle ve 6 dakika pişir.",
+     "en": "Add the egg noodles and cook for 6 minutes."
+    },
+    "timerSeconds": 360
+   },
+   {
+    "text": {
+     "tr": "Tuz ve karabiberle tatlandır, maydanozu serpip limon dilimleriyle birlikte sıcak servis et.",
+     "en": "Season with salt and black pepper, scatter over the parsley and serve hot with lemon wedges."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Tavuklu",
+   "Tencere",
+   "Hafif",
+   "kidFriendly"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

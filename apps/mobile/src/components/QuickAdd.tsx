@@ -2,14 +2,14 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { importHref, quickAddAction, quickAddHint, quickAddIntent, type QuickAdd } from "@anv/core/domain/quickAdd";
-import { useApp } from "@/store";
+import { browsableRecipes, useApp } from "@/store";
 import { Button, Field, Sheet } from "@/ui";
 
 const sameName = (a: string, b: string) => a.toLocaleLowerCase("tr") === b.toLocaleLowerCase("tr");
 
 /** One tap: a link goes to import, a dish name is saved as a name-only recipe and its page opens (same as the web). */
 export function useQuickAdd() {
-  const recipes = useApp((x) => x.recipes);
+  const recipes = useApp(browsableRecipes);
   const addStubRecipe = useApp((x) => x.addStubRecipe);
   const [busy, setBusy] = useState(false);
   const existing = (q: QuickAdd) => (q.kind === "name" ? recipes.find((r) => sameName(r.name, q.name)) : undefined);

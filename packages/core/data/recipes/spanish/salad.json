@@ -1,0 +1,721 @@
+[
+ {
+  "id": "8cea6a4d-aad7-49b8-b550-ec84d0975f86",
+  "slug": "ensalada-mixta",
+  "cuisine": "spanish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Ensalada mixta",
+   "en": "Ensalada mixta"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Marul, domates ve ton balığıyla hazırlanan, İspanya'da çoğu öğünün yanına gelen hafif bir salata. Ton balığı ve sade sos onu doyurucu kılar.",
+   "en": "A light Spanish salad of lettuce, tomato and tuna that appears beside most meals. The tuna and a simple dressing make it filling without any cooking beyond the eggs."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Marul",
+     "en": "Lettuce"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yıkanmış ve elle parçalanmış",
+     "en": "washed and torn by hand"
+    },
+    "pantryKey": "lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "orta boy, dilim dilim",
+     "en": "medium, cut into wedges"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yarım ay şeklinde dilimlenmiş",
+     "en": "sliced into half-moons"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "çok ince halka halka doğranmış",
+     "en": "very thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış, çeyrek dilim",
+     "en": "hard-boiled, quartered"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı (konserve)",
+     "en": "Canned tuna"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "suyu süzülmüş, parçalanmış",
+     "en": "drained and flaked"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz",
+     "en": "pitted"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Konserve mısır",
+     "en": "Canned sweetcorn"
+    },
+    "amount": 1,
+    "unit": "kutu",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "canned-corn",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "şarap sirkesi",
+     "en": "wine vinegar"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Yumurtaları soğuk suya koy, kaynamaya başlayınca 9 dakika pişir. Buzlu suya alıp soy ve çeyrek dilim kes.",
+     "en": "Put the eggs in cold water, bring to the boil and cook for 9 minutes. Cool them in iced water, peel and quarter them."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Marulu yıkayıp kurula, elle parçala. Domatesleri dilimle, salatalığı yarım ay şeklinde doğra.",
+     "en": "Wash and dry the lettuce, tearing it by hand. Cut the tomatoes into wedges and slice the cucumber into half-moons."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı çok ince halka halka doğra, soğuk suda bekletip süz. Bu, acısının kısa sürede yumuşamasını sağlar.",
+     "en": "Slice the red onion into very thin rings, soak them in cold water and drain. This takes the bite out of them."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Küçük bir kapta zeytinyağı, sirke, tuz ve karabiberi çırpıp sosu hazırla.",
+     "en": "Whisk the olive oil, vinegar, salt and pepper in a small bowl to make the dressing."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marulu geniş bir servis tabağına yay. Domates, salatalık, soğan ve mısırı üstüne dağıt.",
+     "en": "Spread the lettuce over a wide serving plate. Scatter the tomato, cucumber, onion and sweetcorn on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ton balığını ve yumurta çeyreklerini salataya yerleştir, siyah zeytinleri ekle. Sosu üzerine gezdirip hemen servis et.",
+     "en": "Arrange the tuna, egg quarters and black olives over the salad. Drizzle the dressing over and serve straight away."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "quick",
+   "glutenFree",
+   "Balık",
+   "Hafif",
+   "Kolay"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "caf488b1-59c7-4971-8fb4-2c0647257050",
+  "slug": "pipirrana",
+  "cuisine": "spanish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Pipirrana",
+   "en": "Pipirrana (chopped tomato and pepper salad)"
+  },
+  "shortTitle": {
+   "tr": "Pipirrana",
+   "en": "Pipirrana"
+  },
+  "description": {
+   "tr": "Domates, yeşil biber, salatalık ve soğanın küçük küp doğranıp zeytinyağı ve sirkeyle tatlandırıldığı, sıcak günlerin serin bir Endülüs salatası. Ekmekle yenir ve bir süre dinlendirildiğinde sebzelerin suyu sosa karışır.",
+   "en": "A cool Andalusian salad of finely chopped tomato, green pepper, cucumber and onion, dressed with olive oil and vinegar. It is eaten with bread, and the vegetable juices mingle into the dressing as it rests."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 0,
+  "waitMinutes": 15,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "olgun, küçük küp doğranmış",
+     "en": "ripe, finely diced"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil biber",
+     "en": "Green pepper"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "çekirdekleri çıkarılmış, küp doğranmış",
+     "en": "deseeded and finely diced"
+    },
+    "pantryKey": "green-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Salatalık",
+     "en": "Cucumber"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "cucumber",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince doğranmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sarımsak",
+     "en": "Garlic"
+    },
+    "amount": 1,
+    "unit": "diş",
+    "note": {
+     "tr": "ezilmiş",
+     "en": "crushed"
+    },
+    "pantryKey": "garlic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "şarap sirkesi",
+     "en": "wine vinegar"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ekmek",
+     "en": "Bread"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "yanında servis için",
+     "en": "to serve alongside"
+    },
+    "pantryKey": "bread",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Domatesleri, yeşil biberi ve salatalığı aynı boyda küçük küpler halinde doğra.",
+     "en": "Dice the tomatoes, green pepper and cucumber into small cubes of the same size."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kırmızı soğanı ince ince doğra. Sarımsağı ezip ince kıy.",
+     "en": "Chop the red onion finely. Crush the garlic and mince it fine."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tüm sebzeleri ve soğanı geniş bir kâseye al, sarımsağı üzerine ekle.",
+     "en": "Put all the vegetables and the onion into a wide bowl and add the garlic on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Zeytinyağı, sirke ve tuzu ekleyip iyice karıştır. Kıvamı ağır bir sos olmasın, sebzelerin kendi suyu da yeterli olacaktır.",
+     "en": "Add the olive oil, vinegar and salt and mix well. It should be a loose dressing, as the vegetables will release their own juice."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kâseyi örtüp 15 dakika dinlendir ki tatlar birbirine karışsın.",
+     "en": "Cover the bowl and leave it to rest for 15 minutes so the flavours come together."
+    },
+    "timerSeconds": 900
+   },
+   {
+    "text": {
+     "tr": "Ekmekleri dilimleyip yanında servis et. Salatayı serin tutup kendi suyuyla birlikte kaşıkla dağıt.",
+     "en": "Slice the bread and serve it alongside. Keep the salad cool and spoon it out with its own juices."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "vegan",
+   "dairyFree",
+   "quick",
+   "budget",
+   "Vejetaryen",
+   "Zeytinyağlı",
+   "Pişirmeden",
+   "Hafif",
+   "Kolay",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "6b4b3ff6-5c91-44cd-82f0-1b4ca5e2c868",
+  "slug": "ensaladilla-rusa",
+  "cuisine": "spanish",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Ensaladilla rusa",
+   "en": "Ensaladilla (Spanish potato salad)"
+  },
+  "shortTitle": {
+   "tr": "Ensaladilla rusa",
+   "en": "Ensaladilla"
+  },
+  "description": {
+   "tr": "Haşlanmış patates, havuç ve bezelyenin mayonezle bağlandığı, ton balıklı ve turşulu bir İspanyol klasiği. Buzdolabında bekletildiğinde tadı belirginleşir ve misafirlere kolayca servis edilir.",
+   "en": "A Spanish classic of boiled potato, carrot and peas bound with mayonnaise, with tuna and gherkins. It tastes better after chilling and is easy to serve to guests."
+  },
+  "servings": 6,
+  "prepMinutes": 30,
+  "cookMinutes": 25,
+  "waitMinutes": 120,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "kabuğu soyulmuş, 1 cm küp",
+     "en": "peeled and cut into 1 cm cubes"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Havuç",
+     "en": "Carrots"
+    },
+    "amount": 2,
+    "unit": "adet",
+    "note": {
+     "tr": "1 cm küp",
+     "en": "cut into 1 cm cubes"
+    },
+    "pantryKey": "carrot",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dondurulmuş bezelye",
+     "en": "Frozen peas"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "haşlanmış, küp doğranmış",
+     "en": "hard-boiled, diced"
+    },
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı (konserve)",
+     "en": "Canned tuna"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Mayonez",
+     "en": "Mayonnaise"
+    },
+    "amount": 200,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "mayonnaise",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kornişon turşu",
+     "en": "Gherkins"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": {
+     "tr": "küçük küp doğranmış",
+     "en": "finely diced"
+    },
+    "pantryKey": "gherkin",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "süslemek için, çekirdeksiz",
+     "en": "pitted, for garnish"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Közlenmiş kırmızı biber",
+     "en": "Roasted red pepper"
+    },
+    "amount": 1,
+    "unit": "kavanoz",
+    "note": {
+     "tr": "süslemek için şerit şerit",
+     "en": "cut into strips, for garnish"
+    },
+    "pantryKey": "roasted-red-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patates ve havuç küplerini tuzlu suda 20 dakika haşla, ikisi de yumuşayınca süz.",
+     "en": "Boil the potato and carrot cubes in salted water for 20 minutes until both are tender, then drain."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Bezelyeyi ayrı bir tencerede 3 dakika haşlayıp süz ve soğumaya bırak.",
+     "en": "Boil the peas in a separate pan for 3 minutes, drain and leave to cool."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları 9 dakika kaynat, soğuk suya al, soyup küp doğra.",
+     "en": "Boil the eggs for 9 minutes, cool them in cold water, then peel and dice."
+    },
+    "timerSeconds": 540
+   },
+   {
+    "text": {
+     "tr": "Patates ve havucu geniş bir kâseye al, tamamen soğumasını bekle.",
+     "en": "Put the potato and carrot into a large bowl and let them cool completely."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Soğuyan patates, havuç, bezelye, yumurta, süzülmüş ton balığı ve kornişonları kâsede nazikçe karıştır.",
+     "en": "Gently mix the cooled potato, carrot, peas, eggs, drained tuna and gherkins in the bowl."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Mayonezi ekleyip tuz ve karabiberle tatlandır. Patatesleri ezmeden yavaşça karıştır.",
+     "en": "Add the mayonnaise and season with salt and pepper. Fold it in gently so the potatoes stay in pieces."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salatayı kaseye ya da kalıba al, üzerini örtüp en az 2 saat buzdolabında soğut.",
+     "en": "Transfer the salad to a bowl or mould, cover and chill in the fridge for at least 2 hours."
+    },
+    "timerSeconds": 7200
+   },
+   {
+    "text": {
+     "tr": "Servis tabağına al, siyah zeytin ve közlenmiş kırmızı biber şeritleriyle süsleyip servis et.",
+     "en": "Turn it out onto a serving plate and decorate with black olives and strips of roasted red pepper before serving."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Ensaladillayı bir gece önceden hazırlayıp buzdolabında kapalı bir kapta bekletebilirsin; tatlar bir gecede iyice oturur.",
+     "en": "You can make the ensaladilla the night before and keep it covered in the fridge; the flavours settle overnight."
+    },
+    "when": "night-before"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "guest",
+   "makeAhead",
+   "Balık",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

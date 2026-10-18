@@ -1,0 +1,505 @@
+[
+ {
+  "id": "c0767e51-a861-4792-ac74-8f954af0e106",
+  "slug": "salade-nicoise",
+  "cuisine": "french",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Salade niçoise",
+   "en": "Salade niçoise"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Nice mutfağından gelen, patates, yeşil fasulye, yumurta ve ton balığının bir arada olduğu doyurucu bir salata. Sosun sirkeli tadı her lokmaya ferahlık katar.",
+   "en": "A filling salad from the Nice kitchen, with potato, green beans, egg and tuna together on one plate. The sharp vinaigrette keeps every mouthful bright."
+  },
+  "servings": 4,
+  "prepMinutes": 25,
+  "cookMinutes": 25,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Patates",
+     "en": "Potatoes"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "küçük ve kabuklu",
+     "en": "small, in their skins"
+    },
+    "pantryKey": "potato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yeşil fasulye",
+     "en": "Green beans"
+    },
+    "amount": 250,
+    "unit": "g",
+    "note": {
+     "tr": "uçları alınmış",
+     "en": "trimmed"
+    },
+    "pantryKey": "green-bean",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 4,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ton balığı (konserve, yağında)",
+     "en": "Tuna in olive oil"
+    },
+    "amount": 2,
+    "unit": "kutu",
+    "note": {
+     "tr": "suyu süzülmüş",
+     "en": "drained"
+    },
+    "pantryKey": "tuna-canned",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Domates",
+     "en": "Tomatoes"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": {
+     "tr": "dilim dilim",
+     "en": "sliced into wedges"
+    },
+    "pantryKey": "tomato",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kırmızı soğan",
+     "en": "Red onion"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "ince halka",
+     "en": "thinly sliced into rings"
+    },
+    "pantryKey": "red-onion",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Siyah zeytin",
+     "en": "Black olives"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "çekirdeksiz",
+     "en": "pitted"
+    },
+    "pantryKey": "olive-black",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ançüez fileto",
+     "en": "Anchovy fillets"
+    },
+    "amount": 6,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "anchovy-fillet",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Marul",
+     "en": "Lettuce"
+    },
+    "amount": 1,
+    "unit": "adet",
+    "note": {
+     "tr": "yapraklarına ayrılmış",
+     "en": "leaves separated"
+    },
+    "pantryKey": "lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "sos için",
+     "en": "for the dressing"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sirke",
+     "en": "Vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "elma sirkesi de olur",
+     "en": "apple cider vinegar works too"
+    },
+    "pantryKey": "vinegar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Patatesleri kabuklarıyla tuzlu suda 20 dakika haşla. Süzüp ılınmaya bırak, sonra kabuklarını soyup dilimle.",
+     "en": "Boil the potatoes in their skins in salted water for 20 minutes. Drain, let them cool a little, then peel and slice them."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Yumurtaları ayrı bir tencerede 10 dakika kaynat. Hemen soğuk suya al, kabuklarını soy ve dörde böl.",
+     "en": "Boil the eggs in a separate pan for 10 minutes. Move them straight into cold water, peel and quarter them."
+    },
+    "timerSeconds": 600
+   },
+   {
+    "text": {
+     "tr": "Yeşil fasulyeleri tuzlu kaynar suda 4 dakika haşla, buz gibi suya alıp süz.",
+     "en": "Cook the green beans in boiling salted water for 4 minutes, then refresh them in iced water and drain."
+    },
+    "timerSeconds": 240
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırla: Dijon hardalı, sirke, tuz ve karabiberi bir kasede çırp. Zeytinyağını yavaş yavaş ekleyip sos koyulaşana kadar karıştır.",
+     "en": "Make the dressing: whisk the mustard, vinegar, salt and pepper in a bowl. Add the olive oil slowly, whisking until the dressing thickens."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Marul yapraklarını yıkayıp kurula, geniş bir servis tabağına yay. Üzerine patates, fasulye, domates ve soğan halkalarını dizin.",
+     "en": "Wash and dry the lettuce leaves and spread them over a wide serving platter. Arrange the potatoes, beans, tomatoes and onion rings on top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Ton balığını parçalara ayırıp salatanın ortasına yerleştir. Yumurta dörtlüklerini, zeytinleri ve ançüez filetoları etrafa dağıt.",
+     "en": "Break the tuna into chunks and place them in the middle of the salad. Scatter the egg quarters, olives and anchovy fillets around it."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sosu salatanın üzerine gezdir ve hemen servis et. Sos bekleyince marul soluyor.",
+     "en": "Spoon the dressing over the salad and serve straight away, before the lettuce wilts."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "prepAhead": [
+   {
+    "text": {
+     "tr": "Patatesleri ve yeşil fasulyeleri sabah haşlayıp soğutun; sosu da hazırlayıp buzdolabında bekletin.",
+     "en": "In the morning, boil the potatoes and green beans, cool them and make the dressing ahead; keep the dressing in the fridge."
+    },
+    "when": "morning"
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Balık",
+   "Hafif",
+   "Haşlama",
+   "Kolay",
+   "glutenFree",
+   "dairyFree"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "870b07df-9827-40b0-94d0-290c358d0a98",
+  "slug": "salade-de-chevre-chaud",
+  "cuisine": "french",
+  "category": "salad",
+  "region": null,
+  "title": {
+   "tr": "Salade de chèvre chaud",
+   "en": "Warm goat cheese salad"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Üzerinde sıcacık keçi peyniri olan tostların, taze marulla ve cevizle buluştuğu kısa bir Fransız salatası. Balın tatlılığı ile hardal ve sirkenin asitliği dengeyi kurar.",
+   "en": "Crisp toasts topped with warm goat cheese, served over fresh salad leaves and walnuts. The honey and mustard dressing sits sweet and sharp against the cheese."
+  },
+  "servings": 2,
+  "prepMinutes": 15,
+  "cookMinutes": 10,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Keçi peyniri",
+     "en": "Goat's cheese"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "1 cm kalınlığında dilimlenmiş",
+     "en": "cut into 1 cm slices"
+    },
+    "pantryKey": "goat-cheese",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Baget ekmek",
+     "en": "Baguette"
+    },
+    "amount": 4,
+    "unit": "dilim",
+    "note": {
+     "tr": "çapraz kesilmiş",
+     "en": "cut on the diagonal"
+    },
+    "pantryKey": "baguette",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Kuzu kulağı marul",
+     "en": "Lamb's lettuce"
+    },
+    "amount": 100,
+    "unit": "g",
+    "note": {
+     "tr": "yıkanmış",
+     "en": "washed"
+    },
+    "pantryKey": "lamb-lettuce",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Ceviz içi",
+     "en": "Walnuts"
+    },
+    "amount": 50,
+    "unit": "g",
+    "note": {
+     "tr": "kabaca kırılmış",
+     "en": "roughly broken"
+    },
+    "pantryKey": "walnut",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Bal",
+     "en": "Honey"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "honey",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Dijon hardalı",
+     "en": "Dijon mustard"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "dijon-mustard",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Zeytinyağı",
+     "en": "Olive oil"
+    },
+    "amount": 4,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "ekmek ve sos için",
+     "en": "for the bread and the dressing"
+    },
+    "pantryKey": "olive-oil",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Balzamik sirke",
+     "en": "Balsamic vinegar"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "balsamic",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": {
+     "tr": "taze çekilmiş",
+     "en": "freshly ground"
+    },
+    "pantryKey": "black-pepper",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Fırını 200 dereceye ısıt. Baget dilimlerinin iki yüzüne zeytinyağı sür ve fırın tepsisinde 5 dakika kızart.",
+     "en": "Heat the oven to 200°C. Brush both sides of the baguette slices with olive oil and toast them on a tray for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Keçi peyniri dilimlerini ekmeklerin üzerine koy, karabiber serp ve 3 dakika daha fırında ısıt. Peynir yumuşamalı ama dağılmamalı.",
+     "en": "Lay the goat's cheese slices on the toasts, add a little black pepper and warm them in the oven for 3 more minutes. The cheese should soften without falling apart."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Sosu hazırla: balı, Dijon hardalını ve balzamik sirkeyi bir kasede çırp. Kalan zeytinyağını yavaş yavaş ekleyip tuzla tatlandır.",
+     "en": "Make the dressing: whisk the honey, Dijon mustard and balsamic vinegar in a bowl. Slowly whisk in the remaining olive oil and season with salt."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Cevizleri kuru tavada orta ateşte 3 dakika kavur, kabaca kır ve bir kenara al.",
+     "en": "Toast the walnuts in a dry pan over a medium heat for 3 minutes, then set them aside."
+    },
+    "timerSeconds": 180
+   },
+   {
+    "text": {
+     "tr": "Kuzu kulağı marulu geniş bir kaseye al, sosu ekleyip hafifçe karıştır. Cevizleri de serp.",
+     "en": "Put the lamb's lettuce in a wide bowl, add the dressing and toss gently. Scatter the walnuts over the top."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Salatayı tabaklara paylaştır ve sıcak peynirli tostları üstüne yerleştirerek hemen servis et.",
+     "en": "Divide the salad between two plates, place the warm cheese toasts on top and serve immediately."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "Vejetaryen",
+   "Hafif",
+   "Fırında",
+   "Kolay",
+   "vegetarian"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "low",
+   "keepsDays": 1,
+   "reheatable": false
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

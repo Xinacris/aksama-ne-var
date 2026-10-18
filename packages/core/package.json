@@ -13,7 +13,11 @@
   "scripts": {
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "recipes:validate": "tsx scripts/validate-recipes.ts",
+    "recipes:convert": "tsx scripts/convert-seed.ts",
+    "recipes:generate": "tsx scripts/generate-recipes.ts",
+    "recipes:export": "tsx scripts/export-supabase-seed.ts"
   },
   "dependencies": {
     "date-fns": "^4.4.0",
@@ -22,8 +26,10 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
     "@types/node": "^24.19.2",
     "eslint": "^9",
+    "tsx": "^4.23.15",
     "typescript": "^5",
     "typescript-eslint": "^8",
     "vitest": "^5.0.3"

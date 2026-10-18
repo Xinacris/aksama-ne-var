@@ -1,0 +1,353 @@
+[
+ {
+  "id": "b1566188-5c95-41ca-9606-f438fe8d2e51",
+  "slug": "yorkshire-pudding",
+  "cuisine": "british",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Yorkshire pudding",
+   "en": "Yorkshire puddings"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Sıcak yağda pişen, kenarları çıtır ve içi boş hamur puddingleri. Geleneksel olarak rosto etin ve sosun yanında servis edilir.",
+   "en": "Crisp-edged, hollow batter puddings baked in hot oil, the traditional partner of roast beef and gravy."
+  },
+  "servings": 4,
+  "prepMinutes": 15,
+  "cookMinutes": 25,
+  "waitMinutes": 30,
+  "timeNote": null,
+  "difficulty": 2,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Un",
+     "en": "Plain flour"
+    },
+    "amount": 150,
+    "unit": "g",
+    "note": {
+     "tr": "elenmiş",
+     "en": "sifted"
+    },
+    "pantryKey": "flour",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Yumurta",
+     "en": "Eggs"
+    },
+    "amount": 3,
+    "unit": "adet",
+    "note": null,
+    "pantryKey": "egg",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Süt",
+     "en": "Milk"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "milk",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 50,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Sıvı yağ",
+     "en": "Vegetable oil"
+    },
+    "amount": 3,
+    "unit": "yemek kaşığı",
+    "note": {
+     "tr": "kalıp için",
+     "en": "for the tin"
+    },
+    "pantryKey": "vegetable-oil",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Unu ve tuzu geniş bir kaseye eleyip ortasını aç, yumurtaları kır.",
+     "en": "Sift the flour and salt into a large bowl, make a well in the middle and crack in the eggs."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Sütü ve suyu azar azar ekleyerek yumurtayı çırpma teliyle unu içine çek; kremsi bir kıvama gelince pürüzsüz, ince bir hamur elde et.",
+     "en": "Whisk in the milk and water a little at a time, drawing in the flour, until you have a smooth batter as thin as cream."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Hamuru oda sıcaklığında 30 dakika dinlendir.",
+     "en": "Rest the batter at room temperature for 30 minutes."
+    },
+    "timerSeconds": 1800
+   },
+   {
+    "text": {
+     "tr": "Fırını 220 dereceye ısıt. Muffin kalıbının her gözüne yağ koyup kalıbı fırına koyarak 5 dakika kızdır.",
+     "en": "Heat the oven to 220°C. Put a little oil in each cup of a muffin tin and heat the tin in the oven for 5 minutes."
+    },
+    "timerSeconds": 300
+   },
+   {
+    "text": {
+     "tr": "Kızgın kalıplara hamuru gözlerin yarısına kadar dök ve kalıbı hızla fırına geri sür.",
+     "en": "Pour the batter into the hot cups until half full, then slide the tin back into the oven quickly."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Fırın kapağını açmadan 20 dakika pişir; pudingler kabarıp koyu altın rengi alsın.",
+     "en": "Bake for 20 minutes without opening the door, until the puddings have risen and turned deep golden."
+    },
+    "timerSeconds": 1200
+   },
+   {
+    "text": {
+     "tr": "Pudingleri kalıptan hemen çıkarıp sıcakken servis et; bekletilirse çöker.",
+     "en": "Lift the puddings out of the tin straight away and serve them hot, as they sink once they cool."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "Fırında",
+   "Hamur işi"
+  ],
+  "mealSlots": [
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 2,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ },
+ {
+  "id": "5c4d7a35-0abf-4025-a8ea-fa4c5e5d0778",
+  "slug": "mushy-peas",
+  "cuisine": "british",
+  "category": "side",
+  "region": null,
+  "title": {
+   "tr": "Mushy peas",
+   "en": "Mushy peas"
+  },
+  "shortTitle": null,
+  "description": {
+   "tr": "Kuzey İngiltere'nin klasik garnitürü: bezelyeler yumuşayana kadar pişirilir, naneli tereyağıyla kabaca ezilir. Balık ve patatesin yanında iyi gider.",
+   "en": "A northern English side of peas cooked down until soft, then roughly mashed with mint and butter. It goes well with fish and chips or a pie."
+  },
+  "servings": 4,
+  "prepMinutes": 5,
+  "cookMinutes": 15,
+  "waitMinutes": null,
+  "timeNote": null,
+  "difficulty": 1,
+  "ingredients": [
+   {
+    "name": {
+     "tr": "Bezelye (dondurulmuş)",
+     "en": "Frozen peas"
+    },
+    "amount": 500,
+    "unit": "g",
+    "note": {
+     "tr": "geleneksel kuru bezelye yerine",
+     "en": "in place of traditional dried marrowfat peas"
+    },
+    "pantryKey": "frozen-peas",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karbonat",
+     "en": "Bicarbonate of soda"
+    },
+    "amount": 1,
+    "unit": "tutam",
+    "note": {
+     "tr": "yumuşaması için",
+     "en": "to help the peas soften"
+    },
+    "pantryKey": "baking-soda",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Su",
+     "en": "Water"
+    },
+    "amount": 200,
+    "unit": "ml",
+    "note": null,
+    "pantryKey": "water",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tereyağı",
+     "en": "Butter"
+    },
+    "amount": 30,
+    "unit": "g",
+    "note": null,
+    "pantryKey": "butter",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Taze nane",
+     "en": "Fresh mint"
+    },
+    "amount": 1,
+    "unit": "demet",
+    "note": {
+     "tr": "ince kıyılmış",
+     "en": "finely chopped"
+    },
+    "pantryKey": "fresh-mint",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Tuz",
+     "en": "Salt"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "salt",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Karabiber",
+     "en": "Black pepper"
+    },
+    "amount": null,
+    "unit": null,
+    "note": null,
+    "pantryKey": "black-pepper",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Toz şeker",
+     "en": "Sugar"
+    },
+    "amount": 1,
+    "unit": "tatlı kaşığı",
+    "note": null,
+    "pantryKey": "sugar",
+    "substitute": null
+   },
+   {
+    "name": {
+     "tr": "Limon suyu",
+     "en": "Lemon juice"
+    },
+    "amount": 1,
+    "unit": "yemek kaşığı",
+    "note": null,
+    "pantryKey": "lemon-juice",
+    "substitute": null
+   }
+  ],
+  "steps": [
+   {
+    "text": {
+     "tr": "Bezelyeleri, suyu ve karbonatı geniş bir tencereye koy ve orta ateşte kaynamaya bırak.",
+     "en": "Put the peas, water and bicarbonate of soda into a wide pan and bring to a simmer over a medium heat."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Kısık ateşte 12 dakika pişir; bezelyeler çok yumuşayıp kremsi bir kıvam alana kadar arada karıştır.",
+     "en": "Simmer gently for 12 minutes, stirring now and then, until the peas are very soft and thickened."
+    },
+    "timerSeconds": 720
+   },
+   {
+    "text": {
+     "tr": "Fazla suyunu süzüp bezelyeleri bir çatalla kabaca ez; tam püre olmasın, dokusu biraz kalsın.",
+     "en": "Drain off any excess water and mash the peas roughly with a fork, leaving some texture."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Tereyağını, kıyılmış naneyi, tuzu, karabiberi ve şekeri ekleyip iyice karıştır.",
+     "en": "Stir in the butter, chopped mint, salt, black pepper and sugar until the butter has melted."
+    },
+    "timerSeconds": null
+   },
+   {
+    "text": {
+     "tr": "Limon suyunu ekleyip tadına bak, gerekirse tuz ekle ve sıcak servis yap.",
+     "en": "Add the lemon juice, taste, add more salt if needed and serve hot."
+    },
+    "timerSeconds": null
+   }
+  ],
+  "freezerItem": null,
+  "tags": [
+   "vegetarian",
+   "quick",
+   "budget",
+   "Tencere",
+   "Sebzeli"
+  ],
+  "mealSlots": [
+   "lunch",
+   "dinner"
+  ],
+  "leftover": {
+   "likelihood": "high",
+   "keepsDays": 3,
+   "reheatable": true
+  },
+  "source": "curated-v1",
+  "version": 1
+ }
+]

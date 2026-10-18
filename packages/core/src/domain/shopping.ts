@@ -192,6 +192,15 @@ export interface ListInput {
   manualItems: ShoppingItem[];
   checks: ShoppingCheck[];
   recipesById: Map<string, Recipe>;
+  /** Household setting: alcoholic ingredients go on the list as their alcohol-free substitute. */
+  alcoholFree?: boolean;
+}
+
+/** What to buy for an ingredient: the alcohol-free substitute when the household chose so (the recipe still shows both). */
+export function ingredientToBuy(ing: Recipe["ingredients"][number], alcoholFree: boolean | undefined): Recipe["ingredients"][number] {
+  if (!alcoholFree || !ing.substitute) return ing;
+  const s = ing.substitute;
+  return { name: s.name, quantity: s.quantity, unit: s.unit, side: s.side, aisle: s.aisle };
 }
 
 /** "İzmir köfte · Karnıyarık", capped at three names: "A · B · C +2". */
@@ -221,7 +230,8 @@ export function tileName(r: Pick<Recipe, "name" | "shortName">): string {
 export function generateList(input: ListInput): ListRow[] {
   const rows = new Map<string, ListRow>();
   for (const recipe of input.planned) {
-    for (const ing of recipe.ingredients) {
+    for (const original of recipe.ingredients) {
+      const ing = ingredientToBuy(original, input.alcoholFree);
       if (ing.staple) continue;
       const key = ingredientKey(ing.name);
       let row = rows.get(key);

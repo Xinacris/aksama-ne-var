@@ -84,6 +84,21 @@ export const ingredientSchema = z.object({
   note: z.string().optional(),
   /** Display-only name in the current language (set when recipes are localized; never stored). */
   label: z.string().optional(),
+  /**
+   * Catalog recipes: an alcohol-free alternative for an alcoholic ingredient. Shown as a note
+   * under it; the shopping list takes it instead when the household chooses so. Name is canonical.
+   */
+  substitute: z
+    .object({
+      name: z.string().min(1),
+      quantity: z.number().positive().nullable(),
+      unit: z.enum(UNITS).nullable(),
+      side: sideSchema,
+      aisle: aisleSchema,
+      /** "Şarap kullanmak istemezseniz: …" */
+      note: z.string().min(1),
+    })
+    .optional(),
 });
 export type Ingredient = z.infer<typeof ingredientSchema>;
 
@@ -134,6 +149,10 @@ export const recipeTranslationSchema = z.object({
   prepItems: z.array(z.string()).optional(),
   /** "llm" (Çevir), "seed" (built-in), "user" (written or edited by hand). */
   origin: z.enum(["seed", "llm", "user"]).optional(),
+  /** Catalog recipes: the description in this language. */
+  description: z.string().optional(),
+  /** Alcohol-free substitute notes by canonical ingredient name. */
+  substituteNotes: z.record(z.string(), z.string()).optional(),
 });
 export type RecipeTranslation = z.infer<typeof recipeTranslationSchema>;
 
@@ -184,6 +203,16 @@ export const recipeSchema = z.object({
   lang: recipeLangSchema.optional(),
   /** The recipe's text in other languages. */
   translations: z.object({ tr: recipeTranslationSchema.optional(), en: recipeTranslationSchema.optional() }).optional(),
+  /** Catalog recipes (Round 3.4): the catalog's stable UUID (Supabase), cuisine, category and more. */
+  catalogId: z.string().uuid().optional(),
+  cuisine: z.string().optional(),
+  category: z.string().optional(),
+  description: z.string().optional(),
+  difficulty: z.number().int().min(1).max(3).optional(),
+  /** Runtime only: a planned meal points at a recipe that no longer exists ("Tarif kaldırıldı"). Never stored. */
+  removed: z.boolean().optional(),
+  /** How likely it is to carry over to the next day: the planner's leftover hint. Never a choice made for the household. */
+  leftoverLikelihood: z.enum(["low", "medium", "high"]).optional(),
   createdBy: uuid.nullable(),
   createdAt: isoDateTime,
   updatedAt: isoDateTime,
@@ -216,6 +245,8 @@ export const householdSchema = z.object({
   lunchAtHome: z.enum(["yes", "no", "some"]),
   /** Weekdays someone eats lunch at home when `lunchAtHome` is `some` (0 = Pazar … 6 = Cumartesi). */
   lunchDays: z.array(z.number().int().min(0).max(6)),
+  /** "Alkollü malzemelerde alternatifi kullan": the shopping list takes the alcohol-free substitute. Off by default. */
+  alcoholFreeSubstitutes: z.boolean().optional(),
 });
 export type Household = z.infer<typeof householdSchema>;
 

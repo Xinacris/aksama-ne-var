@@ -296,6 +296,20 @@
 .ingText strong {
   font-weight: 600;
 }
+.description {
+  margin: 4px 0 2px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--ink2);
+}
+/* Alcohol-free alternative under an ingredient ("Şarap kullanmak istemezseniz: …") */
+.ingSub {
+  display: block;
+  margin-top: 4px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: var(--ink2);
+}
 .steps {
   margin: 26px 20px 0;
   display: flex;
