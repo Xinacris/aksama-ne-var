@@ -5,6 +5,7 @@ import { FlatList, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { COURSES, COURSE_LABEL, type Course, type Recipe } from "@anv/core/data/models";
+import { cuisineLabelKey } from "@anv/core/recipes/cuisines";
 import { byCuisine, cuisinesIn } from "@anv/core/recipes/filters";
 import type { Cuisine } from "@anv/core/recipes/schema";
 import { formatDuration } from "@anv/core/domain/dates";
@@ -79,7 +80,7 @@ export default function Recipes() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }} accessibilityLabel={t("recipe.cuisine")}>
           <Chip label={t("recipe.allCuisines")} selected={cuisine === "all"} onPress={() => setCuisine("all")} />
           {cuisines.map((c) => (
-            <Chip key={c} label={t(`cuisine.${c}`)} selected={cuisine === c} onPress={() => setCuisine(c)} />
+            <Chip key={c} label={t(cuisineLabelKey(c, "long"))} selected={cuisine === c} onPress={() => setCuisine(c)} />
           ))}
         </ScrollView>
       )}

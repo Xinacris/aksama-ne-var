@@ -96,5 +96,24 @@ describe("Eşleş", () => {
     await fireEvent.press(put);
     expect(appStore.getState().planItems.some((i) => i.source === "match")).toBe(true);
   }, 20000);
-});
 
+  it("cuisine pills: İtalyan + Hint deal only Italian and Indian cards; Tümü clears", async () => {
+    await freshStore({ demo: true });
+    await render(<Match />);
+    const pill = (name: string) => screen.getByRole("button", { name });
+    expect(pill("Tümü").props.accessibilityState).toMatchObject({ selected: true });
+    await fireEvent.press(pill("İtalyan"));
+    await fireEvent.press(pill("Hint"));
+    expect(pill("İtalyan").props.accessibilityState).toMatchObject({ selected: true });
+    expect(pill("Hint").props.accessibilityState).toMatchObject({ selected: true });
+    expect(pill("Tümü").props.accessibilityState).toMatchObject({ selected: false });
+    const byName = new Map(appStore.getState().recipes.map((r) => [r.name, r.cuisine]));
+    for (let i = 0; i < 3; i++) {
+      const label = String(screen.getByRole("summary").props.accessibilityLabel);
+      expect(["italian", "indian"]).toContain(byName.get(label.split(". ")[0]));
+      await fireEvent.press(screen.getByRole("button", { name: "Bu sefer değil" }));
+    }
+    await fireEvent.press(pill("Tümü"));
+    expect(pill("Tümü").props.accessibilityState).toMatchObject({ selected: true });
+  });
+});

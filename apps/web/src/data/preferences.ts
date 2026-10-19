@@ -1,5 +1,7 @@
 import { readTimerSound, takeAlarmHint, writeTimerSound } from "@anv/core/lib/devicePrefs";
 import { THEME_STORAGE_KEY, type ThemePreference } from "@anv/core/lib/theme";
+import { readSwipeCuisines, writeSwipeCuisines } from "@anv/core/recipes/cuisines";
+import type { Cuisine } from "@anv/core/recipes/schema";
 
 function local(): Storage | null {
   try {
@@ -32,6 +34,13 @@ export const preferences = {
   },
   setTimerSound(on: boolean): void {
     writeTimerSound(local(), on);
+  },
+  /** Eşleş's cuisine pills (unknown keys dropped; no storage = this page only). */
+  getSwipeCuisines(): Cuisine[] {
+    return readSwipeCuisines(local());
+  },
+  setSwipeCuisines(selected: readonly Cuisine[]): void {
+    writeSwipeCuisines(local(), selected);
   },
   /** True once per browser: the "notifications are off" hint. */
   takeAlarmHint(): boolean {

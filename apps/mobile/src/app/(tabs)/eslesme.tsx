@@ -1,11 +1,11 @@
 import * as Haptics from "expo-haptics";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Modal, Pressable, View } from "react-native";
+import { Modal, Pressable, ScrollView, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import { SLOTS, SLOT_LABEL, type Match, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningDative, eveningLabel, formatDuration } from "@anv/core/domain/dates";
-import { buildDeck, nextCard, nextOpenEvening, progress, recentlyPlannedIds, sortMatches, swipesFor } from "@anv/core/domain/matching";
+import { buildDeck, cuisineDeck, nextCard, nextOpenEvening, progress, recentlyPlannedIds, sortMatches, swipesFor } from "@anv/core/domain/matching";
 import { dishInSentence } from "@anv/core/domain/prep";
 import { daysSinceCooked, lastCookedMap, rotationLabel, rotationShort } from "@anv/core/domain/rotation";
 import { matchNote } from "@anv/core/domain/week";
@@ -13,7 +13,9 @@ import { intlTag, listJoin, tagLabel } from "@anv/core/i18n";
 import { numberAccusative } from "@anv/core/lib/text";
 import { touchTarget } from "@anv/core/design/tokens";
 import { SwipeCard, type DeckCardView } from "@/components/SwipeCard";
+import { cuisineLabelKey, toggleCuisine } from "@anv/core/recipes/cuisines";
 import { usePeople } from "@/hooks/usePeople";
+import { useSwipeCuisines } from "@/hooks/useSwipeCuisines";
 import { recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Card, Chip, EmptyState, Icon, Row, Screen, Text } from "@/ui";
@@ -32,16 +34,18 @@ export default function MatchScreen() {
   const [busy, setBusy] = useState(false);
   const [sel, setSel] = useState<{ date: string | null; slot: Slot | null }>({ date: null, slot: null });
   const seen = useRef<Set<string> | null>(null);
+  const [cuisines, pickCuisines] = useSwipeCuisines();
 
   const date = sel.date ?? (params.gun && /^\d{4}-\d{2}-\d{2}$/.test(params.gun) ? params.gun : nextOpenEvening(planItems, planDays, today, addDays));
   const slot: Slot = sel.slot ?? (params.slot && (SLOTS as readonly string[]).includes(params.slot) ? (params.slot as Slot) : "ana");
   const byId = recipesMap(recipes);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
   const solo = people.length < 2;
-  const deck = useMemo(
-    () => buildDeck({ recipes, favorites, lastCooked: last, slot, date, plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays), matches }),
+  const pool = useMemo(
+    () => buildDeck({ recipes, favorites, lastCooked: last, slot, date, plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays), matches, size: Infinity }),
     [recipes, favorites, last, slot, date, planItems, today, matches],
   );
+  const { available, active, deck } = useMemo(() => cuisineDeck(pool, cuisines), [pool, cuisines]);
   const mine = swipesFor(swipes, date, slot, me?.id);
   const card = nextCard(deck, mine);
   const myDone = progress(deck, mine);
@@ -131,6 +135,21 @@ export default function MatchScreen() {
           <Text variant="meta">{t("eslesme.solo")}</Text>
         )}
 
+        {available.length > 1 && (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ gap: 8 }}
+            accessibilityLabel={t("eslesme.cuisineFilter")}
+            testID="cuisine-pills"
+          >
+            <Chip label={t("eslesme.allCuisines")} selected={active.length === 0} onPress={() => pickCuisines([])} />
+            {available.map((c) => (
+              <Chip key={c} label={t(cuisineLabelKey(c, "short"))} selected={active.includes(c)} onPress={() => pickCuisines(toggleCuisine(cuisines, c))} />
+            ))}
+          </ScrollView>
+        )}
+
         {card ? (
           <View style={{ gap: 14 }}>
             <SwipeCard key={card.id} card={toView(card.id)} onDecide={decide} />
@@ -156,6 +175,10 @@ export default function MatchScreen() {
               {t("swipe.hint")}
             </Text>
           </View>
+        ) : active.length > 0 ? (
+          <EmptyState title={t("eslesme.filteredOut")} text={t("eslesme.filteredOutText")}>
+            <Button title={t("eslesme.clearFilters")} size="sm" onPress={() => pickCuisines([])} />
+          </EmptyState>
         ) : (
           <EmptyState
             title={deck.length ? t("eslesme.out") : t("eslesme.noneForSlot")}

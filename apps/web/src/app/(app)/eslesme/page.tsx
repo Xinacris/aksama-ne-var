@@ -11,14 +11,17 @@ import { SwipeDeck, type DeckCard } from "@/components/SwipeDeck";
 import { IconChevronRight } from "@/components/icons";
 import { Avatar } from "@/components/ui/Avatar";
 import { ButtonLink, Button } from "@/components/ui/Button";
+import { DishChip } from "@/components/ui/Chip";
 import { EmptyState } from "@/components/ui/Misc";
 import { SLOTS, SLOT_LABEL, type Match, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningDative, eveningLabel, formatDuration } from "@anv/core/domain/dates";
 import { numberAccusative } from "@anv/core/lib/text";
-import { buildDeck, nextCard, nextOpenEvening, progress, recentlyPlannedIds, sortMatches, swipesFor } from "@anv/core/domain/matching";
+import { buildDeck, cuisineDeck, nextCard, nextOpenEvening, progress, recentlyPlannedIds, sortMatches, swipesFor } from "@anv/core/domain/matching";
 import { daysSinceCooked, lastCookedMap, rotationLabel, rotationShort } from "@anv/core/domain/rotation";
 import { dishInSentence } from "@anv/core/domain/prep";
+import { cuisineLabelKey, toggleCuisine } from "@anv/core/recipes/cuisines";
 import { usePeople } from "@/hooks/usePeople";
+import { useSwipeCuisines } from "@/hooks/useSwipeCuisines";
 import { recipesMap, useApp } from "@/store/app";
 import s from "./page.module.css";
 
@@ -44,12 +47,13 @@ function EslesmeInner() {
   const [moment, setMoment] = useState<Match | null>(null);
   const [busy, setBusy] = useState(false);
   const seenMatches = useRef<Set<string> | null>(null);
+  const [cuisines, pickCuisines] = useSwipeCuisines();
 
   const byId = recipesMap(recipes);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
   const solo = people.length < 2;
 
-  const deck = useMemo(
+  const pool = useMemo(
     () =>
       buildDeck({
         recipes,
@@ -59,9 +63,11 @@ function EslesmeInner() {
         date,
         plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays),
         matches,
+        size: Infinity,
       }),
     [recipes, favorites, last, slot, date, planItems, today, matches],
   );
+  const { available, active, deck } = useMemo(() => cuisineDeck(pool, cuisines), [pool, cuisines]);
   const mine = swipesFor(swipes, date, slot, me?.id);
   const card = nextCard(deck, mine);
   const myDone = progress(deck, mine);
@@ -193,12 +199,37 @@ function EslesmeInner() {
           {solo && <div className={s.partner}>{t("eslesme.solo")}</div>}
         </header>
 
+        {available.length > 1 && (
+          <div className={s.pills} role="group" aria-label={t("eslesme.cuisineFilter")}>
+            <DishChip className={s.pill} selected={active.length === 0} onClick={() => pickCuisines([])}>
+              {t("eslesme.allCuisines")}
+            </DishChip>
+            {available.map((c) => (
+              <DishChip key={c} className={s.pill} selected={active.includes(c)} onClick={() => pickCuisines(toggleCuisine(cuisines, c))}>
+                {t(cuisineLabelKey(c, "short"))}
+              </DishChip>
+            ))}
+          </div>
+        )}
+
         <p className="visually-hidden" aria-live="polite">
           {card ? t("eslesme.live", { n: myDone + 1, total: deck.length, name: card.name }) : t("eslesme.out")}
         </p>
 
         {card ? (
           <SwipeDeck key={card.id} card={toDeckCard(card.id)} remaining={deck.length - myDone} onDecide={decide} />
+        ) : active.length > 0 ? (
+          <div className={s.done}>
+            <EmptyState
+              title={t("eslesme.filteredOut")}
+              text={t("eslesme.filteredOutText")}
+              actions={
+                <Button size="sm" onClick={() => pickCuisines([])}>
+                  {t("eslesme.clearFilters")}
+                </Button>
+              }
+            />
+          </div>
         ) : (
           <div className={s.done}>
             <EmptyState

@@ -110,6 +110,7 @@ export function SwipeDeck({
           aria-roledescription={tr("swipe.card")}
           aria-label={card.recipe.name}
           aria-describedby="kaydir-ipucu"
+          data-cuisine={card.recipe.cuisine}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}

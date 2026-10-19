@@ -1,10 +1,10 @@
 import type { Recipe } from "../data/models";
-import { CUISINES, type Cuisine } from "./schema";
+import { availableCuisines } from "./cuisines";
+import type { Cuisine } from "./schema";
 
-/** Cuisines the household's recipes span, in catalog order (the filter row shows only when there are two or more). */
+/** Cuisines the household's recipes span, in display order (the filter row shows only when there are two or more). */
 export function cuisinesIn(recipes: Pick<Recipe, "cuisine">[]): Cuisine[] {
-  const present = new Set(recipes.map((r) => r.cuisine));
-  return CUISINES.filter((c) => present.has(c));
+  return availableCuisines(recipes);
 }
 
 /** "all" keeps every recipe, including the household's own (which have no cuisine). */

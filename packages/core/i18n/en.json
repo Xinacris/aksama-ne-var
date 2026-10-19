@@ -613,7 +613,12 @@
     "matches": "Matches",
     "placeInWeek": "Place in the week",
     "deckNote": "Cards come from your regulars and dishes you haven’t made in a while.",
-    "leftoverTag": "Lasts into the next day"
+    "leftoverTag": "Lasts into the next day",
+    "cuisineFilter": "Filter by cuisine",
+    "allCuisines": "All",
+    "filteredOut": "No cards left for these cuisines",
+    "filteredOutText": "Clear the filter to get cards from every cuisine.",
+    "clearFilters": "Clear filters"
   },
   "onb2": {
     "copyFailed": "We couldn’t copy it; the link is selected so you can copy it yourself.",
@@ -1337,14 +1342,38 @@
     "allCategories": "All categories"
   },
   "cuisine": {
-    "turkish": "Turkish",
-    "italian": "Italian",
-    "spanish": "Spanish",
-    "indian": "Indian",
-    "american": "American",
-    "french": "French",
-    "indonesian": "Indonesian",
-    "british": "British"
+    "turkish": {
+      "short": "Turkish",
+      "long": "Turkish cuisine"
+    },
+    "italian": {
+      "short": "Italian",
+      "long": "Italian cuisine"
+    },
+    "indian": {
+      "short": "Indian",
+      "long": "Indian cuisine"
+    },
+    "french": {
+      "short": "French",
+      "long": "French cuisine"
+    },
+    "spanish": {
+      "short": "Spanish",
+      "long": "Spanish cuisine"
+    },
+    "indonesian": {
+      "short": "Indonesian",
+      "long": "Indonesian cuisine"
+    },
+    "american": {
+      "short": "American",
+      "long": "American cuisine"
+    },
+    "british": {
+      "short": "British",
+      "long": "British cuisine"
+    }
   },
   "category": {
     "main": "Main",

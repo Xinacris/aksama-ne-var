@@ -10,6 +10,7 @@ import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
 import { EmptyState } from "@/components/ui/Misc";
 import { COURSES, COURSE_LABEL, type Course } from "@anv/core/data/models";
+import { cuisineLabelKey } from "@anv/core/recipes/cuisines";
 import { byCuisine, cuisinesIn } from "@anv/core/recipes/filters";
 import type { Cuisine } from "@anv/core/recipes/schema";
 import { formatDuration } from "@anv/core/domain/dates";
@@ -112,7 +113,7 @@ export default function TariflerPage() {
           </DishChip>
           {cuisines.map((c) => (
             <DishChip key={c} selected={cuisine === c} onClick={() => setCuisine(c)}>
-              {t(`cuisine.${c}`)}
+              {t(cuisineLabelKey(c, "long"))}
             </DishChip>
           ))}
         </div>

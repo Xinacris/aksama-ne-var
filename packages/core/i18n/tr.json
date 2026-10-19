@@ -613,7 +613,12 @@
     "matches": "Eşleşmeler",
     "placeInWeek": "Haftaya yerleştir",
     "deckNote": "Kartlar sık yaptıklarınızdan ve bir süredir yapmadıklarınızdan gelir.",
-    "leftoverTag": "Ertesi güne artar"
+    "leftoverTag": "Ertesi güne artar",
+    "cuisineFilter": "Mutfağa göre süz",
+    "allCuisines": "Tümü",
+    "filteredOut": "Seçtiğiniz mutfaklarda kart kalmadı",
+    "filteredOutText": "Filtreyi temizlerseniz tüm mutfaklardan kart gelir.",
+    "clearFilters": "Filtreyi temizle"
   },
   "onb2": {
     "copyFailed": "Kopyalayamadık; link seçili, elle kopyalayabilirsin.",
@@ -1337,14 +1342,38 @@
     "allCategories": "Tüm kategoriler"
   },
   "cuisine": {
-    "turkish": "Türk",
-    "italian": "İtalyan",
-    "spanish": "İspanyol",
-    "indian": "Hint",
-    "american": "Amerikan",
-    "french": "Fransız",
-    "indonesian": "Endonez",
-    "british": "İngiliz"
+    "turkish": {
+      "short": "Türk",
+      "long": "Türk mutfağı"
+    },
+    "italian": {
+      "short": "İtalyan",
+      "long": "İtalyan mutfağı"
+    },
+    "indian": {
+      "short": "Hint",
+      "long": "Hint mutfağı"
+    },
+    "french": {
+      "short": "Fransız",
+      "long": "Fransız mutfağı"
+    },
+    "spanish": {
+      "short": "İspanyol",
+      "long": "İspanyol mutfağı"
+    },
+    "indonesian": {
+      "short": "Endonezya",
+      "long": "Endonezya mutfağı"
+    },
+    "american": {
+      "short": "Amerikan",
+      "long": "Amerikan mutfağı"
+    },
+    "british": {
+      "short": "İngiliz",
+      "long": "İngiliz mutfağı"
+    }
   },
   "category": {
     "main": "Ana yemek",

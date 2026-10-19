@@ -19,6 +19,23 @@
   flex-direction: column;
   gap: 10px;
 }
+/* Cuisine pills: one row that scrolls sideways, never wraps. */
+.pills {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 20px 4px;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.pills::-webkit-scrollbar {
+  display: none;
+}
+.pill {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
 .headRow {
   display: flex;
   justify-content: space-between;

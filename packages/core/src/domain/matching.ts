@@ -1,4 +1,6 @@
 import type { Course, Favorite, Match, Recipe, Slot, Swipe } from "../data/models";
+import { activeCuisines, availableCuisines, filterDeckByCuisines } from "../recipes/cuisines";
+import type { Cuisine } from "../recipes/schema";
 
 export const DECK_SIZE = 12;
 
@@ -56,6 +58,18 @@ export function buildDeck(args: {
     return a.name.localeCompare(b.name, "tr");
   });
   return candidates.slice(0, args.size ?? DECK_SIZE);
+}
+
+/**
+ * The deck with the cuisine pills applied. `pool` is the whole ordered deck (`buildDeck` with
+ * `size: Infinity`): pills come from it (a cuisine with nothing for this slot gets none), and the
+ * filter runs before the cap, so İtalyan + Hint fills the deck from every Italian and Indian dish.
+ * Same pills, same order on both phones; swiped cards are skipped by `nextCard` as before.
+ */
+export function cuisineDeck(pool: Recipe[], selected: readonly Cuisine[], size = DECK_SIZE): { available: Cuisine[]; active: Cuisine[]; deck: Recipe[] } {
+  const available = availableCuisines(pool);
+  const active = activeCuisines(selected, available);
+  return { available, active, deck: filterDeckByCuisines(pool, active).slice(0, size) };
 }
 
 /** Dishes planned around now are left out of decks (no karnıyarık twice in a week). */
