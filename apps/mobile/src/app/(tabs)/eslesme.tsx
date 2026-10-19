@@ -1,7 +1,7 @@
 import * as Haptics from "expo-haptics";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Modal, Pressable, ScrollView, View } from "react-native";
+import { Modal, Pressable, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import { SLOTS, SLOT_LABEL, type Match, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningDative, eveningLabel, formatDuration } from "@anv/core/domain/dates";
@@ -20,6 +20,7 @@ import { recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Card, Chip, EmptyState, Icon, Row, Screen, Text } from "@/ui";
 import { Avatar, AvatarStack, TabHeader } from "@/ui/more";
+import { PillRow } from "@/ui/PillRow";
 
 /** Eşleş: swipe the deck for an evening and course; both say "Olur" → match moment (with a haptic). */
 export default function MatchScreen() {
@@ -136,18 +137,14 @@ export default function MatchScreen() {
         )}
 
         {available.length > 1 && (
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ gap: 8 }}
-            accessibilityLabel={t("eslesme.cuisineFilter")}
+          <PillRow
+            label={t("eslesme.cuisineFilter")}
             testID="cuisine-pills"
-          >
-            <Chip label={t("eslesme.allCuisines")} selected={active.length === 0} onPress={() => pickCuisines([])} />
-            {available.map((c) => (
-              <Chip key={c} label={t(cuisineLabelKey(c, "short"))} selected={active.includes(c)} onPress={() => pickCuisines(toggleCuisine(cuisines, c))} />
-            ))}
-          </ScrollView>
+            options={[
+              { key: "all", label: t("eslesme.allCuisines"), selected: active.length === 0, onToggle: () => pickCuisines([]) },
+              ...available.map((c) => ({ key: c, label: t(cuisineLabelKey(c, "short")), selected: active.includes(c), onToggle: () => pickCuisines(toggleCuisine(cuisines, c)) })),
+            ]}
+          />
         )}
 
         {card ? (

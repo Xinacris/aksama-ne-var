@@ -1,0 +1,103 @@
+/*
+ * Toggle-pill row (PillRow.tsx). Exactly one "active" look: the filled tomato pill with a check.
+ * Hover is a surface tint only; keyboard focus is an ink ring offset from the pill.
+ */
+.row {
+  --pill-gutter: 20px;
+  --pill-fade: 28px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--pill-gutter);
+  /* room for the focus ring above/below, which the scroller would otherwise clip */
+  padding: 6px var(--pill-gutter);
+  scrollbar-width: none;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+/* Edge fade only on a side with hidden pills (set from the scroll position). */
+.row[data-fade-end="true"] {
+  mask-image: linear-gradient(to right, #000 calc(100% - var(--pill-fade)), transparent);
+}
+.row[data-fade-start="true"] {
+  mask-image: linear-gradient(to right, transparent, #000 var(--pill-fade));
+}
+.row[data-fade-start="true"][data-fade-end="true"] {
+  mask-image: linear-gradient(to right, transparent, #000 var(--pill-fade), #000 calc(100% - var(--pill-fade)), transparent);
+}
+
+/* Mouse and trackpad: wrap instead of scrolling sideways (no fade: nothing overflows). */
+@media (hover: hover) and (pointer: fine) {
+  .row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    row-gap: 8px;
+    mask-image: none !important;
+  }
+}
+
+.pill {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.pill:focus {
+  outline: none;
+}
+.pill:focus-visible {
+  outline: 2.5px solid var(--ink);
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  .pill[aria-pressed="false"]:hover {
+    background: color-mix(in srgb, var(--surface) 90%, var(--ink));
+  }
+}
+.pill[aria-pressed="true"] {
+  border-color: var(--tomato);
+  background: var(--tomato);
+  color: var(--on-tomato);
+}
+.pill[aria-pressed="true"]:hover {
+  background: color-mix(in srgb, var(--tomato) 90%, var(--ink));
+  border-color: color-mix(in srgb, var(--tomato) 90%, var(--ink));
+}
+
+/* The check grows in instead of popping in, so the pill widens smoothly. */
+.check {
+  display: inline-flex;
+  width: 0;
+  margin-right: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.15s ease, margin-right 0.15s ease, opacity 0.15s ease;
+}
+.pill[aria-pressed="true"] .check {
+  width: 16px;
+  margin-right: 6px;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill,
+  .check {
+    transition: none;
+  }
+}

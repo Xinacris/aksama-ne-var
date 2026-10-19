@@ -11,8 +11,8 @@ import { SwipeDeck, type DeckCard } from "@/components/SwipeDeck";
 import { IconChevronRight } from "@/components/icons";
 import { Avatar } from "@/components/ui/Avatar";
 import { ButtonLink, Button } from "@/components/ui/Button";
-import { DishChip } from "@/components/ui/Chip";
 import { EmptyState } from "@/components/ui/Misc";
+import { PillRow } from "@/components/ui/PillRow";
 import { SLOTS, SLOT_LABEL, type Match, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningDative, eveningLabel, formatDuration } from "@anv/core/domain/dates";
 import { numberAccusative } from "@anv/core/lib/text";
@@ -200,16 +200,13 @@ function EslesmeInner() {
         </header>
 
         {available.length > 1 && (
-          <div className={s.pills} role="group" aria-label={t("eslesme.cuisineFilter")}>
-            <DishChip className={s.pill} selected={active.length === 0} onClick={() => pickCuisines([])}>
-              {t("eslesme.allCuisines")}
-            </DishChip>
-            {available.map((c) => (
-              <DishChip key={c} className={s.pill} selected={active.includes(c)} onClick={() => pickCuisines(toggleCuisine(cuisines, c))}>
-                {t(cuisineLabelKey(c, "short"))}
-              </DishChip>
-            ))}
-          </div>
+          <PillRow
+            label={t("eslesme.cuisineFilter")}
+            options={[
+              { key: "all", label: t("eslesme.allCuisines"), selected: active.length === 0, onToggle: () => pickCuisines([]) },
+              ...available.map((c) => ({ key: c, label: t(cuisineLabelKey(c, "short")), selected: active.includes(c), onToggle: () => pickCuisines(toggleCuisine(cuisines, c)) })),
+            ]}
+          />
         )}
 
         <p className="visually-hidden" aria-live="polite">

@@ -1,4 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react-native";
+import { StyleSheet } from "react-native";
+import { space } from "@anv/core/design/tokens";
 import { appStore } from "@anv/core/store/app";
 import Match from "@/app/(tabs)/eslesme";
 import Week from "@/app/(tabs)/hafta";
@@ -115,5 +117,22 @@ describe("Eşleş", () => {
     }
     await fireEvent.press(pill("Tümü"));
     expect(pill("Tümü").props.accessibilityState).toMatchObject({ selected: true });
+  });
+
+  it("cuisine pill row: full-bleed with the screen gutter as padding; fade only while pills are hidden", async () => {
+    await freshStore({ demo: true });
+    await render(<Match />);
+    const row = screen.getByTestId("cuisine-pills");
+    expect(StyleSheet.flatten(row.props.contentContainerStyle)).toMatchObject({ paddingHorizontal: space.lg });
+    const fades = () => screen.queryAllByTestId(/^pill-fade-/).length;
+    await fireEvent(row, "layout", { nativeEvent: { layout: { width: 390, height: 52 } } });
+    await fireEvent(row, "contentSizeChange", 380, 52);
+    expect(fades()).toBe(0);
+    await fireEvent(row, "contentSizeChange", 900, 52);
+    expect(fades()).toBe(1);
+    await fireEvent.scroll(row, { nativeEvent: { contentOffset: { x: 200, y: 0 } } });
+    expect(fades()).toBe(2);
+    await fireEvent.scroll(row, { nativeEvent: { contentOffset: { x: 510, y: 0 } } });
+    expect(fades()).toBe(1);
   });
 });
