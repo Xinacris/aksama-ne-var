@@ -4,7 +4,7 @@ import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo } from "react";
-import { findReminder, reminderText } from "@anv/core/domain/pantryReminders";
+import { findReminder, reminderText, reminderNames } from "@anv/core/domain/pantryReminders";
 import { PantryCheck } from "@/components/pantry/Pantry";
 import { Loading } from "@/components/Guard";
 import { EmptyState } from "@/components/ui/Misc";
@@ -18,7 +18,7 @@ function Kontrol() {
   const plan = usePantryReminders();
   const recipes = useApp((x) => x.recipes);
   const router = useRouter();
-  const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const names = useMemo(() => reminderNames(recipes), [recipes]);
   const answer = useApp((x) => x.answerPantryCheck);
   const r = findReminder(plan, id);
   const text = r ? reminderText(r, names) : null;

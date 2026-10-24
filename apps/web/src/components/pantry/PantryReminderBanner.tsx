@@ -4,12 +4,15 @@ import { t } from "@anv/core/i18n";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { reminderText, type PantryReminder } from "@anv/core/domain/pantryReminders";
+import { reminderText, type PantryReminder, reminderNames } from "@anv/core/domain/pantryReminders";
 import { preferences } from "@/data/preferences";
 import { usePantryReminders } from "@/hooks/usePantryReminders";
 import { useApp } from "@/store/app";
 import { IconBasket } from "../icons";
 import s from "./PantryReminderBanner.module.css";
+
+/** The main screens only: forms, recipes and cooking stay uncluttered (the reminder waits there). */
+const BANNER_ROUTES = ["/bugun", "/hafta", "/eslesme", "/liste", "/evde"];
 
 export function checkHref(r: Pick<PantryReminder, "id">): string {
   return `/evde/kontrol?r=${encodeURIComponent(r.id)}`;
@@ -42,7 +45,7 @@ export function PantryReminderBanner() {
   const router = useRouter();
   const pathname = usePathname() ?? "";
   const [dismissed, setDismissed] = useState<string[] | null>(null);
-  const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const names = useMemo(() => reminderNames(recipes), [recipes]);
   const hidden = dismissed ?? [];
   const due = plan.due.filter((r) => !hidden.includes(r.id));
   const top = due[0];
@@ -66,7 +69,7 @@ export function PantryReminderBanner() {
     return () => document.removeEventListener("visibilitychange", run);
   }, [plan.due, names, router]);
 
-  if (!top || dismissed === null || pathname.startsWith("/evde/kontrol")) return null;
+  if (!top || dismissed === null || !BANNER_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`)) || pathname.startsWith("/evde/kontrol")) return null;
   const text = reminderText(top, names);
   return (
     <section className={s.banner} aria-label={t("pantry.banner")} data-testid="pantry-banner">

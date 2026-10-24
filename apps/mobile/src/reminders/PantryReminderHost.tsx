@@ -1,6 +1,7 @@
 import * as Notifications from "expo-notifications";
 import { router } from "expo-router";
 import { useEffect, useMemo } from "react";
+import { reminderNames } from "@anv/core/domain/pantryReminders";
 import { useApp } from "@/store";
 import { syncPantryNotifications } from "./notifications";
 import { usePantryReminders } from "./usePantryReminders";
@@ -13,7 +14,7 @@ import { usePantryReminders } from "./usePantryReminders";
 export function PantryReminderHost() {
   const plan = usePantryReminders();
   const recipes = useApp((x) => x.recipes);
-  const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const names = useMemo(() => reminderNames(recipes), [recipes]);
   const key = plan.scheduled.map((r) => `${r.id}@${r.fireAt.getTime()}`).join("|");
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import type { PantryAnswer, PantryItem, PlanDay, PlanItem, Recipe } from "../dat
 import { intlTag, t } from "../i18n";
 import { addDays, fromIsoDate, toIsoDate } from "./dates";
 import { ingredientLabel } from "./recipeText";
+import { recipeLabel } from "./shopping";
 
 /**
  * Pantry reminders (Round 3.5): when to ask "evde ne var?". Pure and delivery-free, so the phone's
@@ -144,6 +145,11 @@ export function planPantryReminders(input: ReminderInput): ReminderPlan {
   out.scheduled.sort((a, b) => a.fireAt.getTime() - b.fireAt.getTime());
   out.due.sort((a, b) => b.fireAt.getTime() - a.fireAt.getTime());
   return out;
+}
+
+/** Dish names for reminder copy: the short label ("Yayla çorbası", "Lentil soup"), so a banner stays two lines. */
+export function reminderNames(recipes: readonly Pick<Recipe, "id" | "name" | "shortName">[]): Map<string, string> {
+  return new Map(recipes.map((r) => [r.id, recipeLabel(r)]));
 }
 
 /** Notification / banner copy in the current language. */

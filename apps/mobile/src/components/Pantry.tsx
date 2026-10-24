@@ -4,7 +4,7 @@ import { Pressable, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import { AISLE_LABEL, UNITS, UNIT_LABEL, type PantryItem, type Unit } from "@anv/core/data/models";
 import { COMMON_PANTRY, groupPantry, pantryStatus, searchIngredients, type PantryStatus } from "@anv/core/domain/pantry";
-import { reminderText, type PantryReminder } from "@anv/core/domain/pantryReminders";
+import { reminderText, type PantryReminder, reminderNames } from "@anv/core/domain/pantryReminders";
 import { ingredientLabel } from "@anv/core/domain/recipeText";
 import { formatIngredientQuantity } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
@@ -224,7 +224,7 @@ export function PantryBanner() {
   const plan = usePantryReminders();
   const recipes = useApp((x) => x.recipes);
   const [dismissed, dismiss] = useDismissedReminders();
-  const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const names = useMemo(() => reminderNames(recipes), [recipes]);
   const top: PantryReminder | undefined = plan.due.find((r) => !dismissed.includes(r.id));
   if (!top) return null;
   const text = reminderText(top, names);

@@ -1,7 +1,7 @@
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { findReminder, reminderText } from "@anv/core/domain/pantryReminders";
+import { findReminder, reminderText, reminderNames } from "@anv/core/domain/pantryReminders";
 import { PantryCheck } from "@/components/Pantry";
 import { usePantryReminders } from "@/reminders/usePantryReminders";
 import { useApp } from "@/store";
@@ -15,7 +15,7 @@ export default function PantryCheckScreen() {
   const { r: id = "" } = useLocalSearchParams<{ r?: string }>();
   const plan = usePantryReminders();
   const recipes = useApp((x) => x.recipes);
-  const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const names = useMemo(() => reminderNames(recipes), [recipes]);
   const answer = useApp((x) => x.answerPantryCheck);
   const r = findReminder(plan, id);
   const text = r ? reminderText(r, names) : null;

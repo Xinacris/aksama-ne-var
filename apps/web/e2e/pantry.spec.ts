@@ -136,3 +136,15 @@ test("week check with nothing to tick leads to the pantry and can be answered (#
   await expect(page).toHaveURL(/\/evde$/);
   await expect(page.getByTestId("pantry-banner")).toHaveCount(0);
 });
+
+test("reminder banner: short dish names, main screens only (#4)", async ({ page }) => {
+  await page.goto("/giris");
+  await page.evaluate(() => localStorage.setItem("anv.locale", "en"));
+  await demo(page, "2026-10-13T21:00:00+03:00");
+  const banner = page.getByTestId("pantry-banner");
+  await expect(banner).toContainText("Yayla");
+  await expect(banner).not.toContainText("(yoghurt and rice soup)");
+  await page.goto("/tarifler/yeni");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await expect(page.getByTestId("pantry-banner")).toHaveCount(0);
+});
