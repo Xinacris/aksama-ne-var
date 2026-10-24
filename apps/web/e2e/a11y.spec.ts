@@ -30,12 +30,18 @@ test.describe("accessibility (axe)", () => {
     await expect(page.getByRole("heading", { name: /en sık yaptığınız/ })).toBeVisible();
     await audit(page, "onboarding-1");
     await page.getByRole("button", { name: /Devam et/ }).click();
+    await expect(page.getByRole("heading", { name: "Evde neler var?" })).toBeVisible();
+    await page.getByRole("button", { name: "Yumurta", exact: true }).click();
+    await audit(page, "onboarding-evde");
+    await page.getByRole("button", { name: /^Devam/ }).click();
     await expect(page.getByLabel("Davet linki")).toBeVisible();
     await audit(page, "onboarding-2");
   });
 
   for (const scheme of ["light", "dark"] as const) {
     test(`main screens (${scheme})`, async ({ page }) => {
+      // One long walk over ~15 screens with axe on each: ~50 s on its own, more under load.
+      test.setTimeout(120_000);
       await page.emulateMedia({ colorScheme: scheme });
       await page.clock.setFixedTime(NOW);
       await page.goto("/giris");

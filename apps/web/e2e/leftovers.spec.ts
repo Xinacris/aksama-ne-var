@@ -36,7 +36,7 @@ test("'Artmaz' on a recipe → cooking it creates no lunch; 'öğlen yenir' does
   const recipeUrl = page.url();
 
   // Put it on Tuesday's main slot (replaces karnıyarık and its "öğlen" choice)
-  await page.getByRole("button", { name: "Bir akşama koy" }).click();
+  await page.getByRole("button", { name: "Güne ekle" }).click();
   await page.getByRole("dialog").getByRole("button", { name: /^Salı/ }).click();
 
   // Wednesday: Tuesday was cooked (rollover) — no lunch, nothing dolapta

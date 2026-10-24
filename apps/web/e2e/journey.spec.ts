@@ -32,6 +32,8 @@ test("two members: invite → join → swipe → match → plan → live list �
   await ali.getByRole("button", { name: "“Annemin dolması” olarak ekle" }).click();
   await expect(ali.getByRole("status").filter({ hasText: "yemek" })).toContainText("4 yemek");
   await ali.getByRole("button", { name: /Devam et/ }).click();
+  // "Evde ne var?" step: skippable
+  await ali.getByRole("button", { name: "Şimdilik geç" }).click();
 
   await expect(ali).toHaveURL(/\/onboarding\/2/);
   const linkInput = ali.getByLabel("Davet linki");
@@ -57,6 +59,9 @@ test("two members: invite → join → swipe → match → plan → live list �
   await expect(zeynep).toHaveURL(/\/onboarding\/1\?katil=1/);
   await expect(zeynep.getByText("bunları seçmiş")).toBeVisible();
   await expect(zeynep.getByRole("button", { name: "Karnıyarık", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await zeynep.getByRole("button", { name: /Devam et/ }).click();
+  // For a partner who joined, "Evde ne var?" is the last step
+  await expect(zeynep.getByText("Adım 2 / 2")).toBeVisible();
   await zeynep.getByRole("button", { name: /Başlayalım/ }).click();
   await expect(zeynep).toHaveURL(/\/bugun/);
 

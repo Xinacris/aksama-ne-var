@@ -51,6 +51,9 @@ test("screens", async ({ page }, info) => {
   await shot(page, p, "onboarding-1-bos");
   await page.getByLabel("Yemek ara").fill("");
   await page.getByRole("button", { name: /Devam et/ }).click();
+  await expect(page).toHaveURL(/\/onboarding\/evde/);
+  await shot(page, p, "onboarding-evde");
+  await page.getByRole("button", { name: "Şimdilik geç" }).click();
   await expect(page).toHaveURL(/\/onboarding\/2/);
   await expect(page.getByLabel("Davet linki")).not.toHaveValue("");
   await shot(page, p, "onboarding-2");
