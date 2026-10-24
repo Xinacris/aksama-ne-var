@@ -1,0 +1,39 @@
+.providers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.provider {
+  min-height: 52px;
+  border-radius: 16px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink2);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  cursor: not-allowed;
+  text-align: left;
+}
+.name {
+  flex: 1;
+}
+.soon {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--sand-soft);
+  color: var(--sand-text);
+}
+.note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink2);
+  text-align: center;
+}

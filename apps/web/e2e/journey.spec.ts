@@ -7,7 +7,7 @@ const TOMORROW = "2026-10-13";
 
 async function signUp(page: Page, name: string, email: string) {
   await page.getByLabel("Adın").fill(name);
-  await page.getByLabel("E-posta").fill(email);
+  await page.getByLabel("E-posta", { exact: true }).fill(email);
   await page.getByLabel("Şifre").fill("kofte123");
 }
 
@@ -145,9 +145,9 @@ test("two members: invite → join → swipe → match → plan → live list �
   await ali.goto("/ayarlar");
   await ali.getByRole("button", { name: "Çıkış yap" }).click();
   await expect(ali).toHaveURL(/\/giris/);
-  await ali.getByLabel("E-posta").fill("ali@ornek.com");
+  await ali.getByLabel("E-posta", { exact: true }).fill("ali@ornek.com");
   await ali.getByLabel("Şifre").fill("kofte123");
-  await ali.getByRole("button", { name: "Giriş yap" }).click();
+  await ali.getByRole("button", { name: "Giriş yap", exact: true }).click();
   await expect(ali).toHaveURL(/\/bugun/);
   await ali.goto("/tarifler");
   await ali.getByLabel("Tarif ya da malzeme ara").fill("mücver");

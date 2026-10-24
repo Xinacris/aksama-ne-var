@@ -6,6 +6,7 @@ import PantryStep from "@/app/onboarding/evde";
 import Pantry from "@/app/evde/index";
 import PantryCheckScreen from "@/app/evde/kontrol";
 import Today from "@/app/(tabs)/bugun";
+import SignIn from "@/app/(auth)/index";
 import { syncPantryNotifications } from "@/reminders/notifications";
 import { PantryReminderHost } from "@/reminders/PantryReminderHost";
 import { planPantryReminders, DEFAULT_REMINDER_SETTINGS } from "@anv/core/domain/pantryReminders";
@@ -115,5 +116,16 @@ describe("reminders on the phone", () => {
     const ids = notif.__state.scheduled.map((s) => s.identifier);
     expect(ids).toContain("timer-abc:a");
     expect(ids.some((id) => id.startsWith("pantry:"))).toBe(true);
+  });
+});
+
+describe("welcome: sign-in providers are 'Yakında' (Round 3.5)", () => {
+  it("shows Google / Apple / e-posta as unavailable; Giriş yapmadan devam et opens the local sign-up", async () => {
+    await freshStore();
+    await render(<SignIn />);
+    for (const p of ["google", "apple", "email"]) expect(screen.getByTestId(`auth-${p}`).props.accessibilityState).toEqual({ disabled: true });
+    expect(screen.getByLabelText("Google ile giriş yap (yakında)")).toBeTruthy();
+    await fireEvent.press(screen.getByTestId("continue-local"));
+    expect(routerMock().router.push).toHaveBeenCalledWith("/kayit");
   });
 });

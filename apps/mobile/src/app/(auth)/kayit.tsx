@@ -6,6 +6,7 @@ import { messageOf } from "@anv/core/services/errors";
 import { useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Field, IconButton, Row, Screen, Text } from "@/ui";
+import { AuthProviders, SHOW_AUTH_PROVIDERS } from "@/components/AuthProviders";
 
 /** Yeni hesap: a local account on this phone; the household comes next (onboarding). */
 export default function SignUp() {
@@ -36,6 +37,15 @@ export default function SignUp() {
         <Text variant="display">{t("kayit.title")}</Text>
         <Text color={colors.ink2}>{t("kayit.lead")}</Text>
       </View>
+      <AuthProviders />
+      {SHOW_AUTH_PROVIDERS && (
+        <View style={{ gap: 4 }}>
+          <Text variant="h3" accessibilityRole="header">
+            {t("auth.continueLocal")}
+          </Text>
+          <Text variant="small">{t("auth.continueLocalNote")}</Text>
+        </View>
+      )}
       <Field label={t("auth.yourName")} value={name} onChangeText={setName} autoComplete="given-name" textContentType="givenName" />
       <Field label={t("auth.email")} value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize="none" autoComplete="email" textContentType="emailAddress" />
       <Field

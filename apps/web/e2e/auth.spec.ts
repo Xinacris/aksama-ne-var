@@ -10,7 +10,7 @@ test.describe("auth & protected routes", () => {
   test("sign up lands in onboarding; wrong password is refused calmly", async ({ page }) => {
     await page.goto("/kayit");
     await page.getByLabel("Adın").fill("Ali");
-    await page.getByLabel("E-posta").fill("ali@ornek.com");
+    await page.getByLabel("E-posta", { exact: true }).fill("ali@ornek.com");
     await page.getByLabel("Şifre").fill("kofte123");
     await page.getByRole("button", { name: "Hesap oluştur" }).click();
     await expect(page).toHaveURL(/\/onboarding\/1/);
@@ -21,9 +21,9 @@ test.describe("auth & protected routes", () => {
       localStorage.removeItem("anv:lastSession");
     });
     await page.goto("/giris");
-    await page.getByLabel("E-posta").fill("ali@ornek.com");
+    await page.getByLabel("E-posta", { exact: true }).fill("ali@ornek.com");
     await page.getByLabel("Şifre").fill("yanlis");
-    await page.getByRole("button", { name: "Giriş yap" }).click();
+    await page.getByRole("button", { name: "Giriş yap", exact: true }).click();
     await expect(page.getByText(/E-posta ya da şifre eşleşmedi/)).toBeVisible();
   });
 
@@ -36,5 +36,21 @@ test.describe("auth & protected routes", () => {
     await page.goto("/giris");
     await page.getByRole("button", { name: /Örnek evle dene/ }).click();
     await expect(page).toHaveURL(/\/bugun/);
+  });
+
+  test("Google / Apple / e-posta are shown as Yakında and do nothing; the local flow continues (Round 3.5)", async ({ page }) => {
+    await page.goto("/giris");
+    const providers = page.getByTestId("auth-providers");
+    for (const name of ["Google ile giriş yap (yakında)", "Apple ile giriş yap (yakında)", "E-posta ile giriş yap (yakında)"]) {
+      const b = providers.getByRole("button", { name });
+      await expect(b).toHaveAttribute("aria-disabled", "true");
+      await expect(b).toBeDisabled();
+      await b.click({ force: true });
+    }
+    await expect(page).toHaveURL(/\/giris$/);
+    await page.getByRole("link", { name: "Giriş yapmadan devam et" }).click();
+    await expect(page).toHaveURL(/\/kayit/);
+    await expect(page.getByRole("heading", { name: "Giriş yapmadan devam et" })).toBeVisible();
+    await expect(page.getByTestId("auth-providers")).toBeVisible();
   });
 });

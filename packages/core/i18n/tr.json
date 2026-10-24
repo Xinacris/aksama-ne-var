@@ -226,7 +226,19 @@
     "passwordHint": "En az 6 karakter. Bu bir demo; şifren yalnızca bu tarayıcıda, karıştırılmış olarak durur.",
     "preparing": "Hazırlanıyor…",
     "signingIn": "Giriliyor…",
-    "signIn": "Giriş yap"
+    "signIn": "Giriş yap",
+    "providers": {
+      "google": "Google ile giriş yap",
+      "apple": "Apple ile giriş yap",
+      "email": "E-posta ile giriş yap",
+      "soon": "Yakında",
+      "soonLabel": "{{name}} (yakında)",
+      "region": "Hesapla giriş",
+      "note": "Hesaplar yakında geliyor; şimdilik her şey bu cihazda durur."
+    },
+    "continueLocal": "Giriş yapmadan devam et",
+    "continueLocalNote": "Bu cihazda bir profil oluştur; plan ve liste burada durur.",
+    "thisDevice": "Bu cihazdaki profilinle gir"
   },
   "household": {
     "invite": "Akşama ne yiyeceğimize birlikte karar verelim mi? Bu linkle evime katıl:\n{{link}}",

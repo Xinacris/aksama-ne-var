@@ -24,7 +24,7 @@ test.describe("accessibility (axe)", () => {
   test("onboarding", async ({ page }) => {
     await page.goto("/kayit");
     await page.getByLabel("Adın").fill("Ali");
-    await page.getByLabel("E-posta").fill("ali@ornek.com");
+    await page.getByLabel("E-posta", { exact: true }).fill("ali@ornek.com");
     await page.getByLabel("Şifre").fill("kofte123");
     await page.getByRole("button", { name: "Hesap oluştur" }).click();
     await expect(page.getByRole("heading", { name: /en sık yaptığınız/ })).toBeVisible();

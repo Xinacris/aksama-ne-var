@@ -12,7 +12,7 @@ async function demo(page: Page, at: string) {
 test("onboarding: pick what's at home (chips, search, free text), then it is on the pantry screen", async ({ page }) => {
   await page.goto("/kayit");
   await page.getByLabel("Adın").fill("Ali");
-  await page.getByLabel("E-posta").fill("ali@ornek.com");
+  await page.getByLabel("E-posta", { exact: true }).fill("ali@ornek.com");
   await page.getByLabel("Şifre").fill("kofte123");
   await page.getByRole("button", { name: "Hesap oluştur" }).click();
   await expect(page).toHaveURL(/\/onboarding\/1/);
@@ -42,7 +42,7 @@ test("onboarding: pick what's at home (chips, search, free text), then it is on 
 test("onboarding: the pantry step can be skipped", async ({ page }) => {
   await page.goto("/kayit");
   await page.getByLabel("Adın").fill("Ayşe");
-  await page.getByLabel("E-posta").fill("ayse@ornek.com");
+  await page.getByLabel("E-posta", { exact: true }).fill("ayse@ornek.com");
   await page.getByLabel("Şifre").fill("kofte123");
   await page.getByRole("button", { name: "Hesap oluştur" }).click();
   await page.getByRole("button", { name: /Devam/ }).click();

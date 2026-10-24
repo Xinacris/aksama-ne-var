@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { LogInForm } from "@/components/AuthForms";
+import { AuthProviders } from "@/components/AuthProviders";
 import { Loading } from "@/components/Guard";
 import { shell, SimpleShell } from "@/components/SimpleShell";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { DEMO_ACCOUNTS, DEMO_PASSWORD } from "@anv/core/services/demo";
 import { useApp } from "@/store/app";
 
@@ -47,6 +48,12 @@ function GirisInner() {
         <h1 className={shell.title}>{t("giris.title")}</h1>
         <p className={shell.lead}>{t("giris.lead")}</p>
       </div>
+      <AuthProviders />
+      <ButtonLink href="/kayit" size="lg" block>
+        {t("auth.continueLocal")}
+      </ButtonLink>
+      <p className={shell.note}>{t("auth.continueLocalNote")}</p>
+      <div className={shell.divider}>{t("auth.thisDevice")}</div>
       <LogInForm onDone={() => {}} />
       <p className={shell.alt}>
         {t("giris.noAccount")} <Link href="/kayit">{t("auth.createAccount")}</Link>

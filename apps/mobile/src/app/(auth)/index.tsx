@@ -8,6 +8,7 @@ import { messageOf } from "@anv/core/services/errors";
 import { useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Divider, Field, Row, Screen, Text } from "@/ui";
+import { AuthProviders } from "@/components/AuthProviders";
 
 /** Giriş: local account sign-in, or the sample household in one tap. */
 export default function SignIn() {
@@ -38,6 +39,14 @@ export default function SignIn() {
         <Text variant="display">{t("giris.title")}</Text>
         <Text color={colors.ink2}>{t("giris.lead")}</Text>
       </View>
+      <AuthProviders />
+      <Button title={t("auth.continueLocal")} size="lg" onPress={() => router.push("/kayit")} testID="continue-local" />
+      <Text variant="small" style={{ textAlign: "center" }}>
+        {t("auth.continueLocalNote")}
+      </Text>
+      <Text variant="label" style={{ textAlign: "center" }}>
+        {t("auth.thisDevice")}
+      </Text>
       <Field
         label={t("auth.email")}
         value={email}
@@ -57,7 +66,7 @@ export default function SignIn() {
         onSubmitEditing={submit}
         error={error}
       />
-      <Button title={busy === "login" ? t("auth.signingIn") : t("auth.signIn")} size="lg" busy={busy === "login"} onPress={submit} />
+      <Button title={busy === "login" ? t("auth.signingIn") : t("auth.signIn")} size="lg" variant="secondary" busy={busy === "login"} onPress={submit} />
       <Row style={{ justifyContent: "center" }}>
         <Text variant="bodySmall" color={colors.ink2}>
           {t("giris.noAccount")}

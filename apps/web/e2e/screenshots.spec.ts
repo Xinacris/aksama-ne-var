@@ -38,7 +38,7 @@ test("screens", async ({ page }, info) => {
   await page.goto("/kayit");
   await shot(page, p, "kayit");
   await page.getByLabel("Adın").fill("Ali");
-  await page.getByLabel("E-posta").fill(`ali-${Date.now()}@ornek.com`);
+  await page.getByLabel("E-posta", { exact: true }).fill(`ali-${Date.now()}@ornek.com`);
   await page.getByLabel("Şifre").fill("kofte123");
   await page.getByRole("button", { name: "Hesap oluştur" }).click();
   await expect(page).toHaveURL(/\/onboarding\/1/);

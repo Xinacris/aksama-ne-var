@@ -226,7 +226,19 @@
     "passwordHint": "At least 6 characters. This is a demo: your password stays only in this browser, hashed.",
     "preparing": "Setting up…",
     "signingIn": "Signing in…",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "providers": {
+      "google": "Sign in with Google",
+      "apple": "Sign in with Apple",
+      "email": "Sign in with email",
+      "soon": "Soon",
+      "soonLabel": "{{name}} (coming soon)",
+      "region": "Sign in with an account",
+      "note": "Accounts are coming soon; for now everything stays on this device."
+    },
+    "continueLocal": "Continue without signing in",
+    "continueLocalNote": "Create a profile on this device; your plan and list stay here.",
+    "thisDevice": "Use your profile on this device"
   },
   "household": {
     "invite": "Shall we decide what’s for dinner together? Join my household with this link:\n{{link}}",

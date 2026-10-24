@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { SignUpForm } from "@/components/AuthForms";
+import { AuthProviders, SHOW_AUTH_PROVIDERS } from "@/components/AuthProviders";
 import { Loading } from "@/components/Guard";
 import { shell, SimpleShell } from "@/components/SimpleShell";
 import { useApp } from "@/store/app";
@@ -31,6 +32,18 @@ export default function KayitPage() {
             <h1 className={shell.title}>{t("kayit.title")}</h1>
             <p className={shell.lead}>{t("kayit.lead")}</p>
           </div>
+          <AuthProviders />
+          {SHOW_AUTH_PROVIDERS && (
+            <>
+              <div className={shell.divider}>{t("giris.or")}</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <h2 className={shell.subtitle}>{t("auth.continueLocal")}</h2>
+                <p className={shell.note} style={{ textAlign: "left" }}>
+                  {t("auth.continueLocalNote")}
+                </p>
+              </div>
+            </>
+          )}
           <SignUpForm
             onDone={async () => {
               signingUp.current = true;

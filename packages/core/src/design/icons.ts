@@ -51,6 +51,8 @@ export const ICONS = {
   trash: { shapes: [p("M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13")] },
   edit: { shapes: [p("M4 20h4L19 9l-4-4L4 16z"), p("M13 7l4 4")] },
   history: { strokeWidth: 1.9, shapes: [p("M3 12a9 9 0 1 0 3-6.7L3 8"), p("M3 3v5h5")] },
+  mail: { shapes: [{ kind: "rect", x: 3, y: 5, width: 18, height: 14, rx: 2 }, p("M3 7l9 6 9-6")] },
+  user: { shapes: [{ kind: "circle", cx: 12, cy: 8, r: 4 }, p("M4 21a8 8 0 0 1 16 0")] },
 } satisfies Record<string, IconDef>;
 
 export type IconName = keyof typeof ICONS;

@@ -13,9 +13,9 @@ test("Bugün → Pişirmeye başla → steps → timer (fake clock, reload) → 
   const zeynep = await context.newPage();
   await zeynep.clock.install({ time: EVENING });
   await zeynep.goto("/giris?cikis=1");
-  await zeynep.getByLabel("E-posta").fill("zeynep@demo.ev");
+  await zeynep.getByLabel("E-posta", { exact: true }).fill("zeynep@demo.ev");
   await zeynep.getByLabel("Şifre").fill("demo1234");
-  await zeynep.getByRole("button", { name: "Giriş yap" }).click();
+  await zeynep.getByRole("button", { name: "Giriş yap", exact: true }).click();
   await expect(zeynep).toHaveURL(/\/bugun/);
 
   // Ali starts cooking from tonight's card

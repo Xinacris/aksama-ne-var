@@ -116,7 +116,8 @@ npm run recipes:export                        # Supabase seed: packages/core/dat
 
 ## Try it with two people in one browser
 
-1. Open the app → **Hesap oluştur** → pick a few dishes → **Devam et** → copy the invite link →
+1. Open the app → **Giriş yapmadan devam et** → **Hesap oluştur** → pick a few dishes → **Devam et** →
+   tick what's at home (or **Şimdilik geç**) → copy the invite link →
    **Şimdilik tek başıma başla**.
 2. Open the invite link in a **second tab**. It is logged in as you (tabs share the last login), so
    press **Farklı bir hesapla katıl** and sign up as the second person. Each tab keeps its own user.
@@ -161,7 +162,13 @@ sample week. Demo accounts: `ali@demo.ev` / `zeynep@demo.ev`, password `demo1234
   Instagram imports use the paste box (on the phone also "Ekran görüntüsünden oku"). iOS Safari has
   no Web Share Target: on iPhone's browser, paste the link.
 - The daily limit on smart imports (30 per household) lives in server memory until the Supabase move.
-- Reminders show inside the app; there are no push notifications.
+- Reminders show inside the app. "Evde ne var?" reminders are also phone local notifications
+  (scheduled on the device) and, on the web, a browser notification only when permission was granted
+  and the tab is in the background; there is no server push yet (the scheduler in
+  `packages/core/src/domain/pantryReminders.ts` is delivery-free, so a push sender can reuse it).
+- The Google / Apple / e-posta sign-in buttons are UI only ("Yakında"), behind
+  `NEXT_PUBLIC_AUTH_PROVIDERS_UI` / `EXPO_PUBLIC_AUTH_PROVIDERS_UI` (on unless `0`); the local
+  profile ("Giriş yapmadan devam et") is the only way in.
 - Households are capped at two people (the product's copy is built around "ikiniz").
 - Clearing site data, private windows, or a full storage quota lose or block data; the app says so
   calmly, and Ayarlar › JSON olarak dışa aktar gives a backup.
