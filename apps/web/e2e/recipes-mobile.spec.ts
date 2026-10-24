@@ -117,3 +117,17 @@ test("Toplu yapıştır fills 5 ingredients, and the recipe saves with them", as
   await expect(page.getByRole("heading", { level: 1, name: "Pankek" })).toBeVisible();
   await expect(page.getByRole("region", { name: "Malzemeler" })).toContainText(/kabartma tozu/i);
 });
+
+test("Tarifler shows a page at a time, with more on demand (#10)", async ({ page }) => {
+  await page.goto("/giris");
+  await page.getByRole("button", { name: /Örnek evle dene/ }).click();
+  await expect(page).toHaveURL(/\/bugun/);
+  await page.goto("/tarifler");
+  const cards = page.getByRole("list").filter({ has: page.getByRole("link") }).first().getByRole("listitem");
+  await expect(cards).toHaveCount(48);
+  await page.getByRole("button", { name: /Daha fazla göster/ }).click();
+  await expect(cards).toHaveCount(96);
+  // A search starts from the first page again and needs no button when it fits.
+  await page.getByRole("searchbox").first().fill("karnıyarık");
+  await expect(page.getByRole("button", { name: /Daha fazla göster/ })).toHaveCount(0);
+});

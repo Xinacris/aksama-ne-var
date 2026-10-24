@@ -169,3 +169,7 @@
     font-size: 36px;
   }
 }
+.more {
+  align-self: center;
+  margin: 8px 20px 0;
+}

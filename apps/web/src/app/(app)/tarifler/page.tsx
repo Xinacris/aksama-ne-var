@@ -22,6 +22,7 @@ import { browsableRecipes, useApp } from "@/store/app";
 import s from "./page.module.css";
 
 const COURSE_SHORT = labelRecord<Course>("courseShort", COURSES);
+const PAGE = 48;
 
 export default function TariflerPage() {
   const recipes = useApp(browsableRecipes);
@@ -36,6 +37,10 @@ export default function TariflerPage() {
   const cuisines = useMemo(() => cuisinesIn(recipes), [recipes]);
   const [adding, setAdding] = useState(false);
   const [place, setPlace] = useState<Recipe | null>(null);
+  // The catalog has 1,000 recipes: show a page at a time; a new search or filter starts again.
+  const filterKey = `${q}|${course}|${tag ?? ""}|${cuisine}`;
+  const [paging, setPaging] = useState({ key: filterKey, shown: PAGE });
+  const shown = paging.key === filterKey ? paging.shown : PAGE;
   const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
@@ -135,7 +140,7 @@ export default function TariflerPage() {
 
       {list.length ? (
         <ul className={s.grid}>
-          {list.map((r) => (
+          {list.slice(0, shown).map((r) => (
             <li key={r.id} className={s.card}>
               <div className={`ph ${s.thumb}`} aria-hidden="true" />
               <div className={s.texts}>
@@ -163,7 +168,13 @@ export default function TariflerPage() {
             </li>
           ))}
         </ul>
-      ) : (
+      ) : null}
+      {list.length > shown ? (
+        <Button variant="secondary" size="lg" className={s.more} onClick={() => setPaging({ key: filterKey, shown: shown + PAGE })}>
+          {t("tarifler.more", { count: list.length - shown })}
+        </Button>
+      ) : null}
+      {list.length ? null : (
         <EmptyState
           title={t("tarifler.noResults")}
           text={t(q.trim() ? "tarifler.noResultsName" : "tarifler.noResultsFilter")}

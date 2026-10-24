@@ -599,7 +599,9 @@
     "noResultsName": "Farklı bir kelime deneyebilir ya da bu adla hemen ekleyebilirsin; ayrıntıları sonra yazarsın.",
     "noResultsFilter": "Farklı bir süzgeç deneyebilir ya da kendi tarifini ekleyebilirsin.",
     "add": "Tarif ekle",
-    "addNamed": "“{{name}}” ekle"
+    "addNamed": "“{{name}}” ekle",
+    "more_one": "Daha fazla göster ({{count}} tarif daha)",
+    "more_other": "Daha fazla göster ({{count}} tarif daha)"
   },
   "eslesme": {
     "dish": "Yemek",

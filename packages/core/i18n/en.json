@@ -599,7 +599,9 @@
     "noResultsName": "Try another word, or add it with this name now and write the details later.",
     "noResultsFilter": "Try another filter, or add your own recipe.",
     "add": "Add a recipe",
-    "addNamed": "Add “{{name}}”"
+    "addNamed": "Add “{{name}}”",
+    "more_one": "Show more ({{count}} more recipe)",
+    "more_other": "Show more ({{count}} more recipes)"
   },
   "eslesme": {
     "dish": "The dish",

@@ -102,6 +102,8 @@ describe("Tarifler", () => {
   it("toggles a favorite", async () => {
     await freshStore({ demo: true });
     render(<TariflerPage />);
+    // The list shows a page at a time (#10): find it first.
+    await userEvent.type(screen.getByRole("searchbox", { name: "Tarif ya da malzeme ara" }), "Mantar sote");
     await userEvent.click(screen.getByRole("button", { name: "Mantar sote: sık yaptıklarımıza ekle" }));
     expect(useApp.getState().favorites.some((f) => f.recipeId === "mantar-sote")).toBe(true);
   });
