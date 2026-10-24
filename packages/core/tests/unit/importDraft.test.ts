@@ -77,3 +77,16 @@ describe("source credit", () => {
     expect(sourceCredit({ platform: "web", author: null, url: "https://www.ornek.com/x" })).toBe("Kaynak: ornek.com");
   });
 });
+
+describe("untitled import in English (#6)", () => {
+  it("names the draft in the reader's language", async () => {
+    const { setLocale } = await import("@/i18n");
+    const { parseRecipeText } = await import("@/domain/import/parseText");
+    const { toRecipeDraft } = await import("@/services/importDraft");
+    const r = parseRecipeText("👇👇\n2 su bardağı un\n3 yumurta");
+    setLocale("en");
+    const d = toRecipeDraft(r, { kind: "text" } as never);
+    expect(d.name).toBe("Imported recipe");
+    setLocale("tr");
+  });
+});

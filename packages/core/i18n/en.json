@@ -429,7 +429,8 @@
     "screenshotRead": "Read from {{count}} screenshot(s). You can check the text; the recipe is on its way.",
     "screenshotEmpty": "We found no text in the images. Try copying and pasting the caption.",
     "screenshotFailed": "Couldn’t read the screenshot. Try copying and pasting the caption.",
-    "screenshotUnavailable": "This version can’t read screenshots; you can copy and paste the caption."
+    "screenshotUnavailable": "This version can’t read screenshots; you can copy and paste the caption.",
+    "untitled": "Imported recipe"
   },
   "common": {
     "and": "and",

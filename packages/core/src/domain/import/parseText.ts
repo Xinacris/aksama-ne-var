@@ -57,6 +57,12 @@ function sentenceCase(s: string): string {
 }
 
 /** "FIRINDA KÖFTE TARİFİ 😍 #köfte" → "Fırında köfte". */
+/**
+ * Name of a draft whose text has no readable title. Parsing can run on the server in any language,
+ * so the draft carries this marker and the form shows it in the reader's language (importDraft).
+ */
+export const UNTITLED_IMPORT = "İçe aktarılan tarif";
+
 export function cleanTitle(raw: string): string {
   // The title is what comes before the first emoji run ("FIRINDA KÖFTE 😍 Kaydet!").
   const segments = raw.split(/(?:[\p{Extended_Pictographic}\u{FE0F}]\s*)+/u).map((x) => x.trim());
@@ -291,7 +297,7 @@ export function parseRecipeText(input: string, titleHint?: string | null): Impor
   }
 
   const titleSource = titleHint?.trim() || intro[0] || lines[0] || "";
-  const name = cleanTitle(titleSource) || "İçe aktarılan tarif";
+  const name = cleanTitle(titleSource) || UNTITLED_IMPORT;
   void sawIngredientHead;
 
   const finalSteps = steps.slice(0, 40);

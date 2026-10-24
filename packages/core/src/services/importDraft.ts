@@ -1,4 +1,5 @@
 import { t } from "../i18n";
+import { UNTITLED_IMPORT } from "../domain/import/parseText";
 import { PLATFORM_LABEL, type Recipe, type SourcePlatform } from "../data/models";
 import { catalogEntry } from "../data/seed/ingredients";
 import { isWater, matchCatalog } from "../domain/import/catalogMatch";
@@ -107,7 +108,8 @@ export function toRecipeDraft(r: ImportedRecipe, source: ImportResult["source"],
       .find((name) => name && ingredients.some((i) => i.name === name)) ?? "";
 
   return {
-    name: r.name,
+    // A draft without a readable title gets its placeholder name in the reader's language.
+    name: r.name === UNTITLED_IMPORT ? t("import.untitled") : r.name,
     course: r.role ?? (/tatlı|kek|kurabiye|sütlaç|revani|muhallebi/i.test(r.name) ? "tatli" : "ana"),
     prepMinutes: String(times.prep),
     cookMinutes: String(times.cook),

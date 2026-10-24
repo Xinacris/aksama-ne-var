@@ -1,3 +1,4 @@
+import { UNTITLED_IMPORT } from "./parseText";
 import { keywordTags } from "./tags";
 import { parseDurationMinutes } from "../durations";
 import { cleanTitle, findPrep, guessRole, parseIngredientLine } from "./parseText";
@@ -135,7 +136,7 @@ export function readSchemaOrgRecipe(html: string): SchemaOrgRecipe | null {
     if (node) break;
   }
   if (!node) return null;
-  const name = cleanTitle(str(node.name) ?? "") || "İçe aktarılan tarif";
+  const name = cleanTitle(str(node.name) ?? "") || UNTITLED_IMPORT;
   // Some sites group ingredients per sub-recipe as nested arrays (Yemek.com: [["1 adet tavuk", …], ["4 adet biber", …]]).
   const raw = Array.isArray(node.recipeIngredient) ? node.recipeIngredient : Array.isArray(node.ingredients) ? node.ingredients : [];
   const lines = (raw as Json[]).flat(3);
