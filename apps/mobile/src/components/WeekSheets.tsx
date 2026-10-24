@@ -6,6 +6,7 @@ import { SLOT_LABEL, type LeftoverChoice, type Match, type Recipe, type Slot } f
 import { addDays, dayName, eveningLabel, formatDuration } from "@anv/core/domain/dates";
 import type { LeftoverOutcome } from "@anv/core/domain/leftovers";
 import { dropMessage, slotForRecipe } from "@anv/core/domain/placement";
+import { byPantryCoverage, pantryNames } from "@anv/core/domain/pantry";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import type { AsideMatch } from "@anv/core/domain/week";
@@ -54,9 +55,11 @@ export function RecipePicker({ target, onClose, matches, frequent }: { target: {
         const own = slotForRecipe(r);
         return !!slot && (own === slot || own === null) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k));
       })
-      .sort((a, b) => a.name.localeCompare(b.name, "tr"))
-      .slice(0, k ? 30 : 12);
+      .sort((a, b) => a.name.localeCompare(b.name, "tr"));
   }, [recipes, q, slot]);
+  const pantry = useApp((x) => x.pantry);
+  // Dishes you can make with what's at home first.
+  const ranked = useMemo(() => byPantryCoverage(results, pantryNames(pantry)).slice(0, q.trim() ? 30 : 12), [results, pantry, q]);
   async function pick(r: Recipe, match?: Match) {
     if (!target) return;
     snapNextLayout();
@@ -79,7 +82,7 @@ export function RecipePicker({ target, onClose, matches, frequent }: { target: {
       ))}
       <Text variant="label">{t("dlg.allRecipes")}</Text>
       <Field label={t("dlg.searchRecipe")} hideLabel placeholder={t("dlg.searchRecipeDots")} icon="search" value={q} onChangeText={setQ} />
-      {results.length ? results.map((r) => <Option key={r.id} title={r.name} sub={r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)} onPress={() => pick(r)} />) : <Text variant="meta">{t("dlg.noSuchRecipe")}</Text>}
+      {ranked.length ? ranked.map((r) => <Option key={r.id} title={r.name} sub={r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)} onPress={() => pick(r)} />) : <Text variant="meta">{t("dlg.noSuchRecipe")}</Text>}
     </Sheet>
   );
 }

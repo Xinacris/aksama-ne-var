@@ -8,6 +8,7 @@ import { useMemo, useState } from "react";
 import { SLOTS, SLOT_LABEL, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningLabel, formatDuration } from "@anv/core/domain/dates";
 import { dropMessage, slotForRecipe } from "@anv/core/domain/placement";
+import { byPantryCoverage, pantryCoverage, pantryNames } from "@anv/core/domain/pantry";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
@@ -45,16 +46,24 @@ export function RecipePicker({
     const own = slotForRecipe(r);
     return !!slot && (own === slot || own === null);
   };
+  const pantry = useApp((x) => x.pantry);
+  const have = useMemo(() => pantryNames(pantry), [pantry]);
   const results = useMemo(() => {
     const k = searchKey(q);
-    return recipes
+    const fitting = recipes
       .filter((r) => {
         const own = slotForRecipe(r);
         return !!slot && (own === slot || own === null) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k));
       })
-      .sort((a, b) => a.name.localeCompare(b.name, "tr"))
-      .slice(0, k ? 30 : 12);
-  }, [recipes, q, slot]);
+      .sort((a, b) => a.name.localeCompare(b.name, "tr"));
+    // Dishes you can make with what's at home first.
+    return byPantryCoverage(fitting, have).slice(0, k ? 30 : 12);
+  }, [recipes, q, slot, have]);
+  const sub = (r: Recipe) => {
+    const c = pantryCoverage(r, have);
+    const time = r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes);
+    return have.size && c.have ? `${time} · ${t("pantry.coverage", { have: c.have, total: c.total })}` : time;
+  };
 
   async function pick(r: Recipe, match?: Match) {
     if (!target) return;
@@ -119,7 +128,7 @@ export function RecipePicker({
                 <button type="button" className={s.option} onClick={() => pick(r)}>
                   <span className={s.optionText}>
                     {r.name}
-                    <span className={s.optionSub}>{r.timeNote ?? formatDuration(r.prepMinutes + r.cookMinutes)}</span>
+                    <span className={s.optionSub}>{sub(r)}</span>
                   </span>
                 </button>
               </li>

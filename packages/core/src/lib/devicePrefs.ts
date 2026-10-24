@@ -1,4 +1,5 @@
 import type { KeyValueStore } from "../data/storage";
+import { DEFAULT_REMINDER_SETTINGS, type ReminderSettings } from "../domain/pantryReminders";
 
 /** Device-level preferences next to the theme (`anv.theme`): not synced across household members. */
 export const TIMER_SOUND_KEY = "anv.timerSound";
@@ -72,4 +73,51 @@ export function writeHandoffs(store: Pick<KeyValueStore, "setItem"> | null | und
   } catch {
     // storage unavailable: the hand-off is remembered until the app closes
   }
+}
+
+/** "Evde ne var" reminders on this device (Ayarlar). On by default. */
+export const PANTRY_REMINDERS_KEY = "anv.pantryReminders";
+/** Reminder ids this device's banner was closed for ("Sonra"). */
+export const PANTRY_DISMISSED_KEY = "anv.pantryDismissed";
+/** Web: reminder ids already shown as a browser notification. */
+export const PANTRY_NOTIFIED_KEY = "anv.pantryNotified";
+
+export function readReminderSettings(store: Pick<KeyValueStore, "getItem"> | null | undefined): ReminderSettings {
+  try {
+    const v: unknown = JSON.parse(store?.getItem(PANTRY_REMINDERS_KEY) ?? "null");
+    if (!v || typeof v !== "object") return DEFAULT_REMINDER_SETTINGS;
+    const o = v as Partial<Record<keyof ReminderSettings, unknown>>;
+    const pick = (k: keyof ReminderSettings) => (typeof o[k] === "boolean" ? (o[k] as boolean) : DEFAULT_REMINDER_SETTINGS[k]);
+    return { enabled: pick("enabled"), weekStart: pick("weekStart"), pantryDays: pick("pantryDays") };
+  } catch {
+    return DEFAULT_REMINDER_SETTINGS;
+  }
+}
+
+export function writeReminderSettings(store: Pick<KeyValueStore, "setItem"> | null | undefined, settings: ReminderSettings): void {
+  try {
+    store?.setItem(PANTRY_REMINDERS_KEY, JSON.stringify(settings));
+  } catch {
+    // storage unavailable: the choice applies until reload
+  }
+}
+
+/** A small set of ids kept on the device (dismissed / notified reminders); the newest 60 are enough. */
+export function readIdSet(store: Pick<KeyValueStore, "getItem"> | null | undefined, key: string): string[] {
+  try {
+    const v: unknown = JSON.parse(store?.getItem(key) ?? "[]");
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+export function addToIdSet(store: Pick<KeyValueStore, "getItem" | "setItem"> | null | undefined, key: string, id: string): string[] {
+  const next = [...readIdSet(store, key).filter((x) => x !== id), id].slice(-60);
+  try {
+    store?.setItem(key, JSON.stringify(next));
+  } catch {
+    // storage unavailable: remembered until reload
+  }
+  return next;
 }

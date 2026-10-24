@@ -9,6 +9,7 @@ import { usePeople } from "@/hooks/usePeople";
 import { usePartnerPresence } from "@/hooks/usePresence";
 import { selectList, useApp } from "@/store/app";
 import { IconBasket, IconBook, IconCalendar, IconCards, IconHome, IconSettings } from "./icons";
+import { PantryReminderBanner } from "./pantry/PantryReminderBanner";
 import { AvatarStack } from "./ui/Avatar";
 import { SyncInline } from "./ui/Misc";
 import s from "./AppShell.module.css";
@@ -29,6 +30,7 @@ const TOP = [
   { href: "/eslesme", label: "nav.eslesme" },
   { href: "/liste", label: "nav.liste" },
   { href: "/tarifler", label: "nav.tarifler" },
+  { href: "/evde", label: "nav.evde" },
 ] as const;
 
 function isActive(pathname: string, href: string) {
@@ -77,6 +79,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           </div>
         </div>
       </header>
+      <PantryReminderBanner />
       <div className={s.content}>{children}</div>
       <nav aria-label={t("nav.main")} className={s.bottom}>
         {TABS.map(({ href, label, Icon, also }) => {

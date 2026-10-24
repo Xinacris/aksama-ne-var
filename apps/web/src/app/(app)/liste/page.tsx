@@ -2,6 +2,7 @@
 
 import { t } from "@anv/core/i18n";
 import { FALLBACK_AISLE, SIDE_LABEL, UNIT_LABEL } from "@anv/core/data/models";
+import Link from "next/link";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { IconCheck, IconClose, IconPlus } from "@/components/icons";
 import { Avatar, type AvatarPerson } from "@/components/ui/Avatar";
@@ -68,6 +69,11 @@ export default function ListePage() {
             <IconPlus size={22} />
           </button>
         </div>
+
+        <Link href="/evde" className={s.pantryLink}>
+          <span className={s.pantryLinkTitle}>{t("pantry.link")}</span>
+          <span className={s.pantryLinkNote}>{t("pantry.linkNote", { count: st.pantry.length })}</span>
+        </Link>
 
         {partner && (
           <div role="status" className={s.presence}>

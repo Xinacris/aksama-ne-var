@@ -1,4 +1,15 @@
-import { readTimerSound, takeAlarmHint, writeTimerSound } from "@anv/core/lib/devicePrefs";
+import {
+  PANTRY_DISMISSED_KEY,
+  PANTRY_NOTIFIED_KEY,
+  addToIdSet,
+  readIdSet,
+  readReminderSettings,
+  readTimerSound,
+  takeAlarmHint,
+  writeReminderSettings,
+  writeTimerSound,
+} from "@anv/core/lib/devicePrefs";
+import type { ReminderSettings } from "@anv/core/domain/pantryReminders";
 import { THEME_STORAGE_KEY, type ThemePreference } from "@anv/core/lib/theme";
 import { readSwipeCuisines, writeSwipeCuisines } from "@anv/core/recipes/cuisines";
 import type { Cuisine } from "@anv/core/recipes/schema";
@@ -41,6 +52,27 @@ export const preferences = {
   },
   setSwipeCuisines(selected: readonly Cuisine[]): void {
     writeSwipeCuisines(local(), selected);
+  },
+  /** "Evde ne var" reminders (on by default). */
+  getReminderSettings(): ReminderSettings {
+    return readReminderSettings(local());
+  },
+  setReminderSettings(v: ReminderSettings): void {
+    writeReminderSettings(local(), v);
+  },
+  /** Reminder ids whose banner was closed with "Sonra" in this browser. */
+  getPantryDismissed(): string[] {
+    return readIdSet(local(), PANTRY_DISMISSED_KEY);
+  },
+  dismissPantry(id: string): string[] {
+    return addToIdSet(local(), PANTRY_DISMISSED_KEY, id);
+  },
+  /** Reminder ids already shown as a browser notification. */
+  getPantryNotified(): string[] {
+    return readIdSet(local(), PANTRY_NOTIFIED_KEY);
+  },
+  markPantryNotified(id: string): void {
+    addToIdSet(local(), PANTRY_NOTIFIED_KEY, id);
   },
   /** True once per browser: the "notifications are off" hint. */
   takeAlarmHint(): boolean {

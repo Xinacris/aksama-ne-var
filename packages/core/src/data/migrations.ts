@@ -2,7 +2,7 @@ import type { KeyValueStore } from "./storage";
 import { STORAGE_PREFIX } from "./sync";
 
 export const META_KEY = `${STORAGE_PREFIX}meta`;
-export const CURRENT_SCHEMA_VERSION = 10;
+export const CURRENT_SCHEMA_VERSION = 11;
 
 export interface Migration {
   version: number;
@@ -58,7 +58,9 @@ function platformOf(url: string): "instagram" | "youtube" | "tiktok" | "web" {
  * version 7 resets built-in recipes to "Artmaz" (leftovers are never guessed);
  * version 8 lets recipes carry `waitMinutes` and `sourceThumbnailUrl` (optional: nothing to convert);
  * version 9 adds the "web" import provider and `writtenRecipeUrl` (old rows stay valid as they are);
- * version 10 makes recipes bilingual: `lang` (source language, "tr" for every existing recipe) and `translations`.
+ * version 10 makes recipes bilingual: `lang` (source language, "tr" for every existing recipe) and `translations`;
+ * version 11 (Round 3.5) adds the pantry's "az kaldı" status and check time (optional) and the `pantryAnswers`
+ * table, and the `tatli` plan slot: nothing to convert, every stored plan and pantry row stays valid.
  */
 export const MIGRATIONS: Migration[] = [
   {
@@ -150,6 +152,11 @@ export const MIGRATIONS: Migration[] = [
     up: (store) => {
       mapRows(store, "recipes", (r) => (typeof r.lang === "string" ? r : { ...r, lang: "tr" }));
     },
+  },
+  {
+    version: 11,
+    description: "Pantry gains status (have | low) and checkedAt; new pantryAnswers table; plan slot 'tatli' (nothing to convert)",
+    up: () => {},
   },
 ];
 

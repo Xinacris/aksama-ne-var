@@ -16,6 +16,7 @@ import { SwipeCard, type DeckCardView } from "@/components/SwipeCard";
 import { cuisineLabelKey, toggleCuisine } from "@anv/core/recipes/cuisines";
 import { usePeople } from "@/hooks/usePeople";
 import { useSwipeCuisines } from "@/hooks/useSwipeCuisines";
+import { pantryNames } from "@anv/core/domain/pantry";
 import { recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Card, Chip, EmptyState, Icon, Row, Screen, Text } from "@/ui";
@@ -43,8 +44,8 @@ export default function MatchScreen() {
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
   const solo = people.length < 2;
   const pool = useMemo(
-    () => buildDeck({ recipes, favorites, lastCooked: last, slot, date, plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays), matches, size: Infinity }),
-    [recipes, favorites, last, slot, date, planItems, today, matches],
+    () => buildDeck({ recipes, favorites, lastCooked: last, slot, date, plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays), matches, size: Infinity, pantry: pantryNames(pantry) }),
+    [recipes, favorites, last, slot, date, planItems, today, matches, pantry],
   );
   const { available, active, deck } = useMemo(() => cuisineDeck(pool, cuisines), [pool, cuisines]);
   const mine = swipesFor(swipes, date, slot, me?.id);

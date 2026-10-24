@@ -32,7 +32,6 @@ function Step1() {
   const createHousehold = useApp((st) => st.createHousehold);
   const setFavorites = useApp((st) => st.setFavorites);
   const addStubRecipe = useApp((st) => st.addStubRecipe);
-  const completeOnboarding = useApp((st) => st.completeOnboarding);
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<Set<string> | null>(null);
   const [busy, setBusy] = useState(false);
@@ -93,12 +92,8 @@ function Step1() {
   async function next() {
     setBusy(true);
     await setFavorites([...chosen]);
-    if (joining || householdFull) {
-      await completeOnboarding();
-      router.push("/bugun");
-    } else {
-      router.push("/onboarding/2");
-    }
+    // Next: "Evde ne var?" (skippable); it is the last step for a partner who joined.
+    router.push(joining || householdFull ? "/onboarding/evde?son=1" : "/onboarding/evde");
   }
 
   return (
@@ -162,7 +157,7 @@ function Step1() {
               {t("onb1.chosenTail")}
             </span>
             <button type="button" className={s.continue} onClick={next} disabled={busy}>
-              {t(joining || householdFull ? "onb1.letsStart" : "onb1.continue")}
+              {t("onb1.continue")}
               <IconArrowRight size={18} strokeWidth={2.2} />
             </button>
           </div>

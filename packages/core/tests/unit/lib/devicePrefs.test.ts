@@ -26,3 +26,21 @@ describe("hand-offs", () => {
     expect(readHandoffs(store)).toEqual(["b@x"]);
   });
 });
+
+describe("pantry reminder settings (Round 3.5)", () => {
+  it("are on by default, survive a round trip and bad data", async () => {
+    const { readReminderSettings, writeReminderSettings, addToIdSet, readIdSet, PANTRY_REMINDERS_KEY } = await import("@/lib/devicePrefs");
+    const m = new Map<string, string>();
+    const store = { getItem: (k: string) => m.get(k) ?? null, setItem: (k: string, v: string) => void m.set(k, v) };
+    expect(readReminderSettings(store)).toEqual({ enabled: true, weekStart: true, pantryDays: true });
+    writeReminderSettings(store, { enabled: true, weekStart: false, pantryDays: true });
+    expect(readReminderSettings(store).weekStart).toBe(false);
+    m.set(PANTRY_REMINDERS_KEY, "{broken");
+    expect(readReminderSettings(store).enabled).toBe(true);
+    expect(readReminderSettings(null).enabled).toBe(true);
+    addToIdSet(store, "ids", "a");
+    addToIdSet(store, "ids", "b");
+    addToIdSet(store, "ids", "a");
+    expect(readIdSet(store, "ids")).toEqual(["b", "a"]);
+  });
+});

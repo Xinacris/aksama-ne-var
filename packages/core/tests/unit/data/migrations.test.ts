@@ -197,7 +197,7 @@ describe("v10: recipes become bilingual", () => {
     runMigrations(store);
     const rows = JSON.parse(store.getItem("anv:t:recipes")!);
     expect(rows.map((r: { lang: string }) => r.lang)).toEqual(["tr", "en"]);
-    expect(readSchemaVersion(store)).toBe(10);
+    expect(readSchemaVersion(store)).toBe(CURRENT_SCHEMA_VERSION);
   });
 
   it("a migrated household recipe still validates, with or without translations", () => {

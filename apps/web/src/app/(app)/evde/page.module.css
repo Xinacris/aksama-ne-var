@@ -1,0 +1,84 @@
+.page {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.1;
+}
+.lead {
+  margin: 0;
+  color: var(--ink2);
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 60ch;
+}
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.card {
+  flex: 1 1 320px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cardTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 20px;
+}
+.list {
+  flex: 2 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.count {
+  font-size: 13.5px;
+  color: var(--ink2);
+}
+.back {
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .page {
+    padding: 30px 32px 40px;
+  }
+  .title {
+    font-size: 36px;
+  }
+}
+/* Phones: what's at home first, adding below it. */
+@media (max-width: 719px) {
+  .list {
+    order: -1;
+  }
+}

@@ -121,3 +121,17 @@ describe("rotation memory", () => {
     expect(rotationLabel(10, true)).toBe("En son 10 gün önce yaptın");
   });
 });
+
+describe("pantry ranking (Round 3.5)", () => {
+  it("dishes covered by what is at home come first; favorites still lead; empty pantry changes nothing", async () => {
+    const { buildDeck } = await import("@/domain/matching");
+    const { pantryNames } = await import("@/domain/pantry");
+    const { pantry: p, R: rr } = await import("@/testing/builders");
+    const args = { recipes: [rr("Karnıyarık"), rr("Fırın makarna"), rr("Etli nohut")], favorites: [], lastCooked: new Map(), slot: "ana" as const, date: "2026-10-13", plannedRecipeIds: new Set<string>(), matches: [] };
+    const plain = buildDeck(args).map((r) => r.id);
+    expect(buildDeck({ ...args, pantry: new Set() }).map((r) => r.id)).toEqual(plain);
+    const nohut = rr("Etli nohut").ingredients.filter((i) => !i.staple).map((i) => p(i.name, null, null));
+    const ranked = buildDeck({ ...args, pantry: pantryNames(nohut) }).map((r) => r.id);
+    expect(ranked[0]).toBe(rr("Etli nohut").id);
+  });
+});

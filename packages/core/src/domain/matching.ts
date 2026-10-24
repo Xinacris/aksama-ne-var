@@ -1,6 +1,7 @@
 import type { Course, Favorite, Match, Recipe, Slot, Swipe } from "../data/models";
 import { activeCuisines, availableCuisines, filterDeckByCuisines } from "../recipes/cuisines";
 import type { Cuisine } from "../recipes/schema";
+import { coverageRank } from "./pantry";
 
 export const DECK_SIZE = 12;
 
@@ -22,7 +23,8 @@ export function courseToSlot(course: Course): Slot | null {
 
 /**
  * Household deck for a day/slot: favorites first, then everything else;
- * within each group, dishes not made recently (or never) come first.
+ * within each group, dishes mostly covered by what's at home (`pantry`) first,
+ * then dishes not made recently (or never).
  * Dishes already planned this week or already matched for this day are
  * left out. Deterministic, so both members see the same deck.
  */
@@ -35,6 +37,8 @@ export function buildDeck(args: {
   plannedRecipeIds: Set<string>;
   matches: Match[];
   size?: number;
+  /** Ingredient names at home ("Evde ne var?"): better-covered dishes rank higher. */
+  pantry?: ReadonlySet<string>;
 }): Recipe[] {
   const fav = new Set(args.favorites.map((f) => f.recipeId));
   const matchedHere = new Set(
@@ -49,10 +53,15 @@ export function buildDeck(args: {
     // Never cooked sorts as the oldest.
     return last ?? "0000-00-00";
   };
+  const have = args.pantry ?? new Set<string>();
+  const rank = new Map(candidates.map((r) => [r.id, coverageRank(r, have)]));
   candidates.sort((a, b) => {
     const fa = fav.has(a.id) ? 0 : 1;
     const fb = fav.has(b.id) ? 0 : 1;
     if (fa !== fb) return fa - fb;
+    const ca = rank.get(a.id)!;
+    const cb = rank.get(b.id)!;
+    if (ca !== cb) return cb - ca;
     const sa = score(a);
     const sb = score(b);
     if (sa !== sb) return sa.localeCompare(sb);

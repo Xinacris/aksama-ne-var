@@ -308,3 +308,21 @@
   font-size: 15px;
   font-weight: 600;
 }
+.footerActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.skip {
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 16px;
+  border: 1.5px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+}
+.skip:disabled {
+  opacity: 0.6;
+}

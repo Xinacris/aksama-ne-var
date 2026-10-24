@@ -390,3 +390,23 @@
     animation: none;
   }
 }
+.pantryLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: var(--sand-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+.pantryLinkTitle {
+  font-weight: 700;
+}
+.pantryLinkNote {
+  font-size: 13.5px;
+  color: var(--sand-text);
+  font-weight: 600;
+}

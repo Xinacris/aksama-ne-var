@@ -5,6 +5,7 @@ import { addDays, fromIsoDate } from "../domain/dates";
 import { ingredientKey } from "../domain/shopping";
 import { hashPassword, randomSalt } from "../lib/crypto";
 import { now, withNow } from "../lib/clock";
+import { pantryNames as pantryNamesOf } from "../domain/pantry";
 import { buildDeck, nextOpenEvening, recentlyPlannedIds } from "../domain/matching";
 import { lastCookedMap } from "../domain/rotation";
 import { MEMBER_COLORS } from "./household";
@@ -202,32 +203,6 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
   await match("Mantı", "open", { ts: at(T(-3), 21, 30) });
   await match("Fırın makarna", "open", { ts: at(T(-3), 21, 10) });
 
-  // Zeynep already swiped 8 of the 12 cards for the next open evening; her
-  // choices stay hidden. She liked the first card, so Ali's first "Olur" is a match.
-  const items = await repos.plan.listItems(hid);
-  const days = await repos.plan.listDays(hid);
-  const target = nextOpenEvening(items, days, today, addDays);
-  const deck = buildDeck({
-    recipes: builtinRecipes,
-    favorites: await repos.households.listFavorites(hid),
-    lastCooked: lastCookedMap(await repos.plan.listCookLog(hid)),
-    slot: "ana",
-    date: target,
-    plannedRecipeIds: recentlyPlannedIds(items, today, addDays),
-    matches: await repos.swipes.listMatches(hid),
-  });
-  for (const [i, r] of deck.slice(0, 8).entries()) {
-    await repos.swipes.addSwipe({
-      householdId: hid,
-      userId: zeynep.id,
-      recipeId: r.id,
-      date: target,
-      slot: "ana",
-      decision: i % 2 === 0 ? "like" : "pass",
-      createdBy: zeynep.id,
-    });
-  }
-
   // Pantry: everything this week needs except the design's 14 list items is at home;
   // the kıyma for tonight and the tavuk but for Thursday are in the freezer.
   const weekRecipes = new Set<string>();
@@ -242,6 +217,34 @@ export async function seedDemo(repos: Repos, today: string): Promise<string> {
     ...[...pantryNames].map((name) => ({ householdId: hid, name, quantity: null, unit: null, createdBy: ali.id })),
     { householdId: hid, name: "Kıyma", quantity: 500, unit: "g" as const, createdBy: ali.id },
   ]);
+
+  // Zeynep already swiped 8 of the 12 cards for the next open evening; her
+  // choices stay hidden. She liked the first card, so Ali's first "Olur" is a match.
+  const items = await repos.plan.listItems(hid);
+  const days = await repos.plan.listDays(hid);
+  const target = nextOpenEvening(items, days, today, addDays);
+  const deck = buildDeck({
+    recipes: builtinRecipes,
+    favorites: await repos.households.listFavorites(hid),
+    lastCooked: lastCookedMap(await repos.plan.listCookLog(hid)),
+    slot: "ana",
+    date: target,
+    plannedRecipeIds: recentlyPlannedIds(items, today, addDays),
+    matches: await repos.swipes.listMatches(hid),
+    // Same ranking as the app: what is at home first (the deck is shared, so it must match).
+    pantry: pantryNamesOf(await repos.shopping.listPantry(hid)),
+  });
+  for (const [i, r] of deck.slice(0, 8).entries()) {
+    await repos.swipes.addSwipe({
+      householdId: hid,
+      userId: zeynep.id,
+      recipeId: r.id,
+      date: target,
+      slot: "ana",
+      decision: i % 2 === 0 ? "like" : "pass",
+      createdBy: zeynep.id,
+    });
+  }
 
   // Zeynep is at the market: three items checked, kıyma "az önce".
   const checkAt = (name: string, ts: Date) =>

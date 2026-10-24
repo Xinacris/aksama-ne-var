@@ -9,6 +9,7 @@ import {
   importLogSchema,
   matchSchema,
   memberSchema,
+  pantryAnswerSchema,
   pantryItemSchema,
   planDaySchema,
   planItemSchema,
@@ -73,6 +74,7 @@ export class KeyValueAdapter implements Repos {
       shoppingItems: t("shoppingItems", shoppingItemSchema),
       shoppingChecks: t("shoppingChecks", shoppingCheckSchema),
       pantry: t("pantry", pantryItemSchema),
+      pantryAnswers: t("pantryAnswers", pantryAnswerSchema),
       prepTasks: t("prepTasks", prepTaskSchema),
       swipes: t("swipes", swipeSchema),
       matches: t("matches", matchSchema),
@@ -191,9 +193,18 @@ export class KeyValueAdapter implements Repos {
     listPantry: async (hid) => this.tables.pantry.find((p) => p.householdId === hid),
     addPantry: async (rows) => this.tables.pantry.insertMany(rows.map((r) => stamp(r))),
     removePantry: async (id) => void this.tables.pantry.remove((p) => p.id === id),
+    updatePantry: async (id, patch) => this.tables.pantry.update(id, touch(patch)),
     replacePantry: async (hid, rows) => {
       const others = this.tables.pantry.all().filter((p) => p.householdId !== hid);
       this.tables.pantry.replace([...others, ...rows.map((r) => stamp<import("../models").PantryItem>(r))]);
+    },
+    listPantryAnswers: async (hid) => this.tables.pantryAnswers.find((a) => a.householdId === hid),
+    addPantryAnswer: async (row) => {
+      // One answer per (household, key): the latest wins.
+      const others = this.tables.pantryAnswers.all().filter((a) => !(a.householdId === row.householdId && a.key === row.key));
+      const created = stamp<import("../models").PantryAnswer>(row);
+      this.tables.pantryAnswers.replace([...others, created]);
+      return created;
     },
   };
 

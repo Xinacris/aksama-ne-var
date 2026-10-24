@@ -7,6 +7,7 @@ import type {
   ImportLog,
   Match,
   Member,
+  PantryAnswer,
   PantryItem,
   PlanDay,
   PlanItem,
@@ -83,7 +84,10 @@ export interface ShoppingRepo {
   listPantry(householdId: string): Promise<PantryItem[]>;
   addPantry(rows: NewRow<PantryItem>[]): Promise<PantryItem[]>;
   removePantry(id: string): Promise<void>;
+  updatePantry(id: string, patch: Patch<PantryItem>): Promise<PantryItem>;
   replacePantry(householdId: string, rows: NewRow<PantryItem>[]): Promise<void>;
+  listPantryAnswers(householdId: string): Promise<PantryAnswer[]>;
+  addPantryAnswer(row: NewRow<PantryAnswer>): Promise<PantryAnswer>;
 }
 
 export interface PrepTaskRepo {

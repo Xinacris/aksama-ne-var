@@ -60,11 +60,11 @@ describe.each([360, 390])("bottom nav at %i px", (width) => {
     expect(current[0].textContent).toContain(label);
   });
 
-  it("leaves the desktop top nav as it was: Tarifler is its last pill", async () => {
+  it("desktop top nav: the five tabs, then Evde (Round 3.5)", async () => {
     await renderAt("/tarifler");
     const top = screen.getAllByRole("navigation", { name: "Ana gezinme" })[0];
     const pills = within(top).getAllByRole("link");
-    expect(pills.map((a) => a.textContent?.replace(/\d+$/, ""))).toEqual(["Bugün", "Hafta", "Eşleş", "Liste", "Tarifler"]);
+    expect(pills.map((a) => a.textContent?.replace(/\d+$/, ""))).toEqual(["Bugün", "Hafta", "Eşleş", "Liste", "Tarifler", "Evde"]);
     expect(pills[4]).toHaveAttribute("aria-current", "page");
   });
 });

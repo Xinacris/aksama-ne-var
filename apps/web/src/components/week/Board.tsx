@@ -23,6 +23,7 @@ import { dayName } from "@anv/core/domain/dates";
 import { dropMessage, slotForRecipe, type DropOrigin, type DropResult } from "@anv/core/domain/placement";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
+import { byPantryCoverage, pantryNames } from "@anv/core/domain/pantry";
 import { usePeople } from "@/hooks/usePeople";
 import { browsableRecipes, recipesMap, useApp } from "@/store/app";
 import { keepUntilLabel, type EveningLeftover } from "@anv/core/domain/leftovers";
@@ -579,11 +580,13 @@ function FavChip({ recipe, onPlace }: { recipe: Recipe; onPlace?: BoardHandlers[
 /** "Tarifler" in the aside: any recipe can go straight onto a day, no match needed. */
 function RecipePanel({ recipes, onPlace }: { recipes: Recipe[]; onPlace?: BoardHandlers["onPlace"] }) {
   const [q, setQ] = useState("");
+  const pantry = useApp((x) => x.pantry);
+  // What can be made with what's at home comes first.
   const shown = useMemo(() => {
     const k = searchKey(q);
     const hits = k ? recipes.filter((r) => searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k)) : recipes;
-    return hits.slice(0, k ? 24 : 10);
-  }, [recipes, q]);
+    return byPantryCoverage(hits, pantryNames(pantry)).slice(0, k ? 24 : 10);
+  }, [recipes, q, pantry]);
   return (
     <div className={s.panel}>
       <div className={s.panelHead}>

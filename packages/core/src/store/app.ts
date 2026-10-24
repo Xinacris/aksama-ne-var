@@ -16,6 +16,7 @@ import type {
   LeftoverChoice,
   Match,
   Member,
+  PantryAnswer,
   PantryItem,
   PlanDay,
   PlanItem,
@@ -71,6 +72,8 @@ export interface AppData {
   shoppingItems: ShoppingItem[];
   checks: ShoppingCheck[];
   pantry: PantryItem[];
+  /** Answered pantry reminders ("week:…" / "day:…"), shared by the household. */
+  pantryAnswers: PantryAnswer[];
   prepTasks: PrepTask[];
   swipes: Swipe[];
   matches: Match[];
@@ -92,6 +95,7 @@ const EMPTY: AppData = {
   shoppingItems: [],
   checks: [],
   pantry: [],
+  pantryAnswers: [],
   prepTasks: [],
   swipes: [],
   matches: [],
@@ -204,6 +208,16 @@ export interface AppState extends AppData {
   finishShopping(): Promise<number>;
   markHave(name: string): Promise<void>;
   unmarkHave(name: string): Promise<void>;
+
+  /** "Evde ne var?": add items (catalog names or free text); an item already there gets the new amount. Returns how many were new. */
+  addPantryItems(items: { name: string; quantity?: number | null; unit?: Unit | null }[]): Promise<number>;
+  updatePantryItem(id: string, patch: { name?: string; quantity?: number | null; unit?: Unit | null; status?: PantryItem["status"] }): Promise<void>;
+  removePantryItem(id: string): Promise<void>;
+  /**
+   * A reminder's quick check: var (have) / az kaldı (low) / yok (none, leaves the pantry and goes
+   * back on the list). Records the answer for the household, which ends that reminder.
+   */
+  answerPantryCheck(answerKey: string, marks: Record<string, "have" | "low" | "none">): Promise<void>;
 
   completeTask(id: string): Promise<void>;
   undoTask(id: string): Promise<void>;
@@ -383,7 +397,7 @@ export const appStore = createStore<AppState>()((set, get) => {
         pantry = pantry.map((p) => update.find((u) => u.id === p.id) ?? p);
         await ctx().repos.shopping.replacePantry(
           household.id,
-          pantry.map((p) => ({ householdId: p.householdId, name: p.name, quantity: p.quantity, unit: p.unit, createdBy: p.createdBy })),
+          pantry.map((p) => ({ householdId: p.householdId, name: p.name, quantity: p.quantity, unit: p.unit, ...(p.status ? { status: p.status } : {}), ...(p.checkedAt ? { checkedAt: p.checkedAt } : {}), createdBy: p.createdBy })),
         );
       }
     }
@@ -482,7 +496,7 @@ export const appStore = createStore<AppState>()((set, get) => {
           return;
         }
         const hid = household.id;
-        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, prepTasks, swipes, matches, activity, importLog, cookingSessions] =
+        const [people, recipes, favorites, planItems, planDays, cookLog, shoppingItems, checks, pantry, pantryAnswers, prepTasks, swipes, matches, activity, importLog, cookingSessions] =
           await Promise.all([
             households.householdPeople(repos, hid),
             repos.recipes.list(hid),
@@ -493,6 +507,7 @@ export const appStore = createStore<AppState>()((set, get) => {
             repos.shopping.listItems(hid),
             repos.shopping.listChecks(hid),
             repos.shopping.listPantry(hid),
+            repos.shopping.listPantryAnswers(hid),
             repos.prep.list(hid),
             repos.swipes.listSwipes(hid),
             repos.swipes.listMatches(hid),
@@ -522,6 +537,7 @@ export const appStore = createStore<AppState>()((set, get) => {
           shoppingItems,
           checks,
           pantry,
+          pantryAnswers,
           prepTasks: prepTasks.map((task) => localizeTask(task, rawById.get(task.recipeId))),
           swipes,
           matches,
@@ -847,6 +863,55 @@ export const appStore = createStore<AppState>()((set, get) => {
         await ctx().repos.shopping.addPantry([{ householdId: household.id, name, quantity: null, unit: null, createdBy: me.id }]);
       });
     },
+    async addPantryItems(items) {
+      const { me, household } = requireCtx();
+      return run(async () => {
+        const repos = ctx().repos;
+        const at = nowIso();
+        let added = 0;
+        const seen = new Set<string>();
+        for (const raw of items) {
+          const name = normalizeIngredientName(raw.name);
+          if (!name || seen.has(name)) continue;
+          seen.add(name);
+          const existing = get().pantry.find((p) => p.name === name);
+          if (existing) {
+            if (raw.quantity !== undefined) await repos.shopping.updatePantry(existing.id, { quantity: raw.quantity, unit: raw.unit ?? null, status: "have", checkedAt: at });
+            continue;
+          }
+          await repos.shopping.addPantry([{ householdId: household.id, name, quantity: raw.quantity ?? null, unit: raw.unit ?? null, status: "have", checkedAt: at, createdBy: me.id }]);
+          added++;
+        }
+        return added;
+      });
+    },
+    async updatePantryItem(id, patch) {
+      await run(async () => {
+        const clean = { ...patch, ...(patch.name !== undefined ? { name: normalizeIngredientName(patch.name) } : {}), checkedAt: nowIso() };
+        if (clean.name === "") throw new AppError("invalid", tx("errors.itemName"));
+        await ctx().repos.shopping.updatePantry(id, clean);
+      });
+    },
+    async removePantryItem(id) {
+      await run(() => ctx().repos.shopping.removePantry(id));
+    },
+    async answerPantryCheck(answerKey, marks) {
+      const { me, household } = requireCtx();
+      await run(async () => {
+        const repos = ctx().repos;
+        const at = nowIso();
+        for (const [name, mark] of Object.entries(marks)) {
+          const rows = get().pantry.filter((p) => p.name === name);
+          if (mark === "none") {
+            for (const p of rows) await repos.shopping.removePantry(p.id);
+            continue;
+          }
+          if (rows.length === 0) await repos.shopping.addPantry([{ householdId: household.id, name, quantity: null, unit: null, status: mark, checkedAt: at, createdBy: me.id }]);
+          else for (const p of rows) await repos.shopping.updatePantry(p.id, { status: mark, checkedAt: at });
+        }
+        await repos.shopping.addPantryAnswer({ householdId: household.id, key: answerKey, answeredAt: at, createdBy: me.id });
+      });
+    },
     async unmarkHave(name) {
       await run(async () => {
         for (const p of get().pantry.filter((x) => x.name === name)) await ctx().repos.shopping.removePantry(p.id);
@@ -960,7 +1025,7 @@ export const appStore = createStore<AppState>()((set, get) => {
           if (pantry !== get().pantry) {
             await ctx().repos.shopping.replacePantry(
               household.id,
-              pantry.map((p) => ({ householdId: p.householdId, name: p.name, quantity: p.quantity, unit: p.unit, createdBy: p.createdBy })),
+              pantry.map((p) => ({ householdId: p.householdId, name: p.name, quantity: p.quantity, unit: p.unit, ...(p.status ? { status: p.status } : {}), ...(p.checkedAt ? { checkedAt: p.checkedAt } : {}), createdBy: p.createdBy })),
             );
           }
         }

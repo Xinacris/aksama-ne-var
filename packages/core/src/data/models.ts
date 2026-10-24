@@ -351,15 +351,34 @@ export const shoppingCheckSchema = z.object({
 });
 export type ShoppingCheck = z.infer<typeof shoppingCheckSchema>;
 
+/** "Evde var" stock. `status` "low" = az kaldı (still at home, but it goes on the list again). */
+export const PANTRY_STATUSES = ["have", "low"] as const;
 export const pantryItemSchema = z.object({
   ...base,
   householdId: uuid,
   name: z.string().min(1),
   quantity: z.number().positive().nullable(),
   unit: unitSchema.nullable(),
+  /** Absent on rows from before Round 3.5 = "have". */
+  status: z.enum(PANTRY_STATUSES).optional(),
+  /** Last time someone confirmed it in a "var / yok / az kaldı" check. */
+  checkedAt: isoDateTime.optional(),
   createdBy: uuid,
 });
 export type PantryItem = z.infer<typeof pantryItemSchema>;
+
+/**
+ * A pantry reminder that was answered ("var / yok / az kaldı" marked), shared by the household so
+ * nobody is reminded again. `key` is the reminder's answer key: "week:2026-10-12" or "day:2026-10-14".
+ */
+export const pantryAnswerSchema = z.object({
+  ...base,
+  householdId: uuid,
+  key: z.string().regex(/^(week|day):\d{4}-\d{2}-\d{2}$/),
+  answeredAt: isoDateTime,
+  createdBy: uuid,
+});
+export type PantryAnswer = z.infer<typeof pantryAnswerSchema>;
 
 // ───────────────────────── prep tasks ─────────────────────────
 

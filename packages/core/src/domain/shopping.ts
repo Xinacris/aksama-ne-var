@@ -256,8 +256,9 @@ export function generateList(input: ListInput): ListRow[] {
     }
   }
 
-  // Subtract pantry ("evde var").
+  // Subtract pantry ("evde var"). "Az kaldı" is at home but running out: it stays on the list.
   for (const p of input.pantry) {
+    if (p.status === "low") continue;
     const row = rows.get(ingredientKey(p.name));
     if (!row) continue;
     if (p.quantity === null) {

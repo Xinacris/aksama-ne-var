@@ -152,3 +152,44 @@ describe("store in English", () => {
     expect(appStore.getState().recipes.find((r) => r.id === "izmir-kofte")!.name).toBe("İzmir köfte");
   });
 });
+
+describe("Evde ne var? (Round 3.5)", () => {
+  it("adds, edits and removes pantry items; the list leaves out what is at home", async () => {
+    await signUpWithHousehold("Ali", "ali@ornek.com");
+    await appStore.getState().dropOnDay({ date: "2026-10-12", recipeId: id("İzmir köfte"), origin: "recipe" });
+    expect(selectList(appStore.getState()).map((r) => r.name)).toContain("Kıyma");
+    expect(await appStore.getState().addPantryItems([{ name: "kıyma", quantity: 500, unit: "g" }, { name: "Annemin salçası" }])).toBe(2);
+    let s = appStore.getState();
+    expect(s.pantry.map((p) => p.name).sort()).toEqual(["Annemin salçası", "Kıyma"]);
+    expect(selectList(s).map((r) => r.name)).not.toContain("Kıyma");
+    // Adding it again updates the amount instead of a second row.
+    expect(await appStore.getState().addPantryItems([{ name: "Kıyma", quantity: 1, unit: "kg" }])).toBe(0);
+    const k = appStore.getState().pantry.find((p) => p.name === "Kıyma")!;
+    expect([k.quantity, k.unit]).toEqual([1, "kg"]);
+    await appStore.getState().updatePantryItem(k.id, { status: "low" });
+    s = appStore.getState();
+    expect(selectList(s).map((r) => r.name)).toContain("Kıyma"); // az kaldı → back on the list
+    await appStore.getState().removePantryItem(k.id);
+    expect(appStore.getState().pantry.map((p) => p.name)).toEqual(["Annemin salçası"]);
+  });
+
+  it("answering a check marks var / az kaldı / yok and records the answer for the household", async () => {
+    await signUpWithHousehold("Ali", "ali@ornek.com");
+    await appStore.getState().addPantryItems([{ name: "Kıyma" }, { name: "Domates" }, { name: "Yumurta" }]);
+    await appStore.getState().answerPantryCheck("day:2026-10-13", { Kıyma: "have", Domates: "none", Yumurta: "low" });
+    const s = appStore.getState();
+    expect(s.pantry.find((p) => p.name === "Domates")).toBeUndefined();
+    expect(s.pantry.find((p) => p.name === "Yumurta")!.status).toBe("low");
+    expect(s.pantry.find((p) => p.name === "Kıyma")!.status).toBe("have");
+    expect(s.pantryAnswers.map((a) => a.key)).toEqual(["day:2026-10-13"]);
+  });
+
+  it("an old pantry row (before 3.5, no status) still loads and counts as at home", async () => {
+    await signUpWithHousehold("Ali", "ali@ornek.com");
+    await appStore.getState().markHave("Kıyma");
+    const row = appStore.getState().pantry[0];
+    expect(row.status).toBeUndefined();
+    await appStore.getState().dropOnDay({ date: "2026-10-12", recipeId: id("İzmir köfte"), origin: "recipe" });
+    expect(selectList(appStore.getState()).map((r) => r.name)).not.toContain("Kıyma");
+  });
+});

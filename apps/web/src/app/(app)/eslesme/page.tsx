@@ -22,6 +22,7 @@ import { dishInSentence } from "@anv/core/domain/prep";
 import { cuisineLabelKey, toggleCuisine } from "@anv/core/recipes/cuisines";
 import { usePeople } from "@/hooks/usePeople";
 import { useSwipeCuisines } from "@/hooks/useSwipeCuisines";
+import { pantryNames } from "@anv/core/domain/pantry";
 import { recipesMap, useApp } from "@/store/app";
 import s from "./page.module.css";
 
@@ -64,8 +65,9 @@ function EslesmeInner() {
         plannedRecipeIds: recentlyPlannedIds(planItems, today, addDays),
         matches,
         size: Infinity,
+        pantry: pantryNames(pantry),
       }),
-    [recipes, favorites, last, slot, date, planItems, today, matches],
+    [recipes, favorites, last, slot, date, planItems, today, matches, pantry],
   );
   const { available, active, deck } = useMemo(() => cuisineDeck(pool, cuisines), [pool, cuisines]);
   const mine = swipesFor(swipes, date, slot, me?.id);
