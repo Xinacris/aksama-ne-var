@@ -1486,7 +1486,9 @@
     "coverage": "Evde {{have}}/{{total}}",
     "link": "Evde ne var?",
     "linkNote_one": "{{count}} şey evde",
-    "linkNote_other": "{{count}} şey evde"
+    "linkNote_other": "{{count}} şey evde",
+    "checkEmpty": "Kontrol edilecek bir şey yok: evde ne olduğunu ekleyerek başla, liste evdekileri atlar.",
+    "checkLooked": "Tamam, baktım"
   },
   "onbPantry": {
     "title": "Evde neler var?",

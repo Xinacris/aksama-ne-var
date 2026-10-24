@@ -129,3 +129,17 @@ describe("welcome: sign-in providers are 'Yakında' (Round 3.5)", () => {
     expect(routerMock().router.push).toHaveBeenCalledWith("/kayit");
   });
 });
+
+describe("week check with nothing to tick (#3)", () => {
+  it("offers the pantry and can be answered, which ends the reminder", async () => {
+    await freshStore({ demo: true });
+    for (const p of appStore.getState().pantry) await appStore.getState().removePantryItem(p.id);
+    for (const it of appStore.getState().planItems) await appStore.getState().removeFromPlan(it.id);
+    setNow(new Date(2026, 9, 12, 11, 0));
+    routerMock().__params.current = { r: "week:2026-10-12" };
+    await render(<PantryCheckScreen />);
+    await fireEvent.press(screen.getByTestId("pantry-check-looked"));
+    expect(appStore.getState().pantryAnswers.map((a) => a.key)).toContain("week:2026-10-12");
+    expect(routerMock().router.replace).toHaveBeenCalledWith("/evde");
+  });
+});

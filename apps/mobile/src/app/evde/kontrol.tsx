@@ -16,6 +16,7 @@ export default function PantryCheckScreen() {
   const plan = usePantryReminders();
   const recipes = useApp((x) => x.recipes);
   const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const answer = useApp((x) => x.answerPantryCheck);
   const r = findReminder(plan, id);
   const text = r ? reminderText(r, names) : null;
   return (
@@ -23,7 +24,22 @@ export default function PantryCheckScreen() {
       <Stack.Screen options={{ title: t("pantry.checkEyebrow") }} />
       <Text variant="title">{text?.title ?? t("pantry.title")}</Text>
       {text && <Text color={colors.ink2}>{text.body}</Text>}
-      {r && r.ingredients.length > 0 ? (
+      {r && r.ingredients.length === 0 ? (
+        // A week check with nothing at home and nothing planned: the pantry, or answer it.
+        <>
+          <Text variant="bodySmall">{t("pantry.checkEmpty")}</Text>
+          <Button title={t("pantry.checkOpenPantry")} onPress={() => router.replace("/evde")} />
+          <Button
+            title={t("pantry.checkLooked")}
+            variant="secondary"
+            testID="pantry-check-looked"
+            onPress={async () => {
+              await answer(r.answerKey, {});
+              router.replace("/evde");
+            }}
+          />
+        </>
+      ) : r ? (
         <>
           <Text variant="bodySmall">{t("pantry.checkLead")}</Text>
           <PantryCheck ingredients={r.ingredients} answerKey={r.answerKey} onDone={() => router.replace("/evde")} />

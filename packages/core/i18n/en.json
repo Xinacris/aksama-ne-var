@@ -1486,7 +1486,9 @@
     "coverage": "At home {{have}}/{{total}}",
     "link": "What’s at home?",
     "linkNote_one": "{{count}} thing at home",
-    "linkNote_other": "{{count}} things at home"
+    "linkNote_other": "{{count}} things at home",
+    "checkEmpty": "Nothing to tick yet: start by adding what’s at home, and the list will skip it.",
+    "checkLooked": "OK, I’ve checked"
   },
   "onbPantry": {
     "title": "What’s in your kitchen?",

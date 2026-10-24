@@ -19,6 +19,7 @@ function Kontrol() {
   const recipes = useApp((x) => x.recipes);
   const router = useRouter();
   const names = useMemo(() => new Map(recipes.map((r) => [r.id, r.name])), [recipes]);
+  const answer = useApp((x) => x.answerPantryCheck);
   const r = findReminder(plan, id);
   const text = r ? reminderText(r, names) : null;
   return (
@@ -29,7 +30,27 @@ function Kontrol() {
         {text && <p className={s.lead}>{text.body}</p>}
         {r && <p className={s.lead}>{t("pantry.checkLead")}</p>}
       </header>
-      {r && r.ingredients.length > 0 ? (
+      {r && r.ingredients.length === 0 ? (
+        // A week check with nothing at home and nothing planned: send them to the pantry, and let them answer it.
+        <section className={s.card} aria-label={t("pantry.checkEyebrow")}>
+          <p className={s.lead}>{t("pantry.checkEmpty")}</p>
+          <div className={s.actions}>
+            <Link href="/evde" className={s.primary}>
+              {t("pantry.checkOpenPantry")}
+            </Link>
+            <button
+              type="button"
+              className={s.secondary}
+              onClick={async () => {
+                await answer(r.answerKey, {});
+                router.push("/evde");
+              }}
+            >
+              {t("pantry.checkLooked")}
+            </button>
+          </div>
+        </section>
+      ) : r ? (
         <section className={s.card} aria-label={t("pantry.checkEyebrow")}>
           <PantryCheck ingredients={r.ingredients} answerKey={r.answerKey} onDone={() => router.push("/evde")} />
         </section>

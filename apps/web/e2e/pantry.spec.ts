@@ -117,3 +117,22 @@ test("quick check: names stay readable at phone width (#2)", async ({ page }, in
     expect(box.height, "name fits on one or two lines").toBeLessThan(48);
   }
 });
+
+test("week check with nothing to tick leads to the pantry and can be answered (#3)", async ({ page }) => {
+  await page.clock.setFixedTime(new Date("2026-10-12T11:00:00+03:00"));
+  await page.goto("/kayit");
+  await page.getByLabel("Adın").fill("Deniz");
+  await page.getByLabel("E-posta", { exact: true }).fill("deniz@ornek.com");
+  await page.getByLabel("Şifre").fill("kofte123");
+  await page.getByRole("button", { name: "Hesap oluştur" }).click();
+  await page.getByRole("button", { name: /Devam/ }).click();
+  await page.getByRole("button", { name: "Şimdilik geç" }).click();
+  await page.getByRole("button", { name: /Şimdilik tek başıma/ }).click();
+  const banner = page.getByTestId("pantry-banner");
+  await expect(banner).toContainText("Bu hafta için evde ne var");
+  await banner.getByRole("link", { name: "Kontrol et" }).click();
+  await expect(page.getByRole("link", { name: "Evdekilere bak" })).toBeVisible();
+  await page.getByRole("button", { name: "Tamam, baktım" }).click();
+  await expect(page).toHaveURL(/\/evde$/);
+  await expect(page.getByTestId("pantry-banner")).toHaveCount(0);
+});
