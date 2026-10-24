@@ -103,3 +103,17 @@ test("reminders off in Ayarlar: no banner", async ({ page }) => {
   await page.getByRole("group", { name: "Evde ne var hatırlatmaları" }).getByRole("button", { name: "Kapalı" }).click();
   await expect(page.getByTestId("pantry-banner")).toHaveCount(0);
 });
+
+test("quick check: names stay readable at phone width (#2)", async ({ page }, info) => {
+  test.skip(info.project.name !== "mobile", "phone width");
+  await demo(page, "2026-10-13T21:00:00+03:00");
+  await page.goto("/evde/kontrol?r=evening%3A2026-10-14");
+  const groups = page.getByRole("radiogroup");
+  expect(await groups.count()).toBeGreaterThan(1);
+  for (let i = 0; i < (await groups.count()); i++) {
+    const name = page.locator(`#${await groups.nth(i).getAttribute("aria-labelledby")}`.replace(/([^\w#-])/g, "\\$1"));
+    const box = (await name.boundingBox())!;
+    expect(box.width, "name column width").toBeGreaterThan(120);
+    expect(box.height, "name fits on one or two lines").toBeLessThan(48);
+  }
+});

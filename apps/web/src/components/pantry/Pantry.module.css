@@ -173,3 +173,11 @@
   color: var(--tomato);
   font-weight: 600;
 }
+/* Quick check rows: the name keeps a readable width; the choices wrap below it when there isn't room. */
+.checkRow .rowName {
+  flex: 1 1 140px;
+}
+.checkRow .marks {
+  flex: 0 1 auto;
+  margin-left: auto;
+}
