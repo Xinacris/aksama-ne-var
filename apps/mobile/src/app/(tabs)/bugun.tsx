@@ -17,6 +17,7 @@ import { useApp } from "@/store";
 import { useTheme } from "@/theme";
 import { Button, Card, EmptyState, Icon, Row, Screen, Text } from "@/ui";
 import { Avatar, Eyebrow, Pill, TabHeader } from "@/ui/more";
+import { PantryBanner } from "@/components/Pantry";
 
 /** Bugün: the reminder, tonight's menu, leftovers, what changed, tomorrow (Main.dc.html). */
 export default function Today() {
@@ -36,6 +37,7 @@ export default function Today() {
   return (
     <Screen header>
       <TabHeader eyebrow={model.dateLabel} title={t("app.name")} />
+      <PantryBanner />
 
       {model.reminder && (
         <Card tone={model.reminder.task.status === "done" ? "olive" : "sand"} style={{ borderWidth: 0 }}>

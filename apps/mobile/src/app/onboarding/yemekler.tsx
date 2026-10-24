@@ -22,7 +22,6 @@ export default function PickDishes() {
   const members = useApp((s) => s.members);
   const setFavorites = useApp((s) => s.setFavorites);
   const addStubRecipe = useApp((s) => s.addStubRecipe);
-  const completeOnboarding = useApp((s) => s.completeOnboarding);
   const { partner } = usePeople();
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<Set<string> | null>(null);
@@ -64,8 +63,8 @@ export default function PickDishes() {
   async function next() {
     setBusy(true);
     await setFavorites([...chosen]);
-    if (joining || full) await completeOnboarding();
-    else router.push("/onboarding/davet");
+    // Next: "Evde ne var?" (skippable); the last step for a partner who joined.
+    router.push(joining || full ? "/onboarding/evde?son=1" : "/onboarding/evde");
     setBusy(false);
   }
 
@@ -106,7 +105,7 @@ export default function PickDishes() {
           {t("onb1.chosen", { count: chosen.size })}
           {t("onb1.chosenTail")}
         </Text>
-        <Button title={t(joining || full ? "onb1.letsStart" : "onb1.continue")} icon="arrowRight" busy={busy} onPress={next} />
+        <Button title={t("onb1.continue")} icon="arrowRight" busy={busy} onPress={next} />
       </View>
     </View>
   );

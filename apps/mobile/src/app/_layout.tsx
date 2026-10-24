@@ -10,6 +10,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { fonts } from "@anv/core/design/tokens";
 import { AlarmHost } from "@/alarm/AlarmHost";
+import { PantryReminderHost } from "@/reminders/PantryReminderHost";
 import { bootMobile, type MobileData } from "@/boot";
 import { useApp } from "@/store";
 import { LocaleProvider } from "@/i18n";
@@ -86,10 +87,13 @@ function Navigation() {
           <Stack.Screen name="tarifler/[id]/duzenle" />
           <Stack.Screen name="tarifler/ice-aktar" />
           <Stack.Screen name="ayarlar" />
+          <Stack.Screen name="evde/index" />
+          <Stack.Screen name="evde/kontrol" />
           <Stack.Screen name="pisir/[id]" options={{ title: "", gestureEnabled: true }} />
         </Stack.Protected>
       </Stack>
       {inApp && <AlarmHost />}
+      {inApp && <PantryReminderHost />}
       <NoticeHost />
     </NavThemeProvider>
   );

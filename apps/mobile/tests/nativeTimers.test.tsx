@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen, waitFor } from "@testing-library/react-native";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react-native";
 import { Platform } from "react-native";
 import { finishKey, finishUuid } from "@anv/core/domain/timerAlarm";
 import { setNow } from "@anv/core/lib/clock";
@@ -165,8 +165,8 @@ describe("iOS: AlarmKit (flag on)", () => {
   it("timer sound off: no system alarm (it can't ring silently), the silent notification instead", async () => {
     await freshStore({ demo: true });
     await render(<Settings />);
-    // the last "Kapalı" is Zamanlayıcı sesi (the household's alcohol-free toggle comes first)
-    await fireEvent.press((await screen.findAllByRole("button", { name: "Kapalı" })).at(-1)!);
+    // "Kapalı" inside the Zamanlayıcı sesi group (other settings have their own)
+    await fireEvent.press(within(await screen.findByLabelText("Zamanlayıcı sesi")).getByRole("button", { name: "Kapalı" }));
     await screen.unmount();
     await openKuruFasulye();
     await waitFor(() => expect(scheduledFor(timer().id)).toHaveLength(1));

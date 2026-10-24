@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
 import { useMemo, useState } from "react";
 import { Pressable, View } from "react-native";
@@ -10,7 +11,7 @@ import { radius, touchTarget } from "@anv/core/design/tokens";
 import { usePeople } from "@/hooks/usePeople";
 import { selectList, useApp } from "@/store";
 import { useTheme } from "@/theme";
-import { Button, Card, EmptyState, Field, Icon, IconButton, Row, Screen, Sheet, Text } from "@/ui";
+import { PressableRow, Button, Card, EmptyState, Field, Icon, IconButton, Row, Screen, Sheet, Text } from "@/ui";
 import { SelectSheet, TabHeader } from "@/ui/more";
 
 const FRESH_MS = 2 * 60 * 1000;
@@ -43,6 +44,12 @@ export default function ShoppingList() {
           title={t("liste.title")}
           right={<IconButton icon="plus" label={t("liste.addItem")} filled onPress={() => setAdding(true)} />}
         />
+        <PressableRow onPress={() => router.push("/evde")} accessibilityRole="link" testID="pantry-link" style={{ backgroundColor: colors.sandSoft, borderRadius: 16, paddingHorizontal: 14, justifyContent: "space-between" }}>
+          <Text weight="bold">{t("pantry.link")}</Text>
+          <Text variant="meta" weight="semibold" color={colors.sandText}>
+            {t("pantry.linkNote", { count: st.pantry.length })}
+          </Text>
+        </PressableRow>
         {rows.length === 0 ? (
           <EmptyState title={t("liste.emptyTitle")} text={t("liste.emptyText")}>
             <Button title={t("liste.addItem")} size="sm" variant="secondary" onPress={() => setAdding(true)} />

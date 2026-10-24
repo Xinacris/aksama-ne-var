@@ -9,6 +9,8 @@ import { getLocale, listJoin, LOCALES } from "@anv/core/i18n";
 import { now } from "@anv/core/lib/clock";
 import type { ThemePreference } from "@anv/core/lib/theme";
 import { useTimerKind, useTimerSound } from "@/alarm/prefs";
+import { askReminderPermission } from "@/reminders/notifications";
+import { useReminderSettings } from "@/reminders/prefs";
 import { useMobileData } from "@/boot";
 import { usePeople } from "@/hooks/usePeople";
 import { useSetLanguage } from "@/i18n";
@@ -31,6 +33,7 @@ export default function Settings() {
   const [timerSound, setTimerSound] = useTimerSound();
   // Only a choice where the phone has its own alarm for apps (iOS 26+ with AlarmKit in the build).
   const [timerKind, setTimerKind, timerKindChoice] = useTimerKind();
+  const [reminders, setReminders] = useReminderSettings();
   const { me, household, members, importLog } = st;
   const { people } = usePeople();
   const [name, setName] = useState(me?.name ?? "");
@@ -179,11 +182,7 @@ export default function Settings() {
 
       <Card>
         <Text variant="h3">{t("ayarlar.cooking")}</Text>
-        <Text weight="semibold">{t("ayarlar.timerSound")}</Text>
-        <Row>
-          <Chip label={t("ayarlar.on")} selected={timerSound} onPress={() => setTimerSound(true)} />
-          <Chip label={t("ayarlar.off")} selected={!timerSound} onPress={() => setTimerSound(false)} />
-        </Row>
+        <OnOff label={t("ayarlar.timerSound")} on={timerSound} onChange={setTimerSound} />
         <Text variant="small">{t("ayarlar.timerSoundNote")}</Text>
         {timerKindChoice && (
           <>
@@ -193,6 +192,25 @@ export default function Settings() {
               <Chip label={t("ayarlar.timerKindNotification")} selected={timerKind === "notification"} onPress={() => setTimerKind("notification")} />
             </Row>
             <Text variant="small">{t("ayarlar.timerKindNote")}</Text>
+          </>
+        )}
+      </Card>
+
+      <Card>
+        <Text variant="h3">{t("ayarlar.reminders")}</Text>
+        <OnOff
+          label={t("ayarlar.pantryReminders")}
+          on={reminders.enabled}
+          onChange={(v) => {
+            setReminders({ ...reminders, enabled: v });
+            if (v) void askReminderPermission();
+          }}
+        />
+        <Text variant="small">{t("ayarlar.pantryRemindersNote")}</Text>
+        {reminders.enabled && (
+          <>
+            <OnOff label={t("ayarlar.reminderWeek")} on={reminders.weekStart} onChange={(v) => setReminders({ ...reminders, weekStart: v })} />
+            <OnOff label={t("ayarlar.reminderDays")} on={reminders.pantryDays} onChange={(v) => setReminders({ ...reminders, pantryDays: v })} />
           </>
         )}
       </Card>
@@ -223,5 +241,19 @@ export default function Settings() {
       </Card>
       <View style={{ height: 8, backgroundColor: colors.bg }} />
     </Screen>
+  );
+}
+
+/** An on/off pair under its label, grouped so a screen reader says which setting "Kapalı" belongs to. */
+function OnOff({ label, on, onChange }: { label: string; on: boolean; onChange: (v: boolean) => void }) {
+  const { t } = useTranslation();
+  return (
+    <View accessibilityRole="radiogroup" accessibilityLabel={label} style={{ gap: 8 }}>
+      <Text weight="semibold">{label}</Text>
+      <Row>
+        <Chip label={t("ayarlar.on")} selected={on} onPress={() => onChange(true)} />
+        <Chip label={t("ayarlar.off")} selected={!on} onPress={() => onChange(false)} />
+      </Row>
+    </View>
   );
 }
