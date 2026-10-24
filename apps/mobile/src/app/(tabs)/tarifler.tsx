@@ -14,10 +14,11 @@ import { daysSinceCooked, lastCookedMap, rotationShort } from "@anv/core/domain/
 import { labelRecord, tagLabel } from "@anv/core/i18n";
 import { searchKey } from "@anv/core/lib/text";
 import { space, touchTarget } from "@anv/core/design/tokens";
+import { DayPicker } from "@/components/DayPicker";
 import { QuickAddSheet, useQuickAdd } from "@/components/QuickAdd";
 import { browsableRecipes, useApp } from "@/store";
 import { useTheme } from "@/theme";
-import { Button, Chip, EmptyState, Field, IconButton, Row, Text } from "@/ui";
+import { Button, Chip, EmptyState, Field, IconButton, Row, Sheet, Text } from "@/ui";
 import { TabHeader } from "@/ui/more";
 
 const COURSE_SHORT = labelRecord<Course>("courseShort", COURSES);
@@ -38,6 +39,9 @@ export default function Recipes() {
   const [cuisine, setCuisine] = useState<Cuisine | "all">("all");
   const cuisines = useMemo(() => cuisinesIn(recipes), [recipes]);
   const [adding, setAdding] = useState(false);
+  /** Long-press on a recipe: its actions ("Güne ekle"); then the day picker. */
+  const [actions, setActions] = useState<Recipe | null>(null);
+  const [place, setPlace] = useState<Recipe | null>(null);
   const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
@@ -106,7 +110,9 @@ export default function Recipes() {
         contentContainerStyle={{ padding: space.lg, paddingTop: insets.top + space.lg, paddingBottom: space.xxxl, gap: 10 }}
         keyboardShouldPersistTaps="handled"
         ListHeaderComponent={header}
-        renderItem={({ item }) => <RecipeRow r={item} fav={fav.has(item.id)} meta={meta(item)} onFav={() => toggleFavorite(item.id)} />}
+        renderItem={({ item }) => (
+          <RecipeRow r={item} fav={fav.has(item.id)} meta={meta(item)} onFav={() => toggleFavorite(item.id)} onLongPress={() => setActions(item)} onAddToDay={() => setPlace(item)} />
+        )}
         ListEmptyComponent={
           <EmptyState title={t("tarifler.noResults")} text={t(q.trim() ? "tarifler.noResultsName" : "tarifler.noResultsFilter")}>
             {quickAddIntent(q).kind === "empty" ? (
@@ -123,6 +129,28 @@ export default function Recipes() {
         }
       />
       <QuickAddSheet visible={adding} onClose={() => setAdding(false)} />
+      <Sheet visible={!!actions} onClose={() => setActions(null)} title={actions?.name ?? ""} closeLabel={t("common.close")}>
+        <Button
+          title={t("place.addToDay")}
+          icon="calendar"
+          testID="recipe-add-to-day"
+          onPress={() => {
+            const r = actions;
+            setActions(null);
+            setPlace(r);
+          }}
+        />
+        <Button
+          title={t("dlg.openRecipe")}
+          variant="secondary"
+          onPress={() => {
+            const r = actions;
+            setActions(null);
+            if (r) router.push(`/tarif/${r.id}`);
+          }}
+        />
+      </Sheet>
+      <DayPicker target={place ? { recipe: place } : null} onClose={() => setPlace(null)} />
     </View>
   );
 
@@ -131,15 +159,38 @@ export default function Recipes() {
   }
 }
 
-function RecipeRow({ r, fav, meta, onFav }: { r: Recipe; fav: boolean; meta: string; onFav: () => void }) {
+function RecipeRow({
+  r,
+  fav,
+  meta,
+  onFav,
+  onLongPress,
+  onAddToDay,
+}: {
+  r: Recipe;
+  fav: boolean;
+  meta: string;
+  onFav: () => void;
+  onLongPress: () => void;
+  onAddToDay: () => void;
+}) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   return (
     <View style={{ flexDirection: "row", alignItems: "center", gap: 12, backgroundColor: colors.surface, borderRadius: 20, borderWidth: 1, borderColor: colors.line, padding: 12 }}>
       <Pressable
         onPress={() => router.push(`/tarif/${r.id}`)}
+        onLongPress={() => {
+          void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
+          onLongPress();
+        }}
+        delayLongPress={350}
+        testID={`recipe-row-${r.id}`}
         accessibilityRole="link"
         accessibilityLabel={`${r.name}, ${meta}`}
+        accessibilityHint={t("place.addToDay")}
+        accessibilityActions={[{ name: "addToDay", label: t("place.addToDay") }]}
+        onAccessibilityAction={(e) => e.nativeEvent.actionName === "addToDay" && onAddToDay()}
         style={{ flex: 1, flexDirection: "row", alignItems: "center", gap: 12, minHeight: touchTarget }}
       >
         <View style={{ width: 52, height: 52, borderRadius: 14, backgroundColor: colors.sandSoft }} />

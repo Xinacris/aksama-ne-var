@@ -7,7 +7,7 @@ create extension if not exists pgcrypto;
 
 -- ───────────────────────── enums ─────────────────────────
 create type course as enum ('corba', 'ana', 'yaninda', 'salata', 'kahvalti', 'tatli');
-create type menu_slot as enum ('corba', 'ana', 'yaninda', 'salata');
+create type menu_slot as enum ('corba', 'ana', 'yaninda', 'salata', 'tatli');
 create type shop_side as enum ('pazar', 'market');
 create type plan_day_status as enum ('open', 'ate-out', 'cooked');
 create type plan_source as enum ('match', 'favorite', 'manual', 'moved', 'leftover');

@@ -17,18 +17,21 @@ import {
   type KeyboardCoordinateGetter,
 } from "@dnd-kit/core";
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { SLOTS, SLOT_LABEL, SLOT_SHORT, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { dayName } from "@anv/core/domain/dates";
-import { courseToSlot } from "@anv/core/domain/matching";
+import { dropMessage, slotForRecipe, type DropOrigin, type DropResult } from "@anv/core/domain/placement";
 import { recipeLabel } from "@anv/core/domain/shopping";
+import { searchKey } from "@anv/core/lib/text";
 import { usePeople } from "@/hooks/usePeople";
-import { useApp } from "@/store/app";
+import { browsableRecipes, recipesMap, useApp } from "@/store/app";
 import { keepUntilLabel, type EveningLeftover } from "@anv/core/domain/leftovers";
-import { IconCheck, IconCutlery, IconGrip, IconHeart, IconPlus, IconSnowflakeSmall } from "../icons";
+import { IconCheck, IconCutlery, IconGrip, IconHeart, IconPlus, IconSearch, IconSnowflakeSmall } from "../icons";
 import { matchListStyles } from "../MatchList";
 import { Avatar, AvatarStack } from "../ui/Avatar";
 import { DishTag } from "../ui/Chip";
+import { TextField } from "../ui/Field";
+import { SlotAskDialog } from "./Dialogs";
 import type { AsideMatch, DayModel } from "./useWeek";
 import s from "./Board.module.css";
 
@@ -36,8 +39,18 @@ type DragData =
   | { kind: "item"; itemId: string; recipe: Recipe; from: { date: string; slot: Slot } }
   | { kind: "match"; match: Match; recipe: Recipe }
   | { kind: "fav"; recipe: Recipe }
+  | { kind: "recipe"; recipe: Recipe }
   | { kind: "leftover"; recipe: Recipe; fromDate: string; useBy: string };
-type DropData = { kind: "slot"; date: string; slot: Slot } | { kind: "day"; date: string };
+/** The whole day is the drop target: the dish picks its own slot (category-locked). */
+type DropData = { kind: "day"; date: string };
+
+/** The one slot a dragged dish can take (highlighted while dragging); null = it has no category yet. */
+function dragSlot(d: DragData | null): Slot | null {
+  if (!d) return null;
+  if (d.kind === "item") return slotForRecipe(d.recipe) ?? d.from.slot;
+  if (d.kind === "leftover") return slotForRecipe(d.recipe) ?? "ana";
+  return slotForRecipe(d.recipe);
+}
 
 const LEFTOVER_STROKE = "#7A8A3A";
 
@@ -45,6 +58,8 @@ export interface BoardHandlers {
   onAdd: (date: string, slot: Slot) => void;
   onTile: (itemId: string, date: string, slot: Slot, recipe: Recipe | null) => void;
   onDay: (day: DayModel) => void;
+  /** Click / Enter on a dish in the aside: "Güne ekle" without dragging. */
+  onPlace?: (recipe: Recipe, match?: Match) => void;
 }
 
 /** Arrow keys jump between slot targets instead of nudging pixels. */
@@ -60,7 +75,6 @@ const coordinateGetter: KeyboardCoordinateGetter = (event, { context, currentCoo
   let best: { x: number; y: number } | null = null;
   let bestScore = Infinity;
   for (const c of droppableContainers.getEnabled()) {
-    if (String(c.id).startsWith("day:")) continue;
     const r = droppableRects.get(c.id);
     if (!r) continue;
     const dx = r.left + r.width / 2 - cx;
@@ -77,10 +91,10 @@ const coordinateGetter: KeyboardCoordinateGetter = (event, { context, currentCoo
   return best ?? undefined;
 };
 
-function dropLabel(data: DropData | undefined): string {
+function dropLabel(data: DropData | undefined, drag: DragData | undefined): string {
   if (!data) return "";
-  if (data.kind === "day") return tr("board.dayTarget", { day: dayName(data.date) });
-  return `${dayName(data.date)} · ${SLOT_LABEL[data.slot]}`;
+  const slot = dragSlot(drag ?? null);
+  return slot ? tr("board.dayTargetSlot", { day: dayName(data.date), slot: SLOT_LABEL[slot] }) : tr("board.dayTarget", { day: dayName(data.date) });
 }
 function dragName(data: DragData | undefined): string {
   return data ? data.recipe.name : tr("board.dish");
@@ -89,9 +103,9 @@ function dragName(data: DragData | undefined): string {
 const announcements: Announcements = {
   onDragStart: ({ active }) => tr("board.dragStart", { name: dragName(active.data.current as DragData) }),
   onDragOver: ({ active, over }) =>
-    over ? tr("board.over", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData) }) : tr("board.notOver"),
+    over ? tr("board.over", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData, active.data.current as DragData) }) : tr("board.notOver"),
   onDragEnd: ({ active, over }) =>
-    over ? tr("board.dropped", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData) }) : tr("board.droppedNothing"),
+    over ? tr("board.dropped", { name: dragName(active.data.current as DragData), target: dropLabel(over.data.current as DropData, active.data.current as DragData) }) : tr("board.droppedNothing"),
   onDragCancel: () => tr("board.cancelled"),
 };
 
@@ -108,12 +122,24 @@ export function Board({
   fridge: EveningLeftover[];
   handlers: BoardHandlers;
 }) {
-  const addToPlan = useApp((x) => x.addToPlan);
+  const dropOnDay = useApp((x) => x.dropOnDay);
+  const moveToDay = useApp((x) => x.moveToDay);
   const placeLeftover = useApp((x) => x.placeLeftover);
   const today = useApp((x) => x.today);
-  const moveItem = useApp((x) => x.moveItem);
+  const recipes = useApp(browsableRecipes);
   const setNotice = useApp((x) => x.setNotice);
   const [dragging, setDragging] = useState<DragData | null>(null);
+  /** A drop waiting for "which slot?" (recipe without a category). */
+  const [ask, setAsk] = useState<{ date: string; recipe: Recipe; origin: DropOrigin; matchId?: string } | null>(null);
+  /** Motion: the tile that just landed (snap) and the match that just came back. */
+  const [landed, setLanded] = useState<string | null>(null);
+  const [returned, setReturned] = useState<string | null>(null);
+  const timers = useRef<number[]>([]);
+  useEffect(() => () => timers.current.forEach((x) => window.clearTimeout(x)), []);
+  const flash = (set: (v: string | null) => void, v: string, ms: number) => {
+    set(v);
+    timers.current.push(window.setTimeout(() => set(null), ms));
+  };
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
     useSensor(KeyboardSensor, {
@@ -126,33 +152,37 @@ export function Board({
     setDragging((e.active.data.current as DragData) ?? null);
   }
 
+  function report(res: DropResult, recipe: Recipe, date: string) {
+    setNotice({ kind: "info", text: dropMessage(res, { name: recipe.name, date, recipesById: recipesMap(recipes) }) });
+    if (res.kind !== "placed") return;
+    flash(setLanded, `${date}:${res.slot}`, 450);
+    if (res.displaced?.to === "matches") flash(setReturned, res.displaced.recipeId, 1400);
+  }
+
+  async function drop(date: string, recipe: Recipe, origin: DropOrigin, matchId?: string, slot?: Slot) {
+    const res = await dropOnDay({ date, recipeId: recipe.id, origin, matchId, slot });
+    if (res.kind === "needsSlot") setAsk({ date, recipe, origin, matchId });
+    else report(res, recipe, date);
+  }
+
   async function onDragEnd(e: DragEndEvent) {
     setDragging(null);
     const a = e.active.data.current as DragData | undefined;
     const o = e.over?.data.current as DropData | undefined;
     if (!a || !o) return;
-    const slot = o.kind === "slot" ? o.slot : (courseToSlot(a.recipe.course) ?? (a.kind === "leftover" ? "ana" : null));
     if (a.kind === "leftover") {
       if (o.date > a.useBy || o.date < today) {
         setNotice({ kind: "info", text: tr("board.leftoverWindow", { name: a.recipe.name, until: keepUntilLabel(a.useBy, today).toLocaleLowerCase(intlTag()) }) });
         return;
       }
-      await placeLeftover({ fromDate: a.fromDate, recipeId: a.recipe.id, toDate: o.date, slot: slot ?? "ana" });
+      await placeLeftover({ fromDate: a.fromDate, recipeId: a.recipe.id, toDate: o.date, slot: slotForRecipe(a.recipe) ?? "ana" });
       return;
     }
-    if (!slot) {
-      setNotice({ kind: "info", text: tr("board.noDesserts") });
+    if (a.kind === "item") {
+      report(await moveToDay(a.itemId, o.date), a.recipe, o.date);
       return;
     }
-    if (a.kind === "item") await moveItem(a.itemId, o.date, slot);
-    else
-      await addToPlan({
-        date: o.date,
-        slot,
-        recipeId: a.recipe.id,
-        source: a.kind === "match" ? "match" : "favorite",
-        matchId: a.kind === "match" ? a.match.id : undefined,
-      });
+    await drop(o.date, a.recipe, a.kind === "match" ? "match" : a.kind === "fav" ? "favorite" : "recipe", a.kind === "match" ? a.match.id : undefined);
   }
 
   return (
@@ -174,7 +204,7 @@ export function Board({
           <div className={s.scroller}>
             <div className={s.grid}>
               {days.map((d, i) => (
-                <DayColumn key={d.date} day={d} hasNext={i < days.length - 1} handlers={handlers} dragging={dragging} />
+                <DayColumn key={d.date} day={d} hasNext={i < days.length - 1} handlers={handlers} dragging={dragging} landed={landed} />
               ))}
             </div>
           </div>
@@ -205,7 +235,7 @@ export function Board({
             {matches.length ? (
               <ul className={matchListStyles.list}>
                 {matches.map((m) => (
-                  <MatchRow key={m.match.id} m={m} dragging={dragging} />
+                  <MatchRow key={m.match.id} m={m} dragging={dragging} returning={returned === m.recipe.id} onPlace={handlers.onPlace} />
                 ))}
               </ul>
             ) : (
@@ -227,13 +257,23 @@ export function Board({
             <h2 className={s.panelTitle}>{tr("week.frequent")}</h2>
             <div className={s.chips}>
               {frequent.map((r) => (
-                <FavChip key={r.id} recipe={r} />
+                <FavChip key={r.id} recipe={r} onPlace={handlers.onPlace} />
               ))}
             </div>
             <p className={s.hint}>{tr("board.dragFav")}</p>
           </div>
+          <RecipePanel recipes={recipes} onPlace={handlers.onPlace} />
         </aside>
       </div>
+      <SlotAskDialog
+        target={ask ? { name: ask.recipe.name } : null}
+        onClose={() => setAsk(null)}
+        onPick={async (slot) => {
+          const a = ask;
+          setAsk(null);
+          if (a) await drop(a.date, a.recipe, a.origin, a.matchId, slot);
+        }}
+      />
       <DragOverlay dropAnimation={null}>
         {dragging ? (
           <div className={s.overlay}>
@@ -246,7 +286,7 @@ export function Board({
   );
 }
 
-function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNext: boolean; handlers: BoardHandlers; dragging: DragData | null }) {
+function DayColumn({ day, hasNext, handlers, dragging, landed }: { day: DayModel; hasNext: boolean; handlers: BoardHandlers; dragging: DragData | null; landed: string | null }) {
   const { setNodeRef, isOver } = useDroppable({ id: `day:${day.date}`, data: { kind: "day", date: day.date } satisfies DropData });
   const full = dayName(day.date);
   return (
@@ -294,7 +334,7 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
       ) : (
         <div className={[s.card, day.isToday && s.cardToday, day.filled === 0 && s.cardEmpty, isOver && s.cardOver].filter(Boolean).join(" ")}>
           {SLOTS.map((slot) => (
-            <SlotCellView key={slot} day={day} slot={slot} handlers={handlers} dragging={dragging} />
+            <SlotCellView key={slot} day={day} slot={slot} handlers={handlers} dragging={dragging} over={isOver} landed={landed === `${day.date}:${slot}`} />
           ))}
         </div>
       )}
@@ -311,29 +351,47 @@ function DayColumn({ day, hasNext, handlers, dragging }: { day: DayModel; hasNex
   );
 }
 
-function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: Slot; handlers: BoardHandlers; dragging: DragData | null }) {
+function SlotCellView({
+  day,
+  slot,
+  handlers,
+  dragging,
+  over,
+  landed,
+}: {
+  day: DayModel;
+  slot: Slot;
+  handlers: BoardHandlers;
+  dragging: DragData | null;
+  over: boolean;
+  landed: boolean;
+}) {
   const cell = day.menu[slot];
-  const { setNodeRef: setDropRef, isOver } = useDroppable({ id: `slot:${day.date}:${slot}`, data: { kind: "slot", date: day.date, slot } satisfies DropData });
   const { setNodeRef: setDragRef, listeners, attributes, isDragging } = useDraggable({
     id: cell ? `item:${cell.item.id}` : `noitem:${day.date}:${slot}`,
     disabled: !cell,
     data: cell ? ({ kind: "item", itemId: cell.item.id, recipe: cell.recipe ?? fallbackRecipe(cell.item.recipeId), from: { date: day.date, slot } } satisfies DragData) : undefined,
   });
-  const over = isOver && dragging && !(dragging.kind === "item" && dragging.itemId === cell?.item.id);
+  // While dragging: the dish's own slot is the target, every other slot is shown disabled.
+  const target = dragging ? dragSlot(dragging) : null;
+  const self = dragging?.kind === "item" && dragging.itemId === cell?.item.id;
+  const state = !dragging || target === null ? null : slot === target ? "valid" : "disabled";
+  const stateCls = state === "valid" ? s.slotValid : state === "disabled" ? s.slotDisabled : null;
 
-  if (over) {
+  if (state === "valid" && over && !self) {
     return (
-      <div ref={setDropRef} className={s.drop}>
+      <div className={s.drop} aria-hidden="true">
         {tr("board.dropHere")}
+        {cell?.recipe ? <span className={s.dropInstead}>{tileName(cell.recipe)}</span> : null}
       </div>
     );
   }
   if (!cell) {
     return (
-      <div ref={setDropRef}>
-        <button type="button" className={s.add} onClick={() => handlers.onAdd(day.date, slot)} aria-label={`${dayName(day.date)} · ${SLOT_LABEL[slot]} ekle`}>
+      <div className={stateCls ?? undefined} aria-disabled={state === "disabled" || undefined} title={state === "disabled" ? tr("board.slotDisabled") : undefined}>
+        <button type="button" className={s.add} onClick={() => handlers.onAdd(day.date, slot)} aria-label={tr("week.addTo", { day: dayName(day.date), slot: SLOT_LABEL[slot] })} tabIndex={dragging ? -1 : undefined}>
           <IconPlus size={14} />
-          {SLOT_SHORT[slot]}
+          {state === "valid" ? tr("board.slotValid", { slot: SLOT_SHORT[slot] }) : SLOT_SHORT[slot]}
         </button>
       </div>
     );
@@ -341,13 +399,13 @@ function SlotCellView({ day, slot, handlers, dragging }: { day: DayModel; slot: 
   const isLeftover = cell.item.source === "leftover";
   const leftoverSource = (slot === "ana" && day.leftoverOut) || isLeftover;
   return (
-    <div ref={setDropRef}>
+    <div className={stateCls ?? undefined} aria-disabled={state === "disabled" || undefined}>
       <button
         ref={setDragRef}
         type="button"
         {...listeners}
         {...attributes}
-        className={[s.tile, slot === "ana" && s.tileMain, leftoverSource && s.tileLeftover, isDragging && s.tileDragging].filter(Boolean).join(" ")}
+        className={[s.tile, slot === "ana" && s.tileMain, leftoverSource && s.tileLeftover, isDragging && s.tileDragging, landed && s.tileLanded].filter(Boolean).join(" ")}
         onClick={() => handlers.onTile(cell.item.id, day.date, slot, cell.recipe)}
         aria-label={tr("board.tile", { day: dayName(day.date), slot: SLOT_LABEL[slot], fromFridge: isLeftover ? tr("board.fromFridgeLower") : "", name: cell.recipe?.name ?? tr("board.deletedLower") })}
         aria-roledescription={tr("board.movable")}
@@ -432,13 +490,13 @@ function DayFoot({ day }: { day: DayModel }) {
   return <div className={cls}>{content}</div>;
 }
 
-function MatchRow({ m, dragging }: { m: AsideMatch; dragging: DragData | null }) {
+function MatchRow({ m, dragging, returning, onPlace }: { m: AsideMatch; dragging: DragData | null; returning: boolean; onPlace?: BoardHandlers["onPlace"] }) {
   const placed = m.match.status === "placed";
   const { setNodeRef, listeners, attributes } = useDraggable({ id: `match:${m.match.id}`, disabled: placed, data: { kind: "match", match: m.match, recipe: m.recipe } satisfies DragData });
   const isDragging = dragging?.kind === "match" && dragging.match.id === m.match.id;
   return (
     <li
-      className={[matchListStyles.item, placed && matchListStyles.placed, isDragging && matchListStyles.dragging].filter(Boolean).join(" ")}
+      className={[matchListStyles.item, placed && matchListStyles.placed, isDragging && matchListStyles.dragging, returning && matchListStyles.returning].filter(Boolean).join(" ")}
     >
       {placed ? (
         <>
@@ -457,6 +515,7 @@ function MatchRow({ m, dragging }: { m: AsideMatch; dragging: DragData | null })
           className={s.matchBtn}
           {...listeners}
           {...attributes}
+          onClick={() => onPlace?.(m.recipe, m.match)}
           aria-label={tr("board.dragMatch", { name: m.recipe.name, note: m.note })}
           aria-roledescription={tr("board.movable")}
         >
@@ -498,7 +557,7 @@ function LeftoverChip({ ev, today }: { ev: EveningLeftover; today: string }) {
   );
 }
 
-function FavChip({ recipe }: { recipe: Recipe }) {
+function FavChip({ recipe, onPlace }: { recipe: Recipe; onPlace?: BoardHandlers["onPlace"] }) {
   const { setNodeRef, listeners, attributes, isDragging } = useDraggable({ id: `fav:${recipe.id}`, data: { kind: "fav", recipe } satisfies DragData });
   return (
     <button
@@ -507,7 +566,59 @@ function FavChip({ recipe }: { recipe: Recipe }) {
       className={s.chipBtn}
       {...listeners}
       {...attributes}
+      onClick={() => onPlace?.(recipe)}
       aria-label={tr("board.dragRecipe", { name: recipe.name })}
+      aria-roledescription={tr("board.movable")}
+      style={{ opacity: isDragging ? 0.4 : 1 }}
+    >
+      <DishTag variant="draggable">{recipeLabel(recipe)}</DishTag>
+    </button>
+  );
+}
+
+/** "Tarifler" in the aside: any recipe can go straight onto a day, no match needed. */
+function RecipePanel({ recipes, onPlace }: { recipes: Recipe[]; onPlace?: BoardHandlers["onPlace"] }) {
+  const [q, setQ] = useState("");
+  const shown = useMemo(() => {
+    const k = searchKey(q);
+    const hits = k ? recipes.filter((r) => searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k)) : recipes;
+    return hits.slice(0, k ? 24 : 10);
+  }, [recipes, q]);
+  return (
+    <div className={s.panel}>
+      <div className={s.panelHead}>
+        <h2 className={s.panelTitle}>{tr("board.recipes")}</h2>
+        <Link href="/tarifler" className={s.panelLink}>
+          {tr("board.moreRecipes")}
+        </Link>
+      </div>
+      <TextField label={tr("dlg.searchRecipe")} hideLabel type="search" placeholder={tr("dlg.searchRecipeDots")} icon={<IconSearch size={18} />} value={q} onChange={(e) => setQ(e.target.value)} />
+      {shown.length ? (
+        <div className={s.chips} data-testid="board-recipes">
+          {shown.map((r) => (
+            <RecipeChip key={r.id} recipe={r} onPlace={onPlace} />
+          ))}
+        </div>
+      ) : (
+        <p className={s.hint}>{tr("dlg.noSuchRecipe")}</p>
+      )}
+      <p className={s.hint}>{tr("board.recipesHint")}</p>
+    </div>
+  );
+}
+
+function RecipeChip({ recipe, onPlace }: { recipe: Recipe; onPlace?: BoardHandlers["onPlace"] }) {
+  const { setNodeRef, listeners, attributes, isDragging } = useDraggable({ id: `recipe:${recipe.id}`, data: { kind: "recipe", recipe } satisfies DragData });
+  const slot = slotForRecipe(recipe);
+  return (
+    <button
+      ref={setNodeRef}
+      type="button"
+      className={s.chipBtn}
+      {...listeners}
+      {...attributes}
+      onClick={() => onPlace?.(recipe)}
+      aria-label={`${tr("board.dragRecipe", { name: recipe.name })}${slot ? ` · ${SLOT_LABEL[slot]}` : ""}`}
       aria-roledescription={tr("board.movable")}
       style={{ opacity: isDragging ? 0.4 : 1 }}
     >

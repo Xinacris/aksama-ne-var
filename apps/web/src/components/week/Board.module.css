@@ -187,6 +187,8 @@
   border-color: var(--ink2);
 }
 .drop {
+  flex-direction: column;
+  gap: 2px;
   height: 66px;
   border-radius: 12px;
   border: 2px dashed var(--tomato);
@@ -199,7 +201,7 @@
   justify-content: center;
 }
 .ateOut {
-  height: 302px;
+  height: 374px;
   background: var(--surface2);
   border-radius: 18px;
   padding: 16px 12px;
@@ -360,5 +362,58 @@
 @media (prefers-reduced-motion: reduce) {
   .overlay {
     transform: none;
+  }
+}
+
+/* Category-locked drag: the dish's own slot glows, the others step back. */
+.slotValid {
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px var(--tomato);
+  transition: box-shadow 0.12s ease;
+}
+.slotValid .add {
+  border-color: var(--tomato);
+  color: var(--tomato);
+  background: var(--tomato-soft);
+}
+.slotDisabled {
+  opacity: 0.38;
+  filter: saturate(0.4);
+  transition: opacity 0.12s ease;
+}
+.slotDisabled > * {
+  cursor: not-allowed;
+}
+.dropInstead {
+  font-weight: 500;
+  font-size: 11.5px;
+  color: var(--ink2);
+  text-decoration: line-through;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* A dish snaps into its slot. */
+.tileLanded {
+  animation: snapIn 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.25);
+}
+@keyframes snapIn {
+  from {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 2px var(--tomato);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tileLanded {
+    animation: none;
+  }
+  .slotValid,
+  .slotDisabled {
+    transition: none;
   }
 }

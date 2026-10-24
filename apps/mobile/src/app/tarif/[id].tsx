@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { COURSE_LABEL, SLOTS, SLOT_SHORT, type Ingredient } from "@anv/core/data/models";
 import { clockTime, dayMonth, dayName, formatDuration, toIsoDate } from "@anv/core/domain/dates";
 import { eveningLeftover, policyMeta } from "@anv/core/domain/leftovers";
-import { courseToSlot } from "@anv/core/domain/matching";
 import { menuFor, menuItems, menuTitle, totalMinutes } from "@anv/core/domain/plan";
 import { dishInSentence, offsetLabel } from "@anv/core/domain/prep";
 import { daysSinceCooked, lastCookedMap, rotationLabel } from "@anv/core/domain/rotation";
@@ -303,7 +302,7 @@ export default function RecipePage() {
         {recipe.steps.length > 0 && (
           <Button title={ctx && items.length > 1 ? t("tarif.cookMenu") : t("bugun.startCooking")} size="lg" onPress={() => router.push(`/pisir/${ctx ?? recipe.id}`)} />
         )}
-        {courseToSlot(recipe.course) && <Button title={t("bugun.putOnEvening")} variant="secondary" onPress={() => setPlace({ recipe })} />}
+        <Button title={t("place.addToDay")} variant="secondary" onPress={() => setPlace({ recipe })} />
       </View>
 
       <Sheet visible={menuOpen} onClose={() => setMenuOpen(false)} title={recipe.name} closeLabel={t("common.close")}>

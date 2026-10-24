@@ -5,9 +5,9 @@ import type { LeftoverChoice } from "@anv/core/data/models";
 import type { LeftoverOutcome } from "@anv/core/domain/leftovers";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { SLOT_LABEL, type Match, type Recipe, type Slot } from "@anv/core/data/models";
+import { SLOTS, SLOT_LABEL, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningLabel, formatDuration } from "@anv/core/domain/dates";
-import { SLOT_COURSES, courseToSlot } from "@anv/core/domain/matching";
+import { dropMessage, slotForRecipe } from "@anv/core/domain/placement";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import { searchKey } from "@anv/core/lib/text";
@@ -36,22 +36,30 @@ export function RecipePicker({
 }) {
   const recipes = useApp(browsableRecipes);
   const today = useApp((x) => x.today);
-  const addToPlan = useApp((x) => x.addToPlan);
+  const dropOnDay = useApp((x) => x.dropOnDay);
+  const setNotice = useApp((x) => x.setNotice);
   const [q, setQ] = useState("");
   const slot = target?.slot ?? null;
-  const fits = (r: Recipe) => (slot ? SLOT_COURSES[slot].includes(r.course) : false);
+  // Category-locked: only dishes of this slot, plus ones without a category (picking one answers it).
+  const fits = (r: Recipe) => {
+    const own = slotForRecipe(r);
+    return !!slot && (own === slot || own === null);
+  };
   const results = useMemo(() => {
     const k = searchKey(q);
-    const courses = slot ? SLOT_COURSES[slot] : [];
     return recipes
-      .filter((r) => courses.includes(r.course) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k)))
+      .filter((r) => {
+        const own = slotForRecipe(r);
+        return !!slot && (own === slot || own === null) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k));
+      })
       .sort((a, b) => a.name.localeCompare(b.name, "tr"))
       .slice(0, k ? 30 : 12);
   }, [recipes, q, slot]);
 
   async function pick(r: Recipe, match?: Match) {
     if (!target) return;
-    await addToPlan({ date: target.date, slot: target.slot, recipeId: r.id, source: match ? "match" : "manual", matchId: match?.id });
+    const res = await dropOnDay({ date: target.date, recipeId: r.id, origin: match ? "match" : "recipe", matchId: match?.id, slot: target.slot });
+    setNotice({ kind: "info", text: dropMessage(res, { name: r.name, date: target.date, recipesById: recipesMap(recipes) }) });
     setQ("");
     onClose();
   }
@@ -125,7 +133,32 @@ export function RecipePicker({
   );
 }
 
-/** Choose an evening for a dish (tapping a match or a frequent dish). */
+/** The five slots, for a recipe without a category ("which slot?", asked once). */
+export function SlotChoices({ onPick }: { onPick: (slot: Slot) => void }) {
+  return (
+    <ul className={s.options}>
+      {SLOTS.map((sl) => (
+        <li key={sl}>
+          <button type="button" className={s.option} onClick={() => onPick(sl)}>
+            {SLOT_LABEL[sl]}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** "Hangi bölüme girsin?" after dropping a recipe without a category on the board. */
+export function SlotAskDialog({ target, onPick, onClose }: { target: { name: string } | null; onPick: (slot: Slot) => void; onClose: () => void }) {
+  return (
+    <Dialog open={!!target} onClose={onClose} eyebrow={t("board.askSlot")} title={target ? t("place.askTitle", { name: target.name }) : ""}>
+      <p className={s.empty}>{t("place.askText")}</p>
+      <SlotChoices onPick={onPick} />
+    </Dialog>
+  );
+}
+
+/** "Güne ekle": choose a day for a dish (a match, a frequent dish, any recipe). It goes into its own slot. */
 export function DayPicker({
   target,
   onClose,
@@ -137,33 +170,60 @@ export function DayPicker({
   const today = useApp((x) => x.today);
   const planItems = useApp((x) => x.planItems);
   const recipes = useApp(browsableRecipes);
-  const addToPlan = useApp((x) => x.addToPlan);
+  const dropOnDay = useApp((x) => x.dropOnDay);
   const placeLeftover = useApp((x) => x.placeLeftover);
+  const setNotice = useApp((x) => x.setNotice);
+  const [chosen, setChosen] = useState<{ id: string; slot: Slot } | null>(null);
   const byId = recipesMap(recipes);
-  const slot = target ? (courseToSlot(target.recipe.course) ?? (target.leftover ? "ana" : null)) : null;
+  const own = target ? slotForRecipe(target.recipe) : null;
+  const answer = chosen && target && chosen.id === target.recipe.id ? chosen.slot : null;
+  const slot = target?.leftover ? (own ?? "ana") : (own ?? answer);
   const dates = Array.from({ length: 7 }, (_, i) => addDays(today, i)).filter((d) => !target?.leftover || d <= target.leftover.useBy);
+  const close = () => {
+    setChosen(null);
+    onClose();
+  };
 
   async function pick(date: string) {
     if (!target || !slot) return;
     if (target.leftover) await placeLeftover({ fromDate: target.leftover.fromDate, recipeId: target.recipe.id, toDate: date, slot });
-    else await addToPlan({ date, slot, recipeId: target.recipe.id, source: target.match ? "match" : "manual", matchId: target.match?.id });
-    onClose();
+    else {
+      const res = await dropOnDay({ date, recipeId: target.recipe.id, origin: target.match ? "match" : "recipe", matchId: target.match?.id, slot: own ? undefined : slot });
+      setNotice({ kind: "info", text: dropMessage(res, { name: target.recipe.name, date, recipesById: byId }) });
+    }
+    close();
   }
 
   return (
-    <Dialog open={!!target} onClose={onClose} eyebrow={target?.leftover ? t("dlg.fromFridgeWhen") : t("dlg.whichEvening")} title={target ? target.recipe.name : ""}>
-      {slot ? (
+    <Dialog
+      open={!!target}
+      onClose={close}
+      eyebrow={target?.leftover ? t("dlg.fromFridgeWhen") : slot ? t("place.whichDay") : t("board.askSlot")}
+      title={target ? (slot ? target.recipe.name : t("place.askTitle", { name: target.recipe.name })) : ""}
+    >
+      {target && !slot ? (
+        <>
+          <p className={s.empty}>{t("place.askText")}</p>
+          <SlotChoices onPick={(sl) => setChosen({ id: target.recipe.id, slot: sl })} />
+        </>
+      ) : slot ? (
         <ul className={s.options}>
           {dates.map((d) => {
-            const current = menuFor(planItems, d)[slot];
+            const menu = menuFor(planItems, d);
+            const current = menu[slot];
             const cur = current ? byId.get(current.recipeId) : null;
+            const here = target ? current?.recipeId === target.recipe.id || planItems.some((i) => i.date === d && i.recipeId === target.recipe.id) : false;
             return (
               <li key={d}>
                 <button type="button" className={s.option} onClick={() => pick(d)}>
                   <span className={s.optionText}>
                     {d === today ? t("dlg.tonight") : dayName(d)}
                     <span className={s.optionSub}>
-                      {cur ? t("dlg.instead", { slot: SLOT_LABEL[slot], dish: recipeLabel(cur) }) : t("dlg.empty", { slot: SLOT_LABEL[slot] })}
+                      {here
+                        ? t("place.onDay", { name: target!.recipe.name, day: dayName(d) })
+                        : cur
+                          ? t("dlg.instead", { slot: SLOT_LABEL[slot], dish: recipeLabel(cur) })
+                          : t("dlg.empty", { slot: SLOT_LABEL[slot] })}
                     </span>
                   </span>
                 </button>
@@ -171,9 +231,7 @@ export function DayPicker({
             );
           })}
         </ul>
-      ) : (
-        <p className={s.empty}>{t("dlg.noDessertSlot")}</p>
-      )}
+      ) : null}
     </Dialog>
   );
 }

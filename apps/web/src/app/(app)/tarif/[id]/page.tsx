@@ -17,7 +17,6 @@ import dialogStyles from "@/components/week/Dialogs.module.css";
 import { useWeek } from "@/components/week/useWeek";
 import { COURSE_LABEL, SLOTS, SLOT_SHORT, type Ingredient, type Recipe, type Slot } from "@anv/core/data/models";
 import { clockTime, dayMonth, dayName, formatDuration, toIsoDate } from "@anv/core/domain/dates";
-import { courseToSlot } from "@anv/core/domain/matching";
 import { menuFor, menuItems, menuTitle, totalMinutes } from "@anv/core/domain/plan";
 import { eveningLeftover, policyMeta } from "@anv/core/domain/leftovers";
 import { dishInSentence, offsetLabel } from "@anv/core/domain/prep";
@@ -369,11 +368,11 @@ function TarifInner() {
           <Button variant="secondary" size="md" onClick={() => setReplace({ date: ctx, slot: mySlot })}>
             {tr("tarif.replacePart")}
           </Button>
-        ) : courseToSlot(recipe.course) ? (
+        ) : (
           <Button variant="secondary" size="md" onClick={() => setPlace({ recipe })}>
-            {tr("bugun.putOnEvening")}
+            {tr("place.addToDay")}
           </Button>
-        ) : null}
+        )}
       </div>
 
       <Dialog open={menuOpen} onClose={() => setMenuOpen(false)} eyebrow={tr("tarif.recipe")} title={recipe.name}>

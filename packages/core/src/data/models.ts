@@ -270,7 +270,8 @@ export type Favorite = z.infer<typeof favoriteSchema>;
 
 // ───────────────────────── plan ─────────────────────────
 
-export const SLOTS = ["corba", "ana", "yaninda", "salata"] as const;
+/** Menu slots of an evening. `tatli` joined in Round 3.5 (category-locked drag & drop). */
+export const SLOTS = ["corba", "ana", "yaninda", "salata", "tatli"] as const;
 export const slotSchema = z.enum(SLOTS);
 export type Slot = z.infer<typeof slotSchema>;
 

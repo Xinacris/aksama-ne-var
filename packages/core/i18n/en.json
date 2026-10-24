@@ -145,13 +145,15 @@
     "corba": "Soup",
     "ana": "Main dish",
     "yaninda": "On the side",
-    "salata": "Salad"
+    "salata": "Salad",
+    "tatli": "Dessert"
   },
   "slotShort": {
     "corba": "Soup",
     "ana": "Main",
     "yaninda": "Side",
-    "salata": "Salad"
+    "salata": "Salad",
+    "tatli": "Dessert"
   },
   "platform": {
     "web": "Web"
@@ -765,22 +767,22 @@
   },
   "board": {
     "dish": "Dish",
-    "dragStart": "Picked up {{name}}. Use the arrow keys to move to a slot, Space to drop, Esc to cancel.",
+    "dragStart": "Picked up {{name}}. Use the arrow keys to move to a day, Space to drop, Esc to cancel. It lands in its own slot.",
     "over": "{{name}}: over {{target}}.",
     "notOver": "Not over a drop target.",
     "dropped": "{{name}} dropped on {{target}}.",
     "droppedNothing": "Dropped; the plan didn’t change.",
     "cancelled": "Move cancelled.",
     "leftoverWindow": "{{name}} keeps {{until}}; put it on one of those days.",
-    "noDesserts": "Desserts aren’t added as part of the evening menu.",
-    "instructions": "Press Space to pick up. Move between days and slots with the arrow keys, press Space again to drop, Esc to cancel. Enter for options.",
+    "noDesserts": "This recipe has no slot yet; pick one first.",
+    "instructions": "Press Space to pick up. Move between days with the arrow keys, press Space again to drop, Esc to cancel. The dish lands in its own slot of that day. Enter for options.",
     "region": "Weekly plan",
     "legendLeftover": "Leftovers carry into the next day",
     "legendFreezer": "Something comes out of the freezer",
     "aside": "Things to add to the plan",
     "swipe": "Swipe",
     "dragFridge": "Drag it onto an evening; its ingredients don’t go on the list.",
-    "dragFav": "Drag onto a day or a single slot.",
+    "dragFav": "Drag onto a day; it lands in its own slot.",
     "dayHead": "{{day}}, {{date}}{{today}} · day options",
     "todaySuffix": ", today",
     "lunch": "Lunch",
@@ -795,7 +797,14 @@
     "dragging": "Dragging…",
     "dragLeftover": "In the fridge: {{name}}, {{hint}}. Drag onto an evening",
     "dragRecipe": "{{name}}. Drag into the plan",
-    "dayTarget": "{{day}}"
+    "dayTarget": "{{day}}",
+    "dayTargetSlot": "{{day}} · {{slot}}",
+    "recipes": "Recipes",
+    "recipesHint": "Drag onto a day; no match needed.",
+    "slotValid": "{{slot}} goes here",
+    "slotDisabled": "This dish doesn’t go here",
+    "askSlot": "Which slot?",
+    "moreRecipes": "All recipes"
   },
   "dlg": {
     "addToPlan": "Add to plan",
@@ -808,7 +817,7 @@
     "tonight": "Tonight",
     "instead": "{{slot}}: instead of {{dish}}",
     "empty": "{{slot}} empty",
-    "noDessertSlot": "Desserts don’t take a slot in the evening menu; you can always open the recipe.",
+    "noDessertSlot": "This recipe has no slot yet; pick one first.",
     "openRecipe": "Open the recipe and prep",
     "replace": "Swap for another dish",
     "remove": "Remove from plan",
@@ -1381,5 +1390,21 @@
     "salad": "Salad",
     "side": "Side / small plate",
     "dessert": "Dessert"
+  },
+  "place": {
+    "placed": "{{name}} → {{day}} · {{slot}}.",
+    "backToMatches": "{{name}} went back to your matches.",
+    "removed": "{{name}} left the day; it’s still in your recipes.",
+    "swapped": "{{name}} moved to {{day}}.",
+    "same": "{{name}} is already {{day}} · {{slot}}.",
+    "onDay": "{{name}} is already on {{day}}’s menu.",
+    "invalid": "That dish couldn’t be dropped there.",
+    "askTitle": "Which slot is {{name}}?",
+    "askText": "This recipe has no category. We ask once and save the answer to the recipe.",
+    "addToDay": "Add to a day",
+    "addToDayNamed": "{{name}}: add to a day",
+    "whichDay": "Which day?",
+    "goesTo": "Into {{slot}}",
+    "uncategorized": "No category yet; you’ll pick the slot"
   }
 }

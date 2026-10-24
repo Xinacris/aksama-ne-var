@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { SLOT_LABEL, type LeftoverChoice, type Match, type Recipe, type Slot } from "@anv/core/data/models";
 import { addDays, dayName, eveningLabel, formatDuration } from "@anv/core/domain/dates";
 import type { LeftoverOutcome } from "@anv/core/domain/leftovers";
-import { SLOT_COURSES } from "@anv/core/domain/matching";
+import { dropMessage, slotForRecipe } from "@anv/core/domain/placement";
 import { menuFor } from "@anv/core/domain/plan";
 import { recipeLabel } from "@anv/core/domain/shopping";
 import type { AsideMatch } from "@anv/core/domain/week";
@@ -14,6 +14,7 @@ import { searchKey } from "@anv/core/lib/text";
 import { touchTarget } from "@anv/core/design/tokens";
 import { browsableRecipes, recipesMap, useApp } from "@/store";
 import { useTheme } from "@/theme";
+import { snapNextLayout } from "@/ui/motion";
 import { Field, Sheet, Text } from "@/ui";
 
 function Option({ title, sub, onPress, danger }: { title: string; sub?: string; onPress: () => void; danger?: boolean }) {
@@ -37,21 +38,30 @@ export function RecipePicker({ target, onClose, matches, frequent }: { target: {
   const { t } = useTranslation();
   const recipes = useApp(browsableRecipes);
   const today = useApp((x) => x.today);
-  const addToPlan = useApp((x) => x.addToPlan);
+  const dropOnDay = useApp((x) => x.dropOnDay);
+  const setNotice = useApp((x) => x.setNotice);
   const [q, setQ] = useState("");
   const slot = target?.slot ?? null;
-  const fits = (r: Recipe) => (slot ? SLOT_COURSES[slot].includes(r.course) : false);
+  // Category-locked: this slot's dishes, plus ones without a category (picking one answers it).
+  const fits = (r: Recipe) => {
+    const own = slotForRecipe(r);
+    return !!slot && (own === slot || own === null);
+  };
   const results = useMemo(() => {
     const k = searchKey(q);
-    const courses = slot ? SLOT_COURSES[slot] : [];
     return recipes
-      .filter((r) => courses.includes(r.course) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k)))
+      .filter((r) => {
+        const own = slotForRecipe(r);
+        return !!slot && (own === slot || own === null) && (!k || searchKey(r.name).includes(k) || searchKey(r.shortName ?? "").includes(k));
+      })
       .sort((a, b) => a.name.localeCompare(b.name, "tr"))
       .slice(0, k ? 30 : 12);
   }, [recipes, q, slot]);
   async function pick(r: Recipe, match?: Match) {
     if (!target) return;
-    await addToPlan({ date: target.date, slot: target.slot, recipeId: r.id, source: match ? "match" : "manual", matchId: match?.id });
+    snapNextLayout();
+    const res = await dropOnDay({ date: target.date, recipeId: r.id, origin: match ? "match" : "recipe", matchId: match?.id, slot: target.slot });
+    setNotice({ kind: "info", text: dropMessage(res, { name: r.name, date: target.date, recipesById: recipesMap(recipes) }) });
     setQ("");
     onClose();
   }
@@ -89,7 +99,8 @@ export function SlotSheet({
   const planItems = useApp((x) => x.planItems);
   const recipes = useApp(browsableRecipes);
   const removeFromPlan = useApp((x) => x.removeFromPlan);
-  const moveItem = useApp((x) => x.moveItem);
+  const moveToDay = useApp((x) => x.moveToDay);
+  const setNotice = useApp((x) => x.setNotice);
   const [moving, setMoving] = useState(false);
   const byId = recipesMap(recipes);
   const close = () => {
@@ -115,7 +126,9 @@ export function SlotSheet({
                 title={d === today ? t("dlg.tonight") : dayName(d)}
                 sub={r ? t("mobile.week.swapWith", { dish: recipeLabel(r) }) : t("dlg.empty", { slot: SLOT_LABEL[target.slot] })}
                 onPress={async () => {
-                  await moveItem(target.itemId, d, target.slot);
+                  snapNextLayout();
+                  const res = await moveToDay(target.itemId, d);
+                  if (target.recipe) setNotice({ kind: "info", text: dropMessage(res, { name: target.recipe.name, date: d, recipesById: byId }) });
                   close();
                 }}
               />

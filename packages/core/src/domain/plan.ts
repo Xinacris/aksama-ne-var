@@ -51,14 +51,14 @@ export function isPlanned(items: PlanItem[], days: PlanDay[], date: string): boo
 
 /** "İzmir köfte sofrası" — titled after the main dish. */
 export function menuTitle(menu: Menu, recipesById: Map<string, Recipe>): string {
-  const main = menu.ana ?? menu.corba ?? menu.yaninda ?? menu.salata;
+  const main = menu.ana ?? menu.corba ?? menu.yaninda ?? menu.salata ?? menu.tatli;
   const r = main ? recipesById.get(main.recipeId) : undefined;
   return r ? tx("plan.menuTitle", { dish: r.shortName ?? r.name }) : tx("plan.eveningMenu");
 }
 
 /** "Karnıyarık · cacık · şehriyeli pilav": main first, at most three dishes (as in the Yarın card). */
 export function menuLine(menu: Menu, recipesById: Map<string, Recipe>): string {
-  const order: Slot[] = ["ana", "salata", "yaninda", "corba"];
+  const order: Slot[] = ["ana", "salata", "yaninda", "corba", "tatli"];
   return order
     .map((s) => menu[s])
     .filter((x): x is PlanItem => !!x)

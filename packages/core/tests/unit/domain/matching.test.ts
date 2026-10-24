@@ -65,7 +65,7 @@ describe("deck building", () => {
   it("maps courses to slots", () => {
     expect(courseToSlot("kahvalti")).toBe("ana");
     expect(courseToSlot("salata")).toBe("salata");
-    expect(courseToSlot("tatli")).toBeNull();
+    expect(courseToSlot("tatli")).toBe("tatli");
   });
 });
 

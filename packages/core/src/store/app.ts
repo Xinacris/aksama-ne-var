@@ -35,8 +35,8 @@ import { addDays, listWindow, toIsoDate } from "../domain/dates";
 import { isMatch } from "../domain/matching";
 import * as plan from "../domain/plan";
 import { menuFor } from "../domain/plan";
+import * as placement from "../domain/placement";
 import { leftoverSource } from "../domain/leftovers";
-import { courseToSlot } from "../domain/matching";
 import { generatePrepTasks } from "../domain/prep";
 import { consumePantry, generateList, planFinish, type ListRow } from "../domain/shopping";
 import { now, nowIso } from "../lib/clock";
@@ -174,6 +174,15 @@ export interface AppState extends AppData {
   addToPlan(args: { date: string; slot: Slot; recipeId: string; source: PlanItem["source"]; matchId?: string }): Promise<void>;
   removeFromPlan(itemId: string): Promise<void>;
   moveItem(itemId: string, toDate: string, toSlot: Slot): Promise<void>;
+  /**
+   * Drop a dish on a day (drag & drop or "Güne ekle"): it lands in its own category's slot.
+   * `slot` answers "which slot?" for a recipe without a category, and is saved on the recipe.
+   */
+  dropOnDay(args: { date: string; recipeId: string; origin: placement.DropOrigin; matchId?: string; slot?: Slot }): Promise<placement.DropResult>;
+  /** Move a planned dish to another day, into the same slot (swapping with what's there). */
+  moveToDay(itemId: string, date: string): Promise<placement.DropResult>;
+  /** Save which slot a recipe without a category belongs to (asked once). */
+  setRecipeSlot(recipeId: string, slot: Slot): Promise<void>;
   ateOut(date: string): Promise<void>;
   clearAteOut(date: string): Promise<void>;
   sendBackToMatches(date: string): Promise<void>;
@@ -682,6 +691,31 @@ export const appStore = createStore<AppState>()((set, get) => {
         planChange(plan.moveItem(planState(), itemId, toDate, toSlot, me.id), ["plan.moved", { recipeId: it?.recipeId ?? null, date: toDate }]),
       );
     },
+    async dropOnDay(args) {
+      const { me } = requireCtx();
+      const recipe = get().recipes.find((r) => r.id === args.recipeId);
+      if (!recipe) return { kind: "invalid" } as const;
+      if (args.slot && placement.slotForRecipe(recipe) === null) await get().setRecipeSlot(recipe.id, args.slot);
+      const res = placement.dropOnDay(planState(), { date: args.date, recipe, origin: args.origin, matchId: args.matchId, slot: args.slot, by: me.id });
+      if (res.kind === "placed") await run(() => planChange(res.ops, ["plan.added", { recipeId: recipe.id, date: args.date }]));
+      return res;
+    },
+    async moveToDay(itemId, date) {
+      const { me } = requireCtx();
+      const it = get().planItems.find((i) => i.id === itemId);
+      const res = placement.moveToDay(planState(), { itemId, date, by: me.id });
+      if (res.kind === "placed") await run(() => planChange(res.ops, ["plan.moved", { recipeId: it?.recipeId ?? null, date }]));
+      return res;
+    },
+    async setRecipeSlot(recipeId, slot) {
+      const raw = get().rawRecipes.find((r) => r.id === recipeId);
+      // Built-in recipes always have a category; only a household's own recipe can be without one.
+      if (!raw || raw.householdId === null) return;
+      await run(async () => {
+        await ctx().repos.recipes.update(recipeId, { category: placement.SLOT_CATEGORY[slot], ...(raw.stub ? { course: placement.SLOT_COURSE[slot] } : {}) });
+        await log("recipe.updated", { recipeId });
+      });
+    },
     async ateOut(date) {
       const { me } = requireCtx();
       await run(() => planChange(plan.markAteOut(planState(), date, me.id), ["plan.ateOut", { date }]));
@@ -715,7 +749,7 @@ export const appStore = createStore<AppState>()((set, get) => {
     async placeLeftover({ fromDate, recipeId, toDate, slot }) {
       const { me } = requireCtx();
       const r = get().recipes.find((x) => x.id === recipeId);
-      const target = slot ?? (r ? courseToSlot(r.course) : null) ?? "ana";
+      const target = slot ?? (r ? placement.slotForRecipe(r) : null) ?? "ana";
       await run(() =>
         planChange(plan.placeLeftover(planState(), { fromDate, recipeId, toDate, slot: target, by: me.id }), [
           "plan.added",

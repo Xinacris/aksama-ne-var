@@ -31,6 +31,7 @@ export default function HaftaPage() {
     onAdd: (date, slot) => setPick({ date, slot }),
     onTile: (itemId, date, slot, recipe) => setTile({ itemId, date, slot, recipe }),
     onDay: (d) => setDay(d),
+    onPlace: (recipe, match) => setPlace({ recipe, match }),
   };
 
   const eyebrow = offset === 0 ? t("hafta.window") : offset < 0 ? t("hafta.weeksAgo", { count: -offset }) : t("hafta.weeksLater", { count: offset });

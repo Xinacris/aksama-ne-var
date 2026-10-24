@@ -3,13 +3,14 @@
 import { labelRecord, t, tagLabel } from "@anv/core/i18n";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { IconHeart, IconHeartOutline, IconLink, IconPlus, IconSearch } from "@/components/icons";
+import { IconCalendar, IconHeart, IconHeartOutline, IconLink, IconPlus, IconSearch } from "@/components/icons";
+import { DayPicker } from "@/components/week/Dialogs";
 import { QuickAddSheet, useQuickAdd } from "@/components/QuickAdd";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { DishChip } from "@/components/ui/Chip";
 import { TextField } from "@/components/ui/Field";
 import { EmptyState } from "@/components/ui/Misc";
-import { COURSES, COURSE_LABEL, type Course } from "@anv/core/data/models";
+import { COURSES, COURSE_LABEL, type Course, type Recipe } from "@anv/core/data/models";
 import { cuisineLabelKey } from "@anv/core/recipes/cuisines";
 import { byCuisine, cuisinesIn } from "@anv/core/recipes/filters";
 import type { Cuisine } from "@anv/core/recipes/schema";
@@ -34,6 +35,7 @@ export default function TariflerPage() {
   const [cuisine, setCuisine] = useState<Cuisine | "all">("all");
   const cuisines = useMemo(() => cuisinesIn(recipes), [recipes]);
   const [adding, setAdding] = useState(false);
+  const [place, setPlace] = useState<Recipe | null>(null);
   const quick = useQuickAdd();
   const fav = useMemo(() => new Set(favorites.map((f) => f.recipeId)), [favorites]);
   const last = useMemo(() => lastCookedMap(cookLog), [cookLog]);
@@ -146,6 +148,9 @@ export default function TariflerPage() {
                 </span>
                 {r.householdId && <span className={s.badge}>{t("tarifler.ours")}</span>}
               </div>
+              <button type="button" className={s.fav} aria-label={t("place.addToDayNamed", { name: r.name })} title={t("place.addToDay")} onClick={() => setPlace(r)} aria-haspopup="dialog">
+                <IconCalendar size={20} />
+              </button>
               <button
                 type="button"
                 className={s.fav}
@@ -177,6 +182,7 @@ export default function TariflerPage() {
         />
       )}
       {adding && <QuickAddSheet open onClose={() => setAdding(false)} />}
+      <DayPicker target={place ? { recipe: place } : null} onClose={() => setPlace(null)} />
     </main>
   );
 }

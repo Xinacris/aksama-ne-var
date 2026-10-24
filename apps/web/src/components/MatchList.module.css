@@ -48,3 +48,28 @@
   color: var(--ink2);
   line-height: 1.45;
 }
+/* A displaced dish slides back into the matches and glows for a moment. */
+.returning {
+  animation: backToMatches 1.1s ease-out;
+}
+@keyframes backToMatches {
+  0% {
+    transform: translateX(-28px);
+    opacity: 0.2;
+    background: var(--tomato-soft);
+  }
+  35% {
+    transform: translateX(0);
+    opacity: 1;
+    background: var(--tomato-soft);
+  }
+  100% {
+    background: var(--bg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .returning {
+    animation: none;
+    outline: 2px solid var(--tomato);
+  }
+}

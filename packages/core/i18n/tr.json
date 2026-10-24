@@ -145,13 +145,15 @@
     "corba": "Çorba",
     "ana": "Ana yemek",
     "yaninda": "Yanında",
-    "salata": "Salata"
+    "salata": "Salata",
+    "tatli": "Tatlı"
   },
   "slotShort": {
     "corba": "Çorba",
     "ana": "Ana",
     "yaninda": "Yanında",
-    "salata": "Salata"
+    "salata": "Salata",
+    "tatli": "Tatlı"
   },
   "platform": {
     "web": "Web"
@@ -765,22 +767,22 @@
   },
   "board": {
     "dish": "Yemek",
-    "dragStart": "{{name}} tutuldu. Ok tuşlarıyla bir slota götür, boşlukla bırak, Esc ile vazgeç.",
+    "dragStart": "{{name}} tutuldu. Ok tuşlarıyla bir güne götür, boşlukla bırak, Esc ile vazgeç. Kendi bölümüne yerleşir.",
     "over": "{{name}}: {{target}} üzerinde.",
     "notOver": "Bırakılacak bir yer üzerinde değil.",
     "dropped": "{{name}} {{target}} için bırakıldı.",
     "droppedNothing": "Bırakıldı; plan değişmedi.",
     "cancelled": "Taşıma iptal edildi.",
     "leftoverWindow": "{{name}} {{until}} yenebilir; o günlerden birine koyabilirsin.",
-    "noDesserts": "Tatlılar akşam menüsünün bir parçası olarak eklenmiyor.",
-    "instructions": "Taşımak için boşluk tuşuna bas. Ok tuşlarıyla günler ve slotlar arasında gez, bırakmak için yeniden boşluk; vazgeçmek için Esc. Seçenekler için Enter.",
+    "noDesserts": "Bu tarifin bölümü yok; önce bir bölüm seç.",
+    "instructions": "Taşımak için boşluk tuşuna bas. Ok tuşlarıyla günler arasında gez, bırakmak için yeniden boşluk; vazgeçmek için Esc. Yemek o günün kendi bölümüne yerleşir. Seçenekler için Enter.",
     "region": "Haftalık plan",
     "legendLeftover": "Artan yemek ertesi güne uzanır",
     "legendFreezer": "Buzluktan çıkacak malzeme var",
     "aside": "Plana eklenebilecekler",
     "swipe": "Kaydır",
     "dragFridge": "Bir akşama sürükleyin; malzemeleri listeye eklenmez.",
-    "dragFav": "Bir güne ya da tek bir slota sürükleyin.",
+    "dragFav": "Bir güne sürükleyin; kendi bölümüne yerleşir.",
     "dayHead": "{{day}}, {{date}}{{today}} · gün seçenekleri",
     "todaySuffix": ", bugün",
     "lunch": "Öğlen",
@@ -795,7 +797,14 @@
     "dragging": "Sürükleniyor…",
     "dragLeftover": "Dolapta: {{name}}, {{hint}}. Bir akşama sürükle",
     "dragRecipe": "{{name}}. Plana sürükle",
-    "dayTarget": "{{day}} günü"
+    "dayTarget": "{{day}}",
+    "dayTargetSlot": "{{day}} · {{slot}}",
+    "recipes": "Tarifler",
+    "recipesHint": "Bir güne sürükleyin; eşleşme gerekmez.",
+    "slotValid": "{{slot}} buraya",
+    "slotDisabled": "Bu yemek buraya girmez",
+    "askSlot": "Hangi bölüm?",
+    "moreRecipes": "Tüm tarifler"
   },
   "dlg": {
     "addToPlan": "Plana ekle",
@@ -808,7 +817,7 @@
     "tonight": "Bu akşam",
     "instead": "{{slot}}: {{dish}} yerine",
     "empty": "{{slot}} boş",
-    "noDessertSlot": "Tatlılar akşam menüsüne slot olarak girmiyor; tarifini her zaman açabilirsin.",
+    "noDessertSlot": "Bu tarifin bölümü yok; önce bir bölüm seç.",
     "openRecipe": "Tarifi ve ön hazırlığı aç",
     "replace": "Başka yemekle değiştir",
     "remove": "Plandan çıkar",
@@ -1381,5 +1390,21 @@
     "salad": "Salata",
     "side": "Ara sıcak / yan yemek",
     "dessert": "Tatlı"
+  },
+  "place": {
+    "placed": "{{name}} → {{day}} · {{slot}}.",
+    "backToMatches": "{{name}} eşleşmelere döndü.",
+    "removed": "{{name}} günden çıktı; tariflerde duruyor.",
+    "swapped": "{{name}} {{day}} gününe geçti.",
+    "same": "{{name}} zaten {{day}} · {{slot}}.",
+    "onDay": "{{name}} zaten {{day}} menüsünde.",
+    "invalid": "Bu yemek buraya bırakılamadı.",
+    "askTitle": "{{name}} hangi bölüme girsin?",
+    "askText": "Bu tarifin kategorisi yok. Bir kez soruyoruz; cevabını tarife kaydederiz.",
+    "addToDay": "Güne ekle",
+    "addToDayNamed": "{{name}}: güne ekle",
+    "whichDay": "Hangi güne?",
+    "goesTo": "{{slot}} bölümüne",
+    "uncategorized": "Kategorisi yok; bölümü seçeceksin"
   }
 }

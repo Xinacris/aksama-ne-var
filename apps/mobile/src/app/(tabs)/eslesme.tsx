@@ -78,7 +78,7 @@ export default function MatchScreen() {
   async function put() {
     if (!moment) return;
     setBusy(true);
-    await st.addToPlan({ date: moment.date, slot: moment.slot, recipeId: moment.recipeId, source: "match", matchId: moment.id });
+    await st.dropOnDay({ date: moment.date, recipeId: moment.recipeId, origin: "match", matchId: moment.id, slot: moment.slot });
     const r = byId.get(moment.recipeId);
     st.setNotice({ kind: "info", text: t("eslesme.placed", { dish: r?.name ?? t("eslesme.dish"), evening: eveningDative(moment.date, today).toLocaleLowerCase(intlTag()) }) });
     setMoment(null);

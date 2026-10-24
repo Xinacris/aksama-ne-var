@@ -36,7 +36,7 @@ function EslesmeInner() {
   const { today, recipes, favorites, cookLog, planItems, planDays, matches, swipes, me, pantry } = st;
   const { people, partner } = usePeople();
   const swipe = useApp((x) => x.swipe);
-  const addToPlan = useApp((x) => x.addToPlan);
+  const dropOnDay = useApp((x) => x.dropOnDay);
   const setNotice = useApp((x) => x.setNotice);
 
   const date = params.get("gun") && /^\d{4}-\d{2}-\d{2}$/.test(params.get("gun")!) ? params.get("gun")! : nextOpenEvening(planItems, planDays, today, addDays);
@@ -104,7 +104,7 @@ function EslesmeInner() {
   async function put() {
     if (!moment) return;
     setBusy(true);
-    await addToPlan({ date: moment.date, slot: moment.slot, recipeId: moment.recipeId, source: "match", matchId: moment.id });
+    await dropOnDay({ date: moment.date, recipeId: moment.recipeId, origin: "match", matchId: moment.id, slot: moment.slot });
     const r = byId.get(moment.recipeId);
     setNotice({ kind: "info", text: t("eslesme.placed", { dish: r?.name ?? t("eslesme.dish"), evening: eveningDative(moment.date, today).toLocaleLowerCase(intlTag()) }) });
     setMoment(null);

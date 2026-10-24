@@ -10,6 +10,7 @@ export const SLOT_COURSES: Record<Slot, Course[]> = {
   ana: ["ana", "kahvalti"],
   yaninda: ["yaninda"],
   salata: ["salata"],
+  tatli: ["tatli"],
 };
 
 export function courseToSlot(course: Course): Slot | null {
