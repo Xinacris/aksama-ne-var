@@ -227,3 +227,15 @@ describe("finishing and pantry", () => {
     expect(ingredientStatus(ing("Patates"), [], [pantry("Patates", null, null)])).toBe("evde");
   });
 });
+
+describe("manual items in English (#5)", () => {
+  it("are labelled in the current language", async () => {
+    const { setLocale } = await import("@/i18n");
+    const { generateList } = await import("@/domain/shopping");
+    const manual = { id: "m1", householdId: "h", name: "Deterjan", quantity: null, unit: null, side: "market" as const, aisle: "Diğer" as const, forRecipeId: null, createdBy: "a", createdAt: "x", updatedAt: "x" };
+    setLocale("en");
+    expect(generateList({ planned: [], pantry: [], checks: [], recipesById: new Map(), manualItems: [manual] })[0].forLabel).toBe("Added by hand");
+    setLocale("tr");
+    expect(generateList({ planned: [], pantry: [], checks: [], recipesById: new Map(), manualItems: [manual] })[0].forLabel).toBe("Elle eklendi");
+  });
+});

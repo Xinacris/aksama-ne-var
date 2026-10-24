@@ -292,7 +292,7 @@ export function generateList(input: ListInput): ListRow[] {
       amounts,
       quantityText: formatAmounts(m.name, amounts),
       forRecipeIds: forRecipe ? [forRecipe.id] : [],
-      forLabel: forRecipe ? recipeLabel(forRecipe) : "Elle eklendi",
+      forLabel: forRecipe ? recipeLabel(forRecipe) : t("liste.manual"),
       manualItemId: m.id,
       checkedBy: null,
       checkedAt: null,
