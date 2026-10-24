@@ -46,3 +46,15 @@ test("main journey in English: demo → Today → Recipes (quick add) → List �
   await page.getByRole("button", { name: "English" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Settings" })).toBeVisible();
 });
+
+test("the tab title and description follow English (#8)", async ({ browser }) => {
+  const ctx = await browser.newContext({ locale: "en-GB" });
+  const page = await ctx.newPage();
+  await page.goto("/giris");
+  await expect(page).toHaveTitle("What’s for dinner?");
+  await page.getByRole("link", { name: "Continue without signing in" }).click();
+  await expect(page).toHaveURL(/\/kayit/);
+  await expect(page).toHaveTitle("What’s for dinner?");
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /Decide dinner together/);
+  await ctx.close();
+});
