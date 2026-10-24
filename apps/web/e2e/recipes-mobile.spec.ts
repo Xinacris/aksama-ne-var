@@ -54,6 +54,8 @@ test("Tarifler tab opens the recipe list and stays lit on a recipe", async ({ pa
   await expect(page).toHaveURL(/\/tarifler$/);
   await expect(page.getByRole("heading", { level: 1, name: "Tarifler" })).toBeVisible();
   await expect(tabs(page).filter({ hasText: "Tarifler" })).toHaveAttribute("aria-current", "page");
+  // The list shows a page at a time (#10): search for it.
+  await page.getByRole("searchbox").first().fill("İzmir köfte");
   await page.getByRole("link", { name: "İzmir köfte" }).click();
   await expect(page).toHaveURL(/\/tarif\/izmir-kofte/);
   await expect(tabs(page).filter({ hasText: "Tarifler" })).toHaveAttribute("aria-current", "page");

@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment, useEffect, useState, type ReactNode } from "react";
-import { usePathname } from "next/navigation";
 import { I18nextProvider } from "react-i18next";
 import { detectLocale, getLocale, i18n, isLocale, LOCALE_STORAGE_KEY, setLocale, t, type Locale } from "@anv/core/i18n";
 import { useApp } from "@/store/app";
@@ -51,16 +50,17 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 }
 
 /**
- * The tab title and description follow the language. The server renders the Turkish metadata;
- * this re-applies it after every navigation (the router restores the static title on route changes).
+ * The tab title and description follow the language (React hoists them into <head>). The root
+ * layout has no static title, so nothing puts the Turkish one back after a navigation.
  */
 function DocumentTitle({ lang }: { lang: Locale }) {
-  const pathname = usePathname();
-  useEffect(() => {
-    document.title = t("app.name");
-    document.querySelector('meta[name="description"]')?.setAttribute("content", t("app.description"));
-  }, [lang, pathname]);
-  return null;
+  void lang;
+  return (
+    <>
+      <title>{t("app.name")}</title>
+      <meta name="description" content={t("app.description")} />
+    </>
+  );
 }
 
 /** Ayarlar › Dil: applies at once, remembered for this browser and on the user. */

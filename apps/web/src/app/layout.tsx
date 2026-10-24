@@ -17,9 +17,9 @@ const youngSerif = Young_Serif({
   weight: "400",
 });
 
+// Title and description are rendered by the locale provider (`DocumentTitle`, src/i18n.tsx), so they
+// follow the language; the server render is Turkish.
 export const metadata: Metadata = {
-  title: "Akşama ne var?",
-  description: "Akşam yemeğine birlikte karar verin: eşleşme, haftalık plan, ortak alışveriş listesi.",
   icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }], apple: "/icon-192.png" },
 };
 
