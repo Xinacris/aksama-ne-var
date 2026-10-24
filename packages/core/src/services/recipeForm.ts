@@ -1,7 +1,7 @@
 import { formatDuration } from "../domain/dates";
 import { ingredientLabel, localizeRecipe } from "../domain/recipeText";
 import type { Locale } from "../i18n";
-import { intlTag, t } from "../i18n";
+import { intlTag, t, tagFromLabel, tagLabel } from "../i18n";
 import { z } from "zod";
 import { aisleSchema, courseSchema, leftoverPolicySchema, prepOffsetSchema, sideSchema, unitSchema, type Recipe, type RecipeTranslation } from "../data/models";
 import { catalogEntry, normalizeIngredientName } from "../data/seed/ingredients";
@@ -82,7 +82,7 @@ export function draftFromRecipe(r: Recipe, copy = false): RecipeDraft {
     cookMinutes: String(r.cookMinutes),
     waitMinutes: r.waitMinutes ? String(r.waitMinutes) : "",
     servings: String(r.servings),
-    tags: r.tags.join(", "),
+    tags: r.tags.map(tagLabel).join(", "),
     ingredients: r.ingredients.length
       ? r.ingredients.map((i) => ({
           name: i.label ?? i.name,
@@ -174,6 +174,7 @@ export function parseDraft(d: RecipeDraft): { ok: true; value: RecipeInput } | {
         .split(",")
         .map((t) => t.trim())
         .filter(Boolean)
+        .map(tagFromLabel)
         .map((t) => t.charAt(0).toLocaleUpperCase("tr") + t.slice(1)),
       ingredients,
       prepItems,

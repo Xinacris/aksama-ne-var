@@ -89,3 +89,14 @@ export function tagLabel(tag: string): string {
     .replace(/^-+|-+$/g, "");
   return t(`tag.${slug}`, { defaultValue: tag });
 }
+
+/** A tag typed in either language ("Oven-baked", "fırında") → the stored Turkish tag ("Fırında"); unknown text stays as typed. */
+export function tagFromLabel(label: string): string {
+  const key = label.trim().toLocaleLowerCase(intlTag());
+  const tags = (tr as { tag?: Record<string, string> }).tag ?? {};
+  const enTags = (en as { tag?: Record<string, string> }).tag ?? {};
+  for (const [slug, trName] of Object.entries(tags)) {
+    if (trName.toLocaleLowerCase("tr") === label.trim().toLocaleLowerCase("tr") || enTags[slug]?.toLocaleLowerCase("en") === key) return trName;
+  }
+  return label.trim();
+}

@@ -76,3 +76,15 @@ describe("Ayrıntılar sections", () => {
     expect(sourceSummary(d)).toBe("Annemin defteri · 3 gün saklanır");
   });
 });
+
+describe("tags in English (#7)", () => {
+  it("shows stored tags in the reader's language and maps English labels back", async () => {
+    const { setLocale, tagFromLabel, t } = await import("@/i18n");
+    setLocale("en");
+    expect(t("form.tagsHint")).toBe("Separate with commas: Oven-baked, With mince, Soak overnight");
+    expect(tagFromLabel("oven-baked")).toBe("Fırında");
+    expect(tagFromLabel("Fırında")).toBe("Fırında");
+    expect(tagFromLabel("Grandma's")).toBe("Grandma's");
+    setLocale("tr");
+  });
+});
