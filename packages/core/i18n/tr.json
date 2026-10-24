@@ -1490,7 +1490,8 @@
     "linkNote_one": "{{count}} şey evde",
     "linkNote_other": "{{count}} şey evde",
     "checkEmpty": "Kontrol edilecek bir şey yok: evde ne olduğunu ekleyerek başla, liste evdekileri atlar.",
-    "checkLooked": "Tamam, baktım"
+    "checkLooked": "Tamam, baktım",
+    "lowFor": "{{name}}: az kaldı"
   },
   "onbPantry": {
     "title": "Evde neler var?",

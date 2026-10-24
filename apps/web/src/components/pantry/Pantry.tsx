@@ -102,7 +102,7 @@ export function PantryList({ items, onEdit }: { items: PantryItem[]; onEdit: (p:
                     {name}
                     {p.quantity !== null && <span className={s.qty}>{formatIngredientQuantity(p)}</span>}
                   </span>
-                  <button type="button" className={s.lowBtn} aria-pressed={low} onClick={() => void update(p.id, { status: low ? "have" : "low" })}>
+                  <button type="button" className={s.lowBtn} aria-pressed={low} aria-label={t("pantry.lowFor", { name })} onClick={() => void update(p.id, { status: low ? "have" : "low" })}>
                     {t("pantry.low")}
                   </button>
                   <button type="button" className={s.iconBtn} aria-label={t("pantry.edit", { name })} onClick={() => onEdit(p)}>

@@ -56,6 +56,9 @@ describe("Evde ne var? screen", () => {
     await render(<Pantry />);
     expect(screen.getByText(/^Son güncelleme: /)).toBeTruthy();
     expect(screen.getByText(/^Kasap · /)).toBeTruthy();
+    // Each "Az kaldı" says which item it is for (#9)
+    await fireEvent.press(screen.getByLabelText("Kıyma: az kaldı"));
+    expect(appStore.getState().pantry.find((p) => p.name === "Kıyma")!.status).toBe("low");
     await fireEvent.press(screen.getByLabelText("Kıyma: düzenle"));
     await fireEvent.changeText(screen.getByLabelText("Miktar"), "750");
     await fireEvent.press(screen.getByTestId("pantry-save"));

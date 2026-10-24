@@ -188,11 +188,14 @@ export function Chip({
   selected,
   onPress,
   tone = "tomato",
+  accessibilityLabel,
 }: {
   label: string;
   selected?: boolean;
   onPress?: () => void;
   tone?: "tomato" | "olive" | "sand";
+  /** When the visible label alone is ambiguous (e.g. "Az kaldı" on every pantry row). */
+  accessibilityLabel?: string;
 }) {
   const { colors } = useTheme();
   const on = tone === "olive" ? colors.olive : tone === "sand" ? colors.sand : colors.tomato;
@@ -201,6 +204,7 @@ export function Chip({
     <Pressable
       onPress={onPress}
       accessibilityRole={onPress ? "button" : "text"}
+      accessibilityLabel={accessibilityLabel}
       accessibilityState={onPress ? { selected: !!selected } : undefined}
       style={({ pressed }) => ({
         minHeight: touchTarget,

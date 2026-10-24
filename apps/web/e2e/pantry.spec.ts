@@ -61,8 +61,8 @@ test("pantry screen: edit an amount, mark running low, remove; the list follows"
   await dlg.getByLabel("Miktar").fill("750");
   await dlg.getByRole("button", { name: "Kaydet" }).click();
   await expect(row).toContainText("750 g");
-  await row.getByRole("button", { name: "Az kaldı" }).click();
-  await expect(row.getByRole("button", { name: "Az kaldı" })).toHaveAttribute("aria-pressed", "true");
+  await row.getByRole("button", { name: "Kıyma: az kaldı", exact: true }).click();
+  await expect(row.getByRole("button", { name: "Kıyma: az kaldı", exact: true })).toHaveAttribute("aria-pressed", "true");
   await page.goto("/liste");
   await expect(page.getByRole("button", { name: /^Kıyma/ }).first()).toBeVisible();
   await page.goto("/evde");

@@ -98,7 +98,7 @@ export function PantryList({ items, onEdit }: { items: PantryItem[]; onEdit: (p:
                   <Text weight="semibold">{name}</Text>
                   {p.quantity !== null && <Text variant="meta">{formatIngredientQuantity(p)}</Text>}
                 </View>
-                <Chip tone="sand" label={t("pantry.low")} selected={low} onPress={() => void update(p.id, { status: low ? "have" : "low" })} />
+                <Chip tone="sand" label={t("pantry.low")} accessibilityLabel={t("pantry.lowFor", { name })} selected={low} onPress={() => void update(p.id, { status: low ? "have" : "low" })} />
                 <IconButton icon="edit" label={t("pantry.edit", { name })} onPress={() => onEdit(p)} />
                 <IconButton icon="close" label={t("pantry.remove", { name })} onPress={() => void remove(p.id)} />
               </View>

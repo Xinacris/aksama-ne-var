@@ -1490,7 +1490,8 @@
     "linkNote_one": "{{count}} thing at home",
     "linkNote_other": "{{count}} things at home",
     "checkEmpty": "Nothing to tick yet: start by adding what’s at home, and the list will skip it.",
-    "checkLooked": "OK, I’ve checked"
+    "checkLooked": "OK, I’ve checked",
+    "lowFor": "{{name}}: running low"
   },
   "onbPantry": {
     "title": "What’s in your kitchen?",
